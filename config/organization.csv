@@ -431,7 +431,8 @@ sub_0800B534,0x0800B534,0x0800B538,0x4,cluster_055,gameplay/object_state,medium,
 sub_0800B538,0x0800B538,0x0800B550,0x18,cluster_024,gameplay/object_state,medium,dense generic gameplay object-state accessor/bitfield helper block used by actor-like tasks,bl
 sub_0800B550,0x0800B550,0x0800B554,0x4,cluster_024,gameplay/object_state,medium,dense generic gameplay object-state accessor/bitfield helper block used by actor-like tasks,bl
 sub_0800B554,0x0800B554,0x0800B558,0x4,cluster_017,gameplay/object_state,medium,dense generic gameplay object-state accessor/bitfield helper block used by actor-like tasks,bl
-sub_0800B558,0x0800B558,0x0800B560,0x8,cluster_024,gameplay/object_state,medium,dense generic gameplay object-state accessor/bitfield helper block used by actor-like tasks,bl
+sub_0800B558,0x0800B558,0x0800B55C,0x4,cluster_024,gameplay/object_state,medium,dense generic gameplay object-state accessor/bitfield helper block used by actor-like tasks; corrected terminal bx boundary,bl+boundary_fixed
+sub_0800B55C,0x0800B55C,0x0800B560,0x4,cluster_024,gameplay/object_state,medium,dense generic gameplay object-state accessor/bitfield helper block used by actor-like tasks; recovered after terminal bx,boundary_fixed
 sub_0800B560,0x0800B560,0x0800B578,0x18,cluster_014,gameplay/object_state,medium,dense generic gameplay object-state accessor/bitfield helper block used by actor-like tasks,bl
 sub_0800B578,0x0800B578,0x0800B588,0x10,cluster_043,gameplay/object_state,medium,dense generic gameplay object-state accessor/bitfield helper block used by actor-like tasks,bl
 sub_0800B588,0x0800B588,0x0800B5A8,0x20,cluster_002,gameplay/object_state,medium,dense generic gameplay object-state accessor/bitfield helper block used by actor-like tasks,bl
@@ -674,11 +675,13 @@ sub_080118A8,0x080118A8,0x080118BC,0x14,cluster_042,unk/cluster_042,unknown,call
 sub_080118BC,0x080118BC,0x080118FC,0x40,cluster_062,unk/cluster_062,unknown,call-graph community only; semantic role not established,bl
 sub_080118FC,0x080118FC,0x08011934,0x38,cluster_042,unk/cluster_042,unknown,call-graph community only; semantic role not established,bl
 sub_08011934,0x08011934,0x08011950,0x1C,cluster_063,unk/cluster_063,unknown,call-graph community only; semantic role not established,bl
-sub_08011950,0x08011950,0x08011964,0x14,cluster_042,unk/cluster_042,unknown,call-graph community only; semantic role not established,bl
+sub_08011950,0x08011950,0x08011954,0x4,cluster_042,unk/cluster_042,unknown,call-graph community only; semantic role not established,bl
+sub_08011954,0x08011954,0x08011964,0x10,cluster_042,unk/cluster_042,unknown,call-graph community only; semantic role not established,bl
 sub_08011964,0x08011964,0x08011968,0x4,cluster_042,unk/cluster_042,unknown,call-graph community only; semantic role not established,bl
 sub_08011968,0x08011968,0x08011978,0x10,cluster_030,unk/cluster_030,unknown,call-graph community only; semantic role not established,bl
 sub_08011978,0x08011978,0x08011980,0x8,cluster_063,unk/cluster_063,unknown,call-graph community only; semantic role not established,bl
-sub_08011980,0x08011980,0x08011988,0x8,cluster_063,unk/cluster_063,unknown,call-graph community only; semantic role not established,bl
+sub_08011980,0x08011980,0x08011984,0x4,cluster_063,unk/cluster_063,unknown,call-graph community only; corrected terminal bx boundary,bl+boundary_fixed
+sub_08011984,0x08011984,0x08011988,0x4,cluster_063,unk/cluster_063,unknown,call-graph community only; recovered after terminal bx,boundary_fixed
 sub_08011988,0x08011988,0x08011990,0x8,cluster_063,unk/cluster_063,unknown,call-graph community only; semantic role not established,bl
 sub_08011990,0x08011990,0x08011998,0x8,cluster_063,unk/cluster_063,unknown,call-graph community only; semantic role not established,bl
 sub_08011998,0x08011998,0x0801199C,0x4,cluster_063,unk/cluster_063,unknown,call-graph community only; semantic role not established,bl
@@ -2374,7 +2377,8 @@ sub_080560B0,0x080560B0,0x080560CC,0x1C,cluster_043,unk/cluster_043,unknown,call
 sub_080560CC,0x080560CC,0x080560D0,0x4,cluster_042,unk/cluster_042,unknown,call-graph community only; semantic role not established,bl
 sub_080560D0,0x080560D0,0x080560D4,0x4,cluster_085,unk/cluster_085,unknown,call-graph community only; semantic role not established,bl
 sub_080560D4,0x080560D4,0x080560D8,0x4,cluster_063,unk/cluster_063,unknown,call-graph community only; semantic role not established,bl
-sub_080560D8,0x080560D8,0x080560E0,0x8,cluster_065,unk/cluster_065,unknown,call-graph community only; semantic role not established,bl
+sub_080560D8,0x080560D8,0x080560DC,0x4,cluster_065,unk/cluster_065,unknown,call-graph community only; corrected terminal bx boundary,bl+boundary_fixed
+sub_080560DC,0x080560DC,0x080560E0,0x4,cluster_065,unk/cluster_065,unknown,call-graph community only; recovered after terminal bx,boundary_fixed
 sub_080560E0,0x080560E0,0x080560EC,0xC,cluster_063,unk/cluster_063,unknown,call-graph community only; semantic role not established,bl
 sub_080560EC,0x080560EC,0x080560F4,0x8,cluster_085,unk/cluster_085,unknown,call-graph community only; semantic role not established,bl
 sub_080560F4,0x080560F4,0x080560F8,0x4,cluster_043,unk/cluster_043,unknown,call-graph community only; semantic role not established,bl
@@ -3236,7 +3240,8 @@ sub_0807E56C,0x0807E56C,0x0807E5AC,0x40,cluster_020,unk/cluster_020,unknown,call
 sub_0807E5AC,0x0807E5AC,0x0807E5CC,0x20,cluster_030,unk/cluster_030,unknown,call-graph community only; semantic role not established,bl
 sub_0807E5CC,0x0807E5CC,0x0807E5F8,0x2C,cluster_089,unk/cluster_089,unknown,call-graph community only; semantic role not established,bl
 sub_0807E5F8,0x0807E5F8,0x0807E608,0x10,cluster_089,unk/cluster_089,unknown,call-graph community only; semantic role not established,bl
-sub_0807E608,0x0807E608,0x0807E614,0xC,cluster_023,unk/cluster_023,unknown,call-graph community only; semantic role not established,bl
+sub_0807E608,0x0807E608,0x0807E60C,0x4,cluster_023,unk/cluster_023,unknown,call-graph community only; corrected terminal bx boundary,bl+boundary_fixed
+sub_0807E60C,0x0807E60C,0x0807E614,0x8,cluster_023,unk/cluster_023,unknown,call-graph community only; recovered after terminal bx,boundary_fixed
 sub_0807E614,0x0807E614,0x0807E618,0x4,cluster_023,unk/cluster_023,unknown,call-graph community only; semantic role not established,bl
 sub_0807E618,0x0807E618,0x0807E61C,0x4,cluster_030,unk/cluster_030,unknown,call-graph community only; semantic role not established,bl
 sub_0807E61C,0x0807E61C,0x0807E620,0x4,cluster_030,unk/cluster_030,unknown,call-graph community only; semantic role not established,bl
@@ -5250,10 +5255,8 @@ sub_080F5F74,0x080F5F74,0x080F632A,0x3B6,cluster_002,unk/cluster_002,unknown,cal
 sub_080F632A,0x080F632A,0x080F6690,0x366,cluster_002,unk/cluster_002,unknown,call-graph community only; semantic role not established,bl
 sub_080F6690,0x080F6690,0x080F66E0,0x50,cluster_053,unk/cluster_053,unknown,call-graph community only; semantic role not established,bl
 sub_080F66E0,0x080F66E0,0x080F66F8,0x18,cluster_053,unk/cluster_053,unknown,call-graph community only; semantic role not established,bl
-sub_080F66F8,0x080F66F8,0x080F66FA,0x2,cluster_053,unk/cluster_053,unknown,call-graph community only; semantic role not established,bl
-sub_080F66FA,0x080F66FA,0x080F6714,0x1A,cluster_053,unk/cluster_053,unknown,call-graph community only; semantic role not established,bl
-sub_080F6714,0x080F6714,0x080F6716,0x2,cluster_053,unk/cluster_053,unknown,call-graph community only; semantic role not established,bl
-sub_080F6716,0x080F6716,0x080F68A4,0x18E,cluster_053,unk/cluster_053,unknown,call-graph community only; semantic role not established,bl
+sub_080F66F8,0x080F66F8,0x080F6714,0x1C,cluster_053,unk/cluster_053,medium,shared-tail entry range containing callable interior alias sub_080F66FA,bl+shared_tail
+sub_080F6714,0x080F6714,0x080F68A4,0x190,cluster_053,unk/cluster_053,medium,shared-tail entry range containing callable interior alias sub_080F6716,bl+shared_tail
 sub_080F68A4,0x080F68A4,0x080F68F0,0x4C,cluster_002,unk/cluster_002,unknown,call-graph community only; semantic role not established,bl
 sub_080F68F0,0x080F68F0,0x080F6B48,0x258,cluster_069,sound/related/cluster_069,medium,sound IO in 3/39 functions,ptr
 sub_080F6B48,0x080F6B48,0x080F6B58,0x10,cluster_069,sound/related/cluster_069,medium,sound IO in 3/39 functions,bl

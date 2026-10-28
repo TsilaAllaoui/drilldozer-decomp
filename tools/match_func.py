@@ -109,11 +109,13 @@ def boundary_warning(name: str, start: int, end: int, blob: bytes) -> str | None
         if m:
             insns.append(m.group(1).strip().lower())
     if size <= 2:
-        if not any(x.startswith(("bx\tlr", "bx lr", "b.n", "b\t")) for x in insns):
+        if not any(x.startswith(("bx\t", "bx ", "mov\tpc,", "mov pc,", "b.n", "b\t")) for x in insns):
             return f"{name} is only {size} bytes and has no return/tail branch; it is almost certainly an internal basic block, not a standalone function."
     if size <= 6 and insns:
         joined = "\n".join(insns)
-        terminal = any(k in joined for k in ["bx\tlr", "bx lr", "pop\t{pc}", "pop {pc}"])
+        terminal = any(k in joined for k in [
+            "bx\t", "bx ", "mov\tpc,", "mov pc,", "pop\t{pc}", "pop {pc}"
+        ])
         if not terminal and not insns[-1].startswith(("b.n", "b\t")):
             return f"{name} is a very small candidate with no visible function exit. Verify/merge its boundary before decompiling."
     return None
@@ -281,7 +283,13 @@ def main() -> int:
 
     with tempfile.TemporaryDirectory(prefix="ddmatch_") as td_s:
         td = Path(td_s)
-        s, o, elf, b, lds, pp = [td / x for x in ["test.s", "test.o", "test.elf", "test.bin", "link.ld", "test.i"]]
+        s, o, elf, b, lds, pp, symbols_s, symbols_o = [
+            td / x
+            for x in [
+                "test.s", "test.o", "test.elf", "test.bin", "link.ld", "test.i",
+                "symbols.s", "symbols.o",
+            ]
+        ]
         subprocess.run(["gcc", "-E", "-P", "-nostdinc", "-I", str(ROOT / "include"), str(cfile), "-o", str(pp)], check=True, cwd=ROOT)
         subprocess.run([str(cc), str(pp), *shlex.split(flags), "-o", str(s)], check=True, cwd=ROOT)
         target_asm = find_target_asm(args.name)
@@ -289,10 +297,25 @@ def main() -> int:
             force_zero_thumb_padding(s, target_asm, end)
         subprocess.run([str(as_), "-mcpu=arm7tdmi", "-mthumb-interwork", "-o", str(o), str(s)], check=True)
 
-        syms = []
+        thumb_symbols = [".syntax unified", ".thumb"]
         with (ROOT / "config/functions.csv").open() as f:
             for q in csv.DictReader(f):
-                syms.append(f"{q['name']} = {q['start']};")
+                if q["name"] == args.name:
+                    continue
+                # A linker-script assignment cannot carry ELF STT_FUNC/Thumb
+                # metadata. Emit aliases in an assembler object so direct BL
+                # relocations stay direct instead of growing interwork veneers.
+                thumb_symbols.extend([
+                    f".global {q['name']}",
+                    ".thumb_func",
+                    f".thumb_set {q['name']}, {int(q['start'], 0):#x}",
+                ])
+        symbols_s.write_text("\n".join(thumb_symbols) + "\n")
+        subprocess.run(
+            [str(as_), "-mcpu=arm7tdmi", "-mthumb-interwork", "-o", str(symbols_o), str(symbols_s)],
+            check=True,
+        )
+        syms = []
         symfile = ROOT / "config" / "symbols.txt"
         if symfile.exists():
             for line in symfile.read_text().splitlines():
@@ -303,7 +326,12 @@ def main() -> int:
                 if len(parts) >= 2:
                     syms.append(f"{parts[1]} = {parts[0]};")
         lds.write_text("OUTPUT_ARCH(arm)\n" + f"SECTIONS {{ . = 0x{start:08X}; .text : {{ *(.text) *(.rodata*) }} }}\n" + "\n".join(syms) + "\n")
-        p = subprocess.run([str(ld), "-T", str(lds), "-o", str(elf), str(o)], text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        p = subprocess.run(
+            [str(ld), "-T", str(lds), "-o", str(elf), str(o), str(symbols_o)],
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
         if p.returncode:
             print(p.stderr, end="")
             print("\nLink failed. Add correct declarations/addresses to the source/context.")

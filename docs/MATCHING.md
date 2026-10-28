@@ -1,6 +1,6 @@
 # Drill Dozer: ASM → matching C → linked object
 
-All addresses and tracked ranges are defined in `config/functions.csv`. Early function boundaries are candidates, not guaranteed function starts.
+All addresses and tracked ranges are defined in `config/functions.csv`. Early function boundaries are candidates, not guaranteed function starts. Shared-tail entry points are represented by one containing range with the interior callable label preserved in its reference assembly; they must not be split into impossible 2-byte standalone C candidates.
 
 1. Choose a small function in `asm/nonmatching/` and inspect its boundaries, signature and callers.
 2. Generate your local matching starter and decomp.me scratch files: `python3 tools/match_func.py sub_XXXXXXXX`. It creates `src/matching/sub_XXXXXXXX.c` and ignored `decompme/sub_XXXXXXXX/`.

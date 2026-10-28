@@ -10,7 +10,10 @@ from pathlib import Path
 import re
 
 _ZERO_NOP = re.compile(r'^lsl\s+r0\s*,\s*r0\s*,\s*#(?:0x0|0)\s*$', re.I)
-_RETURN = re.compile(r'^(?:bx\s+lr|pop\s+\{[^}]*\bpc\b[^}]*\})\s*$', re.I)
+_RETURN = re.compile(
+    r'^(?:bx\s+(?:lr|r(?:1[0-5]|[0-9]))|mov\s+(?:pc|r15)\s*,\s*(?:lr|r14)|pop\s+\{[^}]*\bpc\b[^}]*\})\s*$',
+    re.I,
+)
 
 
 def has_zero_thumb_padding(reference: Path, end_address: int) -> bool:

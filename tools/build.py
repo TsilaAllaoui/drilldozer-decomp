@@ -118,6 +118,47 @@ def generate(*, snapshot=False):
     lines += ['.global gCodeEnd','gCodeEnd:']
     if not snapshot:
         lines += ['.incbin "baserom.gba", 0x100000', '.global gRomEnd', 'gRomEnd:']
+
+    # A promoted C object splits the remaining assembly into separate ELF
+    # sections. GNU as cannot encode a short branch to a local label in a
+    # different section, even when the final linker layout puts the target in
+    # range. The generated local labels encode their ROM address, so give
+    # branch targets global Thumb aliases that can carry relocations between
+    # sections. This keeps legitimate cross-function tail branches and
+    # jump-table stubs working as more C objects are inserted.
+    branch_aliases = {}
+    branch_re = re.compile(
+        r'^(\s+b(?:l|eq|ne|cs|cc|mi|pl|vs|vc|hi|ls|ge|lt|gt|le)?\s+)'
+        r'\.L_([0-9A-Fa-f]+)(\s*(?:@.*)?)$'
+    )
+    rewritten = []
+    for line in lines:
+        match = branch_re.match(line)
+        if match:
+            suffix = match.group(2).lower()
+            address = BASE + int(suffix, 16)
+            if BASE <= address < CODE_END:
+                alias = f'__branch_{address:08x}'
+                branch_aliases[alias] = suffix
+                line = f'{match.group(1)}{alias}{match.group(3)}'
+        rewritten.append(line)
+    lines = []
+    label_re = re.compile(r'^\.L_([0-9A-Fa-f]+):$')
+    for line in rewritten:
+        label_match = label_re.match(line)
+        if label_match:
+            suffix = label_match.group(1).lower()
+            address = BASE + int(suffix, 16)
+            alias = f'__branch_{address:08x}'
+            if branch_aliases.get(alias) == suffix:
+                lines.extend([
+                    f'.global {alias}',
+                    f'.type {alias}, %function',
+                    '.thumb_func',
+                    f'{alias}:',
+                ])
+        lines.append(line)
+
     asm = BUILD / ('code_snapshot.s' if snapshot else 'unmatched.s')
     asm.write_text('\n'.join(lines)+'\n')
     if snapshot:

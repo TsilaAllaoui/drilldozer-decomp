@@ -1,0 +1,10 @@
+#include "global.h"
+
+u32 sub_08017DF4(u32 arg0, u32 arg1, u32 arg2)
+{
+    arg2 = 249;
+    arg2 = arg2 << 2;
+    arg0 = arg0 + arg2;
+    *(u32 *)(arg0 + 0) = arg1;
+    return arg0;
+}

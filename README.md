@@ -5,8 +5,9 @@
 <!-- DECOMP_PROGRESS:START -->
 ## Decompilation Progress
 
-**0.03%** matched C · **50 / 5,389** candidate functions · **316 / 1,047,988** bytes.  
-*Verified from objdiff report. Percentage uses objdiff matched-code bytes when a report is available. The 5,389 ranges are candidate boundaries, not all proven functions.*
+**0.37%** matched C · **353 / 5,392** candidate functions · **3,832 / 1,047,988** bytes.
+
+*Verified from objdiff report. Percentage uses objdiff matched-code bytes when a report is available. The 5,392 ranges are candidate boundaries, not all proven functions.*
 
 ![Decompilation progress](docs/progress-treemap.svg)
 
@@ -37,7 +38,7 @@ Expected verification: `MATCH: 8388608 bytes are identical`.
 
 The unmatched `.s` files are combined at build time into one `build/unmatched.s` before assembling. This retains cross-file local branch labels and avoids 5,000+ standalone assembler invocations. No tracked source assembler includes another file.
 
-**Already promoted in this project:** `sub_080010C0` and `sub_080014AC`. Both compile from `src/system/dma_queue/` and link directly. This is not an example; these are your actual C files.
+Promoted functions are listed in `config/matched_functions.json`; every entry compiles from its organized `src/` path and keeps its original assembly only under the mirrored `asm/references/` path.
 
 ## Matching a new function
 
