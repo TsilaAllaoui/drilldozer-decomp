@@ -5,7 +5,7 @@
 <!-- DECOMP_PROGRESS:START -->
 ## Decompilation Progress
 
-**0.02%** matched C · **25 / 5,389** candidate functions · **216 / 1,047,988** bytes.  
+**0.03%** matched C · **50 / 5,389** candidate functions · **316 / 1,047,988** bytes.  
 *Verified from objdiff report. Percentage uses objdiff matched-code bytes when a report is available. The 5,389 ranges are candidate boundaries, not all proven functions.*
 
 ![Decompilation progress](docs/progress-treemap.svg)
