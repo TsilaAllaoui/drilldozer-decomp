@@ -1,0 +1,33 @@
+.syntax divided
+.align 2, 0
+.global sub_0803004C
+.thumb
+.type sub_0803004C, %function
+.thumb_func
+sub_0803004C:
+	push	{r4, r5, lr}
+	.2byte	0x1C04
+	bl	sub_08030004
+	.2byte	0x1C05
+	.2byte	0x1C20
+	bl	sub_08030028
+	mov	r1, #1
+	neg	r1, r1
+	cmp	r0, r1
+	bne	.L_30068
+	.2byte	0x1C28
+	b	.L_30076
+.L_30068:
+	cmp	r5, r1
+	beq	.L_30076
+	cmp	r0, #0
+	beq	.L_30074
+	.2byte	0x1D28
+	b	.L_30076
+.L_30074:
+	.2byte	0x1CA8
+.L_30076:
+	pop	{r4, r5}
+	pop	{r1}
+	bx	r1
+.size sub_0803004C, .-sub_0803004C

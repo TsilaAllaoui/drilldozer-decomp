@@ -1,0 +1,103 @@
+.syntax divided
+.align 2, 0
+.global sub_08019A90
+.thumb
+.type sub_08019A90, %function
+.thumb_func
+sub_08019A90:
+	push	{r4, r5, r6, r7, lr}
+	mov	r7, sl
+	mov	r6, r9
+	mov	r5, r8
+	push	{r5, r6, r7}
+	sub	sp, #8
+	lsl	r0, r0, #16
+	lsr	r0, r0, #16
+	mov	r9, r0
+	lsl	r1, r1, #16
+	lsr	r1, r1, #16
+	mov	r8, r1
+	lsl	r2, r2, #24
+	lsr	r2, r2, #24
+	mov	ip, r2
+	mov	r0, sp
+	strh	r3, [r0, #0]
+	mov	r7, #0
+	cmp	r7, r8
+	bcs	.L_19b26
+	ldr	r0, [pc, #124]	@ (0x8019b38)
+	mov	sl, r0
+.L_19abc:
+	mov	r1, r9
+	add	r5, r7, r1
+	lsl	r5, r5, #16
+	lsr	r5, r5, #15
+	ldr	r6, [pc, #116]	@ (0x8019b3c)
+	add	r0, r5, r6
+	ldr	r3, [r0, #0]
+	lsl	r4, r3, #27
+	lsl	r2, r3, #22
+	lsl	r3, r3, #17
+	ldr	r0, [pc, #108]	@ (0x8019b40)
+	add	r0, r5, r0
+	str	r0, [sp, #4]
+	lsr	r4, r4, #27
+	ldr	r1, [sp, #0]
+	lsl	r0, r1, #27
+	lsr	r0, r0, #27
+	sub	r0, r0, r4
+	mov	r6, ip
+	mul	r6, r0
+	.2byte	0x1C30
+	asr	r0, r0, #4
+	add	r4, r4, r0
+	lsr	r2, r2, #27
+	lsl	r0, r1, #22
+	lsr	r0, r0, #27
+	sub	r0, r0, r2
+	mov	r6, ip
+	mul	r6, r0
+	.2byte	0x1C30
+	asr	r0, r0, #4
+	add	r2, r2, r0
+	lsl	r2, r2, #5
+	orr	r4, r2
+	lsr	r3, r3, #27
+	lsl	r1, r1, #17
+	lsr	r1, r1, #27
+	sub	r1, r1, r3
+	mov	r0, ip
+	mul	r0, r1
+	asr	r0, r0, #4
+	add	r3, r3, r0
+	lsl	r3, r3, #10
+	orr	r4, r3
+	ldr	r0, [sp, #4]
+	strh	r4, [r0, #0]
+	add	r5, sl
+	strh	r4, [r5, #0]
+	.2byte	0x1C78
+	lsl	r0, r0, #16
+	lsr	r7, r0, #16
+	cmp	r7, r8
+	bcc	.L_19abc
+.L_19b26:
+	add	sp, #8
+	pop	{r3, r4, r5}
+	mov	r8, r3
+	mov	r9, r4
+	mov	sl, r5
+	pop	{r4, r5, r6, r7}
+	pop	{r0}
+	bx	r0
+	lsl	r0, r0, #0
+	.align	2, 0
+.L_19b38:
+	.4byte	0x2035054
+	.align	2, 0
+.L_19b3c:
+	.4byte	0x2034C54
+	.align	2, 0
+.L_19b40:
+	.4byte	0x2035464
+.size sub_08019A90, .-sub_08019A90

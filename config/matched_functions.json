@@ -1,0 +1,287 @@
+{
+  "sub_0800043C": {
+    "profile": "baseline",
+    "reference": "asm/references/system/core/cluster_000/sub_0800043C.s",
+    "source": "src/system/core/cluster_000/sub_0800043C.c"
+  },
+  "sub_08000988": {
+    "profile": "baseline",
+    "reference": "asm/references/system/task/sub_08000988.s",
+    "source": "src/system/task/sub_08000988.c"
+  },
+  "sub_0800098C": {
+    "profile": "baseline",
+    "reference": "asm/references/system/task/sub_0800098C.s",
+    "source": "src/system/task/sub_0800098C.c"
+  },
+  "sub_08000990": {
+    "profile": "baseline",
+    "reference": "asm/references/system/task/sub_08000990.s",
+    "source": "src/system/task/sub_08000990.c"
+  },
+  "sub_080010C0": {
+    "profile": "baseline",
+    "reference": "asm/references/system/dma_queue/sub_080010C0.s",
+    "source": "src/system/dma_queue/sub_080010C0.c"
+  },
+  "sub_080014AC": {
+    "profile": "baseline",
+    "reference": "asm/references/system/dma_queue/sub_080014AC.s",
+    "source": "src/system/dma_queue/sub_080014AC.c"
+  },
+  "sub_08002A78": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/background/sub_08002A78.s",
+    "source": "src/graphics/background/sub_08002A78.c"
+  },
+  "sub_08002DD0": {
+    "profile": "baseline",
+    "reference": "asm/references/system/input/sub_08002DD0.s",
+    "source": "src/system/input/sub_08002DD0.c"
+  },
+  "sub_0800B220": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B220.s",
+    "source": "src/gameplay/object_state/sub_0800B220.c"
+  },
+  "sub_0800B224": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B224.s",
+    "source": "src/gameplay/object_state/sub_0800B224.c"
+  },
+  "sub_0800B22C": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B22C.s",
+    "source": "src/gameplay/object_state/sub_0800B22C.c"
+  },
+  "sub_0800B248": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B248.s",
+    "source": "src/gameplay/object_state/sub_0800B248.c"
+  },
+  "sub_0800B24C": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B24C.s",
+    "source": "src/gameplay/object_state/sub_0800B24C.c"
+  },
+  "sub_0800B27C": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B27C.s",
+    "source": "src/gameplay/object_state/sub_0800B27C.c"
+  },
+  "sub_0800B3D0": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B3D0.s",
+    "source": "src/gameplay/object_state/sub_0800B3D0.c"
+  },
+  "sub_0800B3EC": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B3EC.s",
+    "source": "src/gameplay/object_state/sub_0800B3EC.c"
+  },
+  "sub_0800B3FC": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B3FC.s",
+    "source": "src/gameplay/object_state/sub_0800B3FC.c"
+  },
+  "sub_0800B400": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B400.s",
+    "source": "src/gameplay/object_state/sub_0800B400.c"
+  },
+  "sub_0800B510": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B510.s",
+    "source": "src/gameplay/object_state/sub_0800B510.c"
+  },
+  "sub_0800B534": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B534.s",
+    "source": "src/gameplay/object_state/sub_0800B534.c"
+  },
+  "sub_0800B550": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B550.s",
+    "source": "src/gameplay/object_state/sub_0800B550.c"
+  },
+  "sub_0800B554": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B554.s",
+    "source": "src/gameplay/object_state/sub_0800B554.c"
+  },
+  "sub_0800C1E8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_054/sub_0800C1E8.s",
+    "source": "src/unk/cluster_054/sub_0800C1E8.c"
+  },
+  "sub_0800C1EC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_024/sub_0800C1EC.s",
+    "source": "src/unk/cluster_024/sub_0800C1EC.c"
+  },
+  "sub_0800C1F0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_024/sub_0800C1F0.s",
+    "source": "src/unk/cluster_024/sub_0800C1F0.c"
+  },
+  "sub_0800C1F4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_053/sub_0800C1F4.s",
+    "source": "src/unk/cluster_053/sub_0800C1F4.c"
+  },
+  "sub_08011720": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_042/sub_08011720.s",
+    "source": "src/unk/cluster_042/sub_08011720.c"
+  },
+  "sub_08011724": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_08011724.s",
+    "source": "src/unk/cluster_020/sub_08011724.c"
+  },
+  "sub_08011988": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08011988.s",
+    "source": "src/unk/cluster_063/sub_08011988.c"
+  },
+  "sub_08011990": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08011990.s",
+    "source": "src/unk/cluster_063/sub_08011990.c"
+  },
+  "sub_08011998": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08011998.s",
+    "source": "src/unk/cluster_063/sub_08011998.c"
+  },
+  "sub_080119B0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_080119B0.s",
+    "source": "src/unk/cluster_063/sub_080119B0.c"
+  },
+  "sub_080119C8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_080119C8.s",
+    "source": "src/unk/cluster_063/sub_080119C8.c"
+  },
+  "sub_080119CC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_080119CC.s",
+    "source": "src/unk/cluster_063/sub_080119CC.c"
+  },
+  "sub_080119D0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_080119D0.s",
+    "source": "src/unk/cluster_063/sub_080119D0.c"
+  },
+  "sub_080119D4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_080119D4.s",
+    "source": "src/unk/cluster_063/sub_080119D4.c"
+  },
+  "sub_08011A38": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08011A38.s",
+    "source": "src/unk/cluster_063/sub_08011A38.c"
+  },
+  "sub_08011A40": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08011A40.s",
+    "source": "src/unk/cluster_063/sub_08011A40.c"
+  },
+  "sub_08011A48": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08011A48.s",
+    "source": "src/unk/cluster_063/sub_08011A48.c"
+  },
+  "sub_08011A64": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08011A64.s",
+    "source": "src/unk/cluster_063/sub_08011A64.c"
+  },
+  "sub_08011A6C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08011A6C.s",
+    "source": "src/unk/cluster_063/sub_08011A6C.c"
+  },
+  "sub_08011A74": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_080/sub_08011A74.s",
+    "source": "src/unk/cluster_080/sub_08011A74.c"
+  },
+  "sub_08011A78": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_080/sub_08011A78.s",
+    "source": "src/unk/cluster_080/sub_08011A78.c"
+  },
+  "sub_0803D7D4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_085/sub_0803D7D4.s",
+    "source": "src/unk/cluster_085/sub_0803D7D4.c"
+  },
+  "sub_0803D7D8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_085/sub_0803D7D8.s",
+    "source": "src/unk/cluster_085/sub_0803D7D8.c"
+  },
+  "sub_0803D7DC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_085/sub_0803D7DC.s",
+    "source": "src/unk/cluster_085/sub_0803D7DC.c"
+  },
+  "sub_0803D7E0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_085/sub_0803D7E0.s",
+    "source": "src/unk/cluster_085/sub_0803D7E0.c"
+  },
+  "sub_080560A8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_088/sub_080560A8.s",
+    "source": "src/unk/cluster_088/sub_080560A8.c"
+  },
+  "sub_080560CC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_042/sub_080560CC.s",
+    "source": "src/unk/cluster_042/sub_080560CC.c"
+  },
+  "sub_080560D0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_085/sub_080560D0.s",
+    "source": "src/unk/cluster_085/sub_080560D0.c"
+  },
+  "sub_080560D4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_080560D4.s",
+    "source": "src/unk/cluster_063/sub_080560D4.c"
+  },
+  "sub_0807E618": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0807E618.s",
+    "source": "src/unk/cluster_030/sub_0807E618.c"
+  },
+  "sub_0807E61C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0807E61C.s",
+    "source": "src/unk/cluster_030/sub_0807E61C.c"
+  },
+  "sub_0807E620": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0807E620.s",
+    "source": "src/unk/cluster_030/sub_0807E620.c"
+  },
+  "sub_0807E624": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_005/sub_0807E624.s",
+    "source": "src/unk/cluster_005/sub_0807E624.c"
+  },
+  "sub_080B93B4": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/main/sub_080B93B4.s",
+    "source": "src/gameplay/main/sub_080B93B4.c"
+  },
+  "sub_080B93B8": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/main/sub_080B93B8.s",
+    "source": "src/gameplay/main/sub_080B93B8.c"
+  }
+}

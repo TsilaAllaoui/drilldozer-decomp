@@ -1,0 +1,88 @@
+name: Drill Dozer decomp.fun progress
+
+# decomp.fun reads the newest successful run on the repository's default branch.
+# No repository secrets, ROM, or decomp.fun API token are needed.
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: decompfun-report-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  progress:
+    name: V49E (USA) objdiff report
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Check out canonical ASM and C sources
+        uses: actions/checkout@v4
+
+      # Native GNU ARM binutils are enough to reproduce baseline function
+      # targets directly from checked-in ASM. The retail ROM is NOT required.
+      - name: Install ARM binutils
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends binutils-arm-none-eabi
+          arm-none-eabi-as --version | head -1
+
+      # Only install the older agbcc compiler if a C reconstruction is present.
+      # At 0% there are no source objects, so no compiler build/download is needed.
+      - name: Install agbcc if C sources exist
+        shell: bash
+        run: |
+          if python3 tools/progress_report.py has-sources; then
+            bash tools/install_dependencies.sh
+          else
+            echo 'No C source functions committed: reporting actual 0% baseline.'
+          fi
+
+      - name: Install pinned objdiff-cli
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSL --retry 3 \
+            https://github.com/encounter/objdiff/releases/download/v3.8.2/objdiff-cli-linux-x86_64 \
+            -o /tmp/objdiff-cli
+          echo 'e5445089a6f707e30cb5e02992451b604619cedfd2660ee2373a86bfefd9e718  /tmp/objdiff-cli' | sha256sum -c -
+          chmod +x /tmp/objdiff-cli
+          sudo mv /tmp/objdiff-cli /usr/local/bin/objdiff-cli
+          objdiff-cli --version
+
+      - name: Generate official objdiff report and progress maps
+        run: |
+          python3 tools/progress_pipeline.py --require-objdiff --jobs 8
+          test -s docs/progress-treemap.svg
+          test -s docs/progress.html
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          path = Path('build/progress/report.json')
+          report = json.loads(path.read_text())
+          assert isinstance(report, dict) and path.stat().st_size > 100, 'No valid objdiff report generated'
+          print(f'objdiff report: {path.stat().st_size:,} bytes')
+          PY
+
+      - name: Upload progress report for decomp.fun
+        uses: actions/upload-artifact@v4
+        with:
+          # decomp.fun requires `report` in the artifact name.
+          name: V49E_report
+          path: build/progress/report.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Upload preview progress map
+        uses: actions/upload-artifact@v4
+        with:
+          name: V49E_progress_map
+          path: |
+            docs/progress-treemap.svg
+            docs/progress.html
+            docs/progress.json
+          if-no-files-found: error
+          retention-days: 30

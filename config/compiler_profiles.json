@@ -1,0 +1,27 @@
+{
+  "baseline": {
+    "compiler": "agbcc",
+    "flags": "-mthumb-interwork -O2 -fhex-asm",
+    "description": "Current proven baseline for ordinary game code. -fhex-asm only affects emitted assembly formatting."
+  },
+  "prologue_fix": {
+    "compiler": "agbcc",
+    "flags": "-mthumb-interwork -O2 -fhex-asm -fprologue-bugfix",
+    "description": "Try when a valid function differs specifically in leaf/non-leaf prologue or LR-save behavior. Not yet proven globally for Drill Dozer."
+  },
+  "o3": {
+    "compiler": "agbcc",
+    "flags": "-mthumb-interwork -O3 -fhex-asm",
+    "description": "Experimental O3 profile. Some already tested functions are identical at O2/O3, so use only when O2 misses."
+  },
+  "sdk": {
+    "compiler": "old_agbcc",
+    "flags": "-mthumb-interwork -O2",
+    "description": "Older SDK-style compiler profile for Nintendo runtime/audio candidates."
+  },
+  "flash_o1": {
+    "compiler": "agbcc",
+    "flags": "-mthumb-interwork -O1 -fhex-asm",
+    "description": "Candidate profile for prebuilt flash-library style code."
+  }
+}

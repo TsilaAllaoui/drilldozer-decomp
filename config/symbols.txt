@@ -1,0 +1,5 @@
+# Known data/global symbols. Format: ADDRESS NAME
+0x03000000 gPair
+0x030000F0 gDmaQueue
+0x030008F0 gDmaQueueLock
+0x030008F1 gDmaQueueNextIndex

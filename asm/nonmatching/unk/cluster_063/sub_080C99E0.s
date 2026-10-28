@@ -1,0 +1,31 @@
+.syntax divided
+.align 2, 0
+.global sub_080C99E0
+.thumb
+.type sub_080C99E0, %function
+.thumb_func
+sub_080C99E0:
+	push	{r4, lr}
+	.2byte	0x1C04
+	mov	r1, #196	@ 0xc4
+	bl	sub_08011978
+	cmp	r0, #0
+	beq	.L_c99f2
+	mov	r0, #1
+	b	.L_c9a04
+.L_c99f2:
+	.2byte	0x1C20
+	mov	r1, #155	@ 0x9b
+	bl	sub_08011978
+	cmp	r0, #0
+	bne	.L_c9a02
+	mov	r0, #0
+	b	.L_c9a04
+.L_c9a02:
+	mov	r0, #2
+.L_c9a04:
+	pop	{r4}
+	pop	{r1}
+	bx	r1
+	lsl	r0, r0, #0
+.size sub_080C99E0, .-sub_080C99E0

@@ -1,0 +1,34 @@
+# Files
+*.gba
+*.elf
+*.map
+*.o
+*.zip
+*.tar
+*.tar.xz
+
+# Toolchains and third-party tools
+/tools/agbcc/
+/tools/agbcc-src/
+/tools/binutils/
+/tools/objdiff/
+/tools/asm-differ/
+/tools/__pycache__/
+
+# Build artifacts
+/build/
+/decompme/
+/objdiff.json
+*.o
+*.elf
+*.map
+*.a
+
+# Python
+__pycache__/
+*.pyc
+
+# Local/editor files
+.vscode/
+.idea/
+*.log
