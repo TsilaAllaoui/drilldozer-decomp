@@ -1,0 +1,181 @@
+{
+  "active_asm_ranges": 4048,
+  "baseline_verified_count": 1326,
+  "checkpoint": "2026-10-29 Drill Dozer cumulative verified continuation",
+  "comparison": "MATCH: 8388608 bytes are identical",
+  "compiler": "historical agbcc baseline -mthumb-interwork -O2 -fhex-asm",
+  "new_matches": [
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_0800B490",
+      "reference": "asm/references/gameplay/object_state/sub_0800B490.s",
+      "reference_sha256": "fd269f1ec8bffe0d0969951712a551e95ac7434c4eb3d00292f2f6d99775159a",
+      "size_bytes": 32,
+      "source": "src/gameplay/object_state/sub_0800B490.c",
+      "source_sha256": "9f2b8d196712c30e6a4bdd7067f8003453ef8352d7be1d222595ddfa9dab8c1f"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_0800B4D0",
+      "reference": "asm/references/gameplay/object_state/sub_0800B4D0.s",
+      "reference_sha256": "5235d08a88a8708ebe53cb75b8234b0e830eb155b99a10e3219c8ecb93ea7920",
+      "size_bytes": 32,
+      "source": "src/gameplay/object_state/sub_0800B4D0.c",
+      "source_sha256": "82e02f75c80fee4baa215030427f87d49aba8541e26a66bf1022f2494ce6ad65"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_0801C084",
+      "reference": "asm/references/unk/cluster_041/sub_0801C084.s",
+      "reference_sha256": "676c701838c793b3112cb72b25569921fed63cfae5c12c06b694a7ebd3225427",
+      "size_bytes": 24,
+      "source": "src/unk/cluster_041/sub_0801C084.c",
+      "source_sha256": "1fb6c893a483c36f9625e45c54a108dfd48271e143102bd66e757a0a1c2bf83f"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_0801C09C",
+      "reference": "asm/references/unk/cluster_046/sub_0801C09C.s",
+      "reference_sha256": "bc817bf79219b51b59bbb96f7f464c2bac6f8e58275be82402846fe26bcda07b",
+      "size_bytes": 24,
+      "source": "src/unk/cluster_046/sub_0801C09C.c",
+      "source_sha256": "346c3ddabdbe353683cc6720eeebe5ed7662183d5ea1d888b2453dae4dbbadb3"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_0801C320",
+      "reference": "asm/references/unk/cluster_070/sub_0801C320.s",
+      "reference_sha256": "235273b7a89fc1b13a645483ff9860036f38b2ebf43ed6d75da56586418e2566",
+      "size_bytes": 32,
+      "source": "src/unk/cluster_070/sub_0801C320.c",
+      "source_sha256": "fd2b76f1a9ca9c1b8734324c2f2588a85f712132ffc7daa2ed9ab8a29ed26374"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_080214A0",
+      "reference": "asm/references/unk/cluster_028/sub_080214A0.s",
+      "reference_sha256": "5db4dcf1c0a5a3f14a91a9adbf68949bc7166e35b714f06c60ade0856390b694",
+      "size_bytes": 28,
+      "source": "src/unk/cluster_028/sub_080214A0.c",
+      "source_sha256": "86b8e7d55cb655d43e0f0dda6294c960e8fa1e838e785a27547b95922696f9a2"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_080214BC",
+      "reference": "asm/references/unk/cluster_028/sub_080214BC.s",
+      "reference_sha256": "a1bb12f7e1835d421254bf9f9f558ac235978bb85e3522ee66c2ded2376653f4",
+      "size_bytes": 28,
+      "source": "src/unk/cluster_028/sub_080214BC.c",
+      "source_sha256": "14a1075332ad5b9054109f28d4691c0354ee43ca2caa66143d6b8923501e9969"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_0802C678",
+      "reference": "asm/references/unk/cluster_024/sub_0802C678.s",
+      "reference_sha256": "4ccf98f23dc9cee5c55186a0e41a7446858624cbc0ef63f7381f1557dd72191a",
+      "size_bytes": 24,
+      "source": "src/unk/cluster_024/sub_0802C678.c",
+      "source_sha256": "0c1af2dffb4f7744252fbae9b0d9114876782401a052279ab98620b74626ad73"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_0802C690",
+      "reference": "asm/references/unk/cluster_024/sub_0802C690.s",
+      "reference_sha256": "f80bec9fb02aab22020bffb1460bb28605ac47bb8fd6484b727234befeaf6446",
+      "size_bytes": 24,
+      "source": "src/unk/cluster_024/sub_0802C690.c",
+      "source_sha256": "770fdb82a838476c73ab9762001af786d3744fb457794c5b6f7819831c792f9c"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_0802FF0C",
+      "reference": "asm/references/unk/cluster_063/sub_0802FF0C.s",
+      "reference_sha256": "eaec2b78ebd1210326bf9e9a7d902cb5e810378270c24eed8e0903da74bb2b80",
+      "size_bytes": 32,
+      "source": "src/unk/cluster_063/sub_0802FF0C.c",
+      "source_sha256": "9a0f13972f78ba6cf0a9ffaf10d6564b94df7bddac92c8be453fb6003b552ae1"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_080566A4",
+      "reference": "asm/references/unk/cluster_063/sub_080566A4.s",
+      "reference_sha256": "0bb55196393a9f0cf164b65ff8345c5f1c5e73edcd9eb726ecc28f1816e6238d",
+      "size_bytes": 28,
+      "source": "src/unk/cluster_063/sub_080566A4.c",
+      "source_sha256": "c2cb864575cdbf32c9af43e1e96012e4f25cc964eccfaf3e3e13ed97e07bf264"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_08075570",
+      "reference": "asm/references/unk/cluster_099/sub_08075570.s",
+      "reference_sha256": "8cfcfa5ce3ed261d389e55c4c71406479eede0ff9ca0f3520cc19a4acda6f5ac",
+      "size_bytes": 28,
+      "source": "src/unk/cluster_099/sub_08075570.c",
+      "source_sha256": "0c80fe608953a2ce851e6c5d8ee3e2b98016b77e2ad9435e799ae32d3c8031dc"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_0808659C",
+      "reference": "asm/references/unk/cluster_086/sub_0808659C.s",
+      "reference_sha256": "9194e81ad4c297d76c95ac04a5e566cb9b1b883c9b0d665fc08215192fdd16e4",
+      "size_bytes": 32,
+      "source": "src/unk/cluster_086/sub_0808659C.c",
+      "source_sha256": "51ef0bb96448964e9223d90ea4e825d033640415b3a053b0550c9ff03c0bc7ee"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_0809F780",
+      "reference": "asm/references/unk/cluster_084/sub_0809F780.s",
+      "reference_sha256": "8364833731a87de30ac66c07bb66916ab68431903f5f4bbe262d147fb33ee8e5",
+      "size_bytes": 28,
+      "source": "src/unk/cluster_084/sub_0809F780.c",
+      "source_sha256": "8ef055d7a2ece499dc3f5900a4a2cd6b89804ff4ff60a7364cf861a752a6032f"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_0809F79C",
+      "reference": "asm/references/unk/cluster_084/sub_0809F79C.s",
+      "reference_sha256": "578003907bf9db39f1d5d1ed893fffeb7faf0d47f8c5af0be90a37020fa2b91e",
+      "size_bytes": 28,
+      "source": "src/unk/cluster_084/sub_0809F79C.c",
+      "source_sha256": "2fa0832d9ab299484d1902d1be3526fd91d354b7d0124130d4aee122d285b5b1"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_080BEF0C",
+      "reference": "asm/references/unk/cluster_064/sub_080BEF0C.s",
+      "reference_sha256": "b2792ebc4bbbbb6ba1f95f8c20fdf13814ab1fa290f524022f70868ea5a7a3ae",
+      "size_bytes": 28,
+      "source": "src/unk/cluster_064/sub_080BEF0C.c",
+      "source_sha256": "fab2ae7d6b379ebe6543ce3201850a7c325f6a9c7086927dcd5f3d60efe96c8d"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_080C1F44",
+      "reference": "asm/references/unk/cluster_020/sub_080C1F44.s",
+      "reference_sha256": "525a24a830260b42f6a212dd5d8865645bd55fa2e369035d042ee19fd5e8bb68",
+      "size_bytes": 20,
+      "source": "src/unk/cluster_020/sub_080C1F44.c",
+      "source_sha256": "d5307b1a0dff91e8ecd5a3499e6186dd9866c40fdbba5dda64dd8bfbd63e68f9"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_080D2A1C",
+      "reference": "asm/references/unk/cluster_078/sub_080D2A1C.s",
+      "reference_sha256": "23292e1cfa085a5111088ddb0913ca580dcc0b5ae7978c0ebb439696c04f50ee",
+      "size_bytes": 28,
+      "source": "src/unk/cluster_078/sub_080D2A1C.c",
+      "source_sha256": "60d5be0d18d6ae92719e035343fad1f9a0a8cc3078d8f9f9fa9149d39c6433b2"
+    }
+  ],
+  "new_matches_count": 18,
+  "original_candidate_ranges": 5392,
+  "preserved_prior_matches": 1326,
+  "previous_source_and_reference_bytes_identical": true,
+  "remaining_to_1500": 156,
+  "tracked_code_bytes_matched": 25964,
+  "tracked_code_bytes_total": 1047988,
+  "unverified_candidate_policy": "No unverified C candidates promoted",
+  "verification": "Clean uncached full-ROM comparison passed in working tree; fresh extraction verification pending",
+  "verified_c_functions": 1344
+}

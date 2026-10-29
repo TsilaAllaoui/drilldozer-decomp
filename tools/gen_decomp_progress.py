@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Generate the WL4-style README treemap from a REAL objdiff report.
+"""Generate matching progress with independently labeled verification evidence.
 
-Without a report, a non-submittable baseline may be rendered, clearly labeled.
-Never count a C source file as matched merely because it exists.
+Prefer a current byte-identical ROM build, then an unchanged historical
+ROM-verified snapshot, then an independent objdiff object report.
+Never count a C file solely because it exists.
 """
 from __future__ import annotations
 
@@ -15,11 +16,48 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
+from verified_rom_checkpoint import read_snapshot
+
 ROOT = Path(__file__).resolve().parents[1]
 OPEN = '<!-- DECOMP_PROGRESS:START -->'
 CLOSE = '<!-- DECOMP_PROGRESS:END -->'
 W, H = 1280, 580
 COLORS = {'matched': '#39b97d', 'unmatched': '#e87b78', 'pending': '#a8b0be'}
+
+
+def local_rom_verified(sources):
+    """Only treat active C objects as matched without objdiff after an exact ROM build.
+
+    An existing C file alone is not proof of a match. This also rejects stale
+    outputs after C source, manifest, linker, or symbol changes. CI requires
+    the independent official objdiff report regardless of this local fallback.
+    """
+    original = ROOT / 'baserom.gba'
+    rebuilt = ROOT / 'build/drilldozer.gba'
+    linker = ROOT / 'ld_script.ld'
+    if not all(p.is_file() for p in (original, rebuilt, linker)):
+        return False
+    if original.stat().st_size != 8388608 or rebuilt.stat().st_size != original.stat().st_size:
+        return False
+    # Full ROM comparison, not just a hash or whether an object exists.
+    if original.read_bytes() != rebuilt.read_bytes():
+        return False
+    output_time = rebuilt.stat().st_mtime
+    prerequisites = [ROOT / 'config/matched_functions.json',
+                     ROOT / 'config/progress_sources.json',
+                     ROOT / 'config/progress_profiles.json',
+                     ROOT / 'config/symbols.txt', linker]
+    prerequisites.extend(ROOT / path for path in sources.values())
+    for path in prerequisites:
+        if not path.is_file() or path.stat().st_mtime > output_time:
+            return False
+    # Confirm every registered C object is an active linker input.
+    script = linker.read_text()
+    for path in sources.values():
+        object_path = 'build/obj/' + Path(path).with_suffix('.o').as_posix()
+        if object_path not in script or not (ROOT / object_path).is_file():
+            return False
+    return True
 
 
 def as_num(value):
@@ -50,6 +88,14 @@ def load_data(report_path: Path):
     results = []
     sources_file = ROOT / "config/progress_sources.json"
     sources = json.loads(sources_file.read_text()) if sources_file.is_file() else {}
+    # Whole-ROM evidence is independent of the presence of an objdiff report.
+    # objdiff may reject individual objects even when their linked ROM bytes
+    # match, e.g. because target objects encode relocations differently.
+    rom_verified = local_rom_verified(sources)
+    historical_snapshot = None if rom_verified else read_snapshot()
+    historical_verified = historical_snapshot is not None
+    report_matched_count = 0
+    report_matched_bytes = 0
     for r in funcs:
         name = r['name']
         size = int(r['size'], 0)
@@ -69,6 +115,11 @@ def load_data(report_path: Path):
             nf = as_num(m.get('total_functions', 0))
             df = as_num(m.get('matched_functions', 0))
             matched = total > 0 and done >= total and nf > 0 and df >= nf
+        if matched:
+            report_matched_count += 1
+            report_matched_bytes += size
+        if (rom_verified or historical_verified) and name in sources and source_exists:
+            matched = True
         state = 'matched' if matched else 'pending' if (not has_report and source_exists) else 'unmatched'
         results.append({'name': name, 'start': f'{start:08X}', 'size': size, 'folder': folder,
                         'module': mod, 'status': state, 'source': source_exists})
@@ -80,11 +131,22 @@ def load_data(report_path: Path):
     official_done = as_num(official_measures.get('matched_code', 0))
     # Prefer the official objdiff byte metric when available. Whole-tile matches
     # in the map are a coarser measure than objdiff's symbol-level code progress.
-    percent = 100 * (official_done/official_code if has_report and official_code else
-                     done_bytes/total_bytes if total_bytes else 0)
+    # Do not overwrite verified C progress with incomplete objdiff coverage.
+    # Retain official objdiff measurements separately as a diagnostic.
+    if rom_verified or historical_verified:
+        percent = 100 * done_bytes / total_bytes if total_bytes else 0
+    else:
+        percent = 100 * official_done / official_code if has_report and official_code else 0
     stats = {'total': len(results), 'matched': done_count, 'bytes': total_bytes,
              'matched_bytes': done_bytes, 'pct': percent,
              'report_verified': has_report,
+             'rom_verified': rom_verified,
+             'historical_verified': historical_verified,
+             'evidence': ('current ROM byte comparison' if rom_verified else
+                          'unchanged historically ROM-verified source snapshot' if historical_verified else
+                          'objdiff only' if has_report else 'none'),
+             'objdiff_complete_units': report_matched_count,
+             'objdiff_complete_unit_bytes': report_matched_bytes,
              'official_matched_code': official_done,
              'official_total_code': official_code}
     return results, stats
@@ -157,7 +219,10 @@ def build_svg(rows,stats):
         if w>77 and h>18:
             fragments.append(f'<text x="{x+4:.2f}" y="{y+14:.2f}" font-family="monospace" font-size="11" fill="#111a2a">{html.escape(row["name"].replace("sub_", ""))}</text>')
     if not stats['report_verified']:
-        fragments.append(f'<rect x="0" y="0" width="{W}" height="26" fill="#111a2a" fill-opacity="0.96"/><text x="12" y="18" font-family="sans-serif" font-size="13" fill="#f4c75e">BASELINE: objdiff report not available yet. No matches are assumed.</text>')
+        note = ('LOCAL ROM VERIFIED: exact rebuilt ROM.' if stats['rom_verified']
+                else 'HISTORICAL ROM VERIFIED: unchanged checkpoint (not rebuilt here).' if stats['historical_verified']
+                else 'BASELINE: objdiff report not available. No matches are assumed.')
+        fragments.append(f'<rect x="0" y="0" width="{W}" height="26" fill="#111a2a" fill-opacity="0.96"/><text x="12" y="18" font-family="sans-serif" font-size="13" fill="#f4c75e">{note}</text>')
     fragments.append('</svg>')
     return '\n'.join(fragments)+'\n'
 
@@ -178,7 +243,7 @@ h1{font-size:26px;margin:0 0 4px}.desc{margin:0 0 20px;color:var(--muted)}.summa
 </style></head><body><main>
 <h1>Drill Dozer Progress</h1><p class="desc">Interactive decompilation treemap. Each tile is one candidate function, sized by byte count, following the WL4 progress-map layout.</p>
 <div class="summary"><div class="metric"><b id="percent">0%</b><span>Matched code (tracked ranges)</span></div><div class="metric"><b id="counter">0 / 0</b><span>Matched candidate functions</span></div><div class="metric"><b id="bytes">0 / 0</b><span>Matched / tracked bytes</span></div></div>
-<div class="notice" id="notice" hidden>Baseline only: an official objdiff report was not available. C matching is not inferred from source-file existence.</div>
+<div class="notice" id="notice" hidden>An official objdiff report was not available. Matching shown, if any, is verified from the exact local ROM build.</div>
 <div class="controls"><button data-filter="all" class="active">All</button><button data-filter="matched">Matched</button><button data-filter="unmatched">Not matched</button><input id="search" type="search" placeholder="Find function or address…" aria-label="Search functions"><label>Module <select id="module"><option value="">All modules</option></select></label><label>Sort <select id="sort"><option value="largest">Largest first</option><option value="module">Module</option><option value="name">Name</option></select></label><button id="reset">Reset</button></div>
 <div class="work"><canvas id="map" aria-label="Function treemap"></canvas><div id="hint"></div></div>
 <div id="detail">Hover over a tile for its function address, size, subsystem, and match status.</div><div class="legend"><span><i class="dot" style="background:#39b97d"></i>Matched C</span><span><i class="dot" style="background:#e87b78"></i>Not matched</span><span><i class="dot" style="background:#a8b0be"></i>Pending verification</span></div>
@@ -221,13 +286,29 @@ window.addEventListener('resize',render);render();
 def update_readme(stats):
     path=ROOT/'README.md'
     content=path.read_text()
-    status=('Verified from objdiff report' if stats['report_verified'] else 'Baseline only, objdiff not installed')
+    status=('Verified by a current byte-identical full-ROM rebuild' if stats['rom_verified']
+            else 'Historical full-ROM-verified checkpoint: all recorded source and build inputs unchanged; not rebuilt this run' if stats['historical_verified']
+            else 'Independent objdiff object comparisons only; no full-ROM verification' if stats['report_verified']
+            else 'Baseline only: neither a ROM verification nor an objdiff report is available')
+    objdiff_note = ''
+    if stats['report_verified'] and (stats['rom_verified'] or stats['historical_verified']):
+        code = stats['official_matched_code']
+        total = stats['official_total_code']
+        pct = 100 * code / total if total else 0
+        objdiff_note = (f'\n\n*Separate objdiff object comparison: '
+                        f'{stats["objdiff_complete_units"]:,} fully matched units, '
+                        f'{pct:.2f}% of its measured code. '
+                        'This independent metric may differ due to target object construction, '
+                        'relocations or function boundaries, and does not override the '
+                        'byte-identical full-ROM checkpoint.*')
     section=(f'{OPEN}\n'
         '## Decompilation Progress\n\n'
         f'**{stats["pct"]:.2f}%** matched C · **{stats["matched"]:,} / {stats["total"]:,}** candidate functions · '
         f'**{stats["matched_bytes"]:,} / {stats["bytes"]:,}** bytes.\n\n'
-        f'*{status}. Percentage uses objdiff matched-code bytes when a report is available. '
-        f'The {stats["total"]:,} ranges are candidate boundaries, not all proven functions.*\n\n'
+        f'*{status}. Main percentage uses matched tracked-range bytes for a ROM-verified checkpoint; '
+        f'without ROM evidence it uses independent objdiff code bytes where available. '
+        f'The {stats["total"]:,} ranges are candidate boundaries, not all proven functions.*'
+        f'{objdiff_note}\n\n'
         '![Decompilation progress](docs/progress-treemap.svg)\n\n'
         '[Open the interactive progress treemap](docs/progress.html) '
         '(open the HTML directly, or publish `docs/` with GitHub Pages).\n'
@@ -254,7 +335,8 @@ def main():
     (ROOT/'docs/progress.html').write_text(build_html(rows,stats))
     (ROOT/'docs/progress.json').write_text(json.dumps({'stats':stats,'functions':rows},separators=(',',':'))+'\n')
     update_readme(stats)
-    print(f'Progress map: {stats["matched"]}/{stats["total"]} functions, {stats["pct"]:.2f}% of tracked code ({"official objdiff report" if stats["report_verified"] else "baseline only"})')
+    evidence = stats['evidence']
+    print(f'Progress map: {stats["matched"]}/{stats["total"]} functions, {stats["pct"]:.2f}% of tracked code ({evidence})')
     print('Updated: docs/progress-treemap.svg, docs/progress.html, docs/progress.json, README.md')
 
 if __name__=='__main__': main()

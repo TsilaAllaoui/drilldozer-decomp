@@ -1,0 +1,2 @@
+#include "global.h"
+void sub_080E73C8(s32 *p){s32 v=p[31]+1;p[31]=v;if(v>4)p[31]=4;}

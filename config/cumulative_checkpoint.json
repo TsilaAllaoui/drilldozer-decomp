@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-28",
+  "rom_sha1": "c1058cc2482b91204100cc8515da99aeb06773f5",
+  "current_verified_c_functions": 1139,
+  "previous_verified_c_functions": 1073,
+  "new_verified_c_functions": 66,
+  "remaining_to_1250": 111,
+  "active_unmatched_asm": 4253,
+  "asm_references": 1139,
+  "whole_rom_match": "MATCH: 8388608 bytes are identical",
+  "checkpoint_manifest": "config/checkpoint_1139_20261028.json",
+  "source_and_reference_baseline_preserved": true,
+  "rom_and_toolchain_included": false
+}

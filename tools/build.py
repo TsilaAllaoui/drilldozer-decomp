@@ -6,6 +6,8 @@ regenerated from config/matched_functions.json and config/functions.csv.
 Only build/ contains generated assembly.
 """
 import argparse
+import hashlib
+import os
 import csv
 import json
 import re
@@ -198,6 +200,19 @@ def compile_sources(manifest):
     profiles = json.loads((ROOT/'config/compiler_profiles.json').read_text())
     as_ = find_arm_tool('arm-none-eabi-as')
     ends = {row['name']: int(row['end'], 0) for row in rows()}
+    # Optional verification accelerator. Not enabled for final clean checks.
+    # The cache binds each object to the exact compiler, source, headers,
+    # selected profile, and reference ASM; a stale object is never reused.
+    cache_enabled = os.environ.get('DD_FAST_VERIFY') == '1'
+    cache_file = BUILD / 'compile_cache.json'
+    cache = json.loads(cache_file.read_text()) if cache_enabled and cache_file.exists() else {}
+    new_cache = {}
+    shared_hash = hashlib.sha256()
+    for shared in sorted((ROOT/'include').rglob('*.h')) + [ROOT/'config/compiler_profiles.json', ROOT/'config/symbols.txt']:
+        shared_hash.update(shared.as_posix().encode())
+        shared_hash.update(shared.read_bytes())
+    shared_digest = shared_hash.digest()
+    compiler_digests = {comp: hashlib.sha256(comp.read_bytes()).digest() for comp in (ROOT/'tools/agbcc/bin').glob('*') if comp.is_file()}
     for name, info in sorted(manifest.items()):
         src = ROOT / info['source']
         if not src.is_file():
@@ -211,7 +226,19 @@ def compile_sources(manifest):
         compiler = ROOT/'tools/agbcc/bin'/profile['compiler']
         if not compiler.is_file():
             raise ValueError('agbcc missing: run make deps (or install tools/agbcc/bin/agbcc)')
-        # Recompile when C or relevant headers change; cheap and safer for now.
+        key_hash = hashlib.sha256()
+        key_hash.update(shared_digest)
+        key_hash.update(src.read_bytes())
+        key_hash.update((ROOT / info['reference']).read_bytes())
+        key_hash.update(compiler_digests[compiler])
+        key_hash.update(profile['flags'].encode())
+        key_hash.update(info['source'].encode())
+        key_hash.update(name.encode())
+        digest = key_hash.hexdigest()
+        new_cache[name] = digest
+        if cache_enabled and obj.exists() and cache.get(name) == digest:
+            continue
+        # Recompile when C or any relevant dependency has changed.
         run(['gcc','-E','-P','-nostdinc','-I',ROOT/'include',src,'-o',pre])
         run([compiler,pre,*shlex.split(profile['flags']),'-o',temp])
         # Match the original 0x0000 Thumb alignment instead of GNU as's
@@ -224,6 +251,10 @@ def compile_sources(manifest):
         if names != [name]:
             raise ValueError(f'{name}: object exports {names}, expected one function')
         print(f'[CC] {info["source"]} -> {obj.relative_to(ROOT)}',flush=True)
+    if cache_enabled:
+        temp = cache_file.with_suffix('.tmp')
+        temp.write_text(json.dumps(new_cache, sort_keys=True))
+        temp.replace(cache_file)
 
 
 def main():

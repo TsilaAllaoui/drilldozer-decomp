@@ -1,0 +1,74 @@
+{
+  "active_asm_ranges": 4041,
+  "baseline_verified_count": 1344,
+  "checkpoint": "2026-10-29 Drill Dozer cumulative verified continuation",
+  "comparison": "MATCH: 8388608 bytes are identical",
+  "compiler": "historical agbcc -mthumb-interwork -O2 -fhex-asm",
+  "new_matches": [
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_08000528",
+      "reference": "asm/references/system/core/cluster_000/sub_08000528.s",
+      "reference_sha256": "e3fdf4005a3ef303bf0cdc3361dda9af9eba66d459af3fb9881cf5baa15612e1",
+      "size_bytes": 28,
+      "source": "src/system/core/cluster_000/sub_08000528.c",
+      "source_sha256": "69993b9fd7952bb6247ba441a077b6a1aabf4c01bc8678fe76803f6e67230744"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_080009AC",
+      "reference": "asm/references/graphics/bg_control/sub_080009AC.s",
+      "reference_sha256": "8efde304b8b3f24947add154c3d66851e411f0b9be804cb515379692d967b2f0",
+      "size_bytes": 28,
+      "source": "src/graphics/bg_control/sub_080009AC.c",
+      "source_sha256": "ac5578b2be6c2df67e6e9d7b56b53d4950cebf5cf9ab68fbbe892c318ac78ff5"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_08005130",
+      "reference": "asm/references/lib/math/sub_08005130.s",
+      "reference_sha256": "3938ba09205e901475fad79cb89fe9e1a60dc0a8e84ad7ecc8092cc9922935d8",
+      "size_bytes": 28,
+      "source": "src/lib/math/sub_08005130.c",
+      "source_sha256": "c1ae1abcb89714a78f2c907a0925f702cff6e543d715df7c0263ea7072b75d27"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_0800619C",
+      "reference": "asm/references/graphics/related/cluster_034/sub_0800619C.s",
+      "reference_sha256": "5cc5e0017e427f9a3a63e51df1b0c5ce06b13a74731e5cc1b90ebd4ecccca712",
+      "size_bytes": 32,
+      "source": "src/graphics/related/cluster_034/sub_0800619C.c",
+      "source_sha256": "311ea96c98142fad75a1d6e9fecc44edfbc69162ebef41e20a8c9d32377616bd"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_0801FBD4",
+      "reference": "asm/references/graphics/related/cluster_019/sub_0801FBD4.s",
+      "reference_sha256": "d9840d98c26986c1589d70bbcaf161d49379fc5b8e56de4fdfe2f850610727f9",
+      "size_bytes": 32,
+      "source": "src/graphics/related/cluster_019/sub_0801FBD4.c",
+      "source_sha256": "ee5451728628d330231b3886935b2433ea5c52b7db75d47322053719cfc91e22"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_0806E8A8",
+      "reference": "asm/references/unk/cluster_053/sub_0806E8A8.s",
+      "reference_sha256": "f46666ea1ecc314e5fdac065dc133e865485796dd3cba095e1381017ccf14656",
+      "size_bytes": 36,
+      "source": "src/unk/cluster_053/sub_0806E8A8.c",
+      "source_sha256": "b1e8816a2a51d3dfd466f0fae370914417541b76e042b7ba0edb3bbdde165ffa"
+    },
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_0808D330",
+      "reference": "asm/references/unk/cluster_024/sub_0808D330.s",
+      "reference_sha256": "be036077a0c8237a368e683e0b557e1ebec160306742bd882f1c7fd80654e956",
+      "size_bytes": 36,
+      "source": "src/unk/cluster_024/sub_0808D330.c",
+      "source_sha256": "0786e879e5943cf6e2a8ae58cb8f20d0fa86049055abd2478de960fcff6c19e8"
+    }
+  ],
+  "preservation": "1344 previous C and 1344 ASM references unchanged",
+  "verified_matches": 1351
+}

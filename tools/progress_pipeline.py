@@ -2,7 +2,7 @@
 """Run the official objdiff report + WL4-style progress maps as part of make.
 
 If objdiff-cli cannot be obtained (e.g. offline), do not forge an objdiff
-report. Generate a clearly labeled baseline-only map so the ROM build can
+report. Generate a clearly labeled local-only map (ROM-verified when available) so the ROM build can
 still complete. CI uses --require-objdiff and never accepts the fallback.
 """
 from __future__ import annotations
@@ -33,7 +33,7 @@ def main():
             print(install.stderr, file=sys.stderr)
             raise SystemExit('ERROR: objdiff-cli is required for an official progress report')
         print(install.stderr.strip(), file=sys.stderr)
-        print('[progress] objdiff-cli unavailable: generating a baseline-only map (not a decomp.fun report).')
+        print('[progress] objdiff-cli unavailable: generating a local-only map (not a decomp.fun report).')
         # Never reuse stale report data when the CLI is unavailable.
         code=run(sys.executable,'tools/gen_decomp_progress.py','--report','build/progress/nonexistent-for-baseline.json')
         return code

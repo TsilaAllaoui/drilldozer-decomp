@@ -5,9 +5,11 @@
 <!-- DECOMP_PROGRESS:START -->
 ## Decompilation Progress
 
-**0.37%** matched C · **353 / 5,392** candidate functions · **3,832 / 1,047,988** bytes.
+**2.54%** matched C · **1,367 / 5,392** candidate functions · **26,628 / 1,047,988** bytes.
 
-*Verified from objdiff report. Percentage uses objdiff matched-code bytes when a report is available. The 5,392 ranges are candidate boundaries, not all proven functions.*
+*Verified by a current byte-identical full-ROM rebuild. Main percentage uses matched tracked-range bytes for a ROM-verified checkpoint; without ROM evidence it uses independent objdiff code bytes where available. The 5,392 ranges are candidate boundaries, not all proven functions.*
+
+*Separate objdiff object comparison: 488 fully matched units, 0.67% of its measured code. This independent metric may differ due to target object construction, relocations or function boundaries, and does not override the byte-identical full-ROM checkpoint.*
 
 ![Decompilation progress](docs/progress-treemap.svg)
 
@@ -60,7 +62,7 @@ For headers, structs, global declarations and the complete matching process, see
 
 ## Progress and decomp.fun
 
-`make` automatically attempts an official objdiff report and updates `docs/progress-treemap.svg`, `docs/progress.html`, and the README. If objdiff isn't installed and cannot be downloaded, it produces a **labeled baseline map**, not a fabricated match percentage. For strictly offline builds, use `OBJDIFF_AUTO_INSTALL=0 make`.
+`make` automatically attempts an official objdiff report and updates `docs/progress-treemap.svg`, `docs/progress.html`, and the README. If objdiff isn't installed and cannot be downloaded, it uses a **byte-exact local ROM comparison** to mark registered C objects if a verified build is available; otherwise it produces a labeled baseline map. This is not an official decomp.fun objdiff report. For strictly offline builds, use `OBJDIFF_AUTO_INSTALL=0 make`.
 
 The [GitHub Actions workflow](.github/workflows/decompfun.yml) uploads the official `V49E_report` artifact on pushes. decomp.fun admission additionally requires a public repository and at least **5% genuinely matched code**. See [docs/DECOMPFUN.md](docs/DECOMPFUN.md).
 

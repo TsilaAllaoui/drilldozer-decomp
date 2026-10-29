@@ -1,0 +1,22 @@
+{
+  "active_asm_ranges": 4040,
+  "baseline_verified_count": 1351,
+  "checkpoint": "2026-10-29 Drill Dozer cumulative verified continuation",
+  "comparison": "MATCH: 8388608 bytes are identical",
+  "compiler": "historical agbcc -mthumb-interwork -O2 -fhex-asm",
+  "new_matches": [
+    {
+      "compiler_profile": "baseline",
+      "name": "sub_080C202C",
+      "reference": "asm/references/unk/cluster_020/sub_080C202C.s",
+      "reference_sha256": "30f7de014fcac13d40514e246e35ce3d629a38fab72e94f61a5547e03b42787c",
+      "size_bytes": 32,
+      "source": "src/unk/cluster_020/sub_080C202C.c",
+      "source_sha256": "f44fe804d06537486016f91b5aaff920e40ba71c10a5d416fd98a36e1c162d7f"
+    }
+  ],
+  "original_asm_ranges": 5392,
+  "preservation": "1351 previous C sources and 1351 prior ASM references unchanged",
+  "verification_basis": "full-ROM compare after locally exact matching; final clean-room rebuild recorded separately",
+  "verified_matches": 1352
+}

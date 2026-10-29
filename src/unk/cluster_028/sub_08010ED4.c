@@ -1,0 +1,2 @@
+#include "global.h"
+extern u32 sub_08011720(u32);void sub_08010F10(u32);void sub_08010F24(u32);void sub_0802FCEC(u32);void sub_08020784(u32);void sub_08010FB8(u32);void sub_08011050(u32);void sub_08020920(u32);void sub_08020BF4(u32);void sub_08010ED4(u32 a){u32 p=sub_08011720(a);sub_08010F10(p);sub_08010F24(p);sub_0802FCEC(p);sub_08020784(p);sub_08010FB8(p);sub_08011050(p);sub_08020920(p);sub_08020BF4(p);}
