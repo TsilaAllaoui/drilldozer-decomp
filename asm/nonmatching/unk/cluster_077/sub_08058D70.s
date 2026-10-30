@@ -7,16 +7,16 @@
 sub_08058D70:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C05
-	.2byte	0x1C0C
+	add	r5, r0, #0
+	add	r4, r1, #0
 	ldr	r0, [r5, #12]
 	mov	r1, sp
 	bl	sub_080117BC
 	ldrb	r0, [r4, #3]
 	cmp	r0, #4
 	bne	.L_58db6
-	.2byte	0x1C28
-	add	r0, #84	@ 0x54
+	add	r0, r5, #0
+	add	r0, #84
 	mov	r2, #0
 	ldrsb	r2, [r0, r2]
 	cmp	r2, #2
@@ -24,7 +24,7 @@ sub_08058D70:
 	mov	r0, sp
 	mov	r3, #0
 	ldrsh	r1, [r0, r3]
-	mov	r3, #36	@ 0x24
+	mov	r3, #36
 	ldrsh	r0, [r5, r3]
 	cmp	r1, r0
 	bgt	.L_58db2
@@ -34,7 +34,7 @@ sub_08058D70:
 	mov	r0, sp
 	mov	r2, #0
 	ldrsh	r1, [r0, r2]
-	mov	r3, #36	@ 0x24
+	mov	r3, #36
 	ldrsh	r0, [r5, r3]
 	cmp	r1, r0
 	bge	.L_58db6

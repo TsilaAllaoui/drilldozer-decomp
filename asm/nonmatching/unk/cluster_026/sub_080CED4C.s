@@ -9,9 +9,9 @@ sub_080CED4C:
 	mov	r7, r8
 	push	{r7}
 	mov	r8, r0
-	.2byte	0x1C0E
-	.2byte	0x1C17
-	.2byte	0x1C34
+	add	r6, r1, #0
+	add	r7, r2, #0
+	add	r4, r6, #0
 	mov	r5, #11
 .L_ced5c:
 	ldr	r0, [r4, #0]
@@ -26,10 +26,10 @@ sub_080CED4C:
 	cmp	r5, #0
 	bge	.L_ced5c
 	mov	r0, r8
-	add	r0, #120	@ 0x78
+	add	r0, #120
 	strb	r7, [r0, #0]
-	.2byte	0x1C32
-	add	r2, #217	@ 0xd9
+	add	r2, r6, #0
+	add	r2, #217
 	ldrb	r1, [r2, #0]
 	mov	r0, #2
 	neg	r0, r0

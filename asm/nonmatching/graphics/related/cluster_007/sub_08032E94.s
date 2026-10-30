@@ -7,7 +7,7 @@
 sub_08032E94:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C04
+	add	r4, r0, #0
 	mov	r1, #0
 	mov	r0, sp
 	strh	r1, [r0, #0]
@@ -18,7 +18,7 @@ sub_08032E94:
 	beq	.L_32eba
 	b	.L_32efc
 .L_32eac:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08032F08
 	ldr	r0, [r4, #4]
 	add	r0, #1
@@ -30,15 +30,15 @@ sub_08032E94:
 	lsr	r5, r0, #24
 	cmp	r5, #0
 	bne	.L_32efc
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08033518
-	ldr	r0, [pc, #40]	@ (0x8032ef8)
-	mov	r2, #128	@ 0x80
+	ldr	r0, .L_32ef8	@ =0x082A2458
+	mov	r2, #128
 	lsl	r2, r2, #2
 	mov	r1, #0
 	bl	sub_08018E94
 	mov	r0, sp
-	mov	r1, #176	@ 0xb0
+	mov	r1, #176
 	mov	r2, #2
 	bl	sub_08018E94
 	mov	r0, sp
@@ -50,9 +50,8 @@ sub_08032E94:
 	str	r5, [r4, #4]
 	mov	r0, #1
 	b	.L_32efe
-	.align	2, 0
 .L_32ef8:
-	.4byte	0x82A2458
+	.4byte	0x082A2458
 .L_32efc:
 	mov	r0, #0
 .L_32efe:
@@ -60,5 +59,5 @@ sub_08032E94:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08032E94, .-sub_08032E94

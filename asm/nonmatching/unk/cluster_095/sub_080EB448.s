@@ -6,14 +6,14 @@
 .thumb_func
 sub_080EB448:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
+	add	r5, r0, #0
 	ldrb	r4, [r5, #6]
 	cmp	r4, #6
 	bls	.L_eb454
 	mov	r4, #6
 .L_eb454:
 	bl	sub_08010BE0
-	.2byte	0x1C02
+	add	r2, r0, #0
 	cmp	r2, #0
 	bne	.L_eb494
 	ldrh	r0, [r5, #8]
@@ -26,7 +26,7 @@ sub_080EB448:
 	cmp	r1, r0
 	bge	.L_eb494
 	strh	r2, [r5, #8]
-	ldr	r0, [pc, #28]	@ (0x80eb490)
+	ldr	r0, .L_eb490	@ =0x084CCBEC
 	lsl	r4, r4, #3
 	add	r4, r4, r0
 	mov	r0, #0
@@ -40,9 +40,8 @@ sub_080EB448:
 	strh	r0, [r5, #10]
 	mov	r0, #1
 	b	.L_eb496
-	.align	2, 0
 .L_eb490:
-	.4byte	0x84CCBEC
+	.4byte	0x084CCBEC
 .L_eb494:
 	mov	r0, #0
 .L_eb496:

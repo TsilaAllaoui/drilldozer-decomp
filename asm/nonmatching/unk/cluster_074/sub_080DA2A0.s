@@ -7,14 +7,14 @@
 sub_080DA2A0:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldr	r0, [r4, #12]
 	mov	r5, sp
 	add	r5, #2
 	mov	r1, sp
-	.2byte	0x1C2A
+	add	r2, r5, #0
 	bl	sub_08011728
-	mov	r0, #36	@ 0x24
+	mov	r0, #36
 	ldrsh	r1, [r4, r0]
 	mov	r0, sp
 	mov	r2, #0
@@ -24,7 +24,7 @@ sub_080DA2A0:
 	bge	.L_da2c6
 	neg	r2, r2
 .L_da2c6:
-	mov	r3, #38	@ 0x26
+	mov	r3, #38
 	ldrsh	r1, [r4, r3]
 	mov	r3, #0
 	ldrsh	r0, [r5, r3]
@@ -34,7 +34,7 @@ sub_080DA2A0:
 	neg	r1, r1
 .L_da2d6:
 	add	r1, r2, r1
-	.2byte	0x1C08
+	add	r0, r1, #0
 	cmp	r1, #0
 	bge	.L_da2e0
 	add	r0, #31
@@ -42,8 +42,8 @@ sub_080DA2A0:
 	asr	r1, r0, #5
 	cmp	r1, #32
 	bgt	.L_da2f8
-	.2byte	0x1C21
-	add	r1, #119	@ 0x77
+	add	r1, r4, #0
+	add	r1, #119
 	ldrb	r0, [r1, #0]
 	cmp	r0, #6
 	bne	.L_da2f4
@@ -53,15 +53,15 @@ sub_080DA2A0:
 	mov	r0, #6
 	b	.L_da30a
 .L_da2f8:
-	cmp	r1, #128	@ 0x80
+	cmp	r1, #128
 	bgt	.L_da304
-	.2byte	0x1C21
-	add	r1, #119	@ 0x77
+	add	r1, r4, #0
+	add	r1, #119
 	mov	r0, #5
 	b	.L_da30a
 .L_da304:
-	.2byte	0x1C21
-	add	r1, #119	@ 0x77
+	add	r1, r4, #0
+	add	r1, #119
 	mov	r0, #3
 .L_da30a:
 	strb	r0, [r1, #0]

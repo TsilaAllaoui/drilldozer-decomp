@@ -8,8 +8,8 @@ sub_0807E7BC:
 	push	{r4, lr}
 	mov	r4, #0
 	bl	sub_0807E43C
-	.2byte	0x1C01
-	mov	r2, #128	@ 0x80
+	add	r1, r0, #0
+	mov	r2, #128
 	lsl	r2, r2, #24
 .L_7e7ca:
 	ldr	r0, [r1, #0]
@@ -17,16 +17,16 @@ sub_0807E7BC:
 	cmp	r0, #0
 	beq	.L_7e7de
 	add	r4, #1
-	add	r1, #188	@ 0xbc
-	cmp	r4, #63	@ 0x3f
+	add	r1, #188
+	cmp	r4, #63
 	ble	.L_7e7ca
 	mov	r0, #0
 	b	.L_7e7e0
 .L_7e7de:
-	.2byte	0x1C08
+	add	r0, r1, #0
 .L_7e7e0:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0807E7BC, .-sub_0807E7BC

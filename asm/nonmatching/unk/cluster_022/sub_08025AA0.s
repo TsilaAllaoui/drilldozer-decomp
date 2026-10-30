@@ -26,7 +26,7 @@ sub_08025AA0:
 	ldrh	r1, [r5, #0]
 	mov	r0, r8
 	bl	sub_08005130
-	.2byte	0x1C04
+	add	r4, r0, #0
 	lsl	r4, r4, #16
 	lsr	r4, r4, #16
 	ldrh	r1, [r5, #0]
@@ -43,7 +43,7 @@ sub_08025AA0:
 	lsl	r0, r0, #16
 	asr	r0, r0, #16
 	mov	r3, sl
-	ldrh	r3, [r3, #34]	@ 0x22
+	ldrh	r3, [r3, #34]
 	add	r0, r0, r3
 	strh	r0, [r1, #22]
 	add	r6, #1

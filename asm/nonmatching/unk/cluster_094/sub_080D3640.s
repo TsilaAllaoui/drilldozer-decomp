@@ -6,7 +6,7 @@
 .thumb_func
 sub_080D3640:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C0D
+	add	r5, r1, #0
 	ldrb	r0, [r5, #16]
 	mov	r6, #12
 	cmp	r0, #0
@@ -18,7 +18,7 @@ sub_080D3640:
 	bge	.L_d3674
 .L_d3654:
 	lsl	r1, r4, #2
-	.2byte	0x1C28
+	add	r0, r5, #0
 	add	r0, #20
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]

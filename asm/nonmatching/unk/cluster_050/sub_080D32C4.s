@@ -10,7 +10,7 @@ sub_080D32C4:
 	mov	r6, r8
 	push	{r6, r7}
 	sub	sp, #20
-	.2byte	0x1C06
+	add	r6, r0, #0
 	mov	r5, #0
 	str	r5, [sp, #16]
 	add	r0, sp, #16
@@ -21,11 +21,11 @@ sub_080D32C4:
 .L_d32de:
 	ldr	r0, [r6, #12]
 	ldrb	r0, [r0, #18]
-	mov	r1, #241	@ 0xf1
+	mov	r1, #241
 	mov	r2, r8
 	mov	r3, #1
 	bl	sub_0801243C
-	.2byte	0x1C01
+	add	r1, r0, #0
 	ldr	r0, [r6, #12]
 	lsl	r1, r1, #24
 	lsr	r1, r1, #24
@@ -38,7 +38,7 @@ sub_080D32C4:
 	mov	r7, #4
 	ldrsh	r0, [r4, r7]
 	str	r0, [sp, #0]
-	.2byte	0x1C30
+	add	r0, r6, #0
 	bl	sub_0801B2C4
 	mov	r1, r9
 	add	r1, #4

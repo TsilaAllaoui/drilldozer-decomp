@@ -13,12 +13,12 @@ sub_080ADC5C:
 	sub	sp, #28
 	mov	r9, r0
 	str	r1, [sp, #16]
-	.2byte	0x1C17
+	add	r7, r2, #0
 	mov	r0, #0
 	mov	sl, r0
 	mov	r1, #0
 	str	r1, [sp, #20]
-	ldr	r0, [pc, #128]	@ (0x80adcf8)
+	ldr	r0, .L_adcf8	@ =0x084145F4
 	lsl	r5, r7, #2
 	add	r5, r5, r7
 	lsl	r5, r5, #2
@@ -26,11 +26,11 @@ sub_080ADC5C:
 	mov	r0, #0
 	ldrsb	r0, [r5, r0]
 	mov	r2, r9
-	ldrh	r4, [r2, #36]	@ 0x24
+	ldrh	r4, [r2, #36]
 	add	r0, r4, r0
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
-	ldr	r1, [pc, #108]	@ (0x80adcfc)
+	ldr	r1, .L_adcfc	@ =0xFFFF0000
 	mov	r8, r1
 	ldr	r3, [sp, #0]
 	and	r3, r1
@@ -38,11 +38,11 @@ sub_080ADC5C:
 	str	r3, [sp, #0]
 	mov	r1, #1
 	ldrsb	r1, [r5, r1]
-	ldrh	r6, [r2, #38]	@ 0x26
+	ldrh	r6, [r2, #38]
 	add	r1, r6, r1
 	lsl	r1, r1, #16
-	ldr	r2, [pc, #88]	@ (0x80add00)
-	.2byte	0x1C10
+	ldr	r2, .L_add00	@ =0x0000FFFF
+	add	r0, r2, #0
 	and	r0, r3
 	orr	r0, r1
 	str	r0, [sp, #0]
@@ -67,7 +67,7 @@ sub_080ADC5C:
 	ldr	r0, [r1, #12]
 	add	r4, sp, #8
 	mov	r1, sp
-	.2byte	0x1C22
+	add	r2, r4, #0
 	bl	sub_08010870
 	mov	r8, r4
 	cmp	r0, #1
@@ -81,16 +81,13 @@ sub_080ADC5C:
 	cmp	r7, #3
 	beq	.L_add2a
 	b	.L_add34
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_adcf8:
-	.4byte	0x84145F4
-	.align	2, 0
+	.4byte	0x084145F4
 .L_adcfc:
 	.4byte	0xFFFF0000
-	.align	2, 0
 .L_add00:
-	.4byte	0xFFFF
+	.4byte	0x0000FFFF
 .L_add04:
 	mov	r2, #6
 	add	r2, sp
@@ -144,17 +141,17 @@ sub_080ADC5C:
 	add	r1, r2, r7
 	add	r1, r1, r4
 	lsl	r1, r1, #2
-	ldr	r5, [pc, #88]	@ (0x80addb8)
+	ldr	r5, .L_addb8	@ =0x084145F4
 	add	r1, r1, r5
 	mov	r0, #0
 	ldrsb	r0, [r1, r0]
 	mov	r2, r9
-	ldrh	r3, [r2, #36]	@ 0x24
+	ldrh	r3, [r2, #36]
 	add	r0, r3, r0
 	strh	r0, [r6, #0]
 	mov	r0, #1
 	ldrsb	r0, [r1, r0]
-	ldrh	r2, [r2, #38]	@ 0x26
+	ldrh	r2, [r2, #38]
 	add	r0, r2, r0
 	strh	r0, [r6, #2]
 	mov	r0, #2
@@ -176,7 +173,7 @@ sub_080ADC5C:
 	ldr	r0, [r1, #12]
 	mov	r5, r8
 	mov	r1, sp
-	.2byte	0x1C2A
+	add	r2, r5, #0
 	bl	sub_08010870
 	cmp	r0, #1
 	bne	.L_addd2
@@ -189,10 +186,9 @@ sub_080ADC5C:
 	cmp	r7, #3
 	beq	.L_addcc
 	b	.L_addd2
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_addb8:
-	.4byte	0x84145F4
+	.4byte	0x084145F4
 .L_addbc:
 	ldrh	r0, [r5, #0]
 	strh	r0, [r6, #6]
@@ -228,5 +224,5 @@ sub_080ADC5C:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080ADC5C, .-sub_080ADC5C

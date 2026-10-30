@@ -8,11 +8,11 @@ sub_0807E508:
 	push	{r4, lr}
 	bl	sub_0807E8B8
 	bl	sub_0807E890
-	.2byte	0x1C04
+	add	r4, r0, #0
 	cmp	r4, #0
 	beq	.L_7e526
 	bl	sub_0807E658
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0807E5AC
 	mov	r0, #1
 	b	.L_7e528
@@ -22,5 +22,5 @@ sub_0807E508:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0807E508, .-sub_0807E508

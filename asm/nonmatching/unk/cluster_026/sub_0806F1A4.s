@@ -7,7 +7,7 @@
 sub_0806F1A4:
 	push	{r4, lr}
 	sub	sp, #4
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldr	r0, [r4, #12]
 	cmp	r0, #0
 	beq	.L_6f1b8
@@ -24,15 +24,14 @@ sub_0806F1A4:
 .L_6f1c6:
 	mov	r0, #0
 	str	r0, [sp, #0]
-	ldr	r2, [pc, #16]	@ (0x806f1dc)
+	ldr	r2, .L_6f1dc	@ =0x05000008
 	mov	r0, sp
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_080F86FC
 	add	sp, #4
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_6f1dc:
-	.4byte	0x5000008
+	.4byte	0x05000008
 .size sub_0806F1A4, .-sub_0806F1A4

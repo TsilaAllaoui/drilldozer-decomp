@@ -10,7 +10,7 @@ sub_0805B410:
 	ldrb	r0, [r1, #7]
 	cmp	r2, r0
 	bge	.L_5b430
-	.2byte	0x1C03
+	add	r3, r0, #0
 	ldr	r1, [r1, #12]
 .L_5b41e:
 	ldrb	r0, [r1, #0]
@@ -28,5 +28,5 @@ sub_0805B410:
 .L_5b432:
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0805B410, .-sub_0805B410

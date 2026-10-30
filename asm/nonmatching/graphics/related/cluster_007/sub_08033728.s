@@ -13,16 +13,16 @@ sub_08033728:
 	mov	r3, #0
 	mov	r6, r8
 	mov	r4, r8
-	add	r4, #80	@ 0x50
+	add	r4, #80
 .L_3373a:
-	ldr	r0, [r4, #80]	@ 0x50
+	ldr	r0, [r4, #80]
 	cmp	r0, #0
 	beq	.L_337ec
 	ldrb	r0, [r0, #1]
 	cmp	r0, #0
 	bne	.L_337ec
-	ldr	r1, [pc, #16]	@ (0x8033758)
-	ldr	r2, [pc, #16]	@ (0x803375c)
+	ldr	r1, .L_33758	@ =0xFFFF0000
+	ldr	r2, .L_3375c	@ =0x0000FFFF
 	mov	r5, #0
 	mov	r7, #0
 	ldrsh	r0, [r4, r7]
@@ -30,12 +30,10 @@ sub_08033728:
 	ble	.L_33760
 	mov	r5, #1
 	b	.L_33766
-	.align	2, 0
 .L_33758:
 	.4byte	0xFFFF0000
 .L_3375c:
-	.2byte	0xFFFF
-	lsl	r0, r0, #0
+	.4byte	0x0000FFFF
 .L_33760:
 	cmp	r0, #0
 	bge	.L_33766
@@ -50,17 +48,16 @@ sub_08033728:
 	ldrsh	r0, [r4, r1]
 	cmp	r0, #0
 	ble	.L_33784
-	ldr	r0, [pc, #4]	@ (0x8033780)
+	ldr	r0, .L_33780	@ =0x0000FFFF
 	and	r5, r0
 	add	r0, #1
 	b	.L_3378a
-	.align	2, 0
 .L_33780:
-	.4byte	0xFFFF
+	.4byte	0x0000FFFF
 .L_33784:
 	cmp	r0, #0
 	bge	.L_3378c
-	ldr	r0, [pc, #40]	@ (0x80337b4)
+	ldr	r0, .L_337b4	@ =0xFFFF0000
 .L_3378a:
 	orr	r5, r0
 .L_3378c:
@@ -69,34 +66,32 @@ sub_08033728:
 	sub	r0, r0, r2
 	strh	r0, [r4, #2]
 	mov	r0, r8
-	add	r0, #141	@ 0x8d
+	add	r0, #141
 	ldrb	r0, [r0, #0]
 	cmp	r0, #0
 	bne	.L_337b8
-	ldr	r1, [r4, #80]	@ 0x50
+	ldr	r1, [r4, #80]
 	ldrh	r0, [r6, #24]
 	add	r0, r0, r5
 	ldrh	r7, [r1, #20]
 	add	r0, r0, r7
 	strh	r0, [r1, #20]
-	ldr	r1, [r4, #80]	@ 0x50
+	ldr	r1, [r4, #80]
 	ldrh	r0, [r6, #26]
 	add	r0, r0, r2
 	b	.L_337ce
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_337b4:
 	.4byte	0xFFFF0000
 .L_337b8:
-	.2byte	0x6D21
+	ldr	r1, [r4, #80]
 	mov	r7, #24
 	ldrsh	r0, [r6, r7]
 	lsl	r0, r0, #2
-.L_337c0:
 	ldrh	r2, [r1, #20]
 	add	r0, r0, r2
 	strh	r0, [r1, #20]
-	ldr	r1, [r4, #80]	@ 0x50
+	ldr	r1, [r4, #80]
 	mov	r7, #26
 	ldrsh	r0, [r6, r7]
 	lsl	r0, r0, #2
@@ -112,7 +107,7 @@ sub_08033728:
 	ldr	r3, [sp, #0]
 	cmp	r0, #0
 	bne	.L_337ec
-	ldr	r1, [r4, #80]	@ 0x50
+	ldr	r1, [r4, #80]
 	mov	r0, #1
 	strb	r0, [r1, #1]
 .L_337ec:
@@ -127,5 +122,5 @@ sub_08033728:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08033728, .-sub_08033728

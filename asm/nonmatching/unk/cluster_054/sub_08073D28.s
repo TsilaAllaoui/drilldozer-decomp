@@ -7,13 +7,13 @@
 sub_08073D28:
 	push	{lr}
 	mov	r2, #0
-	.2byte	0x1C01
+	add	r1, r0, #0
 	add	r1, #8
 .L_73d30:
 	ldr	r0, [r1, #0]
 	cmp	r0, #0
 	bne	.L_73d3a
-	.2byte	0x1C10
+	add	r0, r2, #0
 	b	.L_73d46
 .L_73d3a:
 	add	r1, #12
@@ -25,5 +25,5 @@ sub_08073D28:
 .L_73d46:
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08073D28, .-sub_08073D28

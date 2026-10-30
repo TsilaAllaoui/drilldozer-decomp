@@ -5,9 +5,14 @@
 .type sub_080DA7F0, %function
 .thumb_func
 sub_080DA7F0:
-	@ Exact original ROM bytes from 0x080DA7F0.
-	.byte	0x00, 0xB5, 0xFF, 0xF7, 0x17, 0xFD, 0x01, 0xBC, 0x00, 0x47, 0x00, 0x00, 0x00, 0xB5, 0xFF, 0xF7
-	.byte	0xCD, 0xFC, 0x01, 0xBC
+	push	{lr}
+	bl	sub_080DA224
+	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
+	push	{lr}
+	bl	sub_080DA19C
+	pop	{r0}
+	bx	r0
+	.align	2, 0
 .size sub_080DA7F0, .-sub_080DA7F0

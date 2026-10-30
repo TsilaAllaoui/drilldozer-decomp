@@ -6,17 +6,17 @@
 .thumb_func
 sub_080FAAC8:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
-	.2byte	0x1C0C
-	.2byte	0x1C2B
+	add	r5, r0, #0
+	add	r4, r1, #0
+	add	r3, r5, #0
 	cmp	r2, #3
 	bls	.L_fab0e
 	mov	r0, #3
 	and	r0, r5
 	cmp	r0, #0
 	bne	.L_fab0e
-	.2byte	0x1C29
-	mov	r0, #255	@ 0xff
+	add	r1, r5, #0
+	mov	r0, #255
 	and	r4, r0
 	lsl	r3, r4, #8
 	orr	r3, r4
@@ -39,10891 +39,5450 @@ sub_080FAAC8:
 .L_fab02:
 	cmp	r2, #3
 	bhi	.L_faafe
-	.2byte	0x1C0B
+	add	r3, r1, #0
 	b	.L_fab0e
 .L_fab0a:
 	strb	r4, [r3, #0]
 	add	r3, #1
 .L_fab0e:
-	.2byte	0x1C10
+	add	r0, r2, #0
 	sub	r2, #1
 	cmp	r0, #0
 	bne	.L_fab0a
-	.2byte	0x1C28
+	add	r0, r5, #0
 	pop	{r4, r5, pc}
-	lsl	r0, r0, #0
-	lsl	r5, r3, #23
-	lsr	r0, r0, #32
-	lsl	r5, r5, #22
-	lsr	r0, r0, #32
-	lsl	r5, r0, #21
-	lsr	r0, r0, #32
-	lsl	r5, r6, #25
-	lsr	r0, r0, #32
-	lsl	r1, r2, #24
-	lsr	r0, r0, #32
-	lsl	r5, r4, #26
-	lsr	r0, r0, #32
-	lsl	r5, r4, #26
-	lsr	r0, r0, #32
-	lsl	r5, r4, #26
-	lsr	r0, r0, #32
-	lsl	r5, r4, #26
-	lsr	r0, r0, #32
-	lsl	r5, r4, #26
-	lsr	r0, r0, #32
-	lsl	r5, r4, #26
-	lsr	r0, r0, #32
-	lsl	r5, r4, #26
-	lsr	r0, r0, #32
-	lsl	r5, r4, #26
-	lsr	r0, r0, #32
-	lsl	r1, r0, #25
-	lsr	r0, r0, #32
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	lsl	r0, r0, #8
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	lsl	r0, r0, #4
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	lsl	r0, r0, #4
-	lsl	r7, r7, #3
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	lsl	r0, r0, #4
-	lsl	r2, r0, #0
-	lsl	r3, r0, #16
-	lsl	r5, r0, #12
-	lsl	r6, r0, #28
-	lsl	r0, r1, #24
-	lsl	r0, r0, #4
-	lsl	r2, r0, #0
-	lsr	r1, r1, #8
-	lsr	r3, r1, #4
-	lsr	r4, r1, #20
-	lsr	r6, r1, #16
-	asr	r7, r1, #32
-	lsr	r1, r2, #28
-	lsr	r1, r1, #8
-	lsr	r3, r1, #4
-	asr	r2, r2, #12
-	asr	r4, r2, #8
-	asr	r5, r2, #24
-	asr	r7, r2, #20
-	add	r0, r3, r4
-	add	r2, r3, r0
-	asr	r2, r2, #12
-	asr	r4, r2, #8
-	lsl	r0, r0, #4
-	lsl	r2, r0, #0
-	lsl	r3, r0, #16
-	lsl	r5, r0, #12
-	lsl	r6, r0, #28
-	lsl	r0, r1, #24
-	lsl	r0, r0, #4
-	lsl	r2, r0, #0
-	.2byte	0x1C1B
-	sub	r5, r3, r4
-	.2byte	0x1F1E
-	.2byte	0x1E20
-	mov	r2, #33	@ 0x21
-	mov	r1, #35	@ 0x23
-	.2byte	0x1C1B
-	sub	r5, r3, r4
-	mov	r5, #36	@ 0x24
-	mov	r4, #38	@ 0x26
-	cmp	r0, #39	@ 0x27
-	mov	r7, #41	@ 0x29
-	cmp	r3, #42	@ 0x2a
-	cmp	r2, #44	@ 0x2c
-	mov	r5, #36	@ 0x24
-	mov	r4, #38	@ 0x26
-	cmp	r6, #45	@ 0x2d
-	cmp	r5, #47	@ 0x2f
-	add	r1, #48	@ 0x30
-	add	r0, #50	@ 0x32
-	add	r4, #51	@ 0x33
-	add	r3, #53	@ 0x35
-	cmp	r6, #45	@ 0x2d
-	cmp	r5, #47	@ 0x2f
-	.2byte	0x1C1B
-	sub	r5, r3, r4
-	.2byte	0x1F1E
-	.2byte	0x1E20
-	mov	r2, #33	@ 0x21
-	mov	r1, #35	@ 0x23
-	.2byte	0x1C1B
-	sub	r5, r3, r4
-	add	r7, #54	@ 0x36
-	add	r6, #56	@ 0x38
-	sub	r2, #57	@ 0x39
-	sub	r1, #59	@ 0x3b
-	sub	r5, #60	@ 0x3c
-	sub	r4, #62	@ 0x3e
-	add	r7, #54	@ 0x36
-	add	r6, #56	@ 0x38
-	and	r7, r7
-	sub	r7, #65	@ 0x41
-	mul	r2, r0
-	neg	r4, r0
-	mov	r5, r8
-	cmp	r7, r8
-	and	r7, r7
-	sub	r7, #65	@ 0x41
-	ldr	r1, [pc, #288]	@ (0x80fad34)
-	ldr	r0, [pc, #296]	@ (0x80fad3c)
-	ldr	r4, [pc, #300]	@ (0x80fad44)
-	ldr	r3, [pc, #308]	@ (0x80fad4c)
-	ldr	r7, [pc, #312]	@ (0x80fad54)
-	ldr	r6, [pc, #320]	@ (0x80fad5c)
-	ldr	r1, [pc, #288]	@ (0x80fad40)
-	ldr	r0, [pc, #296]	@ (0x80fad48)
-	add	r7, #54	@ 0x36
-	add	r6, #56	@ 0x38
-	sub	r2, #57	@ 0x39
-	sub	r1, #59	@ 0x3b
-	sub	r5, #60	@ 0x3c
-	sub	r4, #62	@ 0x3e
-	add	r7, #54	@ 0x36
-	add	r6, #56	@ 0x38
-	lsl	r0, r0, #4
-	lsl	r2, r0, #0
-	lsl	r3, r0, #16
-	lsl	r5, r0, #12
-	lsl	r6, r0, #28
-	lsl	r0, r1, #24
-	lsl	r0, r0, #4
-	lsl	r2, r0, #0
-	lsr	r1, r1, #8
-	lsr	r3, r1, #4
-	lsr	r4, r1, #20
-	lsr	r6, r1, #16
-	asr	r7, r1, #32
-	lsr	r1, r2, #28
-	lsr	r1, r1, #8
-	lsr	r3, r1, #4
-	asr	r2, r2, #12
-	asr	r4, r2, #8
-	asr	r5, r2, #24
-	asr	r7, r2, #20
-	add	r0, r3, r4
-	add	r2, r3, r0
-	asr	r2, r2, #12
-	asr	r4, r2, #8
-	lsl	r0, r0, #4
-	lsl	r2, r0, #0
-	lsl	r3, r0, #16
-	lsl	r5, r0, #12
-	lsl	r6, r0, #28
-	lsl	r0, r1, #24
-	lsl	r0, r0, #4
-	lsl	r2, r0, #0
-	lsl	r0, r0, #0
-	lsl	r6, r0, #0
-	lsl	r4, r1, #0
-	lsl	r2, r2, #0
-	lsl	r1, r3, #0
-	lsl	r7, r3, #0
-	lsl	r5, r4, #0
-	lsl	r3, r5, #0
-	lsl	r1, r6, #0
-	lsl	r0, r7, #0
-	lsl	r6, r7, #0
-	lsl	r4, r0, #1
-	lsl	r2, r1, #1
-	lsl	r0, r2, #1
-	lsl	r6, r2, #1
-	lsl	r4, r3, #1
-	lsl	r1, r4, #1
-	lsl	r7, r4, #1
-	lsl	r5, r5, #1
-	lsl	r3, r6, #1
-	lsl	r0, r7, #1
-	lsl	r6, r7, #1
-	lsl	r3, r0, #2
-	lsl	r0, r1, #2
-	lsl	r6, r1, #2
-	lsl	r3, r2, #2
-	lsl	r0, r3, #2
-	lsl	r5, r3, #2
-	lsl	r2, r4, #2
-	lsl	r7, r4, #2
-	lsl	r3, r5, #2
-	lsl	r0, r6, #2
-	lsl	r5, r6, #2
-	lsl	r1, r7, #2
-	lsl	r5, r7, #2
-	lsl	r1, r0, #3
-	lsl	r5, r0, #3
-	lsl	r1, r1, #3
-	lsl	r5, r1, #3
-	lsl	r1, r2, #3
-	lsl	r4, r2, #3
-	lsl	r0, r3, #3
-	lsl	r3, r3, #3
-	lsl	r6, r3, #3
-	lsl	r1, r4, #3
-	lsl	r4, r4, #3
-	lsl	r7, r4, #3
-	lsl	r2, r5, #3
-	lsl	r4, r5, #3
-	lsl	r6, r5, #3
-	lsl	r1, r6, #3
-	lsl	r3, r6, #3
-	lsl	r4, r6, #3
-	lsl	r6, r6, #3
-	lsl	r0, r7, #3
-	lsl	r1, r7, #3
-	lsl	r3, r7, #3
-	lsl	r4, r7, #3
-	lsl	r5, r7, #3
-	lsl	r6, r7, #3
-	lsl	r6, r7, #3
-	lsl	r7, r7, #3
-	lsl	r7, r7, #3
-	lsl	r7, r7, #3
-	lsl	r0, r0, #4
-	lsl	r7, r7, #3
-	lsl	r7, r7, #3
-	lsl	r7, r7, #3
-	lsl	r6, r7, #3
-	lsl	r6, r7, #3
-	lsl	r5, r7, #3
-	lsl	r4, r7, #3
-	lsl	r3, r7, #3
-	lsl	r1, r7, #3
-	lsl	r0, r7, #3
-	lsl	r6, r6, #3
-	lsl	r4, r6, #3
-	lsl	r3, r6, #3
-	lsl	r1, r6, #3
-	lsl	r6, r5, #3
-	lsl	r4, r5, #3
-	lsl	r2, r5, #3
-	lsl	r7, r4, #3
-	lsl	r4, r4, #3
-	lsl	r1, r4, #3
-	lsl	r6, r3, #3
-	lsl	r3, r3, #3
-	lsl	r0, r3, #3
-	lsl	r4, r2, #3
-	lsl	r1, r2, #3
-	lsl	r5, r1, #3
-	lsl	r1, r1, #3
-	lsl	r5, r0, #3
-	lsl	r1, r0, #3
-	lsl	r5, r7, #2
-	lsl	r1, r7, #2
-	lsl	r5, r6, #2
-	lsl	r0, r6, #2
-	.align	2, 0
-.L_fad34:
-	.4byte	0xA700AB
-	lsl	r2, r4, #2
-	lsl	r5, r3, #2
-	.align	2, 0
-.L_fad3c:
-	.4byte	0x930098
-	.align	2, 0
-.L_fad40:
-	.4byte	0x88008E
-	.align	2, 0
-.L_fad44:
-	.4byte	0x7E0083
-	.align	2, 0
-.L_fad48:
-	.4byte	0x730078
-	.align	2, 0
-.L_fad4c:
-	.4byte	0x67006D
-	lsl	r1, r4, #1
-	lsl	r4, r3, #1
-	.align	2, 0
-.L_fad54:
-	.4byte	0x500056
-	lsl	r2, r1, #1
-	lsl	r4, r0, #1
-	.align	2, 0
-.L_fad5c:
-	.4byte	0x38003E
-	lsl	r1, r6, #0
-	lsl	r3, r5, #0
-	lsl	r5, r4, #0
-	lsl	r7, r3, #0
-	lsl	r1, r3, #0
-	lsl	r2, r2, #0
-	lsl	r4, r1, #0
-	lsl	r6, r0, #0
-	lsl	r0, r0, #0
-	lsl	r7, r0, #1
-	lsl	r7, r1, #2
-	lsl	r6, r2, #3
-	lsl	r6, r3, #4
-	lsl	r5, r4, #5
-	lsl	r4, r5, #6
-	lsl	r3, r6, #7
-	lsl	r2, r7, #8
-	lsl	r1, r0, #10
-	lsl	r7, r0, #11
-	lsl	r6, r1, #12
-	lsl	r4, r2, #13
-	lsl	r1, r3, #14
-	lsl	r7, r3, #15
-	lsl	r4, r4, #16
-	lsl	r1, r5, #17
-	lsl	r6, r5, #18
-	lsl	r2, r6, #19
-	lsl	r6, r6, #20
-	lsl	r1, r7, #21
-	lsl	r4, r7, #22
-	lsl	r6, r7, #23
-	lsl	r0, r0, #25
-	lsl	r2, r0, #26
-	lsl	r3, r0, #27
-	lsl	r4, r0, #28
-	lsl	r4, r0, #29
-	lsl	r3, r0, #30
-	lsl	r2, r0, #31
-	lsr	r0, r0, #32
-	lsr	r6, r7, #32
-	lsr	r3, r7, #1
-	lsr	r7, r6, #2
-	lsr	r2, r6, #3
-	lsr	r5, r5, #4
-	lsr	r0, r5, #5
-	lsr	r1, r4, #6
-	lsr	r2, r3, #7
-	lsr	r2, r2, #8
-	lsr	r1, r1, #9
-	lsr	r7, r7, #9
-	lsr	r5, r6, #10
-	lsr	r1, r5, #11
-	lsr	r5, r3, #12
-	lsr	r0, r2, #13
-	lsr	r2, r0, #14
-	lsr	r4, r6, #14
-	lsr	r4, r4, #15
-	lsr	r3, r2, #16
-	lsr	r2, r0, #17
-	lsr	r7, r5, #17
-	lsr	r4, r3, #18
-	lsr	r7, r0, #19
-	lsr	r2, r6, #19
-	lsr	r3, r3, #20
-	lsr	r4, r0, #21
-	lsr	r3, r5, #21
-	lsr	r2, r2, #22
-	lsr	r7, r6, #22
-	lsr	r3, r3, #23
-	lsr	r6, r7, #23
-	lsr	r1, r4, #24
-	lsr	r2, r0, #25
-	lsr	r1, r4, #25
-	lsr	r0, r0, #26
-	lsr	r6, r3, #26
-	lsr	r2, r7, #26
-	lsr	r6, r2, #27
-	lsr	r0, r6, #27
-	lsr	r1, r1, #28
-	lsr	r1, r4, #28
-	lsr	r0, r7, #28
-	lsr	r5, r1, #29
-	lsr	r1, r4, #29
-	lsr	r4, r6, #29
-	lsr	r6, r0, #30
-	lsr	r7, r2, #30
-	lsr	r6, r4, #30
-	lsr	r5, r6, #30
-	lsr	r2, r0, #31
-	lsr	r6, r1, #31
-	lsr	r0, r3, #31
-	lsr	r1, r4, #31
-	lsr	r1, r5, #31
-	lsr	r0, r6, #31
-	lsr	r6, r6, #31
-	lsr	r2, r7, #31
-	lsr	r5, r7, #31
-	lsr	r7, r7, #31
-	asr	r0, r0, #32
-	lsr	r7, r7, #31
-	lsr	r5, r7, #31
-	lsr	r2, r7, #31
-	lsr	r6, r6, #31
-	lsr	r0, r6, #31
-	lsr	r1, r5, #31
-	lsr	r1, r4, #31
-	lsr	r0, r3, #31
-	lsr	r6, r1, #31
-	lsr	r2, r0, #31
-	lsr	r5, r6, #30
-	lsr	r6, r4, #30
-	lsr	r7, r2, #30
-	lsr	r6, r0, #30
-	lsr	r4, r6, #29
-	lsr	r1, r4, #29
-	lsr	r5, r1, #29
-	lsr	r0, r7, #28
-	lsr	r1, r4, #28
-	lsr	r1, r1, #28
-	lsr	r0, r6, #27
-	lsr	r6, r2, #27
-	lsr	r2, r7, #26
-	lsr	r6, r3, #26
-	lsr	r0, r0, #26
-	lsr	r1, r4, #25
-	lsr	r2, r0, #25
-	lsr	r1, r4, #24
-	lsr	r6, r7, #23
-	lsr	r3, r3, #23
-	lsr	r7, r6, #22
-	lsr	r2, r2, #22
-	lsr	r3, r5, #21
-	lsr	r4, r0, #21
-	lsr	r3, r3, #20
-	lsr	r2, r6, #19
-	lsr	r7, r0, #19
-	lsr	r4, r3, #18
-	lsr	r7, r5, #17
-	lsr	r2, r0, #17
-	lsr	r3, r2, #16
-	lsr	r4, r4, #15
-	lsr	r4, r6, #14
-	lsr	r2, r0, #14
-	lsr	r0, r2, #13
-	lsr	r5, r3, #12
-	lsr	r1, r5, #11
-	lsr	r5, r6, #10
-	lsr	r7, r7, #9
-	lsr	r1, r1, #9
-	lsr	r2, r2, #8
-	lsr	r2, r3, #7
-	lsr	r1, r4, #6
-	lsr	r0, r5, #5
-	lsr	r5, r5, #4
-	lsr	r2, r6, #3
-	lsr	r7, r6, #2
-	lsr	r3, r7, #1
-	lsr	r6, r7, #32
-	lsr	r0, r0, #32
-	lsl	r2, r0, #31
-	lsl	r3, r0, #30
-	lsl	r4, r0, #29
-	lsl	r4, r0, #28
-	lsl	r3, r0, #27
-	lsl	r2, r0, #26
-	lsl	r0, r0, #25
-	lsl	r6, r7, #23
-	lsl	r4, r7, #22
-	lsl	r1, r7, #21
-	lsl	r6, r6, #20
-	lsl	r2, r6, #19
-	lsl	r6, r5, #18
-	lsl	r1, r5, #17
-	lsl	r4, r4, #16
-	lsl	r7, r3, #15
-	lsl	r1, r3, #14
-	lsl	r4, r2, #13
-	lsl	r6, r1, #12
-	lsl	r7, r0, #11
-	lsl	r1, r0, #10
-	lsl	r2, r7, #8
-	lsl	r3, r6, #7
-	lsl	r4, r5, #6
-	lsl	r5, r4, #5
-	lsl	r6, r3, #4
-	lsl	r6, r2, #3
-	lsl	r7, r1, #2
-	lsl	r7, r0, #1
-	ldr	r1, [r5, r6]
-	lsr	r0, r0, #32
-	ldr	r1, [r0, r6]
-	lsr	r0, r0, #32
-	ldr	r5, [r6, r5]
-	lsr	r0, r0, #32
-	ldrh	r5, [r3, r3]
-	lsr	r0, r0, #32
-	ldr	r1, [r4, r6]
-	lsr	r0, r0, #32
-	ldr	r1, [r7, r5]
-	lsr	r0, r0, #32
-	ldrb	r1, [r0, r6]
-	lsr	r0, r0, #32
-	ldrb	r1, [r3, r5]
-	lsr	r0, r0, #32
-	ldrb	r5, [r1, r5]
-	lsr	r0, r0, #32
-	ldrsh	r5, [r6, r2]
-	lsr	r0, r0, #32
-	ldrb	r1, [r7, r5]
-	lsr	r0, r0, #32
-	ldrb	r1, [r2, r5]
-	lsr	r0, r0, #32
-	ldrsh	r1, [r7, r2]
-	lsr	r0, r0, #32
-	ldrsh	r1, [r5, r3]
-	lsr	r0, r0, #32
-	ldrsh	r1, [r1, r4]
-	lsr	r0, r0, #32
-	str	r1, [r5, #68]	@ 0x44
-	lsr	r0, r0, #32
-	str	r1, [r2, #68]	@ 0x44
-	lsr	r0, r0, #32
-	str	r5, [r0, #68]	@ 0x44
-	lsr	r0, r0, #32
-	lsl	r0, r0, #0
-	lsl	r1, r0, #24
-	lsl	r0, r0, #0
-	lsl	r1, r0, #24
-	lsl	r0, r0, #0
-	lsl	r1, r0, #24
-	and	r0, r0
-	lsl	r1, r0, #24
-	and	r0, r0
-	lsl	r1, r0, #24
-	and	r0, r0
-	lsl	r1, r0, #24
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	asr	r0, r2, #32
-	lsl	r0, r0, #0
-	lsl	r0, r4, #10
-	lsl	r0, r6, #3
-	lsr	r0, r0, #16
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	.2byte	0xFF80
 	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #12
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	and	r0, r0
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	strh	r0, [r0, #0]
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	.2byte	0xC000
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	and	r0, r0
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	and	r0, r0
-	and	r0, r0
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	and	r0, r0
-	strh	r0, [r0, #0]
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	and	r0, r0
-	.2byte	0xC000
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	strh	r0, [r0, #0]
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	strh	r0, [r0, #0]
-	and	r0, r0
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	strh	r0, [r0, #0]
-	strh	r0, [r0, #0]
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	strh	r0, [r0, #0]
-	.2byte	0xC000
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	.2byte	0xFFFC
-	.2byte	0xFFFC
-	.2byte	0xFFF8
-	.2byte	0xFFF8
-	.2byte	0xFFF0
-	.2byte	0xFFF0
-	.2byte	0xFFE0
-	.2byte	0xFFE0
-	.2byte	0xFFF8
-	.2byte	0xFFFC
-	.2byte	0xFFF0
-	.2byte	0xFFFC
-	.2byte	0xFFF0
-	.2byte	0xFFF8
-	.2byte	0xFFE0
-	.2byte	0xFFF0
-	.2byte	0xFFFC
-	.2byte	0xFFF8
-	.2byte	0xFFFC
-	.2byte	0xFFF0
-	.2byte	0xFFF8
-	.2byte	0xFFF0
-	.2byte	0xFFF0
-	.2byte	0xFFE0
-	lsl	r1, r0, #16
-	and	r0, r2
-	lsl	r2, r0, #16
-	mov	r0, #8
-	lsl	r2, r0, #16
-	mov	r0, #8
-	lsl	r1, r0, #16
-	and	r0, r2
-	lsl	r2, r0, #16
-	mov	r0, #8
-	lsl	r2, r0, #16
-	mov	r0, #8
-	lsl	r1, r0, #16
-	and	r0, r2
-	lsl	r2, r0, #16
-	mov	r0, #8
-	lsl	r2, r0, #16
-	mov	r0, #8
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	strb	r0, [r0, r4]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r5, [r2, r5]
-	strb	r5, [r2, r5]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	strb	r5, [r2, r5]
-	strb	r5, [r2, r5]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	strb	r5, [r2, r5]
-	strb	r5, [r2, r5]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r5, [r2, r5]
-	strb	r5, [r2, r5]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r5, [r2, r5]
-	strb	r5, [r2, r5]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r5, [r2, r5]
-	strb	r5, [r2, r5]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r5, r0, #0
-	lsl	r0, r0, #0
-	strb	r0, [r2, r5]
-	strb	r5, [r2, r5]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r5, [r2, r5]
-	lsl	r5, r2, #21
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	strb	r0, [r2, r5]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	str	r0, [r0, r0]
-	lsl	r0, r0, #0
-	strb	r5, [r2, r5]
-	strb	r0, [r2, r5]
-	lsl	r0, r0, #0
-	lsl	r5, r0, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r5, [r2, r5]
-	strb	r5, [r2, r5]
-	lsl	r5, r0, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	strb	r0, [r0, r4]
-	strb	r0, [r2, r5]
-	lsl	r5, r2, #21
-	lsl	r5, r0, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r0, [r0, r4]
-	strb	r5, [r2, r5]
-	lsl	r5, r2, #1
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r5, [r2, r5]
-	lsl	r5, r2, #21
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r1, r2, #4
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r1, r2, #4
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r1, r2, #4
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r1, r2, #4
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r1, r2, #4
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	strb	r0, [r0, r4]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r5, [r2, r5]
-	lsl	r5, r2, #21
-	lsl	r0, r0, #0
-	str	r0, [r0, r0]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r5, [r2, r5]
-	lsl	r5, r2, #21
-	lsl	r0, r0, #0
-	strb	r0, [r0, r4]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r5, [r2, r5]
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	strb	r5, [r2, r5]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r5, r0, #0
-	lsl	r0, r0, #0
-	strb	r5, [r2, r5]
-	lsl	r5, r2, #1
-	lsl	r0, r0, #0
-	strb	r0, [r2, r5]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r5, r0, #0
-	lsl	r0, r0, #0
-	strb	r0, [r2, r5]
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	strb	r5, [r2, r5]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	str	r0, [r0, r0]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	strb	r0, [r0, r4]
-	lsl	r0, r0, #0
-	lsl	r5, r2, #21
-	str	r0, [r0, r0]
-	lsl	r5, r0, #0
-	lsl	r0, r2, #21
-	lsl	r0, r0, #0
-	lsl	r5, r2, #1
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	str	r0, [r0, r0]
-	lsl	r5, r2, #1
-	lsl	r5, r2, #21
-	lsl	r0, r0, #0
-	lsl	r5, r0, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r0, r0, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	asr	r0, r2, #4
-	asr	r0, r2, #4
-	lsl	r1, r0, #0
-	lsl	r1, r2, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r0, r0, #32
-	asr	r0, r2, #4
-	lsl	r1, r2, #4
-	lsl	r1, r2, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r1, r2, #4
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	asr	r1, r2, #4
-	lsl	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	asr	r1, r2, #4
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	asr	r1, r2, #4
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r1, r0, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r1, r2, #4
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r1, r0, #0
-	lsl	r0, r0, #0
-	asr	r1, r2, #4
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r1, r0, #0
-	lsl	r0, r0, #0
-	asr	r0, r2, #4
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r1, r2, #4
-	lsl	r1, r0, #0
-	lsl	r0, r0, #0
-	asr	r0, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r1, r2, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #4
-	lsl	r1, r2, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	str	r0, [r0, r0]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r1, r2, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #4
-	lsl	r1, r2, #0
-	lsl	r5, r2, #1
-	lsl	r0, r0, #0
-	strb	r0, [r0, r4]
-	lsl	r5, r0, #0
-	lsl	r0, r0, #0
-	lsl	r5, r2, #21
-	lsl	r0, r0, #0
-	strb	r0, [r0, r4]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r5, r0, #0
-	lsl	r0, r0, #0
-	lsl	r5, r2, #1
-	lsl	r0, r0, #0
-	strb	r0, [r0, r4]
-	lsl	r0, r0, #0
-	str	r0, [r0, r0]
-	lsl	r5, r0, #0
-	lsl	r0, r0, #0
-	lsl	r0, r2, #1
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r0, r0, #20
-	lsl	r0, r0, #0
-	lsl	r0, r2, #21
-	lsl	r0, r0, #0
-	lsl	r0, r2, #1
-	lsl	r0, r0, #0
-	lsl	r5, r0, #0
-	lsl	r0, r0, #0
-	lsl	r5, r0, #0
-	lsl	r0, r0, #0
-	lsl	r5, r0, #0
-	lsl	r0, r0, #0
-	lsl	r5, r0, #0
-	lsl	r0, r0, #0
-	lsl	r5, r0, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	asr	r0, r0, #4
-	lsl	r0, r0, #0
-	lsl	r1, r2, #4
-	asr	r0, r0, #4
-	lsl	r1, r0, #0
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	lsl	r0, r0, #0
-	asr	r0, r2, #4
-	asr	r0, r0, #32
-	lsl	r1, r2, #0
-	lsl	r1, r2, #4
-	lsl	r0, r0, #0
-	lsl	r1, r0, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	lsl	r1, r2, #0
-	lsl	r1, r2, #4
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	lsl	r0, r0, #0
-	asr	r0, r0, #4
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	lsl	r1, r0, #0
-	lsl	r0, r0, #0
-	asr	r0, r2, #4
-	lsl	r1, r0, #0
-	lsl	r0, r0, #0
-	lsl	r1, r2, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r0, r0, #20
-	lsl	r0, r0, #0
-	strb	r0, [r0, r4]
-	lsl	r0, r0, #0
-	str	r0, [r0, r0]
-	lsl	r1, r0, #0
-	lsl	r0, r0, #0
-	asr	r0, r2, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	lsl	r1, r2, #0
-	lsl	r0, r0, #0
-	asr	r0, r2, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r5, r0, #0
-	lsl	r0, r0, #0
-	lsl	r5, r0, #0
-	lsl	r0, r0, #0
-	lsl	r5, r0, #0
-	lsl	r0, r0, #0
-	lsl	r5, r0, #0
-	lsl	r0, r0, #0
-	lsl	r5, r2, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r2, #1
-	lsl	r0, r0, #0
-	asr	r0, r2, #21
-	lsl	r0, r0, #0
-	asr	r0, r0, #20
-	lsl	r0, r0, #0
-	str	r0, [r2, r4]
-	lsl	r0, r0, #0
-	lsl	r1, r2, #0
-	asr	r0, r0, #32
-	lsl	r1, r0, #0
-	asr	r0, r0, #4
-	lsl	r0, r0, #0
-	lsl	r0, r0, #4
-	lsl	r0, r0, #0
-	lsl	r0, r2, #4
-	lsl	r0, r0, #0
-	lsl	r1, r2, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r5, r2, #1
-	lsl	r0, r0, #0
-	lsl	r0, r2, #21
-	lsl	r0, r0, #0
-	str	r0, [r0, r0]
-	lsl	r5, r0, #0
-	lsl	r0, r0, #0
-	lsl	r5, r2, #21
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	strb	r0, [r0, r4]
-	lsl	r0, r0, #0
-	str	r0, [r0, r0]
-	lsl	r0, r0, #0
-	strb	r0, [r0, r4]
-	lsl	r0, r0, #0
-	lsl	r0, r0, #20
-	lsl	r0, r0, #0
-	lsl	r0, r2, #1
-	str	r0, [r0, r0]
-	lsl	r5, r0, #0
-	strb	r0, [r0, r4]
-	lsl	r0, r0, #0
-	lsl	r5, r2, #1
-	lsl	r0, r0, #0
-	lsl	r5, r0, #0
-	lsl	r0, r0, #0
-	lsl	r0, r2, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #4
-	lsl	r1, r0, #0
-	lsl	r0, r0, #0
-	lsl	r1, r2, #0
-	lsl	r0, r0, #0
-	lsl	r0, r2, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r1, r0, #0
-	lsl	r0, r0, #0
-	lsl	r1, r2, #0
-	lsl	r0, r0, #0
-	lsl	r0, r2, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r0, r2, #4
-	lsl	r0, r0, #0
-	lsl	r0, r2, #0
-	lsl	r0, r0, #0
-	lsl	r1, r2, #0
-	lsl	r0, r0, #0
-	lsl	r1, r0, #0
-	lsl	r0, r0, #0
-	lsl	r1, r0, #0
-	lsl	r0, r0, #0
-	lsl	r1, r0, #0
-	lsl	r0, r0, #0
-	lsl	r1, r0, #0
-	lsl	r0, r0, #0
-	lsl	r1, r0, #0
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	strb	r0, [r0, r4]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r5, r0, #0
-	lsl	r0, r0, #0
-	lsl	r5, r2, #21
-	lsl	r0, r0, #0
-	str	r0, [r0, r0]
-	lsl	r5, r2, #1
-	lsl	r0, r0, #0
-	strb	r0, [r2, r5]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	lsl	r5, r0, #0
-	strb	r0, [r0, #28]
-	strb	r0, [r2, r5]
-	strb	r0, [r0, #28]
-	lsl	r0, r0, #0
-	strb	r5, [r2, #29]
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	str	r7, [r6, r1]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, r5]
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	lsl	r0, r0, #0
-	lsl	r5, r2, #21
-	strb	r0, [r0, r4]
-	lsl	r5, r0, #0
-	lsl	r5, r2, #1
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r0, r2, #4
-	lsl	r0, r0, #0
-	lsl	r0, r0, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r1, r2, #0
-	lsl	r0, r0, #0
-	lsl	r0, r2, #0
-	lsl	r0, r0, #0
-	lsl	r0, r2, #4
-	lsl	r0, r0, #0
-	lsl	r0, r0, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	lsl	r1, r0, #0
-	lsl	r0, r0, #0
-	lsl	r1, r2, #0
-	lsl	r0, r0, #0
-	lsl	r0, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	lsl	r0, r0, #0
-	strb	r0, [r0, #28]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	strb	r7, [r6, #29]
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	strb	r7, [r6, #29]
-	lsl	r7, r6, #1
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	lsl	r0, r0, #0
-	asr	r0, r0, #4
-	lsl	r0, r0, #0
-	lsl	r0, r2, #4
-	asr	r0, r0, #4
-	lsl	r0, r0, #0
-	lsl	r0, r0, #4
-	lsl	r0, r0, #0
-	lsl	r0, r2, #4
-	lsl	r0, r0, #0
-	lsl	r0, r2, #0
-	lsl	r0, r0, #0
-	lsl	r1, r2, #0
-	lsl	r0, r0, #0
-	lsl	r1, r0, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r0, r0, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r1, r2, #0
-	lsl	r0, r0, #0
-	lsl	r0, r2, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #4
-	lsl	r1, r0, #0
-	lsl	r0, r0, #0
-	lsl	r1, r2, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r1, r0, #0
-	lsl	r0, r0, #0
-	lsl	r1, r2, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	lsl	r1, r2, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	asr	r0, r0, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	lsl	r0, r0, #0
-	asr	r0, r2, #4
-	asr	r0, r0, #32
-	lsl	r1, r2, #0
-	asr	r0, r2, #4
-	lsl	r0, r0, #0
-	lsl	r1, r0, #0
-	lsl	r0, r0, #0
-	lsl	r0, r0, #0
-	lsl	r1, r2, #0
-	asr	r0, r0, #4
-	lsl	r1, r0, #0
-	lsl	r0, r2, #4
-	lsl	r0, r0, #0
-	lsl	r1, r2, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r0, r2, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r1, r2, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	lsl	r1, r2, #0
-	lsl	r0, r0, #0
-	asr	r0, r0, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r1, r2, #0
-	lsl	r0, r0, #0
-	asr	r0, r2, #4
-	lsl	r1, r0, #0
-	lsl	r0, r0, #0
-	asr	r0, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r1, r2, #0
-	lsl	r0, r0, #0
-	asr	r0, r2, #4
-	lsl	r1, r2, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r0, r2, #4
-	asr	r1, r2, #4
-	lsl	r1, r0, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	asr	r0, r0, #4
-	lsl	r1, r2, #4
-	lsl	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r0, r0, #4
-	asr	r0, r0, #4
-	lsl	r1, r2, #0
-	lsl	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r1, r2, #4
-	asr	r0, r2, #4
-	lsl	r1, r0, #0
-	lsl	r1, r0, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r1, r2, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r1, r2, #4
-	lsl	r0, r0, #0
-	asr	r0, r0, #32
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r1, r2, #4
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r1, r0, #0
-	lsl	r0, r0, #0
-	asr	r1, r2, #4
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r1, r2, #4
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r1, r2, #4
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r1, r2, #4
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r0, r0, #32
-	asr	r1, r2, #4
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	asr	r1, r2, #4
-	asr	r1, r2, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	asr	r1, r2, #4
-	asr	r1, r2, #4
-	lsl	r1, r0, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	asr	r0, r2, #4
-	asr	r1, r2, #4
-	lsl	r1, r0, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r0, r0, #0
-	lsl	r4, r4, #1
-	lsl	r5, r4, #1
-	lsl	r6, r4, #1
-	lsl	r7, r4, #1
-	lsl	r0, r5, #1
-	lsl	r1, r5, #1
-	lsl	r2, r5, #1
-	lsl	r3, r5, #1
-	lsl	r4, r5, #1
-	lsl	r5, r5, #1
-	lsl	r6, r5, #1
-	lsl	r7, r5, #1
-	lsl	r0, r6, #1
-	lsl	r1, r6, #1
-	lsl	r2, r6, #1
-	lsl	r3, r6, #1
-	lsl	r4, r6, #1
-	lsl	r5, r6, #1
-	lsl	r6, r6, #1
-	lsl	r7, r6, #1
-	lsl	r0, r7, #1
-	lsl	r1, r7, #1
-	lsl	r2, r7, #1
-	lsl	r3, r7, #1
-	lsl	r4, r7, #1
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	lsl	r0, r0, #0
-	lsl	r4, r0, #2
-	lsl	r5, r0, #2
-	lsl	r6, r0, #2
-	lsl	r7, r0, #2
-	lsl	r0, r1, #2
-	lsl	r1, r1, #2
-	lsl	r2, r1, #2
-	lsl	r3, r1, #2
-	lsl	r4, r1, #2
-	lsl	r5, r1, #2
-	lsl	r6, r1, #2
-	lsl	r7, r1, #2
-	lsl	r0, r2, #2
-	lsl	r1, r2, #2
-	lsl	r2, r2, #2
-	lsl	r3, r2, #2
-	lsl	r4, r2, #2
-	lsl	r5, r2, #2
-	lsl	r6, r2, #2
-	lsl	r7, r2, #2
-	lsl	r0, r3, #2
-	lsl	r1, r3, #2
-	lsl	r2, r3, #2
-	lsl	r3, r3, #2
-	lsl	r4, r3, #2
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	lsl	r0, r0, #0
-	lsl	r4, r4, #2
-	lsl	r5, r4, #2
-	lsl	r6, r4, #2
-	lsl	r7, r4, #2
-	lsl	r0, r5, #2
-	lsl	r1, r5, #2
-	lsl	r2, r5, #2
-	lsl	r3, r5, #2
-	lsl	r4, r5, #2
-	lsl	r5, r5, #2
-	lsl	r6, r5, #2
-	lsl	r7, r5, #2
-	lsl	r0, r6, #2
-	lsl	r1, r6, #2
-	lsl	r2, r6, #2
-	lsl	r3, r6, #2
-	lsl	r4, r6, #2
-	lsl	r5, r6, #2
-	lsl	r6, r6, #2
-	lsl	r7, r6, #2
-	lsl	r0, r7, #2
-	lsl	r1, r7, #2
-	lsl	r2, r7, #2
-	lsl	r3, r7, #2
-	lsl	r4, r7, #2
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	lsl	r0, r0, #0
-	lsl	r4, r0, #3
-	lsl	r5, r0, #3
-	lsl	r6, r0, #3
-	lsl	r7, r0, #3
-	lsl	r0, r1, #3
-	lsl	r1, r1, #3
-	lsl	r2, r1, #3
-	lsl	r3, r1, #3
-	lsl	r4, r1, #3
-	lsl	r5, r1, #3
-	lsl	r6, r1, #3
-	lsl	r7, r1, #3
-	lsl	r0, r2, #3
-	lsl	r1, r2, #3
-	lsl	r2, r2, #3
-	lsl	r3, r2, #3
-	lsl	r4, r2, #3
-	lsl	r5, r2, #3
-	lsl	r6, r2, #3
-	lsl	r7, r2, #3
-	lsl	r0, r3, #3
-	lsl	r1, r3, #3
-	lsl	r2, r3, #3
-	lsl	r3, r3, #3
-	lsl	r4, r3, #3
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	lsl	r0, r0, #0
-	lsl	r4, r4, #3
-	lsl	r5, r4, #3
-	lsl	r6, r4, #3
-	lsl	r7, r4, #3
-	lsl	r0, r5, #3
-	lsl	r1, r5, #3
-	lsl	r2, r5, #3
-	lsl	r3, r5, #3
-	lsl	r4, r5, #3
-	lsl	r5, r5, #3
-	lsl	r6, r5, #3
-	lsl	r7, r5, #3
-	lsl	r0, r6, #3
-	lsl	r1, r6, #3
-	lsl	r2, r6, #3
-	lsl	r3, r6, #3
-	lsl	r4, r6, #3
-	lsl	r5, r6, #3
-	lsl	r6, r6, #3
-	lsl	r7, r6, #3
-	lsl	r0, r7, #3
-	lsl	r1, r7, #3
-	lsl	r2, r7, #3
-	lsl	r3, r7, #3
-	lsl	r4, r7, #3
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	lsl	r0, r0, #0
-	lsl	r4, r0, #4
-	lsl	r5, r0, #4
-	lsl	r6, r0, #4
-	lsl	r7, r0, #4
-	lsl	r0, r1, #4
-	lsl	r1, r1, #4
-	lsl	r2, r1, #4
-	lsl	r3, r1, #4
-	lsl	r4, r1, #4
-	lsl	r5, r1, #4
-	lsl	r6, r1, #4
-	lsl	r7, r1, #4
-	lsl	r0, r2, #4
-	lsl	r1, r2, #4
-	lsl	r2, r2, #4
-	lsl	r3, r2, #4
-	lsl	r4, r2, #4
-	lsl	r5, r2, #4
-	lsl	r6, r2, #4
-	lsl	r7, r2, #4
-	lsl	r0, r3, #4
-	lsl	r1, r3, #4
-	lsl	r2, r3, #4
-	lsl	r3, r3, #4
-	lsl	r4, r3, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	lsl	r0, r0, #0
-	lsl	r4, r4, #4
-	lsl	r5, r4, #4
-	lsl	r6, r4, #4
-	lsl	r7, r4, #4
-	lsl	r0, r5, #4
-	lsl	r1, r5, #4
-	lsl	r2, r5, #4
-	lsl	r3, r5, #4
-	lsl	r4, r5, #4
-	lsl	r5, r5, #4
-	lsl	r6, r5, #4
-	lsl	r7, r5, #4
-	lsl	r0, r6, #4
-	lsl	r1, r6, #4
-	lsl	r2, r6, #4
-	lsl	r3, r6, #4
-	lsl	r4, r6, #4
-	lsl	r5, r6, #4
-	lsl	r6, r6, #4
-	lsl	r7, r6, #4
-	lsl	r0, r7, #4
-	lsl	r1, r7, #4
-	lsl	r2, r7, #4
-	lsl	r3, r7, #4
-	lsl	r4, r7, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	lsl	r0, r0, #0
-	lsl	r4, r0, #5
-	lsl	r5, r0, #5
-	lsl	r6, r0, #5
-	lsl	r7, r0, #5
-	lsl	r0, r1, #5
-	lsl	r1, r1, #5
-	lsl	r2, r1, #5
-	lsl	r3, r1, #5
-	lsl	r4, r1, #5
-	lsl	r5, r1, #5
-	lsl	r6, r1, #5
-	lsl	r7, r1, #5
-	lsl	r0, r2, #5
-	lsl	r1, r2, #5
-	lsl	r2, r2, #5
-	lsl	r3, r2, #5
-	lsl	r4, r2, #5
-	lsl	r5, r2, #5
-	lsl	r6, r2, #5
-	lsl	r7, r2, #5
-	lsl	r0, r3, #5
-	lsl	r1, r3, #5
-	lsl	r2, r3, #5
-	lsl	r3, r3, #5
-	lsl	r4, r3, #5
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	lsl	r0, r0, #0
-	lsl	r4, r4, #5
-	lsl	r5, r4, #5
-	lsl	r6, r4, #5
-	lsl	r7, r4, #5
-	lsl	r0, r5, #5
-	lsl	r1, r5, #5
-	lsl	r2, r5, #5
-	lsl	r3, r5, #5
-	lsl	r4, r5, #5
-	lsl	r5, r5, #5
-	lsl	r6, r5, #5
-	lsl	r7, r5, #5
-	lsl	r0, r6, #5
-	lsl	r1, r6, #5
-	lsl	r2, r6, #5
-	lsl	r3, r6, #5
-	lsl	r4, r6, #5
-	lsl	r5, r6, #5
-	lsl	r6, r6, #5
-	lsl	r7, r6, #5
-	lsl	r0, r7, #5
-	lsl	r1, r7, #5
-	lsl	r2, r7, #5
-	lsl	r3, r7, #5
-	lsl	r4, r7, #5
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r0, r0, #0
-	lsl	r4, r4, #1
-	lsl	r5, r4, #1
-	lsl	r6, r4, #1
-	lsl	r7, r4, #1
-	lsl	r0, r5, #1
-	lsl	r1, r5, #1
-	lsl	r2, r5, #1
-	lsl	r3, r5, #1
-	lsl	r4, r5, #1
-	lsl	r5, r5, #1
-	lsl	r6, r5, #1
-	lsl	r7, r5, #1
-	lsl	r0, r6, #1
-	lsl	r1, r6, #1
-	lsl	r2, r6, #1
-	lsl	r3, r6, #1
-	lsl	r4, r6, #1
-	lsl	r5, r6, #1
-	lsl	r6, r6, #1
-	lsl	r7, r6, #1
-	lsl	r0, r7, #1
-	lsl	r1, r7, #1
-	lsl	r2, r7, #1
-	lsl	r3, r7, #1
-	lsl	r4, r7, #1
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	lsl	r0, r0, #0
-	lsl	r4, r0, #2
-	lsl	r5, r0, #2
-	lsl	r6, r0, #2
-	lsl	r7, r0, #2
-	lsl	r0, r1, #2
-	lsl	r1, r1, #2
-	lsl	r2, r1, #2
-	lsl	r3, r1, #2
-	lsl	r4, r1, #2
-	lsl	r5, r1, #2
-	lsl	r6, r1, #2
-	lsl	r7, r1, #2
-	lsl	r0, r2, #2
-	lsl	r1, r2, #2
-	lsl	r2, r2, #2
-	lsl	r3, r2, #2
-	lsl	r4, r2, #2
-	lsl	r5, r2, #2
-	lsl	r6, r2, #2
-	lsl	r7, r2, #2
-	lsl	r0, r3, #2
-	lsl	r1, r3, #2
-	lsl	r2, r3, #2
-	lsl	r3, r3, #2
-	lsl	r4, r3, #2
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	lsl	r0, r0, #0
-	lsl	r4, r4, #2
-	lsl	r5, r4, #2
-	lsl	r6, r4, #2
-	lsl	r7, r4, #2
-	lsl	r0, r5, #2
-	lsl	r1, r5, #2
-	lsl	r2, r5, #2
-	lsl	r3, r5, #2
-	lsl	r4, r5, #2
-	lsl	r5, r5, #2
-	lsl	r6, r5, #2
-	lsl	r7, r5, #2
-	lsl	r0, r6, #2
-	lsl	r1, r6, #2
-	lsl	r2, r6, #2
-	lsl	r3, r6, #2
-	lsl	r4, r6, #2
-	lsl	r5, r6, #2
-	lsl	r6, r6, #2
-	lsl	r7, r6, #2
-	lsl	r0, r7, #2
-	lsl	r1, r7, #2
-	lsl	r2, r7, #2
-	lsl	r3, r7, #2
-	lsl	r4, r7, #2
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	lsl	r0, r0, #0
-	lsl	r4, r0, #3
-	lsl	r5, r0, #3
-	lsl	r6, r0, #3
-	lsl	r7, r0, #3
-	lsl	r0, r1, #3
-	lsl	r1, r1, #3
-	lsl	r2, r1, #3
-	lsl	r3, r1, #3
-	lsl	r4, r1, #3
-	lsl	r5, r1, #3
-	lsl	r6, r1, #3
-	lsl	r7, r1, #3
-	lsl	r0, r2, #3
-	lsl	r1, r2, #3
-	lsl	r2, r2, #3
-	lsl	r3, r2, #3
-	lsl	r4, r2, #3
-	lsl	r5, r2, #3
-	lsl	r6, r2, #3
-	lsl	r7, r2, #3
-	lsl	r0, r3, #3
-	lsl	r1, r3, #3
-	lsl	r2, r3, #3
-	lsl	r3, r3, #3
-	lsl	r4, r3, #3
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	lsl	r0, r0, #0
-	lsl	r4, r4, #3
-	lsl	r5, r4, #3
-	lsl	r6, r4, #3
-	lsl	r7, r4, #3
-	lsl	r0, r5, #3
-	lsl	r1, r5, #3
-	lsl	r2, r5, #3
-	lsl	r3, r5, #3
-	lsl	r4, r5, #3
-	lsl	r5, r5, #3
-	lsl	r6, r5, #3
-	lsl	r7, r5, #3
-	lsl	r0, r6, #3
-	lsl	r1, r6, #3
-	lsl	r2, r6, #3
-	lsl	r3, r6, #3
-	lsl	r4, r6, #3
-	lsl	r5, r6, #3
-	lsl	r6, r6, #3
-	lsl	r7, r6, #3
-	lsl	r0, r7, #3
-	lsl	r1, r7, #3
-	lsl	r2, r7, #3
-	lsl	r3, r7, #3
-	lsl	r4, r7, #3
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	lsl	r0, r0, #0
-	lsl	r4, r0, #4
-	lsl	r5, r0, #4
-	lsl	r6, r0, #4
-	lsl	r7, r0, #4
-	lsl	r0, r1, #4
-	lsl	r1, r1, #4
-	lsl	r2, r1, #4
-	lsl	r3, r1, #4
-	lsl	r4, r1, #4
-	lsl	r5, r1, #4
-	lsl	r6, r1, #4
-	lsl	r7, r1, #4
-	lsl	r0, r2, #4
-	lsl	r1, r2, #4
-	lsl	r2, r2, #4
-	lsl	r3, r2, #4
-	lsl	r4, r2, #4
-	lsl	r5, r2, #4
-	lsl	r6, r2, #4
-	lsl	r7, r2, #4
-	lsl	r0, r3, #4
-	lsl	r1, r3, #4
-	lsl	r2, r3, #4
-	lsl	r3, r3, #4
-	lsl	r4, r3, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	lsl	r0, r0, #0
-	lsl	r4, r4, #4
-	lsl	r5, r4, #4
-	lsl	r6, r4, #4
-	lsl	r7, r4, #4
-	lsl	r0, r5, #4
-	lsl	r1, r5, #4
-	lsl	r2, r5, #4
-	lsl	r3, r5, #4
-	lsl	r4, r5, #4
-	lsl	r5, r5, #4
-	lsl	r6, r5, #4
-	lsl	r7, r5, #4
-	lsl	r0, r6, #4
-	lsl	r1, r6, #4
-	lsl	r2, r6, #4
-	lsl	r3, r6, #4
-	lsl	r4, r6, #4
-	lsl	r5, r6, #4
-	lsl	r6, r6, #4
-	lsl	r7, r6, #4
-	lsl	r0, r7, #4
-	lsl	r1, r7, #4
-	lsl	r2, r7, #4
-	lsl	r3, r7, #4
-	lsl	r4, r7, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	lsl	r0, r0, #0
-	lsl	r4, r0, #5
-	lsl	r5, r0, #5
-	lsl	r6, r0, #5
-	lsl	r7, r0, #5
-	lsl	r0, r1, #5
-	lsl	r1, r1, #5
-	lsl	r2, r1, #5
-	lsl	r3, r1, #5
-	lsl	r4, r1, #5
-	lsl	r5, r1, #5
-	lsl	r6, r1, #5
-	lsl	r7, r1, #5
-	lsl	r0, r2, #5
-	lsl	r1, r2, #5
-	lsl	r2, r2, #5
-	lsl	r3, r2, #5
-	lsl	r4, r2, #5
-	lsl	r5, r2, #5
-	lsl	r6, r2, #5
-	lsl	r7, r2, #5
-	lsl	r0, r3, #5
-	lsl	r1, r3, #5
-	lsl	r2, r3, #5
-	lsl	r3, r3, #5
-	lsl	r4, r3, #5
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r4, r4, #1
-	lsl	r0, r0, #0
-	lsl	r4, r4, #5
-	lsl	r5, r4, #5
-	lsl	r6, r4, #5
-	lsl	r7, r4, #5
-	lsl	r0, r5, #5
-	lsl	r1, r5, #5
-	lsl	r2, r5, #5
-	lsl	r3, r5, #5
-	lsl	r4, r5, #5
-	lsl	r5, r5, #5
-	lsl	r6, r5, #5
-	lsl	r7, r5, #5
-	lsl	r0, r6, #5
-	lsl	r1, r6, #5
-	lsl	r2, r6, #5
-	lsl	r3, r6, #5
-	lsl	r4, r6, #5
-	lsl	r5, r6, #5
-	lsl	r6, r6, #5
-	lsl	r7, r6, #5
-	lsl	r0, r7, #5
-	lsl	r1, r7, #5
-	lsl	r2, r7, #5
-	lsl	r3, r7, #5
-	lsl	r4, r7, #5
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r4, r0, #2
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r4, r4, #2
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r4, r0, #3
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r4, r4, #3
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r4, r0, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r4, r4, #4
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r4, r0, #5
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r0, r0, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	lsl	r7, r4, #0
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	lsl	r4, r4, #1
-	lsl	r5, r4, #1
-	lsl	r6, r4, #1
-	lsl	r7, r4, #1
-	lsl	r0, r5, #1
-	lsl	r1, r5, #1
-	lsl	r2, r5, #1
-	lsl	r3, r5, #1
-	lsl	r4, r5, #1
-	lsl	r5, r5, #1
-	lsl	r6, r5, #1
-	lsl	r7, r5, #1
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
-	.2byte	0x0000
+	.4byte	0x080005DD
+	.4byte	0x080005AD
+	.4byte	0x08000545
+	.4byte	0x08000675
+	.4byte	0x08000611
+	.4byte	0x080006A5
+	.4byte	0x080006A5
+	.4byte	0x080006A5
+	.4byte	0x080006A5
+	.4byte	0x080006A5
+	.4byte	0x080006A5
+	.4byte	0x080006A5
+	.4byte	0x080006A5
+	.4byte	0x08000641
+	.4byte	0x00000000
+	.4byte	0x00000200
+	.4byte	0x00000000
+	.4byte	0x00000100
+	.4byte	0x01000000
+	.4byte	0x000000FF
+	.4byte	0x00000000
+	.4byte	0x00020100
+	.4byte	0x03050403
+	.4byte	0x06080706
+	.4byte	0x00020100
+	.4byte	0x090B0A09
+	.4byte	0x0C0E0D0C
+	.4byte	0x0F11100F
+	.4byte	0x090B0A09
+	.4byte	0x12141312
+	.4byte	0x15171615
+	.4byte	0x181A1918
+	.4byte	0x12141312
+	.4byte	0x00020100
+	.4byte	0x03050403
+	.4byte	0x06080706
+	.4byte	0x00020100
+	.4byte	0x1B1D1C1B
+	.4byte	0x1E201F1E
+	.4byte	0x21232221
+	.4byte	0x1B1D1C1B
+	.4byte	0x24262524
+	.4byte	0x27292827
+	.4byte	0x2A2C2B2A
+	.4byte	0x24262524
+	.4byte	0x2D2F2E2D
+	.4byte	0x30323130
+	.4byte	0x33353433
+	.4byte	0x2D2F2E2D
+	.4byte	0x1B1D1C1B
+	.4byte	0x1E201F1E
+	.4byte	0x21232221
+	.4byte	0x1B1D1C1B
+	.4byte	0x36383736
+	.4byte	0x393B3A39
+	.4byte	0x3C3E3D3C
+	.4byte	0x36383736
+	.4byte	0x3F41403F
+	.4byte	0x42444342
+	.4byte	0x45474645
+	.4byte	0x3F41403F
+	.4byte	0x484A4948
+	.4byte	0x4B4D4C4B
+	.4byte	0x4E504F4E
+	.4byte	0x484A4948
+	.4byte	0x36383736
+	.4byte	0x393B3A39
+	.4byte	0x3C3E3D3C
+	.4byte	0x36383736
+	.4byte	0x00020100
+	.4byte	0x03050403
+	.4byte	0x06080706
+	.4byte	0x00020100
+	.4byte	0x090B0A09
+	.4byte	0x0C0E0D0C
+	.4byte	0x0F11100F
+	.4byte	0x090B0A09
+	.4byte	0x12141312
+	.4byte	0x15171615
+	.4byte	0x181A1918
+	.4byte	0x12141312
+	.4byte	0x00020100
+	.4byte	0x03050403
+	.4byte	0x06080706
+	.4byte	0x00020100
+	.4byte	0x00060000
+	.4byte	0x0012000C
+	.4byte	0x001F0019
+	.4byte	0x002B0025
+	.4byte	0x00380031
+	.4byte	0x0044003E
+	.4byte	0x0050004A
+	.4byte	0x005C0056
+	.4byte	0x00670061
+	.4byte	0x0073006D
+	.4byte	0x007E0078
+	.4byte	0x00880083
+	.4byte	0x0093008E
+	.4byte	0x009D0098
+	.4byte	0x00A700A2
+	.4byte	0x00B000AB
+	.4byte	0x00B900B5
+	.4byte	0x00C100BD
+	.4byte	0x00C900C5
+	.4byte	0x00D100CD
+	.4byte	0x00D800D4
+	.4byte	0x00DE00DB
+	.4byte	0x00E400E1
+	.4byte	0x00EA00E7
+	.4byte	0x00EE00EC
+	.4byte	0x00F300F1
+	.4byte	0x00F600F4
+	.4byte	0x00F900F8
+	.4byte	0x00FC00FB
+	.4byte	0x00FE00FD
+	.4byte	0x00FF00FE
+	.4byte	0x00FF00FF
+	.4byte	0x00FF0100
+	.4byte	0x00FF00FF
+	.4byte	0x00FE00FE
+	.4byte	0x00FC00FD
+	.4byte	0x00F900FB
+	.4byte	0x00F600F8
+	.4byte	0x00F300F4
+	.4byte	0x00EE00F1
+	.4byte	0x00EA00EC
+	.4byte	0x00E400E7
+	.4byte	0x00DE00E1
+	.4byte	0x00D800DB
+	.4byte	0x00D100D4
+	.4byte	0x00C900CD
+	.4byte	0x00C100C5
+	.4byte	0x00B900BD
+	.4byte	0x00B000B5
+	.4byte	0x00A700AB
+	.4byte	0x009D00A2
+	.4byte	0x00930098
+	.4byte	0x0088008E
+	.4byte	0x007E0083
+	.4byte	0x00730078
+	.4byte	0x0067006D
+	.4byte	0x005C0061
+	.4byte	0x00500056
+	.4byte	0x0044004A
+	.4byte	0x0038003E
+	.4byte	0x002B0031
+	.4byte	0x001F0025
+	.4byte	0x00120019
+	.4byte	0x0006000C
+	.4byte	0x00470000
+	.4byte	0x00D6008F
+	.4byte	0x0165011E
+	.4byte	0x01F301AC
+	.4byte	0x0281023A
+	.4byte	0x030E02C7
+	.4byte	0x03990354
+	.4byte	0x042403DF
+	.4byte	0x04AE0469
+	.4byte	0x053604F2
+	.4byte	0x05BC0579
+	.4byte	0x064005FE
+	.4byte	0x06C30682
+	.4byte	0x07440704
+	.4byte	0x07C20783
+	.4byte	0x083E0800
+	.4byte	0x08B7087B
+	.4byte	0x092D08F2
+	.4byte	0x09A10968
+	.4byte	0x0A1209DA
+	.4byte	0x0A7F0A49
+	.4byte	0x0AE90AB5
+	.4byte	0x0B500B1D
+	.4byte	0x0BB40B82
+	.4byte	0x0C130BE4
+	.4byte	0x0C6F0C42
+	.4byte	0x0CC70C9C
+	.4byte	0x0D1B0CF2
+	.4byte	0x0D6B0D44
+	.4byte	0x0DB70D92
+	.4byte	0x0DFE0DDB
+	.4byte	0x0E420E21
+	.4byte	0x0E800E61
+	.4byte	0x0EBA0E9E
+	.4byte	0x0EF00ED6
+	.4byte	0x0F210F09
+	.4byte	0x0F4D0F38
+	.4byte	0x0F740F61
+	.4byte	0x0F970F86
+	.4byte	0x0FB50FA6
+	.4byte	0x0FCE0FC2
+	.4byte	0x0FE10FD8
+	.4byte	0x0FF00FE9
+	.4byte	0x0FFA0FF6
+	.4byte	0x0FFF0FFD
+	.4byte	0x0FFF1000
+	.4byte	0x0FFA0FFD
+	.4byte	0x0FF00FF6
+	.4byte	0x0FE10FE9
+	.4byte	0x0FCE0FD8
+	.4byte	0x0FB50FC2
+	.4byte	0x0F970FA6
+	.4byte	0x0F740F86
+	.4byte	0x0F4D0F61
+	.4byte	0x0F210F38
+	.4byte	0x0EF00F09
+	.4byte	0x0EBA0ED6
+	.4byte	0x0E800E9E
+	.4byte	0x0E420E61
+	.4byte	0x0DFE0E21
+	.4byte	0x0DB70DDB
+	.4byte	0x0D6B0D92
+	.4byte	0x0D1B0D44
+	.4byte	0x0CC70CF2
+	.4byte	0x0C6F0C9C
+	.4byte	0x0C130C42
+	.4byte	0x0BB40BE4
+	.4byte	0x0B500B82
+	.4byte	0x0AE90B1D
+	.4byte	0x0A7F0AB5
+	.4byte	0x0A120A49
+	.4byte	0x09A109DA
+	.4byte	0x092D0968
+	.4byte	0x08B708F2
+	.4byte	0x083E087B
+	.4byte	0x07C20800
+	.4byte	0x07440783
+	.4byte	0x06C30704
+	.4byte	0x06400682
+	.4byte	0x05BC05FE
+	.4byte	0x05360579
+	.4byte	0x04AE04F2
+	.4byte	0x04240469
+	.4byte	0x039903DF
+	.4byte	0x030E0354
+	.4byte	0x028102C7
+	.4byte	0x01F3023A
+	.4byte	0x016501AC
+	.4byte	0x00D6011E
+	.4byte	0x0047008F
+	.4byte	0x080059A9
+	.4byte	0x08005981
+	.4byte	0x08005975
+	.4byte	0x08005ADD
+	.4byte	0x080059A1
+	.4byte	0x08005979
+	.4byte	0x08005D81
+	.4byte	0x08005D59
+	.4byte	0x08005D4D
+	.4byte	0x08005EB5
+	.4byte	0x08005D79
+	.4byte	0x08005D51
+	.4byte	0x08005EB9
+	.4byte	0x08005EE9
+	.4byte	0x08005F09
+	.4byte	0x08006469
+	.4byte	0x08006451
+	.4byte	0x08006445
+	.4byte	0x06010000
+	.4byte	0x06010000
+	.4byte	0x06010000
+	.4byte	0x06014000
+	.4byte	0x06014000
+	.4byte	0x06014000
+	.4byte	0x10000000
+	.4byte	0x00001010
+	.4byte	0x00F002A0
+	.4byte	0x00000C00
+	.4byte	0xFF800000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x03000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x40000000
+	.4byte	0x00000000
+	.4byte	0x80000000
+	.4byte	0x00000000
+	.4byte	0xC0000000
+	.4byte	0x00000000
+	.4byte	0x00004000
+	.4byte	0x00000000
+	.4byte	0x40004000
+	.4byte	0x00000000
+	.4byte	0x80004000
+	.4byte	0x00000000
+	.4byte	0xC0004000
+	.4byte	0x00000000
+	.4byte	0x00008000
+	.4byte	0x00000000
+	.4byte	0x40008000
+	.4byte	0x00000000
+	.4byte	0x80008000
+	.4byte	0x00000000
+	.4byte	0xC0008000
+	.4byte	0x00000000
+	.4byte	0xFFFCFFFC
+	.4byte	0xFFF8FFF8
+	.4byte	0xFFF0FFF0
+	.4byte	0xFFE0FFE0
+	.4byte	0xFFFCFFF8
+	.4byte	0xFFFCFFF0
+	.4byte	0xFFF8FFF0
+	.4byte	0xFFF0FFE0
+	.4byte	0xFFF8FFFC
+	.4byte	0xFFF0FFFC
+	.4byte	0xFFF0FFF8
+	.4byte	0xFFE0FFF0
+	.4byte	0x40100401
+	.4byte	0x20080402
+	.4byte	0x20080402
+	.4byte	0x40100401
+	.4byte	0x20080402
+	.4byte	0x20080402
+	.4byte	0x40100401
+	.4byte	0x20080402
+	.4byte	0x20080402
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x55000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x55555555
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x55550000
+	.4byte	0x00005555
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x55555555
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x55555555
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x55555555
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x55555555
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000005
+	.4byte	0x55555550
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x05555555
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x55500000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x50000000
+	.4byte	0x55550000
+	.4byte	0x00005550
+	.4byte	0x00000005
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x55550000
+	.4byte	0x00055555
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x55000000
+	.4byte	0x05555550
+	.4byte	0x00000005
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x55000000
+	.4byte	0x00555555
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x05555555
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11111111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11111111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11111111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11111111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00001111
+	.4byte	0x55000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x05555555
+	.4byte	0x50000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x05555555
+	.4byte	0x55000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00005555
+	.4byte	0x55550000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000005
+	.4byte	0x00555555
+	.4byte	0x55500000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000005
+	.4byte	0x00005550
+	.4byte	0x55550000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x50000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x55000000
+	.4byte	0x05550000
+	.4byte	0x00055000
+	.4byte	0x00000550
+	.4byte	0x00000055
+	.4byte	0x00000000
+	.4byte	0x00555000
+	.4byte	0x00000555
+	.4byte	0x00000005
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11100000
+	.4byte	0x00011110
+	.4byte	0x00000011
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x10000000
+	.4byte	0x01111110
+	.4byte	0x00000011
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11110000
+	.4byte	0x00001111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11111000
+	.4byte	0x00000111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11111000
+	.4byte	0x00001111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11111111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000001
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11111000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11111111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000001
+	.4byte	0x11111111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000001
+	.4byte	0x11111110
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00011111
+	.4byte	0x11100000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000111
+	.4byte	0x01111100
+	.4byte	0x10000000
+	.4byte	0x00000000
+	.4byte	0x50000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000111
+	.4byte	0x00111100
+	.4byte	0x00000055
+	.4byte	0x00055500
+	.4byte	0x05550000
+	.4byte	0x55000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000005
+	.4byte	0x00000055
+	.4byte	0x00005500
+	.4byte	0x00055000
+	.4byte	0x00500000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x05000000
+	.4byte	0x05500000
+	.4byte	0x00500000
+	.4byte	0x00050000
+	.4byte	0x00050000
+	.4byte	0x00050000
+	.4byte	0x00050000
+	.4byte	0x00050000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11000000
+	.4byte	0x01110000
+	.4byte	0x00011100
+	.4byte	0x00000000
+	.4byte	0x10000000
+	.4byte	0x11100000
+	.4byte	0x00111000
+	.4byte	0x00000111
+	.4byte	0x00000001
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00111000
+	.4byte	0x00000111
+	.4byte	0x77000000
+	.4byte	0x77000000
+	.4byte	0x77000000
+	.4byte	0x77000000
+	.4byte	0x77000000
+	.4byte	0x77000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x11000000
+	.4byte	0x00000000
+	.4byte	0x00777777
+	.4byte	0x00777777
+	.4byte	0x00777777
+	.4byte	0x00777777
+	.4byte	0x00777777
+	.4byte	0x00777777
+	.4byte	0x00000001
+	.4byte	0x00011110
+	.4byte	0x01110000
+	.4byte	0x11000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x05000000
+	.4byte	0x55000000
+	.4byte	0x50000000
+	.4byte	0x00000001
+	.4byte	0x00001110
+	.4byte	0x00111000
+	.4byte	0x11100000
+	.4byte	0x10000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000005
+	.4byte	0x00000005
+	.4byte	0x00000005
+	.4byte	0x00000005
+	.4byte	0x00000015
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00500000
+	.4byte	0x15500000
+	.4byte	0x15000000
+	.4byte	0x51100000
+	.4byte	0x00110000
+	.4byte	0x00011000
+	.4byte	0x00001100
+	.4byte	0x00000100
+	.4byte	0x00000110
+	.4byte	0x00000011
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000055
+	.4byte	0x00000550
+	.4byte	0x00055000
+	.4byte	0x05550000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77000000
+	.4byte	0x77000000
+	.4byte	0x77000000
+	.4byte	0x77000000
+	.4byte	0x77000000
+	.4byte	0x77000000
+	.4byte	0x77000000
+	.4byte	0x77000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00777777
+	.4byte	0x00777777
+	.4byte	0x00777777
+	.4byte	0x00777777
+	.4byte	0x00777777
+	.4byte	0x00777777
+	.4byte	0x00777777
+	.4byte	0x00777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x55000000
+	.4byte	0x50000000
+	.4byte	0x55000000
+	.4byte	0x05000000
+	.4byte	0x00500000
+	.4byte	0x00055000
+	.4byte	0x00005500
+	.4byte	0x00000055
+	.4byte	0x00000005
+	.4byte	0x00000110
+	.4byte	0x00011100
+	.4byte	0x00110000
+	.4byte	0x01100000
+	.4byte	0x11000000
+	.4byte	0x10000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000001
+	.4byte	0x00000011
+	.4byte	0x00000010
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000110
+	.4byte	0x00000010
+	.4byte	0x00000011
+	.4byte	0x00000001
+	.4byte	0x00000001
+	.4byte	0x00000001
+	.4byte	0x00000001
+	.4byte	0x00000001
+	.4byte	0x55000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000005
+	.4byte	0x00000555
+	.4byte	0x00555000
+	.4byte	0x55500000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77000000
+	.4byte	0x77000000
+	.4byte	0x77000000
+	.4byte	0x77000005
+	.4byte	0x77005550
+	.4byte	0x77550000
+	.4byte	0x77000000
+	.4byte	0x77000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00777777
+	.4byte	0x00777777
+	.4byte	0x50777777
+	.4byte	0x55777777
+	.4byte	0x00777777
+	.4byte	0x00777777
+	.4byte	0x00777777
+	.4byte	0x00777777
+	.4byte	0x05550000
+	.4byte	0x00055500
+	.4byte	0x00000055
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000110
+	.4byte	0x00000100
+	.4byte	0x00001100
+	.4byte	0x00001000
+	.4byte	0x00001000
+	.4byte	0x00001000
+	.4byte	0x00001000
+	.4byte	0x00001000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000011
+	.4byte	0x00000010
+	.4byte	0x00000110
+	.4byte	0x00000100
+	.4byte	0x00001100
+	.4byte	0x00011000
+	.4byte	0x00110000
+	.4byte	0x01100000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77000000
+	.4byte	0x77000000
+	.4byte	0x77000000
+	.4byte	0x77000000
+	.4byte	0x77000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x77777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00777777
+	.4byte	0x00777777
+	.4byte	0x00777777
+	.4byte	0x00777777
+	.4byte	0x00777777
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x10000000
+	.4byte	0x11000000
+	.4byte	0x01100000
+	.4byte	0x00001100
+	.4byte	0x00000100
+	.4byte	0x00000110
+	.4byte	0x00000010
+	.4byte	0x00000011
+	.4byte	0x00000001
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11000000
+	.4byte	0x10000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000011
+	.4byte	0x00000110
+	.4byte	0x00011100
+	.4byte	0x01110000
+	.4byte	0x11000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000001
+	.4byte	0x00000111
+	.4byte	0x00111000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x10000000
+	.4byte	0x11100000
+	.4byte	0x00111000
+	.4byte	0x00001110
+	.4byte	0x00000001
+	.4byte	0x00110000
+	.4byte	0x00011100
+	.4byte	0x00000110
+	.4byte	0x00000011
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11100000
+	.4byte	0x10000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000111
+	.4byte	0x00111000
+	.4byte	0x11000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000011
+	.4byte	0x00011110
+	.4byte	0x11100000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000011
+	.4byte	0x01111110
+	.4byte	0x10000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00001111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11100000
+	.4byte	0x00011111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x10000000
+	.4byte	0x01111100
+	.4byte	0x00000111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11000000
+	.4byte	0x00111100
+	.4byte	0x00000111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x01110000
+	.4byte	0x00011110
+	.4byte	0x00000001
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11110000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000111
+	.4byte	0x11111000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00001111
+	.4byte	0x11111000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11111111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000001
+	.4byte	0x11111111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11111111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11111111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11111111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11111000
+	.4byte	0x00001111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11111111
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11111111
+	.4byte	0x00000001
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x11111110
+	.4byte	0x00000001
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270027
+	.4byte	0x00270027
+	.4byte	0x00270027
+	.4byte	0x00640000
+	.4byte	0x00660065
+	.4byte	0x00680067
+	.4byte	0x006A0069
+	.4byte	0x006C006B
+	.4byte	0x006E006D
+	.4byte	0x0070006F
+	.4byte	0x00720071
+	.4byte	0x00740073
+	.4byte	0x00760075
+	.4byte	0x00780077
+	.4byte	0x007A0079
+	.4byte	0x007C007B
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x00840000
+	.4byte	0x00860085
+	.4byte	0x00880087
+	.4byte	0x008A0089
+	.4byte	0x008C008B
+	.4byte	0x008E008D
+	.4byte	0x0090008F
+	.4byte	0x00920091
+	.4byte	0x00940093
+	.4byte	0x00960095
+	.4byte	0x00980097
+	.4byte	0x009A0099
+	.4byte	0x009C009B
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x00A40000
+	.4byte	0x00A600A5
+	.4byte	0x00A800A7
+	.4byte	0x00AA00A9
+	.4byte	0x00AC00AB
+	.4byte	0x00AE00AD
+	.4byte	0x00B000AF
+	.4byte	0x00B200B1
+	.4byte	0x00B400B3
+	.4byte	0x00B600B5
+	.4byte	0x00B800B7
+	.4byte	0x00BA00B9
+	.4byte	0x00BC00BB
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x00C40000
+	.4byte	0x00C600C5
+	.4byte	0x00C800C7
+	.4byte	0x00CA00C9
+	.4byte	0x00CC00CB
+	.4byte	0x00CE00CD
+	.4byte	0x00D000CF
+	.4byte	0x00D200D1
+	.4byte	0x00D400D3
+	.4byte	0x00D600D5
+	.4byte	0x00D800D7
+	.4byte	0x00DA00D9
+	.4byte	0x00DC00DB
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x00E40000
+	.4byte	0x00E600E5
+	.4byte	0x00E800E7
+	.4byte	0x00EA00E9
+	.4byte	0x00EC00EB
+	.4byte	0x00EE00ED
+	.4byte	0x00F000EF
+	.4byte	0x00F200F1
+	.4byte	0x00F400F3
+	.4byte	0x00F600F5
+	.4byte	0x00F800F7
+	.4byte	0x00FA00F9
+	.4byte	0x00FC00FB
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x01040000
+	.4byte	0x01060105
+	.4byte	0x01080107
+	.4byte	0x010A0109
+	.4byte	0x010C010B
+	.4byte	0x010E010D
+	.4byte	0x0110010F
+	.4byte	0x01120111
+	.4byte	0x01140113
+	.4byte	0x01160115
+	.4byte	0x01180117
+	.4byte	0x011A0119
+	.4byte	0x011C011B
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x01240000
+	.4byte	0x01260125
+	.4byte	0x01280127
+	.4byte	0x012A0129
+	.4byte	0x012C012B
+	.4byte	0x012E012D
+	.4byte	0x0130012F
+	.4byte	0x01320131
+	.4byte	0x01340133
+	.4byte	0x01360135
+	.4byte	0x01380137
+	.4byte	0x013A0139
+	.4byte	0x013C013B
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x01440000
+	.4byte	0x01460145
+	.4byte	0x01480147
+	.4byte	0x014A0149
+	.4byte	0x014C014B
+	.4byte	0x014E014D
+	.4byte	0x0150014F
+	.4byte	0x01520151
+	.4byte	0x01540153
+	.4byte	0x01560155
+	.4byte	0x01580157
+	.4byte	0x015A0159
+	.4byte	0x015C015B
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x01640000
+	.4byte	0x01660165
+	.4byte	0x01680167
+	.4byte	0x016A0169
+	.4byte	0x016C016B
+	.4byte	0x016E016D
+	.4byte	0x0170016F
+	.4byte	0x01720171
+	.4byte	0x01740173
+	.4byte	0x01760175
+	.4byte	0x01780177
+	.4byte	0x017A0179
+	.4byte	0x017C017B
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x00270027
+	.4byte	0x00270027
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270027
+	.4byte	0x00270027
+	.4byte	0x00270027
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270027
+	.4byte	0x00270027
+	.4byte	0x00270027
+	.4byte	0x00640000
+	.4byte	0x00660065
+	.4byte	0x00680067
+	.4byte	0x006A0069
+	.4byte	0x006C006B
+	.4byte	0x006E006D
+	.4byte	0x0070006F
+	.4byte	0x00720071
+	.4byte	0x00740073
+	.4byte	0x00760075
+	.4byte	0x00780077
+	.4byte	0x007A0079
+	.4byte	0x007C007B
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x00840000
+	.4byte	0x00860085
+	.4byte	0x00880087
+	.4byte	0x008A0089
+	.4byte	0x008C008B
+	.4byte	0x008E008D
+	.4byte	0x0090008F
+	.4byte	0x00920091
+	.4byte	0x00940093
+	.4byte	0x00960095
+	.4byte	0x00980097
+	.4byte	0x009A0099
+	.4byte	0x009C009B
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x00A40000
+	.4byte	0x00A600A5
+	.4byte	0x00A800A7
+	.4byte	0x00AA00A9
+	.4byte	0x00AC00AB
+	.4byte	0x00AE00AD
+	.4byte	0x00B000AF
+	.4byte	0x00B200B1
+	.4byte	0x00B400B3
+	.4byte	0x00B600B5
+	.4byte	0x00B800B7
+	.4byte	0x00BA00B9
+	.4byte	0x00BC00BB
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x00C40000
+	.4byte	0x00C600C5
+	.4byte	0x00C800C7
+	.4byte	0x00CA00C9
+	.4byte	0x00CC00CB
+	.4byte	0x00CE00CD
+	.4byte	0x00D000CF
+	.4byte	0x00D200D1
+	.4byte	0x00D400D3
+	.4byte	0x00D600D5
+	.4byte	0x00D800D7
+	.4byte	0x00DA00D9
+	.4byte	0x00DC00DB
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x00E40000
+	.4byte	0x00E600E5
+	.4byte	0x00E800E7
+	.4byte	0x00EA00E9
+	.4byte	0x00EC00EB
+	.4byte	0x00EE00ED
+	.4byte	0x00F000EF
+	.4byte	0x00F200F1
+	.4byte	0x00F400F3
+	.4byte	0x00F600F5
+	.4byte	0x00F800F7
+	.4byte	0x00FA00F9
+	.4byte	0x00FC00FB
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x01040000
+	.4byte	0x01060105
+	.4byte	0x01080107
+	.4byte	0x010A0109
+	.4byte	0x010C010B
+	.4byte	0x010E010D
+	.4byte	0x0110010F
+	.4byte	0x01120111
+	.4byte	0x01140113
+	.4byte	0x01160115
+	.4byte	0x01180117
+	.4byte	0x011A0119
+	.4byte	0x011C011B
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x01240000
+	.4byte	0x01260125
+	.4byte	0x01280127
+	.4byte	0x012A0129
+	.4byte	0x012C012B
+	.4byte	0x012E012D
+	.4byte	0x0130012F
+	.4byte	0x01320131
+	.4byte	0x01340133
+	.4byte	0x01360135
+	.4byte	0x01380137
+	.4byte	0x013A0139
+	.4byte	0x013C013B
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x01440000
+	.4byte	0x01460145
+	.4byte	0x01480147
+	.4byte	0x014A0149
+	.4byte	0x014C014B
+	.4byte	0x014E014D
+	.4byte	0x0150014F
+	.4byte	0x01520151
+	.4byte	0x01540153
+	.4byte	0x01560155
+	.4byte	0x01580157
+	.4byte	0x015A0159
+	.4byte	0x015C015B
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00640000
+	.4byte	0x01640000
+	.4byte	0x01660165
+	.4byte	0x01680167
+	.4byte	0x016A0169
+	.4byte	0x016C016B
+	.4byte	0x016E016D
+	.4byte	0x0170016F
+	.4byte	0x01720171
+	.4byte	0x01740173
+	.4byte	0x01760175
+	.4byte	0x01780177
+	.4byte	0x017A0179
+	.4byte	0x017C017B
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00840000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00A40000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00C40000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00E40000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x01040000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x01240000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x01440000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270000
+	.4byte	0x00270027
+	.4byte	0x00000027
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00270027
+	.4byte	0x00270027
+	.4byte	0x00000027
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00640000
+	.4byte	0x00660065
+	.4byte	0x00680067
+	.4byte	0x006A0069
+	.4byte	0x006C006B
+	.4byte	0x006E006D
+	.4byte	0x0000006F
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
+	.4byte	0x00000000
 .size sub_080FAAC8, .-sub_080FAAC8

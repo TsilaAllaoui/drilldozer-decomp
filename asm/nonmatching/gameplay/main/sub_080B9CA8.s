@@ -7,20 +7,20 @@
 sub_080B9CA8:
 	push	{r4, lr}
 	sub	sp, #4
-	.2byte	0x1C04
+	add	r4, r0, #0
 	bl	sub_0800B3F4
-	mov	r1, #160	@ 0xa0
+	mov	r1, #160
 	str	r1, [sp, #0]
-	mov	r1, #218	@ 0xda
+	mov	r1, #218
 	mov	r2, #0
-	mov	r3, #136	@ 0x88
+	mov	r3, #136
 	bl	sub_0801B298
 	str	r0, [r4, #0]
 	cmp	r0, #0
 	beq	.L_b9cda
 	mov	r0, #2
 	bl	sub_080B2BC4
-	mov	r0, #160	@ 0xa0
+	mov	r0, #160
 	lsl	r0, r0, #8
 	str	r0, [r4, #4]
 	str	r0, [r4, #8]
@@ -32,5 +32,5 @@ sub_080B9CA8:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080B9CA8, .-sub_080B9CA8

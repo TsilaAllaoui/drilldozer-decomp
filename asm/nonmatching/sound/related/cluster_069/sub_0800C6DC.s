@@ -6,10 +6,10 @@
 .thumb_func
 sub_0800C6DC:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
+	add	r5, r0, #0
 	mov	r4, #1
 	neg	r4, r4
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080014AC
 	lsl	r0, r0, #16
 	asr	r0, r0, #16
@@ -28,20 +28,20 @@ sub_0800C6DC:
 	beq	.L_c728
 	b	.L_c736
 .L_c708:
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_080737F8
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0807381C
 	b	.L_c736
 .L_c716:
 	bl	sub_08062264
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08038C9C
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08059DF8
 	b	.L_c736
 .L_c728:
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08073840
 	mov	r0, #0
 	strb	r0, [r5, #7]

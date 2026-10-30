@@ -9,14 +9,14 @@ sub_0804FF84:
 	mov	r7, r8
 	push	{r7}
 	sub	sp, #8
-	.2byte	0x1C07
+	add	r7, r0, #0
 	mov	r8, r1
-	ldr	r0, [pc, #172]	@ (0x8050040)
+	ldr	r0, .L_50040	@ =0x00030106
 	str	r0, [sp, #4]
 	mov	r4, #0
-	.2byte	0x1C3D
+	add	r5, r7, #0
 .L_4ff98:
-	ldr	r6, [pc, #168]	@ (0x8050044)
+	ldr	r6, .L_50044	@ =0x082F435C
 	lsl	r0, r4, #2
 	add	r0, r0, r6
 	mov	r2, #0
@@ -24,17 +24,17 @@ sub_0804FF84:
 	mov	r3, #2
 	ldrsh	r2, [r0, r3]
 	add	r0, sp, #4
-	mov	r3, #150	@ 0x96
+	mov	r3, #150
 	bl	sub_08005490
 	str	r0, [r5, #0]
 	lsl	r1, r4, #3
-	ldr	r2, [pc, #148]	@ (0x8050048)
+	ldr	r2, .L_50048	@ =0x082F4138
 	add	r1, r1, r2
-	mov	r2, #153	@ 0x99
+	mov	r2, #153
 	lsl	r2, r2, #2
 	str	r2, [sp, #0]
 	mov	r2, #8
-	mov	r3, #206	@ 0xce
+	mov	r3, #206
 	lsl	r3, r3, #1
 	bl	sub_080055A4
 	ldr	r0, [r5, #0]
@@ -42,7 +42,7 @@ sub_0804FF84:
 	mov	r2, #0
 	bl	sub_080057F0
 	ldmia	r5!, {r0}
-	ldr	r1, [pc, #120]	@ (0x805004c)
+	ldr	r1, .L_5004c	@ =0x082F41C8
 	bl	sub_08005814
 	add	r4, #1
 	cmp	r4, #2
@@ -54,14 +54,14 @@ sub_0804FF84:
 	ldrsh	r1, [r6, r0]
 	mov	r3, #14
 	ldrsh	r2, [r6, r3]
-	ldr	r4, [pc, #96]	@ (0x8050050)
+	ldr	r4, .L_50050	@ =0x082C3CA4
 	str	r4, [sp, #0]
 	add	r0, sp, #4
-	mov	r3, #150	@ 0x96
+	mov	r3, #150
 	bl	sub_08006DA8
 	str	r0, [r7, #12]
-	ldr	r5, [pc, #88]	@ (0x8050054)
-	.2byte	0x1C29
+	ldr	r5, .L_50054	@ =0x082C3CC4
+	add	r1, r5, #0
 	bl	sub_08005814
 	mov	r1, #6
 	add	r0, sp, #4
@@ -73,10 +73,10 @@ sub_0804FF84:
 	add	r4, #16
 	str	r4, [sp, #0]
 	add	r0, sp, #4
-	mov	r3, #150	@ 0x96
+	mov	r3, #150
 	bl	sub_08006DA8
 	str	r0, [r7, #16]
-	.2byte	0x1C29
+	add	r1, r5, #0
 	bl	sub_08005814
 	ldr	r0, [r7, #4]
 	mov	r1, r8
@@ -91,23 +91,17 @@ sub_0804FF84:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_50040:
-	.4byte	0x30106
-	.align	2, 0
+	.4byte	0x00030106
 .L_50044:
-	.4byte	0x82F435C
-	.align	2, 0
+	.4byte	0x082F435C
 .L_50048:
-	.4byte	0x82F4138
-	.align	2, 0
+	.4byte	0x082F4138
 .L_5004c:
-	.4byte	0x82F41C8
-	.align	2, 0
+	.4byte	0x082F41C8
 .L_50050:
-	.4byte	0x82C3CA4
-	.align	2, 0
+	.4byte	0x082C3CA4
 .L_50054:
-	.4byte	0x82C3CC4
+	.4byte	0x082C3CC4
 .size sub_0804FF84, .-sub_0804FF84

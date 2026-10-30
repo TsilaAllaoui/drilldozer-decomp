@@ -16,28 +16,26 @@ sub_0805A260:
 	lsr	r2, r0, #16
 	cmp	r4, #0
 	bne	.L_5a288
-	ldr	r0, [pc, #4]	@ (0x805a280)
+	ldr	r0, .L_5a280	@ =0x0830F678
 	ldrb	r4, [r0, #2]
-	ldr	r0, [pc, #4]	@ (0x805a284)
+	ldr	r0, .L_5a284	@ =0x0830F67C
 	b	.L_5a28e
-	.align	2, 0
 .L_5a280:
-	.4byte	0x830F678
-	.align	2, 0
+	.4byte	0x0830F678
 .L_5a284:
-	.4byte	0x830F67C
+	.4byte	0x0830F67C
 .L_5a288:
-	ldr	r0, [pc, #124]	@ (0x805a308)
+	ldr	r0, .L_5a308	@ =0x0830F67C
 	ldrb	r4, [r0, #2]
-	ldr	r0, [pc, #124]	@ (0x805a30c)
+	ldr	r0, .L_5a30c	@ =0x0830F678
 .L_5a28e:
 	ldrb	r0, [r0, #2]
 	mov	r9, r0
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	lsl	r0, r0, #1
 	add	r5, r2, r0
 	lsl	r5, r5, #5
-	mov	r1, #192	@ 0xc0
+	mov	r1, #192
 	lsl	r1, r1, #19
 	mov	r8, r1
 	add	r1, r5, r1
@@ -46,40 +44,40 @@ sub_0805A260:
 	lsl	r6, r6, #5
 	add	r8, r6
 	lsl	r4, r4, #7
-	ldr	r7, [pc, #96]	@ (0x805a310)
+	ldr	r7, .L_5a310	@ =0x0830F25C
 	add	r0, r4, r7
-	mov	r2, #64	@ 0x40
+	mov	r2, #64
 	mov	r3, #1
 	bl	sub_08001370
-	.2byte	0x1C38
-	add	r0, #64	@ 0x40
+	add	r0, r7, #0
+	add	r0, #64
 	add	r4, r4, r0
-	ldr	r1, [pc, #84]	@ (0x805a314)
+	ldr	r1, .L_5a314	@ =0x06000400
 	add	r5, r5, r1
-	.2byte	0x1C20
-	.2byte	0x1C29
-	mov	r2, #64	@ 0x40
+	add	r0, r4, #0
+	add	r1, r5, #0
+	mov	r2, #64
 	mov	r3, #1
 	bl	sub_08001370
 	mov	r0, r9
 	lsl	r4, r0, #7
-	mov	r1, #128	@ 0x80
+	mov	r1, #128
 	lsl	r1, r1, #2
 	add	r0, r7, r1
 	add	r0, r4, r0
 	mov	r1, r8
-	mov	r2, #64	@ 0x40
+	mov	r2, #64
 	mov	r3, #1
 	bl	sub_08001370
-	mov	r1, #144	@ 0x90
+	mov	r1, #144
 	lsl	r1, r1, #2
 	add	r0, r7, r1
 	add	r4, r4, r0
-	ldr	r0, [pc, #36]	@ (0x805a314)
+	ldr	r0, .L_5a314	@ =0x06000400
 	add	r6, r6, r0
-	.2byte	0x1C20
-	.2byte	0x1C31
-	mov	r2, #64	@ 0x40
+	add	r0, r4, #0
+	add	r1, r6, #0
+	mov	r2, #64
 	mov	r3, #1
 	bl	sub_08001370
 	pop	{r3, r4}
@@ -88,16 +86,12 @@ sub_0805A260:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_5a308:
-	.4byte	0x830F67C
-	.align	2, 0
+	.4byte	0x0830F67C
 .L_5a30c:
-	.4byte	0x830F678
-	.align	2, 0
+	.4byte	0x0830F678
 .L_5a310:
-	.4byte	0x830F25C
-	.align	2, 0
+	.4byte	0x0830F25C
 .L_5a314:
-	.4byte	0x6000400
+	.4byte	0x06000400
 .size sub_0805A260, .-sub_0805A260

@@ -5,6 +5,9 @@
 .type sub_080E85CA, %function
 .thumb_func
 sub_080E85CA:
-	@ Exact original ROM bytes from 0x080E85CA.
-	.byte	0xC0, 0x6F, 0x32, 0xF7, 0x4A, 0xFD, 0x01, 0xBC, 0x00, 0x47, 0x10, 0xB5
+	ldr	r0, [r0, #124]
+	bl	sub_0801B064
+	pop	{r0}
+	bx	r0
+	push	{r4, lr}
 .size sub_080E85CA, .-sub_080E85CA

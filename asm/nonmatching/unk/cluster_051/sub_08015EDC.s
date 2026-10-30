@@ -6,7 +6,7 @@
 .thumb_func
 sub_08015EDC:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	lsl	r2, r2, #16
 	lsr	r2, r2, #16
 	lsl	r1, r1, #16

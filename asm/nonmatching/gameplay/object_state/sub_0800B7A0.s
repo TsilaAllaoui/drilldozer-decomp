@@ -6,21 +6,21 @@
 .thumb_func
 sub_0800B7A0:
 	push	{r4, lr}
-	.2byte	0x1C0C
+	add	r4, r1, #0
 	cmp	r2, #0
 	bne	.L_b7ba
-	.2byte	0x1C02
-	add	r2, #164	@ 0xa4
+	add	r2, r0, #0
+	add	r2, #164
 	mov	r1, #1
 	lsl	r1, r4
 	ldr	r0, [r2, #0]
 	orr	r0, r1
 	str	r0, [r2, #0]
-	.2byte	0x1C13
+	add	r3, r2, #0
 	b	.L_b7ca
 .L_b7ba:
-	.2byte	0x1C03
-	add	r3, #164	@ 0xa4
+	add	r3, r0, #0
+	add	r3, #164
 	cmp	r2, #1
 	bne	.L_b7ca
 	lsl	r2, r4
@@ -36,5 +36,5 @@ sub_0800B7A0:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0800B7A0, .-sub_0800B7A0

@@ -19,17 +19,17 @@ sub_080021CC:
 	lsl	r3, r3, #16
 	lsr	r5, r3, #16
 	mov	r8, r5
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08002A78
 	cmp	r0, #0
 	bne	.L_2234
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08002A8C
 	cmp	r0, #0
 	bne	.L_2234
 	cmp	r6, #0
 	beq	.L_221c
-	ldr	r0, [pc, #20]	@ (0x8002218)
+	ldr	r0, .L_2218	@ =0x03000900
 	lsl	r1, r4, #4
 	add	r0, #4
 	add	r1, r1, r0
@@ -40,11 +40,10 @@ sub_080021CC:
 	mov	r0, sl
 	bl	sub_080F86FC
 	b	.L_2234
-	.align	2, 0
 .L_2218:
-	.4byte	0x3000900
+	.4byte	0x03000900
 .L_221c:
-	ldr	r0, [pc, #36]	@ (0x8002244)
+	ldr	r0, .L_2244	@ =0x03000900
 	mov	r2, r9
 	lsl	r1, r2, #4
 	add	r0, #4
@@ -63,8 +62,7 @@ sub_080021CC:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_2244:
-	.4byte	0x3000900
+	.4byte	0x03000900
 .size sub_080021CC, .-sub_080021CC

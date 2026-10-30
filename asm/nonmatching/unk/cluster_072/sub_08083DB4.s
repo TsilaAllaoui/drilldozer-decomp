@@ -6,19 +6,19 @@
 .thumb_func
 sub_08083DB4:
 	push	{lr}
-	.2byte	0x1C11
+	add	r1, r2, #0
 	ldrh	r3, [r0, #22]
-	cmp	r3, #109	@ 0x6d
+	cmp	r3, #109
 	bgt	.L_83dc8
-	cmp	r3, #107	@ 0x6b
+	cmp	r3, #107
 	bge	.L_83dd2
-	cmp	r3, #58	@ 0x3a
+	cmp	r3, #58
 	beq	.L_83dde
 	b	.L_83de8
 .L_83dc8:
-	cmp	r3, #160	@ 0xa0
+	cmp	r3, #160
 	beq	.L_83dd8
-	cmp	r3, #220	@ 0xdc
+	cmp	r3, #220
 	beq	.L_83de4
 	b	.L_83de8
 .L_83dd2:

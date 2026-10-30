@@ -9,10 +9,10 @@ sub_080DD370:
 	mov	r7, r8
 	push	{r7}
 	mov	r8, r0
-	.2byte	0x1C0C
-	.2byte	0x1C27
-	.2byte	0x1C26
-	add	r6, #124	@ 0x7c
+	add	r4, r1, #0
+	add	r7, r4, #0
+	add	r6, r4, #0
+	add	r6, #124
 	ldrb	r0, [r6, #0]
 	cmp	r0, #1
 	beq	.L_dd3b0
@@ -28,10 +28,10 @@ sub_080DD370:
 .L_dd396:
 	ldr	r0, [r4, #12]
 	bl	sub_080304C8
-	mov	r1, #112	@ 0x70
+	mov	r1, #112
 	cmp	r0, #2
 	bne	.L_dd3a4
-	mov	r1, #111	@ 0x6f
+	mov	r1, #111
 .L_dd3a4:
 	ldr	r0, [r4, #12]
 	bl	sub_0802140C
@@ -41,11 +41,11 @@ sub_080DD370:
 .L_dd3b0:
 	ldr	r0, [r7, #12]
 	bl	sub_080DD454
-	.2byte	0x1C05
-	.2byte	0x1C39
+	add	r5, r0, #0
+	add	r1, r7, #0
 	add	r1, #32
 	bl	sub_080DD120
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldr	r0, [r7, #12]
 	bl	sub_080213D4
 	lsl	r0, r0, #24
@@ -54,10 +54,9 @@ sub_080DD370:
 	bne	.L_dd410
 	cmp	r4, #1
 	bne	.L_dd410
-	.2byte	0x1C29
-	add	r1, #116	@ 0x74
+	add	r1, r5, #0
+	add	r1, #116
 	mov	r0, #0
-.L_dd3da:
 	strb	r0, [r1, #0]
 	ldrb	r0, [r6, #0]
 	add	r0, #1
@@ -68,9 +67,8 @@ sub_080DD370:
 	strb	r4, [r6, #0]
 	ldr	r0, [r7, #12]
 	bl	sub_080DD454
-	.2byte	0x1C05
-.L_dd3f0:
-	add	r0, #133	@ 0x85
+	add	r5, r0, #0
+	add	r0, #133
 	strb	r4, [r0, #0]
 	ldr	r0, [r7, #12]
 	bl	sub_080DD4B8
@@ -89,5 +87,5 @@ sub_080DD370:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080DD370, .-sub_080DD370

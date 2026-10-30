@@ -7,25 +7,25 @@
 sub_0801C5DC:
 	push	{r4, r5, r6, r7, lr}
 	sub	sp, #4
-	.2byte	0x1C04
-	.2byte	0x1C0E
-	.2byte	0x1C17
+	add	r4, r0, #0
+	add	r6, r1, #0
+	add	r7, r2, #0
 	mov	r5, sp
 	add	r5, #2
 	mov	r1, sp
-	.2byte	0x1C2A
+	add	r2, r5, #0
 	bl	sub_0801C2B4
 	ldr	r0, [r4, #12]
-	add	r4, #60	@ 0x3c
-	.2byte	0x1C21
+	add	r4, #60
+	add	r1, r4, #0
 	mov	r2, sp
-	.2byte	0x1C2B
+	add	r3, r5, #0
 	bl	sub_080149A8
-	.2byte	0x1C2B
+	add	r3, r5, #0
 	cmp	r6, #0
 	beq	.L_1c610
-	.2byte	0x1C20
-	.2byte	0x1C31
+	add	r0, r4, #0
+	add	r1, r6, #0
 	mov	r2, sp
 	bl	sub_080130AC
 .L_1c610:
@@ -38,5 +38,5 @@ sub_0801C5DC:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0801C5DC, .-sub_0801C5DC

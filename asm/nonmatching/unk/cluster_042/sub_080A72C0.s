@@ -6,8 +6,8 @@
 .thumb_func
 sub_080A72C0:
 	push	{r4, r5, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0D
+	add	r4, r0, #0
+	add	r5, r1, #0
 	ldr	r0, [r4, #12]
 	bl	sub_08036634
 	cmp	r0, #0
@@ -15,12 +15,12 @@ sub_080A72C0:
 	ldr	r0, [r4, #12]
 	bl	sub_08011720
 	bl	sub_080119D8
-	.2byte	0x1C02
+	add	r2, r0, #0
 	str	r2, [r5, #32]
 	ldr	r0, [r5, #4]
 	cmp	r0, #0
 	bne	.L_a72ee
-	.2byte	0x1C50
+	add	r0, r2, #1
 	cmp	r0, #2
 	bhi	.L_a72fe
 .L_a72ea:
@@ -38,7 +38,7 @@ sub_080A72C0:
 .L_a72fe:
 	ldr	r0, [r4, #12]
 	bl	sub_080177F0
-	.2byte	0x1C02
+	add	r2, r0, #0
 	ldr	r0, [r5, #12]
 	cmp	r2, r0
 	bne	.L_a7310

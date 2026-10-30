@@ -9,13 +9,13 @@ sub_0807CD3C:
 	mov	r7, r8
 	push	{r7}
 	mov	r8, r0
-	ldr	r7, [pc, #44]	@ (0x807cd74)
-	.2byte	0x1C3E
+	ldr	r7, .L_7cd74	@ =0x02036134
+	add	r6, r7, #0
 	add	r6, #8
 	mov	r5, #0
 	mov	r4, #3
 .L_7cd4e:
-	.2byte	0x1D38
+	add	r0, r7, #4
 	add	r0, r5, r0
 	ldr	r2, [r0, #0]
 	cmp	r2, #0
@@ -34,7 +34,6 @@ sub_0807CD3C:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_7cd74:
-	.4byte	0x2036134
+	.4byte	0x02036134
 .size sub_0807CD3C, .-sub_0807CD3C

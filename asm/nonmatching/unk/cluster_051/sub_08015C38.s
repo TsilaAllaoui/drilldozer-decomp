@@ -6,7 +6,7 @@
 .thumb_func
 sub_08015C38:
 	push	{r4, lr}
-	.2byte	0x1C03
+	add	r3, r0, #0
 	lsl	r2, r2, #16
 	lsr	r2, r2, #16
 	lsl	r1, r1, #16
@@ -26,10 +26,10 @@ sub_08015C38:
 	cmp	r2, r0
 	blt	.L_15c64
 .L_15c60:
-	mov	r0, #196	@ 0xc4
+	mov	r0, #196
 	b	.L_15c76
 .L_15c64:
-	.2byte	0x1C18
+	add	r0, r3, #0
 	bl	sub_08015EDC
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16

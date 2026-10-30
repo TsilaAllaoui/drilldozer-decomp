@@ -6,8 +6,8 @@
 .thumb_func
 sub_08060600:
 	push	{r4, lr}
-	.2byte	0x1C03
-	mov	r0, #118	@ 0x76
+	add	r3, r0, #0
+	mov	r0, #118
 	add	r0, r0, r3
 	mov	ip, r0
 	ldrb	r0, [r0, #0]
@@ -18,8 +18,8 @@ sub_08060600:
 	mov	r0, #0
 	mov	r1, ip
 	strb	r2, [r1, #0]
-	.2byte	0x1C19
-	add	r1, #116	@ 0x74
+	add	r1, r3, #0
+	add	r1, #116
 	strb	r0, [r1, #0]
 	add	r1, #1
 	strb	r0, [r1, #0]

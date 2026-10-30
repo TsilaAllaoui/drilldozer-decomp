@@ -7,8 +7,8 @@
 sub_0800E05C:
 	push	{r4, r5, r6, lr}
 	sub	sp, #8
-	.2byte	0x1C0C
-	.2byte	0x1C15
+	add	r4, r1, #0
+	add	r5, r2, #0
 	mov	r6, sp
 	mov	r1, sp
 	bl	sub_0800E014
@@ -31,5 +31,5 @@ sub_0800E05C:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0800E05C, .-sub_0800E05C

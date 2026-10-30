@@ -6,7 +6,7 @@
 .thumb_func
 sub_080264C4:
 	push	{lr}
-	.2byte	0x1C01
+	add	r1, r0, #0
 	ldrb	r2, [r1, #3]
 	cmp	r2, #0
 	bne	.L_264e2
@@ -15,7 +15,7 @@ sub_080264C4:
 	strh	r0, [r1, #6]
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
-	cmp	r0, #95	@ 0x5f
+	cmp	r0, #95
 	bls	.L_264de
 	strh	r2, [r1, #6]
 .L_264de:
@@ -29,5 +29,5 @@ sub_080264C4:
 	strb	r0, [r1, #3]
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080264C4, .-sub_080264C4

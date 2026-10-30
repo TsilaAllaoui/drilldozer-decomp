@@ -1,11 +1,25 @@
 .syntax divided
-.align 1, 0
+.align 2, 0
 .global sub_0807CA9C
 .thumb
 .type sub_0807CA9C, %function
 .thumb_func
 sub_0807CA9C:
-	@ Exact original ROM bytes from 0x0807CA9C.
-	.byte	0x00, 0xB5, 0x00, 0x06, 0x09, 0x06, 0x0A, 0x0E, 0x04, 0x49, 0x80, 0x0D, 0x40, 0x18, 0x00, 0x68
-	.byte	0x00, 0x28, 0x01, 0xD0, 0x40, 0x68, 0x42, 0x70, 0x01, 0xBC, 0x00, 0x47, 0x24, 0x61, 0x03, 0x02
+	push	{lr}
+	lsl	r0, r0, #24
+	lsl	r1, r1, #24
+	lsr	r2, r1, #24
+	ldr	r1, .L_7cab8	@ =0x02036124
+	lsr	r0, r0, #22
+	add	r0, r0, r1
+	ldr	r0, [r0, #0]
+	cmp	r0, #0
+	beq	.L_7cab4
+	ldr	r0, [r0, #4]
+	strb	r2, [r0, #1]
+.L_7cab4:
+	pop	{r0}
+	bx	r0
+.L_7cab8:
+	.4byte	0x02036124
 .size sub_0807CA9C, .-sub_0807CA9C

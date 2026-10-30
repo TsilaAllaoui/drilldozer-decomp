@@ -1,0 +1,28 @@
+name: Drill Dozer matching metadata guard
+
+on:
+  pull_request:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check frozen range inventory
+        run: python3 tools/stable_progress.py --check
+      - name: Test split-invariant progress
+        run: python3 -m unittest discover -s tests -p 'test_*.py'
+      - name: Audit C registrations and ASM preservation
+        run: python3 tools/audit_checkpoint.py
+      # This public job cannot establish exact 8 MiB ROM identity: no copyrighted
+      # baserom is stored in the repository. Require local `make compare`
+      # and its log before human acceptance of any promoted function.

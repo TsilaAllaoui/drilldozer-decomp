@@ -7,33 +7,33 @@
 sub_080F2190:
 	push	{r4, r5, r6, r7, lr}
 	sub	sp, #4
-	.2byte	0x1C05
-	.2byte	0x1C14
-	.2byte	0x1C1E
+	add	r5, r0, #0
+	add	r4, r2, #0
+	add	r6, r3, #0
 	ldr	r7, [sp, #24]
 	ldr	r0, [r1, #12]
 	str	r0, [r4, #0]
 	ldrh	r2, [r4, #0]
-	sub	r2, #80	@ 0x50
+	sub	r2, #80
 	ldrh	r0, [r1, #16]
 	add	r2, r2, r0
 	strh	r2, [r4, #0]
 	ldrh	r0, [r4, #2]
-	sub	r0, #48	@ 0x30
+	sub	r0, #48
 	ldrh	r1, [r1, #18]
 	add	r0, r0, r1
 	strh	r0, [r4, #2]
 	strh	r2, [r6, #4]
 	ldrh	r0, [r4, #0]
-	add	r0, #160	@ 0xa0
+	add	r0, #160
 	strh	r0, [r6, #6]
 	ldrh	r0, [r4, #2]
 	strh	r0, [r6, #0]
 	ldrh	r0, [r4, #2]
-	add	r0, #96	@ 0x60
+	add	r0, #96
 	strh	r0, [r6, #2]
 	ldr	r0, [r5, #12]
-	.2byte	0x1C39
+	add	r1, r7, #0
 	bl	sub_0800E014
 	ldr	r0, [r5, #12]
 	mov	r5, sp
@@ -99,5 +99,5 @@ sub_080F2190:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080F2190, .-sub_080F2190

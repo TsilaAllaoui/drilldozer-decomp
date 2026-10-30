@@ -11,7 +11,7 @@ sub_08067480:
 	mov	r4, r8
 	push	{r4, r5, r6}
 	sub	sp, #4
-	.2byte	0x1C0D
+	add	r5, r1, #0
 	mov	r8, r2
 	mov	sl, r3
 	ldr	r6, [sp, #32]
@@ -24,9 +24,9 @@ sub_08067480:
 	mov	r2, #0
 	ldrsh	r4, [r1, r2]
 	sub	r0, r0, r4
-	.2byte	0x1C31
+	add	r1, r6, #0
 	bl	sub_080F8FF0
-	.2byte	0x1C06
+	add	r6, r0, #0
 	lsl	r4, r4, #16
 	mov	r3, r8
 	str	r4, [r3, #0]
@@ -42,7 +42,7 @@ sub_08067480:
 	ldrsh	r1, [r1, r2]
 	sub	r0, r0, r1
 	lsl	r0, r0, #16
-	.2byte	0x1C31
+	add	r1, r6, #0
 	bl	sub_080F8FF0
 	mov	r3, sl
 	str	r0, [r3, #0]
@@ -53,7 +53,7 @@ sub_08067480:
 	ldrsh	r1, [r2, r3]
 	sub	r0, r0, r1
 	lsl	r0, r0, #16
-	.2byte	0x1C31
+	add	r1, r6, #0
 	bl	sub_080F8FF0
 	mov	r1, sl
 	str	r0, [r1, #4]

@@ -7,23 +7,23 @@
 sub_0801BDC8:
 	push	{r4, r5, lr}
 	sub	sp, #12
-	.2byte	0x1C05
-	cmp	r1, #255	@ 0xff
+	add	r5, r0, #0
+	cmp	r1, #255
 	beq	.L_1bdfe
 	lsl	r0, r1, #24
 	lsr	r4, r0, #24
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08011EB0
 	lsl	r0, r0, #24
 	cmp	r0, #0
 	bne	.L_1bdfe
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08011E90
-	.2byte	0x1C28
-	.2byte	0x1C21
+	add	r0, r5, #0
+	add	r1, r4, #0
 	mov	r2, sp
 	bl	sub_08012710
-	.2byte	0x1C28
+	add	r0, r5, #0
 	mov	r1, sp
 	mov	r2, #0
 	bl	sub_0801B188

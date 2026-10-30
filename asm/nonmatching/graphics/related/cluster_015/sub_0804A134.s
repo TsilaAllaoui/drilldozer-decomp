@@ -9,7 +9,7 @@ sub_0804A134:
 	mov	r7, r8
 	push	{r7}
 	sub	sp, #8
-	.2byte	0x1C07
+	add	r7, r0, #0
 	lsl	r1, r1, #16
 	lsr	r1, r1, #16
 	mov	r8, r1
@@ -21,7 +21,7 @@ sub_0804A134:
 	lsr	r0, r0, #26
 	mov	r1, #1
 	bl	sub_08015A18
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldrb	r0, [r7, #22]
 	lsl	r0, r0, #26
 	lsr	r0, r0, #29
@@ -33,7 +33,7 @@ sub_0804A134:
 	lsr	r0, r0, #26
 	mov	r1, #0
 	bl	sub_08015B00
-	.2byte	0x1C05
+	add	r5, r0, #0
 	lsl	r5, r5, #24
 	lsr	r5, r5, #24
 	ldrb	r0, [r7, #23]
@@ -52,7 +52,7 @@ sub_0804A134:
 	ldrb	r2, [r7, #19]
 	mov	r3, r8
 	mul	r3, r4
-	.2byte	0x1C1C
+	add	r4, r3, #0
 	ldrb	r3, [r7, #20]
 	lsl	r3, r3, #28
 	lsr	r3, r3, #28
@@ -61,7 +61,7 @@ sub_0804A134:
 	lsr	r3, r3, #16
 	str	r5, [sp, #0]
 	str	r0, [sp, #4]
-	.2byte	0x1C30
+	add	r0, r6, #0
 	bl	sub_08003D50
 .L_4a1b0:
 	add	sp, #8

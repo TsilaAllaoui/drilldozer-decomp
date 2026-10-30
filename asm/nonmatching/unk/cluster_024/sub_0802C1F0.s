@@ -6,30 +6,29 @@
 .thumb_func
 sub_0802C1F0:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
+	add	r5, r0, #0
 	bl	sub_0802C22C
 	cmp	r0, #0
 	beq	.L_2c224
-	ldr	r4, [pc, #32]	@ (0x802c220)
-	.2byte	0x1C20
-	add	r0, #80	@ 0x50
-	.2byte	0x1D29
-	mov	r2, #232	@ 0xe8
+	ldr	r4, .L_2c220	@ =0x020345C8
+	add	r0, r4, #0
+	add	r0, #80
+	add	r1, r5, #4
+	mov	r2, #232
 	bl	sub_080FAA68
-	.2byte	0x1C28
-	add	r0, #236	@ 0xec
+	add	r0, r5, #0
+	add	r0, #236
 	ldrb	r0, [r0, #0]
 	strb	r0, [r4, #18]
-	.2byte	0x1C28
-	add	r0, #237	@ 0xed
+	add	r0, r5, #0
+	add	r0, #237
 	ldrb	r0, [r0, #0]
 	strb	r0, [r4, #19]
 	mov	r0, #1
 	b	.L_2c226
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_2c220:
-	.4byte	0x20345C8
+	.4byte	0x020345C8
 .L_2c224:
 	mov	r0, #0
 .L_2c226:

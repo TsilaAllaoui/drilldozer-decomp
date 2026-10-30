@@ -6,22 +6,22 @@
 .thumb_func
 sub_0800ABB4:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
-	.2byte	0x1C0C
-	.2byte	0x1C20
+	add	r5, r0, #0
+	add	r4, r1, #0
+	add	r0, r4, #0
 	bl	sub_0800B220
 	cmp	r0, #1
 	bne	.L_abcc
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0800090C
 	b	.L_abde
 .L_abcc:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #8
 	bl	sub_0800B234
 	cmp	r0, #1
 	beq	.L_abde
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0801B700
 .L_abde:
 	pop	{r4, r5}

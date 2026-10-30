@@ -22,24 +22,22 @@ sub_080BA710:
 	lsr	r7, r0, #16
 	mov	r0, #12
 	bl	sub_080016E8
-	.2byte	0x1C04
+	add	r4, r0, #0
 	cmp	r4, #0
 	beq	.L_ba78a
-	ldr	r0, [pc, #20]	@ (0x80ba750)
-	ldr	r2, [pc, #20]	@ (0x80ba754)
-	.2byte	0x1C21
+	ldr	r0, .L_ba750	@ =0x080BA799
+	ldr	r2, .L_ba754	@ =0x00001802
+	add	r1, r4, #0
 	bl	sub_0800089C
 	cmp	r0, #0
 	bne	.L_ba758
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08001768
 	b	.L_ba78a
-	.align	2, 0
 .L_ba750:
-	.4byte	0x80BA799
-	.align	2, 0
+	.4byte	0x080BA799
 .L_ba754:
-	.4byte	0x1802
+	.4byte	0x00001802
 .L_ba758:
 	mov	r0, r9
 	str	r0, [r4, #0]
@@ -49,7 +47,7 @@ sub_080BA710:
 	strb	r6, [r4, #8]
 	cmp	r8, r6
 	bls	.L_ba76c
-	mov	r0, #255	@ 0xff
+	mov	r0, #255
 	b	.L_ba76e
 .L_ba76c:
 	mov	r0, #1
@@ -76,5 +74,5 @@ sub_080BA710:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080BA710, .-sub_080BA710

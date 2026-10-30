@@ -6,7 +6,7 @@
 .thumb_func
 sub_080754C0:
 	push	{lr}
-	.2byte	0x1C03
+	add	r3, r0, #0
 	cmp	r2, #0
 	bge	.L_754da
 	ldr	r0, [r3, #0]
@@ -43,10 +43,10 @@ sub_080754C0:
 	str	r2, [r3, #0]
 	b	.L_75506
 .L_75500:
-	.2byte	0x1C18
+	add	r0, r3, #0
 	bl	sub_08075274
 .L_75506:
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080754C0, .-sub_080754C0

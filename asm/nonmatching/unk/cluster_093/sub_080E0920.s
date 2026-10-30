@@ -6,14 +6,14 @@
 .thumb_func
 sub_080E0920:
 	push	{r4, r5, lr}
-	.2byte	0x1C0C
+	add	r4, r1, #0
 	ldr	r0, [r4, #0]
-	add	r0, #35	@ 0x23
+	add	r0, #35
 	ldrb	r0, [r0, #0]
 	lsl	r0, r0, #26
 	lsr	r0, r0, #27
 	bl	sub_08006C48
-	.2byte	0x1C25
+	add	r5, r4, #0
 	mov	r4, #1
 .L_e0936:
 	ldmia	r5!, {r0}

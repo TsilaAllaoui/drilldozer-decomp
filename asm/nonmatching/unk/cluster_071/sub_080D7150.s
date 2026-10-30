@@ -14,7 +14,7 @@ sub_080D7150:
 	mov	r9, r0
 	mov	r8, r1
 	mov	sl, r2
-	add	r0, #120	@ 0x78
+	add	r0, #120
 	ldrb	r6, [r0, #0]
 	mov	r7, #10
 	ldrsb	r7, [r1, r7]
@@ -24,7 +24,7 @@ sub_080D7150:
 	cmp	r0, #0
 	bne	.L_d7190
 	mov	r5, r9
-	add	r5, #121	@ 0x79
+	add	r5, #121
 	ldrb	r0, [r5, #0]
 	add	r0, #1
 	strb	r0, [r5, #0]
@@ -53,11 +53,11 @@ sub_080D7150:
 	cmp	r0, #0
 	beq	.L_d7276
 	mov	r3, r9
-	add	r3, #121	@ 0x79
+	add	r3, #121
 	ldrb	r0, [r3, #0]
 	add	r0, #1
 	strb	r0, [r3, #0]
-	ldr	r2, [pc, #28]	@ (0x80d71d8)
+	ldr	r2, .L_d71d8	@ =0x08482594
 	mov	r4, r8
 	mov	r1, #7
 	ldrsb	r1, [r4, r1]
@@ -72,14 +72,13 @@ sub_080D7150:
 	sub	r6, #1
 	sub	r7, #1
 	b	.L_d71f8
-	.align	2, 0
 .L_d71d8:
-	.4byte	0x8482594
+	.4byte	0x08482594
 .L_d71dc:
 	cmp	r0, #1
 	bne	.L_d71f8
 	mov	r1, r9
-	add	r1, #121	@ 0x79
+	add	r1, #121
 	ldrb	r0, [r1, #0]
 	add	r0, #1
 	strb	r0, [r1, #0]
@@ -111,19 +110,19 @@ sub_080D7150:
 	mov	r7, #3
 .L_d7214:
 	mov	r0, r9
-	add	r0, #120	@ 0x78
+	add	r0, #120
 	strb	r6, [r0, #0]
 	ldrb	r0, [r0, #0]
 	lsl	r0, r0, #10
-	ldr	r1, [pc, #104]	@ (0x80d7288)
+	ldr	r1, .L_d7288	@ =0x084825AC
 	add	r0, r0, r1
 	mov	r4, r8
 	ldr	r1, [r4, #0]
 	ldrh	r1, [r1, #16]
 	lsl	r1, r1, #5
-	ldr	r2, [pc, #96]	@ (0x80d728c)
+	ldr	r2, .L_d728c	@ =0x06010000
 	add	r1, r1, r2
-	mov	r2, #128	@ 0x80
+	mov	r2, #128
 	lsl	r2, r2, #3
 	mov	r3, #1
 	bl	sub_08001370
@@ -138,21 +137,21 @@ sub_080D7150:
 	mov	r1, #0
 	mov	r2, #2
 	bl	sub_0800D79C
-	.2byte	0x1C06
+	add	r6, r0, #0
 	lsl	r4, r7, #9
-	ldr	r0, [pc, #60]	@ (0x80d7290)
+	ldr	r0, .L_d7290	@ =0x084841AC
 	add	r0, r4, r0
 	mov	r5, #4
 	str	r5, [sp, #0]
-	.2byte	0x1C31
-	mov	r2, #64	@ 0x40
+	add	r1, r6, #0
+	mov	r2, #64
 	mov	r3, #4
 	bl	sub_08048A94
-	ldr	r0, [pc, #44]	@ (0x80d7294)
+	ldr	r0, .L_d7294	@ =0x084849AC
 	add	r4, r4, r0
 	str	r5, [sp, #0]
-	.2byte	0x1C20
-	.2byte	0x1C31
+	add	r0, r4, #0
+	add	r1, r6, #0
 	mov	r2, #12
 	mov	r3, #4
 	bl	sub_08048A94
@@ -165,17 +164,13 @@ sub_080D7150:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_d7288:
-	.4byte	0x84825AC
-	.align	2, 0
+	.4byte	0x084825AC
 .L_d728c:
-	.4byte	0x6010000
-	.align	2, 0
+	.4byte	0x06010000
 .L_d7290:
-	.4byte	0x84841AC
-	.align	2, 0
+	.4byte	0x084841AC
 .L_d7294:
-	.4byte	0x84849AC
+	.4byte	0x084849AC
 .size sub_080D7150, .-sub_080D7150

@@ -7,15 +7,15 @@
 sub_080C81D4:
 	push	{r4, r5, lr}
 	sub	sp, #12
-	.2byte	0x1C04
-	.2byte	0x1C0D
+	add	r4, r0, #0
+	add	r5, r1, #0
 	lsl	r2, r2, #24
 	lsr	r2, r2, #24
 	lsl	r3, r3, #24
 	lsr	r3, r3, #24
-	ldrh	r1, [r4, #38]	@ 0x26
+	ldrh	r1, [r4, #38]
 	lsl	r1, r1, #16
-	ldrh	r0, [r4, #36]	@ 0x24
+	ldrh	r0, [r4, #36]
 	orr	r0, r1
 	str	r0, [sp, #8]
 	add	r1, sp, #8
@@ -38,5 +38,5 @@ sub_080C81D4:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080C81D4, .-sub_080C81D4

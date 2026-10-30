@@ -8,28 +8,28 @@ sub_0805BC64:
 	push	{r4, r5, r6, r7, lr}
 	mov	r7, r8
 	push	{r7}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	bl	sub_08002DD0
-	.2byte	0x1C07
+	add	r7, r0, #0
 	mov	r0, #9
 	ldrsb	r0, [r4, r0]
 	bl	sub_0805BC58
-	.2byte	0x1C05
+	add	r5, r0, #0
 	mov	r6, #0
 	cmp	r5, #1
 	beq	.L_5bc84
-	.2byte	0x1E6E
+	sub	r6, r5, #1
 .L_5bc84:
 	ldrh	r1, [r7, #6]
-	mov	r2, #128	@ 0x80
+	mov	r2, #128
 	lsl	r2, r2, #2
-	.2byte	0x1C10
+	add	r0, r2, #0
 	and	r0, r1
 	cmp	r0, #0
 	beq	.L_5bcb6
-	.2byte	0x1C17
+	add	r7, r2, #0
 	ldr	r1, [r4, #4]
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	lsl	r0, r0, #1
 	cmp	r1, r0
 	bne	.L_5bce2
@@ -41,18 +41,18 @@ sub_0805BC64:
 	mov	r5, #1
 	mov	r6, #0
 	strb	r6, [r4, #8]
-	mov	r0, #255	@ 0xff
+	mov	r0, #255
 	orr	r0, r1
 	strb	r0, [r4, #9]
 	b	.L_5bcda
 .L_5bcb6:
-	mov	r3, #128	@ 0x80
+	mov	r3, #128
 	lsl	r3, r3, #1
-	.2byte	0x1C18
+	add	r0, r3, #0
 	and	r0, r1
 	cmp	r0, #0
 	beq	.L_5bce6
-	.2byte	0x1C1F
+	add	r7, r3, #0
 	ldr	r0, [r4, #4]
 	cmp	r0, r2
 	bne	.L_5bce2
@@ -78,7 +78,7 @@ sub_0805BC64:
 	ldrb	r1, [r4, #11]
 	add	r1, #1
 	strb	r1, [r4, #11]
-	ldr	r2, [pc, #100]	@ (0x805bd54)
+	ldr	r2, .L_5bd54	@ =0x0831F730
 	lsl	r3, r6, #2
 	add	r0, r3, r6
 	lsl	r0, r0, #2
@@ -103,12 +103,12 @@ sub_0805BC64:
 	add	r5, #1
 	cmp	r5, #7
 	bne	.L_5bd24
-	mov	r0, #200	@ 0xc8
+	mov	r0, #200
 	bl	sub_08029E54
 .L_5bd24:
 	cmp	r5, #8
 	bne	.L_5bd2e
-	mov	r0, #201	@ 0xc9
+	mov	r0, #201
 	bl	sub_08029E54
 .L_5bd2e:
 	mov	r0, #0
@@ -116,11 +116,11 @@ sub_0805BC64:
 	strb	r0, [r4, #12]
 	strb	r0, [r4, #11]
 .L_5bd36:
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	lsl	r0, r0, #1
 	cmp	r7, r0
 	beq	.L_5bd46
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	lsl	r0, r0, #2
 	cmp	r7, r0
 	bne	.L_5bd58
@@ -131,16 +131,15 @@ sub_0805BC64:
 	add	r0, #1
 	strb	r0, [r4, #10]
 	b	.L_5bd80
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_5bd54:
-	.4byte	0x831F730
+	.4byte	0x0831F730
 .L_5bd58:
 	ldrb	r1, [r4, #12]
 	add	r1, #1
 	mov	r3, #0
 	strb	r1, [r4, #12]
-	ldr	r2, [pc, #40]	@ (0x805bd8c)
+	ldr	r2, .L_5bd8c	@ =0x0831F730
 	mov	r7, r8
 	add	r0, r7, r6
 	lsl	r0, r0, #2
@@ -163,9 +162,8 @@ sub_0805BC64:
 	ble	.L_5bd90
 	strb	r5, [r4, #9]
 	b	.L_5bd94
-	.align	2, 0
 .L_5bd8c:
-	.4byte	0x831F730
+	.4byte	0x0831F730
 .L_5bd90:
 	neg	r0, r5
 	strb	r0, [r4, #9]
@@ -175,7 +173,7 @@ sub_0805BC64:
 	blt	.L_5bd9c
 	strb	r6, [r4, #8]
 .L_5bd9c:
-	.2byte	0x1C30
+	add	r0, r6, #0
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}

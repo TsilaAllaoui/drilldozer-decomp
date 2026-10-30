@@ -5,8 +5,12 @@
 .type sub_080ACA94, %function
 .thumb_func
 sub_080ACA94:
-	@ Exact original ROM bytes from 0x080ACA94.
-	.byte	0x00, 0xB5, 0xC8, 0x68, 0xD1, 0xF7, 0x78, 0xFF, 0xB1, 0x20, 0x65, 0xF7, 0xF1, 0xFE, 0x01, 0xBC
+	push	{lr}
+	ldr	r0, [r1, #12]
+	bl	sub_0807E98C
+	mov	r0, #177
+	bl	sub_08012884
+	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080ACA94, .-sub_080ACA94

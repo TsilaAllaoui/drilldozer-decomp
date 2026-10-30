@@ -7,19 +7,19 @@
 sub_0801BF90:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldr	r0, [r4, #12]
 	mov	r1, sp
 	bl	sub_0802E7C4
 	ldr	r0, [r4, #12]
 	bl	sub_080177F0
-	.2byte	0x1C05
-	.2byte	0x1C20
+	add	r5, r0, #0
+	add	r0, r4, #0
 	bl	sub_0801C0B4
-	.2byte	0x1C03
+	add	r3, r0, #0
 	ldr	r0, [r4, #12]
 	mov	r1, sp
-	.2byte	0x1C2A
+	add	r2, r5, #0
 	bl	sub_0802B5C8
 	add	sp, #4
 	pop	{r4, r5}

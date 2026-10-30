@@ -6,9 +6,9 @@
 .thumb_func
 sub_0804AF60:
 	push	{lr}
-	ldr	r1, [pc, #20]	@ (0x804af78)
+	ldr	r1, .L_4af78	@ =0x02035FE8
 	mov	r2, #0
-	.2byte	0x1C08
+	add	r0, r1, #0
 	add	r0, #28
 .L_4af6a:
 	str	r2, [r0, #0]
@@ -17,8 +17,7 @@ sub_0804AF60:
 	bge	.L_4af6a
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_4af78:
-	.4byte	0x2035FE8
+	.4byte	0x02035FE8
 .size sub_0804AF60, .-sub_0804AF60

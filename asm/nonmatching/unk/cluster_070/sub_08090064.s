@@ -16,7 +16,7 @@ sub_08090064:
 	ldrsh	r3, [r1, r2]
 	mov	r4, #6
 	ldrsh	r2, [r1, r4]
-	.2byte	0x1C19
+	add	r1, r3, #0
 	bl	sub_0800CFA0
 	cmp	r0, #0
 	bne	.L_90088

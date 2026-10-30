@@ -6,9 +6,9 @@
 .thumb_func
 sub_080C08DC:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
-	.2byte	0x1C0A
-	.2byte	0x1C14
+	add	r5, r0, #0
+	add	r2, r1, #0
+	add	r4, r2, #0
 	ldr	r0, [r2, #20]
 	ldr	r3, [r2, #12]
 	add	r0, r0, r3
@@ -27,7 +27,7 @@ sub_080C08DC:
 	ldr	r0, [r2, #4]
 	add	r0, r0, r1
 	str	r0, [r5, #20]
-	.2byte	0x1C19
+	add	r1, r3, #0
 	cmp	r3, #0
 	bge	.L_c0910
 	neg	r1, r3
@@ -50,16 +50,16 @@ sub_080C08DC:
 	eor	r0, r1
 	strb	r0, [r2, #1]
 	ldr	r0, [r4, #32]
-	ldr	r1, [r4, #44]	@ 0x2c
+	ldr	r1, [r4, #44]
 	bl	sub_08005814
 	ldr	r1, [r4, #32]
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0807EAF0
 	ldr	r0, [r4, #32]
 	ldrb	r0, [r0, #14]
 	cmp	r0, #1
 	bne	.L_c094e
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0807E4B4
 .L_c094e:
 	pop	{r4, r5}

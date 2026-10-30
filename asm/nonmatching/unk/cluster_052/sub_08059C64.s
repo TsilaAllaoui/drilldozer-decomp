@@ -10,7 +10,7 @@ sub_08059C64:
 	cmp	r0, #0
 	beq	.L_59c80
 	mov	r6, #0
-	.2byte	0x1C0C
+	add	r4, r1, #0
 	mov	r5, #3
 .L_59c72:
 	ldr	r0, [r4, #0]
@@ -23,5 +23,5 @@ sub_08059C64:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08059C64, .-sub_08059C64

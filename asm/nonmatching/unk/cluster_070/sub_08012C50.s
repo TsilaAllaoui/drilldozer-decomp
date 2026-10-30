@@ -6,7 +6,7 @@
 .thumb_func
 sub_08012C50:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	lsl	r3, r3, #16
 	lsr	r3, r3, #16
 	lsl	r2, r2, #16
@@ -44,5 +44,5 @@ sub_08012C50:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08012C50, .-sub_08012C50

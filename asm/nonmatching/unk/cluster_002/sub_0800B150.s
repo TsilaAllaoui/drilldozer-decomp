@@ -6,22 +6,22 @@
 .thumb_func
 sub_0800B150:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
-	.2byte	0x1C0C
+	add	r5, r0, #0
+	add	r4, r1, #0
 	bl	sub_08019B88
 	lsl	r0, r0, #24
 	cmp	r0, #0
 	bne	.L_b174
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08009F7C
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #4
 	bl	sub_0800A87C
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0800090C
 .L_b174:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0800B150, .-sub_0800B150

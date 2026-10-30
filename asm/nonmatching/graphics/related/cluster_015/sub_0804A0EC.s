@@ -6,7 +6,7 @@
 .thumb_func
 sub_0804A0EC:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldrb	r0, [r4, #23]
 	lsl	r0, r0, #26
 	lsr	r0, r0, #26
@@ -31,14 +31,13 @@ sub_0804A0EC:
 	lsr	r0, r0, #6
 	cmp	r0, #0
 	bne	.L_4a12a
-	ldr	r1, [pc, #12]	@ (0x804a130)
-	.2byte	0x1C20
+	ldr	r1, .L_4a130	@ =0x082CB920
+	add	r0, r4, #0
 	bl	sub_08049F80
 .L_4a12a:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_4a130:
-	.4byte	0x82CB920
+	.4byte	0x082CB920
 .size sub_0804A0EC, .-sub_0804A0EC

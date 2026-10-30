@@ -5,19 +5,19 @@
 .type sub_08054E74, %function
 .thumb_func
 sub_08054E74:
-	.2byte	0xB500
+	push	{lr}
 	sub	sp, #4
-	.2byte	0x1C02
-	ldr	r0, [r1, #52]	@ 0x34
+	add	r2, r0, #0
+	ldr	r0, [r1, #52]
 	cmp	r0, #0
 	bge	.L_54e8c
-	.2byte	0x1C10
+	add	r0, r2, #0
 	mov	r1, #2
 	mov	r2, sp
 	bl	sub_08054DC4
 	b	.L_54e96
 .L_54e8c:
-	.2byte	0x1C10
+	add	r0, r2, #0
 	mov	r1, #3
 	mov	r2, sp
 	bl	sub_08054DC4
@@ -28,5 +28,5 @@ sub_08054E74:
 	add	sp, #4
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08054E74, .-sub_08054E74

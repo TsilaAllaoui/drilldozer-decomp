@@ -7,9 +7,9 @@
 sub_08018EDC:
 	push	{r4, r5, r6, lr}
 	sub	sp, #8
-	.2byte	0x1C06
-	.2byte	0x1C0C
-	.2byte	0x1C15
+	add	r6, r0, #0
+	add	r4, r1, #0
+	add	r5, r2, #0
 	lsl	r6, r6, #16
 	lsr	r6, r6, #16
 	lsl	r4, r4, #16
@@ -17,40 +17,37 @@ sub_08018EDC:
 	mov	r0, sp
 	strh	r6, [r0, #0]
 	lsr	r4, r4, #15
-	ldr	r1, [pc, #56]	@ (0x8018f30)
+	ldr	r1, .L_18f30	@ =0x02034C54
 	add	r1, r4, r1
 	lsr	r5, r5, #17
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	lsl	r0, r0, #17
 	orr	r5, r0
 	mov	r0, sp
-	.2byte	0x1C2A
+	add	r2, r5, #0
 	bl	sub_080F86FC
 	mov	r0, sp
 	add	r0, #2
 	strh	r6, [r0, #0]
-	ldr	r1, [pc, #36]	@ (0x8018f34)
+	ldr	r1, .L_18f34	@ =0x02035054
 	add	r1, r4, r1
-	.2byte	0x1C2A
+	add	r2, r5, #0
 	bl	sub_080F86FC
 	add	r0, sp, #4
 	strh	r6, [r0, #0]
-	ldr	r1, [pc, #24]	@ (0x8018f38)
+	ldr	r1, .L_18f38	@ =0x02035464
 	add	r4, r4, r1
-	.2byte	0x1C21
-	.2byte	0x1C2A
+	add	r1, r4, #0
+	add	r2, r5, #0
 	bl	sub_080F86FC
 	add	sp, #8
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_18f30:
-	.4byte	0x2034C54
-	.align	2, 0
+	.4byte	0x02034C54
 .L_18f34:
-	.4byte	0x2035054
-	.align	2, 0
+	.4byte	0x02035054
 .L_18f38:
-	.4byte	0x2035464
+	.4byte	0x02035464
 .size sub_08018EDC, .-sub_08018EDC

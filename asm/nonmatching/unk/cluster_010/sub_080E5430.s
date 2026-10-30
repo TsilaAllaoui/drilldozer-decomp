@@ -6,11 +6,11 @@
 .thumb_func
 sub_080E5430:
 	push	{r4, r5, r6, lr}
-	sub	sp, #40	@ 0x28
-	.2byte	0x1C04
+	sub	sp, #40
+	add	r4, r0, #0
 	mov	r3, #0
 	mov	r0, sp
-	ldr	r1, [pc, #32]	@ (0x80e545c)
+	ldr	r1, .L_e545c	@ =0x084C0C94
 	ldmia	r1!, {r2, r5, r6}
 	stmia	r0!, {r2, r5, r6}
 	ldmia	r1!, {r2, r5, r6}
@@ -25,12 +25,11 @@ sub_080E5430:
 	ldr	r0, [r1, #0]
 	cmp	r4, r0
 	bgt	.L_e5460
-	.2byte	0x1C18
+	add	r0, r3, #0
 	b	.L_e546c
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_e545c:
-	.4byte	0x84C0C94
+	.4byte	0x084C0C94
 .L_e5460:
 	add	r3, #1
 	add	r1, #4
@@ -39,7 +38,7 @@ sub_080E5430:
 	bls	.L_e5450
 	mov	r0, #0
 .L_e546c:
-	add	sp, #40	@ 0x28
+	add	sp, #40
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1

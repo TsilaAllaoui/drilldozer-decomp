@@ -66,7 +66,7 @@ sub_080F91FC:
 	lsr	r1, r1, #4
 	b	.L_f922c
 .L_f9264:
-	.2byte	0x1C10
+	add	r0, r2, #0
 	pop	{r4}
 	mov	pc, lr
 .L_f926a:

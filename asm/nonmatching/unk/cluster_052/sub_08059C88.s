@@ -6,11 +6,11 @@
 .thumb_func
 sub_08059C88:
 	push	{r4, r5, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0D
+	add	r4, r0, #0
+	add	r5, r1, #0
 	ldr	r0, [r4, #12]
-	.2byte	0x1C21
-	add	r1, #60	@ 0x3c
+	add	r1, r4, #0
+	add	r1, #60
 	bl	sub_0800DDD4
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
@@ -20,35 +20,35 @@ sub_08059C88:
 	orr	r1, r0
 	lsr	r2, r1, #31
 	ldr	r1, [r5, #0]
-	ldrh	r0, [r4, #36]	@ 0x24
+	ldrh	r0, [r4, #36]
 	sub	r0, #16
 	strh	r0, [r1, #20]
 	ldr	r1, [r5, #0]
-	ldrh	r0, [r4, #38]	@ 0x26
+	ldrh	r0, [r4, #38]
 	sub	r0, #16
 	strh	r0, [r1, #22]
 	ldr	r1, [r5, #4]
-	ldrh	r0, [r4, #36]	@ 0x24
+	ldrh	r0, [r4, #36]
 	add	r0, #16
 	strh	r0, [r1, #20]
 	ldr	r1, [r5, #4]
-	ldrh	r0, [r4, #38]	@ 0x26
+	ldrh	r0, [r4, #38]
 	sub	r0, #16
 	strh	r0, [r1, #22]
 	ldr	r1, [r5, #8]
-	ldrh	r0, [r4, #36]	@ 0x24
+	ldrh	r0, [r4, #36]
 	sub	r0, #16
 	strh	r0, [r1, #20]
 	ldr	r1, [r5, #8]
-	ldrh	r0, [r4, #38]	@ 0x26
+	ldrh	r0, [r4, #38]
 	add	r0, #16
 	strh	r0, [r1, #22]
 	ldr	r1, [r5, #12]
-	ldrh	r0, [r4, #36]	@ 0x24
+	ldrh	r0, [r4, #36]
 	add	r0, #16
 	strh	r0, [r1, #20]
 	ldr	r1, [r5, #12]
-	ldrh	r0, [r4, #38]	@ 0x26
+	ldrh	r0, [r4, #38]
 	add	r0, #16
 	strh	r0, [r1, #22]
 	mov	r1, #3

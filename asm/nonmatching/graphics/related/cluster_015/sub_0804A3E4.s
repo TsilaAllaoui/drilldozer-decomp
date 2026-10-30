@@ -11,7 +11,7 @@ sub_0804A3E4:
 	mov	r5, r8
 	push	{r5, r6, r7}
 	sub	sp, #4
-	.2byte	0x1C04
+	add	r4, r0, #0
 	lsl	r1, r1, #24
 	lsr	r1, r1, #24
 	str	r1, [sp, #0]
@@ -29,10 +29,10 @@ sub_0804A3E4:
 	cmp	r7, r8
 	bcs	.L_4a44c
 .L_4a412:
-	.2byte	0x1C46
+	add	r6, r0, #1
 	b	.L_4a432
 .L_4a416:
-	.2byte	0x1C78
+	add	r0, r7, #1
 	lsl	r0, r0, #24
 	lsr	r7, r0, #24
 	ldrh	r0, [r4, #24]
@@ -47,7 +47,7 @@ sub_0804A3E4:
 	cmp	r1, r0
 	bne	.L_4a444
 .L_4a432:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, r9
 	bl	sub_0804A1BC
 	lsl	r0, r0, #24
@@ -74,12 +74,12 @@ sub_0804A3E4:
 	mov	r0, #1
 	b	.L_4a4ac
 .L_4a462:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, sl
 	bl	sub_0804A134
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0804A0EC
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #0
 	bl	sub_0804A4BC
 	ldrb	r0, [r4, #16]
@@ -87,16 +87,16 @@ sub_0804A3E4:
 	bl	sub_080038F8
 	b	.L_4a4aa
 .L_4a482:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, sl
 	bl	sub_0804A134
-	.2byte	0x1C20
-	.2byte	0x1C39
+	add	r0, r4, #0
+	add	r1, r7, #0
 	mov	r2, r9
 	bl	sub_0804A2AC
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0804A0EC
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #0
 	bl	sub_0804A4BC
 	ldrb	r0, [r4, #16]

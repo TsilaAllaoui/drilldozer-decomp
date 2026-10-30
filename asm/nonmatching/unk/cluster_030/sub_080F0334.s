@@ -5,8 +5,13 @@
 .type sub_080F0334, %function
 .thumb_func
 sub_080F0334:
-	@ Exact original ROM bytes from 0x080F0334.
-	.byte	0x10, 0xB5, 0x0C, 0x06, 0x24, 0x0E, 0x8E, 0xF7, 0x7B, 0xF9, 0xC4, 0x70, 0x10, 0xBC, 0x01, 0xBC
+	push	{r4, lr}
+	lsl	r4, r1, #24
+	lsr	r4, r4, #24
+	bl	sub_0807E634
+	strb	r4, [r0, #3]
+	pop	{r4}
+	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080F0334, .-sub_080F0334

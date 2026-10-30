@@ -8,11 +8,11 @@ sub_08000414:
 	push	{lr}
 	mov	r0, #4
 	bl	sub_08000F88
-	mov	r1, #255	@ 0xff
+	mov	r1, #255
 	and	r1, r0
-	mov	r2, #150	@ 0x96
+	mov	r2, #150
 	lsl	r2, r2, #8
-	.2byte	0x1C10
+	add	r0, r2, #0
 	orr	r1, r0
 	mov	r0, #32
 	orr	r1, r0

@@ -7,8 +7,8 @@
 sub_08044914:
 	push	{r4, r5, r6, lr}
 	sub	sp, #4
-	.2byte	0x1C05
-	.2byte	0x1C0E
+	add	r5, r0, #0
+	add	r6, r1, #0
 	mov	r0, #0
 	str	r0, [sp, #0]
 	b	.L_44946
@@ -20,20 +20,20 @@ sub_08044914:
 	and	r0, r1
 	cmp	r0, #0
 	beq	.L_44946
-	.2byte	0x1C28
+	add	r0, r5, #0
 	mov	r1, #2
 	bl	sub_0801C084
-	.2byte	0x1C02
-	.2byte	0x1C20
+	add	r2, r0, #0
+	add	r0, r4, #0
 	mov	r1, #1
 	mov	r3, #1
 	neg	r3, r3
 	bl	sub_0801BBB0
 .L_44946:
 	mov	r0, sp
-	.2byte	0x1C31
+	add	r1, r6, #0
 	bl	sub_0801BC98
-	.2byte	0x1C04
+	add	r4, r0, #0
 	cmp	r4, #0
 	bne	.L_44922
 	add	sp, #4

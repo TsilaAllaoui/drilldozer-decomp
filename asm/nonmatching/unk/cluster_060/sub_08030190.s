@@ -7,8 +7,8 @@
 sub_08030190:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C0D
-	.2byte	0x1C14
+	add	r5, r1, #0
+	add	r4, r2, #0
 	lsl	r5, r5, #16
 	lsr	r5, r5, #16
 	lsl	r4, r4, #16

@@ -6,8 +6,8 @@
 .thumb_func
 sub_0800FC5C:
 	push	{lr}
-	.2byte	0x1C0A
-	ldr	r1, [pc, #20]	@ (0x800fc78)
+	add	r2, r1, #0
+	ldr	r1, .L_fc78	@ =0x08221DE4
 	ldrb	r0, [r0, #18]
 	lsl	r0, r0, #2
 	add	r0, r0, r1
@@ -19,9 +19,8 @@ sub_0800FC5C:
 	cmp	r2, #0
 	beq	.L_fc86
 	b	.L_fcae
-	.align	2, 0
 .L_fc78:
-	.4byte	0x8221DE4
+	.4byte	0x08221DE4
 .L_fc7c:
 	cmp	r2, #2
 	beq	.L_fc92

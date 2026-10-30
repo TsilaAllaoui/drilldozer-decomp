@@ -6,17 +6,17 @@
 .thumb_func
 sub_08015D14:
 	push	{lr}
-	.2byte	0x1C01
-	sub	r0, #192	@ 0xc0
+	add	r1, r0, #0
+	sub	r0, #192
 	cmp	r0, #1
 	bhi	.L_15d2a
-	.2byte	0x1C08
+	add	r0, r1, #0
 	bl	sub_0805A10C
 	cmp	r0, #1
 	beq	.L_15d36
 	b	.L_15d3a
 .L_15d2a:
-	cmp	r1, #197	@ 0xc5
+	cmp	r1, #197
 	bne	.L_15d3e
 	bl	sub_0805A324
 	cmp	r0, #1
@@ -28,7 +28,7 @@ sub_08015D14:
 	mov	r0, #0
 	b	.L_15d4a
 .L_15d3e:
-	ldr	r0, [pc, #16]	@ (0x8015d50)
+	ldr	r0, .L_15d50	@ =0x0810182C
 	lsl	r1, r1, #3
 	add	r1, r1, r0
 	ldrb	r0, [r1, #0]
@@ -37,8 +37,7 @@ sub_08015D14:
 .L_15d4a:
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_15d50:
-	.4byte	0x810182C
+	.4byte	0x0810182C
 .size sub_08015D14, .-sub_08015D14

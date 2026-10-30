@@ -12,14 +12,14 @@ sub_080BA16C:
 	push	{r5, r6, r7}
 	sub	sp, #12
 	mov	r9, r0
-	ldr	r1, [r0, #56]	@ 0x38
+	ldr	r1, [r0, #56]
 	asr	r1, r1, #8
-	ldr	r0, [r0, #60]	@ 0x3c
+	ldr	r0, [r0, #60]
 	asr	r0, r0, #8
-	add	r0, #64	@ 0x40
+	add	r0, #64
 	mov	r2, #0
 	mov	sl, r2
-	ldr	r6, [pc, #60]	@ (0x80ba1c8)
+	ldr	r6, .L_ba1c8	@ =0x084405F8
 	lsl	r1, r1, #16
 	str	r1, [sp, #4]
 	lsl	r0, r0, #16
@@ -29,7 +29,7 @@ sub_080BA16C:
 	mov	r8, r4
 	mov	r0, r8
 	lsr	r7, r0, #4
-	.2byte	0x1C3A
+	add	r2, r7, #0
 	ldrb	r3, [r6, #8]
 	ldrb	r0, [r6, #10]
 	str	r0, [sp, #0]
@@ -38,38 +38,35 @@ sub_080BA16C:
 	ldr	r4, [sp, #8]
 	asr	r1, r4, #16
 	bl	sub_080B9F34
-	.2byte	0x1C04
+	add	r4, r0, #0
 	cmp	r4, #0
 	beq	.L_ba220
 	mov	r0, #20
 	bl	sub_080016E8
-	.2byte	0x1C05
+	add	r5, r0, #0
 	cmp	r5, #0
 	bne	.L_ba1cc
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08005560
 	b	.L_ba22c
-	.align	2, 0
 .L_ba1c8:
-	.4byte	0x84405F8
+	.4byte	0x084405F8
 .L_ba1cc:
-	ldr	r0, [pc, #24]	@ (0x80ba1e8)
-	.2byte	0x1C29
-	ldr	r2, [pc, #24]	@ (0x80ba1ec)
+	ldr	r0, .L_ba1e8	@ =0x080BA23D
+	add	r1, r5, #0
+	ldr	r2, .L_ba1ec	@ =0x00001801
 	bl	sub_0800089C
 	cmp	r0, #0
 	bne	.L_ba1f0
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08005560
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08001768
 	b	.L_ba22c
-	.align	2, 0
 .L_ba1e8:
-	.4byte	0x80BA23D
-	.align	2, 0
+	.4byte	0x080BA23D
 .L_ba1ec:
-	.4byte	0x1801
+	.4byte	0x00001801
 .L_ba1f0:
 	ldrh	r0, [r6, #0]
 	ldrh	r1, [r4, #20]

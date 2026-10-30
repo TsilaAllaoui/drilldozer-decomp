@@ -8,13 +8,13 @@ sub_08094B70:
 	push	{r4, r5, r6, r7, lr}
 	mov	r7, r8
 	push	{r7}
-	.2byte	0x1C05
-	.2byte	0x1C0F
+	add	r5, r0, #0
+	add	r7, r1, #0
 	mov	r8, r2
-	.2byte	0x1C1E
+	add	r6, r3, #0
 	mov	r4, #0
-	str	r4, [r5, #76]	@ 0x4c
-	str	r4, [r5, #80]	@ 0x50
+	str	r4, [r5, #76]
+	str	r4, [r5, #80]
 	bl	sub_0801CECC
 	str	r4, [r7, #16]
 	strb	r4, [r7, #22]
@@ -46,10 +46,10 @@ sub_08094B70:
 	beq	.L_94bd2
 	b	.L_94c04
 .L_94bbc:
-	.2byte	0x1C28
-	.2byte	0x1C39
+	add	r0, r5, #0
+	add	r1, r7, #0
 	bl	sub_08094C10
-	.2byte	0x1C01
+	add	r1, r0, #0
 	mov	r0, #1
 	neg	r0, r0
 	cmp	r1, r0
@@ -57,10 +57,10 @@ sub_08094B70:
 	strb	r1, [r7, #12]
 	b	.L_94c04
 .L_94bd2:
-	.2byte	0x1C28
-	.2byte	0x1C39
+	add	r0, r5, #0
+	add	r1, r7, #0
 	bl	sub_08094C10
-	.2byte	0x1C01
+	add	r1, r0, #0
 	mov	r0, #1
 	neg	r0, r0
 	cmp	r1, r0
@@ -87,5 +87,5 @@ sub_08094B70:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08094B70, .-sub_08094B70

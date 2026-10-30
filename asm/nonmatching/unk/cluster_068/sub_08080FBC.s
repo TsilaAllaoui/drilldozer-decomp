@@ -6,8 +6,8 @@
 .thumb_func
 sub_08080FBC:
 	push	{lr}
-	.2byte	0x1C01
-	add	r0, #118	@ 0x76
+	add	r1, r0, #0
+	add	r0, #118
 	ldrb	r0, [r0, #0]
 	cmp	r0, #2
 	beq	.L_81002
@@ -27,13 +27,13 @@ sub_08080FBC:
 	beq	.L_81002
 	cmp	r0, #8
 	beq	.L_81002
-	.2byte	0x1C08
-	add	r0, #86	@ 0x56
+	add	r0, r1, #0
+	add	r0, #86
 	mov	r2, #0
 	ldrsh	r0, [r0, r2]
 	cmp	r0, #0
 	ble	.L_81002
-	.2byte	0x1C08
+	add	r0, r1, #0
 	bl	sub_0801C548
 	cmp	r0, #0
 	bne	.L_81002

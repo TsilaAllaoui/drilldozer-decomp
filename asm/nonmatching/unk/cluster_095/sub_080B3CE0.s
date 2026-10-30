@@ -6,9 +6,9 @@
 .thumb_func
 sub_080B3CE0:
 	push	{r4, r5, r6, r7, lr}
-	.2byte	0x1C02
-	.2byte	0x1C0B
-	add	r0, #84	@ 0x54
+	add	r2, r0, #0
+	add	r3, r1, #0
+	add	r0, #84
 	ldrb	r0, [r0, #0]
 	lsl	r0, r0, #24
 	asr	r0, r0, #24
@@ -26,12 +26,12 @@ sub_080B3CE0:
 .L_b3d02:
 	strb	r0, [r3, #5]
 	mov	r4, #0
-	ldr	r6, [pc, #56]	@ (0x80b3d40)
-	.2byte	0x1C17
-	add	r7, #120	@ 0x78
+	ldr	r6, .L_b3d40	@ =0x08423ED4
+	add	r7, r2, #0
+	add	r7, #120
 	mov	ip, r6
-	.2byte	0x1C1D
-	add	r5, #40	@ 0x28
+	add	r5, r3, #0
+	add	r5, #40
 .L_b3d12:
 	ldmia	r5!, {r2}
 	ldrb	r0, [r3, #5]
@@ -48,17 +48,16 @@ sub_080B3CE0:
 	ldrb	r0, [r7, #0]
 	cmp	r0, #25
 	bne	.L_b3d48
-	ldr	r1, [r3, #48]	@ 0x30
+	ldr	r1, [r3, #48]
 	ldrb	r0, [r1, #8]
 	cmp	r0, #4
 	bls	.L_b3d44
 	ldrb	r0, [r6, #2]
 	sub	r0, #1
 	b	.L_b3d46
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_b3d40:
-	.4byte	0x8423ED4
+	.4byte	0x08423ED4
 .L_b3d44:
 	ldrb	r0, [r6, #4]
 .L_b3d46:
@@ -67,5 +66,5 @@ sub_080B3CE0:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080B3CE0, .-sub_080B3CE0

@@ -25,20 +25,20 @@ sub_08019A90:
 	mov	r7, #0
 	cmp	r7, r8
 	bcs	.L_19b26
-	ldr	r0, [pc, #124]	@ (0x8019b38)
+	ldr	r0, .L_19b38	@ =0x02035054
 	mov	sl, r0
 .L_19abc:
 	mov	r1, r9
 	add	r5, r7, r1
 	lsl	r5, r5, #16
 	lsr	r5, r5, #15
-	ldr	r6, [pc, #116]	@ (0x8019b3c)
+	ldr	r6, .L_19b3c	@ =0x02034C54
 	add	r0, r5, r6
 	ldr	r3, [r0, #0]
 	lsl	r4, r3, #27
 	lsl	r2, r3, #22
 	lsl	r3, r3, #17
-	ldr	r0, [pc, #108]	@ (0x8019b40)
+	ldr	r0, .L_19b40	@ =0x02035464
 	add	r0, r5, r0
 	str	r0, [sp, #4]
 	lsr	r4, r4, #27
@@ -48,7 +48,7 @@ sub_08019A90:
 	sub	r0, r0, r4
 	mov	r6, ip
 	mul	r6, r0
-	.2byte	0x1C30
+	add	r0, r6, #0
 	asr	r0, r0, #4
 	add	r4, r4, r0
 	lsr	r2, r2, #27
@@ -57,7 +57,7 @@ sub_08019A90:
 	sub	r0, r0, r2
 	mov	r6, ip
 	mul	r6, r0
-	.2byte	0x1C30
+	add	r0, r6, #0
 	asr	r0, r0, #4
 	add	r2, r2, r0
 	lsl	r2, r2, #5
@@ -76,7 +76,7 @@ sub_08019A90:
 	strh	r4, [r0, #0]
 	add	r5, sl
 	strh	r4, [r5, #0]
-	.2byte	0x1C78
+	add	r0, r7, #1
 	lsl	r0, r0, #16
 	lsr	r7, r0, #16
 	cmp	r7, r8
@@ -90,14 +90,11 @@ sub_08019A90:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_19b38:
-	.4byte	0x2035054
-	.align	2, 0
+	.4byte	0x02035054
 .L_19b3c:
-	.4byte	0x2034C54
-	.align	2, 0
+	.4byte	0x02034C54
 .L_19b40:
-	.4byte	0x2035464
+	.4byte	0x02035464
 .size sub_08019A90, .-sub_08019A90

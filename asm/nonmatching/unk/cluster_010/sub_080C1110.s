@@ -8,7 +8,7 @@ sub_080C1110:
 	push	{r4, r5, r6, r7, lr}
 	mov	r7, r8
 	push	{r7}
-	.2byte	0x1C07
+	add	r7, r0, #0
 	lsl	r1, r1, #16
 	lsr	r1, r1, #16
 	lsl	r2, r2, #16
@@ -39,7 +39,7 @@ sub_080C1110:
 	asr	r4, r4, #16
 	sub	r4, r5, r4
 	lsl	r4, r4, #4
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, r8
 	bl	sub_080F8700
 	strh	r0, [r7, #10]
@@ -55,5 +55,5 @@ sub_080C1110:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080C1110, .-sub_080C1110

@@ -6,7 +6,7 @@
 .thumb_func
 sub_080F8734:
 	mov	r0, #0
-	.2byte	0xDF19
+	swi	#25
 	bx	lr
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080F8734, .-sub_080F8734

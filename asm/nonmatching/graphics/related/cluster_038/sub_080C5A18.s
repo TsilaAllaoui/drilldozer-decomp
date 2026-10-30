@@ -6,8 +6,8 @@
 .thumb_func
 sub_080C5A18:
 	push	{lr}
-	.2byte	0x1C01
-	add	r0, #124	@ 0x7c
+	add	r1, r0, #0
+	add	r0, #124
 	ldrb	r0, [r0, #10]
 	cmp	r0, #0
 	blt	.L_c5a50
@@ -15,14 +15,14 @@ sub_080C5A18:
 	ble	.L_c5a32
 	cmp	r0, #3
 	bgt	.L_c5a50
-	mov	r0, #36	@ 0x24
+	mov	r0, #36
 	ldrsh	r1, [r1, r0]
 	b	.L_c5a36
 .L_c5a32:
-	mov	r0, #38	@ 0x26
+	mov	r0, #38
 	ldrsh	r1, [r1, r0]
 .L_c5a36:
-	.2byte	0x1C08
+	add	r0, r1, #0
 	cmp	r1, #0
 	bge	.L_c5a3e
 	add	r0, #15
@@ -41,5 +41,5 @@ sub_080C5A18:
 .L_c5a52:
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080C5A18, .-sub_080C5A18

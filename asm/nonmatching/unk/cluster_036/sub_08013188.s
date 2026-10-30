@@ -9,9 +9,9 @@ sub_08013188:
 	mov	r7, r8
 	push	{r7}
 	sub	sp, #12
-	.2byte	0x1C05
-	.2byte	0x1C0C
-	.2byte	0x1C17
+	add	r5, r0, #0
+	add	r4, r1, #0
+	add	r7, r2, #0
 	mov	r8, r3
 	mov	r0, #6
 	ldrsh	r1, [r5, r0]

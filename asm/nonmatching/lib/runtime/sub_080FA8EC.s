@@ -7,7 +7,7 @@
 sub_080FA8EC:
 	push	{lr}
 	sub	sp, #16
-	.2byte	0x1C01
+	add	r1, r0, #0
 	mov	r0, #3
 	str	r0, [sp, #0]
 	lsr	r2, r1, #31
@@ -22,13 +22,12 @@ sub_080FA8EC:
 	str	r0, [sp, #8]
 	cmp	r2, #0
 	beq	.L_fa922
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	lsl	r0, r0, #24
 	cmp	r1, r0
 	bne	.L_fa91c
-	ldr	r0, [pc, #0]	@ (0x80fa918)
+	ldr	r0, .L_fa918	@ =0xCF000000
 	b	.L_fa942
-	.align	2, 0
 .L_fa918:
 	.4byte	0xCF000000
 .L_fa91c:
@@ -39,14 +38,14 @@ sub_080FA8EC:
 	str	r1, [sp, #12]
 .L_fa924:
 	ldr	r2, [sp, #12]
-	ldr	r3, [pc, #32]	@ (0x80fa948)
+	ldr	r3, .L_fa948	@ =0x3FFFFFFF
 	cmp	r2, r3
 	bhi	.L_fa93c
 	ldr	r1, [sp, #8]
 .L_fa92e:
 	lsl	r0, r2, #1
 	sub	r1, #1
-	.2byte	0x1C02
+	add	r2, r0, #0
 	cmp	r0, r3
 	bls	.L_fa92e
 	str	r1, [sp, #8]
@@ -57,7 +56,6 @@ sub_080FA8EC:
 .L_fa942:
 	add	sp, #16
 	pop	{pc}
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_fa948:
 	.4byte	0x3FFFFFFF

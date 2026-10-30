@@ -5,9 +5,18 @@
 .type sub_080125DC, %function
 .thumb_func
 sub_080125DC:
-	@ Exact original ROM bytes from 0x080125DC.
-	.byte	0x00, 0xB5, 0x00, 0x04, 0x00, 0x0C, 0x09, 0x06, 0x09, 0x0E, 0x00, 0xF0, 0x89, 0xF8, 0x00, 0x04
-	.byte	0x00, 0x0C, 0x00, 0xF0, 0x4B, 0xF8, 0x00, 0x04, 0x00, 0x14, 0x02, 0xBC
+	push	{lr}
+	lsl	r0, r0, #16
+	lsr	r0, r0, #16
+	lsl	r1, r1, #24
+	lsr	r1, r1, #24
+	bl	sub_080126FC
+	lsl	r0, r0, #16
+	lsr	r0, r0, #16
+	bl	sub_08012688
+	lsl	r0, r0, #16
+	asr	r0, r0, #16
+	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080125DC, .-sub_080125DC

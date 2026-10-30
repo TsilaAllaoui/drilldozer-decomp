@@ -5,6 +5,11 @@
 .type sub_0807FF30, %function
 .thumb_func
 sub_0807FF30:
-	@ Exact original ROM bytes from 0x0807FF30.
-	.byte	0x10, 0xB5, 0x0C, 0x1C, 0xFE, 0xF7, 0x7E, 0xFB, 0x04, 0x60, 0x10, 0xBC, 0x01, 0xBC, 0x00, 0x47
+	push	{r4, lr}
+	add	r4, r1, #0
+	bl	sub_0807E634
+	str	r4, [r0, #0]
+	pop	{r4}
+	pop	{r0}
+	bx	r0
 .size sub_0807FF30, .-sub_0807FF30

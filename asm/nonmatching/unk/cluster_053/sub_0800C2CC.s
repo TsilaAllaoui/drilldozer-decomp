@@ -11,17 +11,17 @@ sub_0800C2CC:
 	mov	r5, r8
 	push	{r5, r6, r7}
 	sub	sp, #4
-	.2byte	0x1C07
-	.2byte	0x1C0E
+	add	r7, r0, #0
+	add	r6, r1, #0
 	mov	r8, r2
-	.2byte	0x1C1D
+	add	r5, r3, #0
 	lsl	r0, r6, #16
 	lsr	r0, r0, #16
 	mov	r9, sp
-	.2byte	0x1C29
+	add	r1, r5, #0
 	mov	r2, sp
 	bl	sub_0800EBDC
-	ldr	r4, [pc, #60]	@ (0x800c32c)
+	ldr	r4, .L_c32c	@ =0x02034748
 	mov	r0, #0
 	mov	sl, r0
 	strb	r6, [r4, #8]
@@ -37,8 +37,8 @@ sub_0800C2CC:
 	strh	r0, [r4, #4]
 	ldrh	r0, [r5, #2]
 	strh	r0, [r4, #6]
-	.2byte	0x1C38
-	.2byte	0x1C31
+	add	r0, r7, #0
+	add	r1, r6, #0
 	bl	sub_08076264
 	strh	r0, [r4, #10]
 	mov	r0, sl
@@ -51,7 +51,6 @@ sub_0800C2CC:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_c32c:
-	.4byte	0x2034748
+	.4byte	0x02034748
 .size sub_0800C2CC, .-sub_0800C2CC

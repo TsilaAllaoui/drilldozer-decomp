@@ -7,21 +7,21 @@
 sub_080DB728:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C05
+	add	r5, r0, #0
 	mov	r0, #0
 	str	r0, [sp, #0]
 .L_db732:
 	mov	r0, sp
-	mov	r1, #247	@ 0xf7
+	mov	r1, #247
 	bl	sub_0801BC0C
-	.2byte	0x1C04
+	add	r4, r0, #0
 	cmp	r4, #0
 	beq	.L_db75c
-	.2byte	0x1C29
+	add	r1, r5, #0
 	bl	sub_080DB8FC
 	cmp	r0, #1
 	bne	.L_db758
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080DB910
 	cmp	r0, #1
 	bne	.L_db758
@@ -37,5 +37,5 @@ sub_080DB728:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080DB728, .-sub_080DB728

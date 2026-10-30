@@ -16,7 +16,7 @@ sub_080D3F88:
 	mov	r0, #0
 	mov	sl, r0
 	mov	r0, r9
-	add	r0, #78	@ 0x4e
+	add	r0, #78
 	mov	r1, #0
 	ldrsh	r7, [r0, r1]
 	add	r0, #4
@@ -24,9 +24,9 @@ sub_080D3F88:
 	ldrsh	r2, [r0, r1]
 	mov	r8, r2
 	mov	r2, ip
-	ldr	r5, [r2, #116]	@ 0x74
-	ldr	r6, [r2, #120]	@ 0x78
-	.2byte	0x1C34
+	ldr	r5, [r2, #116]
+	ldr	r6, [r2, #120]
+	add	r4, r6, #0
 	asr	r0, r4, #16
 	sub	r0, #3
 	ldrb	r1, [r2, #16]
@@ -34,21 +34,21 @@ sub_080D3F88:
 	lsl	r1, r1, #4
 	sub	r0, r0, r1
 	lsl	r0, r0, #16
-	ldr	r3, [pc, #96]	@ (0x80d4024)
-	.2byte	0x1C1A
+	ldr	r3, .L_d4024	@ =0x0000FFFF
+	add	r2, r3, #0
 	and	r2, r4
 	orr	r2, r0
-	.2byte	0x1C16
-	.2byte	0x1CF0
+	add	r6, r2, #0
+	add	r0, r6, #3
 	add	r0, r0, r1
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
-	ldr	r1, [pc, #80]	@ (0x80d4028)
-	.2byte	0x1C0C
+	ldr	r1, .L_d4028	@ =0xFFFF0000
+	add	r4, r1, #0
 	and	r4, r2
 	orr	r4, r0
-	.2byte	0x1C26
-	.2byte	0x1C28
+	add	r6, r4, #0
+	add	r0, r5, #0
 	add	r0, #19
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
@@ -59,10 +59,10 @@ sub_080D3F88:
 	lsl	r0, r0, #16
 	and	r3, r1
 	orr	r3, r0
-	.2byte	0x1C1D
+	add	r5, r3, #0
 	mov	r1, r9
-	ldr	r0, [r1, #60]	@ 0x3c
-	ldr	r1, [r1, #64]	@ 0x40
+	ldr	r0, [r1, #60]
+	ldr	r1, [r1, #64]
 	str	r0, [sp, #0]
 	str	r1, [sp, #4]
 	asr	r0, r0, #16
@@ -79,19 +79,17 @@ sub_080D3F88:
 	mov	r0, #1
 	mov	sl, r0
 	mov	r0, ip
-	add	r0, #90	@ 0x5a
+	add	r0, #90
 	mov	r1, sl
 	strb	r1, [r0, #0]
 	b	.L_d40de
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_d4024:
-	.4byte	0xFFFF
-	.align	2, 0
+	.4byte	0x0000FFFF
 .L_d4028:
 	.4byte	0xFFFF0000
 .L_d402c:
-	.2byte	0x9A01
+	ldr	r2, [sp, #4]
 	lsl	r1, r2, #16
 	lsl	r0, r6, #16
 	cmp	r1, r0
@@ -109,7 +107,7 @@ sub_080D3F88:
 .L_d404a:
 	mov	r2, #3
 	mov	r1, ip
-	add	r1, #90	@ 0x5a
+	add	r1, #90
 	mov	r0, #2
 	strb	r0, [r1, #0]
 	b	.L_d40de
@@ -132,7 +130,7 @@ sub_080D3F88:
 .L_d4074:
 	mov	r2, #2
 	mov	r1, ip
-	add	r1, #90	@ 0x5a
+	add	r1, #90
 	mov	r0, #4
 	strb	r0, [r1, #0]
 	b	.L_d40de
@@ -149,7 +147,7 @@ sub_080D3F88:
 .L_d4092:
 	mov	r3, #1
 	mov	r1, ip
-	add	r1, #90	@ 0x5a
+	add	r1, #90
 	mov	r0, #3
 	strb	r0, [r1, #0]
 	b	.L_d40de
@@ -157,7 +155,7 @@ sub_080D3F88:
 	mov	r3, #1
 	mov	r2, #0
 	mov	r0, ip
-	add	r0, #90	@ 0x5a
+	add	r0, #90
 	ldrb	r0, [r0, #0]
 	cmp	r0, #1
 	beq	.L_d40b6
@@ -193,7 +191,7 @@ sub_080D3F88:
 	mov	r3, #1
 .L_d40de:
 	mov	r0, ip
-	add	r0, #78	@ 0x4e
+	add	r0, #78
 	strb	r2, [r0, #0]
 	mov	r2, #0
 	ldrsb	r2, [r0, r2]
@@ -209,5 +207,5 @@ sub_080D3F88:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080D3F88, .-sub_080D3F88

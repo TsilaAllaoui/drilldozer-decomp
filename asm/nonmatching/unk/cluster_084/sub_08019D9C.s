@@ -6,8 +6,8 @@
 .thumb_func
 sub_08019D9C:
 	push	{r4, r5, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0D
+	add	r4, r0, #0
+	add	r5, r1, #0
 	lsl	r4, r4, #16
 	lsr	r4, r4, #16
 	lsl	r5, r5, #16
@@ -16,11 +16,11 @@ sub_08019D9C:
 	lsr	r2, r2, #24
 	lsl	r3, r3, #16
 	lsr	r3, r3, #16
-	.2byte	0x1C20
-	.2byte	0x1C29
+	add	r0, r4, #0
+	add	r1, r5, #0
 	bl	sub_08019A90
-	.2byte	0x1C20
-	.2byte	0x1C29
+	add	r0, r4, #0
+	add	r1, r5, #0
 	bl	sub_08019C9C
 	pop	{r4, r5}
 	pop	{r0}

@@ -9,7 +9,7 @@ sub_08003978:
 	sub	sp, #28
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
-	ldr	r2, [pc, #80]	@ (0x80039d4)
+	ldr	r2, .L_39d4	@ =0x020212A8
 	lsl	r1, r0, #1
 	add	r1, r1, r0
 	lsl	r1, r1, #2
@@ -21,7 +21,7 @@ sub_08003978:
 	ldrb	r0, [r0, #0]
 	mov	r1, #10
 	bl	sub_08001C20
-	.2byte	0x1C01
+	add	r1, r0, #0
 	add	r0, sp, #16
 	ldrh	r0, [r0, #6]
 	add	r1, r1, r0
@@ -49,7 +49,6 @@ sub_08003978:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_39d4:
-	.4byte	0x20212A8
+	.4byte	0x020212A8
 .size sub_08003978, .-sub_08003978

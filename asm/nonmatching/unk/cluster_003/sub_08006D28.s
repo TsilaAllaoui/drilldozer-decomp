@@ -13,7 +13,7 @@ sub_08006D28:
 	lsl	r2, r2, #16
 	asr	r2, r2, #16
 	bl	sub_080054D8
-	.2byte	0x1C04
+	add	r4, r0, #0
 	cmp	r4, #0
 	beq	.L_6d5c
 	mov	r1, #0
@@ -22,11 +22,11 @@ sub_08006D28:
 	ldr	r1, [sp, #12]
 	lsl	r1, r1, #16
 	lsr	r1, r1, #16
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08005580
 	ldr	r0, [sp, #8]
 	strb	r0, [r4, #5]
-	.2byte	0x1C20
+	add	r0, r4, #0
 	b	.L_6d5e
 .L_6d5c:
 	mov	r0, #0

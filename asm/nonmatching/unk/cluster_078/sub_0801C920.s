@@ -7,35 +7,35 @@
 sub_0801C920:
 	push	{r4, r5, r6, lr}
 	sub	sp, #16
-	.2byte	0x1C04
-	ldr	r0, [r4, #76]	@ 0x4c
+	add	r4, r0, #0
+	ldr	r0, [r4, #76]
 	str	r0, [sp, #0]
-	ldr	r0, [r4, #80]	@ 0x50
+	ldr	r0, [r4, #80]
 	str	r0, [sp, #4]
-	ldr	r0, [r4, #68]	@ 0x44
+	ldr	r0, [r4, #68]
 	str	r0, [sp, #8]
-	mov	r1, #62	@ 0x3e
+	mov	r1, #62
 	ldrsh	r0, [r4, r1]
 	lsl	r0, r0, #16
 	add	r5, sp, #8
 	str	r0, [r5, #4]
 	ldr	r0, [r4, #12]
-	.2byte	0x1C26
-	add	r6, #60	@ 0x3c
-	.2byte	0x1C31
-	.2byte	0x1C2A
+	add	r6, r4, #0
+	add	r6, #60
+	add	r1, r6, #0
+	add	r2, r5, #0
 	mov	r3, sp
 	bl	sub_080156E8
 	cmp	r0, #0
 	beq	.L_1c9a4
-	ldr	r0, [r4, #80]	@ 0x50
+	ldr	r0, [r4, #80]
 	str	r0, [sp, #4]
 	ldr	r0, [r4, #12]
-	.2byte	0x1C31
-	.2byte	0x1C2A
+	add	r1, r6, #0
+	add	r2, r5, #0
 	mov	r3, sp
 	bl	sub_08015694
-	.2byte	0x1C02
+	add	r2, r0, #0
 	cmp	r2, #0
 	beq	.L_1c990
 	ldr	r0, [sp, #8]
@@ -54,7 +54,7 @@ sub_0801C920:
 	asr	r1, r1, #16
 	lsl	r2, r2, #16
 	asr	r2, r2, #16
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0801C258
 	mov	r0, #1
 	b	.L_1c9ac
@@ -65,12 +65,12 @@ sub_0801C920:
 	asr	r1, r1, #16
 	asr	r0, r0, #16
 	sub	r1, r1, r0
-	str	r1, [r4, #76]	@ 0x4c
-	.2byte	0x1C20
-	add	r0, #68	@ 0x44
+	str	r1, [r4, #76]
+	add	r0, r4, #0
+	add	r0, #68
 	strh	r2, [r0, #0]
 .L_1c9a4:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0801C1C8
 	mov	r0, #0
 .L_1c9ac:

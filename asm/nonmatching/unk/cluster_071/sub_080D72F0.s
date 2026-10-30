@@ -6,20 +6,20 @@
 .thumb_func
 sub_080D72F0:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0D
+	add	r4, r0, #0
+	add	r5, r1, #0
 	ldrb	r0, [r5, #6]
 	cmp	r0, #0
 	bne	.L_d7340
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080561FC
-	.2byte	0x1C02
+	add	r2, r0, #0
 	cmp	r2, #0
 	bne	.L_d733c
-	.2byte	0x1C26
-	add	r6, #86	@ 0x56
-	.2byte	0x1C20
-	add	r0, #88	@ 0x58
+	add	r6, r4, #0
+	add	r6, #86
+	add	r0, r4, #0
+	add	r0, #88
 	mov	r3, #0
 	ldrsh	r1, [r6, r3]
 	mov	r3, #0
@@ -35,7 +35,7 @@ sub_080D72F0:
 	ble	.L_d7340
 	strb	r2, [r5, #9]
 	ldrb	r0, [r5, #5]
-	.2byte	0x1C4A
+	add	r2, r1, #1
 	bl	sub_0807DC90
 	ldrh	r0, [r6, #0]
 	add	r0, #1
@@ -48,5 +48,5 @@ sub_080D72F0:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080D72F0, .-sub_080D72F0

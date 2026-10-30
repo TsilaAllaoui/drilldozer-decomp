@@ -6,7 +6,7 @@
 .thumb_func
 sub_08001084:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	lsl	r4, r4, #16
 	lsr	r4, r4, #16
 	mov	r0, #4

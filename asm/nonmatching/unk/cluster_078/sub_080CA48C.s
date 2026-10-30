@@ -7,16 +7,16 @@
 sub_080CA48C:
 	push	{r4, r5, lr}
 	sub	sp, #8
-	.2byte	0x1C04
-	.2byte	0x1C25
-	add	r5, #124	@ 0x7c
+	add	r4, r0, #0
+	add	r5, r4, #0
+	add	r5, #124
 	ldr	r0, [r4, #12]
-	.2byte	0x1C21
-	add	r1, #180	@ 0xb4
+	add	r1, r4, #0
+	add	r1, #180
 	bl	sub_0800E014
-	mov	r0, #38	@ 0x26
+	mov	r0, #38
 	ldrsh	r1, [r4, r0]
-	mov	r2, #56	@ 0x38
+	mov	r2, #56
 	ldrsh	r0, [r5, r2]
 	add	r0, #24
 	cmp	r1, r0
@@ -24,25 +24,25 @@ sub_080CA48C:
 	mov	r0, #1
 	b	.L_ca4e4
 .L_ca4b2:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0801C624
 	cmp	r0, #1
 	bne	.L_ca4c6
-	mov	r0, #63	@ 0x3f
+	mov	r0, #63
 	bl	sub_08029E54
 	mov	r0, #1
 	b	.L_ca4e4
 .L_ca4c6:
 	ldrb	r1, [r5, #21]
-	mov	r0, #64	@ 0x40
+	mov	r0, #64
 	and	r0, r1
 	cmp	r0, #0
 	bne	.L_ca4e2
 	ldr	r0, [r4, #12]
 	mov	r1, sp
 	bl	sub_0802E57C
-	.2byte	0x1C20
-	add	r0, #44	@ 0x2c
+	add	r0, r4, #0
+	add	r0, #44
 	mov	r1, sp
 	bl	sub_08012D78
 .L_ca4e2:

@@ -12,9 +12,9 @@ sub_0802F114:
 	mov	r9, r1
 	mov	r8, r2
 	bl	sub_0801AE98
-	.2byte	0x1C05
+	add	r5, r0, #0
 	bl	sub_0801AEA4
-	.2byte	0x1C07
+	add	r7, r0, #0
 	mov	r6, #0
 	cmp	r6, r7
 	bge	.L_2f16a
@@ -27,15 +27,15 @@ sub_0802F114:
 	and	r0, r1
 	cmp	r0, #0
 	beq	.L_2f162
-	.2byte	0x1C2C
-	add	r4, #60	@ 0x3c
+	add	r4, r5, #0
+	add	r4, #60
 	mov	r0, r9
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_08012D78
 	cmp	r0, #1
 	beq	.L_2f16a
 	mov	r0, r8
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_08012D78
 	cmp	r0, #1
 	bne	.L_2f162
@@ -43,7 +43,7 @@ sub_0802F114:
 	b	.L_2f16c
 .L_2f162:
 	add	r6, #1
-	add	r5, #252	@ 0xfc
+	add	r5, #252
 	cmp	r6, r7
 	blt	.L_2f132
 .L_2f16a:

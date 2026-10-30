@@ -11,8 +11,8 @@ sub_0801B4B4:
 	mov	r5, r8
 	push	{r5, r6, r7}
 	sub	sp, #12
-	.2byte	0x1C05
-	.2byte	0x1C0C
+	add	r5, r0, #0
+	add	r4, r1, #0
 	lsl	r2, r2, #16
 	lsr	r2, r2, #16
 	mov	r8, r2
@@ -22,8 +22,8 @@ sub_0801B4B4:
 	ldr	r0, [r5, #12]
 	mov	r1, #8
 	bl	sub_080117FC
-	.2byte	0x1C28
-	add	r0, #104	@ 0x68
+	add	r0, r5, #0
+	add	r0, #104
 	ldrb	r1, [r0, #0]
 	cmp	r6, r1
 	bne	.L_1b4e6
@@ -31,25 +31,25 @@ sub_0801B4B4:
 	b	.L_1b5be
 .L_1b4e6:
 	strb	r6, [r0, #0]
-	.2byte	0x1C2E
-	add	r6, #86	@ 0x56
+	add	r6, r5, #0
+	add	r6, #86
 	ldrh	r2, [r6, #0]
 	mov	r9, r2
 	sub	r0, r2, r7
 	strh	r0, [r6, #0]
 	mov	r7, sp
 	add	r7, #10
-	.2byte	0x1C28
-	.2byte	0x1C21
+	add	r0, r5, #0
+	add	r1, r4, #0
 	add	r2, sp, #8
-	.2byte	0x1C3B
+	add	r3, r7, #0
 	bl	sub_0801BEE4
 	mov	r0, #4
 	mov	r1, r8
 	and	r0, r1
 	cmp	r0, #0
 	beq	.L_1b51a
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0801BF90
 	ldr	r0, [r5, #12]
 	bl	sub_0802AF60
@@ -71,19 +71,19 @@ sub_0801B4B4:
 	beq	.L_1b55e
 	add	r0, sp, #8
 	ldrh	r0, [r0, #0]
-	ldrh	r2, [r5, #36]	@ 0x24
+	ldrh	r2, [r5, #36]
 	add	r0, r0, r2
 	lsl	r0, r0, #16
 	asr	r0, r0, #16
 	ldrh	r1, [r7, #0]
-	ldrh	r2, [r5, #38]	@ 0x26
+	ldrh	r2, [r5, #38]
 	add	r1, r1, r2
 	lsl	r1, r1, #16
 	asr	r1, r1, #16
 	mov	r2, r9
 	ldrh	r3, [r6, #0]
-	.2byte	0x1C2C
-	add	r4, #88	@ 0x58
+	add	r4, r5, #0
+	add	r4, #88
 	ldrh	r4, [r4, #0]
 	str	r4, [sp, #0]
 	bl	sub_0801D848
@@ -94,14 +94,14 @@ sub_0801B4B4:
 	cmp	r0, #0
 	beq	.L_1b572
 	ldr	r0, [r5, #12]
-	.2byte	0x1C29
-	add	r1, #36	@ 0x24
+	add	r1, r5, #0
+	add	r1, #36
 	bl	sub_0801BF10
 .L_1b572:
 	ldr	r0, [r5, #12]
 	mov	r1, #16
 	bl	sub_080117FC
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0801BE08
 	mov	r0, #2
 	b	.L_1b5be
@@ -119,11 +119,11 @@ sub_0801B4B4:
 	mov	r3, r9
 	ldrh	r0, [r6, #0]
 	str	r0, [sp, #0]
-	.2byte	0x1C28
-	add	r0, #88	@ 0x58
+	add	r0, r5, #0
+	add	r0, #88
 	ldrh	r0, [r0, #0]
 	str	r0, [sp, #4]
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0801D804
 .L_1b5ac:
 	mov	r0, #2
@@ -144,5 +144,5 @@ sub_0801B4B4:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0801B4B4, .-sub_0801B4B4

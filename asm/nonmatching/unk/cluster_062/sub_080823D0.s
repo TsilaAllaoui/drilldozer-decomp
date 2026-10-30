@@ -6,12 +6,12 @@
 .thumb_func
 sub_080823D0:
 	push	{r4, r5, r6, r7, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0D
-	.2byte	0x1C2E
-	add	r6, #124	@ 0x7c
-	.2byte	0x1C2F
-	add	r7, #156	@ 0x9c
+	add	r4, r0, #0
+	add	r5, r1, #0
+	add	r6, r5, #0
+	add	r6, #124
+	add	r7, r5, #0
+	add	r7, #156
 	ldrb	r0, [r7, #0]
 	cmp	r0, #1
 	beq	.L_8241e
@@ -27,19 +27,19 @@ sub_080823D0:
 	beq	.L_82450
 	b	.L_8247c
 .L_823f8:
-	.2byte	0x1C28
-	.2byte	0x1C31
+	add	r0, r5, #0
+	add	r1, r6, #0
 	bl	sub_08082910
 	str	r0, [r6, #28]
 	ldr	r0, [r5, #12]
 	bl	sub_080304C8
-	mov	r4, #104	@ 0x68
+	mov	r4, #104
 	cmp	r0, #2
 	bne	.L_82410
-	mov	r4, #103	@ 0x67
+	mov	r4, #103
 .L_82410:
 	ldr	r0, [r5, #12]
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_0802140C
 	ldrb	r0, [r7, #0]
 	add	r0, #1
@@ -55,15 +55,15 @@ sub_080823D0:
 .L_8242e:
 	ldr	r0, [r5, #12]
 	bl	sub_080304C8
-	mov	r4, #106	@ 0x6a
+	mov	r4, #106
 	cmp	r0, #2
 	bne	.L_8243c
-	mov	r4, #105	@ 0x69
+	mov	r4, #105
 .L_8243c:
-	mov	r0, #236	@ 0xec
+	mov	r0, #236
 	bl	sub_08029E54
 	ldr	r0, [r5, #12]
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_0802140C
 	ldrb	r0, [r7, #0]
 	add	r0, #1
@@ -73,18 +73,18 @@ sub_080823D0:
 	bl	sub_080213D4
 	lsl	r0, r0, #24
 	lsr	r4, r0, #24
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08082538
 	cmp	r4, #1
 	bne	.L_824b6
 	cmp	r0, #1
 	bne	.L_824b6
-	.2byte	0x1C29
-	add	r1, #116	@ 0x74
+	add	r1, r5, #0
+	add	r1, #116
 	mov	r0, #0
 	strb	r0, [r1, #0]
 .L_82470:
-	.2byte	0x1C31
+	add	r1, r6, #0
 	add	r1, #32
 	ldrb	r0, [r1, #0]
 	add	r0, #1
@@ -94,14 +94,14 @@ sub_080823D0:
 	ldr	r2, [r6, #28]
 	cmp	r2, #0
 	beq	.L_8248e
-	add	r2, #125	@ 0x7d
+	add	r2, #125
 	ldrb	r1, [r2, #0]
 	mov	r0, #2
 	neg	r0, r0
 	and	r0, r1
 	strb	r0, [r2, #0]
 .L_8248e:
-	.2byte	0x1C31
+	add	r1, r6, #0
 	add	r1, #32
 	mov	r0, #0
 	strb	r0, [r1, #0]
@@ -109,14 +109,14 @@ sub_080823D0:
 	mov	r0, #1
 	strb	r0, [r1, #0]
 	ldr	r0, [r5, #12]
-	.2byte	0x1C32
-	add	r2, #34	@ 0x22
-	.2byte	0x1C29
+	add	r2, r6, #0
+	add	r2, #34
+	add	r1, r5, #0
 	bl	sub_08082B5C
 	ldr	r0, [r5, #12]
-	mov	r1, #89	@ 0x59
+	mov	r1, #89
 	bl	sub_0800B260
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0800090C
 .L_824b6:
 	pop	{r4, r5, r6, r7}

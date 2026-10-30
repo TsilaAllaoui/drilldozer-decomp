@@ -9,13 +9,13 @@ sub_080ECBBC:
 	mov	r7, r9
 	mov	r6, r8
 	push	{r6, r7}
-	.2byte	0x1C04
-	.2byte	0x1C0E
+	add	r4, r0, #0
+	add	r6, r1, #0
 	bl	sub_08019B88
 	lsl	r0, r0, #24
 	cmp	r0, #0
 	beq	.L_ecbd6
-	mov	r0, #255	@ 0xff
+	mov	r0, #255
 	strb	r0, [r6, #0]
 .L_ecbd6:
 	ldrb	r0, [r6, #0]
@@ -24,30 +24,30 @@ sub_080ECBBC:
 	cmp	r0, #1
 	beq	.L_ecc58
 	mov	r7, #0
-	mov	r0, #124	@ 0x7c
+	mov	r0, #124
 	add	r0, r0, r6
 	mov	r9, r0
 	b	.L_eccdc
 .L_ecbea:
-	.2byte	0x1C30
+	add	r0, r6, #0
 	bl	sub_080EC97C
 	cmp	r0, #0
 	bne	.L_ecbfa
-	mov	r0, #255	@ 0xff
+	mov	r0, #255
 	strb	r0, [r6, #0]
 	b	.L_eccf8
 .L_ecbfa:
-	.2byte	0x1C31
-	add	r1, #192	@ 0xc0
+	add	r1, r6, #0
+	add	r1, #192
 	mov	r0, #1
 	strh	r0, [r1, #0]
 	mov	r7, #0
-	mov	r2, #124	@ 0x7c
+	mov	r2, #124
 	add	r2, r2, r6
 	mov	r9, r2
-	.2byte	0x1C0D
+	add	r5, r1, #0
 	mov	r8, r9
-	.2byte	0x1C34
+	add	r4, r6, #0
 	add	r4, #10
 .L_ecc12:
 	lsl	r0, r7, #5
@@ -98,15 +98,15 @@ sub_080ECBBC:
 	strb	r0, [r6, #0]
 	b	.L_eccf8
 .L_ecc6e:
-	.2byte	0x1C31
-	add	r1, #192	@ 0xc0
+	add	r1, r6, #0
+	add	r1, #192
 	ldrh	r0, [r1, #0]
 	add	r0, #2
 	strh	r0, [r1, #0]
 	mov	r8, r1
-	.2byte	0x1C35
-	add	r5, #124	@ 0x7c
-	.2byte	0x1C34
+	add	r5, r6, #0
+	add	r5, #124
+	add	r4, r6, #0
 	add	r4, #10
 	mov	r7, #7
 .L_ecc84:
@@ -115,10 +115,10 @@ sub_080ECBBC:
 	strh	r0, [r4, #0]
 	mov	r0, #0
 	ldrsh	r1, [r4, r0]
-	.2byte	0x1C08
+	add	r0, r1, #0
 	cmp	r1, #0
 	bge	.L_ecc96
-	add	r0, #255	@ 0xff
+	add	r0, #255
 .L_ecc96:
 	asr	r0, r0, #8
 	lsl	r0, r0, #8
@@ -140,7 +140,7 @@ sub_080ECBBC:
 	cmp	r0, #19
 	bls	.L_eccca
 	ldr	r0, [r5, #0]
-	ldr	r1, [pc, #20]	@ (0x80eccd8)
+	ldr	r1, .L_eccd8	@ =0x084CDA4C
 	ldr	r1, [r1, #16]
 	bl	sub_08005814
 .L_eccca:
@@ -150,10 +150,9 @@ sub_080ECBBC:
 	cmp	r7, #0
 	bge	.L_ecc84
 	b	.L_eccf8
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_eccd8:
-	.4byte	0x84CDA4C
+	.4byte	0x084CDA4C
 .L_eccdc:
 	lsl	r0, r7, #2
 	add	r0, r9
@@ -162,9 +161,9 @@ sub_080ECBBC:
 	add	r7, #1
 	cmp	r7, #15
 	ble	.L_eccdc
-	.2byte	0x1C30
+	add	r0, r6, #0
 	bl	sub_08001768
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0800090C
 .L_eccf8:
 	pop	{r3, r4}

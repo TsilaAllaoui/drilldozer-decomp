@@ -5,6 +5,11 @@
 .type sub_0804AEB4, %function
 .thumb_func
 sub_0804AEB4:
-	@ Exact original ROM bytes from 0x0804AEB4.
-	.byte	0x00, 0xB5, 0x0A, 0x04, 0x12, 0x0C, 0xFF, 0x21, 0xFF, 0xF7, 0xBA, 0xFF, 0x02, 0xBC, 0x08, 0x47
+	push	{lr}
+	lsl	r2, r1, #16
+	lsr	r2, r2, #16
+	mov	r1, #255
+	bl	sub_0804AE34
+	pop	{r1}
+	bx	r1
 .size sub_0804AEB4, .-sub_0804AEB4

@@ -118,8 +118,8 @@ sub_080138A0:
 	lsl	r0, r2, #16
 	asr	r0, r0, #16
 	str	r0, [sp, #28]
-	.2byte	0x1C20
-	.2byte	0x1C29
+	add	r0, r4, #0
+	add	r1, r5, #0
 	ldr	r2, [sp, #28]
 	str	r3, [sp, #24]
 	ldr	r7, [sp, #0]
@@ -127,10 +127,10 @@ sub_080138A0:
 	ldr	r3, [sp, #24]
 	cmp	r0, #1
 	bne	.L_139a4
-	.2byte	0x1E69
+	sub	r1, r5, #1
 	lsl	r1, r1, #16
 	asr	r1, r1, #16
-	.2byte	0x1C20
+	add	r0, r4, #0
 	ldr	r2, [sp, #28]
 	bl	sub_080F8FD0
 	ldr	r3, [sp, #24]
@@ -184,8 +184,8 @@ sub_080138A0:
 	lsl	r0, r2, #16
 	asr	r0, r0, #16
 	str	r0, [sp, #28]
-	.2byte	0x1C28
-	.2byte	0x1C21
+	add	r0, r5, #0
+	add	r1, r4, #0
 	ldr	r2, [sp, #28]
 	str	r3, [sp, #24]
 	ldr	r7, [sp, #0]
@@ -193,10 +193,10 @@ sub_080138A0:
 	ldr	r3, [sp, #24]
 	cmp	r0, #1
 	bne	.L_13a36
-	.2byte	0x1E61
+	sub	r1, r4, #1
 	lsl	r1, r1, #16
 	asr	r1, r1, #16
-	.2byte	0x1C28
+	add	r0, r5, #0
 	ldr	r2, [sp, #28]
 	bl	sub_080F8FD0
 	ldr	r3, [sp, #24]
@@ -235,5 +235,5 @@ sub_080138A0:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080138A0, .-sub_080138A0

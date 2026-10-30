@@ -6,7 +6,7 @@
 .thumb_func
 sub_080EB2E4:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldr	r0, [r4, #20]
 	cmp	r0, r1
 	beq	.L_eb2fa

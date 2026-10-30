@@ -6,10 +6,10 @@
 .thumb_func
 sub_080E6514:
 	push	{r4, r5, lr}
-	add	r0, #120	@ 0x78
+	add	r0, #120
 	strb	r2, [r0, #0]
 	mov	r5, #0
-	.2byte	0x1C0C
+	add	r4, r1, #0
 .L_e651e:
 	cmp	r5, #2
 	beq	.L_e652c
@@ -25,5 +25,5 @@ sub_080E6514:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080E6514, .-sub_080E6514

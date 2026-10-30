@@ -6,38 +6,35 @@
 .thumb_func
 sub_080F2674:
 	push	{r4, r5, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	bl	sub_080F26BC
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080F26D4
-	ldr	r1, [pc, #44]	@ (0x80f26b0)
+	ldr	r1, .L_f26b0	@ =0x0000046C
 	add	r0, r4, r1
 	ldr	r0, [r0, #0]
-	mov	r2, #142	@ 0x8e
+	mov	r2, #142
 	lsl	r2, r2, #3
 	add	r1, r4, r2
 	ldr	r1, [r1, #0]
-	ldr	r3, [pc, #32]	@ (0x80f26b4)
+	ldr	r3, .L_f26b4	@ =0x00000404
 	add	r2, r4, r3
 	ldr	r2, [r2, #0]
-	ldr	r5, [pc, #32]	@ (0x80f26b8)
+	ldr	r5, .L_f26b8	@ =0x0000045C
 	add	r3, r4, r5
 	mov	r5, #2
 	ldrsh	r3, [r3, r5]
 	bl	sub_080F297C
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08018D30
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_f26b0:
-	.4byte	0x46C
-	.align	2, 0
+	.4byte	0x0000046C
 .L_f26b4:
-	.4byte	0x404
-	.align	2, 0
+	.4byte	0x00000404
 .L_f26b8:
-	.4byte	0x45C
+	.4byte	0x0000045C
 .size sub_080F2674, .-sub_080F2674

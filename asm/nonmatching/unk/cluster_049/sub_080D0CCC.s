@@ -7,24 +7,24 @@
 sub_080D0CCC:
 	push	{r4, r5, lr}
 	sub	sp, #8
-	.2byte	0x1C04
+	add	r4, r0, #0
 	mov	r5, #1
-	ldr	r0, [pc, #64]	@ (0x80d0d18)
+	ldr	r0, .L_d0d18	@ =0x00050101
 	str	r0, [sp, #4]
-	ldr	r0, [pc, #64]	@ (0x80d0d1c)
+	ldr	r0, .L_d0d1c	@ =0x0846E27C
 	str	r0, [sp, #0]
 	add	r0, sp, #4
 	mov	r1, #0
 	mov	r2, #0
-	mov	r3, #180	@ 0xb4
+	mov	r3, #180
 	bl	sub_08006DA8
 	str	r0, [r4, #8]
-	ldr	r1, [pc, #52]	@ (0x80d0d20)
+	ldr	r1, .L_d0d20	@ =0x084712DC
 	bl	sub_08005814
 	mov	r0, #24
 	bl	sub_080128C8
 	ldr	r2, [r4, #8]
-	add	r2, #37	@ 0x25
+	add	r2, #37
 	lsl	r0, r0, #4
 	ldrb	r3, [r2, #0]
 	mov	r1, #15
@@ -39,14 +39,11 @@ sub_080D0CCC:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_d0d18:
-	.4byte	0x50101
-	.align	2, 0
+	.4byte	0x00050101
 .L_d0d1c:
-	.4byte	0x846E27C
-	.align	2, 0
+	.4byte	0x0846E27C
 .L_d0d20:
-	.4byte	0x84712DC
+	.4byte	0x084712DC
 .size sub_080D0CCC, .-sub_080D0CCC

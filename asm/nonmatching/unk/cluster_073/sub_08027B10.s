@@ -7,11 +7,11 @@
 sub_08027B10:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C04
-	ldrh	r1, [r4, #38]	@ 0x26
+	add	r4, r0, #0
+	ldrh	r1, [r4, #38]
 	sub	r1, #16
 	lsl	r1, r1, #16
-	ldrh	r0, [r4, #36]	@ 0x24
+	ldrh	r0, [r4, #36]
 	orr	r0, r1
 	str	r0, [sp, #0]
 	ldr	r0, [r4, #12]
@@ -19,13 +19,13 @@ sub_08027B10:
 	mov	r1, sp
 	mov	r2, #1
 	bl	sub_0800FA88
-	ldrh	r0, [r4, #38]	@ 0x26
+	ldrh	r0, [r4, #38]
 	strh	r0, [r5, #2]
 	ldr	r0, [r4, #12]
 	mov	r1, sp
 	mov	r2, #1
 	bl	sub_0800FA88
-	ldrh	r0, [r4, #38]	@ 0x26
+	ldrh	r0, [r4, #38]
 	add	r0, #16
 	strh	r0, [r5, #2]
 	ldr	r0, [r4, #12]

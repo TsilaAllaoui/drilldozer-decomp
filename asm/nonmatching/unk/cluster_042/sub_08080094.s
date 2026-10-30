@@ -7,7 +7,7 @@
 sub_08080094:
 	push	{r4, r5, lr}
 	sub	sp, #8
-	.2byte	0x1C0C
+	add	r4, r1, #0
 	add	r1, sp, #4
 	bl	sub_08011834
 	cmp	r4, #2
@@ -31,21 +31,19 @@ sub_08080094:
 	sub	r0, #2
 	mov	r3, #0
 	strh	r0, [r2, #2]
-	ldr	r0, [pc, #24]	@ (0x80800e0)
-	.2byte	0x1C11
+	ldr	r0, .L_800e0	@ =0x0838E1C4
+	add	r1, r2, #0
 	mov	r5, #0
 	ldrsh	r1, [r1, r5]
 	mov	r5, #2
 	ldrsh	r2, [r2, r5]
 	str	r3, [sp, #0]
-	.2byte	0x1C23
-.L_800d4:
+	add	r3, r4, #0
 	bl	sub_0807E46C
 	add	sp, #8
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_800e0:
-	.4byte	0x838E1C4
+	.4byte	0x0838E1C4
 .size sub_08080094, .-sub_08080094

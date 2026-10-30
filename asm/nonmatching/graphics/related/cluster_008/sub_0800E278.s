@@ -6,8 +6,8 @@
 .thumb_func
 sub_0800E278:
 	push	{lr}
-	.2byte	0x1C0B
-	ldr	r2, [pc, #20]	@ (0x800e294)
+	add	r3, r1, #0
+	ldr	r2, .L_e294	@ =0x02034740
 	ldrb	r0, [r2, #0]
 	cmp	r0, #1
 	bne	.L_e298
@@ -15,19 +15,18 @@ sub_0800E278:
 	ldrsh	r1, [r2, r0]
 	mov	r0, #4
 	ldrsh	r2, [r2, r0]
-	.2byte	0x1C18
+	add	r0, r3, #0
 	bl	sub_08012BAC
 	b	.L_e2a2
-	.align	2, 0
 .L_e294:
-	.4byte	0x2034740
+	.4byte	0x02034740
 .L_e298:
-	.2byte	0x1C18
+	add	r0, r3, #0
 	mov	r1, #0
 	mov	r2, #0
 	bl	sub_08012BAC
 .L_e2a2:
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0800E278, .-sub_0800E278

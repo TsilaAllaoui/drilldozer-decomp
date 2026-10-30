@@ -5,16 +5,16 @@
 .type sub_080BECB0, %function
 .thumb_func
 sub_080BECB0:
-	.2byte	0xB510
-	.2byte	0x1C04
+	push	{r4, lr}
+	add	r4, r0, #0
 	sub	r1, r1, r2
-	.2byte	0x1C08
+	add	r0, r1, #0
 	mul	r0, r1
-	.2byte	0x1C01
+	add	r1, r0, #0
 	cmp	r1, r3
 	ble	.L_becc4
-	.2byte	0x1C19
-	.2byte	0x1C03
+	add	r1, r3, #0
+	add	r3, r0, #0
 .L_becc4:
 	ldr	r0, [sp, #8]
 	cmp	r0, #0
@@ -37,5 +37,5 @@ sub_080BECB0:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080BECB0, .-sub_080BECB0

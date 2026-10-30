@@ -8,13 +8,13 @@ sub_08000D7C:
 	push	{r4, r5, r6, r7, lr}
 	mov	r7, r8
 	push	{r7}
-	sub	sp, #36	@ 0x24
+	sub	sp, #36
 	mov	ip, r1
 	mov	r8, r2
-	ldr	r1, [sp, #60]	@ 0x3c
-	ldr	r2, [sp, #64]	@ 0x40
-	ldr	r4, [sp, #68]	@ 0x44
-	ldr	r5, [sp, #72]	@ 0x48
+	ldr	r1, [sp, #60]
+	ldr	r2, [sp, #64]
+	ldr	r4, [sp, #68]
+	ldr	r5, [sp, #72]
 	lsl	r0, r0, #24
 	lsr	r6, r0, #24
 	lsl	r3, r3, #16
@@ -27,41 +27,34 @@ sub_08000D7C:
 	lsr	r4, r4, #16
 	lsl	r5, r5, #16
 	lsr	r5, r5, #16
-	ldr	r0, [pc, #20]	@ (0x8000dc0)
+	ldr	r0, .L_dc0	@ =0x03000010
 	ldrh	r0, [r0, #16]
 	mov	r1, #7
 	and	r1, r0
 	cmp	r1, #5
 	bhi	.L_e56
 	lsl	r0, r1, #2
-	ldr	r1, [pc, #12]	@ (0x8000dc4)
+	ldr	r1, .L_dc4	@ =0x08000DC8
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]
 	mov	pc, r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_dc0:
-	.4byte	0x3000010
-	.align	2, 0
+	.4byte	0x03000010
 .L_dc4:
-	.4byte	.L_dc8
-.L_dc8:
-	lsr	r6, r2, #25
-	lsr	r0, r0, #32
-	lsr	r0, r4, #23
-	lsr	r0, r0, #32
-	lsr	r6, r4, #23
-	lsr	r0, r0, #32
-	lsr	r0, r4, #23
-	lsr	r0, r0, #32
-	lsr	r6, r4, #23
-	lsr	r0, r0, #32
-	lsr	r6, r4, #23
-	lsr	r0, r0, #32
+	.4byte	0x08000DC8
+	.4byte	0x08000E56	@ case .L_e56
+	.4byte	0x08000DE0	@ case .L_de0
+	.4byte	0x08000DE6	@ case .L_de6
+	.4byte	0x08000DE0	@ case .L_de0
+	.4byte	0x08000DE6	@ case .L_de6
+	.4byte	0x08000DE6	@ case .L_de6
+.L_de0:
 	cmp	r6, #2
 	bne	.L_e56
 	b	.L_df0
-	.2byte	0x1EB0
+.L_de6:
+	sub	r0, r6, #2
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
 	cmp	r0, #1
@@ -78,42 +71,42 @@ sub_08000D7C:
 	strh	r4, [r0, #14]
 	strh	r5, [r0, #16]
 	add	r4, sp, #20
-	.2byte	0x1C21
+	add	r1, r4, #0
 	mov	r2, #1
 	bl	sub_080F86F4
 	ldrh	r1, [r4, #0]
 	mov	r0, #32
 	bl	sub_08000F28
 	ldrh	r1, [r4, #2]
-	mov	r0, #34	@ 0x22
+	mov	r0, #34
 	bl	sub_08000F28
 	ldrh	r1, [r4, #4]
-	mov	r0, #36	@ 0x24
+	mov	r0, #36
 	bl	sub_08000F28
 	ldrh	r1, [r4, #6]
-	mov	r0, #38	@ 0x26
+	mov	r0, #38
 	bl	sub_08000F28
 	ldrh	r1, [r4, #0]
 	mov	r0, #32
 	bl	sub_08000F28
 	ldrh	r1, [r4, #8]
-	mov	r0, #40	@ 0x28
+	mov	r0, #40
 	bl	sub_08000F28
 	ldrh	r1, [r4, #10]
-	mov	r0, #42	@ 0x2a
+	mov	r0, #42
 	bl	sub_08000F28
 	ldrh	r1, [r4, #12]
-	mov	r0, #44	@ 0x2c
+	mov	r0, #44
 	bl	sub_08000F28
 	ldrh	r1, [r4, #14]
-	mov	r0, #46	@ 0x2e
+	mov	r0, #46
 	bl	sub_08000F28
 .L_e56:
-	add	sp, #36	@ 0x24
+	add	sp, #36
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08000D7C, .-sub_08000D7C

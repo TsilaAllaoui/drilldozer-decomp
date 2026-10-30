@@ -11,17 +11,17 @@ sub_080397E8:
 	push	{r6, r7}
 	sub	sp, #20
 	mov	r9, r0
-	.2byte	0x1C0E
-	.2byte	0x1C30
+	add	r6, r1, #0
+	add	r0, r6, #0
 	bl	sub_0800C1F4
 	mov	r8, r0
 	add	r7, sp, #4
-	.2byte	0x1C30
-	.2byte	0x1C39
+	add	r0, r6, #0
+	add	r1, r7, #0
 	bl	sub_0800FCD8
 	add	r5, sp, #12
-	.2byte	0x1C30
-	.2byte	0x1C29
+	add	r0, r6, #0
+	add	r1, r5, #0
 	bl	sub_0800E014
 	mov	r1, r9
 	ldrb	r0, [r1, #12]
@@ -37,9 +37,9 @@ sub_080397E8:
 .L_39826:
 	mov	r4, sp
 	add	r4, #2
-	.2byte	0x1C30
+	add	r0, r6, #0
 	mov	r1, sp
-	.2byte	0x1C22
+	add	r2, r4, #0
 	bl	sub_0801174C
 	mov	r7, #7
 	mov	r2, #2
@@ -59,16 +59,16 @@ sub_080397E8:
 	mov	r4, r8
 	cmp	r4, #1
 	bne	.L_39874
-	.2byte	0x1C30
+	add	r0, r6, #0
 	bl	sub_080304C8
 	cmp	r7, #7
 	bne	.L_3986a
-	.2byte	0x1C30
+	add	r0, r6, #0
 	mov	r1, #1
 	bl	sub_08075C60
 	b	.L_39886
 .L_3986a:
-	.2byte	0x1C30
+	add	r0, r6, #0
 	mov	r1, #0
 	bl	sub_08075C60
 	b	.L_39886
@@ -76,8 +76,8 @@ sub_080397E8:
 	mov	r0, r8
 	cmp	r0, #2
 	bne	.L_39886
-	mov	r7, #146	@ 0x92
-	.2byte	0x1C30
+	mov	r7, #146
+	add	r0, r6, #0
 	mov	r1, #0
 	mov	r2, #0
 	bl	sub_08021488
@@ -85,8 +85,8 @@ sub_080397E8:
 	mov	r1, r8
 	cmp	r1, #1
 	beq	.L_39894
-	.2byte	0x1C30
-	.2byte	0x1C39
+	add	r0, r6, #0
+	add	r1, r7, #0
 	bl	sub_0802140C
 .L_39894:
 	mov	r0, #6
@@ -99,22 +99,22 @@ sub_080397E8:
 .L_398a2:
 	mov	r4, sp
 	add	r4, #2
-	.2byte	0x1C30
+	add	r0, r6, #0
 	mov	r1, sp
-	.2byte	0x1C22
+	add	r2, r4, #0
 	bl	sub_0801174C
 	mov	r0, #0
 	ldrsh	r3, [r4, r0]
 	mov	r1, #0
 	ldrsh	r4, [r5, r1]
-	.2byte	0x1C20
-	sub	r0, #48	@ 0x30
+	add	r0, r4, #0
+	sub	r0, #48
 	cmp	r3, r0
 	blt	.L_398cc
 	mov	r2, #2
 	ldrsh	r1, [r5, r2]
-	.2byte	0x1C08
-	add	r0, #48	@ 0x30
+	add	r0, r1, #0
+	add	r0, #48
 	cmp	r3, r0
 	ble	.L_398d6
 .L_398cc:
@@ -151,7 +151,7 @@ sub_080397E8:
 	mov	r2, #2
 	neg	r2, r2
 .L_39906:
-	.2byte	0x1C30
+	add	r0, r6, #0
 	mov	r1, #0
 	bl	sub_0803044C
 	mov	r1, r9
@@ -172,7 +172,7 @@ sub_080397E8:
 	mov	r0, r8
 	cmp	r0, #2
 	bne	.L_39958
-	.2byte	0x1C30
+	add	r0, r6, #0
 	mov	r1, #0
 	mov	r2, #0
 	bl	sub_08021488
@@ -181,12 +181,12 @@ sub_080397E8:
 	mov	r1, r8
 	cmp	r1, #2
 	bne	.L_3994c
-	.2byte	0x1C30
+	add	r0, r6, #0
 	mov	r1, #3
 	mov	r2, #2
 	bl	sub_08021488
 .L_3994c:
-	.2byte	0x1C30
+	add	r0, r6, #0
 	mov	r1, #1
 	bl	sub_080118BC
 	mov	r0, #1

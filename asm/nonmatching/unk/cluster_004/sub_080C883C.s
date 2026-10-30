@@ -11,11 +11,11 @@ sub_080C883C:
 	mov	r5, r8
 	push	{r5, r6, r7}
 	sub	sp, #4
-	.2byte	0x1C05
+	add	r5, r0, #0
 	mov	r0, #0
 	mov	sl, r0
 	mov	r9, r0
-	.2byte	0x1C0C
+	add	r4, r1, #0
 	ldr	r0, [r4, #0]
 	bl	sub_08011720
 	str	r0, [sp, #0]
@@ -27,9 +27,9 @@ sub_080C883C:
 	mov	r1, #0
 	mov	r2, #0
 	bl	sub_0803047C
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08001768
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0800090C
 	b	.L_c89c8
 .L_c887c:
@@ -37,7 +37,7 @@ sub_080C883C:
 	cmp	r0, #0
 	beq	.L_c895a
 	mov	r6, #0
-	.2byte	0x1C05
+	add	r5, r0, #0
 	cmp	r6, r5
 	bge	.L_c88e4
 .L_c888a:
@@ -46,8 +46,8 @@ sub_080C883C:
 	lsl	r0, r6, #2
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]
-	.2byte	0x1C02
-	add	r2, #124	@ 0x7c
+	add	r2, r0, #0
+	add	r2, #124
 	mov	r1, #14
 	ldrsh	r0, [r2, r1]
 	cmp	r0, #0
@@ -55,7 +55,7 @@ sub_080C883C:
 	neg	r0, r0
 .L_c88a2:
 	lsl	r0, r0, #12
-	mov	r3, #128	@ 0x80
+	mov	r3, #128
 	lsl	r3, r3, #5
 	add	r1, r0, r3
 	mov	r5, #18
@@ -98,8 +98,8 @@ sub_080C883C:
 	ldr	r0, [r4, #4]
 	ldr	r1, [r0, #24]
 	ldr	r0, [r1, #0]
-	.2byte	0x1C02
-	add	r2, #124	@ 0x7c
+	add	r2, r0, #0
+	add	r2, #124
 	ldr	r0, [r2, #12]
 	mov	ip, r0
 	ldr	r2, [r2, #16]
@@ -107,24 +107,24 @@ sub_080C883C:
 	mov	r6, #0
 	cmp	r6, r5
 	bge	.L_c89a6
-	.2byte	0x1C0F
+	add	r7, r1, #0
 .L_c88fe:
 	mov	r2, sl
 	lsl	r0, r2, #2
 	add	r0, r0, r7
 	ldr	r0, [r0, #0]
-	.2byte	0x1C02
-	add	r2, #124	@ 0x7c
+	add	r2, r0, #0
+	add	r2, #124
 	ldr	r0, [r1, #0]
-	.2byte	0x1C04
-	add	r4, #124	@ 0x7c
+	add	r4, r0, #0
+	add	r4, #124
 	ldr	r0, [r2, #12]
 	cmp	r0, #0
 	bge	.L_c8918
 	neg	r0, r0
 .L_c8918:
 	ldr	r2, [r4, #12]
-	.2byte	0x1C13
+	add	r3, r2, #0
 	cmp	r2, #0
 	bge	.L_c8922
 	neg	r3, r2
@@ -138,15 +138,15 @@ sub_080C883C:
 	lsl	r0, r3, #2
 	add	r0, r0, r7
 	ldr	r0, [r0, #0]
-	.2byte	0x1C02
-	add	r2, #124	@ 0x7c
+	add	r2, r0, #0
+	add	r2, #124
 	ldr	r2, [r2, #16]
 	cmp	r2, #0
 	bge	.L_c893e
 	neg	r2, r2
 .L_c893e:
 	ldr	r0, [r4, #16]
-	.2byte	0x1C03
+	add	r3, r0, #0
 	cmp	r0, #0
 	bge	.L_c8948
 	neg	r3, r0
@@ -169,7 +169,7 @@ sub_080C883C:
 	neg	r0, r0
 .L_c8964:
 	lsl	r0, r0, #12
-	mov	r2, #128	@ 0x80
+	mov	r2, #128
 	lsl	r2, r2, #5
 	add	r1, r0, r2
 	mov	r3, #14
@@ -213,7 +213,7 @@ sub_080C883C:
 	cmp	r0, #0
 	beq	.L_c89b8
 	ldr	r1, [sp, #0]
-	mov	r2, #176	@ 0xb0
+	mov	r2, #176
 	lsl	r2, r2, #1
 	add	r0, r1, r2
 	mov	r3, ip
@@ -223,7 +223,7 @@ sub_080C883C:
 	cmp	r5, #0
 	beq	.L_c89c8
 	ldr	r1, [sp, #0]
-	mov	r2, #178	@ 0xb2
+	mov	r2, #178
 	lsl	r2, r2, #1
 	add	r0, r1, r2
 	str	r5, [r0, #0]

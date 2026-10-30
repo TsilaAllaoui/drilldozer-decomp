@@ -22,7 +22,7 @@ sub_08013A94:
 	blt	.L_13ab4
 	mov	r4, #1
 .L_13ab4:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	pop	{r4}
 	pop	{r1}
 	bx	r1

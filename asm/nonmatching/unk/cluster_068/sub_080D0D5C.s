@@ -6,8 +6,8 @@
 .thumb_func
 sub_080D0D5C:
 	push	{lr}
-	.2byte	0x1C03
-	.2byte	0x1C10
+	add	r3, r0, #0
+	add	r0, r2, #0
 	mov	r2, #0
 	cmp	r1, #1
 	beq	.L_d0d80
@@ -23,7 +23,7 @@ sub_080D0D5C:
 	beq	.L_d0d88
 	b	.L_d0d8a
 .L_d0d7c:
-	.2byte	0x1C02
+	add	r2, r0, #0
 	b	.L_d0d8a
 .L_d0d80:
 	mov	r2, #10
@@ -32,7 +32,7 @@ sub_080D0D5C:
 	mov	r2, #11
 	b	.L_d0d8a
 .L_d0d88:
-	mov	r2, #255	@ 0xff
+	mov	r2, #255
 .L_d0d8a:
 	ldrb	r0, [r3, #21]
 	cmp	r0, r2
@@ -45,5 +45,5 @@ sub_080D0D5C:
 .L_d0d9a:
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080D0D5C, .-sub_080D0D5C

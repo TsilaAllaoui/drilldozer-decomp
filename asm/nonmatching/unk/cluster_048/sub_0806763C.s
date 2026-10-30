@@ -7,9 +7,9 @@
 sub_0806763C:
 	push	{r4, r5, r6, lr}
 	sub	sp, #4
-	.2byte	0x1C06
-	.2byte	0x1C0C
-	ldr	r5, [pc, #48]	@ (0x8067678)
+	add	r6, r0, #0
+	add	r4, r1, #0
+	ldr	r5, .L_67678	@ =0x02036058
 	ldr	r0, [r5, #0]
 	cmp	r0, #0
 	beq	.L_6765c
@@ -31,9 +31,8 @@ sub_0806763C:
 	mov	r0, sp
 	bl	sub_0801E018
 	b	.L_676b8
-	.align	2, 0
 .L_67678:
-	.4byte	0x2036058
+	.4byte	0x02036058
 .L_6767c:
 	mov	r0, #20
 	bl	sub_08001728
@@ -43,7 +42,7 @@ sub_0806763C:
 	cmp	r4, #0
 	bne	.L_676aa
 	ldr	r1, [r5, #0]
-	ldr	r0, [pc, #48]	@ (0x80676c0)
+	ldr	r0, .L_676c0	@ =0x0000FFE8
 	strh	r0, [r1, #14]
 	mov	r0, sp
 	strh	r4, [r0, #0]
@@ -55,9 +54,9 @@ sub_0806763C:
 	mov	r0, sp
 	bl	sub_0801E018
 .L_676aa:
-	ldr	r0, [pc, #24]	@ (0x80676c4)
+	ldr	r0, .L_676c4	@ =0x080676CD
 	ldr	r1, [r5, #0]
-	ldr	r2, [pc, #24]	@ (0x80676c8)
+	ldr	r2, .L_676c8	@ =0x00005806
 	bl	sub_0800089C
 	ldr	r1, [r5, #0]
 	str	r0, [r1, #4]
@@ -66,13 +65,10 @@ sub_0806763C:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_676c0:
-	.4byte	0xFFE8
-	.align	2, 0
+	.4byte	0x0000FFE8
 .L_676c4:
-	.4byte	0x80676CD
-	.align	2, 0
+	.4byte	0x080676CD
 .L_676c8:
-	.4byte	0x5806
+	.4byte	0x00005806
 .size sub_0806763C, .-sub_0806763C

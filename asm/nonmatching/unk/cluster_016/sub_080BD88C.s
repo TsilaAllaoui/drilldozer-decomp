@@ -6,11 +6,11 @@
 .thumb_func
 sub_080BD88C:
 	push	{lr}
-	.2byte	0x1C01
+	add	r1, r0, #0
 	mov	r0, #0
 	str	r0, [r1, #32]
 	mov	r2, #0
-	.2byte	0x1C08
+	add	r0, r1, #0
 	add	r0, #28
 .L_bd89a:
 	str	r2, [r0, #0]
@@ -19,5 +19,5 @@ sub_080BD88C:
 	bge	.L_bd89a
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080BD88C, .-sub_080BD88C

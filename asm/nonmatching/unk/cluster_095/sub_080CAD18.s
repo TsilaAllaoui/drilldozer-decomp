@@ -6,8 +6,8 @@
 .thumb_func
 sub_080CAD18:
 	push	{lr}
-	.2byte	0x1C01
-	mov	r0, #255	@ 0xff
+	add	r1, r0, #0
+	mov	r0, #255
 	and	r1, r0
 	cmp	r1, #1
 	beq	.L_cad3c

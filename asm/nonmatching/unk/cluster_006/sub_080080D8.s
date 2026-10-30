@@ -11,14 +11,14 @@ sub_080080D8:
 	mov	r5, r8
 	push	{r5, r6, r7}
 	sub	sp, #4
-	.2byte	0x1C04
+	add	r4, r0, #0
 	mov	sl, r2
 	lsl	r1, r1, #16
 	lsr	r1, r1, #16
 	mov	r7, #0
 	bl	sub_08015D54
-	.2byte	0x1C01
-	mov	r2, #128	@ 0x80
+	add	r1, r0, #0
+	mov	r2, #128
 	lsl	r2, r2, #8
 	and	r0, r2
 	cmp	r0, #0
@@ -37,7 +37,7 @@ sub_080080D8:
 .L_8112:
 	add	r4, r0, r1
 	mov	r0, #0
-	ldr	r1, [pc, #96]	@ (0x8008178)
+	ldr	r1, .L_8178	@ =0x000003FF
 	mov	r9, r1
 	mov	r6, #1
 	mov	ip, r6
@@ -87,8 +87,7 @@ sub_080080D8:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_8178:
-	.4byte	0x3FF
+	.4byte	0x000003FF
 .size sub_080080D8, .-sub_080080D8

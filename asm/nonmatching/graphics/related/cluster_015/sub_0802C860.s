@@ -7,10 +7,10 @@
 sub_0802C860:
 	push	{r4, r5, r6, lr}
 	sub	sp, #16
-	.2byte	0x1C0C
+	add	r4, r1, #0
 	ldr	r6, [sp, #32]
-	ldr	r5, [sp, #36]	@ 0x24
-	ldr	r1, [sp, #40]	@ 0x28
+	ldr	r5, [sp, #36]
+	ldr	r1, [sp, #40]
 	lsl	r4, r4, #24
 	lsr	r4, r4, #24
 	lsl	r5, r5, #24
@@ -27,12 +27,12 @@ sub_0802C860:
 	mov	r0, sp
 	ldrb	r0, [r0, #7]
 	strb	r0, [r1, #9]
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #2
 	bl	sub_08015A18
 	mov	r1, sp
 	strb	r0, [r1, #10]
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #3
 	bl	sub_08015A18
 	mov	r1, sp
@@ -41,7 +41,7 @@ sub_0802C860:
 	ldrb	r2, [r3, #12]
 	mov	r1, #16
 	neg	r1, r1
-	.2byte	0x1C08
+	add	r0, r1, #0
 	and	r0, r2
 	strb	r0, [r3, #12]
 	mov	r2, sp
@@ -50,7 +50,7 @@ sub_0802C860:
 	mov	r4, #15
 	strb	r0, [r2, #12]
 	ldrb	r2, [r6, #0]
-	.2byte	0x1C20
+	add	r0, r4, #0
 	and	r0, r2
 	ldrb	r2, [r3, #13]
 	and	r1, r2
@@ -63,7 +63,7 @@ sub_0802C860:
 	orr	r1, r0
 	strb	r1, [r2, #13]
 	mov	r0, sp
-	.2byte	0x1C29
+	add	r1, r5, #0
 	mov	r2, #0
 	bl	sub_080042F8
 	add	sp, #16

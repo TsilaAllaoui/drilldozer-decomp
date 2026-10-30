@@ -20,11 +20,11 @@ sub_08004480:
 	str	r1, [sp, #0]
 	str	r0, [sp, #4]
 	str	r2, [sp, #8]
-	ldr	r3, [pc, #132]	@ (0x8004524)
+	ldr	r3, .L_4524	@ =0x03000A1A
 	strh	r1, [r3, #0]
-	ldr	r1, [pc, #132]	@ (0x8004528)
+	ldr	r1, .L_4528	@ =0x03000A1C
 	strh	r0, [r1, #0]
-	ldr	r0, [pc, #132]	@ (0x800452c)
+	ldr	r0, .L_452c	@ =0x03000A1E
 	strh	r2, [r0, #0]
 	mov	r0, #0
 	mov	ip, r0
@@ -45,13 +45,13 @@ sub_08004480:
 	str	r0, [sp, #12]
 .L_44c8:
 	lsl	r0, r1, #2
-	.2byte	0x1C4E
+	add	r6, r1, #1
 	mov	r1, sp
 	add	r4, r1, r0
 	mov	r5, sp
 	mov	r7, ip
 	lsl	r0, r7, #1
-	ldr	r1, [pc, #88]	@ (0x8004530)
+	ldr	r1, .L_4530	@ =0x03000978
 	add	r2, r0, r1
 	mov	r3, #2
 .L_44dc:
@@ -74,7 +74,7 @@ sub_08004480:
 	sub	r3, #1
 	cmp	r3, #0
 	bge	.L_44dc
-	.2byte	0x1C31
+	add	r1, r6, #0
 	cmp	r1, #2
 	ble	.L_44c8
 	mov	r2, r9
@@ -91,16 +91,12 @@ sub_08004480:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_4524:
-	.4byte	0x3000A1A
-	.align	2, 0
+	.4byte	0x03000A1A
 .L_4528:
-	.4byte	0x3000A1C
-	.align	2, 0
+	.4byte	0x03000A1C
 .L_452c:
-	.4byte	0x3000A1E
-	.align	2, 0
+	.4byte	0x03000A1E
 .L_4530:
-	.4byte	0x3000978
+	.4byte	0x03000978
 .size sub_08004480, .-sub_08004480

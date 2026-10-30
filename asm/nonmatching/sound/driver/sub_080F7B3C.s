@@ -11,7 +11,7 @@ sub_080F7B3C:
 	mov	r5, r8
 	push	{r5, r6, r7}
 	sub	sp, #28
-	ldr	r0, [pc, #16]	@ (0x80f7b5c)
+	ldr	r0, .L_f7b5c	@ =0x03007FF0
 	ldr	r0, [r0, #0]
 	str	r0, [sp, #4]
 	ldrb	r0, [r0, #10]
@@ -21,9 +21,8 @@ sub_080F7B3C:
 	ldr	r1, [sp, #4]
 	strb	r0, [r1, #10]
 	b	.L_f7b66
-	.align	2, 0
 .L_f7b5c:
-	.4byte	0x3007FF0
+	.4byte	0x03007FF0
 .L_f7b60:
 	mov	r0, #14
 	ldr	r2, [sp, #4]
@@ -34,11 +33,11 @@ sub_080F7B3C:
 	ldr	r4, [r0, #28]
 .L_f7b6c:
 	ldrb	r1, [r4, #0]
-	mov	r0, #199	@ 0xc7
+	mov	r0, #199
 	and	r0, r1
-	.2byte	0x1C72
+	add	r2, r6, #1
 	mov	sl, r2
-	mov	r2, #64	@ 0x40
+	mov	r2, #64
 	add	r2, r2, r4
 	mov	r9, r2
 	cmp	r0, #0
@@ -57,65 +56,56 @@ sub_080F7B3C:
 	beq	.L_f7bcc
 	b	.L_f7bec
 .L_f7b96:
-	ldr	r0, [pc, #16]	@ (0x80f7ba8)
+	ldr	r0, .L_f7ba8	@ =0x04000060
 	str	r0, [sp, #8]
-	ldr	r7, [pc, #16]	@ (0x80f7bac)
-	ldr	r2, [pc, #16]	@ (0x80f7bb0)
+	ldr	r7, .L_f7bac	@ =0x04000062
+	ldr	r2, .L_f7bb0	@ =0x04000063
 	str	r2, [sp, #12]
 	add	r0, #4
 	str	r0, [sp, #16]
 	add	r2, #2
 	b	.L_f7bfc
-	.align	2, 0
 .L_f7ba8:
-	.4byte	0x4000060
-	.align	2, 0
+	.4byte	0x04000060
 .L_f7bac:
-	.4byte	0x4000062
-	.align	2, 0
+	.4byte	0x04000062
 .L_f7bb0:
-	.4byte	0x4000063
+	.4byte	0x04000063
 .L_f7bb4:
-	ldr	r0, [pc, #8]	@ (0x80f7bc0)
+	ldr	r0, .L_f7bc0	@ =0x04000061
 	str	r0, [sp, #8]
-	ldr	r7, [pc, #8]	@ (0x80f7bc4)
-	ldr	r2, [pc, #12]	@ (0x80f7bc8)
+	ldr	r7, .L_f7bc4	@ =0x04000068
+	ldr	r2, .L_f7bc8	@ =0x04000069
 	b	.L_f7bf4
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_f7bc0:
-	.4byte	0x4000061
-	.align	2, 0
+	.4byte	0x04000061
 .L_f7bc4:
-	.4byte	0x4000068
-	.align	2, 0
+	.4byte	0x04000068
 .L_f7bc8:
-	.4byte	0x4000069
+	.4byte	0x04000069
 .L_f7bcc:
-	ldr	r0, [pc, #16]	@ (0x80f7be0)
+	ldr	r0, .L_f7be0	@ =0x04000070
 	str	r0, [sp, #8]
-	ldr	r7, [pc, #16]	@ (0x80f7be4)
-	ldr	r2, [pc, #20]	@ (0x80f7be8)
+	ldr	r7, .L_f7be4	@ =0x04000072
+	ldr	r2, .L_f7be8	@ =0x04000073
 	str	r2, [sp, #12]
 	add	r0, #4
 	str	r0, [sp, #16]
 	add	r2, #2
 	b	.L_f7bfc
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_f7be0:
-	.4byte	0x4000070
-	.align	2, 0
+	.4byte	0x04000070
 .L_f7be4:
-	.4byte	0x4000072
-	.align	2, 0
+	.4byte	0x04000072
 .L_f7be8:
-	.4byte	0x4000073
+	.4byte	0x04000073
 .L_f7bec:
-	ldr	r0, [pc, #92]	@ (0x80f7c4c)
+	ldr	r0, .L_f7c4c	@ =0x04000071
 	str	r0, [sp, #8]
-	ldr	r7, [pc, #92]	@ (0x80f7c50)
-	ldr	r2, [pc, #96]	@ (0x80f7c54)
+	ldr	r7, .L_f7c50	@ =0x04000078
+	ldr	r2, .L_f7c54	@ =0x04000079
 .L_f7bf4:
 	str	r2, [sp, #12]
 	add	r0, #11
@@ -129,19 +119,19 @@ sub_080F7B3C:
 	ldr	r2, [sp, #12]
 	ldrb	r0, [r2, #0]
 	mov	r8, r0
-	.2byte	0x1C0A
-	mov	r0, #128	@ 0x80
+	add	r2, r1, #0
+	mov	r0, #128
 	and	r0, r2
 	cmp	r0, #0
 	beq	.L_f7cf2
-	mov	r3, #64	@ 0x40
-	.2byte	0x1C18
+	mov	r3, #64
+	add	r0, r3, #0
 	and	r0, r2
 	lsl	r0, r0, #24
 	lsr	r5, r0, #24
-	.2byte	0x1C70
+	add	r0, r6, #1
 	mov	sl, r0
-	mov	r1, #64	@ 0x40
+	mov	r1, #64
 	add	r1, r1, r4
 	mov	r9, r1
 	cmp	r5, #0
@@ -149,7 +139,7 @@ sub_080F7B3C:
 	mov	r0, #3
 	strb	r0, [r4, #0]
 	strb	r0, [r4, #29]
-	.2byte	0x1C20
+	add	r0, r4, #0
 	str	r3, [sp, #24]
 	bl	sub_080F7AC0
 	ldr	r3, [sp, #24]
@@ -160,16 +150,13 @@ sub_080F7B3C:
 	cmp	r6, #1
 	beq	.L_f7c5e
 	b	.L_f7cb8
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_f7c4c:
-	.4byte	0x4000071
-	.align	2, 0
+	.4byte	0x04000071
 .L_f7c50:
-	.4byte	0x4000078
-	.align	2, 0
+	.4byte	0x04000078
 .L_f7c54:
-	.4byte	0x4000079
+	.4byte	0x04000079
 .L_f7c58:
 	cmp	r6, #3
 	beq	.L_f7c70
@@ -179,21 +166,21 @@ sub_080F7B3C:
 	ldr	r2, [sp, #8]
 	strb	r0, [r2, #0]
 .L_f7c64:
-	ldr	r0, [r4, #36]	@ 0x24
+	ldr	r0, [r4, #36]
 	lsl	r0, r0, #6
 	ldrb	r1, [r4, #30]
 	add	r0, r1, r0
 	strb	r0, [r7, #0]
 	b	.L_f7cc4
 .L_f7c70:
-	ldr	r1, [r4, #36]	@ 0x24
-	ldr	r0, [r4, #40]	@ 0x28
+	ldr	r1, [r4, #36]
+	ldr	r0, [r4, #40]
 	cmp	r1, r0
 	beq	.L_f7c98
 	ldr	r2, [sp, #8]
 	strb	r3, [r2, #0]
-	ldr	r1, [pc, #44]	@ (0x80f7cac)
-	ldr	r2, [r4, #36]	@ 0x24
+	ldr	r1, .L_f7cac	@ =0x04000090
+	ldr	r2, [r4, #36]
 	ldr	r0, [r2, #0]
 	str	r0, [r1, #0]
 	add	r1, #4
@@ -205,7 +192,7 @@ sub_080F7B3C:
 	add	r1, #4
 	ldr	r0, [r2, #12]
 	str	r0, [r1, #0]
-	str	r2, [r4, #40]	@ 0x28
+	str	r2, [r4, #40]
 .L_f7c98:
 	ldr	r0, [sp, #8]
 	strb	r5, [r0, #0]
@@ -214,21 +201,20 @@ sub_080F7B3C:
 	ldrb	r0, [r4, #30]
 	cmp	r0, #0
 	beq	.L_f7cb0
-	mov	r0, #192	@ 0xc0
+	mov	r0, #192
 	b	.L_f7cd2
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_f7cac:
-	.4byte	0x4000090
+	.4byte	0x04000090
 .L_f7cb0:
-	mov	r1, #128	@ 0x80
+	mov	r1, #128
 	neg	r1, r1
 	strb	r1, [r4, #26]
 	b	.L_f7cd4
 .L_f7cb8:
 	ldrb	r0, [r4, #30]
 	strb	r0, [r7, #0]
-	ldr	r0, [r4, #36]	@ 0x24
+	ldr	r0, [r4, #36]
 	lsl	r0, r0, #3
 	ldr	r2, [sp, #16]
 	strb	r0, [r2, #0]
@@ -239,18 +225,18 @@ sub_080F7B3C:
 	ldrb	r0, [r4, #30]
 	cmp	r0, #0
 	beq	.L_f7cd2
-	mov	r0, #64	@ 0x40
+	mov	r0, #64
 .L_f7cd2:
 	strb	r0, [r4, #26]
 .L_f7cd4:
 	ldrb	r1, [r4, #4]
 	mov	r2, #0
 	strb	r1, [r4, #11]
-	mov	r0, #255	@ 0xff
+	mov	r0, #255
 	and	r0, r1
-	.2byte	0x1C71
+	add	r1, r6, #1
 	mov	sl, r1
-	mov	r1, #64	@ 0x40
+	mov	r1, #64
 	add	r1, r1, r4
 	mov	r9, r1
 	cmp	r0, #0
@@ -267,12 +253,12 @@ sub_080F7B3C:
 	ldrb	r0, [r4, #13]
 	sub	r0, #1
 	strb	r0, [r4, #13]
-	mov	r2, #255	@ 0xff
+	mov	r2, #255
 	and	r0, r2
 	lsl	r0, r0, #24
-	.2byte	0x1C71
+	add	r1, r6, #1
 	mov	sl, r1
-	mov	r2, #64	@ 0x40
+	mov	r2, #64
 	add	r2, r2, r4
 	mov	r9, r2
 	cmp	r0, #0
@@ -286,11 +272,11 @@ sub_080F7B3C:
 	strb	r0, [r4, #0]
 	b	.L_f7f68
 .L_f7d24:
-	mov	r0, #64	@ 0x40
+	mov	r0, #64
 	and	r0, r1
-	.2byte	0x1C72
+	add	r2, r6, #1
 	mov	sl, r2
-	mov	r2, #64	@ 0x40
+	mov	r2, #64
 	add	r2, r2, r4
 	mov	r9, r2
 	cmp	r0, #0
@@ -299,13 +285,13 @@ sub_080F7B3C:
 	and	r0, r1
 	cmp	r0, #0
 	beq	.L_f7d64
-	mov	r0, #252	@ 0xfc
+	mov	r0, #252
 	and	r0, r1
 	mov	r2, #0
 	strb	r0, [r4, #0]
 	ldrb	r1, [r4, #7]
 	strb	r1, [r4, #11]
-	mov	r0, #255	@ 0xff
+	mov	r0, #255
 	and	r0, r1
 	cmp	r0, #0
 	beq	.L_f7d96
@@ -329,7 +315,7 @@ sub_080F7B3C:
 	orr	r0, r1
 	strb	r0, [r4, #29]
 .L_f7d76:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080F7AC0
 	mov	r0, #3
 	ldrb	r2, [r4, #0]
@@ -339,7 +325,7 @@ sub_080F7B3C:
 	ldrb	r0, [r4, #9]
 	sub	r0, #1
 	strb	r0, [r4, #9]
-	mov	r1, #255	@ 0xff
+	mov	r1, #255
 	and	r0, r1
 	lsl	r0, r0, #24
 	cmp	r0, #0
@@ -347,9 +333,9 @@ sub_080F7B3C:
 .L_f7d96:
 	ldrb	r2, [r4, #12]
 	ldrb	r1, [r4, #10]
-	.2byte	0x1C10
+	add	r0, r2, #0
 	mul	r0, r1
-	add	r0, #255	@ 0xff
+	add	r0, #255
 	asr	r0, r0, #8
 	mov	r1, #0
 	strb	r0, [r4, #9]
@@ -386,7 +372,7 @@ sub_080F7B3C:
 	ldrb	r0, [r4, #9]
 	sub	r0, #1
 	strb	r0, [r4, #9]
-	mov	r1, #255	@ 0xff
+	mov	r1, #255
 	and	r0, r1
 	lsl	r0, r0, #24
 	ldrb	r2, [r4, #25]
@@ -397,7 +383,7 @@ sub_080F7B3C:
 	ldrb	r0, [r4, #6]
 	cmp	r0, #0
 	bne	.L_f7dfe
-	mov	r0, #252	@ 0xfc
+	mov	r0, #252
 	ldrb	r1, [r4, #0]
 	and	r0, r1
 	strb	r0, [r4, #0]
@@ -422,7 +408,7 @@ sub_080F7B3C:
 	ldrb	r0, [r4, #9]
 	add	r0, #1
 	strb	r0, [r4, #9]
-	mov	r1, #255	@ 0xff
+	mov	r1, #255
 	and	r0, r1
 	ldrb	r2, [r4, #10]
 	cmp	r0, r2
@@ -434,7 +420,7 @@ sub_080F7B3C:
 	strb	r0, [r4, #0]
 	ldrb	r1, [r4, #5]
 	strb	r1, [r4, #11]
-	mov	r0, #255	@ 0xff
+	mov	r0, #255
 	and	r0, r1
 	cmp	r0, #0
 	beq	.L_f7dee
@@ -476,27 +462,25 @@ sub_080F7B3C:
 	and	r0, r2
 	cmp	r0, #0
 	beq	.L_f7eaa
-	ldr	r0, [pc, #16]	@ (0x80f7e94)
+	ldr	r0, .L_f7e94	@ =0x04000089
 	ldrb	r0, [r0, #0]
-	cmp	r0, #63	@ 0x3f
+	cmp	r0, #63
 	bgt	.L_f7e9c
 	ldr	r0, [r4, #32]
 	add	r0, #2
-	ldr	r1, [pc, #8]	@ (0x80f7e98)
+	ldr	r1, .L_f7e98	@ =0x000007FC
 	b	.L_f7ea6
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_f7e94:
-	.4byte	0x4000089
-	.align	2, 0
+	.4byte	0x04000089
 .L_f7e98:
-	.4byte	0x7FC
+	.4byte	0x000007FC
 .L_f7e9c:
-	cmp	r0, #127	@ 0x7f
+	cmp	r0, #127
 	bgt	.L_f7eaa
 	ldr	r0, [r4, #32]
 	add	r0, #1
-	ldr	r1, [pc, #16]	@ (0x80f7eb8)
+	ldr	r1, .L_f7eb8	@ =0x000007FE
 .L_f7ea6:
 	and	r0, r1
 	str	r0, [r4, #32]
@@ -507,10 +491,9 @@ sub_080F7B3C:
 	ldr	r1, [sp, #16]
 	strb	r0, [r1, #0]
 	b	.L_f7eca
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_f7eb8:
-	.4byte	0x7FE
+	.4byte	0x000007FE
 .L_f7ebc:
 	ldr	r2, [sp, #16]
 	ldrb	r0, [r2, #0]
@@ -520,15 +503,15 @@ sub_080F7B3C:
 	orr	r0, r1
 	strb	r0, [r2, #0]
 .L_f7eca:
-	mov	r0, #192	@ 0xc0
+	mov	r0, #192
 	ldrb	r1, [r4, #26]
 	and	r0, r1
-	.2byte	0x1C21
-	add	r1, #33	@ 0x21
+	add	r1, r4, #0
+	add	r1, #33
 	ldrb	r1, [r1, #0]
 	add	r0, r1, r0
 	strb	r0, [r4, #26]
-	mov	r2, #255	@ 0xff
+	mov	r2, #255
 	and	r0, r2
 	ldr	r1, [sp, #20]
 	strb	r0, [r1, #0]
@@ -538,7 +521,7 @@ sub_080F7B3C:
 	and	r0, r2
 	cmp	r0, #0
 	beq	.L_f7f68
-	ldr	r1, [pc, #60]	@ (0x80f7f2c)
+	ldr	r1, .L_f7f2c	@ =0x04000081
 	ldrb	r0, [r1, #0]
 	ldrb	r2, [r4, #28]
 	bic	r0, r2
@@ -547,14 +530,14 @@ sub_080F7B3C:
 	strb	r0, [r1, #0]
 	cmp	r6, #3
 	bne	.L_f7f34
-	ldr	r0, [pc, #48]	@ (0x80f7f30)
+	ldr	r0, .L_f7f30	@ =0x084F9C9C
 	ldrb	r1, [r4, #9]
 	add	r0, r1, r0
 	ldrb	r0, [r0, #0]
 	ldr	r2, [sp, #12]
 	strb	r0, [r2, #0]
-	mov	r1, #128	@ 0x80
-	.2byte	0x1C08
+	mov	r1, #128
+	add	r0, r1, #0
 	ldrb	r2, [r4, #26]
 	and	r0, r2
 	cmp	r0, #0
@@ -564,18 +547,16 @@ sub_080F7B3C:
 	ldrb	r0, [r4, #26]
 	ldr	r1, [sp, #20]
 	strb	r0, [r1, #0]
-	mov	r0, #127	@ 0x7f
+	mov	r0, #127
 	ldrb	r2, [r4, #26]
 	and	r0, r2
 	strb	r0, [r4, #26]
 	b	.L_f7f68
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_f7f2c:
-	.4byte	0x4000081
-	.align	2, 0
+	.4byte	0x04000081
 .L_f7f30:
-	.4byte	0x84F9C9C
+	.4byte	0x084F9C9C
 .L_f7f34:
 	mov	r0, #15
 	mov	r1, r8
@@ -586,7 +567,7 @@ sub_080F7B3C:
 	add	r0, r8
 	ldr	r1, [sp, #12]
 	strb	r0, [r1, #0]
-	mov	r2, #128	@ 0x80
+	mov	r2, #128
 	ldrb	r0, [r4, #26]
 	orr	r0, r2
 	ldr	r1, [sp, #20]
@@ -621,5 +602,5 @@ sub_080F7B3C:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080F7B3C, .-sub_080F7B3C

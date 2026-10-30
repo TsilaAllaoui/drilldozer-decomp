@@ -12,14 +12,14 @@ sub_0800FAA8:
 	push	{r5, r6, r7}
 	sub	sp, #20
 	str	r0, [sp, #0]
-	.2byte	0x1C0F
+	add	r7, r1, #0
 	str	r2, [sp, #4]
 	mov	r1, #4
 	ldrsh	r0, [r7, r1]
 	cmp	r0, #0
 	blt	.L_fb88
 	ldr	r3, [sp, #0]
-	ldr	r2, [r3, #52]	@ 0x34
+	ldr	r2, [r3, #52]
 	mov	r0, #6
 	ldrsh	r1, [r7, r0]
 	mov	r3, #24
@@ -41,8 +41,8 @@ sub_0800FAA8:
 	bl	sub_08015F5C
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
-	ldr	r6, [pc, #164]	@ (0x800fb98)
-	.2byte	0x1C34
+	ldr	r6, .L_fb98	@ =0xFFFF0000
+	add	r4, r6, #0
 	ldr	r3, [sp, #12]
 	and	r4, r3
 	orr	r4, r0
@@ -51,7 +51,7 @@ sub_0800FAA8:
 	ldrsh	r0, [r7, r1]
 	bl	sub_08015F5C
 	lsl	r0, r0, #16
-	ldr	r5, [pc, #144]	@ (0x800fb9c)
+	ldr	r5, .L_fb9c	@ =0x0000FFFF
 	and	r4, r5
 	orr	r4, r0
 	str	r4, [sp, #12]
@@ -89,7 +89,7 @@ sub_0800FAA8:
 .L_fb52:
 	ldr	r0, [sp, #16]
 	asr	r4, r0, #16
-	.2byte	0x1C51
+	add	r1, r2, #1
 	mov	r8, r1
 	cmp	r4, sl
 	bgt	.L_fb7e
@@ -100,7 +100,7 @@ sub_0800FAA8:
 	lsl	r5, r0, #24
 .L_fb68:
 	ldr	r1, [sp, #0]
-	ldr	r0, [r1, #52]	@ 0x34
+	ldr	r0, [r1, #52]
 	lsl	r1, r4, #20
 	asr	r1, r1, #16
 	asr	r2, r6, #16
@@ -124,10 +124,8 @@ sub_0800FAA8:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_fb98:
 	.4byte	0xFFFF0000
-	.align	2, 0
 .L_fb9c:
-	.4byte	0xFFFF
+	.4byte	0x0000FFFF
 .size sub_0800FAA8, .-sub_0800FAA8

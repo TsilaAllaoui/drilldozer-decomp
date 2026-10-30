@@ -6,14 +6,14 @@
 .thumb_func
 sub_080567CC:
 	push	{r4, r5, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	bl	sub_080119C8
-	.2byte	0x1C05
-	.2byte	0x1C20
+	add	r5, r0, #0
+	add	r0, r4, #0
 	bl	sub_08011AC4
 	cmp	r0, #1
 	bne	.L_5681e
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080119D8
 	cmp	r0, #1
 	beq	.L_5680a
@@ -31,52 +31,45 @@ sub_080567CC:
 .L_567fe:
 	cmp	r5, #2
 	bne	.L_56806
-	mov	r0, #89	@ 0x59
+	mov	r0, #89
 	b	.L_56896
 .L_56806:
-	mov	r0, #88	@ 0x58
+	mov	r0, #88
 	b	.L_56896
 .L_5680a:
 	cmp	r5, #2
 	bne	.L_56812
-	mov	r0, #90	@ 0x5a
+	mov	r0, #90
 	b	.L_56896
 .L_56812:
-	mov	r0, #91	@ 0x5b
+	mov	r0, #91
 	b	.L_56896
 .L_56816:
-	mov	r0, #92	@ 0x5c
+	mov	r0, #92
 	b	.L_56896
 .L_5681a:
-	mov	r0, #93	@ 0x5d
+	mov	r0, #93
 	b	.L_56896
 .L_5681e:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080118FC
 	cmp	r0, #5
 	bhi	.L_56894
 	lsl	r0, r0, #2
-	ldr	r1, [pc, #8]	@ (0x8056834)
+	ldr	r1, .L_56834	@ =0x08056838
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]
 	mov	pc, r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_56834:
-	.4byte	.L_56838
-.L_56838:
-	ldr	r0, [r2, #4]
-	lsr	r5, r0, #32
-	ldr	r4, [r3, #4]
-	lsr	r5, r0, #32
-	ldr	r0, [r5, #4]
-	lsr	r5, r0, #32
-	ldr	r2, [r7, #4]
-	lsr	r5, r0, #32
-	ldr	r4, [r1, #8]
-	lsr	r5, r0, #32
-	ldr	r0, [r2, #8]
-	lsr	r5, r0, #32
+	.4byte	0x08056838
+	.4byte	0x08056850	@ case .L_56850
+	.4byte	0x0805685C	@ case .L_5685c
+	.4byte	0x08056868	@ case .L_56868
+	.4byte	0x0805687A	@ case .L_5687a
+	.4byte	0x0805688C	@ case .L_5688c
+	.4byte	0x08056890	@ case .L_56890
+.L_56850:
 	cmp	r5, #2
 	bne	.L_56858
 	mov	r0, #18
@@ -84,6 +77,7 @@ sub_080567CC:
 .L_56858:
 	mov	r0, #19
 	b	.L_56896
+.L_5685c:
 	cmp	r5, #2
 	bne	.L_56864
 	mov	r0, #20
@@ -91,26 +85,30 @@ sub_080567CC:
 .L_56864:
 	mov	r0, #21
 	b	.L_56896
-	.2byte	0x1C20
+.L_56868:
+	add	r0, r4, #0
 	bl	sub_08011964
 	cmp	r0, #1
 	bne	.L_56876
-	mov	r0, #62	@ 0x3e
+	mov	r0, #62
 	b	.L_56896
 .L_56876:
 	mov	r0, #22
 	b	.L_56896
-	.2byte	0x1C20
+.L_5687a:
+	add	r0, r4, #0
 	bl	sub_08011964
 	cmp	r0, #1
 	bne	.L_56888
-	mov	r0, #63	@ 0x3f
+	mov	r0, #63
 	b	.L_56896
 .L_56888:
 	mov	r0, #23
 	b	.L_56896
+.L_5688c:
 	mov	r0, #30
 	b	.L_56896
+.L_56890:
 	mov	r0, #31
 	b	.L_56896
 .L_56894:

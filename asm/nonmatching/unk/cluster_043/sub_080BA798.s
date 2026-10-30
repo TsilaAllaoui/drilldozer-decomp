@@ -6,9 +6,9 @@
 .thumb_func
 sub_080BA798:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C06
-	.2byte	0x1C0C
-	.2byte	0x1C25
+	add	r6, r0, #0
+	add	r4, r1, #0
+	add	r5, r4, #0
 	ldrb	r0, [r4, #9]
 	cmp	r0, #0
 	beq	.L_ba7ac
@@ -50,9 +50,9 @@ sub_080BA798:
 	strb	r0, [r5, #9]
 	b	.L_ba7f6
 .L_ba7ea:
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08001768
-	.2byte	0x1C30
+	add	r0, r6, #0
 	bl	sub_0800090C
 .L_ba7f6:
 	pop	{r4, r5, r6}

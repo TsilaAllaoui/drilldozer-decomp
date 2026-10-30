@@ -10,15 +10,15 @@ sub_0802B668:
 	mov	r5, r8
 	push	{r5, r6}
 	sub	sp, #12
-	.2byte	0x1C05
+	add	r5, r0, #0
 	mov	r9, r1
 	mov	r8, r2
 	bl	sub_080176D8
-	.2byte	0x1C04
-	.2byte	0x1C28
+	add	r4, r0, #0
+	add	r0, r5, #0
 	bl	sub_080177F0
-	.2byte	0x1C06
-	.2byte	0x1C28
+	add	r6, r0, #0
+	add	r0, r5, #0
 	add	r1, sp, #8
 	bl	sub_0802E7C4
 	lsl	r4, r4, #24
@@ -26,10 +26,10 @@ sub_0802B668:
 	str	r6, [sp, #0]
 	mov	r0, r8
 	str	r0, [sp, #4]
-	.2byte	0x1C28
+	add	r0, r5, #0
 	add	r1, sp, #8
 	mov	r2, r9
-	.2byte	0x1C23
+	add	r3, r4, #0
 	bl	sub_0802B634
 	add	sp, #12
 	pop	{r3, r4}
@@ -38,5 +38,5 @@ sub_0802B668:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0802B668, .-sub_0802B668

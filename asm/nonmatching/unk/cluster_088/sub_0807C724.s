@@ -10,11 +10,11 @@ sub_0807C724:
 	lsr	r5, r0, #24
 	lsl	r1, r1, #24
 	lsr	r4, r1, #24
-	ldr	r1, [pc, #48]	@ (0x807c760)
+	ldr	r1, .L_7c760	@ =0x0203611C
 	lsl	r0, r5, #2
 	add	r3, r0, r1
 	ldr	r2, [r3, #0]
-	.2byte	0x1C0E
+	add	r6, r1, #0
 	cmp	r2, #0
 	beq	.L_7c77c
 	ldr	r1, [r2, #12]
@@ -35,9 +35,8 @@ sub_0807C724:
 	mov	r0, #2
 	strh	r0, [r1, #24]
 	b	.L_7c766
-	.align	2, 0
 .L_7c760:
-	.4byte	0x203611C
+	.4byte	0x0203611C
 .L_7c764:
 	strh	r2, [r1, #24]
 .L_7c766:
@@ -56,5 +55,5 @@ sub_0807C724:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0807C724, .-sub_0807C724

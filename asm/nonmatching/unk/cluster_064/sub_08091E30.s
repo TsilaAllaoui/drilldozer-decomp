@@ -7,16 +7,16 @@
 sub_08091E30:
 	push	{lr}
 	ldr	r3, [r0, #12]
-	mov	r2, #36	@ 0x24
+	mov	r2, #36
 	ldrsh	r1, [r0, r2]
-	ldrh	r2, [r0, #38]	@ 0x26
+	ldrh	r2, [r0, #38]
 	add	r2, #32
 	lsl	r2, r2, #16
 	asr	r2, r2, #16
-	.2byte	0x1C18
+	add	r0, r3, #0
 	bl	sub_08014D60
-	.2byte	0x1C01
-	.2byte	0x1E48
+	add	r1, r0, #0
+	sub	r0, r1, #1
 	cmp	r0, #1
 	bls	.L_91e56
 	cmp	r1, #4

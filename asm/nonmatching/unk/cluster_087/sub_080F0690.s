@@ -6,7 +6,7 @@
 .thumb_func
 sub_080F0690:
 	push	{lr}
-	.2byte	0x1C0B
+	add	r3, r1, #0
 	ldr	r2, [r1, #0]
 	cmp	r2, #0
 	bne	.L_f06a0
@@ -21,7 +21,7 @@ sub_080F0690:
 	ble	.L_f06ca
 	cmp	r2, #0
 	ble	.L_f06b2
-	.2byte	0x1E50
+	sub	r0, r2, #1
 	str	r0, [r1, #0]
 .L_f06b2:
 	ldr	r0, [r1, #4]
@@ -39,5 +39,5 @@ sub_080F0690:
 .L_f06ca:
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080F0690, .-sub_080F0690

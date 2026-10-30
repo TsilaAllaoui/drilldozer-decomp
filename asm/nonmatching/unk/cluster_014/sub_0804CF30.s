@@ -5,9 +5,19 @@
 .type sub_0804CF30, %function
 .thumb_func
 sub_0804CF30:
-	@ Exact original ROM bytes from 0x0804CF30.
-	.byte	0x00, 0xB5, 0x03, 0x48, 0x31, 0xF0, 0xAE, 0xFB, 0x00, 0x28, 0x03, 0xD0, 0x00, 0x20, 0x02, 0xE0
-	.byte	0x85, 0xCF, 0x04, 0x08, 0x01, 0x20, 0x02, 0xBC
+	push	{lr}
+	ldr	r0, .L_4cf40	@ =0x0804CF85
+	bl	sub_0807E694
+	cmp	r0, #0
+	beq	.L_4cf44
+	mov	r0, #0
+	b	.L_4cf46
+.L_4cf40:
+	.4byte	0x0804CF85
+.L_4cf44:
+	mov	r0, #1
+.L_4cf46:
+	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0804CF30, .-sub_0804CF30

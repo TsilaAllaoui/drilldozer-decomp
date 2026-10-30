@@ -6,11 +6,11 @@
 .thumb_func
 sub_0802910C:
 	push	{r4, lr}
-	.2byte	0x1C02
-	.2byte	0x1C0C
+	add	r2, r0, #0
+	add	r4, r1, #0
 	mov	r1, #6
 	ldrsh	r0, [r4, r1]
-	mov	r3, #36	@ 0x24
+	mov	r3, #36
 	ldrsh	r1, [r2, r3]
 	sub	r0, r0, r1
 	lsl	r0, r0, #17
@@ -20,7 +20,7 @@ sub_0802910C:
 	asr	r0, r0, #16
 	cmp	r0, #0
 	bge	.L_2912e
-	add	r0, #255	@ 0xff
+	add	r0, #255
 .L_2912e:
 	asr	r0, r0, #8
 	ldrh	r4, [r4, #8]
@@ -30,5 +30,5 @@ sub_0802910C:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0802910C, .-sub_0802910C

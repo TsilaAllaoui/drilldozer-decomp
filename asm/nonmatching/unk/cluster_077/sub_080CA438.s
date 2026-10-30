@@ -7,14 +7,14 @@
 sub_080CA438:
 	push	{r4, lr}
 	sub	sp, #16
-	.2byte	0x1C04
-	ldrh	r3, [r4, #36]	@ 0x24
-	.2byte	0x1C19
+	add	r4, r0, #0
+	ldrh	r3, [r4, #36]
+	add	r1, r3, #0
 	sub	r1, #16
 	add	r3, #16
-	ldrh	r0, [r4, #38]	@ 0x26
-	.2byte	0x1C02
-	sub	r2, #160	@ 0xa0
+	ldrh	r0, [r4, #38]
+	add	r2, r0, #0
+	sub	r2, #160
 	sub	r0, #12
 	lsl	r1, r1, #16
 	asr	r1, r1, #16
@@ -29,10 +29,10 @@ sub_080CA438:
 	bl	sub_08012B84
 	ldr	r0, [r4, #12]
 	add	r4, sp, #12
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_080117BC
 	add	r0, sp, #4
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_08012D40
 	cmp	r0, #1
 	beq	.L_ca480
@@ -45,5 +45,5 @@ sub_080CA438:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080CA438, .-sub_080CA438

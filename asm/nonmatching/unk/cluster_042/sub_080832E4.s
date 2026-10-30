@@ -7,15 +7,15 @@
 sub_080832E4:
 	push	{r4, r5, lr}
 	sub	sp, #16
-	.2byte	0x1C04
+	add	r4, r0, #0
 	mov	r1, sp
 	bl	sub_08011AA0
 	add	r5, sp, #4
-	.2byte	0x1C20
-	.2byte	0x1C29
+	add	r0, r4, #0
+	add	r1, r5, #0
 	bl	sub_08011834
 	add	r1, sp, #8
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0802E55C
 	mov	r0, sp
 	mov	r2, #0
@@ -33,5 +33,5 @@ sub_080832E4:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080832E4, .-sub_080832E4

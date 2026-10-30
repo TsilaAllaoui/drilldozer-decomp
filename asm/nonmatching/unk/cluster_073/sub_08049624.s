@@ -6,19 +6,18 @@
 .thumb_func
 sub_08049624:
 	push	{lr}
-	.2byte	0x1C03
+	add	r3, r0, #0
 	mov	r2, #0
-	ldr	r1, [pc, #12]	@ (0x8049638)
+	ldr	r1, .L_49638	@ =0x02035A8C
 .L_4962c:
 	ldr	r0, [r1, #0]
 	cmp	r0, r3
 	bne	.L_4963c
 	ldrh	r0, [r1, #4]
 	b	.L_49648
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_49638:
-	.4byte	0x2035A8C
+	.4byte	0x02035A8C
 .L_4963c:
 	add	r1, #8
 	add	r2, #1

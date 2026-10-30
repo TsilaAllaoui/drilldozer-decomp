@@ -7,7 +7,7 @@
 sub_0805DC90:
 	push	{r4, lr}
 	sub	sp, #20
-	.2byte	0x1C04
+	add	r4, r0, #0
 	mov	r0, #0
 	str	r0, [sp, #16]
 	ldr	r0, [r4, #12]
@@ -15,8 +15,8 @@ sub_0805DC90:
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
 	bl	sub_08011FF0
-	.2byte	0x1C21
-	add	r1, #60	@ 0x3c
+	add	r1, r4, #0
+	add	r1, #60
 	add	r3, sp, #16
 	mov	r2, sp
 	bl	sub_0801211C
@@ -31,5 +31,5 @@ sub_0805DC90:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0805DC90, .-sub_0805DC90

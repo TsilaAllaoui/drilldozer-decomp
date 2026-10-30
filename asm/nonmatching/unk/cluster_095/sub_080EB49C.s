@@ -7,7 +7,7 @@
 sub_080EB49C:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C05
+	add	r5, r0, #0
 	mov	r4, #0
 	str	r4, [sp, #0]
 	b	.L_eb4aa
@@ -15,7 +15,7 @@ sub_080EB49C:
 	add	r4, #1
 .L_eb4aa:
 	mov	r0, sp
-	mov	r1, #140	@ 0x8c
+	mov	r1, #140
 	bl	sub_0801BC0C
 	cmp	r0, #0
 	bne	.L_eb4a8
@@ -25,5 +25,5 @@ sub_080EB49C:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080EB49C, .-sub_080EB49C

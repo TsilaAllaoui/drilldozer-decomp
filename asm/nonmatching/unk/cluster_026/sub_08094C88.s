@@ -6,9 +6,9 @@
 .thumb_func
 sub_08094C88:
 	push	{r4, lr}
-	.2byte	0x1C03
-	.2byte	0x1C0C
-	ldr	r2, [pc, #36]	@ (0x8094cb4)
+	add	r3, r0, #0
+	add	r4, r1, #0
+	ldr	r2, .L_94cb4	@ =0x02039174
 	ldrb	r1, [r2, #0]
 	mov	r0, #2
 	and	r0, r1
@@ -20,15 +20,14 @@ sub_08094C88:
 	mov	r0, #1
 	strb	r0, [r4, #24]
 	strb	r0, [r4, #26]
-	.2byte	0x1C18
+	add	r0, r3, #0
 	bl	sub_0801C0E4
 	strh	r0, [r4, #28]
 	mov	r0, #1
 	b	.L_94cba
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_94cb4:
-	.4byte	0x2039174
+	.4byte	0x02039174
 .L_94cb8:
 	mov	r0, #0
 .L_94cba:

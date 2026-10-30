@@ -6,8 +6,8 @@
 .thumb_func
 sub_080360A8:
 	push	{lr}
-	.2byte	0x1C02
-	.2byte	0x1C08
+	add	r2, r0, #0
+	add	r0, r1, #0
 	cmp	r0, #1
 	beq	.L_360d2
 	cmp	r0, #1
@@ -18,7 +18,6 @@ sub_080360A8:
 .L_360bc:
 	cmp	r0, #2
 	beq	.L_360de
-.L_360c0:
 	cmp	r0, #3
 	beq	.L_360e2
 	b	.L_360e4

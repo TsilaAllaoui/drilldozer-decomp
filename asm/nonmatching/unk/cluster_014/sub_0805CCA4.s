@@ -6,8 +6,8 @@
 .thumb_func
 sub_0805CCA4:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C06
-	mov	r0, #232	@ 0xe8
+	add	r6, r0, #0
+	mov	r0, #232
 	lsl	r0, r0, #1
 	add	r4, r6, r0
 	mov	r5, #1
@@ -21,11 +21,11 @@ sub_0805CCA4:
 	sub	r5, #1
 	cmp	r5, #0
 	bge	.L_5ccb0
-	ldrh	r0, [r6, #44]	@ 0x2c
-	mov	r1, #64	@ 0x40
+	ldrh	r0, [r6, #44]
+	mov	r1, #64
 	bl	sub_080066B8
-	ldrh	r0, [r6, #46]	@ 0x2e
-	mov	r1, #64	@ 0x40
+	ldrh	r0, [r6, #46]
+	mov	r1, #64
 	bl	sub_080066B8
 	pop	{r4, r5, r6}
 	pop	{r0}

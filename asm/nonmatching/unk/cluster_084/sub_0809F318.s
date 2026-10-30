@@ -5,31 +5,31 @@
 .type sub_0809F318, %function
 .thumb_func
 sub_0809F318:
-	.2byte	0xB570
-	.2byte	0x1C05
-	.2byte	0x1C0C
-	ldr	r0, [r5, #72]	@ 0x48
-	ldr	r1, [r5, #80]	@ 0x50
+	push	{r4, r5, r6, lr}
+	add	r5, r0, #0
+	add	r4, r1, #0
+	ldr	r0, [r5, #72]
+	ldr	r1, [r5, #80]
 	add	r0, r0, r1
-	str	r0, [r5, #72]	@ 0x48
+	str	r0, [r5, #72]
 	ldr	r0, [r4, #24]
 	add	r1, r1, r0
-	str	r1, [r5, #80]	@ 0x50
+	str	r1, [r5, #80]
 	cmp	r1, #0
 	bge	.L_9f34e
 	ldr	r0, [r4, #28]
 	cmp	r1, r0
 	bge	.L_9f338
-	str	r0, [r5, #80]	@ 0x50
+	str	r0, [r5, #80]
 .L_9f338:
-	.2byte	0x1C28
-	add	r0, #74	@ 0x4a
+	add	r0, r5, #0
+	add	r0, #74
 	mov	r1, #0
 	ldrsh	r2, [r0, r1]
 	ldrh	r3, [r4, #22]
 	mov	r6, #22
 	ldrsh	r1, [r4, r6]
-	.2byte	0x1C06
+	add	r6, r0, #0
 	cmp	r2, r1
 	bge	.L_9f36c
 	b	.L_9f36a
@@ -37,16 +37,16 @@ sub_0809F318:
 	ldr	r0, [r4, #28]
 	cmp	r1, r0
 	ble	.L_9f356
-	str	r0, [r5, #80]	@ 0x50
+	str	r0, [r5, #80]
 .L_9f356:
-	.2byte	0x1C28
-	add	r0, #74	@ 0x4a
+	add	r0, r5, #0
+	add	r0, #74
 	mov	r1, #0
 	ldrsh	r2, [r0, r1]
 	ldrh	r3, [r4, #22]
 	mov	r6, #22
 	ldrsh	r1, [r4, r6]
-	.2byte	0x1C06
+	add	r6, r0, #0
 	cmp	r2, r1
 	ble	.L_9f36c
 .L_9f36a:
@@ -68,14 +68,14 @@ sub_0809F318:
 	bge	.L_9f388
 	neg	r2, r2
 .L_9f388:
-	.2byte	0x1C20
-	add	r0, #36	@ 0x24
+	add	r0, r4, #0
+	add	r0, #36
 	ldrb	r0, [r0, #0]
 	mul	r0, r2
 	bl	sub_080F8FF0
-	.2byte	0x1C01
-	.2byte	0x1C20
-	add	r0, #37	@ 0x25
+	add	r1, r0, #0
+	add	r0, r4, #0
+	add	r0, #37
 	ldrb	r0, [r0, #0]
 	cmp	r0, #0
 	bne	.L_9f3b6
@@ -102,8 +102,8 @@ sub_0809F318:
 	lsr	r1, r1, #16
 	bl	sub_08005130
 .L_9f3ca:
-	.2byte	0x1C29
-	add	r1, #70	@ 0x46
+	add	r1, r5, #0
+	add	r1, #70
 	strh	r0, [r1, #0]
 	ldr	r0, [r4, #32]
 	cmp	r0, #0
@@ -117,9 +117,9 @@ sub_0809F318:
 	ldrh	r3, [r1, #0]
 	add	r0, r0, r3
 	strh	r0, [r1, #0]
-	strh	r0, [r5, #36]	@ 0x24
+	strh	r0, [r5, #36]
 	ldrh	r0, [r6, #0]
-	strh	r0, [r5, #38]	@ 0x26
+	strh	r0, [r5, #38]
 	mov	r0, #0
 	ldrsh	r1, [r6, r0]
 	mov	r2, #22
@@ -129,12 +129,12 @@ sub_0809F318:
 	mov	r0, #0
 	b	.L_9f404
 .L_9f3fc:
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0801CECC
 	mov	r0, #1
 .L_9f404:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0809F318, .-sub_0809F318

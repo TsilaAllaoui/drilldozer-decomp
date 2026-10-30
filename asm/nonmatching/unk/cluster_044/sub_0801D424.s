@@ -9,35 +9,32 @@ sub_0801D424:
 	lsl	r1, r1, #16
 	lsr	r4, r1, #16
 	bl	sub_080176D8
-	.2byte	0x1C03
+	add	r3, r0, #0
 	mov	r2, #0
-	ldr	r5, [pc, #16]	@ (0x801d444)
-	ldr	r1, [pc, #16]	@ (0x801d448)
+	ldr	r5, .L_1d444	@ =0x0000FFFF
+	ldr	r1, .L_1d448	@ =0x03001240
 .L_1d436:
 	ldrh	r0, [r1, #0]
 	cmp	r0, r5
 	bne	.L_1d44c
 	strh	r4, [r1, #0]
 	strb	r3, [r1, #2]
-	.2byte	0x1C10
+	add	r0, r2, #0
 	b	.L_1d456
-	.align	2, 0
 .L_1d444:
-	.4byte	0xFFFF
-	.align	2, 0
+	.4byte	0x0000FFFF
 .L_1d448:
-	.4byte	0x3001240
+	.4byte	0x03001240
 .L_1d44c:
 	add	r1, #4
 	add	r2, #1
 	cmp	r2, #23
 	ble	.L_1d436
-	ldr	r0, [pc, #4]	@ (0x801d45c)
+	ldr	r0, .L_1d45c	@ =0x0000FFFF
 .L_1d456:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-	.align	2, 0
 .L_1d45c:
-	.4byte	0xFFFF
+	.4byte	0x0000FFFF
 .size sub_0801D424, .-sub_0801D424

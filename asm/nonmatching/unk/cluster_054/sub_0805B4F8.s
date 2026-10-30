@@ -7,12 +7,12 @@
 sub_0805B4F8:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C05
+	add	r5, r0, #0
 	ldr	r4, [r5, #20]
-	.2byte	0x1C23
-	add	r3, #124	@ 0x7c
+	add	r3, r4, #0
+	add	r3, #124
 	ldrh	r2, [r5, #8]
-	ldr	r0, [pc, #76]	@ (0x805b554)
+	ldr	r0, .L_5b554	@ =0xFFFF0000
 	ldr	r1, [sp, #0]
 	and	r1, r0
 	orr	r1, r2
@@ -24,7 +24,7 @@ sub_0805B4F8:
 	ldrh	r0, [r5, #10]
 	sub	r0, r0, r2
 	lsl	r0, r0, #16
-	ldr	r2, [pc, #56]	@ (0x805b558)
+	ldr	r2, .L_5b558	@ =0x0000FFFF
 	and	r2, r1
 	orr	r2, r0
 	str	r2, [sp, #0]
@@ -49,10 +49,8 @@ sub_0805B4F8:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_5b554:
 	.4byte	0xFFFF0000
-	.align	2, 0
 .L_5b558:
-	.4byte	0xFFFF
+	.4byte	0x0000FFFF
 .size sub_0805B4F8, .-sub_0805B4F8

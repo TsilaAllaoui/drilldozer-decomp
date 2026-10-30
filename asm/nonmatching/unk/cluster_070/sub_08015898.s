@@ -52,26 +52,26 @@ sub_08015898:
 	asr	r2, r2, #16
 	mov	r0, r8
 	bl	sub_08014E20
-	.2byte	0x1C27
+	add	r7, r4, #0
 	cmp	r0, #0
 	beq	.L_1592a
 	cmp	r0, #4
 	bhi	.L_159a2
 	str	r7, [sp, #0]
 	mov	r0, r8
-	.2byte	0x1C31
-	.2byte	0x1C2A
+	add	r1, r6, #0
+	add	r2, r5, #0
 	add	r3, sp, #4
 	bl	sub_08014C78
-	.2byte	0x1C04
+	add	r4, r0, #0
 	cmp	r4, #0
 	bne	.L_15954
 	mov	r0, r8
 	mov	r1, sl
 	add	r2, sp, #4
-	.2byte	0x1C3B
+	add	r3, r7, #0
 	bl	sub_080150F4
-	.2byte	0x1C04
+	add	r4, r0, #0
 	cmp	r4, #0
 	bne	.L_15968
 	b	.L_159a2
@@ -79,9 +79,9 @@ sub_08015898:
 	mov	r0, r8
 	mov	r1, sl
 	add	r2, sp, #4
-	.2byte	0x1C3B
+	add	r3, r7, #0
 	bl	sub_08014AF8
-	.2byte	0x1C04
+	add	r4, r0, #0
 	cmp	r4, #0
 	beq	.L_159a2
 	add	r0, sp, #4
@@ -100,9 +100,9 @@ sub_08015898:
 	mov	r0, r8
 	mov	r1, sl
 	add	r2, sp, #4
-	.2byte	0x1C3B
+	add	r3, r7, #0
 	bl	sub_080150F4
-	.2byte	0x1C04
+	add	r4, r0, #0
 	cmp	r4, #0
 	bne	.L_15968
 	mov	r4, #2

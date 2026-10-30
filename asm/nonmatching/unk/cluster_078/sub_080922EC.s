@@ -5,9 +5,21 @@
 .type sub_080922EC, %function
 .thumb_func
 sub_080922EC:
-	@ Exact original ROM bytes from 0x080922EC.
-	.byte	0x00, 0xB5, 0x02, 0x1C, 0x08, 0x7A, 0x01, 0x38, 0x08, 0x72, 0x00, 0x06, 0x01, 0x0E, 0x00, 0x29
-	.byte	0x02, 0xD1, 0x10, 0x1C, 0x76, 0x30, 0x01, 0x70, 0x01, 0x20, 0x02, 0xBC
+	push	{lr}
+	add	r2, r0, #0
+	ldrb	r0, [r1, #8]
+	sub	r0, #1
+	strb	r0, [r1, #8]
+	lsl	r0, r0, #24
+	lsr	r1, r0, #24
+	cmp	r1, #0
+	bne	.L_92304
+	add	r0, r2, #0
+	add	r0, #118
+	strb	r1, [r0, #0]
+.L_92304:
+	mov	r0, #1
+	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080922EC, .-sub_080922EC

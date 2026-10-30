@@ -10,15 +10,15 @@ sub_08048CE4:
 	mov	r6, r9
 	mov	r5, r8
 	push	{r5, r6, r7}
-	sub	sp, #120	@ 0x78
+	sub	sp, #120
 	str	r0, [sp, #0]
 	str	r1, [sp, #4]
 	str	r2, [sp, #8]
 	str	r3, [sp, #12]
-	ldr	r0, [sp, #152]	@ 0x98
-	ldr	r1, [sp, #164]	@ 0xa4
-	ldr	r2, [sp, #168]	@ 0xa8
-	ldr	r3, [sp, #172]	@ 0xac
+	ldr	r0, [sp, #152]
+	ldr	r1, [sp, #164]
+	ldr	r2, [sp, #168]
+	ldr	r3, [sp, #172]
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
 	str	r0, [sp, #16]
@@ -32,7 +32,7 @@ sub_08048CE4:
 	lsr	r3, r3, #16
 	str	r3, [sp, #28]
 	mov	r0, #0
-	ldr	r1, [sp, #176]	@ 0xb0
+	ldr	r1, [sp, #176]
 	strb	r0, [r1, #0]
 	mov	r2, #1
 	str	r2, [sp, #32]
@@ -42,45 +42,45 @@ sub_08048CE4:
 	b	.L_48fa2
 .L_48d2a:
 	mov	r4, #2
-	str	r4, [sp, #104]	@ 0x68
+	str	r4, [sp, #104]
 	ldr	r5, [sp, #4]
 	add	r5, #2
-	str	r5, [sp, #108]	@ 0x6c
+	str	r5, [sp, #108]
 	ldr	r4, [sp, #12]
 	add	r4, #2
-	ldr	r0, [sp, #160]	@ 0xa0
+	ldr	r0, [sp, #160]
 	add	r0, #2
-	str	r0, [sp, #112]	@ 0x70
-	ldr	r0, [sp, #156]	@ 0x9c
+	str	r0, [sp, #112]
+	ldr	r0, [sp, #156]
 	add	r0, #2
-	str	r0, [sp, #116]	@ 0x74
+	str	r0, [sp, #116]
 .L_48d44:
 	mov	r0, #0
-	str	r0, [sp, #44]	@ 0x2c
+	str	r0, [sp, #44]
 	mov	r1, #0
-	str	r1, [sp, #48]	@ 0x30
+	str	r1, [sp, #48]
 	mov	r2, #0
-	str	r2, [sp, #52]	@ 0x34
+	str	r2, [sp, #52]
 	mov	r3, #0
-	str	r3, [sp, #56]	@ 0x38
+	str	r3, [sp, #56]
 	ldr	r5, [sp, #24]
 	lsl	r0, r5, #16
 	asr	r0, r0, #16
-	ldr	r1, [sp, #108]	@ 0x6c
+	ldr	r1, [sp, #108]
 	mov	r2, #0
 	ldrsh	r3, [r1, r2]
 	sub	r0, r0, r3
-	str	r0, [sp, #36]	@ 0x24
+	str	r0, [sp, #36]
 	ldr	r5, [sp, #28]
 	lsl	r1, r5, #16
 	asr	r1, r1, #16
-	ldr	r2, [sp, #104]	@ 0x68
+	ldr	r2, [sp, #104]
 	ldr	r5, [sp, #8]
 	add	r0, r2, r5
 	mov	r5, #0
 	ldrsh	r2, [r0, r5]
 	sub	r1, r1, r2
-	str	r1, [sp, #40]	@ 0x28
+	str	r1, [sp, #40]
 	ldr	r1, [sp, #4]
 	mov	r5, #0
 	ldrsh	r0, [r1, r5]
@@ -91,20 +91,20 @@ sub_08048CE4:
 	ldrsh	r0, [r1, r3]
 	sub	r0, r0, r2
 	mov	r9, r0
-	ldr	r5, [sp, #36]	@ 0x24
+	ldr	r5, [sp, #36]
 	mov	r1, sl
 	mul	r1, r5
-	ldr	r2, [sp, #40]	@ 0x28
+	ldr	r2, [sp, #40]
 	mov	r0, r9
 	mul	r0, r2
 	add	r1, r1, r0
 	lsl	r1, r1, #12
-	str	r1, [sp, #60]	@ 0x3c
-	ldr	r3, [sp, #116]	@ 0x74
+	str	r1, [sp, #60]
+	ldr	r3, [sp, #116]
 	ldrh	r2, [r3, #0]
 	mov	r5, #0
 	ldrsh	r0, [r3, r5]
-	mov	r1, #180	@ 0xb4
+	mov	r1, #180
 	lsl	r1, r1, #1
 	cmp	r0, r1
 	beq	.L_48dca
@@ -112,7 +112,7 @@ sub_08048CE4:
 	ldrsh	r0, [r4, r3]
 	ldr	r5, [sp, #16]
 	add	r0, r0, r5
-	ldr	r3, [sp, #116]	@ 0x74
+	ldr	r3, [sp, #116]
 	mov	r5, #0
 	ldrsh	r1, [r3, r5]
 	cmp	r0, r1
@@ -126,11 +126,11 @@ sub_08048CE4:
 	ldr	r0, [sp, #16]
 .L_48dcc:
 	mov	r8, r0
-	ldr	r1, [sp, #112]	@ 0x70
+	ldr	r1, [sp, #112]
 	ldrh	r2, [r1, #0]
 	mov	r3, #0
 	ldrsh	r0, [r1, r3]
-	mov	r5, #180	@ 0xb4
+	mov	r5, #180
 	lsl	r5, r5, #1
 	cmp	r0, r5
 	beq	.L_48dfc
@@ -138,7 +138,7 @@ sub_08048CE4:
 	ldrsh	r0, [r4, r1]
 	ldr	r3, [sp, #16]
 	sub	r0, r0, r3
-	ldr	r5, [sp, #112]	@ 0x70
+	ldr	r5, [sp, #112]
 	mov	r3, #0
 	ldrsh	r1, [r5, r3]
 	cmp	r0, r1
@@ -147,16 +147,16 @@ sub_08048CE4:
 	sub	r0, r0, r2
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
-	str	r0, [sp, #88]	@ 0x58
+	str	r0, [sp, #88]
 	b	.L_48e00
 .L_48dfc:
 	ldr	r5, [sp, #16]
-	str	r5, [sp, #88]	@ 0x58
+	str	r5, [sp, #88]
 .L_48e00:
-	ldr	r1, [sp, #116]	@ 0x74
+	ldr	r1, [sp, #116]
 	mov	r2, #0
 	ldrsh	r0, [r1, r2]
-	mov	r3, #180	@ 0xb4
+	mov	r3, #180
 	lsl	r3, r3, #1
 	cmp	r0, r3
 	beq	.L_48e1c
@@ -181,48 +181,48 @@ sub_08048CE4:
 	mov	r0, r9
 	mul	r0, r7
 	sub	r1, r1, r0
-	str	r1, [sp, #44]	@ 0x2c
+	str	r1, [sp, #44]
 	mov	r1, sl
 	mul	r1, r7
 	mov	r0, r9
 	mul	r0, r5
 	add	r1, r1, r0
-	str	r1, [sp, #48]	@ 0x30
-	ldr	r3, [sp, #36]	@ 0x24
-	ldr	r5, [sp, #44]	@ 0x2c
-	.2byte	0x1C19
+	str	r1, [sp, #48]
+	ldr	r3, [sp, #36]
+	ldr	r5, [sp, #44]
+	add	r1, r3, #0
 	mul	r1, r5
-	ldr	r2, [sp, #40]	@ 0x28
-	ldr	r3, [sp, #48]	@ 0x30
-	.2byte	0x1C10
+	ldr	r2, [sp, #40]
+	ldr	r3, [sp, #48]
+	add	r0, r2, #0
 	mul	r0, r3
 	add	r6, r1, r0
 	b	.L_48e5e
 .L_48e5c:
-	ldr	r6, [sp, #60]	@ 0x3c
+	ldr	r6, [sp, #60]
 .L_48e5e:
-	ldr	r5, [sp, #112]	@ 0x70
+	ldr	r5, [sp, #112]
 	mov	r1, #0
 	ldrsh	r0, [r5, r1]
-	mov	r2, #180	@ 0xb4
+	mov	r2, #180
 	lsl	r2, r2, #1
 	cmp	r0, r2
 	beq	.L_48e7e
 	mov	r3, #0
 	ldrsh	r0, [r4, r3]
-	ldr	r5, [sp, #88]	@ 0x58
+	ldr	r5, [sp, #88]
 	sub	r0, r0, r5
-	ldr	r2, [sp, #112]	@ 0x70
+	ldr	r2, [sp, #112]
 	mov	r3, #0
 	ldrsh	r1, [r2, r3]
 	cmp	r0, r1
 	blt	.L_48ec0
 .L_48e7e:
-	ldr	r0, [sp, #88]	@ 0x58
+	ldr	r0, [sp, #88]
 	bl	sub_08049500
 	lsl	r0, r0, #16
 	asr	r5, r0, #16
-	ldr	r0, [sp, #88]	@ 0x58
+	ldr	r0, [sp, #88]
 	bl	sub_0804947C
 	lsl	r0, r0, #16
 	asr	r7, r0, #16
@@ -231,28 +231,28 @@ sub_08048CE4:
 	mov	r0, r9
 	mul	r0, r7
 	add	r1, r1, r0
-	str	r1, [sp, #52]	@ 0x34
+	str	r1, [sp, #52]
 	neg	r0, r7
 	mov	r1, sl
 	mul	r1, r0
 	mov	r0, r9
 	mul	r0, r5
 	add	r1, r1, r0
-	str	r1, [sp, #56]	@ 0x38
-	ldr	r5, [sp, #36]	@ 0x24
-	ldr	r0, [sp, #52]	@ 0x34
-	.2byte	0x1C29
+	str	r1, [sp, #56]
+	ldr	r5, [sp, #36]
+	ldr	r0, [sp, #52]
+	add	r1, r5, #0
 	mul	r1, r0
-	ldr	r2, [sp, #40]	@ 0x28
-	ldr	r3, [sp, #56]	@ 0x38
-	.2byte	0x1C10
+	ldr	r2, [sp, #40]
+	ldr	r3, [sp, #56]
+	add	r0, r2, #0
 	mul	r0, r3
 	add	r1, r1, r0
 	b	.L_48ec2
 .L_48ec0:
-	ldr	r1, [sp, #60]	@ 0x3c
+	ldr	r1, [sp, #60]
 .L_48ec2:
-	ldr	r5, [sp, #60]	@ 0x3c
+	ldr	r5, [sp, #60]
 	cmp	r6, r5
 	ble	.L_48f0a
 	cmp	r6, r1
@@ -260,25 +260,25 @@ sub_08048CE4:
 	ldrh	r0, [r4, #0]
 	add	r0, r8
 	strh	r0, [r4, #0]
-	ldr	r0, [sp, #44]	@ 0x2c
+	ldr	r0, [sp, #44]
 	cmp	r0, #0
 	bge	.L_48edc
-	ldr	r2, [pc, #140]	@ (0x8048f68)
+	ldr	r2, .L_48f68	@ =0x00000FFF
 	add	r0, r0, r2
 .L_48edc:
 	asr	r0, r0, #12
-	ldr	r3, [sp, #108]	@ 0x6c
+	ldr	r3, [sp, #108]
 	ldrh	r3, [r3, #0]
 	add	r0, r0, r3
 	ldr	r5, [sp, #4]
 	strh	r0, [r5, #0]
-	ldr	r0, [sp, #104]	@ 0x68
+	ldr	r0, [sp, #104]
 	ldr	r3, [sp, #8]
 	add	r2, r0, r3
-	ldr	r0, [sp, #48]	@ 0x30
+	ldr	r0, [sp, #48]
 	cmp	r0, #0
 	bge	.L_48ef8
-	ldr	r5, [pc, #112]	@ (0x8048f68)
+	ldr	r5, .L_48f68	@ =0x00000FFF
 	add	r0, r0, r5
 .L_48ef8:
 	asr	r0, r0, #12
@@ -286,39 +286,39 @@ sub_08048CE4:
 	add	r0, r0, r2
 	ldr	r2, [sp, #8]
 	strh	r0, [r2, #0]
-	ldr	r3, [sp, #176]	@ 0xb0
+	ldr	r3, [sp, #176]
 	ldrb	r0, [r3, #0]
 	add	r0, #1
 	strb	r0, [r3, #0]
 .L_48f0a:
-	ldr	r5, [sp, #60]	@ 0x3c
+	ldr	r5, [sp, #60]
 	cmp	r1, r5
 	ble	.L_48f54
 	cmp	r1, r6
 	ble	.L_48f54
 	ldrh	r0, [r4, #0]
-	ldr	r1, [sp, #88]	@ 0x58
+	ldr	r1, [sp, #88]
 	sub	r0, r0, r1
 	strh	r0, [r4, #0]
-	ldr	r0, [sp, #52]	@ 0x34
+	ldr	r0, [sp, #52]
 	cmp	r0, #0
 	bge	.L_48f26
-	ldr	r2, [pc, #68]	@ (0x8048f68)
+	ldr	r2, .L_48f68	@ =0x00000FFF
 	add	r0, r0, r2
 .L_48f26:
 	asr	r0, r0, #12
-	ldr	r3, [sp, #108]	@ 0x6c
+	ldr	r3, [sp, #108]
 	ldrh	r3, [r3, #0]
 	add	r0, r0, r3
 	ldr	r5, [sp, #4]
 	strh	r0, [r5, #0]
-	ldr	r0, [sp, #104]	@ 0x68
+	ldr	r0, [sp, #104]
 	ldr	r2, [sp, #8]
 	add	r1, r0, r2
-	ldr	r0, [sp, #56]	@ 0x38
+	ldr	r0, [sp, #56]
 	cmp	r0, #0
 	bge	.L_48f42
-	ldr	r3, [pc, #40]	@ (0x8048f68)
+	ldr	r3, .L_48f68	@ =0x00000FFF
 	add	r0, r0, r3
 .L_48f42:
 	asr	r0, r0, #12
@@ -326,7 +326,7 @@ sub_08048CE4:
 	add	r0, r0, r1
 	ldr	r5, [sp, #8]
 	strh	r0, [r5, #0]
-	ldr	r1, [sp, #176]	@ 0xb0
+	ldr	r1, [sp, #176]
 	ldrb	r0, [r1, #0]
 	add	r0, #1
 	strb	r0, [r1, #0]
@@ -336,37 +336,36 @@ sub_08048CE4:
 	ldrsh	r1, [r4, r2]
 	cmp	r1, #0
 	bge	.L_48f6c
-	mov	r3, #180	@ 0xb4
+	mov	r3, #180
 	lsl	r3, r3, #1
 	sub	r0, r3, r0
 	b	.L_48f78
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_48f68:
-	.4byte	0xFFF
+	.4byte	0x00000FFF
 .L_48f6c:
-	mov	r5, #180	@ 0xb4
+	mov	r5, #180
 	lsl	r5, r5, #1
 	cmp	r1, r5
 	ble	.L_48f7a
-	ldr	r1, [pc, #392]	@ (0x8049100)
+	ldr	r1, .L_49100	@ =0xFFFFFE98
 	add	r0, r0, r1
 .L_48f78:
 	strh	r0, [r4, #0]
 .L_48f7a:
-	ldr	r2, [sp, #104]	@ 0x68
+	ldr	r2, [sp, #104]
 	add	r2, #2
-	str	r2, [sp, #104]	@ 0x68
-	ldr	r3, [sp, #108]	@ 0x6c
+	str	r2, [sp, #104]
+	ldr	r3, [sp, #108]
 	add	r3, #2
-	str	r3, [sp, #108]	@ 0x6c
+	str	r3, [sp, #108]
 	add	r4, #2
-	ldr	r5, [sp, #112]	@ 0x70
+	ldr	r5, [sp, #112]
 	add	r5, #2
-	str	r5, [sp, #112]	@ 0x70
-	ldr	r0, [sp, #116]	@ 0x74
+	str	r5, [sp, #112]
+	ldr	r0, [sp, #116]
 	add	r0, #2
-	str	r0, [sp, #116]	@ 0x74
+	str	r0, [sp, #116]
 	ldr	r1, [sp, #32]
 	add	r1, #1
 	str	r1, [sp, #32]
@@ -378,13 +377,13 @@ sub_08048CE4:
 	ldr	r3, [sp, #20]
 	lsl	r0, r3, #16
 	asr	r0, r0, #4
-	str	r0, [sp, #64]	@ 0x40
+	str	r0, [sp, #64]
 	asr	r0, r0, #31
-	str	r0, [sp, #68]	@ 0x44
+	str	r0, [sp, #68]
 	mov	r4, #0
 	mov	r5, #0
-	str	r4, [sp, #72]	@ 0x48
-	str	r5, [sp, #76]	@ 0x4c
+	str	r4, [sp, #72]
+	str	r5, [sp, #76]
 	ldr	r5, [sp, #0]
 	sub	r5, #2
 	str	r5, [sp, #32]
@@ -393,10 +392,10 @@ sub_08048CE4:
 	b	.L_490ee
 .L_48fc2:
 	lsl	r0, r5, #1
-	.2byte	0x1C81
+	add	r1, r0, #2
 	ldr	r2, [sp, #8]
 	add	r2, r1, r2
-	str	r2, [sp, #100]	@ 0x64
+	str	r2, [sp, #100]
 	ldr	r3, [sp, #8]
 	add	r3, r3, r0
 	mov	sl, r3
@@ -411,127 +410,127 @@ sub_08048CE4:
 	mov	r2, #0
 	ldrsh	r0, [r1, r2]
 	bl	sub_08049500
-	.2byte	0x1C04
+	add	r4, r0, #0
 	lsl	r4, r4, #16
 	asr	r5, r4, #16
 	mov	r3, r9
 	mov	r1, #0
 	ldrsh	r0, [r3, r1]
 	bl	sub_0804947C
-	.2byte	0x1C06
+	add	r6, r0, #0
 	lsl	r6, r6, #16
 	asr	r7, r6, #16
-	str	r5, [sp, #92]	@ 0x5c
+	str	r5, [sp, #92]
 	asr	r4, r4, #31
-	str	r4, [sp, #96]	@ 0x60
-	ldr	r0, [sp, #92]	@ 0x5c
-	ldr	r1, [sp, #96]	@ 0x60
-	ldr	r2, [sp, #64]	@ 0x40
-	ldr	r3, [sp, #68]	@ 0x44
+	str	r4, [sp, #96]
+	ldr	r0, [sp, #92]
+	ldr	r1, [sp, #96]
+	ldr	r2, [sp, #64]
+	ldr	r3, [sp, #68]
 	bl	sub_080F918C
-	str	r0, [sp, #80]	@ 0x50
-	str	r1, [sp, #84]	@ 0x54
-	.2byte	0x1C3C
+	str	r0, [sp, #80]
+	str	r1, [sp, #84]
+	add	r4, r7, #0
 	asr	r5, r6, #31
-	.2byte	0x1C29
-	.2byte	0x1C20
-	ldr	r2, [sp, #72]	@ 0x48
-	ldr	r3, [sp, #76]	@ 0x4c
+	add	r1, r5, #0
+	add	r0, r4, #0
+	ldr	r2, [sp, #72]
+	ldr	r3, [sp, #76]
 	bl	sub_080F918C
-	ldr	r2, [sp, #80]	@ 0x50
-	ldr	r3, [sp, #84]	@ 0x54
+	ldr	r2, [sp, #80]
+	ldr	r3, [sp, #84]
 	sub	r2, r2, r0
 	sbc	r3, r1
-	str	r2, [sp, #80]	@ 0x50
-	str	r3, [sp, #84]	@ 0x54
-	.2byte	0x1C29
-	.2byte	0x1C20
-	ldr	r2, [sp, #64]	@ 0x40
-	ldr	r3, [sp, #68]	@ 0x44
+	str	r2, [sp, #80]
+	str	r3, [sp, #84]
+	add	r1, r5, #0
+	add	r0, r4, #0
+	ldr	r2, [sp, #64]
+	ldr	r3, [sp, #68]
 	bl	sub_080F918C
-	.2byte	0x1C0D
-	.2byte	0x1C04
-	ldr	r0, [sp, #92]	@ 0x5c
-	ldr	r1, [sp, #96]	@ 0x60
-	ldr	r2, [sp, #72]	@ 0x48
-	ldr	r3, [sp, #76]	@ 0x4c
+	add	r5, r1, #0
+	add	r4, r0, #0
+	ldr	r0, [sp, #92]
+	ldr	r1, [sp, #96]
+	ldr	r2, [sp, #72]
+	ldr	r3, [sp, #76]
 	bl	sub_080F918C
-	.2byte	0x1C0F
-	.2byte	0x1C06
+	add	r7, r1, #0
+	add	r6, r0, #0
 	add	r6, r6, r4
 	adc	r7, r5
-	ldr	r4, [sp, #80]	@ 0x50
-	ldr	r5, [sp, #84]	@ 0x54
-	ldr	r3, [sp, #84]	@ 0x54
+	ldr	r4, [sp, #80]
+	ldr	r5, [sp, #84]
+	ldr	r3, [sp, #84]
 	cmp	r3, #0
 	bge	.L_4906a
-	ldr	r4, [pc, #164]	@ (0x8049104)
-	ldr	r5, [pc, #164]	@ (0x8049108)
-	ldr	r0, [sp, #80]	@ 0x50
-	ldr	r1, [sp, #84]	@ 0x54
+	ldr	r4, .L_49104	@ =0x00FFFFFF
+	ldr	r5, .L_49108	@ =0x00000000
+	ldr	r0, [sp, #80]
+	ldr	r1, [sp, #84]
 	add	r4, r4, r0
 	adc	r5, r1
 .L_4906a:
 	lsl	r3, r5, #8
 	lsr	r2, r4, #24
-	.2byte	0x1C18
+	add	r0, r3, #0
 	orr	r0, r2
 	mov	r1, r8
 	ldrh	r1, [r1, #2]
 	add	r0, r0, r1
 	mov	r2, r8
 	strh	r0, [r2, #0]
-	.2byte	0x1C3D
-	.2byte	0x1C34
+	add	r5, r7, #0
+	add	r4, r6, #0
 	cmp	r7, #0
 	bge	.L_4908c
-	ldr	r4, [pc, #124]	@ (0x8049104)
-	ldr	r5, [pc, #128]	@ (0x8049108)
+	ldr	r4, .L_49104	@ =0x00FFFFFF
+	ldr	r5, .L_49108	@ =0x00000000
 	add	r4, r4, r6
 	adc	r5, r7
 .L_4908c:
 	lsl	r3, r5, #8
 	lsr	r2, r4, #24
-	.2byte	0x1C18
+	add	r0, r3, #0
 	orr	r0, r2
-	ldr	r3, [sp, #100]	@ 0x64
+	ldr	r3, [sp, #100]
 	ldrh	r3, [r3, #0]
 	add	r0, r0, r3
 	mov	r4, sl
 	strh	r0, [r4, #0]
-	ldr	r2, [sp, #80]	@ 0x50
-	ldr	r3, [sp, #84]	@ 0x54
+	ldr	r2, [sp, #80]
+	ldr	r3, [sp, #84]
 	cmp	r3, #0
 	bge	.L_490ae
-	ldr	r0, [pc, #100]	@ (0x804910c)
-	ldr	r1, [pc, #100]	@ (0x8049110)
+	ldr	r0, .L_4910c	@ =0x00000FFF
+	ldr	r1, .L_49110	@ =0x00000000
 	add	r2, r2, r0
 	adc	r3, r1
 .L_490ae:
 	lsl	r1, r3, #20
 	lsr	r0, r2, #12
 	orr	r1, r0
-	str	r1, [sp, #64]	@ 0x40
+	str	r1, [sp, #64]
 	asr	r2, r3, #12
-	str	r2, [sp, #68]	@ 0x44
-	.2byte	0x1C3D
-	.2byte	0x1C34
+	str	r2, [sp, #68]
+	add	r5, r7, #0
+	add	r4, r6, #0
 	cmp	r5, #0
 	bge	.L_490ca
-	ldr	r0, [pc, #72]	@ (0x804910c)
-	ldr	r1, [pc, #72]	@ (0x8049110)
+	ldr	r0, .L_4910c	@ =0x00000FFF
+	ldr	r1, .L_49110	@ =0x00000000
 	add	r4, r4, r0
 	adc	r5, r1
 .L_490ca:
 	lsl	r1, r5, #20
 	lsr	r0, r4, #12
 	orr	r1, r0
-	str	r1, [sp, #72]	@ 0x48
+	str	r1, [sp, #72]
 	asr	r4, r5, #12
-	str	r4, [sp, #76]	@ 0x4c
-	ldr	r5, [sp, #100]	@ 0x64
+	str	r4, [sp, #76]
+	ldr	r5, [sp, #100]
 	sub	r5, #2
-	str	r5, [sp, #100]	@ 0x64
+	str	r5, [sp, #100]
 	mov	r0, #2
 	neg	r0, r0
 	add	sl, r0
@@ -542,7 +541,7 @@ sub_08048CE4:
 	blt	.L_490ee
 	b	.L_48fde
 .L_490ee:
-	add	sp, #120	@ 0x78
+	add	sp, #120
 	pop	{r3, r4, r5}
 	mov	r8, r3
 	mov	r9, r4
@@ -550,20 +549,15 @@ sub_08048CE4:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_49100:
 	.4byte	0xFFFFFE98
-	.align	2, 0
 .L_49104:
-	.4byte	0xFFFFFF
-	.align	2, 0
+	.4byte	0x00FFFFFF
 .L_49108:
-	.4byte	0x0
-	.align	2, 0
+	.4byte	0x00000000
 .L_4910c:
-	.4byte	0xFFF
-	.align	2, 0
+	.4byte	0x00000FFF
 .L_49110:
-	.4byte	0x0
+	.4byte	0x00000000
 .size sub_08048CE4, .-sub_08048CE4

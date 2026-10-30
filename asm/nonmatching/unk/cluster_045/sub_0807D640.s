@@ -7,18 +7,18 @@
 sub_0807D640:
 	push	{r4, lr}
 	sub	sp, #20
-	.2byte	0x1C04
+	add	r4, r0, #0
 	mov	r1, #0
 	str	r1, [sp, #16]
 	ldr	r0, [r4, #0]
 	add	r2, sp, #16
 	ldrb	r3, [r4, #14]
-	add	r3, #201	@ 0xc9
+	add	r3, #201
 	str	r1, [sp, #0]
-	mov	r1, #148	@ 0x94
+	mov	r1, #148
 	bl	sub_08012310
-	.2byte	0x1C01
-	cmp	r1, #255	@ 0xff
+	add	r1, r0, #0
+	cmp	r1, #255
 	bne	.L_7d666
 	mov	r0, #1
 	strb	r0, [r4, #16]
@@ -29,7 +29,7 @@ sub_0807D640:
 	lsr	r1, r1, #24
 	add	r2, sp, #4
 	bl	sub_08012710
-	.2byte	0x1C20
+	add	r0, r4, #0
 	add	r0, #8
 	add	r1, sp, #4
 	mov	r2, #2
@@ -43,5 +43,5 @@ sub_0807D640:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0807D640, .-sub_0807D640

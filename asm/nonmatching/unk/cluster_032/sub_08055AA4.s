@@ -20,36 +20,36 @@ sub_08055AA4:
 	beq	.L_55aec
 	b	.L_55af4
 .L_55abe:
-	.2byte	0x1C02
-	add	r2, #86	@ 0x56
+	add	r2, r0, #0
+	add	r2, #86
 	mov	r3, #0
 	ldrsh	r2, [r2, r3]
-	cmp	r2, #40	@ 0x28
+	cmp	r2, #40
 	ble	.L_55ad0
 .L_55aca:
-	add	r0, #238	@ 0xee
+	add	r0, #238
 	strb	r1, [r0, #0]
 	b	.L_55af4
 .L_55ad0:
 	cmp	r2, #20
 	ble	.L_55adc
-	.2byte	0x1C01
-	add	r1, #238	@ 0xee
+	add	r1, r0, #0
+	add	r1, #238
 	mov	r0, #2
 	b	.L_55af2
 .L_55adc:
-	.2byte	0x1C01
-	add	r1, #238	@ 0xee
+	add	r1, r0, #0
+	add	r1, #238
 	mov	r0, #3
 	b	.L_55af2
 .L_55ae4:
-	.2byte	0x1C01
-	add	r1, #238	@ 0xee
+	add	r1, r0, #0
+	add	r1, #238
 	mov	r0, #4
 	b	.L_55af2
 .L_55aec:
-	.2byte	0x1C01
-	add	r1, #238	@ 0xee
+	add	r1, r0, #0
+	add	r1, #238
 	mov	r0, #5
 .L_55af2:
 	strb	r0, [r1, #0]

@@ -7,7 +7,7 @@
 sub_0800F77C:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C04
+	add	r4, r0, #0
 	mov	r5, sp
 	lsl	r1, r1, #16
 	asr	r1, r1, #16

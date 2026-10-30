@@ -6,36 +6,36 @@
 .thumb_func
 sub_080321EC:
 	push	{r4, r5, r6, r7, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0D
-	.2byte	0x1C16
+	add	r4, r0, #0
+	add	r5, r1, #0
+	add	r6, r2, #0
 	mov	r7, #0
-	str	r7, [r4, #116]	@ 0x74
+	str	r7, [r4, #116]
 	bl	sub_0802FF7C
-	.2byte	0x1C01
+	add	r1, r0, #0
 	cmp	r1, r5
 	beq	.L_3222a
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0802FF0C
 	cmp	r0, #1
 	bne	.L_32216
-	str	r0, [r4, #116]	@ 0x74
-	.2byte	0x1C20
+	str	r0, [r4, #116]
+	add	r0, r4, #0
 	bl	sub_0802FE08
 	b	.L_32232
 .L_32216:
-	mov	r1, #176	@ 0xb0
+	mov	r1, #176
 	lsl	r1, r1, #1
 	add	r0, r4, r1
 	str	r7, [r0, #0]
-	.2byte	0x1C20
-	.2byte	0x1C29
-	.2byte	0x1C32
+	add	r0, r4, #0
+	add	r1, r5, #0
+	add	r2, r6, #0
 	bl	sub_0803215C
 	b	.L_32232
 .L_3222a:
-	.2byte	0x1C20
-	.2byte	0x1C32
+	add	r0, r4, #0
+	add	r2, r6, #0
 	bl	sub_0803215C
 .L_32232:
 	pop	{r4, r5, r6, r7}

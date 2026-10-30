@@ -6,20 +6,20 @@
 .thumb_func
 sub_08070EA0:
 	push	{lr}
-	.2byte	0x1C01
-	add	r0, #118	@ 0x76
+	add	r1, r0, #0
+	add	r0, #118
 	ldrb	r0, [r0, #0]
 	cmp	r0, #16
 	beq	.L_70eca
 	cmp	r0, #1
 	beq	.L_70eca
-	.2byte	0x1C08
-	add	r0, #86	@ 0x56
+	add	r0, r1, #0
+	add	r0, #86
 	mov	r2, #0
 	ldrsh	r0, [r0, r2]
 	cmp	r0, #0
 	ble	.L_70eca
-	.2byte	0x1C08
+	add	r0, r1, #0
 	bl	sub_0801C548
 	cmp	r0, #0
 	bne	.L_70eca

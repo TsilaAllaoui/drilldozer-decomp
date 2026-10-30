@@ -6,8 +6,8 @@
 .thumb_func
 sub_08000960:
 	push	{lr}
-	.2byte	0x1C02
-	ldr	r0, [pc, #16]	@ (0x8000978)
+	add	r2, r0, #0
+	ldr	r0, .L_978	@ =0x02020D84
 	ldr	r1, [r0, #0]
 	cmp	r1, #0
 	beq	.L_982
@@ -15,12 +15,11 @@ sub_08000960:
 	ldr	r0, [r1, #16]
 	cmp	r0, r2
 	bne	.L_97c
-	.2byte	0x1C08
+	add	r0, r1, #0
 	b	.L_984
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_978:
-	.4byte	0x2020D84
+	.4byte	0x02020D84
 .L_97c:
 	ldr	r1, [r1, #4]
 	cmp	r1, #0

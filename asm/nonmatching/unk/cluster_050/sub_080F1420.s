@@ -6,18 +6,17 @@
 .thumb_func
 sub_080F1420:
 	push	{lr}
-	.2byte	0x1C01
-	ldr	r3, [pc, #12]	@ (0x80f1434)
+	add	r1, r0, #0
+	ldr	r3, .L_f1434	@ =0x084E1028
 	ldr	r0, [r1, #0]
-	cmp	r0, #255	@ 0xff
+	cmp	r0, #255
 	beq	.L_f1438
 	lsl	r0, r0, #4
 	add	r3, r0, r3
 	b	.L_f1452
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_f1434:
-	.4byte	0x84E1028
+	.4byte	0x084E1028
 .L_f1438:
 	mov	r0, #0
 	str	r0, [r1, #0]
@@ -35,8 +34,8 @@ sub_080F1420:
 	bne	.L_f1444
 .L_f1452:
 	ldr	r0, [r3, #4]
-	str	r0, [r1, #44]	@ 0x2c
-	str	r3, [r1, #48]	@ 0x30
+	str	r0, [r1, #44]
+	str	r3, [r1, #48]
 	ldr	r0, [r3, #16]
 	str	r0, [r1, #12]
 	pop	{r0}

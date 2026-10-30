@@ -7,8 +7,8 @@
 sub_0806BD74:
 	push	{r4, lr}
 	sub	sp, #8
-	.2byte	0x1C02
-	ldr	r0, [pc, #68]	@ (0x806bdc0)
+	add	r2, r0, #0
+	ldr	r0, .L_6bdc0	@ =0x00030101
 	str	r0, [sp, #4]
 	lsl	r1, r2, #16
 	asr	r1, r1, #16
@@ -16,36 +16,33 @@ sub_0806BD74:
 	add	r0, sp, #4
 	mov	r3, #0
 	bl	sub_08005490
-	.2byte	0x1C04
-	ldr	r1, [pc, #52]	@ (0x806bdc4)
-	mov	r3, #206	@ 0xce
+	add	r4, r0, #0
+	ldr	r1, .L_6bdc4	@ =0x082C3CA4
+	mov	r3, #206
 	lsl	r3, r3, #1
-	mov	r0, #153	@ 0x99
+	mov	r0, #153
 	lsl	r0, r0, #2
 	str	r0, [sp, #0]
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r2, #8
 	bl	sub_080055A4
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #0
 	mov	r2, #0
 	bl	sub_080057F0
-	ldr	r1, [pc, #24]	@ (0x806bdc8)
-	.2byte	0x1C20
+	ldr	r1, .L_6bdc8	@ =0x082C3CC4
+	add	r0, r4, #0
 	bl	sub_08005814
-	.2byte	0x1C20
+	add	r0, r4, #0
 	add	sp, #8
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_6bdc0:
-	.4byte	0x30101
-	.align	2, 0
+	.4byte	0x00030101
 .L_6bdc4:
-	.4byte	0x82C3CA4
-	.align	2, 0
+	.4byte	0x082C3CA4
 .L_6bdc8:
-	.4byte	0x82C3CC4
+	.4byte	0x082C3CC4
 .size sub_0806BD74, .-sub_0806BD74

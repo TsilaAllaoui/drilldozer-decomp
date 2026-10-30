@@ -11,17 +11,17 @@ sub_0800CFF8:
 	mov	r5, r8
 	push	{r5, r6, r7}
 	sub	sp, #32
-	.2byte	0x1C04
-	.2byte	0x1C0F
-	.2byte	0x1C16
+	add	r4, r0, #0
+	add	r7, r1, #0
+	add	r6, r2, #0
 	str	r3, [sp, #20]
-	ldr	r5, [sp, #64]	@ 0x40
-	ldr	r0, [r4, #52]	@ 0x34
+	ldr	r5, [sp, #64]
+	ldr	r0, [r4, #52]
 	bl	sub_08015F84
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
 	str	r0, [sp, #24]
-	ldr	r0, [r4, #52]	@ 0x34
+	ldr	r0, [r4, #52]
 	mov	r2, #4
 	ldrsh	r1, [r7, r2]
 	mov	r3, #0
@@ -30,7 +30,7 @@ sub_0800CFF8:
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
 	mov	sl, r0
-	ldr	r0, [r4, #52]	@ 0x34
+	ldr	r0, [r4, #52]
 	mov	r2, #6
 	ldrsh	r1, [r7, r2]
 	mov	r3, #0
@@ -41,7 +41,7 @@ sub_0800CFF8:
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
 	mov	r8, r0
-	ldr	r0, [r4, #52]	@ 0x34
+	ldr	r0, [r4, #52]
 	mov	r2, #4
 	ldrsh	r1, [r7, r2]
 	mov	r3, #2
@@ -67,7 +67,7 @@ sub_0800CFF8:
 	str	r2, [sp, #28]
 .L_d07a:
 	ldr	r3, [sp, #24]
-	.2byte	0x1C30
+	add	r0, r6, #0
 	mul	r0, r3
 	add	r0, sl
 	ldr	r1, [sp, #28]
@@ -98,13 +98,13 @@ sub_0800CFF8:
 	ldrh	r0, [r5, #16]
 	add	r0, #1
 	strh	r0, [r5, #16]
-	.2byte	0x1C60
+	add	r0, r4, #1
 	lsl	r0, r0, #16
 	lsr	r4, r0, #16
 	cmp	r4, r8
 	bls	.L_d098
 .L_d0c2:
-	.2byte	0x1C70
+	add	r0, r6, #1
 	lsl	r0, r0, #16
 	lsr	r6, r0, #16
 	cmp	r6, r9
@@ -120,5 +120,5 @@ sub_0800CFF8:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0800CFF8, .-sub_0800CFF8

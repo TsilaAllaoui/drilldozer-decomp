@@ -5,9 +5,21 @@
 .type sub_080D664C, %function
 .thumb_func
 sub_080D664C:
-	@ Exact original ROM bytes from 0x080D664C.
-	.byte	0x00, 0xB5, 0x02, 0x1C, 0x7C, 0x30, 0xC0, 0x7C, 0x01, 0x28, 0x05, 0xD0, 0x10, 0x1C, 0x00, 0x22
-	.byte	0x45, 0xF7, 0x64, 0xFD, 0x01, 0x20, 0x00, 0xE0, 0x00, 0x20, 0x02, 0xBC
+	push	{lr}
+	add	r2, r0, #0
+	add	r0, #124
+	ldrb	r0, [r0, #19]
+	cmp	r0, #1
+	beq	.L_d6664
+	add	r0, r2, #0
+	mov	r2, #0
+	bl	sub_0801C128
+	mov	r0, #1
+	b	.L_d6666
+.L_d6664:
+	mov	r0, #0
+.L_d6666:
+	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080D664C, .-sub_080D664C

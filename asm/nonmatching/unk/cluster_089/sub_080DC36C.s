@@ -5,8 +5,21 @@
 .type sub_080DC36C, %function
 .thumb_func
 sub_080DC36C:
-	@ Exact original ROM bytes from 0x080DC36C.
-	.byte	0x30, 0xB5, 0x0A, 0x1C, 0x08, 0x32, 0x48, 0x68, 0x38, 0xC8, 0x38, 0xC2, 0x38, 0xC8, 0x38, 0xC2
-	.byte	0x38, 0xC8, 0x38, 0xC2, 0x38, 0xC8, 0x38, 0xC2, 0x48, 0x68, 0x00, 0xF0, 0x81, 0xF8, 0x30, 0xBC
-	.byte	0x01, 0xBC, 0x00, 0x47
+	push	{r4, r5, lr}
+	add	r2, r1, #0
+	add	r2, #8
+	ldr	r0, [r1, #4]
+	ldmia	r0!, {r3, r4, r5}
+	stmia	r2!, {r3, r4, r5}
+	ldmia	r0!, {r3, r4, r5}
+	stmia	r2!, {r3, r4, r5}
+	ldmia	r0!, {r3, r4, r5}
+	stmia	r2!, {r3, r4, r5}
+	ldmia	r0!, {r3, r4, r5}
+	stmia	r2!, {r3, r4, r5}
+	ldr	r0, [r1, #4]
+	bl	sub_080DC48C
+	pop	{r4, r5}
+	pop	{r0}
+	bx	r0
 .size sub_080DC36C, .-sub_080DC36C

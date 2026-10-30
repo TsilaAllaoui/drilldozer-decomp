@@ -8,23 +8,23 @@ sub_08035960:
 	push	{r4, r5, lr}
 	sub	sp, #12
 	bl	sub_08011720
-	.2byte	0x1C05
+	add	r5, r0, #0
 	bl	sub_08017800
 	cmp	r0, #3
 	bne	.L_3599a
-	.2byte	0x1C28
+	add	r0, r5, #0
 	add	r1, sp, #4
 	bl	sub_0802E77C
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_080119D8
-	.2byte	0x1C04
-	.2byte	0x1C28
+	add	r4, r0, #0
+	add	r0, r5, #0
 	bl	sub_0801758C
-	.2byte	0x1C02
+	add	r2, r0, #0
 	mov	r0, #0
 	str	r0, [sp, #0]
-	.2byte	0x1C28
-	.2byte	0x1C21
+	add	r0, r5, #0
+	add	r1, r4, #0
 	add	r3, sp, #4
 	bl	sub_080359A4
 	b	.L_3599c

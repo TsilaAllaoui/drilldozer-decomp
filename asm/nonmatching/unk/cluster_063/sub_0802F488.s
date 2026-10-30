@@ -7,12 +7,12 @@
 sub_0802F488:
 	push	{r4, r5, r6, lr}
 	sub	sp, #32
-	.2byte	0x1C06
+	add	r6, r0, #0
 	mov	r1, sp
 	bl	sub_08011824
 	add	r4, sp, #8
-	.2byte	0x1C30
-	.2byte	0x1C21
+	add	r0, r6, #0
+	add	r1, r4, #0
 	bl	sub_0802EC54
 	ldr	r0, [sp, #0]
 	ldr	r1, [sp, #8]
@@ -23,22 +23,22 @@ sub_0802F488:
 	add	r0, r0, r1
 	str	r0, [sp, #4]
 	add	r5, sp, #16
-	.2byte	0x1C30
+	add	r0, r6, #0
 	mov	r1, sp
-	.2byte	0x1C2A
+	add	r2, r5, #0
 	bl	sub_0802F8A8
-	.2byte	0x1C30
-	.2byte	0x1C29
+	add	r0, r6, #0
+	add	r1, r5, #0
 	bl	sub_0802F4E8
 	cmp	r0, #1
 	beq	.L_2f4dc
 	add	r4, sp, #24
-	.2byte	0x1C30
-	.2byte	0x1C21
+	add	r0, r6, #0
+	add	r1, r4, #0
 	bl	sub_0802F8C4
-	.2byte	0x1C30
-	.2byte	0x1C21
-	.2byte	0x1C2A
+	add	r0, r6, #0
+	add	r1, r4, #0
+	add	r2, r5, #0
 	bl	sub_0802F114
 	b	.L_2f4de
 .L_2f4dc:
@@ -48,5 +48,5 @@ sub_0802F488:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0802F488, .-sub_0802F488

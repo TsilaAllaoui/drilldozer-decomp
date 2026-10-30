@@ -10,7 +10,7 @@ sub_080120A8:
 	mov	r6, r9
 	mov	r5, r8
 	push	{r5, r6, r7}
-	.2byte	0x1C06
+	add	r6, r0, #0
 	mov	r9, r2
 	mov	sl, r3
 	ldr	r7, [sp, #32]
@@ -27,15 +27,14 @@ sub_080120A8:
 	lsl	r0, r5, #4
 	add	r4, r0, r6
 	ldrh	r1, [r4, #10]
-	ldr	r0, [pc, #8]	@ (0x80120dc)
+	ldr	r0, .L_120dc	@ =0x0000FFFF
 	cmp	r1, r0
 	bne	.L_120e0
 	str	r5, [r7, #0]
 	mov	r0, #0
 	b	.L_1210c
-	.align	2, 0
 .L_120dc:
-	.4byte	0xFFFF
+	.4byte	0x0000FFFF
 .L_120e0:
 	cmp	r1, r8
 	bne	.L_12108
@@ -48,7 +47,7 @@ sub_080120A8:
 	cmp	r0, #1
 	bne	.L_12108
 	mov	r0, sl
-	.2byte	0x1C21
+	add	r1, r4, #0
 	ldmia	r1!, {r2, r3, r4}
 	stmia	r0!, {r2, r3, r4}
 	ldr	r1, [r1, #0]
@@ -67,5 +66,5 @@ sub_080120A8:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080120A8, .-sub_080120A8

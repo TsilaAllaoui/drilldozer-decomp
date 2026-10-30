@@ -6,36 +6,32 @@
 .thumb_func
 sub_080D212C:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
-	mov	r0, #36	@ 0x24
+	add	r5, r0, #0
+	mov	r0, #36
 	bl	sub_08001728
-	.2byte	0x1C04
+	add	r4, r0, #0
 	str	r5, [r4, #0]
-	ldr	r0, [pc, #32]	@ (0x80d215c)
+	ldr	r0, .L_d215c	@ =0x084713D8
 	str	r0, [r4, #4]
-	ldr	r1, [pc, #32]	@ (0x80d2160)
+	ldr	r1, .L_d2160	@ =0x080D21C5
 	mov	r0, #0
-	.2byte	0x1C22
+	add	r2, r4, #0
 	bl	sub_0807CC74
-	ldr	r0, [pc, #24]	@ (0x80d2164)
-	ldr	r2, [pc, #28]	@ (0x80d2168)
-	.2byte	0x1C21
+	ldr	r0, .L_d2164	@ =0x080D216D
+	ldr	r2, .L_d2168	@ =0x00005808
+	add	r1, r4, #0
 	bl	sub_0800089C
-	.2byte	0x1C20
+	add	r0, r4, #0
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_d215c:
-	.4byte	0x84713D8
-	.align	2, 0
+	.4byte	0x084713D8
 .L_d2160:
-	.4byte	0x80D21C5
-	.align	2, 0
+	.4byte	0x080D21C5
 .L_d2164:
-	.4byte	0x80D216D
-	.align	2, 0
+	.4byte	0x080D216D
 .L_d2168:
-	.4byte	0x5808
+	.4byte	0x00005808
 .size sub_080D212C, .-sub_080D212C

@@ -8,7 +8,7 @@ sub_0800F870:
 	push	{r4, lr}
 	lsl	r2, r2, #16
 	lsr	r2, r2, #16
-	ldr	r3, [r0, #52]	@ 0x34
+	ldr	r3, [r0, #52]
 	lsl	r1, r1, #16
 	asr	r1, r1, #16
 	mov	r4, #16
@@ -34,7 +34,7 @@ sub_0800F870:
 	neg	r0, r0
 	b	.L_f8b8
 .L_f8a6:
-	.2byte	0x1C18
+	add	r0, r3, #0
 	bl	sub_08015EDC
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
@@ -45,5 +45,5 @@ sub_0800F870:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0800F870, .-sub_0800F870

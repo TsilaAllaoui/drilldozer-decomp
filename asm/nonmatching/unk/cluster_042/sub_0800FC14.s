@@ -6,10 +6,10 @@
 .thumb_func
 sub_0800FC14:
 	push	{r4, r5, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	lsl	r2, r2, #16
 	lsr	r2, r2, #16
-	ldr	r3, [r4, #52]	@ 0x34
+	ldr	r3, [r4, #52]
 	lsl	r1, r1, #16
 	asr	r1, r1, #16
 	mov	r5, #16
@@ -30,9 +30,9 @@ sub_0800FC14:
 	ldrsh	r0, [r3, r5]
 	cmp	r2, r0
 	bge	.L_fc50
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0800D814
-	cmp	r0, #180	@ 0xb4
+	cmp	r0, #180
 	beq	.L_fc54
 .L_fc50:
 	mov	r0, #0

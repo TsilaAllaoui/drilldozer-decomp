@@ -11,7 +11,7 @@ sub_0804A034:
 	mov	r5, r8
 	push	{r5, r6, r7}
 	sub	sp, #8
-	.2byte	0x1C04
+	add	r4, r0, #0
 	lsl	r1, r1, #16
 	lsr	r1, r1, #16
 	mov	r9, r1
@@ -45,7 +45,7 @@ sub_0804A034:
 	ldr	r2, [r0, #4]
 	mov	r0, #3
 	neg	r0, r0
-	.2byte	0x1C0D
+	add	r5, r1, #0
 	cmp	r2, r0
 	beq	.L_4a08e
 	ldrb	r6, [r4, #18]
@@ -56,7 +56,7 @@ sub_0804A034:
 	ldr	r0, [sp, #0]
 	add	r0, r8
 	ldr	r2, [sp, #4]
-	.2byte	0x1C01
+	add	r1, r0, #0
 	mul	r1, r2
 	ldrb	r0, [r4, #20]
 	lsl	r0, r0, #28
@@ -64,7 +64,7 @@ sub_0804A034:
 	add	r0, r0, r1
 	lsl	r0, r0, #24
 	lsr	r2, r0, #24
-	.2byte	0x1C17
+	add	r7, r2, #0
 	ldr	r3, [r4, #8]
 	cmp	r3, #0
 	beq	.L_4a0ba
@@ -77,9 +77,9 @@ sub_0804A034:
 	ldr	r0, [r4, #0]
 	add	r0, r5, r0
 	ldr	r1, [r0, #0]
-	.2byte	0x1C20
-	.2byte	0x1C32
-	.2byte	0x1C3B
+	add	r0, r4, #0
+	add	r2, r6, #0
+	add	r3, r7, #0
 	bl	sub_08049F80
 	mov	r0, r9
 	add	r0, #1

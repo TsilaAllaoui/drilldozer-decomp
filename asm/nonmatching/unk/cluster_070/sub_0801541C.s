@@ -9,10 +9,10 @@ sub_0801541C:
 	mov	r7, r8
 	push	{r7}
 	sub	sp, #8
-	.2byte	0x1C06
-	.2byte	0x1C0F
-	.2byte	0x1C14
-	.2byte	0x1C1D
+	add	r6, r0, #0
+	add	r7, r1, #0
+	add	r4, r2, #0
+	add	r5, r3, #0
 	mov	r0, #0
 	mov	r8, r0
 	mov	r0, #2
@@ -22,48 +22,45 @@ sub_0801541C:
 	add	r2, #1
 	lsl	r2, r2, #16
 	asr	r2, r2, #16
-	.2byte	0x1C30
+	add	r0, r6, #0
 	bl	sub_08014E20
 	cmp	r0, #4
 	bhi	.L_15496
 	lsl	r0, r0, #2
-	ldr	r1, [pc, #8]	@ (0x8015454)
+	ldr	r1, .L_15454	@ =0x08015458
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]
 	mov	pc, r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_15454:
-	.4byte	.L_15458
-.L_15458:
-	strb	r4, [r5, r1]
-	lsr	r1, r0, #32
-	strb	r2, [r6, r1]
-	lsr	r1, r0, #32
-	strb	r0, [r0, r2]
-	lsr	r1, r0, #32
-	strb	r4, [r0, r2]
-	lsr	r1, r0, #32
-	strb	r2, [r6, r1]
-	lsr	r1, r0, #32
+	.4byte	0x08015458
+	.4byte	0x0801546C	@ case .L_1546c
+	.4byte	0x08015472	@ case .L_15472
+	.4byte	0x08015480	@ case .L_15480
+	.4byte	0x08015484	@ case .L_15484
+	.4byte	0x08015472	@ case .L_15472
+.L_1546c:
 	mov	r1, #0
 	mov	r8, r1
 	b	.L_15496
-	.2byte	0x1C30
-	.2byte	0x1C39
-	.2byte	0x1C22
-	.2byte	0x1C2B
+.L_15472:
+	add	r0, r6, #0
+	add	r1, r7, #0
+	add	r2, r4, #0
+	add	r3, r5, #0
 	bl	sub_0801535C
 	b	.L_15494
+.L_15480:
 	mov	r0, #2
 	b	.L_15486
+.L_15484:
 	mov	r0, #3
 .L_15486:
 	str	r0, [sp, #0]
-	.2byte	0x1C30
-	.2byte	0x1C39
-	.2byte	0x1C22
-	.2byte	0x1C2B
+	add	r0, r6, #0
+	add	r1, r7, #0
+	add	r2, r4, #0
+	add	r3, r5, #0
 	bl	sub_08015278
 .L_15494:
 	mov	r8, r0
@@ -85,10 +82,10 @@ sub_0801541C:
 	mov	r4, sp
 	add	r4, #6
 	strh	r0, [r4, #0]
-	.2byte	0x1C30
-	.2byte	0x1C39
+	add	r0, r6, #0
+	add	r1, r7, #0
 	add	r2, sp, #4
-	.2byte	0x1C23
+	add	r3, r4, #0
 	bl	sub_080150F4
 	cmp	r0, #1
 	beq	.L_154d2
@@ -116,5 +113,5 @@ sub_0801541C:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0801541C, .-sub_0801541C

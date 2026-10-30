@@ -6,8 +6,8 @@
 .thumb_func
 sub_080F1490:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C05
-	.2byte	0x1C0E
+	add	r5, r0, #0
+	add	r6, r1, #0
 .L_f1496:
 	ldr	r1, [r5, #4]
 	lsl	r0, r1, #1
@@ -19,9 +19,9 @@ sub_080F1490:
 	beq	.L_f14bc
 	ldr	r2, [r0, #4]
 	ldr	r3, [r0, #8]
-	.2byte	0x1C28
-	.2byte	0x1C29
-	add	r1, #52	@ 0x34
+	add	r0, r5, #0
+	add	r1, r5, #0
+	add	r1, #52
 	bl	sub_080F8FC4
 	cmp	r0, #1
 	beq	.L_f1496

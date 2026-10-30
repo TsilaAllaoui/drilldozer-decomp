@@ -7,8 +7,8 @@
 sub_080733B8:
 	push	{r4, r5, r6, lr}
 	sub	sp, #4
-	.2byte	0x1C06
-	.2byte	0x1C0D
+	add	r6, r0, #0
+	add	r5, r1, #0
 	ldrb	r4, [r5, #4]
 	cmp	r4, #0
 	beq	.L_733cc
@@ -43,7 +43,7 @@ sub_080733B8:
 	ldrsh	r1, [r5, r2]
 	mov	r3, #8
 	ldrsh	r2, [r5, r3]
-	.2byte	0x1C2B
+	add	r3, r5, #0
 	add	r3, #12
 	ldr	r4, [r5, #20]
 	str	r4, [sp, #0]
@@ -60,9 +60,9 @@ sub_080733B8:
 	mov	r3, #0
 	bl	sub_0800CCA4
 .L_73428:
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08001768
-	.2byte	0x1C30
+	add	r0, r6, #0
 	bl	sub_0800090C
 .L_73434:
 	add	sp, #4

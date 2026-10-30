@@ -6,8 +6,8 @@
 .thumb_func
 sub_080F20A4:
 	push	{lr}
-	.2byte	0x1C01
-	add	r1, #88	@ 0x58
+	add	r1, r0, #0
+	add	r1, #88
 	mov	r3, #0
 	ldrsh	r2, [r1, r3]
 	asr	r3, r2, #1
@@ -16,7 +16,7 @@ sub_080F20A4:
 	asr	r1, r3, #1
 	add	r1, r3, r1
 	sub	r2, r2, r1
-	add	r0, #86	@ 0x56
+	add	r0, #86
 	mov	r1, #0
 	ldrsh	r0, [r0, r1]
 	cmp	r0, r2

@@ -5,18 +5,18 @@
 .type sub_08049F80, %function
 .thumb_func
 sub_08049F80:
-	.2byte	0xB5F0
+	push	{r4, r5, r6, r7, lr}
 	sub	sp, #24
-	.2byte	0x1C04
-	.2byte	0x1C0E
+	add	r4, r0, #0
+	add	r6, r1, #0
 	lsl	r2, r2, #24
 	lsr	r7, r2, #24
 	lsl	r3, r3, #24
 	lsr	r3, r3, #24
 	mov	ip, r3
-	ldr	r5, [pc, #84]	@ (0x8049fe8)
+	ldr	r5, .L_49fe8	@ =0x030056D0
 	ldrb	r1, [r5, #3]
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	and	r0, r1
 	lsl	r0, r0, #24
 	lsr	r3, r0, #24
@@ -47,18 +47,17 @@ sub_08049F80:
 	neg	r2, r2
 	str	r2, [sp, #12]
 	str	r6, [sp, #16]
-	.2byte	0x1C3A
+	add	r2, r7, #0
 	mov	r3, ip
 	bl	sub_0802C8E8
 	ldrb	r1, [r5, #3]
-	mov	r0, #127	@ 0x7f
+	mov	r0, #127
 	and	r0, r1
 	strb	r0, [r5, #3]
 	b	.L_4a02a
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_49fe8:
-	.4byte	0x30056D0
+	.4byte	0x030056D0
 .L_49fec:
 	add	r2, sp, #20
 	ldrb	r1, [r4, #21]
@@ -68,7 +67,7 @@ sub_08049F80:
 	ldrb	r0, [r4, #20]
 	lsr	r0, r0, #4
 	strb	r0, [r2, #1]
-	.2byte	0x1C10
+	add	r0, r2, #0
 	lsl	r1, r1, #24
 	lsr	r1, r1, #28
 	strb	r1, [r0, #2]
@@ -87,7 +86,7 @@ sub_08049F80:
 	neg	r2, r2
 	str	r2, [sp, #12]
 	str	r6, [sp, #16]
-	.2byte	0x1C3A
+	add	r2, r7, #0
 	mov	r3, ip
 	bl	sub_0802C8E8
 .L_4a02a:
@@ -95,5 +94,5 @@ sub_08049F80:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08049F80, .-sub_08049F80

@@ -32,3 +32,5 @@ __pycache__/
 .vscode/
 .idea/
 *.log
+# Non-matching C experiments (never counted as progress)
+/working_tools/

@@ -6,7 +6,7 @@
 .thumb_func
 sub_0804B96C:
 	push	{lr}
-	.2byte	0x1C01
+	add	r1, r0, #0
 	ldrb	r0, [r1, #4]
 	cmp	r0, #12
 	ble	.L_4b97a
@@ -28,5 +28,5 @@ sub_0804B96C:
 	strb	r0, [r1, #5]
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0804B96C, .-sub_0804B96C

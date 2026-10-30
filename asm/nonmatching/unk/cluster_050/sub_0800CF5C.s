@@ -6,30 +6,30 @@
 .thumb_func
 sub_0800CF5C:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C06
-	.2byte	0x1C08
-	.2byte	0x1C14
+	add	r6, r0, #0
+	add	r0, r1, #0
+	add	r4, r2, #0
 	lsl	r4, r4, #16
 	lsr	r4, r4, #16
-	ldr	r5, [r6, #52]	@ 0x34
+	ldr	r5, [r6, #52]
 	lsl	r0, r0, #16
 	asr	r0, r0, #16
 	bl	sub_0800CF30
-	.2byte	0x1C01
+	add	r1, r0, #0
 	lsl	r1, r1, #16
 	lsr	r1, r1, #16
-	.2byte	0x1C28
+	add	r0, r5, #0
 	mov	r2, #0
 	bl	sub_08008860
-	ldr	r5, [r6, #52]	@ 0x34
+	ldr	r5, [r6, #52]
 	lsl	r4, r4, #16
 	asr	r4, r4, #16
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0800CF30
-	.2byte	0x1C01
+	add	r1, r0, #0
 	lsl	r1, r1, #16
 	lsr	r1, r1, #16
-	.2byte	0x1C28
+	add	r0, r5, #0
 	mov	r2, #1
 	bl	sub_08008860
 	pop	{r4, r5, r6}

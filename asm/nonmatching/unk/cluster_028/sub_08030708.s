@@ -9,14 +9,14 @@ sub_08030708:
 	mov	r7, r9
 	mov	r6, r8
 	push	{r6, r7}
-	.2byte	0x1C05
-	mov	r1, #252	@ 0xfc
+	add	r5, r0, #0
+	mov	r1, #252
 	lsl	r1, r1, #1
 	add	r0, r5, r1
 	ldr	r0, [r0, #0]
-	cmp	r0, #189	@ 0xbd
+	cmp	r0, #189
 	beq	.L_30758
-	ldr	r2, [pc, #68]	@ (0x8030764)
+	ldr	r2, .L_30764	@ =0x084862DC
 	mov	r8, r2
 	mov	r0, #4
 	add	r0, r8
@@ -24,7 +24,7 @@ sub_08030708:
 	add	r1, #20
 	add	r7, r5, r1
 .L_3072c:
-	mov	r2, #252	@ 0xfc
+	mov	r2, #252
 	lsl	r2, r2, #1
 	add	r0, r5, r2
 	ldr	r0, [r0, #0]
@@ -39,8 +39,8 @@ sub_08030708:
 	lsl	r0, r0, #2
 	add	r0, r0, r6
 	ldr	r2, [r0, #0]
-	.2byte	0x1C28
-	.2byte	0x1C21
+	add	r0, r5, #0
+	add	r1, r4, #0
 	bl	sub_080F8FBC
 	cmp	r0, #1
 	beq	.L_30740
@@ -53,7 +53,6 @@ sub_08030708:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_30764:
-	.4byte	0x84862DC
+	.4byte	0x084862DC
 .size sub_08030708, .-sub_08030708

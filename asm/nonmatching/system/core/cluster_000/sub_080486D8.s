@@ -6,11 +6,11 @@
 .thumb_func
 sub_080486D8:
 	push	{lr}
-	ldr	r3, [pc, #24]	@ (0x80486f4)
-	ldr	r1, [pc, #24]	@ (0x80486f8)
+	ldr	r3, .L_486f4	@ =0x02035ACC
+	ldr	r1, .L_486f8	@ =0x02035AD0
 	mov	r2, #0
-	.2byte	0x1C08
-	add	r0, #124	@ 0x7c
+	add	r0, r1, #0
+	add	r0, #124
 .L_486e4:
 	str	r2, [r0, #0]
 	sub	r0, #4
@@ -20,10 +20,8 @@ sub_080486D8:
 	strh	r0, [r3, #0]
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_486f4:
-	.4byte	0x2035ACC
-	.align	2, 0
+	.4byte	0x02035ACC
 .L_486f8:
-	.4byte	0x2035AD0
+	.4byte	0x02035AD0
 .size sub_080486D8, .-sub_080486D8

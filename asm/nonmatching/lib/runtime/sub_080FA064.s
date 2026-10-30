@@ -23,7 +23,7 @@ sub_080FA064:
 	pop	{r3}
 	add	sp, #4
 	bx	r3
-	lsl	r0, r0, #0
+	.align	2, 0
 	push	{r4, r5, lr}
 	sub	sp, #28
 	str	r0, [sp, #20]
@@ -35,11 +35,11 @@ sub_080FA064:
 	ldr	r3, [sp, #16]
 	lsl	r5, r3, #2
 	lsr	r4, r2, #30
-	.2byte	0x1C28
+	add	r0, r5, #0
 	orr	r0, r4
-	.2byte	0x1C05
-	ldr	r4, [pc, #32]	@ (0x80fa0cc)
-	.2byte	0x1C10
+	add	r5, r0, #0
+	ldr	r4, .L_fa0cc	@ =0x3FFFFFFF
+	add	r0, r2, #0
 	and	r0, r4
 	mov	r1, #0
 	orr	r0, r1
@@ -51,11 +51,10 @@ sub_080FA064:
 	ldr	r0, [sp, #0]
 	ldr	r1, [sp, #4]
 	ldr	r2, [sp, #8]
-	.2byte	0x1C2B
+	add	r3, r5, #0
 	bl	sub_080FA9D8
 	add	sp, #28
 	pop	{r4, r5, pc}
-	.align	2, 0
 .L_fa0cc:
 	.4byte	0x3FFFFFFF
 .size sub_080FA064, .-sub_080FA064

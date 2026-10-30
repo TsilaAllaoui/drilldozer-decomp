@@ -6,8 +6,8 @@
 .thumb_func
 sub_0802B924:
 	push	{r4, r5, lr}
-	.2byte	0x1C04
-	ldr	r5, [pc, #20]	@ (0x802b940)
+	add	r4, r0, #0
+	ldr	r5, .L_2b940	@ =0x020358A4
 	bl	sub_0800B220
 	cmp	r0, #1
 	bne	.L_2b944
@@ -16,17 +16,16 @@ sub_0802B924:
 	strb	r0, [r5, #1]
 	bl	sub_0802B884
 	b	.L_2b9b0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_2b940:
-	.4byte	0x20358A4
+	.4byte	0x020358A4
 .L_2b944:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #4
 	bl	sub_0800B234
 	cmp	r0, #1
 	beq	.L_2b9b0
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080177F0
 	cmp	r0, #3
 	bne	.L_2b95c
@@ -39,9 +38,9 @@ sub_0802B924:
 	strb	r0, [r5, #1]
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
-	cmp	r0, #180	@ 0xb4
+	cmp	r0, #180
 	bne	.L_2b974
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0802B9DC
 .L_2b974:
 	ldrb	r2, [r5, #6]
@@ -79,5 +78,5 @@ sub_0802B924:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0802B924, .-sub_0802B924

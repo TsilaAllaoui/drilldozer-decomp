@@ -7,8 +7,8 @@
 sub_080BA400:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C05
-	.2byte	0x1C0C
+	add	r5, r0, #0
+	add	r4, r1, #0
 	ldrb	r1, [r4, #3]
 	cmp	r1, #0
 	beq	.L_ba414
@@ -24,7 +24,7 @@ sub_080BA400:
 	cmp	r0, #1
 	bls	.L_ba46a
 	strh	r1, [r4, #0]
-	ldr	r1, [pc, #28]	@ (0x80ba444)
+	ldr	r1, .L_ba444	@ =0x08440634
 	ldrb	r0, [r4, #2]
 	lsl	r0, r0, #2
 	add	r0, r0, r1
@@ -39,12 +39,11 @@ sub_080BA400:
 	add	r0, #1
 	strb	r0, [r4, #3]
 	b	.L_ba46a
-	.align	2, 0
 .L_ba444:
-	.4byte	0x8440634
+	.4byte	0x08440634
 .L_ba448:
 	bl	sub_080486FC
-	.2byte	0x1C01
+	add	r1, r0, #0
 	cmp	r1, #0
 	bne	.L_ba46a
 	ldrb	r0, [r4, #2]
@@ -57,12 +56,12 @@ sub_080BA400:
 	strb	r1, [r4, #3]
 	b	.L_ba46a
 .L_ba464:
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0800090C
 .L_ba46a:
 	add	sp, #4
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080BA400, .-sub_080BA400

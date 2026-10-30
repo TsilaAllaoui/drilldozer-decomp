@@ -7,44 +7,39 @@
 sub_0805E378:
 	push	{r4, lr}
 	bl	sub_0805E300
-	mov	r4, #218	@ 0xda
+	mov	r4, #218
 	cmp	r0, #6
 	bhi	.L_5e3be
 	lsl	r0, r0, #2
-	ldr	r1, [pc, #8]	@ (0x805e390)
+	ldr	r1, .L_5e390	@ =0x0805E394
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]
 	mov	pc, r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_5e390:
-	.4byte	.L_5e394
-.L_5e394:
-	b	.L_5eb10
-	lsr	r5, r0, #32
-	b	.L_5eafc
-	lsr	r5, r0, #32
-	b	.L_5eb08
-	lsr	r5, r0, #32
-	b	.L_5eb1c
-	lsr	r5, r0, #32
-	b	.L_5eb18
-	lsr	r5, r0, #32
-	b	.L_5eb24
-	lsr	r5, r0, #32
-	b	.L_5eb28
-	lsr	r5, r0, #32
-	mov	r4, #54	@ 0x36
+	.4byte	0x0805E394
+	.4byte	0x0805E3BC	@ case .L_5e3bc
+	.4byte	0x0805E3B0	@ case .L_5e3b0
+	.4byte	0x0805E3B4	@ case .L_5e3b4
+	.4byte	0x0805E3BC	@ case .L_5e3bc
+	.4byte	0x0805E3B8	@ case .L_5e3b8
+	.4byte	0x0805E3BC	@ case .L_5e3bc
+	.4byte	0x0805E3BC	@ case .L_5e3bc
+.L_5e3b0:
+	mov	r4, #54
 	b	.L_5e3be
-	mov	r4, #215	@ 0xd7
+.L_5e3b4:
+	mov	r4, #215
 	b	.L_5e3be
-	mov	r4, #53	@ 0x35
+.L_5e3b8:
+	mov	r4, #53
 	b	.L_5e3be
-	mov	r4, #218	@ 0xda
+.L_5e3bc:
+	mov	r4, #218
 .L_5e3be:
-	mov	r0, #187	@ 0xbb
+	mov	r0, #187
 	bl	sub_08029E54
-	.2byte	0x1C20
+	add	r0, r4, #0
 	pop	{r4}
 	pop	{r1}
 	bx	r1

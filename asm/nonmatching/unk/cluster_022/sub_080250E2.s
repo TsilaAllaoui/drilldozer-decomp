@@ -5,7 +5,15 @@
 .type sub_080250E2, %function
 .thumb_func
 sub_080250E2:
-	@ Exact original ROM bytes from 0x080250E2.
-	.byte	0x7C, 0x32, 0x03, 0x49, 0x00, 0x7E, 0x40, 0x00, 0x40, 0x18, 0x00, 0x78, 0x00, 0x01, 0x90, 0x81
-	.byte	0x70, 0x47, 0x94, 0x10, 0x24, 0x08
+	add	r2, #124
+	ldr	r1, .L_250f4	@ =0x08241094
+	ldrb	r0, [r0, #24]
+	lsl	r0, r0, #1
+	add	r0, r0, r1
+	ldrb	r0, [r0, #0]
+	lsl	r0, r0, #4
+	strh	r0, [r2, #12]
+	bx	lr
+.L_250f4:
+	.4byte	0x08241094
 .size sub_080250E2, .-sub_080250E2

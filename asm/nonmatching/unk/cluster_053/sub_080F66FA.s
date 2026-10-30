@@ -5,7 +5,17 @@
 .type sub_080F66FA, %function
 .thumb_func
 sub_080F66FA:
-	@ Exact original ROM bytes from 0x080F66FA.
-	.byte	0x01, 0xB4, 0x50, 0x0E, 0x05, 0xD1, 0x03, 0x48, 0x82, 0x42, 0x01, 0xD3, 0x90, 0x0B, 0x00, 0xD0
-	.byte	0x00, 0x23, 0x01, 0xBC, 0x70, 0x47
+	push	{r0}
+	lsr	r0, r2, #25
+	bne	.L_f670c
+	ldr	r0, [pc, #12]	@ =0x084F9A28
+	cmp	r2, r0
+	bcc	.L_f670a
+	lsr	r0, r2, #14
+	beq	.L_f670c
+.L_f670a:
+	mov	r3, #0
+.L_f670c:
+	pop	{r0}
+	bx	lr
 .size sub_080F66FA, .-sub_080F66FA

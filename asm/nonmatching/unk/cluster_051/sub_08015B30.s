@@ -6,7 +6,7 @@
 .thumb_func
 sub_08015B30:
 	push	{r4, r5, r6, r7, lr}
-	.2byte	0x1C05
+	add	r5, r0, #0
 	lsl	r1, r1, #24
 	lsr	r6, r1, #24
 	lsl	r3, r3, #16
@@ -40,10 +40,10 @@ sub_08015B30:
 .L_15b6e:
 	cmp	r6, #1
 	bne	.L_15be4
-	mov	r7, #196	@ 0xc4
+	mov	r7, #196
 	b	.L_15be4
 .L_15b76:
-	.2byte	0x1C10
+	add	r0, r2, #0
 	cmp	r0, #0
 	bge	.L_15b7e
 	add	r0, #15
@@ -55,7 +55,7 @@ sub_08015B30:
 	bl	sub_080F8708
 	lsl	r0, r0, #16
 	lsr	r3, r0, #16
-	.2byte	0x1C20
+	add	r0, r4, #0
 	cmp	r0, #0
 	bge	.L_15b96
 	add	r0, #15
@@ -63,9 +63,9 @@ sub_08015B30:
 	ldr	r2, [r5, #0]
 	ldrh	r1, [r2, #16]
 	asr	r0, r0, #4
-	.2byte	0x1C04
+	add	r4, r0, #0
 	mul	r4, r1
-	.2byte	0x1C21
+	add	r1, r4, #0
 	lsl	r0, r3, #16
 	asr	r0, r0, #16
 	add	r0, r0, r1
@@ -76,7 +76,7 @@ sub_08015B30:
 	mov	r4, #18
 	ldrsh	r0, [r2, r4]
 	mul	r1, r0
-	.2byte	0x1C18
+	add	r0, r3, #0
 	bl	sub_080F8708
 	lsl	r0, r0, #16
 	lsr	r3, r0, #16
@@ -86,20 +86,20 @@ sub_08015B30:
 	beq	.L_15bda
 	b	.L_15be4
 .L_15bca:
-	.2byte	0x1C18
+	add	r0, r3, #0
 	bl	sub_08008900
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
 	bl	sub_08015D14
 	b	.L_15be0
 .L_15bda:
-	.2byte	0x1C18
+	add	r0, r3, #0
 	bl	sub_08008900
 .L_15be0:
 	lsl	r0, r0, #24
 	lsr	r7, r0, #24
 .L_15be4:
-	.2byte	0x1C38
+	add	r0, r7, #0
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1

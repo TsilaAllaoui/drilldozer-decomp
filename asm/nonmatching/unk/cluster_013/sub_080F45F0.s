@@ -6,17 +6,17 @@
 .thumb_func
 sub_080F45F0:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
+	add	r5, r0, #0
 	ldr	r0, [r5, #28]
 	cmp	r0, #0
 	beq	.L_f4612
-	.2byte	0x1C2C
+	add	r4, r5, #0
 	add	r4, #28
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08050058
 	mov	r1, #0
-	.2byte	0x1C28
-	add	r0, #44	@ 0x2c
+	add	r0, r5, #0
+	add	r0, #44
 .L_f460a:
 	str	r1, [r0, #0]
 	sub	r0, #4

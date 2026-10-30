@@ -6,25 +6,25 @@
 .thumb_func
 sub_0802FCBC:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0E
-	.2byte	0x1C15
+	add	r4, r0, #0
+	add	r6, r1, #0
+	add	r5, r2, #0
 	bl	sub_080560D0
-	.2byte	0x1C01
-	.2byte	0x1EA8
+	add	r1, r0, #0
+	sub	r0, r5, #2
 	cmp	r0, #1
 	bhi	.L_2fcda
-	.2byte	0x1C08
+	add	r0, r1, #0
 	mov	r1, #18
 	mov	r2, #0
 	bl	sub_0802FF2C
 .L_2fcda:
-	.2byte	0x1C20
-	.2byte	0x1C31
-	.2byte	0x1C2A
+	add	r0, r4, #0
+	add	r1, r6, #0
+	add	r2, r5, #0
 	bl	sub_080560EC
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0802FCBC, .-sub_0802FCBC

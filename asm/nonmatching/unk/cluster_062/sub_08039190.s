@@ -7,9 +7,9 @@
 sub_08039190:
 	push	{r4, r5, r6, r7, lr}
 	sub	sp, #4
-	.2byte	0x1C05
-	.2byte	0x1C0E
-	.2byte	0x1C17
+	add	r5, r0, #0
+	add	r6, r1, #0
+	add	r7, r2, #0
 	ldr	r1, [r5, #4]
 	cmp	r1, #0
 	bne	.L_391a2
@@ -23,9 +23,9 @@ sub_08039190:
 	ldrb	r0, [r5, #12]
 	cmp	r0, #0
 	bne	.L_391c2
-	cmp	r3, #63	@ 0x3f
+	cmp	r3, #63
 	bne	.L_391bc
-	.2byte	0x1C08
+	add	r0, r1, #0
 	mov	r1, #2
 	bl	sub_0805DED8
 .L_391bc:
@@ -47,24 +47,18 @@ sub_08039190:
 	b	.L_39338
 .L_391da:
 	lsl	r0, r0, #2
-	ldr	r1, [pc, #4]	@ (0x80391e4)
+	ldr	r1, .L_391e4	@ =0x080391E8
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]
 	mov	pc, r0
-	.align	2, 0
 .L_391e4:
-	.4byte	.L_391e8
-.L_391e8:
-	str	r1, [sp, #1008]	@ 0x3f0
-	lsr	r3, r0, #32
-	str	r2, [sp, #64]	@ 0x40
-	lsr	r3, r0, #32
-	str	r2, [sp, #304]	@ 0x130
-	lsr	r3, r0, #32
-	str	r2, [sp, #600]	@ 0x258
-	lsr	r3, r0, #32
-	str	r2, [sp, #1016]	@ 0x3f8
-	lsr	r3, r0, #32
+	.4byte	0x080391E8
+	.4byte	0x080391FC	@ case .L_391fc
+	.4byte	0x08039210	@ case .L_39210
+	.4byte	0x0803924C	@ case .L_3924c
+	.4byte	0x08039296	@ case .L_39296
+	.4byte	0x080392FE	@ case .L_392fe
+.L_391fc:
 	ldr	r0, [r5, #4]
 	bl	sub_0805E378
 	lsl	r0, r0, #16
@@ -73,6 +67,7 @@ sub_08039190:
 	ldrb	r0, [r5, #12]
 	add	r0, #1
 	strb	r0, [r5, #12]
+.L_39210:
 	ldr	r0, [r5, #4]
 	mov	r1, #0
 	bl	sub_0805DED8
@@ -80,30 +75,31 @@ sub_08039190:
 	beq	.L_3921e
 	b	.L_3933c
 .L_3921e:
-	.2byte	0x1C30
+	add	r0, r6, #0
 	bl	sub_080304C8
 	bl	sub_080213B8
-	.2byte	0x1C04
-	.2byte	0x1C30
-	.2byte	0x1C21
+	add	r4, r0, #0
+	add	r0, r6, #0
+	add	r1, r4, #0
 	bl	sub_0802140C
-	.2byte	0x1C30
+	add	r0, r6, #0
 	mov	r1, #0
 	bl	sub_080118BC
 	mov	r0, #10
 	strb	r0, [r5, #14]
-	add	r0, #246	@ 0xf6
+	add	r0, #246
 	mov	r1, #32
 	mov	r2, #10
 	mov	r3, #0
 	bl	sub_08019D9C
 	b	.L_39330
+.L_3924c:
 	ldrb	r0, [r5, #14]
 	cmp	r0, #0
 	beq	.L_3926a
 	sub	r0, #1
 	strb	r0, [r5, #14]
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	lsl	r0, r0, #1
 	ldrb	r2, [r5, #14]
 	mov	r1, #32
@@ -112,7 +108,7 @@ sub_08039190:
 	mov	r0, #0
 	bl	sub_08019B54
 .L_3926a:
-	.2byte	0x1C30
+	add	r0, r6, #0
 	bl	sub_080213D4
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
@@ -122,19 +118,20 @@ sub_08039190:
 	cmp	r0, #0
 	bne	.L_3933c
 	mov	r4, #6
-	.2byte	0x1C30
+	add	r0, r6, #0
 	bl	sub_080304C8
 	cmp	r0, #3
 	bne	.L_3928c
 	mov	r4, #7
 .L_3928c:
-	.2byte	0x1C30
-	.2byte	0x1C21
+	add	r0, r6, #0
+	add	r1, r4, #0
 	bl	sub_0802140C
 	b	.L_39330
+.L_39296:
 	mov	r4, #2
 	neg	r4, r4
-	.2byte	0x1C30
+	add	r0, r6, #0
 	bl	sub_080304C8
 	cmp	r0, #3
 	bne	.L_392a6
@@ -142,7 +139,7 @@ sub_08039190:
 .L_392a6:
 	mov	r2, sp
 	add	r2, #2
-	.2byte	0x1C30
+	add	r0, r6, #0
 	mov	r1, sp
 	bl	sub_0801174C
 	cmp	r4, #0
@@ -168,24 +165,25 @@ sub_08039190:
 	bge	.L_392f2
 .L_392da:
 	mov	r4, #0
-	.2byte	0x1C30
+	add	r0, r6, #0
 	bl	sub_080304C8
 	cmp	r0, #3
 	bne	.L_392e8
 	mov	r4, #1
 .L_392e8:
-	.2byte	0x1C30
-	.2byte	0x1C21
+	add	r0, r6, #0
+	add	r1, r4, #0
 	bl	sub_0802140C
 	b	.L_3932c
 .L_392f2:
-	.2byte	0x1C30
-	.2byte	0x1C21
+	add	r0, r6, #0
+	add	r1, r4, #0
 	mov	r2, #0
 	bl	sub_0803044C
 	b	.L_3933c
+.L_392fe:
 	ldrb	r0, [r5, #13]
-	.2byte	0x1C01
+	add	r1, r0, #0
 	cmp	r1, #8
 	bne	.L_39318
 	ldr	r0, [r5, #4]
@@ -225,5 +223,5 @@ sub_08039190:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08039190, .-sub_08039190

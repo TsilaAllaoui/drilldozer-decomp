@@ -5,9 +5,18 @@
 .type sub_080E34E0, %function
 .thumb_func
 sub_080E34E0:
-	@ Exact original ROM bytes from 0x080E34E0.
-	.byte	0x10, 0xB5, 0x0C, 0x1C, 0xE0, 0x6A, 0x23, 0x30, 0x00, 0x78, 0x80, 0x06, 0xC0, 0x0E, 0x23, 0xF7
-	.byte	0xE5, 0xFA, 0xE0, 0x6A, 0x9B, 0xF7, 0x4A, 0xFA, 0x10, 0xBC, 0x01, 0xBC
+	push	{r4, lr}
+	add	r4, r1, #0
+	ldr	r0, [r4, #44]
+	add	r0, #35
+	ldrb	r0, [r0, #0]
+	lsl	r0, r0, #26
+	lsr	r0, r0, #27
+	bl	sub_08006ABC
+	ldr	r0, [r4, #44]
+	bl	sub_0807E98C
+	pop	{r4}
+	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080E34E0, .-sub_080E34E0

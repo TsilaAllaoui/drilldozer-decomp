@@ -7,7 +7,7 @@
 sub_0801EF54:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C05
+	add	r5, r0, #0
 	ldr	r0, [r5, #8]
 	mov	r2, #20
 	ldrsh	r1, [r0, r2]
@@ -23,19 +23,19 @@ sub_0801EF54:
 	ldrh	r1, [r5, #18]
 	mov	r2, #0
 	bl	sub_0801F0E4
-	.2byte	0x1C2C
+	add	r4, r5, #0
 	add	r4, #24
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, sp
 	bl	sub_0801ECD4
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0801EC90
 	ldrh	r0, [r5, #16]
 	add	r0, #1
 	strh	r0, [r5, #16]
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
-	cmp	r0, #60	@ 0x3c
+	cmp	r0, #60
 	beq	.L_1efa0
 	mov	r0, #0
 	b	.L_1efa6
@@ -48,5 +48,5 @@ sub_0801EF54:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0801EF54, .-sub_0801EF54

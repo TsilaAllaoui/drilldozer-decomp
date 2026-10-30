@@ -19,7 +19,7 @@ sub_0800D548:
 	ldr	r1, [r1, #4]
 	str	r0, [sp, #0]
 	str	r1, [sp, #4]
-	.2byte	0x1C11
+	add	r1, r2, #0
 	cmp	r1, #0
 	bne	.L_d572
 	mov	r0, r8
@@ -27,13 +27,13 @@ sub_0800D548:
 	bl	sub_0800D4D0
 .L_d572:
 	mov	r2, r8
-	ldr	r0, [r2, #52]	@ 0x34
+	ldr	r0, [r2, #52]
 	bl	sub_08015F84
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
 	str	r0, [sp, #20]
 	mov	r3, r8
-	ldr	r0, [r3, #52]	@ 0x34
+	ldr	r0, [r3, #52]
 	mov	r4, sp
 	mov	r2, #4
 	ldrsh	r1, [r4, r2]
@@ -44,9 +44,8 @@ sub_0800D548:
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
 	str	r0, [sp, #12]
-.L_d59a:
 	mov	r1, r8
-	ldr	r0, [r1, #52]	@ 0x34
+	ldr	r0, [r1, #52]
 	mov	r2, #6
 	ldrsh	r1, [r4, r2]
 	mov	r2, sp
@@ -59,7 +58,7 @@ sub_0800D548:
 	lsr	r0, r0, #16
 	mov	r9, r0
 	mov	r2, r8
-	ldr	r0, [r2, #52]	@ 0x34
+	ldr	r0, [r2, #52]
 	mov	r3, #4
 	ldrsh	r1, [r4, r3]
 	mov	r3, #2
@@ -79,7 +78,7 @@ sub_0800D548:
 	bhi	.L_d69a
 .L_d5e0:
 	ldr	r2, [sp, #20]
-	.2byte	0x1C38
+	add	r0, r7, #0
 	mul	r0, r2
 	ldr	r3, [sp, #12]
 	add	r0, r3, r0
@@ -100,7 +99,7 @@ sub_0800D548:
 	lsl	r0, r4, #4
 	add	r1, r1, r0
 	mov	r0, r8
-	ldr	r2, [r0, #52]	@ 0x34
+	ldr	r2, [r0, #52]
 	mov	r3, #16
 	ldrsh	r0, [r2, r3]
 	cmp	r1, r0
@@ -125,11 +124,11 @@ sub_0800D548:
 	mov	sl, r1
 	b	.L_d684
 .L_d638:
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08008900
 	lsl	r0, r0, #24
 	lsr	r2, r0, #24
-	ldr	r1, [pc, #32]	@ (0x800d664)
+	ldr	r1, .L_d664	@ =0x0810182C
 	lsl	r0, r2, #3
 	add	r0, r0, r1
 	ldrb	r0, [r0, #0]
@@ -137,42 +136,41 @@ sub_0800D548:
 	lsr	r0, r0, #29
 	cmp	r0, #0
 	bne	.L_d6a0
-	cmp	r2, #177	@ 0xb1
+	cmp	r2, #177
 	beq	.L_d6a0
-	cmp	r2, #177	@ 0xb1
+	cmp	r2, #177
 	ble	.L_d668
-	cmp	r2, #191	@ 0xbf
+	cmp	r2, #191
 	beq	.L_d684
-	cmp	r2, #196	@ 0xc4
+	cmp	r2, #196
 	bne	.L_d670
 	b	.L_d684
-	.align	2, 0
 .L_d664:
-	.4byte	0x810182C
+	.4byte	0x0810182C
 .L_d668:
 	cmp	r2, #7
 	bgt	.L_d670
 	cmp	r2, #2
 	bge	.L_d6a0
 .L_d670:
-	.2byte	0x1C10
+	add	r0, r2, #0
 	bl	sub_08015D14
 	cmp	r0, #0
 	beq	.L_d67e
 	mov	r2, #1
 	mov	sl, r2
 .L_d67e:
-	.2byte	0x1C68
+	add	r0, r5, #1
 	lsl	r0, r0, #16
 	lsr	r5, r0, #16
 .L_d684:
-	.2byte	0x1C60
+	add	r0, r4, #1
 	lsl	r0, r0, #16
 	lsr	r4, r0, #16
 	cmp	r4, r9
 	bls	.L_d5fe
 .L_d68e:
-	.2byte	0x1C78
+	add	r0, r7, #1
 	lsl	r0, r0, #16
 	lsr	r7, r0, #16
 	ldr	r3, [sp, #16]
@@ -196,5 +194,5 @@ sub_0800D548:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0800D548, .-sub_0800D548

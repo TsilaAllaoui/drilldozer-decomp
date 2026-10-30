@@ -13,7 +13,7 @@ sub_080A47AC:
 	ldr	r0, [r0, #4]
 	cmp	r0, #0
 	beq	.L_a47ec
-	.2byte	0x1C03
+	add	r3, r0, #0
 	cmp	r2, #0
 	bne	.L_a47ce
 	cmp	r4, #2
@@ -30,25 +30,23 @@ sub_080A47AC:
 .L_a47d2:
 	mov	r0, #0
 	strh	r0, [r3, #20]
-	ldr	r1, [pc, #28]	@ (0x80a47f4)
+	ldr	r1, .L_a47f4	@ =0x083FB784
 	lsl	r0, r4, #1
 	add	r0, r0, r1
 	ldrh	r0, [r0, #0]
 	strh	r0, [r3, #22]
-	ldr	r0, [pc, #20]	@ (0x80a47f8)
+	ldr	r0, .L_a47f8	@ =0x083FB780
 	ldr	r1, [r0, #0]
-	.2byte	0x1C18
+	add	r0, r3, #0
 	mov	r2, #0
 	bl	sub_08005BBC
 .L_a47ec:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_a47f4:
-	.4byte	0x83FB784
-	.align	2, 0
+	.4byte	0x083FB784
 .L_a47f8:
-	.4byte	0x83FB780
+	.4byte	0x083FB780
 .size sub_080A47AC, .-sub_080A47AC

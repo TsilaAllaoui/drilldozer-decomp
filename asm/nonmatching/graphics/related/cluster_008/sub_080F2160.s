@@ -7,8 +7,8 @@
 sub_080F2160:
 	push	{r4, r5, lr}
 	sub	sp, #8
-	.2byte	0x1C04
-	.2byte	0x1C0D
+	add	r4, r0, #0
+	add	r5, r1, #0
 	ldr	r1, [sp, #20]
 	lsl	r4, r4, #24
 	lsr	r4, r4, #24
@@ -21,8 +21,8 @@ sub_080F2160:
 	lsr	r3, r3, #24
 	str	r3, [sp, #4]
 	mov	r0, #3
-	.2byte	0x1C22
-	.2byte	0x1C2B
+	add	r2, r4, #0
+	add	r3, r5, #0
 	bl	sub_080022B0
 	add	sp, #8
 	pop	{r4, r5}

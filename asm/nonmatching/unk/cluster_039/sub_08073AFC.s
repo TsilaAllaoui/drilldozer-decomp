@@ -36,13 +36,13 @@ sub_08073AFC:
 	b	.L_73ca8
 .L_73b36:
 	ldrh	r2, [r7, #6]
-	.2byte	0x1C13
+	add	r3, r2, #0
 	mov	r5, #0
 	mov	sl, r5
 	ldrh	r1, [r6, #6]
-	mov	r5, #248	@ 0xf8
+	mov	r5, #248
 	lsl	r5, r5, #3
-	.2byte	0x1C28
+	add	r0, r5, #0
 	and	r0, r1
 	cmp	r0, #0
 	bne	.L_73bfc
@@ -56,26 +56,25 @@ sub_08073AFC:
 	asr	r0, r2, #8
 	cmp	r0, #16
 	ble	.L_73b7a
-	ldr	r2, [pc, #4]	@ (0x8073b68)
+	ldr	r2, .L_73b68	@ =0x000010FF
 	mov	r0, #1
 	mov	sl, r0
 	b	.L_73b7a
-	.align	2, 0
 .L_73b68:
-	.4byte	0x10FF
+	.4byte	0x000010FF
 .L_73b6c:
 	ldrh	r0, [r7, #8]
 	sub	r2, r2, r0
 	cmp	r2, #0
 	bge	.L_73b7a
-	mov	r2, #255	@ 0xff
+	mov	r2, #255
 	mov	r1, #1
 	mov	sl, r1
 .L_73b7a:
 	strh	r2, [r7, #6]
-	mov	r1, #255	@ 0xff
+	mov	r1, #255
 	lsl	r1, r1, #8
-	.2byte	0x1C10
+	add	r0, r2, #0
 	and	r0, r1
 	and	r3, r1
 	add	r4, #1
@@ -84,7 +83,7 @@ sub_08073AFC:
 	beq	.L_73be4
 	ldrb	r3, [r6, #4]
 	ldrb	r1, [r6, #7]
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	and	r0, r1
 	cmp	r0, #0
 	bne	.L_73bd2
@@ -108,7 +107,7 @@ sub_08073AFC:
 	lsr	r2, r3, #24
 	mov	r3, ip
 	bl	sub_08019D9C
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	lsl	r0, r0, #9
 	add	r4, r4, r0
 	add	r5, #1
@@ -117,7 +116,7 @@ sub_08073AFC:
 	blt	.L_73baa
 	b	.L_73be4
 .L_73bd2:
-	.2byte	0x1C18
+	add	r0, r3, #0
 	ldrb	r1, [r6, #5]
 	asr	r2, r2, #8
 	lsl	r2, r2, #24
@@ -145,7 +144,7 @@ sub_08073AFC:
 	lsr	r0, r0, #26
 	cmp	r1, r0
 	bcs	.L_73c12
-	.2byte	0x1C48
+	add	r0, r1, #1
 	strb	r0, [r7, #4]
 	add	r4, #1
 	mov	r9, r4
@@ -179,7 +178,7 @@ sub_08073AFC:
 	strb	r3, [r7, #5]
 	ldrb	r2, [r6, #5]
 	lsl	r0, r3, #1
-	.2byte	0x1C11
+	add	r1, r2, #0
 	mul	r1, r0
 	lsl	r1, r1, #1
 	ldr	r0, [r6, #0]
@@ -211,7 +210,7 @@ sub_08073AFC:
 	and	r1, r5
 	mov	r3, #2
 	neg	r3, r3
-	.2byte	0x1C18
+	add	r0, r3, #0
 	and	r2, r0
 	orr	r2, r1
 	strb	r2, [r7, #10]

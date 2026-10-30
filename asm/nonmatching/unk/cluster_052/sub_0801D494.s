@@ -38,12 +38,12 @@ sub_0801D494:
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
 	lsl	r0, r0, #4
-	.2byte	0x1C31
+	add	r1, r6, #0
 	bl	sub_080F8FF0
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0801D494, .-sub_0801D494

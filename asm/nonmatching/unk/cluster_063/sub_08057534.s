@@ -6,7 +6,7 @@
 .thumb_func
 sub_08057534:
 	push	{lr}
-	.2byte	0x1C0B
+	add	r3, r1, #0
 	mov	r1, #0
 	cmp	r0, #1
 	beq	.L_5755c
@@ -47,7 +47,7 @@ sub_08057534:
 .L_57578:
 	sub	r1, r1, r0
 .L_5757a:
-	.2byte	0x1C08
+	add	r0, r1, #0
 	pop	{r1}
 	bx	r1
 .size sub_08057534, .-sub_08057534

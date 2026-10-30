@@ -6,7 +6,7 @@
 .thumb_func
 sub_080EDA5C:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
+	add	r5, r0, #0
 	ldrb	r0, [r5, #16]
 	cmp	r0, #0
 	beq	.L_eda70
@@ -50,19 +50,17 @@ sub_080EDA5C:
 	ldr	r0, [r5, #8]
 	strb	r1, [r0, #1]
 	ldr	r0, [r5, #4]
-	ldr	r4, [pc, #20]	@ (0x80edac4)
-	.2byte	0x1C21
+	ldr	r4, .L_edac4	@ =0x084CDDA8
+	add	r1, r4, #0
 	bl	sub_08005814
 	ldr	r0, [r5, #8]
-	.2byte	0x1C21
-.L_edab8:
+	add	r1, r4, #0
 	bl	sub_08005814
 .L_edabc:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_edac4:
-	.4byte	0x84CDDA8
+	.4byte	0x084CDDA8
 .size sub_080EDA5C, .-sub_080EDA5C

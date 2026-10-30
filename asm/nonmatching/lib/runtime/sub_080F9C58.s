@@ -6,8 +6,8 @@
 .thumb_func
 sub_080F9C58:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C05
-	.2byte	0x1C0E
+	add	r5, r0, #0
+	add	r6, r1, #0
 	mov	r0, #0
 	ldr	r1, [r5, #0]
 	cmp	r1, #1
@@ -107,7 +107,7 @@ sub_080F9C58:
 	beq	.L_f9d00
 	sub	r1, #2
 .L_f9d00:
-	.2byte	0x1C08
+	add	r0, r1, #0
 	b	.L_f9d54
 .L_f9d04:
 	ldr	r0, [r6, #4]
@@ -158,38 +158,38 @@ sub_080F9C58:
 	mov	r0, #0
 .L_f9d54:
 	pop	{r4, r5, r6, pc}
-	lsl	r0, r0, #0
+	.align	2, 0
 	push	{r4, lr}
-	sub	sp, #56	@ 0x38
-	str	r0, [sp, #40]	@ 0x28
-	str	r1, [sp, #44]	@ 0x2c
-	str	r2, [sp, #48]	@ 0x30
-	str	r3, [sp, #52]	@ 0x34
-	add	r0, sp, #40	@ 0x28
+	sub	sp, #56
+	str	r0, [sp, #40]
+	str	r1, [sp, #44]
+	str	r2, [sp, #48]
+	str	r3, [sp, #52]
+	add	r0, sp, #40
 	mov	r1, sp
 	bl	sub_080F947C
-	add	r0, sp, #48	@ 0x30
+	add	r0, sp, #48
 	add	r4, sp, #20
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_080F947C
 	mov	r0, sp
-	.2byte	0x1C21
-	bl	sub_080F9C58
-	add	sp, #56	@ 0x38
+	add	r1, r4, #0
+	bl	.L_f9c58
+	add	sp, #56
 	pop	{r4, pc}
-	lsl	r0, r0, #0
+	.align	2, 0
 	push	{r4, lr}
-	sub	sp, #56	@ 0x38
-	str	r0, [sp, #40]	@ 0x28
-	str	r1, [sp, #44]	@ 0x2c
-	str	r2, [sp, #48]	@ 0x30
-	str	r3, [sp, #52]	@ 0x34
-	add	r0, sp, #40	@ 0x28
+	sub	sp, #56
+	str	r0, [sp, #40]
+	str	r1, [sp, #44]
+	str	r2, [sp, #48]
+	str	r3, [sp, #52]
+	add	r0, sp, #40
 	mov	r1, sp
 	bl	sub_080F947C
-	add	r0, sp, #48	@ 0x30
+	add	r0, sp, #48
 	add	r4, sp, #20
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_080F947C
 	mov	r1, #0
 	ldr	r0, [sp, #0]
@@ -212,24 +212,24 @@ sub_080F9C58:
 	b	.L_f9dca
 .L_f9dc2:
 	mov	r0, sp
-	.2byte	0x1C21
-	bl	sub_080F9C58
+	add	r1, r4, #0
+	bl	.L_f9c58
 .L_f9dca:
-	add	sp, #56	@ 0x38
+	add	sp, #56
 	pop	{r4, pc}
-	lsl	r0, r0, #0
+	.align	2, 0
 	push	{r4, lr}
-	sub	sp, #56	@ 0x38
-	str	r0, [sp, #40]	@ 0x28
-	str	r1, [sp, #44]	@ 0x2c
-	str	r2, [sp, #48]	@ 0x30
-	str	r3, [sp, #52]	@ 0x34
-	add	r0, sp, #40	@ 0x28
+	sub	sp, #56
+	str	r0, [sp, #40]
+	str	r1, [sp, #44]
+	str	r2, [sp, #48]
+	str	r3, [sp, #52]
+	add	r0, sp, #40
 	mov	r1, sp
 	bl	sub_080F947C
-	add	r0, sp, #48	@ 0x30
+	add	r0, sp, #48
 	add	r4, sp, #20
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_080F947C
 	mov	r1, #0
 	ldr	r0, [sp, #0]
@@ -252,10 +252,10 @@ sub_080F9C58:
 	b	.L_f9e16
 .L_f9e0e:
 	mov	r0, sp
-	.2byte	0x1C21
-	bl	sub_080F9C58
+	add	r1, r4, #0
+	bl	.L_f9c58
 .L_f9e16:
-	add	sp, #56	@ 0x38
+	add	sp, #56
 	pop	{r4, pc}
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080F9C58, .-sub_080F9C58

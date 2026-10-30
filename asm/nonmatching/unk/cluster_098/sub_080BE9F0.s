@@ -9,8 +9,8 @@ sub_080BE9F0:
 	mov	r7, r9
 	mov	r6, r8
 	push	{r6, r7}
-	sub	sp, #36	@ 0x24
-	.2byte	0x1C0F
+	sub	sp, #36
+	add	r7, r1, #0
 	ldr	r0, [r7, #8]
 	ldr	r2, [r7, #12]
 	add	r0, r0, r2
@@ -28,17 +28,15 @@ sub_080BE9F0:
 	ldrh	r0, [r7, #30]
 	strh	r0, [r7, #28]
 .L_bea1a:
-	ldr	r0, [r7, #36]	@ 0x24
+	ldr	r0, [r7, #36]
 	ldr	r0, [r0, #0]
 	mov	r9, r0
 	asr	r0, r0, #8
 	mov	r9, r0
 	ldrb	r4, [r7, #9]
 	ldrh	r1, [r7, #6]
-	.2byte	0x1C20
-	.2byte	0xF746
-.L_bea2c:
-	.2byte	0xFB81
+	add	r0, r4, #0
+	bl	sub_08005130
 	mov	r1, #0
 	ldrsh	r6, [r7, r1]
 	lsl	r0, r0, #16
@@ -47,9 +45,9 @@ sub_080BE9F0:
 	mov	r2, r9
 	sub	r6, r6, r2
 	ldrh	r1, [r7, #6]
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080050F4
-	.2byte	0x1C05
+	add	r5, r0, #0
 	mov	r3, #2
 	ldrsh	r1, [r7, r3]
 	lsl	r5, r5, #16
@@ -93,8 +91,8 @@ sub_080BE9F0:
 	str	r0, [sp, #12]
 	ldr	r0, [sp, #24]
 	str	r0, [sp, #16]
-	.2byte	0x1C30
-	.2byte	0x1C29
+	add	r0, r6, #0
+	add	r1, r5, #0
 	bl	sub_080BEBB0
 	ldr	r0, [sp, #28]
 	ldr	r1, [sp, #20]
@@ -129,7 +127,7 @@ sub_080BE9F0:
 	ldrh	r0, [r7, #26]
 	mov	r1, r8
 	bl	sub_080BEDC8
-	add	sp, #36	@ 0x24
+	add	sp, #36
 	pop	{r3, r4}
 	mov	r8, r3
 	mov	r9, r4

@@ -37,7 +37,7 @@ sub_08019F0C:
 	lsl	r4, r4, #17
 	lsr	r4, r4, #27
 	sub	r4, r4, r5
-	.2byte	0x1C21
+	add	r1, r4, #0
 	mul	r1, r2
 	asr	r1, r1, #4
 	add	r5, r5, r1

@@ -9,10 +9,10 @@ sub_0801211C:
 	mov	r7, r9
 	mov	r6, r8
 	push	{r6, r7}
-	.2byte	0x1C07
+	add	r7, r0, #0
 	mov	r8, r1
 	mov	r9, r2
-	.2byte	0x1C1E
+	add	r6, r3, #0
 	cmp	r7, #0
 	bne	.L_12134
 	mov	r0, #0
@@ -23,15 +23,14 @@ sub_0801211C:
 	lsl	r0, r5, #4
 	add	r4, r0, r7
 	ldrh	r1, [r4, #10]
-	ldr	r0, [pc, #8]	@ (0x8012148)
+	ldr	r0, .L_12148	@ =0x0000FFFF
 	cmp	r1, r0
 	bne	.L_1214c
 	str	r5, [r6, #0]
 	mov	r0, #0
 	b	.L_12186
-	.align	2, 0
 .L_12148:
-	.4byte	0xFFFF
+	.4byte	0x0000FFFF
 .L_1214c:
 	mov	r0, #0
 	ldrsh	r1, [r4, r0]
@@ -42,17 +41,17 @@ sub_0801211C:
 	cmp	r0, #1
 	bne	.L_12182
 	ldrh	r0, [r4, #10]
-	cmp	r0, #61	@ 0x3d
+	cmp	r0, #61
 	blt	.L_12182
-	cmp	r0, #62	@ 0x3e
+	cmp	r0, #62
 	ble	.L_12170
-	cmp	r0, #71	@ 0x47
+	cmp	r0, #71
 	bgt	.L_12182
-	cmp	r0, #70	@ 0x46
+	cmp	r0, #70
 	blt	.L_12182
 .L_12170:
 	mov	r0, r9
-	.2byte	0x1C21
+	add	r1, r4, #0
 	ldmia	r1!, {r2, r3, r4}
 	stmia	r0!, {r2, r3, r4}
 	ldr	r1, [r1, #0]
@@ -70,5 +69,5 @@ sub_0801211C:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0801211C, .-sub_0801211C

@@ -6,11 +6,11 @@
 .thumb_func
 sub_0801C548:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	bl	sub_0801C49C
 	cmp	r0, #1
 	beq	.L_1c55e
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0801C50C
 	cmp	r0, #1
 	bne	.L_1c562
@@ -23,5 +23,5 @@ sub_0801C548:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0801C548, .-sub_0801C548

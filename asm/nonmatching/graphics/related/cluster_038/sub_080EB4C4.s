@@ -9,7 +9,7 @@ sub_080EB4C4:
 	mov	r7, r8
 	push	{r7}
 	sub	sp, #8
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldrb	r0, [r4, #6]
 	cmp	r0, #0
 	beq	.L_eb5b0
@@ -18,12 +18,12 @@ sub_080EB4C4:
 	bls	.L_eb4dc
 	mov	r1, #6
 .L_eb4dc:
-	ldr	r0, [pc, #124]	@ (0x80eb55c)
+	ldr	r0, .L_eb55c	@ =0x084CCC24
 	lsl	r1, r1, #2
 	add	r6, r1, r0
 	mov	r2, #0
 	ldrsh	r0, [r6, r2]
-	.2byte	0x1C0F
+	add	r7, r1, #0
 	cmp	r0, #0
 	blt	.L_eb5b0
 	ldrh	r0, [r4, #14]
@@ -45,7 +45,7 @@ sub_080EB4C4:
 	cmp	r5, r6
 	bge	.L_eb59a
 	add	r6, sp, #4
-	ldr	r0, [pc, #72]	@ (0x80eb560)
+	ldr	r0, .L_eb560	@ =0x0000FFFF
 	mov	r8, r0
 .L_eb518:
 	ldr	r0, [sp, #0]
@@ -53,13 +53,13 @@ sub_080EB4C4:
 	bl	sub_080051DC
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
-	mov	r1, #240	@ 0xf0
+	mov	r1, #240
 	bl	sub_080F8708
 	ldrh	r1, [r6, #0]
 	add	r1, r1, r0
 	lsl	r1, r1, #16
 	lsr	r1, r1, #16
-	ldr	r2, [pc, #48]	@ (0x80eb564)
+	ldr	r2, .L_eb564	@ =0xFFFF0000
 	ldr	r0, [sp, #4]
 	and	r0, r2
 	orr	r0, r1
@@ -69,7 +69,7 @@ sub_080EB4C4:
 	lsr	r0, r0, #16
 	mov	r1, #32
 	bl	sub_080F8708
-	.2byte	0x1C02
+	add	r2, r0, #0
 	mov	r0, #1
 	and	r0, r2
 	cmp	r0, #0
@@ -77,18 +77,15 @@ sub_080EB4C4:
 	ldrh	r1, [r4, #12]
 	add	r1, r1, r2
 	b	.L_eb56c
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_eb55c:
-	.4byte	0x84CCC24
-	.align	2, 0
+	.4byte	0x084CCC24
 .L_eb560:
-	.4byte	0xFFFF
-	.align	2, 0
+	.4byte	0x0000FFFF
 .L_eb564:
 	.4byte	0xFFFF0000
 .L_eb568:
-	.2byte	0x89A1
+	ldrh	r1, [r4, #12]
 	sub	r1, r1, r2
 .L_eb56c:
 	lsl	r1, r1, #16
@@ -98,7 +95,7 @@ sub_080EB4C4:
 	orr	r0, r1
 	str	r0, [sp, #4]
 	ldr	r0, [r4, #0]
-	.2byte	0x1C31
+	add	r1, r6, #0
 	mov	r2, #0
 	mov	r3, #0
 	bl	sub_0804CEDC
@@ -108,23 +105,22 @@ sub_080EB4C4:
 	bl	sub_0804CF08
 .L_eb58e:
 	add	r5, #1
-	ldr	r0, [pc, #24]	@ (0x80eb5ac)
+	ldr	r0, .L_eb5ac	@ =0x084CCC24
 	add	r0, r7, r0
 	ldrb	r0, [r0, #2]
 	cmp	r5, r0
 	blt	.L_eb518
 .L_eb59a:
-	mov	r0, #70	@ 0x46
+	mov	r0, #70
 	bl	sub_08029E54
-	ldr	r0, [pc, #8]	@ (0x80eb5ac)
+	ldr	r0, .L_eb5ac	@ =0x084CCC24
 	add	r0, r7, r0
 	ldrh	r0, [r0, #0]
 	strh	r0, [r4, #16]
 	mov	r0, #1
 	b	.L_eb5b2
-	.align	2, 0
 .L_eb5ac:
-	.4byte	0x84CCC24
+	.4byte	0x084CCC24
 .L_eb5b0:
 	mov	r0, #0
 .L_eb5b2:
@@ -134,5 +130,5 @@ sub_080EB4C4:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080EB4C4, .-sub_080EB4C4

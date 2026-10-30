@@ -6,7 +6,7 @@
 .thumb_func
 sub_08021990:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	lsl	r4, r4, #16
 	lsr	r4, r4, #16
 	mov	r0, #0
@@ -16,12 +16,10 @@ sub_08021990:
 	bl	sub_080061BC
 	strh	r4, [r0, #4]
 	mov	r0, #2
-	.2byte	0xF7E4
-.L_219ac:
-	.2byte	0xFC07
+	bl	sub_080061BC
 	strh	r4, [r0, #4]
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08021990, .-sub_08021990

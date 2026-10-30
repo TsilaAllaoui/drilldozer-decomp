@@ -17,21 +17,20 @@ sub_080A0BC4:
 .L_a0bd4:
 	str	r0, [sp, #0]
 	mov	r0, sp
-	ldr	r1, [pc, #24]	@ (0x80a0bf4)
+	ldr	r1, .L_a0bf4	@ =0x0000012B
 	bl	sub_0801BC0C
-	.2byte	0x1C01
+	add	r1, r0, #0
 	cmp	r1, #0
 	beq	.L_a0bea
-	ldr	r0, [r1, #124]	@ 0x7c
+	ldr	r0, [r1, #124]
 	cmp	r0, r4
 	bne	.L_a0bd0
 .L_a0bea:
-	.2byte	0x1C08
+	add	r0, r1, #0
 	add	sp, #4
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	.align	2, 0
 .L_a0bf4:
-	.4byte	0x12B
+	.4byte	0x0000012B
 .size sub_080A0BC4, .-sub_080A0BC4

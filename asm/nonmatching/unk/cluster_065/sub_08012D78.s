@@ -6,8 +6,8 @@
 .thumb_func
 sub_08012D78:
 	push	{r4, lr}
-	.2byte	0x1C03
-	.2byte	0x1C0A
+	add	r3, r0, #0
+	add	r2, r1, #0
 	mov	r0, #4
 	ldrsh	r1, [r3, r0]
 	mov	r4, #6
@@ -40,5 +40,5 @@ sub_08012D78:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08012D78, .-sub_08012D78

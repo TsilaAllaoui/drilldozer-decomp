@@ -6,7 +6,7 @@
 .thumb_func
 sub_080BDFA0:
 	push	{lr}
-	.2byte	0x1C0A
+	add	r2, r1, #0
 	ldrb	r0, [r2, #12]
 	add	r0, #1
 	strb	r0, [r2, #12]
@@ -38,5 +38,5 @@ sub_080BDFA0:
 .L_bdfda:
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080BDFA0, .-sub_080BDFA0

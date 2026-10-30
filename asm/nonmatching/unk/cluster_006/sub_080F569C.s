@@ -6,9 +6,9 @@
 .thumb_func
 sub_080F569C:
 	push	{r4, r5, r6, r7, lr}
-	.2byte	0x1C06
+	add	r6, r0, #0
 	mov	r5, #0
-	ldr	r0, [pc, #88]	@ (0x80f56fc)
+	ldr	r0, .L_f56fc	@ =0x00004044
 	add	r4, r6, r0
 .L_f56a6:
 	lsl	r3, r5, #4
@@ -22,11 +22,11 @@ sub_080F569C:
 	ldrsh	r1, [r4, r2]
 	mov	r7, #6
 	ldrsh	r2, [r4, r7]
-	ldr	r7, [pc, #64]	@ (0x80f5700)
+	ldr	r7, .L_f5700	@ =0x00004050
 	add	r0, r6, r7
 	add	r0, r0, r3
 	ldr	r0, [r0, #0]
-	add	r0, #35	@ 0x23
+	add	r0, #35
 	ldrb	r0, [r0, #0]
 	lsl	r0, r0, #26
 	lsr	r0, r0, #27
@@ -39,9 +39,9 @@ sub_080F569C:
 	ldrh	r1, [r4, #4]
 	mov	r2, #4
 	ldrsh	r0, [r4, r2]
-	cmp	r0, #34	@ 0x22
+	cmp	r0, #34
 	ble	.L_f56ee
-	.2byte	0x1E88
+	sub	r0, r1, #2
 	strh	r0, [r4, #4]
 	ldrh	r0, [r4, #6]
 	sub	r0, #2
@@ -54,10 +54,8 @@ sub_080F569C:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_f56fc:
-	.4byte	0x4044
-	.align	2, 0
+	.4byte	0x00004044
 .L_f5700:
-	.4byte	0x4050
+	.4byte	0x00004050
 .size sub_080F569C, .-sub_080F569C

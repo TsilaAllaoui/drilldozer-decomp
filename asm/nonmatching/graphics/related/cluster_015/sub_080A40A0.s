@@ -11,8 +11,8 @@ sub_080A40A0:
 	mov	r5, r8
 	push	{r5, r6, r7}
 	sub	sp, #20
-	.2byte	0x1C06
-	mov	r0, #128	@ 0x80
+	add	r6, r0, #0
+	mov	r0, #128
 	str	r0, [sp, #12]
 	ldrb	r0, [r6, #19]
 	cmp	r0, #0
@@ -39,10 +39,10 @@ sub_080A40A0:
 	mov	r5, #2
 .L_a40da:
 	ldrb	r0, [r4, #0]
-	cmp	r0, #255	@ 0xff
+	cmp	r0, #255
 	beq	.L_a40e8
 	bl	sub_08003834
-	mov	r0, #255	@ 0xff
+	mov	r0, #255
 	strb	r0, [r4, #0]
 .L_a40e8:
 	add	r4, #1
@@ -50,14 +50,14 @@ sub_080A40A0:
 	cmp	r5, #0
 	bge	.L_a40da
 	mov	r5, #0
-	ldr	r7, [pc, #28]	@ (0x80a4110)
-	ldr	r1, [pc, #28]	@ (0x80a4114)
+	ldr	r7, .L_a4110	@ =0xFFFFFF00
+	ldr	r1, .L_a4114	@ =0xFFFF00FF
 	mov	r9, r1
 	mov	r4, sp
 	mov	r2, #2
 	mov	r8, r2
-	.2byte	0x1C33
-	add	r3, #36	@ 0x24
+	add	r3, r6, #0
+	add	r3, #36
 .L_a4102:
 	ldr	r0, [sp, #8]
 	cmp	r5, r0
@@ -66,14 +66,12 @@ sub_080A40A0:
 	and	r0, r7
 	mov	r1, #1
 	b	.L_a411e
-	.align	2, 0
 .L_a4110:
 	.4byte	0xFFFFFF00
-	.align	2, 0
 .L_a4114:
 	.4byte	0xFFFF00FF
 .L_a4118:
-	.2byte	0x9800
+	ldr	r0, [sp, #0]
 	and	r0, r7
 	mov	r1, r8
 .L_a411e:
@@ -96,28 +94,27 @@ sub_080A40A0:
 	ldr	r0, [sp, #0]
 	mov	r2, r9
 	and	r0, r2
-	mov	r1, #240	@ 0xf0
+	mov	r1, #240
 	lsl	r1, r1, #4
 	orr	r0, r1
-	ldr	r1, [pc, #8]	@ (0x80a4154)
+	ldr	r1, .L_a4154	@ =0x00FFFFFF
 	and	r0, r1
-	mov	r1, #176	@ 0xb0
+	mov	r1, #176
 	lsl	r1, r1, #20
 	b	.L_a416c
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_a4154:
-	.4byte	0xFFFFFF
+	.4byte	0x00FFFFFF
 .L_a4158:
 	ldr	r0, [sp, #0]
 	mov	r2, r9
 	and	r0, r2
-	mov	r1, #144	@ 0x90
+	mov	r1, #144
 	lsl	r1, r1, #4
 	orr	r0, r1
-	ldr	r1, [pc, #120]	@ (0x80a41e0)
+	ldr	r1, .L_a41e0	@ =0x00FFFFFF
 	and	r0, r1
-	mov	r1, #192	@ 0xc0
+	mov	r1, #192
 	lsl	r1, r1, #20
 .L_a416c:
 	orr	r0, r1
@@ -131,7 +128,7 @@ sub_080A40A0:
 	add	r1, #1
 	lsl	r1, r1, #24
 	lsr	r1, r1, #8
-	ldr	r2, [pc, #96]	@ (0x80a41e4)
+	ldr	r2, .L_a41e4	@ =0xFF00FFFF
 	ldr	r0, [sp, #0]
 	and	r0, r2
 	orr	r0, r1
@@ -139,12 +136,12 @@ sub_080A40A0:
 	ldr	r0, [r4, #4]
 	mov	r2, r9
 	and	r0, r2
-	mov	r1, #240	@ 0xf0
+	mov	r1, #240
 	lsl	r1, r1, #4
 	orr	r0, r1
 	ldr	r1, [sp, #12]
 	lsl	r2, r1, #16
-	ldr	r1, [pc, #72]	@ (0x80a41e8)
+	ldr	r1, .L_a41e8	@ =0x0000FFFF
 	and	r0, r1
 	orr	r0, r2
 	str	r0, [r4, #4]
@@ -177,14 +174,11 @@ sub_080A40A0:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_a41e0:
-	.4byte	0xFFFFFF
-	.align	2, 0
+	.4byte	0x00FFFFFF
 .L_a41e4:
 	.4byte	0xFF00FFFF
-	.align	2, 0
 .L_a41e8:
-	.4byte	0xFFFF
+	.4byte	0x0000FFFF
 .size sub_080A40A0, .-sub_080A40A0

@@ -1,12 +1,27 @@
 .syntax divided
-.align 1, 0
+.align 2, 0
 .global sub_0804B26C
 .thumb
 .type sub_0804B26C, %function
 .thumb_func
 sub_0804B26C:
-	@ Exact original ROM bytes from 0x0804B26C.
-	.byte	0x00, 0xB5, 0x03, 0x1C, 0x06, 0x48, 0x02, 0x68, 0x00, 0x2A, 0x07, 0xD0, 0x51, 0x68, 0x18, 0x88
-	.byte	0x08, 0x83, 0x51, 0x68, 0x58, 0x88, 0x48, 0x83, 0x18, 0x68, 0xD0, 0x60, 0x01, 0xBC, 0x00, 0x47
-	.byte	0x08, 0x60, 0x03, 0x02
+	push	{lr}
+	add	r3, r0, #0
+	ldr	r0, .L_4b28c	@ =0x02036008
+	ldr	r2, [r0, #0]
+	cmp	r2, #0
+	beq	.L_4b288
+	ldr	r1, [r2, #4]
+	ldrh	r0, [r3, #0]
+	strh	r0, [r1, #24]
+	ldr	r1, [r2, #4]
+	ldrh	r0, [r3, #2]
+	strh	r0, [r1, #26]
+	ldr	r0, [r3, #0]
+	str	r0, [r2, #12]
+.L_4b288:
+	pop	{r0}
+	bx	r0
+.L_4b28c:
+	.4byte	0x02036008
 .size sub_0804B26C, .-sub_0804B26C

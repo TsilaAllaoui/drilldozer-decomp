@@ -6,7 +6,7 @@
 .thumb_func
 sub_080C984C:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	cmp	r2, #0
 	bge	.L_c9856
 	neg	r2, r2
@@ -26,7 +26,7 @@ sub_080C984C:
 	str	r3, [r4, #0]
 	b	.L_c9896
 .L_c9872:
-	.2byte	0x1C03
+	add	r3, r0, #0
 	cmp	r3, r2
 	ble	.L_c9888
 	cmp	r1, #0

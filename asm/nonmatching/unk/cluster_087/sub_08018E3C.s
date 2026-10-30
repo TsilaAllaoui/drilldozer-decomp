@@ -9,15 +9,15 @@ sub_08018E3C:
 	mov	r7, r8
 	push	{r7}
 	sub	sp, #8
-	.2byte	0x1C05
-	.2byte	0x1C0F
-	.2byte	0x1C16
-	ldr	r0, [sp, #40]	@ 0x28
+	add	r5, r0, #0
+	add	r7, r1, #0
+	add	r6, r2, #0
+	ldr	r0, [sp, #40]
 	ldr	r4, [sp, #32]
 	add	r2, r4, r0
 	cmp	r4, r2
 	bge	.L_18e86
-	ldr	r0, [sp, #36]	@ 0x24
+	ldr	r0, [sp, #36]
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
 	mov	r8, r0
@@ -34,10 +34,10 @@ sub_08018E3C:
 	str	r0, [sp, #0]
 	mov	r0, #1
 	str	r0, [sp, #4]
-	.2byte	0x1C29
+	add	r1, r5, #0
 	lsr	r2, r7, #24
 	bl	sub_080022B0
-	add	r5, #64	@ 0x40
+	add	r5, #64
 	sub	r4, #1
 	add	r6, #1
 	cmp	r4, #0
@@ -49,5 +49,5 @@ sub_08018E3C:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08018E3C, .-sub_08018E3C

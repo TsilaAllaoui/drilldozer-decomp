@@ -12,8 +12,8 @@ sub_080022B0:
 	push	{r5, r6, r7}
 	sub	sp, #4
 	mov	r8, r1
-	ldr	r1, [sp, #36]	@ 0x24
-	ldr	r4, [sp, #40]	@ 0x28
+	ldr	r1, [sp, #36]
+	ldr	r4, [sp, #40]
 	lsl	r0, r0, #24
 	lsr	r5, r0, #24
 	lsl	r2, r2, #24
@@ -26,15 +26,15 @@ sub_080022B0:
 	mov	r9, r1
 	lsl	r4, r4, #24
 	lsr	r6, r4, #24
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08002A78
 	cmp	r0, #0
 	bne	.L_23a0
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08002A8C
 	cmp	r0, #0
 	bne	.L_23a0
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08002A24
 	cmp	r0, #0
 	beq	.L_22fe
@@ -43,26 +43,26 @@ sub_080022B0:
 	b	.L_23a0
 .L_22fe:
 	mov	r4, r8
-	.2byte	0x1C3B
+	add	r3, r7, #0
 	add	r0, r3, r6
 	cmp	r3, r0
 	bge	.L_23a0
 	mov	ip, r0
 	lsl	r1, r5, #4
-	ldr	r0, [pc, #56]	@ (0x8002348)
+	ldr	r0, .L_2348	@ =0x03000904
 	add	r1, r1, r0
 	mov	r8, r1
 .L_2312:
 	mov	r2, sl
 	mov	r1, r9
 	add	r0, r2, r1
-	.2byte	0x1C5F
+	add	r7, r3, #1
 	cmp	r2, r0
 	bge	.L_233c
 	mov	r1, r8
 	ldr	r6, [r1, #0]
 	lsl	r5, r3, #5
-	.2byte	0x1C03
+	add	r3, r0, #0
 .L_2326:
 	add	r0, r5, r2
 	lsl	r0, r0, #1
@@ -70,7 +70,7 @@ sub_080022B0:
 	ldrh	r1, [r4, #0]
 	strh	r1, [r0, #0]
 	add	r4, #2
-	.2byte	0x1C50
+	add	r0, r2, #1
 	lsl	r0, r0, #16
 	lsr	r2, r0, #16
 	cmp	r2, r3
@@ -81,19 +81,18 @@ sub_080022B0:
 	cmp	r3, ip
 	blt	.L_2312
 	b	.L_23a0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_2348:
-	.4byte	0x3000904
+	.4byte	0x03000904
 .L_234c:
 	mov	r4, r8
-	.2byte	0x1C28
+	add	r0, r5, #0
 	mov	r1, #1
 	bl	sub_08002938
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
 	str	r0, [sp, #0]
-	.2byte	0x1C3B
+	add	r3, r7, #0
 	add	r0, r3, r6
 	cmp	r3, r0
 	bge	.L_23a0
@@ -104,15 +103,15 @@ sub_080022B0:
 	mov	r2, sl
 	mov	r1, r9
 	add	r0, r2, r1
-	.2byte	0x1C5F
+	add	r7, r3, #1
 	cmp	r2, r0
 	bge	.L_2398
-	ldr	r6, [pc, #56]	@ (0x80023b0)
+	ldr	r6, .L_23b0	@ =0x03000904
 	add	r6, r8
 	ldr	r1, [sp, #0]
-	.2byte	0x1C1D
+	add	r5, r3, #0
 	mul	r5, r1
-	.2byte	0x1C03
+	add	r3, r0, #0
 .L_2382:
 	ldr	r1, [r6, #0]
 	add	r0, r5, r2
@@ -120,7 +119,7 @@ sub_080022B0:
 	ldrb	r0, [r4, #0]
 	strb	r0, [r1, #0]
 	add	r4, #1
-	.2byte	0x1C50
+	add	r0, r2, #1
 	lsl	r0, r0, #16
 	lsr	r2, r0, #16
 	cmp	r2, r3
@@ -139,7 +138,6 @@ sub_080022B0:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_23b0:
-	.4byte	0x3000904
+	.4byte	0x03000904
 .size sub_080022B0, .-sub_080022B0

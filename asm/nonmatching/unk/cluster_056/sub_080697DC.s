@@ -6,48 +6,43 @@
 .thumb_func
 sub_080697DC:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
-	ldr	r0, [pc, #16]	@ (0x80697f4)
+	add	r5, r0, #0
+	ldr	r0, .L_697f4	@ =0x02036060
 	ldr	r4, [r0, #0]
 	ldr	r0, [r4, #12]
 	cmp	r0, #4
 	bhi	.L_6984c
 	lsl	r0, r0, #2
-	ldr	r1, [pc, #8]	@ (0x80697f8)
+	ldr	r1, .L_697f8	@ =0x080697FC
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]
 	mov	pc, r0
-	.align	2, 0
 .L_697f4:
-	.4byte	0x2036060
-	.align	2, 0
+	.4byte	0x02036060
 .L_697f8:
-	.4byte	.L_697fc
-.L_697fc:
-	ldr	r0, [sp, #64]	@ 0x40
-	lsr	r6, r0, #32
-	ldr	r0, [sp, #112]	@ 0x70
-	lsr	r6, r0, #32
-	ldr	r0, [sp, #208]	@ 0xd0
-	lsr	r6, r0, #32
-	ldr	r0, [sp, #256]	@ 0x100
-	lsr	r6, r0, #32
-	ldr	r0, [sp, #288]	@ 0x120
-	lsr	r6, r0, #32
+	.4byte	0x080697FC
+	.4byte	0x08069810	@ case .L_69810
+	.4byte	0x0806981C	@ case .L_6981c
+	.4byte	0x08069834	@ case .L_69834
+	.4byte	0x08069840	@ case .L_69840
+	.4byte	0x08069848	@ case .L_69848
+.L_69810:
 	bl	sub_08019B88
 	lsl	r0, r0, #24
 	cmp	r0, #0
 	bne	.L_6984c
 	b	.L_69840
+.L_6981c:
 	bl	sub_0806405C
-	.2byte	0x1C28
-	mov	r1, #127	@ 0x7f
+	add	r0, r5, #0
+	mov	r1, #127
 	bl	sub_0800B254
 	ldrb	r0, [r4, #18]
 	cmp	r0, #0
 	beq	.L_69840
 	bl	sub_080EDBA8
 	b	.L_69840
+.L_69834:
 	ldr	r0, [r4, #24]
 	mov	r1, #3
 	bl	sub_080677A0
@@ -57,6 +52,7 @@ sub_080697DC:
 	add	r0, #1
 	str	r0, [r4, #12]
 	b	.L_6984c
+.L_69848:
 	mov	r0, #1
 	b	.L_6984e
 .L_6984c:

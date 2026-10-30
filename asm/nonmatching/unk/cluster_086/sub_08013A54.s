@@ -18,8 +18,8 @@ sub_08013A54:
 	blt	.L_13a6c
 	mov	r3, #1
 .L_13a6c:
-	.2byte	0x1C18
+	add	r0, r3, #0
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08013A54, .-sub_08013A54

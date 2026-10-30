@@ -7,9 +7,9 @@
 sub_0800D2F8:
 	push	{r4, lr}
 	sub	sp, #4
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldr	r0, [r4, #0]
-	ldr	r1, [r0, #52]	@ 0x34
+	ldr	r1, [r0, #52]
 	mov	r2, #16
 	ldrsh	r0, [r1, r2]
 	ldr	r2, [r4, #8]
@@ -44,28 +44,27 @@ sub_0800D2F8:
 	bl	sub_08008900
 	lsl	r0, r0, #24
 	lsr	r2, r0, #24
-	ldr	r0, [pc, #36]	@ (0x800d36c)
+	ldr	r0, .L_d36c	@ =0x0810182C
 	lsl	r1, r2, #3
 	add	r0, #4
 	add	r1, r1, r0
 	ldr	r0, [r1, #0]
 	cmp	r0, #0
 	bne	.L_d366
-	.2byte	0x1C10
-	sub	r0, #177	@ 0xb1
+	add	r0, r2, #0
+	sub	r0, #177
 	cmp	r0, #2
 	bls	.L_d366
-	.2byte	0x1C10
+	add	r0, r2, #0
 	bl	sub_08015D14
 	cmp	r0, #0
 	bne	.L_d370
 .L_d366:
 	mov	r0, #0
 	b	.L_d386
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_d36c:
-	.4byte	0x810182C
+	.4byte	0x0810182C
 .L_d370:
 	ldr	r0, [r4, #0]
 	ldrh	r1, [r4, #16]
@@ -82,5 +81,5 @@ sub_0800D2F8:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0800D2F8, .-sub_0800D2F8

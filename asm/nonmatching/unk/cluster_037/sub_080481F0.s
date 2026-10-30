@@ -7,11 +7,11 @@
 sub_080481F0:
 	push	{r4, r5, lr}
 	bl	sub_0800B470
-	.2byte	0x1C03
+	add	r3, r0, #0
 	mov	r1, #0
 	cmp	r1, r3
 	bge	.L_48216
-	ldr	r5, [pc, #68]	@ (0x8048244)
+	ldr	r5, .L_48244	@ =0x02035A74
 	mov	r4, #0
 	mov	r2, #4
 .L_48204:
@@ -25,13 +25,13 @@ sub_080481F0:
 	cmp	r1, r3
 	blt	.L_48204
 .L_48216:
-	ldr	r5, [pc, #44]	@ (0x8048244)
+	ldr	r5, .L_48244	@ =0x02035A74
 	cmp	r1, #2
 	bgt	.L_48236
-	.2byte	0x1C2C
+	add	r4, r5, #0
 	mov	r3, #1
 	lsl	r0, r1, #2
-	.2byte	0x1D02
+	add	r2, r0, #4
 .L_48224:
 	ldr	r0, [r4, #0]
 	add	r0, #4
@@ -50,7 +50,6 @@ sub_080481F0:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_48244:
-	.4byte	0x2035A74
+	.4byte	0x02035A74
 .size sub_080481F0, .-sub_080481F0

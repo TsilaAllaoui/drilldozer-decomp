@@ -7,36 +7,33 @@
 sub_08067908:
 	push	{r4, r5, r6, lr}
 	sub	sp, #4
-	.2byte	0x1C05
+	add	r5, r0, #0
 	mov	r0, #0
 	str	r0, [sp, #0]
-	.2byte	0x1C2C
-	add	r4, #76	@ 0x4c
-	ldr	r2, [pc, #32]	@ (0x8067938)
+	add	r4, r5, #0
+	add	r4, #76
+	ldr	r2, .L_67938	@ =0x05000200
 	mov	r0, sp
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_080F86FC
-	ldr	r0, [pc, #24]	@ (0x806793c)
-	.2byte	0x1C21
+	ldr	r0, .L_6793c	@ =0x08335B88
+	add	r1, r4, #0
 	bl	sub_080F8710
-	ldr	r3, [pc, #20]	@ (0x8067940)
+	ldr	r3, .L_67940	@ =0x000003FF
 	mov	r6, #0
-	.2byte	0x1C5A
+	add	r2, r3, #1
 .L_6792e:
 	ldrh	r1, [r4, #0]
 	cmp	r1, r3
 	bne	.L_67944
 	strh	r6, [r4, #0]
 	b	.L_6794c
-	.align	2, 0
 .L_67938:
-	.4byte	0x5000200
-	.align	2, 0
+	.4byte	0x05000200
 .L_6793c:
-	.4byte	0x8335B88
-	.align	2, 0
+	.4byte	0x08335B88
 .L_67940:
-	.4byte	0x3FF
+	.4byte	0x000003FF
 .L_67944:
 	ldrb	r0, [r5, #31]
 	lsl	r0, r0, #12

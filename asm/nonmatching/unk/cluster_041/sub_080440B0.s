@@ -11,11 +11,11 @@ sub_080440B0:
 	mov	r5, r8
 	push	{r5, r6, r7}
 	sub	sp, #4
-	.2byte	0x1C02
-	.2byte	0x1C0D
+	add	r2, r0, #0
+	add	r5, r1, #0
 	ldrb	r0, [r5, #18]
 	lsl	r0, r0, #4
-	ldr	r1, [pc, #20]	@ (0x80440dc)
+	ldr	r1, .L_440dc	@ =0x082C2CAC
 	add	r0, r0, r1
 	str	r0, [sp, #0]
 	ldrb	r0, [r5, #17]
@@ -26,15 +26,14 @@ sub_080440B0:
 	cmp	r0, #3
 	beq	.L_440f8
 	b	.L_44120
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_440dc:
-	.4byte	0x82C2CAC
+	.4byte	0x082C2CAC
 .L_440e0:
-	.2byte	0x1C11
-	add	r1, #86	@ 0x56
-	.2byte	0x1C10
-	add	r0, #88	@ 0x58
+	add	r1, r2, #0
+	add	r1, #86
+	add	r0, r2, #0
+	add	r0, #88
 	mov	r2, #0
 	ldrsh	r1, [r1, r2]
 	mov	r3, #0
@@ -44,9 +43,9 @@ sub_080440B0:
 	mov	r0, #1
 	b	.L_44122
 .L_440f8:
-	.2byte	0x1C13
-	add	r3, #86	@ 0x56
-	add	r2, #88	@ 0x58
+	add	r3, r2, #0
+	add	r3, #86
+	add	r2, #88
 	mov	r4, #0
 	ldrsh	r0, [r2, r4]
 	lsr	r1, r0, #31
@@ -70,11 +69,11 @@ sub_080440B0:
 .L_44122:
 	strb	r0, [r5, #17]
 	ldr	r1, [r5, #0]
-	.2byte	0x1C08
-	add	r0, #33	@ 0x21
+	add	r0, r1, #0
+	add	r0, #33
 	ldrb	r2, [r0, #0]
 	lsr	r0, r2, #6
-	add	r1, #35	@ 0x23
+	add	r1, #35
 	ldrb	r1, [r1, #0]
 	lsr	r1, r1, #6
 	lsl	r2, r2, #26
@@ -83,9 +82,9 @@ sub_080440B0:
 	lsl	r7, r0, #5
 	ldrb	r2, [r5, #17]
 	ldrb	r1, [r5, #16]
-	.2byte	0x1C08
+	add	r0, r1, #0
 	mul	r0, r7
-	.2byte	0x1C14
+	add	r4, r2, #0
 	mul	r4, r0
 	mov	sl, r4
 	mov	r6, #0
@@ -99,18 +98,18 @@ sub_080440B0:
 	add	r4, r8
 	add	r4, sl
 	bl	sub_08006700
-	.2byte	0x1C01
+	add	r1, r0, #0
 	mov	r2, r9
 	add	r2, #4
 	mov	r9, r2
 	sub	r2, #4
 	ldmia	r2!, {r0}
-	ldrh	r0, [r0, #36]	@ 0x24
+	ldrh	r0, [r0, #36]
 	lsl	r0, r0, #22
 	lsr	r0, r0, #17
 	add	r1, r1, r0
-	.2byte	0x1C20
-	.2byte	0x1C3A
+	add	r0, r4, #0
+	add	r2, r7, #0
 	bl	sub_08006598
 	add	r8, r7
 	add	r6, #1

@@ -9,12 +9,11 @@ sub_0808D4A0:
 	sub	sp, #4
 	lsl	r0, r0, #16
 	lsr	r4, r0, #16
-.L_8d4a8:
 	mov	r0, #0
 	str	r0, [sp, #0]
 .L_8d4ac:
 	mov	r0, sp
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_0801BC0C
 	cmp	r0, #0
 	beq	.L_8d4be
@@ -25,5 +24,5 @@ sub_0808D4A0:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0808D4A0, .-sub_0808D4A0

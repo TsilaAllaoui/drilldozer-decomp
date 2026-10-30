@@ -7,7 +7,7 @@
 sub_08066D88:
 	push	{r4, r5, lr}
 	sub	sp, #8
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldrb	r0, [r4, #16]
 	mov	r5, #32
 	str	r5, [sp, #0]

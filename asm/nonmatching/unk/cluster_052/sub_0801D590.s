@@ -11,9 +11,9 @@ sub_0801D590:
 	mov	r5, r8
 	push	{r5, r6, r7}
 	sub	sp, #16
-	.2byte	0x1C07
+	add	r7, r0, #0
 	mov	r2, sp
-	ldr	r0, [pc, #96]	@ (0x801d604)
+	ldr	r0, .L_1d604	@ =0x08236F04
 	ldmia	r0!, {r3, r4, r5}
 	stmia	r2!, {r3, r4, r5}
 	ldr	r0, [r0, #0]
@@ -26,13 +26,13 @@ sub_0801D590:
 	ldrsh	r0, [r7, r1]
 	mov	r9, r0
 	mov	r5, sp
-	mov	r4, #34	@ 0x22
+	mov	r4, #34
 	ldrsh	r3, [r7, r4]
 	mov	r8, r3
 .L_1d5c0:
 	lsl	r1, r6, #2
-	.2byte	0x1C38
-	add	r0, #36	@ 0x24
+	add	r0, r7, #0
+	add	r0, #36
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]
 	mov	r1, #0
@@ -45,7 +45,7 @@ sub_0801D590:
 	add	r2, r8
 	lsl	r2, r2, #16
 	asr	r2, r2, #16
-	ldr	r4, [pc, #40]	@ (0x801d608)
+	ldr	r4, .L_1d608	@ =0x08236F9C
 	ldrb	r3, [r5, #2]
 	add	r3, sl
 	add	r3, r3, r4
@@ -63,10 +63,8 @@ sub_0801D590:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_1d604:
-	.4byte	0x8236F04
-	.align	2, 0
+	.4byte	0x08236F04
 .L_1d608:
-	.4byte	0x8236F9C
+	.4byte	0x08236F9C
 .size sub_0801D590, .-sub_0801D590

@@ -6,8 +6,8 @@
 .thumb_func
 sub_08006080:
 	push	{r4, r5, r6, r7, lr}
-	.2byte	0x1C05
-	.2byte	0x1C1E
+	add	r5, r0, #0
+	add	r6, r3, #0
 	ldr	r7, [sp, #20]
 	lsl	r2, r2, #24
 	lsr	r4, r2, #24
@@ -15,13 +15,13 @@ sub_08006080:
 	lsl	r0, r2, #3
 	add	r1, r1, r0
 	ldrh	r0, [r1, #0]
-	ldr	r3, [pc, #48]	@ (0x80060c8)
+	ldr	r3, .L_60c8	@ =0x0000FFFC
 	cmp	r0, r3
 	bls	.L_60ac
 .L_609a:
 	cmp	r2, #0
 	beq	.L_612a
-	.2byte	0x1E50
+	sub	r0, r2, #1
 	lsl	r0, r0, #24
 	lsr	r2, r0, #24
 	sub	r1, #8
@@ -42,17 +42,16 @@ sub_08006080:
 	cmp	r4, #0
 	beq	.L_60d2
 	b	.L_612a
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_60c8:
-	.4byte	0xFFFC
+	.4byte	0x0000FFFC
 .L_60cc:
 	cmp	r4, #2
 	beq	.L_6112
 	b	.L_612a
 .L_60d2:
-	.2byte	0x1C28
-	add	r0, #35	@ 0x23
+	add	r0, r5, #0
+	add	r0, #35
 	ldrb	r0, [r0, #0]
 	lsl	r0, r0, #26
 	lsr	r1, r0, #27
@@ -73,8 +72,8 @@ sub_08006080:
 	strh	r0, [r7, #0]
 	b	.L_612a
 .L_60fa:
-	.2byte	0x1C28
-	add	r0, #35	@ 0x23
+	add	r0, r5, #0
+	add	r0, #35
 	ldrb	r0, [r0, #0]
 	lsl	r0, r0, #26
 	lsr	r0, r0, #27
@@ -86,8 +85,8 @@ sub_08006080:
 	strh	r0, [r7, #0]
 	b	.L_612a
 .L_6112:
-	.2byte	0x1C28
-	add	r0, #35	@ 0x23
+	add	r0, r5, #0
+	add	r0, #35
 	ldrb	r0, [r0, #0]
 	lsl	r0, r0, #26
 	lsr	r0, r0, #27

@@ -9,16 +9,16 @@ sub_0807558C:
 	mov	r7, r8
 	push	{r7}
 	mov	r8, r0
-	.2byte	0x1C0F
-	.2byte	0x1C14
-	.2byte	0x1C1E
+	add	r7, r1, #0
+	add	r4, r2, #0
+	add	r6, r3, #0
 	ldr	r5, [sp, #24]
-	.2byte	0x1C38
-	.2byte	0x1C31
+	add	r0, r7, #0
+	add	r1, r6, #0
 	bl	sub_08075570
 	cmp	r0, #0
 	bne	.L_755ca
-	.2byte	0x1C33
+	add	r3, r6, #0
 	add	r2, r4, r5
 	cmp	r4, #0
 	bge	.L_755b6
@@ -31,14 +31,14 @@ sub_0807558C:
 	cmp	r2, r4
 	ble	.L_755c0
 .L_755be:
-	.2byte	0x1C22
+	add	r2, r4, #0
 .L_755c0:
 	mov	r0, r8
-	.2byte	0x1C39
+	add	r1, r7, #0
 	bl	sub_08075318
 	b	.L_755ea
 .L_755ca:
-	.2byte	0x1C3B
+	add	r3, r7, #0
 	add	r2, r5, r4
 	cmp	r5, #0
 	bge	.L_755d8
@@ -51,10 +51,10 @@ sub_0807558C:
 	cmp	r2, r5
 	ble	.L_755e2
 .L_755e0:
-	.2byte	0x1C2A
+	add	r2, r5, #0
 .L_755e2:
 	mov	r0, r8
-	.2byte	0x1C31
+	add	r1, r6, #0
 	bl	sub_08075318
 .L_755ea:
 	pop	{r3}

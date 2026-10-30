@@ -28,7 +28,7 @@ sub_0802FBE4:
 	ble	.L_2fc0a
 	mov	r2, #1
 .L_2fc0a:
-	.2byte	0x1C10
+	add	r0, r2, #0
 	pop	{r1}
 	bx	r1
 .size sub_0802FBE4, .-sub_0802FBE4

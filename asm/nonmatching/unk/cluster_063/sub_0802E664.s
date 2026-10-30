@@ -7,14 +7,14 @@
 sub_0802E664:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C04
-	.2byte	0x1C0D
+	add	r4, r0, #0
+	add	r5, r1, #0
 	mov	r1, sp
 	bl	sub_08011834
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080119D4
 	mov	r1, sp
-	.2byte	0x1C2A
+	add	r2, r5, #0
 	bl	sub_0802E630
 	add	sp, #4
 	pop	{r4, r5}

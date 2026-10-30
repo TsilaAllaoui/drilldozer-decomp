@@ -6,12 +6,12 @@
 .thumb_func
 sub_0808FA50:
 	push	{r4, lr}
-	.2byte	0x1C04
-	ldrh	r0, [r4, #36]	@ 0x24
+	add	r4, r0, #0
+	ldrh	r0, [r4, #36]
 	lsl	r1, r1, #16
 	asr	r1, r1, #16
 	sub	r1, r1, r0
-	ldrh	r0, [r4, #38]	@ 0x26
+	ldrh	r0, [r4, #38]
 	lsl	r2, r2, #16
 	asr	r2, r2, #16
 	sub	r2, r2, r0
@@ -19,10 +19,10 @@ sub_0808FA50:
 	asr	r1, r1, #16
 	lsl	r2, r2, #16
 	asr	r2, r2, #16
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0801C258
-	ldr	r0, [r4, #36]	@ 0x24
-	str	r0, [r4, #40]	@ 0x28
+	ldr	r0, [r4, #36]
+	str	r0, [r4, #40]
 	pop	{r4}
 	pop	{r0}
 	bx	r0

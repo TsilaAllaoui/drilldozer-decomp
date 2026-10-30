@@ -6,9 +6,9 @@
 .thumb_func
 sub_08057580:
 	push	{r4, r5, r6, r7, lr}
-	.2byte	0x1C06
-	.2byte	0x1C0C
-	.2byte	0x1C15
+	add	r6, r0, #0
+	add	r4, r1, #0
+	add	r5, r2, #0
 	mov	r1, #6
 	ldrsh	r0, [r3, r1]
 	mov	r2, #4
@@ -43,7 +43,7 @@ sub_08057580:
 	ble	.L_5760c
 	sub	r0, r2, r0
 	bl	sub_080566A4
-	mov	r1, #179	@ 0xb3
+	mov	r1, #179
 	lsl	r1, r1, #1
 	add	r2, r6, r1
 	ldrh	r1, [r2, #0]
@@ -58,7 +58,7 @@ sub_08057580:
 	ble	.L_575f8
 	sub	r0, r2, r0
 	bl	sub_080566A4
-	mov	r7, #177	@ 0xb1
+	mov	r7, #177
 	lsl	r7, r7, #1
 	add	r2, r6, r7
 	ldrh	r1, [r2, #0]
@@ -71,7 +71,7 @@ sub_08057580:
 	ldrsh	r0, [r5, r1]
 	sub	r0, r0, r2
 	bl	sub_080566A4
-	mov	r7, #177	@ 0xb1
+	mov	r7, #177
 	lsl	r7, r7, #1
 	b	.L_5761e
 .L_5760c:
@@ -81,7 +81,7 @@ sub_08057580:
 	ldrsh	r0, [r5, r1]
 	sub	r0, r0, r2
 	bl	sub_080566A4
-	mov	r7, #179	@ 0xb3
+	mov	r7, #179
 	lsl	r7, r7, #1
 .L_5761e:
 	add	r2, r6, r7

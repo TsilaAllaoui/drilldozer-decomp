@@ -6,13 +6,13 @@
 .thumb_func
 sub_08063740:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C06
-	.2byte	0x1C0C
-	.2byte	0x1C25
+	add	r6, r0, #0
+	add	r4, r1, #0
+	add	r5, r4, #0
 	ldrb	r0, [r4, #0]
 	cmp	r0, #0
 	bne	.L_6375a
-	mov	r0, #38	@ 0x26
+	mov	r0, #38
 	bl	sub_08029E54
 	ldrb	r0, [r4, #0]
 	add	r0, #1
@@ -22,22 +22,22 @@ sub_08063740:
 	cmp	r0, #2
 	bhi	.L_63790
 	ldr	r0, [r4, #28]
-	ldr	r1, [r4, #44]	@ 0x2c
+	ldr	r1, [r4, #44]
 	sub	r0, r0, r1
 	str	r0, [r4, #28]
 	ldr	r0, [r4, #32]
-	ldr	r1, [r4, #48]	@ 0x30
+	ldr	r1, [r4, #48]
 	add	r0, r0, r1
 	str	r0, [r4, #32]
-	ldr	r0, [r4, #36]	@ 0x24
-	ldr	r1, [r4, #52]	@ 0x34
+	ldr	r0, [r4, #36]
+	ldr	r1, [r4, #52]
 	sub	r0, r0, r1
-	str	r0, [r4, #36]	@ 0x24
-	ldr	r0, [r4, #40]	@ 0x28
-	ldr	r1, [r4, #56]	@ 0x38
+	str	r0, [r4, #36]
+	ldr	r0, [r4, #40]
+	ldr	r1, [r4, #56]
 	add	r0, r0, r1
-	str	r0, [r4, #40]	@ 0x28
-	.2byte	0x1C20
+	str	r0, [r4, #40]
+	add	r0, r4, #0
 	add	r0, #28
 	bl	sub_08063B18
 	ldrb	r0, [r4, #1]
@@ -46,7 +46,7 @@ sub_08063740:
 	b	.L_637a2
 .L_63790:
 	bl	sub_08063AF0
-	.2byte	0x1C30
+	add	r0, r6, #0
 	bl	sub_0800090C
 	mov	r0, #0
 	strb	r0, [r5, #0]

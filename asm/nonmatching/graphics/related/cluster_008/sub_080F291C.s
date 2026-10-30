@@ -9,11 +9,11 @@ sub_080F291C:
 	mov	r7, r8
 	push	{r7}
 	sub	sp, #12
-	.2byte	0x1C04
-	.2byte	0x1C1E
+	add	r4, r0, #0
+	add	r6, r3, #0
 	add	r4, #1
 	add	r1, #1
-	ldr	r0, [pc, #72]	@ (0x80f2978)
+	ldr	r0, .L_f2978	@ =0x084E8100
 	lsl	r2, r2, #2
 	add	r2, r2, r0
 	ldr	r2, [r2, #0]
@@ -52,7 +52,6 @@ sub_080F291C:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_f2978:
-	.4byte	0x84E8100
+	.4byte	0x084E8100
 .size sub_080F291C, .-sub_080F291C

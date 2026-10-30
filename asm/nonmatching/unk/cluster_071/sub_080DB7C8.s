@@ -7,8 +7,8 @@
 sub_080DB7C8:
 	push	{r4, r5, r6, lr}
 	sub	sp, #4
-	.2byte	0x1C05
-	.2byte	0x1C0C
+	add	r5, r0, #0
+	add	r4, r1, #0
 	ldr	r0, [r5, #12]
 	mov	r6, sp
 	mov	r1, sp
@@ -18,7 +18,7 @@ sub_080DB7C8:
 	cmp	r0, #1
 	bhi	.L_db7f8
 	mov	r0, sp
-	mov	r2, #36	@ 0x24
+	mov	r2, #36
 	ldrsh	r1, [r5, r2]
 	mov	r2, #0
 	ldrsh	r0, [r0, r2]
@@ -31,7 +31,7 @@ sub_080DB7C8:
 	b	.L_db80c
 .L_db7f8:
 	ldrh	r0, [r6, #2]
-	mov	r2, #38	@ 0x26
+	mov	r2, #38
 	ldrsh	r1, [r5, r2]
 	lsl	r0, r0, #16
 	asr	r0, r0, #16

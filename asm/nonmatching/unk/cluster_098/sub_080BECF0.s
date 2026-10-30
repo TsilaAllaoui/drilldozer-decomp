@@ -8,17 +8,17 @@ sub_080BECF0:
 	push	{r4, r5, r6, r7, lr}
 	mov	r7, r8
 	push	{r7}
-	.2byte	0x1C0C
-	.2byte	0x1C15
-	.2byte	0x1C1F
+	add	r4, r1, #0
+	add	r5, r2, #0
+	add	r7, r3, #0
 	cmp	r4, r7
 	ble	.L_bed0c
-	.2byte	0x1C39
-	.2byte	0x1C27
-	.2byte	0x1C0C
-	.2byte	0x1C29
-	.2byte	0x1C05
-	.2byte	0x1C08
+	add	r1, r7, #0
+	add	r7, r4, #0
+	add	r4, r1, #0
+	add	r1, r5, #0
+	add	r5, r0, #0
+	add	r0, r1, #0
 .L_bed0c:
 	lsl	r6, r0, #8
 	sub	r0, r5, r0
@@ -53,12 +53,12 @@ sub_080BECF0:
 	bge	.L_bed48
 	mov	r2, #0
 .L_bed48:
-	cmp	r2, #240	@ 0xf0
+	cmp	r2, #240
 	ble	.L_bed4e
-	mov	r2, #240	@ 0xf0
+	mov	r2, #240
 .L_bed4e:
 	ldrb	r0, [r3, #0]
-	cmp	r0, #255	@ 0xff
+	cmp	r0, #255
 	beq	.L_bed58
 	cmp	r0, r2
 	ble	.L_bed5a
@@ -74,12 +74,12 @@ sub_080BECF0:
 	bge	.L_bed68
 	mov	r5, #0
 .L_bed68:
-	cmp	r5, #240	@ 0xf0
+	cmp	r5, #240
 	ble	.L_bed6e
-	mov	r5, #240	@ 0xf0
+	mov	r5, #240
 .L_bed6e:
 	ldrb	r0, [r3, #0]
-	cmp	r0, #255	@ 0xff
+	cmp	r0, #255
 	beq	.L_bedba
 	cmp	r0, r5
 	ble	.L_bedbc
@@ -95,12 +95,12 @@ sub_080BECF0:
 	bge	.L_bed8a
 	mov	r2, #0
 .L_bed8a:
-	cmp	r2, #240	@ 0xf0
+	cmp	r2, #240
 	ble	.L_bed90
-	mov	r2, #240	@ 0xf0
+	mov	r2, #240
 .L_bed90:
 	ldrb	r0, [r3, #0]
-	cmp	r0, #255	@ 0xff
+	cmp	r0, #255
 	beq	.L_bed9a
 	cmp	r0, r2
 	bge	.L_bed9c
@@ -116,12 +116,12 @@ sub_080BECF0:
 	bge	.L_bedaa
 	mov	r5, #0
 .L_bedaa:
-	cmp	r5, #240	@ 0xf0
+	cmp	r5, #240
 	ble	.L_bedb0
-	mov	r5, #240	@ 0xf0
+	mov	r5, #240
 .L_bedb0:
 	ldrb	r0, [r3, #0]
-	cmp	r0, #255	@ 0xff
+	cmp	r0, #255
 	beq	.L_bedba
 	cmp	r0, r5
 	bge	.L_bedbc
@@ -133,5 +133,5 @@ sub_080BECF0:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080BECF0, .-sub_080BECF0

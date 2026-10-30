@@ -6,7 +6,7 @@
 .thumb_func
 sub_0808D68C:
 	push	{r4, r5, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldrb	r0, [r4, #14]
 	cmp	r0, #1
 	beq	.L_8d6be
@@ -22,7 +22,7 @@ sub_0808D68C:
 .L_8d6a6:
 	mov	r0, #3
 	bl	sub_08001E58
-	.2byte	0x1C01
+	add	r1, r0, #0
 	mov	r0, #15
 	and	r1, r0
 	cmp	r1, #0
@@ -37,21 +37,21 @@ sub_0808D68C:
 	str	r0, [r4, #8]
 	cmp	r0, #10
 	ble	.L_8d744
-	mov	r0, #72	@ 0x48
-	mov	r1, #63	@ 0x3f
+	mov	r0, #72
+	mov	r1, #63
 	bl	sub_08000F28
-	mov	r0, #74	@ 0x4a
-	mov	r1, #55	@ 0x37
+	mov	r0, #74
+	mov	r1, #55
 	bl	sub_08000F28
-	mov	r1, #128	@ 0x80
+	mov	r1, #128
 	lsl	r1, r1, #6
 	mov	r0, #0
 	bl	sub_08000FB8
-	mov	r0, #64	@ 0x40
-	mov	r1, #239	@ 0xef
+	mov	r0, #64
+	mov	r1, #239
 	bl	sub_08000F28
-	mov	r0, #68	@ 0x44
-	mov	r1, #159	@ 0x9f
+	mov	r0, #68
+	mov	r1, #159
 	bl	sub_08000F28
 	mov	r0, #5
 	neg	r0, r0
@@ -73,19 +73,19 @@ sub_0808D68C:
 	lsr	r5, r0, #24
 .L_8d712:
 	lsl	r1, r5, #8
-	mov	r0, #239	@ 0xef
+	mov	r0, #239
 	orr	r1, r0
-	mov	r0, #64	@ 0x40
+	mov	r0, #64
 	bl	sub_08000F28
-	cmp	r5, #238	@ 0xee
+	cmp	r5, #238
 	bls	.L_8d744
-	mov	r0, #72	@ 0x48
-	mov	r1, #63	@ 0x3f
+	mov	r0, #72
+	mov	r1, #63
 	bl	sub_08000F28
-	mov	r0, #74	@ 0x4a
-	mov	r1, #63	@ 0x3f
+	mov	r0, #74
+	mov	r1, #63
 	bl	sub_08000F28
-	mov	r1, #128	@ 0x80
+	mov	r1, #128
 	lsl	r1, r1, #6
 	mov	r0, #0
 	bl	sub_08000FD8

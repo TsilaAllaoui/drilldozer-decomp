@@ -7,7 +7,7 @@
 sub_0807F074:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C05
+	add	r5, r0, #0
 	bl	sub_0807E630
 	mov	r4, sp
 	mov	r1, sp
@@ -20,12 +20,12 @@ sub_0807F074:
 	bne	.L_7f09a
 	mov	r0, sp
 	ldrh	r0, [r0, #0]
-	add	r0, #36	@ 0x24
+	add	r0, #36
 	b	.L_7f0a0
 .L_7f09a:
 	mov	r0, sp
 	ldrh	r0, [r0, #0]
-	sub	r0, #36	@ 0x24
+	sub	r0, #36
 .L_7f0a0:
 	mov	r1, sp
 	strh	r0, [r1, #0]

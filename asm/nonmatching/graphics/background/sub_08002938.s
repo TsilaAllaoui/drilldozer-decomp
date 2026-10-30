@@ -14,7 +14,7 @@ sub_08002938:
 	bl	sub_08000B50
 	lsl	r0, r0, #24
 	lsr	r1, r0, #24
-	.2byte	0x1C08
+	add	r0, r1, #0
 	cmp	r4, #0
 	beq	.L_2960
 	cmp	r4, #0
@@ -48,7 +48,7 @@ sub_08002938:
 	mov	r0, #16
 	b	.L_298a
 .L_2984:
-	mov	r0, #64	@ 0x40
+	mov	r0, #64
 	b	.L_298a
 .L_2988:
 	mov	r0, #0

@@ -7,10 +7,10 @@
 sub_080F45A4:
 	push	{r4, lr}
 	mov	ip, r0
-	.2byte	0x1C0C
-	mov	r1, #255	@ 0xff
+	add	r4, r1, #0
+	mov	r1, #255
 	mov	r2, ip
-	add	r2, #60	@ 0x3c
+	add	r2, #60
 	mov	r3, #3
 .L_f45b2:
 	ldrb	r0, [r2, #0]
@@ -24,7 +24,7 @@ sub_080F45A4:
 	cmp	r3, #0
 	bge	.L_f45b2
 	mov	r0, ip
-	add	r0, #68	@ 0x44
+	add	r0, #68
 	mov	r2, #0
 	strb	r2, [r0, #0]
 	add	r0, #1

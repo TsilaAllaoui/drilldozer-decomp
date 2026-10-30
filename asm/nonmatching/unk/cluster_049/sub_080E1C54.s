@@ -6,7 +6,7 @@
 .thumb_func
 sub_080E1C54:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldrb	r0, [r4, #29]
 	cmp	r0, #0
 	beq	.L_e1c7a
@@ -18,8 +18,8 @@ sub_080E1C54:
 	mov	r1, #3
 	mov	r2, #2
 	bl	sub_0800D79C
-	.2byte	0x1C21
-	add	r1, #40	@ 0x28
+	add	r1, r4, #0
+	add	r1, #40
 	bl	sub_08008748
 .L_e1c7a:
 	pop	{r4}

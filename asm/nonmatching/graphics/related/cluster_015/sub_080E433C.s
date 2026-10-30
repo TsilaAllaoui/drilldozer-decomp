@@ -12,9 +12,9 @@ sub_080E433C:
 	sub	sp, #20
 	mov	r8, r0
 	mov	r6, r8
-	add	r6, #48	@ 0x30
+	add	r6, #48
 	ldrb	r7, [r0, #15]
-	.2byte	0x1C38
+	add	r0, r7, #0
 	mov	r1, #0
 	bl	sub_08003E34
 	mov	r4, #0
@@ -38,16 +38,16 @@ sub_080E433C:
 	str	r0, [sp, #0]
 	mov	r0, #8
 	str	r0, [sp, #4]
-	ldr	r0, [pc, #60]	@ (0x80e43bc)
+	ldr	r0, .L_e43bc	@ =0x084B7F1C
 	str	r0, [sp, #8]
 	mov	r0, r9
 	str	r0, [sp, #12]
 	mov	r0, r8
-	add	r0, #56	@ 0x38
+	add	r0, #56
 	add	r0, r0, r5
 	ldr	r0, [r0, #0]
 	str	r0, [sp, #16]
-	.2byte	0x1C38
+	add	r0, r7, #0
 	mov	r1, #2
 	mov	r2, #4
 	bl	sub_0802C8E8
@@ -58,7 +58,7 @@ sub_080E433C:
 	cmp	r4, r0
 	blt	.L_e436c
 .L_e43a6:
-	.2byte	0x1C38
+	add	r0, r7, #0
 	mov	r1, #2
 	bl	sub_080038F8
 	add	sp, #20
@@ -68,7 +68,6 @@ sub_080E433C:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_e43bc:
-	.4byte	0x84B7F1C
+	.4byte	0x084B7F1C
 .size sub_080E433C, .-sub_080E433C

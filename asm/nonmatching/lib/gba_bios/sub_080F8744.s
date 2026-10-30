@@ -5,6 +5,6 @@
 .type sub_080F8744, %function
 .thumb_func
 sub_080F8744:
-	.2byte	0xDF08
+	swi	#8
 	bx	lr
 .size sub_080F8744, .-sub_080F8744

@@ -5,9 +5,18 @@
 .type sub_080E1644, %function
 .thumb_func
 sub_080E1644:
-	@ Exact original ROM bytes from 0x080E1644.
-	.byte	0x03, 0x1C, 0x76, 0x30, 0x00, 0x21, 0x02, 0x70, 0x01, 0x30, 0x01, 0x70, 0x03, 0x38, 0x01, 0x70
-	.byte	0x01, 0x30, 0x01, 0x70, 0x02, 0x38, 0x01, 0x70
+	add	r3, r0, #0
+	add	r0, #118
+	mov	r1, #0
+	strb	r2, [r0, #0]
+	add	r0, #1
+	strb	r1, [r0, #0]
+	sub	r0, #3
+	strb	r1, [r0, #0]
+	add	r0, #1
+	strb	r1, [r0, #0]
+	sub	r0, #2
+	strb	r1, [r0, #0]
 	bx	lr
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080E1644, .-sub_080E1644

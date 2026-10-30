@@ -5,6 +5,12 @@
 .type sub_080C2790, %function
 .thumb_func
 sub_080C2790:
-	@ Exact original ROM bytes from 0x080C2790.
-	.byte	0x00, 0xB5, 0xC8, 0x68, 0x00, 0x28, 0x01, 0xD0, 0x42, 0xF7, 0xE2, 0xFE, 0x01, 0xBC, 0x00, 0x47
+	push	{lr}
+	ldr	r0, [r1, #12]
+	cmp	r0, #0
+	beq	.L_c279c
+	bl	sub_08005560
+.L_c279c:
+	pop	{r0}
+	bx	r0
 .size sub_080C2790, .-sub_080C2790

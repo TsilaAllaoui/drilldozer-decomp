@@ -6,9 +6,9 @@
 .thumb_func
 sub_08069FFC:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C06
+	add	r6, r0, #0
 	mov	r4, #0
-	.2byte	0x1C35
+	add	r5, r6, #0
 	add	r5, #8
 .L_6a006:
 	ldmia	r5!, {r0}
@@ -17,7 +17,7 @@ sub_08069FFC:
 	cmp	r4, #10
 	bls	.L_6a006
 	ldrh	r0, [r6, #4]
-	mov	r1, #104	@ 0x68
+	mov	r1, #104
 	bl	sub_080066B8
 	pop	{r4, r5, r6}
 	pop	{r0}

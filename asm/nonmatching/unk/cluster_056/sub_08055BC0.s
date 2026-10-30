@@ -7,7 +7,7 @@
 sub_08055BC0:
 	push	{r4, lr}
 	sub	sp, #4
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldr	r0, [r4, #8]
 	cmp	r0, #0
 	beq	.L_55bd2
@@ -15,10 +15,10 @@ sub_08055BC0:
 	beq	.L_55bf4
 	b	.L_55c06
 .L_55bd2:
-	ldr	r0, [pc, #24]	@ (0x8055bec)
+	ldr	r0, .L_55bec	@ =0x1FFFFFFF
 	mov	r1, #8
 	neg	r1, r1
-	ldr	r2, [pc, #20]	@ (0x8055bf0)
+	ldr	r2, .L_55bf0	@ =0x0000FFFF
 	str	r2, [sp, #0]
 	mov	r2, #0
 	mov	r3, #4
@@ -27,12 +27,10 @@ sub_08055BC0:
 	add	r0, #1
 	str	r0, [r4, #8]
 	b	.L_55c06
-	.align	2, 0
 .L_55bec:
 	.4byte	0x1FFFFFFF
-	.align	2, 0
 .L_55bf0:
-	.4byte	0xFFFF
+	.4byte	0x0000FFFF
 .L_55bf4:
 	bl	sub_08019B88
 	lsl	r0, r0, #24

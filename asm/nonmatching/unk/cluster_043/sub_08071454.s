@@ -6,8 +6,8 @@
 .thumb_func
 sub_08071454:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
-	.2byte	0x1C0C
+	add	r5, r0, #0
+	add	r4, r1, #0
 	ldrb	r1, [r4, #0]
 	cmp	r1, #0
 	beq	.L_71466
@@ -24,7 +24,7 @@ sub_08071454:
 	cmp	r0, r2
 	bls	.L_714de
 	strb	r1, [r4, #7]
-	ldr	r0, [pc, #60]	@ (0x80714b8)
+	ldr	r0, .L_714b8	@ =0x0000FFFF
 	ldrb	r1, [r4, #1]
 	ldrh	r2, [r4, #4]
 	bl	sub_08019950
@@ -57,9 +57,8 @@ sub_08071454:
 	ldrb	r0, [r4, #2]
 	strb	r0, [r4, #1]
 	b	.L_714de
-	.align	2, 0
 .L_714b8:
-	.4byte	0xFFFF
+	.4byte	0x0000FFFF
 .L_714bc:
 	ldrb	r0, [r4, #0]
 	add	r0, #1
@@ -73,9 +72,9 @@ sub_08071454:
 	lsr	r0, r0, #24
 	cmp	r0, #3
 	bls	.L_714de
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08001768
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0800090C
 .L_714de:
 	pop	{r4, r5}

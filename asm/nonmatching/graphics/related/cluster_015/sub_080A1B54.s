@@ -7,23 +7,23 @@
 sub_080A1B54:
 	push	{r4, r5, r6, lr}
 	sub	sp, #20
-	.2byte	0x1C04
-	ldr	r2, [pc, #136]	@ (0x80a1be4)
+	add	r4, r0, #0
+	ldr	r2, .L_a1be4	@ =0xFFFFFF00
 	ldr	r0, [sp, #12]
 	and	r0, r2
-	ldr	r3, [pc, #132]	@ (0x80a1be8)
+	ldr	r3, .L_a1be8	@ =0xFFFF00FF
 	and	r0, r3
-	mov	r1, #192	@ 0xc0
+	mov	r1, #192
 	lsl	r1, r1, #4
 	orr	r0, r1
-	ldr	r1, [pc, #128]	@ (0x80a1bec)
+	ldr	r1, .L_a1bec	@ =0xFF00FFFF
 	and	r0, r1
-	mov	r1, #144	@ 0x90
+	mov	r1, #144
 	lsl	r1, r1, #12
 	orr	r0, r1
-	ldr	r1, [pc, #120]	@ (0x80a1bf0)
+	ldr	r1, .L_a1bf0	@ =0x00FFFFFF
 	and	r0, r1
-	mov	r1, #136	@ 0x88
+	mov	r1, #136
 	lsl	r1, r1, #21
 	orr	r0, r1
 	str	r0, [sp, #12]
@@ -32,12 +32,12 @@ sub_080A1B54:
 	mov	r1, #4
 	orr	r0, r1
 	and	r0, r3
-	mov	r1, #240	@ 0xf0
+	mov	r1, #240
 	lsl	r1, r1, #4
 	orr	r0, r1
-	ldr	r1, [pc, #96]	@ (0x80a1bf4)
+	ldr	r1, .L_a1bf4	@ =0x0000FFFF
 	and	r0, r1
-	ldr	r1, [pc, #96]	@ (0x80a1bf8)
+	ldr	r1, .L_a1bf8	@ =0x016B0000
 	orr	r0, r1
 	str	r0, [sp, #16]
 	add	r0, sp, #12
@@ -46,14 +46,14 @@ sub_080A1B54:
 	mov	r6, #0
 	strb	r0, [r4, #0]
 	ldrb	r0, [r4, #0]
-	mov	r1, #102	@ 0x66
+	mov	r1, #102
 	bl	sub_08003E34
 	ldrb	r0, [r4, #0]
-	ldr	r1, [pc, #72]	@ (0x80a1bfc)
+	ldr	r1, .L_a1bfc	@ =0x083F4C6C
 	ldr	r5, [r1, #8]
 	str	r5, [sp, #0]
 	str	r6, [sp, #4]
-	ldr	r1, [pc, #68]	@ (0x80a1c00)
+	ldr	r1, .L_a1c00	@ =0x083F4A8C
 	str	r1, [sp, #8]
 	mov	r1, #2
 	mov	r2, #16
@@ -62,7 +62,7 @@ sub_080A1B54:
 	ldrb	r0, [r4, #0]
 	str	r5, [sp, #0]
 	str	r6, [sp, #4]
-	ldr	r1, [pc, #52]	@ (0x80a1c04)
+	ldr	r1, .L_a1c04	@ =0x083F4A9C
 	str	r1, [sp, #8]
 	mov	r1, #2
 	mov	r2, #16
@@ -72,32 +72,23 @@ sub_080A1B54:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_a1be4:
 	.4byte	0xFFFFFF00
-	.align	2, 0
 .L_a1be8:
 	.4byte	0xFFFF00FF
-	.align	2, 0
 .L_a1bec:
 	.4byte	0xFF00FFFF
-	.align	2, 0
 .L_a1bf0:
-	.4byte	0xFFFFFF
-	.align	2, 0
+	.4byte	0x00FFFFFF
 .L_a1bf4:
-	.4byte	0xFFFF
-	.align	2, 0
+	.4byte	0x0000FFFF
 .L_a1bf8:
-	.4byte	0x16B0000
-	.align	2, 0
+	.4byte	0x016B0000
 .L_a1bfc:
-	.4byte	0x83F4C6C
-	.align	2, 0
+	.4byte	0x083F4C6C
 .L_a1c00:
-	.4byte	0x83F4A8C
-	.align	2, 0
+	.4byte	0x083F4A8C
 .L_a1c04:
-	.4byte	0x83F4A9C
+	.4byte	0x083F4A9C
 .size sub_080A1B54, .-sub_080A1B54

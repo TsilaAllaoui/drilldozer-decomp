@@ -10,9 +10,9 @@ sub_0800FE4C:
 	mov	r6, r8
 	push	{r6, r7}
 	sub	sp, #8
-	.2byte	0x1C05
-	.2byte	0x1C0C
-	.2byte	0x1C17
+	add	r5, r0, #0
+	add	r4, r1, #0
+	add	r7, r2, #0
 	mov	r8, r3
 	mov	r6, sp
 	mov	r1, sp
@@ -21,35 +21,35 @@ sub_0800FE4C:
 	ldrsh	r1, [r6, r0]
 	mov	r0, #2
 	ldrsh	r2, [r4, r0]
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0800D814
 	mov	r9, r0
 	mov	r2, #6
 	ldrsh	r1, [r6, r2]
 	mov	r0, #2
 	ldrsh	r2, [r4, r0]
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0800D814
-	.2byte	0x1C06
+	add	r6, r0, #0
 	mov	r2, #0
 	ldrsh	r1, [r4, r2]
 	mov	r0, #2
 	ldrsh	r2, [r4, r0]
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0800D814
-	.2byte	0x1C01
+	add	r1, r0, #0
 	mov	r0, #0
 	mov	r2, r8
 	str	r0, [r2, #0]
-	cmp	r1, #174	@ 0xae
+	cmp	r1, #174
 	beq	.L_feb4
-	cmp	r1, #174	@ 0xae
+	cmp	r1, #174
 	bgt	.L_feaa
-	cmp	r1, #173	@ 0xad
+	cmp	r1, #173
 	beq	.L_feb0
 	b	.L_fec4
 .L_feaa:
-	cmp	r1, #175	@ 0xaf
+	cmp	r1, #175
 	beq	.L_fec0
 	b	.L_fec4
 .L_feb0:
@@ -68,21 +68,21 @@ sub_0800FE4C:
 	b	.L_fed8
 .L_fec4:
 	mov	r0, r9
-	cmp	r0, #175	@ 0xaf
+	cmp	r0, #175
 	beq	.L_fece
-	cmp	r6, #175	@ 0xaf
+	cmp	r6, #175
 	bne	.L_fed6
 .L_fece:
 	mov	r0, #10
 	strh	r0, [r7, #0]
-	mov	r0, #175	@ 0xaf
+	mov	r0, #175
 	b	.L_fedc
 .L_fed6:
 	mov	r0, #0
 .L_fed8:
 	strh	r0, [r7, #0]
 .L_feda:
-	.2byte	0x1C08
+	add	r0, r1, #0
 .L_fedc:
 	add	sp, #8
 	pop	{r3, r4}
@@ -91,5 +91,5 @@ sub_0800FE4C:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0800FE4C, .-sub_0800FE4C

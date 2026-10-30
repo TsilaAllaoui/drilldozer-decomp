@@ -14,12 +14,12 @@ sub_0800E2A8:
 	strh	r2, [r0, #22]
 	ldrh	r2, [r1, #2]
 	strh	r2, [r0, #24]
-	ldr	r0, [r0, #52]	@ 0x34
+	ldr	r0, [r0, #52]
 	mov	r2, #0
 	ldrsh	r3, [r1, r2]
 	mov	r4, #2
 	ldrsh	r2, [r1, r4]
-	.2byte	0x1C19
+	add	r1, r3, #0
 	bl	sub_08008820
 	pop	{r4}
 	pop	{r0}

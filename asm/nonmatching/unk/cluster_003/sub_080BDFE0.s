@@ -7,7 +7,6 @@
 sub_080BDFE0:
 	push	{r4, r5, r6, r7, lr}
 	mov	r7, r8
-.L_bdfe4:
 	push	{r7}
 	mov	r8, r0
 	lsl	r1, r1, #24
@@ -18,26 +17,23 @@ sub_080BDFE0:
 	lsr	r5, r3, #24
 	mov	r0, #8
 	bl	sub_080016E8
-	.2byte	0x1C04
+	add	r4, r0, #0
 	cmp	r4, #0
 	beq	.L_be02e
-	ldr	r0, [pc, #20]	@ (0x80be018)
-	ldr	r2, [pc, #24]	@ (0x80be01c)
-	.2byte	0x1C21
+	ldr	r0, .L_be018	@ =0x080BE055
+	ldr	r2, .L_be01c	@ =0x000017FE
+	add	r1, r4, #0
 	bl	sub_0800089C
 	cmp	r0, #0
 	bne	.L_be020
-	.2byte	0x1C20
-.L_be010:
+	add	r0, r4, #0
 	bl	sub_08001768
 	b	.L_be02e
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_be018:
-	.4byte	0x80BE055
-	.align	2, 0
+	.4byte	0x080BE055
 .L_be01c:
-	.4byte	0x17FE
+	.4byte	0x000017FE
 .L_be020:
 	mov	r0, r8
 	str	r0, [r4, #0]

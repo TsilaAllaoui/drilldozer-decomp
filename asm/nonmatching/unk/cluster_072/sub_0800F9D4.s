@@ -6,20 +6,20 @@
 .thumb_func
 sub_0800F9D4:
 	push	{r4, r5, lr}
-	.2byte	0x1C0C
-	.2byte	0x1C15
-	ldr	r1, [r0, #52]	@ 0x34
-	.2byte	0x1C08
-	add	r0, #60	@ 0x3c
+	add	r4, r1, #0
+	add	r5, r2, #0
+	ldr	r1, [r0, #52]
+	add	r0, r1, #0
+	add	r0, #60
 	ldrb	r0, [r0, #0]
 	lsl	r0, r0, #27
 	lsr	r0, r0, #31
 	cmp	r0, r3
 	bne	.L_f9ee
-	.2byte	0x1C08
+	add	r0, r1, #0
 	b	.L_f9f4
 .L_f9ee:
-	ldr	r0, [r1, #64]	@ 0x40
+	ldr	r0, [r1, #64]
 	cmp	r0, #0
 	beq	.L_fa04
 .L_f9f4:
@@ -34,5 +34,5 @@ sub_0800F9D4:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0800F9D4, .-sub_0800F9D4

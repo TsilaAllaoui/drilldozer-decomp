@@ -7,13 +7,13 @@
 sub_080BEE58:
 	push	{r4, r5, lr}
 	sub	sp, #12
-	.2byte	0x1C0C
+	add	r4, r1, #0
 	ldrh	r0, [r1, #4]
 	add	r0, #1
 	mov	r5, #0
 	strh	r0, [r1, #4]
-	ldr	r3, [pc, #72]	@ (0x80beeb0)
-	.2byte	0x1C1A
+	ldr	r3, .L_beeb0	@ =0x0000FFFF
+	add	r2, r3, #0
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
 	cmp	r0, #9
@@ -26,7 +26,7 @@ sub_080BEE58:
 	bls	.L_bee80
 	strh	r5, [r1, #6]
 .L_bee80:
-	ldr	r1, [pc, #48]	@ (0x80beeb4)
+	ldr	r1, .L_beeb4	@ =0x08447854
 	ldrh	r0, [r4, #6]
 	lsl	r0, r0, #2
 	add	r0, r0, r1
@@ -49,10 +49,8 @@ sub_080BEE58:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_beeb0:
-	.4byte	0xFFFF
-	.align	2, 0
+	.4byte	0x0000FFFF
 .L_beeb4:
-	.4byte	0x8447854
+	.4byte	0x08447854
 .size sub_080BEE58, .-sub_080BEE58

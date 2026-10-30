@@ -6,22 +6,22 @@
 .thumb_func
 sub_08053290:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C0B
-	.2byte	0x1C15
-	.2byte	0x1C18
-	add	r0, #91	@ 0x5b
+	add	r3, r1, #0
+	add	r5, r2, #0
+	add	r0, r3, #0
+	add	r0, #91
 	ldrb	r2, [r0, #0]
 	cmp	r2, #0
 	bne	.L_5332c
-	mov	r0, #93	@ 0x5d
+	mov	r0, #93
 	add	r0, r0, r3
 	mov	ip, r0
 	ldrb	r1, [r0, #0]
-	mov	r6, #64	@ 0x40
-	.2byte	0x1C30
+	mov	r6, #64
+	add	r0, r6, #0
 	and	r0, r1
-	.2byte	0x1C1C
-	add	r4, #118	@ 0x76
+	add	r4, r3, #0
+	add	r4, #118
 	cmp	r0, #0
 	beq	.L_532b8
 	strb	r2, [r4, #0]
@@ -30,18 +30,18 @@ sub_08053290:
 	bne	.L_53306
 	mov	r0, ip
 	ldrb	r1, [r0, #0]
-	.2byte	0x1C30
+	add	r0, r6, #0
 	and	r0, r1
 	cmp	r0, #0
 	bne	.L_53306
-	.2byte	0x1C19
-	add	r1, #119	@ 0x77
+	add	r1, r3, #0
+	add	r1, #119
 	ldrb	r0, [r1, #0]
 	add	r0, #1
 	strb	r0, [r1, #0]
 	lsl	r0, r0, #24
 	asr	r0, r0, #24
-	.2byte	0x1C0A
+	add	r2, r1, #0
 	cmp	r0, #2
 	ble	.L_53306
 	sub	r1, #2
@@ -69,38 +69,36 @@ sub_08053290:
 	mov	r0, #0
 	strb	r0, [r2, #0]
 .L_53306:
-	ldr	r0, [pc, #28]	@ (0x8053324)
+	ldr	r0, .L_53324	@ =0x082F4530
 	ldrh	r0, [r0, #8]
 	bl	sub_080128C8
 	lsl	r0, r0, #20
-	mov	r1, #133	@ 0x85
+	mov	r1, #133
 	lsl	r1, r1, #17
 	add	r0, r0, r1
 	lsr	r0, r0, #16
 	ldrb	r2, [r4, #0]
-	ldr	r3, [pc, #12]	@ (0x8053328)
+	ldr	r3, .L_53328	@ =0x000077FF
 	mov	r1, #5
 	bl	sub_08019D9C
 	b	.L_5338a
-	.align	2, 0
 .L_53324:
-	.4byte	0x82F4530
-	.align	2, 0
+	.4byte	0x082F4530
 .L_53328:
-	.4byte	0x77FF
+	.4byte	0x000077FF
 .L_5332c:
-	.2byte	0x1C1C
-	add	r4, #118	@ 0x76
+	add	r4, r3, #0
+	add	r4, #118
 	cmp	r5, #0
 	bne	.L_53372
-	.2byte	0x1C19
-	add	r1, #119	@ 0x77
+	add	r1, r3, #0
+	add	r1, #119
 	ldrb	r0, [r1, #0]
 	add	r0, #1
 	strb	r0, [r1, #0]
 	lsl	r0, r0, #24
 	asr	r0, r0, #24
-	.2byte	0x1C0A
+	add	r2, r1, #0
 	cmp	r0, #2
 	ble	.L_53372
 	sub	r1, #2
@@ -128,24 +126,22 @@ sub_08053290:
 	mov	r0, #0
 	strb	r0, [r2, #0]
 .L_53372:
-	mov	r0, #74	@ 0x4a
+	mov	r0, #74
 	bl	sub_080128C8
 	lsl	r0, r0, #20
-	ldr	r1, [pc, #20]	@ (0x8053390)
+	ldr	r1, .L_53390	@ =0x010B0000
 	add	r0, r0, r1
 	lsr	r0, r0, #16
 	ldrb	r2, [r4, #0]
-	ldr	r3, [pc, #16]	@ (0x8053394)
+	ldr	r3, .L_53394	@ =0x000077FF
 	mov	r1, #4
 	bl	sub_08019D9C
 .L_5338a:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_53390:
-	.4byte	0x10B0000
-	.align	2, 0
+	.4byte	0x010B0000
 .L_53394:
-	.4byte	0x77FF
+	.4byte	0x000077FF
 .size sub_08053290, .-sub_08053290

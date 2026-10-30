@@ -7,11 +7,11 @@
 sub_080CF548:
 	push	{r4, r5, r6, lr}
 	sub	sp, #12
-	.2byte	0x1C05
-	.2byte	0x1C0E
+	add	r5, r0, #0
+	add	r6, r1, #0
 	mov	r3, #0
-	ldr	r4, [pc, #44]	@ (0x80cf580)
-	.2byte	0x1C22
+	ldr	r4, .L_cf580	@ =0x08465AD0
+	add	r2, r4, #0
 .L_cf556:
 	mov	r1, sp
 	add	r0, r1, r3
@@ -23,67 +23,43 @@ sub_080CF548:
 	bls	.L_cf556
 	ldr	r0, [r6, #0]
 	ldrb	r2, [r0, #8]
-	.2byte	0x1C28
-	add	r0, #120	@ 0x78
+	add	r0, r5, #0
+	add	r0, #120
 	ldrb	r0, [r0, #0]
 	sub	r0, #2
 	cmp	r0, #20
 	bhi	.L_cf61c
 	lsl	r0, r0, #2
-	ldr	r1, [pc, #8]	@ (0x80cf584)
+	ldr	r1, .L_cf584	@ =0x080CF588
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]
 	mov	pc, r0
-	.align	2, 0
 .L_cf580:
-	.4byte	0x8465AD0
-	.align	2, 0
+	.4byte	0x08465AD0
 .L_cf584:
-	.4byte	.L_cf588
-.L_cf588:
-	.2byte	0xF606
-	.2byte	0x080C
-	.2byte	0xF61C
-	.2byte	0x080C
-	.2byte	0xF61C
-	.2byte	0x080C
-	.2byte	0xF614
-	.2byte	0x080C
-	.2byte	0xF606
-	.2byte	0x080C
-	.2byte	0xF5DC
-	.2byte	0x080C
-	.2byte	0xF5F0
-	.2byte	0x080C
-	.2byte	0xF61C
-	.2byte	0x080C
-	.2byte	0xF61C
-	.2byte	0x080C
-.L_cf5ac:
-	.2byte	0xF61C
-	.2byte	0x080C
-	.2byte	0xF5F6
-	.2byte	0x080C
-	.2byte	0xF606
-	.2byte	0x080C
-	.2byte	0xF614
-	.2byte	0x080C
-	.2byte	0xF614
-	.2byte	0x080C
-	.2byte	0xF610
-	.2byte	0x080C
-	.2byte	0xF61C
-	.2byte	0x080C
-	.2byte	0xF61C
-	.2byte	0x080C
-	.2byte	0xF61C
-	.2byte	0x080C
-	.2byte	0xF61C
-	.2byte	0x080C
-	.2byte	0xF61C
-	.2byte	0x080C
-	.2byte	0xF614
-	.2byte	0x080C
+	.4byte	0x080CF588
+	.4byte	0x080CF606	@ case .L_cf606
+	.4byte	0x080CF61C	@ case .L_cf61c
+	.4byte	0x080CF61C	@ case .L_cf61c
+	.4byte	0x080CF614	@ case .L_cf614
+	.4byte	0x080CF606	@ case .L_cf606
+	.4byte	0x080CF5DC	@ case .L_cf5dc
+	.4byte	0x080CF5F0	@ case .L_cf5f0
+	.4byte	0x080CF61C	@ case .L_cf61c
+	.4byte	0x080CF61C	@ case .L_cf61c
+	.4byte	0x080CF61C	@ case .L_cf61c
+	.4byte	0x080CF5F6	@ case .L_cf5f6
+	.4byte	0x080CF606	@ case .L_cf606
+	.4byte	0x080CF614	@ case .L_cf614
+	.4byte	0x080CF614	@ case .L_cf614
+	.4byte	0x080CF610	@ case .L_cf610
+	.4byte	0x080CF61C	@ case .L_cf61c
+	.4byte	0x080CF61C	@ case .L_cf61c
+	.4byte	0x080CF61C	@ case .L_cf61c
+	.4byte	0x080CF61C	@ case .L_cf61c
+	.4byte	0x080CF61C	@ case .L_cf61c
+	.4byte	0x080CF614	@ case .L_cf614
+.L_cf5dc:
 	cmp	r2, #0
 	ble	.L_cf61c
 	mov	r1, sp
@@ -94,22 +70,26 @@ sub_080CF548:
 	sub	r0, #1
 	strb	r0, [r1, #6]
 	b	.L_cf61c
+.L_cf5f0:
 	cmp	r2, #2
 	bgt	.L_cf61c
 	b	.L_cf614
+.L_cf5f6:
 	mov	r2, sp
 	ldrb	r0, [r4, #3]
-	.2byte	0x1E41
+	sub	r1, r0, #1
 	strb	r1, [r2, #4]
 	mov	r1, sp
 	sub	r0, #2
 	strb	r0, [r1, #5]
 	b	.L_cf61c
+.L_cf606:
 	mov	r1, sp
 	ldrb	r0, [r4, #3]
 	sub	r0, #1
 	strb	r0, [r1, #11]
 	b	.L_cf61c
+.L_cf610:
 	cmp	r2, #0
 	bne	.L_cf61c
 .L_cf614:
@@ -119,7 +99,7 @@ sub_080CF548:
 	strb	r0, [r1, #0]
 .L_cf61c:
 	mov	r3, #0
-	.2byte	0x1C31
+	add	r1, r6, #0
 .L_cf620:
 	ldr	r2, [r1, #0]
 	cmp	r2, #0
@@ -137,5 +117,5 @@ sub_080CF548:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080CF548, .-sub_080CF548

@@ -11,21 +11,20 @@ sub_080218D0:
 	mov	r5, r8
 	push	{r5, r6, r7}
 	sub	sp, #4
-	.2byte	0x1C04
-	.2byte	0x1C0D
-	.2byte	0x1C11
+	add	r4, r0, #0
+	add	r5, r1, #0
+	add	r1, r2, #0
 	mov	ip, r3
 	ldrb	r0, [r4, #2]
 	str	r0, [sp, #0]
 	ldrh	r2, [r4, #16]
-.L_218ea:
 	mov	r8, r2
 	ldrh	r6, [r4, #18]
 	mov	r9, r6
-	ldr	r7, [r4, #40]	@ 0x28
+	ldr	r7, [r4, #40]
 	mov	sl, r7
-	.2byte	0x1C23
-	.2byte	0x1C28
+	add	r3, r4, #0
+	add	r0, r5, #0
 	ldmia	r0!, {r2, r6, r7}
 	stmia	r3!, {r2, r6, r7}
 	ldmia	r0!, {r2, r6, r7}
@@ -42,9 +41,8 @@ sub_080218D0:
 	mov	r6, r9
 	strh	r6, [r4, #18]
 	mov	r7, sl
-	str	r7, [r4, #40]	@ 0x28
-	.2byte	0x1C20
-.L_2191c:
+	str	r7, [r4, #40]
+	add	r0, r4, #0
 	mov	r2, ip
 	bl	sub_08030EE0
 	add	r4, #20
@@ -59,5 +57,5 @@ sub_080218D0:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080218D0, .-sub_080218D0

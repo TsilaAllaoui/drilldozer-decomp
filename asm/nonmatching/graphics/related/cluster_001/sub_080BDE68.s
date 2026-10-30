@@ -6,9 +6,8 @@
 .thumb_func
 sub_080BDE68:
 	push	{r4, r5, lr}
-	.2byte	0x1C0C
+	add	r4, r1, #0
 	ldr	r5, [r4, #0]
-.L_bde6e:
 	lsr	r5, r5, #8
 	ldrb	r0, [r4, #7]
 	ldrb	r1, [r4, #8]
@@ -22,7 +21,7 @@ sub_080BDE68:
 	add	r5, r5, r0
 	ldrb	r0, [r4, #4]
 	lsl	r5, r5, #8
-	.2byte	0x1C29
+	add	r1, r5, #0
 	mov	r2, #0
 	bl	sub_08001E94
 	pop	{r4, r5}

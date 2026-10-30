@@ -21,9 +21,9 @@ sub_08013ABC:
 	blt	.L_13ada
 	mov	r4, #1
 .L_13ada:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08013ABC, .-sub_08013ABC

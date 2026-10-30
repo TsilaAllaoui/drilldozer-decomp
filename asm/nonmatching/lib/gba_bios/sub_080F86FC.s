@@ -5,6 +5,6 @@
 .type sub_080F86FC, %function
 .thumb_func
 sub_080F86FC:
-	.2byte	0xDF0B
+	swi	#11
 	bx	lr
 .size sub_080F86FC, .-sub_080F86FC

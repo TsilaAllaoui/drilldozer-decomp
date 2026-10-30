@@ -6,13 +6,13 @@
 .thumb_func
 sub_0805689C:
 	push	{r4, r5, lr}
-	.2byte	0x1C0D
+	add	r5, r1, #0
 	bl	sub_08011720
-	.2byte	0x1C04
+	add	r4, r0, #0
 	bl	sub_080118A4
 	cmp	r0, #16
 	bne	.L_568be
-	mov	r1, #216	@ 0xd8
+	mov	r1, #216
 	lsl	r1, r1, #1
 	add	r0, r4, r1
 	ldr	r1, [r0, #4]
@@ -23,9 +23,9 @@ sub_0805689C:
 .L_568be:
 	cmp	r0, #18
 	bne	.L_568ce
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080305B8
-	.2byte	0x1C29
+	add	r1, r5, #0
 	bl	sub_080560E0
 .L_568ce:
 	pop	{r4, r5}

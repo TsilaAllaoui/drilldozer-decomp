@@ -1,0 +1,65 @@
+.syntax divided
+.align 2, 0
+.global sub_0803E074
+.thumb
+.type sub_0803E074, %function
+.thumb_func
+sub_0803E074:
+	push	{r4, r5, r6, lr}
+	.2byte	0x1C06
+	bl	sub_0803DF70
+	mov	r0, #130	@ 0x82
+	lsl	r0, r0, #2
+	add	r5, r6, r0
+	ldr	r0, [r5, #0]
+	mov	r2, #138	@ 0x8a
+	lsl	r2, r2, #2
+	add	r1, r6, r2
+	bl	sub_080067D8
+	mov	r0, #131	@ 0x83
+	lsl	r0, r0, #2
+	add	r4, r6, r0
+	ldr	r0, [r4, #0]
+	mov	r2, #140	@ 0x8c
+	lsl	r2, r2, #2
+	add	r1, r6, r2
+	bl	sub_080067D8
+	ldr	r1, [pc, #64]	@ (0x803e0e4)
+	ldr	r0, [r6, #40]	@ 0x28
+	lsl	r0, r0, #2
+	add	r0, r0, r1
+	ldr	r1, [r0, #0]
+	ldr	r0, [r5, #0]
+	mov	r2, #3
+	bl	sub_08005F64
+	ldr	r3, [r4, #0]
+	ldr	r0, [r5, #0]
+	ldrh	r1, [r0, #36]	@ 0x24
+	lsl	r1, r1, #22
+	lsr	r1, r1, #22
+	ldrh	r2, [r3, #36]	@ 0x24
+	ldr	r0, [pc, #40]	@ (0x803e0e8)
+	and	r0, r2
+	orr	r0, r1
+	strh	r0, [r3, #36]	@ 0x24
+	ldr	r1, [r4, #0]
+	ldr	r0, [r5, #0]
+	ldrh	r0, [r0, #24]
+	strh	r0, [r1, #24]
+	ldr	r1, [r4, #0]
+	ldr	r0, [r5, #0]
+	ldrh	r0, [r0, #26]
+	strh	r0, [r1, #26]
+	.2byte	0x1C30
+	bl	sub_0803E1B4
+	pop	{r4, r5, r6}
+	pop	{r0}
+	bx	r0
+	lsl	r0, r0, #0
+	.align	2, 0
+.L_3e0e4:
+	.4byte	0x82B9814
+	.align	2, 0
+.L_3e0e8:
+	.4byte	0xFFFFFC00
+.size sub_0803E074, .-sub_0803E074

@@ -7,7 +7,7 @@
 sub_08068EAC:
 	push	{r4, r5, r6, lr}
 	sub	sp, #12
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldr	r0, [r4, #0]
 	mov	r1, #0
 	bl	sub_080118BC
@@ -23,11 +23,11 @@ sub_08068EAC:
 	bl	sub_0800E044
 	mov	r0, sp
 	ldrh	r0, [r0, #0]
-	add	r0, #120	@ 0x78
+	add	r0, #120
 	mov	r1, sp
 	strh	r0, [r1, #0]
 	ldrh	r0, [r5, #2]
-	add	r0, #108	@ 0x6c
+	add	r0, #108
 	strh	r0, [r5, #2]
 	mov	r0, sp
 	mov	r1, #0
@@ -52,14 +52,14 @@ sub_08068EAC:
 	bl	sub_08030190
 	ldr	r0, [r4, #0]
 	mov	r1, #4
-	.2byte	0x1C32
+	add	r2, r6, #0
 	bl	sub_0806D59C
 	ldr	r0, [r4, #0]
 	mov	r1, #12
 	mov	r2, #0
 	bl	sub_0806D59C
 	ldr	r0, [r4, #0]
-	mov	r1, #74	@ 0x4a
+	mov	r1, #74
 	bl	sub_0802140C
 	add	sp, #12
 	pop	{r4, r5, r6}

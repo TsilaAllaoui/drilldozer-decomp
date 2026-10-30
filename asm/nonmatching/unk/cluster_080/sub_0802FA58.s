@@ -6,8 +6,8 @@
 .thumb_func
 sub_0802FA58:
 	push	{r4, r5, r6, r7, lr}
-	.2byte	0x1C03
-	.2byte	0x1C0C
+	add	r3, r0, #0
+	add	r4, r1, #0
 	ldr	r0, [r3, #0]
 	ldr	r1, [r3, #4]
 	str	r0, [r2, #0]
@@ -19,7 +19,7 @@ sub_0802FA58:
 	ldrh	r7, [r3, #2]
 	add	r0, r6, r7
 	lsl	r0, r0, #16
-	ldr	r7, [pc, #56]	@ (0x802fab0)
+	ldr	r7, .L_2fab0	@ =0x0000FFFF
 	and	r5, r7
 	asr	r1, r1, #16
 	orr	r5, r0
@@ -50,8 +50,7 @@ sub_0802FA58:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_2fab0:
-	.4byte	0xFFFF
+	.4byte	0x0000FFFF
 .size sub_0802FA58, .-sub_0802FA58

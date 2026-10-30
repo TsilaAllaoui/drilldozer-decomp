@@ -6,8 +6,8 @@
 .thumb_func
 sub_080A4670:
 	push	{r4, r5, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0D
+	add	r4, r0, #0
+	add	r5, r1, #0
 	ldr	r0, [r4, #4]
 	cmp	r0, #0
 	beq	.L_a46a6
@@ -15,7 +15,7 @@ sub_080A4670:
 	cmp	r0, #0
 	beq	.L_a46a6
 	ldrh	r0, [r4, #0]
-	mov	r1, #128	@ 0x80
+	mov	r1, #128
 	bl	sub_080066B8
 	ldrh	r0, [r5, #0]
 	mov	r1, #32

@@ -7,13 +7,13 @@
 sub_0806CAE0:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C05
-	add	r0, #41	@ 0x29
+	add	r5, r0, #0
+	add	r0, #41
 	ldrb	r0, [r0, #0]
-	ldr	r4, [pc, #60]	@ (0x806cb28)
+	ldr	r4, .L_6cb28	@ =0x00001CE7
 	cmp	r0, #0
 	beq	.L_6caf2
-	ldr	r4, [pc, #56]	@ (0x806cb2c)
+	ldr	r4, .L_6cb2c	@ =0x00004210
 .L_6caf2:
 	mov	r1, #31
 	mov	r3, #31
@@ -22,7 +22,7 @@ sub_0806CAE0:
 	and	r2, r1
 	lsr	r0, r4, #10
 	and	r0, r1
-	mov	r4, #42	@ 0x2a
+	mov	r4, #42
 	ldrsh	r1, [r5, r4]
 	sub	r3, r3, r1
 	sub	r2, r2, r1
@@ -41,10 +41,8 @@ sub_0806CAE0:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_6cb28:
-	.4byte	0x1CE7
-	.align	2, 0
+	.4byte	0x00001CE7
 .L_6cb2c:
-	.4byte	0x4210
+	.4byte	0x00004210
 .size sub_0806CAE0, .-sub_0806CAE0

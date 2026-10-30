@@ -6,17 +6,17 @@
 .thumb_func
 sub_080DDC8C:
 	push	{r4, r5, lr}
-	.2byte	0x1C0C
-	.2byte	0x1C20
-	add	r0, #50	@ 0x32
+	add	r4, r1, #0
+	add	r0, r4, #0
+	add	r0, #50
 	ldrb	r0, [r0, #0]
 	cmp	r0, #1
 	bls	.L_ddcde
 	ldr	r0, [r4, #32]
-	mov	r1, #128	@ 0x80
+	mov	r1, #128
 	lsl	r1, r1, #5
 	add	r0, r0, r1
-	mov	r1, #128	@ 0x80
+	mov	r1, #128
 	lsl	r1, r1, #6
 	cmp	r0, r1
 	bhi	.L_ddcde
@@ -32,10 +32,8 @@ sub_080DDC8C:
 	bl	sub_080051DC
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
-	mov	r1, #100	@ 0x64
-	.2byte	0xF01A
-.L_ddcc8:
-	.2byte	0xFD1F
+	mov	r1, #100
+	bl	sub_080F8708
 	mov	r2, #28
 	ldrsh	r1, [r4, r2]
 	cmp	r0, r1
@@ -53,5 +51,5 @@ sub_080DDC8C:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080DDC8C, .-sub_080DDC8C

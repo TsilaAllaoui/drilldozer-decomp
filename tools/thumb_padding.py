@@ -10,6 +10,8 @@ from pathlib import Path
 import re
 
 _ZERO_NOP = re.compile(r'^lsl\s+r0\s*,\s*r0\s*,\s*#(?:0x0|0)\s*$', re.I)
+# Regenerated ASM (tools/debyte_asm.py) writes the same pad as an alignment.
+_ZERO_ALIGN = re.compile(r'^\.align\s+2\s*,\s*0\s*$')
 _RETURN = re.compile(
     r'^(?:bx\s+(?:lr|r(?:1[0-5]|[0-9]))|mov\s+(?:pc|r15)\s*,\s*(?:lr|r14)|pop\s+\{[^}]*\bpc\b[^}]*\})\s*$',
     re.I,
@@ -31,9 +33,13 @@ def has_zero_thumb_padding(reference: Path, end_address: int) -> bool:
     instructions = []
     for line in lines[:size_indexes[-1]]:
         line = line.split('@', 1)[0].strip()
-        if line and not line.startswith('.') and not line.endswith(':'):
+        if _ZERO_ALIGN.fullmatch(line):
+            instructions.append('.align')
+        elif line and not line.startswith('.') and not line.endswith(':'):
             instructions.append(line)
-    return len(instructions) >= 2 and bool(_ZERO_NOP.fullmatch(instructions[-1])) and bool(_RETURN.fullmatch(instructions[-2]))
+    if len(instructions) < 2 or not _RETURN.fullmatch(instructions[-2]):
+        return False
+    return instructions[-1] == '.align' or bool(_ZERO_NOP.fullmatch(instructions[-1]))
 
 
 def force_zero_thumb_padding(generated_assembly: Path, reference: Path, end_address: int) -> bool:
@@ -55,7 +61,8 @@ def decompme_target(reference: Path, end_address: int) -> str:
     lines = reference.read_text().splitlines()
     if has_zero_thumb_padding(reference, end_address):
         for i in range(len(lines) - 1, -1, -1):
-            if _ZERO_NOP.fullmatch(lines[i].split('@', 1)[0].strip()):
+            text = lines[i].split('@', 1)[0].strip()
+            if _ZERO_NOP.fullmatch(text) or _ZERO_ALIGN.fullmatch(text):
                 del lines[i]
                 break
     return '\n'.join(lines) + '\n'

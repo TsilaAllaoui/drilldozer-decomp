@@ -6,7 +6,7 @@
 .thumb_func
 sub_08036674:
 	push	{lr}
-	.2byte	0x1C03
+	add	r3, r0, #0
 	cmp	r3, #0
 	bge	.L_3667e
 	neg	r3, r3
@@ -30,9 +30,9 @@ sub_08036674:
 .L_3669a:
 	sub	r3, r2, r1
 .L_3669c:
-	.2byte	0x1C18
+	add	r0, r3, #0
 .L_3669e:
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08036674, .-sub_08036674

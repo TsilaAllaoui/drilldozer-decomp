@@ -14,9 +14,9 @@ sub_080D367C:
 .L_d3688:
 	cmp	r2, #0
 	beq	.L_d36a4
-	.2byte	0x1C0C
+	add	r4, r1, #0
 	add	r4, #20
-	.2byte	0x1C15
+	add	r5, r2, #0
 .L_d3692:
 	ldr	r0, [r4, #0]
 	cmp	r0, #0
@@ -31,5 +31,5 @@ sub_080D367C:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080D367C, .-sub_080D367C

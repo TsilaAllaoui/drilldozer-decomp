@@ -5,11 +5,11 @@
 .type sub_080DA478, %function
 .thumb_func
 sub_080DA478:
-	.2byte	0xB510
-	.2byte	0x1C03
-	.2byte	0x1C0C
-	.2byte	0x1C20
-	add	r0, #84	@ 0x54
+	push	{r4, lr}
+	add	r3, r0, #0
+	add	r4, r1, #0
+	add	r0, r4, #0
+	add	r0, #84
 	ldrb	r0, [r0, #0]
 	lsl	r0, r0, #24
 	asr	r0, r0, #24
@@ -28,12 +28,11 @@ sub_080DA478:
 	b	.L_da4c8
 .L_da4a0:
 	strh	r0, [r2, #0]
-	ldr	r0, [pc, #4]	@ (0x80da4a8)
+	ldr	r0, .L_da4a8	@ =0x0000FFE0
 	strh	r0, [r2, #2]
 	b	.L_da4c8
-	.align	2, 0
 .L_da4a8:
-	.4byte	0xFFE0
+	.4byte	0x0000FFE0
 .L_da4ac:
 	mov	r0, #0
 	strh	r0, [r2, #0]
@@ -42,11 +41,10 @@ sub_080DA478:
 	b	.L_da4c8
 .L_da4b6:
 	mov	r1, #0
-	ldr	r0, [pc, #0]	@ (0x80da4bc)
+	ldr	r0, .L_da4bc	@ =0x0000FFE0
 	b	.L_da4c4
-	.align	2, 0
 .L_da4bc:
-	.4byte	0xFFE0
+	.4byte	0x0000FFE0
 .L_da4c0:
 	mov	r1, #0
 	mov	r0, #32
@@ -54,7 +52,7 @@ sub_080DA478:
 	strh	r0, [r2, #0]
 	strh	r1, [r2, #2]
 .L_da4c8:
-	ldr	r0, [r4, #36]	@ 0x24
+	ldr	r0, [r4, #36]
 	str	r0, [r3, #0]
 	ldrh	r0, [r2, #0]
 	ldrh	r1, [r3, #0]
@@ -67,5 +65,5 @@ sub_080DA478:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080DA478, .-sub_080DA478

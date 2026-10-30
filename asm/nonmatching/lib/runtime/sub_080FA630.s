@@ -6,7 +6,7 @@
 .thumb_func
 sub_080FA630:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	mov	r0, #0
 	ldr	r2, [r4, #0]
 	cmp	r2, #1
@@ -106,7 +106,7 @@ sub_080FA630:
 	beq	.L_fa6d6
 	sub	r1, #2
 .L_fa6d6:
-	.2byte	0x1C08
+	add	r0, r1, #0
 	b	.L_fa712
 .L_fa6da:
 	ldr	r3, [r4, #4]
@@ -145,20 +145,20 @@ sub_080FA630:
 .L_fa712:
 	pop	{r4, pc}
 	push	{r4, lr}
-	sub	sp, #40	@ 0x28
+	sub	sp, #40
 	str	r0, [sp, #32]
-	str	r1, [sp, #36]	@ 0x24
+	str	r1, [sp, #36]
 	add	r0, sp, #32
 	mov	r1, sp
 	bl	sub_080FA188
-	add	r0, sp, #36	@ 0x24
+	add	r0, sp, #36
 	add	r4, sp, #16
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_080FA188
 	mov	r0, sp
-	.2byte	0x1C21
-	bl	sub_080FA630
-	add	sp, #40	@ 0x28
+	add	r1, r4, #0
+	bl	.L_fa630
+	add	sp, #40
 	pop	{r4, pc}
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080FA630, .-sub_080FA630

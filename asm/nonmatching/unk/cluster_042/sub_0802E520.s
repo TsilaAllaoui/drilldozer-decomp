@@ -7,9 +7,9 @@
 sub_0802E520:
 	push	{r4, r5, r6, r7, lr}
 	sub	sp, #4
-	.2byte	0x1C04
-	.2byte	0x1C0E
-	.2byte	0x1C17
+	add	r4, r0, #0
+	add	r6, r1, #0
+	add	r7, r2, #0
 	mov	r1, #1
 	bl	sub_08011A48
 	cmp	r0, #0
@@ -17,17 +17,17 @@ sub_0802E520:
 	mov	r5, #7
 	b	.L_2e540
 .L_2e538:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08011964
-	.2byte	0x1C05
+	add	r5, r0, #0
 .L_2e540:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08011950
 	str	r0, [sp, #0]
-	.2byte	0x1C20
-	.2byte	0x1C31
-	.2byte	0x1C3A
-	.2byte	0x1C2B
+	add	r0, r4, #0
+	add	r1, r6, #0
+	add	r2, r7, #0
+	add	r3, r5, #0
 	bl	sub_0802E4E4
 	add	sp, #4
 	pop	{r4, r5, r6, r7}

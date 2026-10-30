@@ -7,8 +7,8 @@
 sub_080F128C:
 	push	{r4, lr}
 	sub	sp, #8
-	.2byte	0x1C04
-	ldr	r0, [pc, #84]	@ (0x80f12e8)
+	add	r4, r0, #0
+	ldr	r0, .L_f12e8	@ =0x084E32E0
 	lsl	r4, r4, #2
 	add	r0, r4, r0
 	ldr	r1, [r0, #0]
@@ -17,14 +17,14 @@ sub_080F128C:
 	mov	r2, #0
 	mov	r3, #0
 	bl	sub_08048714
-	ldr	r0, [pc, #68]	@ (0x80f12ec)
+	ldr	r0, .L_f12ec	@ =0x084E3304
 	add	r0, r4, r0
 	ldr	r1, [r0, #0]
-	.2byte	0x1C08
+	add	r0, r1, #0
 	mov	r1, #0
 	mov	r2, #32
 	bl	sub_08019D3C
-	ldr	r0, [pc, #56]	@ (0x80f12f0)
+	ldr	r0, .L_f12f0	@ =0x084E3328
 	add	r4, r4, r0
 	ldr	r1, [r4, #0]
 	mov	r0, #32
@@ -44,14 +44,11 @@ sub_080F128C:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_f12e8:
-	.4byte	0x84E32E0
-	.align	2, 0
+	.4byte	0x084E32E0
 .L_f12ec:
-	.4byte	0x84E3304
-	.align	2, 0
+	.4byte	0x084E3304
 .L_f12f0:
-	.4byte	0x84E3328
+	.4byte	0x084E3328
 .size sub_080F128C, .-sub_080F128C

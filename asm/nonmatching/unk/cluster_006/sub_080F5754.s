@@ -6,8 +6,8 @@
 .thumb_func
 sub_080F5754:
 	push	{r4, lr}
-	.2byte	0x1C0C
-	ldr	r1, [pc, #32]	@ (0x80f577c)
+	add	r4, r1, #0
+	ldr	r1, .L_f577c	@ =0x00004050
 	add	r3, r0, r1
 	sub	r1, #11
 	add	r2, r0, r1
@@ -27,7 +27,6 @@ sub_080F5754:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_f577c:
-	.4byte	0x4050
+	.4byte	0x00004050
 .size sub_080F5754, .-sub_080F5754

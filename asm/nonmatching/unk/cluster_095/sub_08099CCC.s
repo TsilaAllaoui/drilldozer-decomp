@@ -7,13 +7,13 @@
 sub_08099CCC:
 	push	{r4, r5, r6, lr}
 	sub	sp, #8
-	.2byte	0x1C04
-	.2byte	0x1C0E
+	add	r4, r0, #0
+	add	r6, r1, #0
 	ldr	r0, [r4, #12]
 	mov	r5, sp
 	mov	r1, sp
 	bl	sub_0802E57C
-	add	r4, #84	@ 0x54
+	add	r4, #84
 	mov	r0, #0
 	ldrsb	r0, [r4, r0]
 	cmp	r0, #1
@@ -82,17 +82,17 @@ sub_08099CCC:
 	mov	r3, #12
 	ldrsh	r0, [r6, r3]
 	sub	r2, r2, r0
-	.2byte	0x1C14
+	add	r4, r2, #0
 	mul	r4, r2
-	.2byte	0x1C22
+	add	r2, r4, #0
 	mov	r3, #14
 	ldrsh	r0, [r6, r3]
 	sub	r1, r1, r0
-	.2byte	0x1C0C
+	add	r4, r1, #0
 	mul	r4, r1
-	.2byte	0x1C21
+	add	r1, r4, #0
 	add	r2, r2, r1
-	mov	r0, #225	@ 0xe1
+	mov	r0, #225
 	lsl	r0, r0, #6
 	cmp	r2, r0
 	bgt	.L_99d20

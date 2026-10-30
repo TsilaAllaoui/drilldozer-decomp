@@ -7,15 +7,15 @@
 sub_080B44D8:
 	push	{r4, r5, r6, lr}
 	sub	sp, #4
-	.2byte	0x1C04
+	add	r4, r0, #0
 	lsl	r1, r1, #24
 	lsr	r6, r1, #24
-	.2byte	0x1C25
-	add	r5, #222	@ 0xde
+	add	r5, r4, #0
+	add	r5, #222
 	ldrb	r0, [r5, #0]
 	cmp	r0, #0
 	bne	.L_b4528
-	ldr	r2, [r4, #60]	@ 0x3c
+	ldr	r2, [r4, #60]
 	ldrh	r0, [r2, #24]
 	ldrh	r1, [r2, #20]
 	add	r0, r0, r1
@@ -29,7 +29,7 @@ sub_080B44D8:
 	ldrb	r3, [r4, #12]
 	str	r6, [sp, #0]
 	bl	sub_080C2554
-	ldr	r2, [r4, #56]	@ 0x38
+	ldr	r2, [r4, #56]
 	ldrh	r0, [r2, #24]
 	ldrh	r1, [r2, #20]
 	add	r0, r0, r1

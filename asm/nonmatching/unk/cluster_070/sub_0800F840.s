@@ -8,14 +8,14 @@ sub_0800F840:
 	push	{r4, lr}
 	lsl	r0, r0, #16
 	asr	r4, r0, #16
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #16
 	bl	sub_080F8708
 	lsl	r0, r0, #16
 	asr	r1, r0, #16
 	cmp	r1, #0
 	bge	.L_f85e
-	.2byte	0x1C20
+	add	r0, r4, #0
 	sub	r0, #16
 	sub	r0, r0, r1
 	b	.L_f860
@@ -29,5 +29,5 @@ sub_0800F840:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0800F840, .-sub_0800F840

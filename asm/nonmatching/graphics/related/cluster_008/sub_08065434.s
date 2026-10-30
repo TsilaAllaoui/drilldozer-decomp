@@ -7,20 +7,20 @@
 sub_08065434:
 	push	{r4, lr}
 	sub	sp, #8
-	.2byte	0x1C0C
+	add	r4, r1, #0
 	mov	r0, #2
 	mov	r1, #7
 	bl	sub_08001C20
 	strb	r0, [r4, #0]
-	ldr	r0, [pc, #68]	@ (0x806548c)
-	mov	r1, #176	@ 0xb0
+	ldr	r0, .L_6548c	@ =0x083305DC
+	mov	r1, #176
 	mov	r2, #32
 	bl	sub_08018E94
 	mov	r0, #2
 	mov	r1, #7
 	mov	r2, #1
 	bl	sub_08001B5C
-	mov	r1, #176	@ 0xb0
+	mov	r1, #176
 	lsl	r1, r1, #8
 	mov	r0, #32
 	str	r0, [sp, #0]
@@ -31,7 +31,7 @@ sub_08065434:
 	bl	sub_080025E0
 	mov	r0, #2
 	bl	sub_08002248
-	ldr	r1, [pc, #28]	@ (0x8065490)
+	ldr	r1, .L_65490	@ =0x083305FC
 	mov	r0, #2
 	mov	r2, #32
 	mov	r3, #0
@@ -42,10 +42,8 @@ sub_08065434:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_6548c:
-	.4byte	0x83305DC
-	.align	2, 0
+	.4byte	0x083305DC
 .L_65490:
-	.4byte	0x83305FC
+	.4byte	0x083305FC
 .size sub_08065434, .-sub_08065434

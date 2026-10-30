@@ -7,104 +7,99 @@
 sub_080B0598:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C05
-	.2byte	0x1C0C
+	add	r5, r0, #0
+	add	r4, r1, #0
 	bl	sub_08002DD0
-	str	r0, [r4, #124]	@ 0x7c
+	str	r0, [r4, #124]
 	ldr	r0, [r4, #0]
-	.2byte	0x1C21
-	add	r1, #144	@ 0x90
+	add	r1, r4, #0
+	add	r1, #144
 	ldrh	r1, [r1, #0]
 	bl	sub_080B06B4
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080B1534
 	lsl	r0, r0, #24
 	cmp	r0, #0
 	beq	.L_b05c6
-	.2byte	0x1C21
-	add	r1, #140	@ 0x8c
+	add	r1, r4, #0
+	add	r1, #140
 	mov	r0, #1
 	strh	r0, [r1, #0]
 .L_b05c6:
-	ldr	r0, [r4, #44]	@ 0x2c
+	ldr	r0, [r4, #44]
 	cmp	r0, #4
 	bhi	.L_b0680
 	lsl	r0, r0, #2
-	ldr	r1, [pc, #8]	@ (0x80b05d8)
+	ldr	r1, .L_b05d8	@ =0x080B05DC
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]
 	mov	pc, r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_b05d8:
-	.4byte	.L_b05dc
-.L_b05dc:
-	lsl	r0, r6, #23
-	lsr	r3, r1, #32
-	lsl	r4, r7, #23
-	lsr	r3, r1, #32
-	lsl	r0, r4, #24
-	lsr	r3, r1, #32
-	lsl	r0, r0, #25
-	lsr	r3, r1, #32
-	lsl	r2, r4, #25
-	lsr	r3, r1, #32
+	.4byte	0x080B05DC
+	.4byte	0x080B05F0	@ case .L_b05f0
+	.4byte	0x080B05FC	@ case .L_b05fc
+	.4byte	0x080B0620	@ case .L_b0620
+	.4byte	0x080B0640	@ case .L_b0640
+	.4byte	0x080B0662	@ case .L_b0662
 .L_b05f0:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080B0698
 	cmp	r0, #0
 	bne	.L_b05f0
 	b	.L_b0680
-	.2byte	0x1C20
-	add	r0, #128	@ 0x80
+.L_b05fc:
+	add	r0, r4, #0
+	add	r0, #128
 	ldr	r1, [r0, #0]
 	cmp	r1, #0
 	beq	.L_b0618
 	mov	r0, #1
 	str	r0, [r1, #0]
-	.2byte	0x1C20
-	add	r0, #140	@ 0x8c
+	add	r0, r4, #0
+	add	r0, #140
 	ldrh	r0, [r0, #0]
 	cmp	r0, #0
 	beq	.L_b0618
 	mov	r0, #2
 	str	r0, [r1, #0]
 .L_b0618:
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_080097A0
 	b	.L_b068e
+.L_b0620:
 	mov	r1, sp
 	mov	r0, #0
 	strh	r0, [r1, #0]
-	ldr	r1, [pc, #16]	@ (0x80b0638)
-	ldr	r2, [pc, #16]	@ (0x80b063c)
+	ldr	r1, .L_b0638	@ =0x02035054
+	ldr	r2, .L_b063c	@ =0x01000200
 	mov	r0, sp
 	bl	sub_080F86FC
 	mov	r0, #3
-	str	r0, [r4, #44]	@ 0x2c
+	str	r0, [r4, #44]
 	b	.L_b068e
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_b0638:
-	.4byte	0x2035054
+	.4byte	0x02035054
 .L_b063c:
-	lsl	r0, r0, #8
-	lsl	r0, r0, #4
-	.2byte	0x1C20
+	.4byte	0x01000200
+.L_b0640:
+	add	r0, r4, #0
 	bl	sub_080B15E0
 	lsl	r0, r0, #24
 	cmp	r0, #0
 	beq	.L_b068e
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080B17AC
 	bl	sub_0806405C
-	.2byte	0x1C21
-	add	r1, #140	@ 0x8c
+	add	r1, r4, #0
+	add	r1, #140
 	mov	r0, #0
 	strh	r0, [r1, #0]
-	str	r0, [r4, #44]	@ 0x2c
+	str	r0, [r4, #44]
 	b	.L_b068e
-	.2byte	0x1C20
+.L_b0662:
+	add	r0, r4, #0
 	bl	sub_080B15E0
 	lsl	r0, r0, #24
 	cmp	r0, #0
@@ -114,10 +109,10 @@ sub_080B0598:
 	bl	sub_0800B254
 	bl	sub_0806405C
 	mov	r0, #1
-	str	r0, [r4, #44]	@ 0x2c
+	str	r0, [r4, #44]
 	b	.L_b068e
 .L_b0680:
-	ldr	r0, [r4, #52]	@ 0x34
+	ldr	r0, [r4, #52]
 	cmp	r0, #1
 	bne	.L_b068e
 	bl	sub_08063FBC
@@ -127,5 +122,5 @@ sub_080B0598:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080B0598, .-sub_080B0598

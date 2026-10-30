@@ -6,14 +6,14 @@
 .thumb_func
 sub_080393E4:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
-	.2byte	0x1C0C
+	add	r5, r0, #0
+	add	r4, r1, #0
 	ldrb	r0, [r4, #30]
 	cmp	r0, #0
 	bne	.L_39400
-	.2byte	0x1D20
+	add	r0, r4, #4
 	ldr	r1, [r4, #0]
-	.2byte	0x1C22
+	add	r2, r4, #0
 	add	r2, #24
 	ldrh	r3, [r4, #28]
 	bl	sub_0803943C
@@ -21,9 +21,9 @@ sub_080393E4:
 .L_39400:
 	cmp	r0, #1
 	bne	.L_39414
-	.2byte	0x1D20
+	add	r0, r4, #4
 	ldr	r1, [r4, #0]
-	.2byte	0x1C22
+	add	r2, r4, #0
 	add	r2, #24
 	ldrh	r3, [r4, #28]
 	bl	sub_08039594
@@ -41,11 +41,11 @@ sub_080393E4:
 	beq	.L_39434
 	ldr	r0, [r4, #0]
 	bl	sub_0800B35C
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0800090C
 .L_39434:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080393E4, .-sub_080393E4

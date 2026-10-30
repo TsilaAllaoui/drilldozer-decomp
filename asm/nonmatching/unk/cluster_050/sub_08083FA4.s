@@ -9,19 +9,19 @@ sub_08083FA4:
 	mov	r6, r8
 	push	{r6}
 	sub	sp, #16
-	.2byte	0x1C04
-	.2byte	0x1C0D
+	add	r4, r0, #0
+	add	r5, r1, #0
 	mov	r6, #0
 	str	r6, [sp, #12]
 	ldr	r0, [r4, #12]
 	ldrb	r0, [r0, #18]
 	add	r1, sp, #12
 	mov	r8, r1
-	mov	r1, #83	@ 0x53
+	mov	r1, #83
 	mov	r2, r8
 	mov	r3, #1
 	bl	sub_0801243C
-	.2byte	0x1C01
+	add	r1, r0, #0
 	ldr	r0, [r4, #12]
 	lsl	r1, r1, #24
 	lsr	r1, r1, #24
@@ -38,11 +38,11 @@ sub_08083FA4:
 	str	r6, [sp, #12]
 	ldr	r0, [r4, #12]
 	ldrb	r0, [r0, #18]
-	mov	r1, #84	@ 0x54
+	mov	r1, #84
 	mov	r2, r8
 	mov	r3, #1
 	bl	sub_0801243C
-	.2byte	0x1C01
+	add	r1, r0, #0
 	ldr	r0, [r4, #12]
 	lsl	r1, r1, #24
 	lsr	r1, r1, #24
@@ -62,5 +62,5 @@ sub_08083FA4:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08083FA4, .-sub_08083FA4

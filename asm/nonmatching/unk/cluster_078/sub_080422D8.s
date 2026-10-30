@@ -6,14 +6,14 @@
 .thumb_func
 sub_080422D8:
 	push	{r4, r5, lr}
-	.2byte	0x1C02
-	add	r2, #124	@ 0x7c
-	add	r0, #120	@ 0x78
+	add	r2, r0, #0
+	add	r2, #124
+	add	r0, #120
 	ldrb	r3, [r0, #0]
 	cmp	r1, r3
 	beq	.L_422fc
 	strb	r1, [r0, #0]
-	.2byte	0x1C15
+	add	r5, r2, #0
 	mov	r4, #2
 .L_422ec:
 	ldmia	r5!, {r0}
@@ -27,5 +27,5 @@ sub_080422D8:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080422D8, .-sub_080422D8

@@ -7,20 +7,18 @@
 sub_0807F75C:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C04
+	add	r4, r0, #0
 	bl	sub_080119C8
-	.2byte	0x1C05
-	.2byte	0x1C20
-	.2byte	0xF792
-.L_7f76c:
-	.2byte	0xF92F
-	.2byte	0x1C03
+	add	r5, r0, #0
+	add	r0, r4, #0
+	bl	sub_080119CC
+	add	r3, r0, #0
 	lsl	r3, r3, #8
-	mov	r0, #255	@ 0xff
+	mov	r0, #255
 	lsl	r0, r0, #8
 	and	r3, r0
 	orr	r3, r5
-	ldr	r0, [pc, #20]	@ (0x807f790)
+	ldr	r0, .L_7f790	@ =0x0838DB28
 	mov	r1, #0
 	str	r1, [sp, #0]
 	mov	r2, #0
@@ -29,8 +27,7 @@ sub_0807F75C:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_7f790:
-	.4byte	0x838DB28
+	.4byte	0x0838DB28
 .size sub_0807F75C, .-sub_0807F75C

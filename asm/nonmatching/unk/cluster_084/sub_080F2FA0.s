@@ -6,9 +6,9 @@
 .thumb_func
 sub_080F2FA0:
 	push	{r4, r5, lr}
-	.2byte	0x1C03
-	.2byte	0x1C0C
-	.2byte	0x1C15
+	add	r3, r0, #0
+	add	r4, r1, #0
+	add	r5, r2, #0
 	ldr	r0, [r4, #8]
 	cmp	r0, #0
 	beq	.L_f3000
@@ -21,16 +21,16 @@ sub_080F2FA0:
 	cmp	r5, #1
 	bne	.L_f2fda
 .L_f2fbe:
-	.2byte	0x1C18
-	.2byte	0x1C21
+	add	r0, r3, #0
+	add	r1, r4, #0
 	bl	sub_080F300C
 	ldr	r0, [r4, #16]
 	ldr	r1, [r4, #8]
 	ldrh	r1, [r1, #16]
 	lsl	r1, r1, #5
-	ldr	r2, [pc, #32]	@ (0x80f2ff0)
+	ldr	r2, .L_f2ff0	@ =0x06010000
 	add	r1, r1, r2
-	mov	r2, #128	@ 0x80
+	mov	r2, #128
 	lsl	r2, r2, #2
 	bl	sub_08006598
 .L_f2fda:
@@ -40,26 +40,23 @@ sub_080F2FA0:
 	ldrb	r0, [r2, #14]
 	cmp	r0, #1
 	beq	.L_f3000
-	ldr	r1, [pc, #12]	@ (0x80f2ff4)
-	.2byte	0x1C10
+	ldr	r1, .L_f2ff4	@ =0x084EDE90
+	add	r0, r2, #0
 	bl	sub_08005814
 	b	.L_f3000
-	.align	2, 0
 .L_f2ff0:
-	.4byte	0x6010000
-	.align	2, 0
+	.4byte	0x06010000
 .L_f2ff4:
-	.4byte	0x84EDE90
+	.4byte	0x084EDE90
 .L_f2ff8:
 	ldr	r0, [r4, #12]
-	ldr	r1, [pc, #12]	@ (0x80f3008)
+	ldr	r1, .L_f3008	@ =0x084EDE90
 	bl	sub_08005B18
 .L_f3000:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_f3008:
-	.4byte	0x84EDE90
+	.4byte	0x084EDE90
 .size sub_080F2FA0, .-sub_080F2FA0

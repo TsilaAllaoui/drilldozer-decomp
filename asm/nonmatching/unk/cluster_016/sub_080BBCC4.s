@@ -5,7 +5,7 @@
 .type sub_080BBCC4, %function
 .thumb_func
 sub_080BBCC4:
-	.2byte	0x1C02
+	add	r2, r0, #0
 	mov	r0, #0
 	str	r0, [r2, #0]
 	str	r0, [r2, #4]
@@ -13,8 +13,8 @@ sub_080BBCC4:
 	str	r0, [r2, #12]
 	mov	r1, #0
 	strh	r0, [r2, #32]
-	.2byte	0x1C10
-	add	r0, #36	@ 0x24
+	add	r0, r2, #0
+	add	r0, #36
 	strb	r1, [r0, #0]
 	add	r0, #1
 	strb	r1, [r0, #0]

@@ -5,6 +5,6 @@
 .type sub_0800BBEE, %function
 .thumb_func
 sub_0800BBEE:
-	@ Exact original ROM bytes from 0x0800BBEE.
-	.byte	0x00, 0x08, 0xCC, 0xBD
+	.2byte	0x0800
+	.2byte	0xBDCC
 .size sub_0800BBEE, .-sub_0800BBEE

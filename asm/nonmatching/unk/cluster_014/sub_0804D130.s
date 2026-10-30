@@ -7,15 +7,15 @@
 sub_0804D130:
 	push	{r4, r5, lr}
 	sub	sp, #12
-	.2byte	0x1C04
-	.2byte	0x1C0D
+	add	r4, r0, #0
+	add	r5, r1, #0
 	ldr	r3, [r4, #16]
-	.2byte	0x1C19
+	add	r1, r3, #0
 	sub	r1, #16
 	lsl	r1, r1, #16
 	asr	r1, r1, #16
 	ldr	r0, [r4, #20]
-	.2byte	0x1C02
+	add	r2, r0, #0
 	sub	r2, #16
 	lsl	r2, r2, #16
 	asr	r2, r2, #16
@@ -28,7 +28,7 @@ sub_0804D130:
 	str	r0, [sp, #0]
 	add	r0, sp, #4
 	bl	sub_08012B84
-	ldr	r0, [r4, #36]	@ 0x24
+	ldr	r0, [r4, #36]
 	add	r1, sp, #4
 	bl	sub_0800DE38
 	lsl	r0, r0, #24
@@ -54,5 +54,5 @@ sub_0804D130:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0804D130, .-sub_0804D130

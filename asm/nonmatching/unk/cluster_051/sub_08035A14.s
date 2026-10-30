@@ -6,12 +6,12 @@
 .thumb_func
 sub_08035A14:
 	push	{r4, r5, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0D
+	add	r4, r0, #0
+	add	r5, r1, #0
 	mov	r1, #0
 	mov	r3, #1
 .L_35a1e:
-	.2byte	0x1C10
+	add	r0, r2, #0
 	and	r0, r3
 	cmp	r0, #0
 	bne	.L_35a2e
@@ -29,16 +29,15 @@ sub_08035A14:
 	lsl	r0, r1, #2
 	add	r0, r0, r1
 	lsl	r0, r0, #2
-	ldr	r1, [pc, #32]	@ (0x8035a60)
+	ldr	r1, .L_35a60	@ =0x082ADBF4
 	add	r2, r0, r1
 	mov	r3, #1
 	neg	r3, r3
-	.2byte	0x1D11
+	add	r1, r2, #4
 .L_35a46:
 	ldr	r0, [r1, #0]
 	cmp	r0, r4
 	beq	.L_35a32
-.L_35a4c:
 	add	r1, #4
 	ldr	r0, [r1, #0]
 	cmp	r0, r3
@@ -48,10 +47,9 @@ sub_08035A14:
 	bne	.L_35a64
 	mov	r0, #2
 	b	.L_35a66
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_35a60:
-	.4byte	0x82ADBF4
+	.4byte	0x082ADBF4
 .L_35a64:
 	mov	r0, #1
 .L_35a66:

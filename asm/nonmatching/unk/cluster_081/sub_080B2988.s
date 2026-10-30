@@ -5,9 +5,21 @@
 .type sub_080B2988, %function
 .thumb_func
 sub_080B2988:
-	@ Exact original ROM bytes from 0x080B2988.
-	.byte	0x30, 0xB5, 0x04, 0x1C, 0x0D, 0x1C, 0xFF, 0xF7, 0x23, 0xFF, 0x02, 0x1C, 0x4E, 0x32, 0x11, 0x88
-	.byte	0x09, 0x19, 0x11, 0x80, 0x52, 0x30, 0x01, 0x88, 0x49, 0x19, 0x01, 0x80, 0x30, 0xBC, 0x01, 0xBC
+	push	{r4, r5, lr}
+	add	r4, r0, #0
+	add	r5, r1, #0
+	bl	sub_080B27D8
+	add	r2, r0, #0
+	add	r2, #78
+	ldrh	r1, [r2, #0]
+	add	r1, r1, r4
+	strh	r1, [r2, #0]
+	add	r0, #82
+	ldrh	r1, [r0, #0]
+	add	r1, r1, r5
+	strh	r1, [r0, #0]
+	pop	{r4, r5}
+	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080B2988, .-sub_080B2988

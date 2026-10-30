@@ -9,9 +9,9 @@ sub_08067984:
 	mov	r7, r8
 	push	{r7}
 	sub	sp, #8
-	.2byte	0x1C06
-	.2byte	0x1C0C
-	.2byte	0x1C17
+	add	r6, r0, #0
+	add	r4, r1, #0
+	add	r7, r2, #0
 	mov	r8, r3
 	mov	r5, sp
 	mov	r1, sp
@@ -29,8 +29,8 @@ sub_08067984:
 	cmp	r0, #0
 	beq	.L_679ce
 	add	r4, sp, #4
-	.2byte	0x1C30
-	.2byte	0x1C21
+	add	r0, r6, #0
+	add	r1, r4, #0
 	bl	sub_0800E278
 	ldrh	r0, [r4, #0]
 	ldrh	r1, [r7, #0]
@@ -47,5 +47,5 @@ sub_08067984:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08067984, .-sub_08067984

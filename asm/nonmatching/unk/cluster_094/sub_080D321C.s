@@ -7,18 +7,18 @@
 sub_080D321C:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C04
+	add	r4, r0, #0
 	mov	r5, #0
-	ldr	r1, [pc, #40]	@ (0x80d3250)
+	ldr	r1, .L_d3250	@ =0x08479AEC
 	mov	r0, sp
 	mov	r2, #4
 	bl	sub_080FAA68
 	mov	r1, #0
-	.2byte	0x1C20
-	add	r0, #86	@ 0x56
+	add	r0, r4, #0
+	add	r0, #86
 	mov	r2, #0
 	ldrsh	r3, [r0, r2]
-	add	r4, #88	@ 0x58
+	add	r4, #88
 	mov	r0, #0
 	ldrsh	r2, [r4, r0]
 .L_d323e:
@@ -28,12 +28,11 @@ sub_080D321C:
 	sub	r0, r2, r0
 	cmp	r3, r0
 	bgt	.L_d3254
-	.2byte	0x1C28
+	add	r0, r5, #0
 	b	.L_d325e
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_d3250:
-	.4byte	0x8479AEC
+	.4byte	0x08479AEC
 .L_d3254:
 	add	r5, #1
 	add	r1, #1
@@ -45,5 +44,5 @@ sub_080D321C:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080D321C, .-sub_080D321C

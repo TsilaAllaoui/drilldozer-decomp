@@ -14,9 +14,9 @@ sub_0807697C:
 	asr	r1, r1, #16
 	asr	r0, r0, #16
 	sub	r1, r1, r0
-	.2byte	0x1C08
+	add	r0, r1, #0
 	mul	r0, r1
-	.2byte	0x1C19
+	add	r1, r3, #0
 	mul	r1, r3
 	add	r0, r0, r1
 	lsl	r0, r0, #4
@@ -25,5 +25,5 @@ sub_0807697C:
 	lsr	r0, r0, #18
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0807697C, .-sub_0807697C

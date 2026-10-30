@@ -21,17 +21,17 @@ sub_080714E4:
 	lsr	r6, r3, #16
 	mov	r0, #8
 	bl	sub_080016E8
-	.2byte	0x1C04
+	add	r4, r0, #0
 	cmp	r4, #0
 	beq	.L_7155c
-	ldr	r0, [pc, #52]	@ (0x8071544)
-	mov	r2, #192	@ 0xc0
+	ldr	r0, .L_71544	@ =0x08071455
+	mov	r2, #192
 	lsl	r2, r2, #5
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_0800089C
 	cmp	r0, #0
 	bne	.L_71522
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08001768
 .L_71522:
 	mov	r0, #0
@@ -50,10 +50,9 @@ sub_080714E4:
 	strb	r0, [r4, #3]
 	mov	r0, #0
 	b	.L_7154a
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_71544:
-	.4byte	0x8071455
+	.4byte	0x08071455
 .L_71548:
 	mov	r0, r9
 .L_7154a:

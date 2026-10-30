@@ -7,11 +7,11 @@
 sub_0803306C:
 	push	{r4, r5, lr}
 	mov	r3, #0
-	.2byte	0x1C05
-	add	r5, #156	@ 0x9c
+	add	r5, r0, #0
+	add	r5, #156
 .L_33074:
 	mov	r2, #0
-	.2byte	0x1C5C
+	add	r4, r3, #1
 	lsl	r3, r3, #4
 .L_3307a:
 	ldr	r1, [r5, #0]
@@ -21,7 +21,7 @@ sub_0803306C:
 	add	r2, #1
 	cmp	r2, #15
 	ble	.L_3307a
-	.2byte	0x1C23
+	add	r3, r4, #0
 	cmp	r3, #15
 	ble	.L_33074
 	pop	{r4, r5}

@@ -7,11 +7,11 @@
 sub_08069D20:
 	push	{r4, r5, lr}
 	sub	sp, #16
-	ldr	r0, [pc, #80]	@ (0x8069d78)
+	ldr	r0, .L_69d78	@ =0x02036060
 	ldr	r4, [r0, #0]
 	ldr	r0, [r4, #0]
 	add	r5, sp, #12
-	.2byte	0x1C29
+	add	r1, r5, #0
 	bl	sub_0800E044
 	ldr	r0, [r4, #0]
 	add	r1, sp, #12
@@ -19,7 +19,7 @@ sub_08069D20:
 	ldrsh	r1, [r1, r2]
 	str	r1, [sp, #0]
 	ldrh	r1, [r5, #2]
-	add	r1, #136	@ 0x88
+	add	r1, #136
 	lsl	r1, r1, #16
 	asr	r1, r1, #16
 	str	r1, [sp, #4]
@@ -44,7 +44,6 @@ sub_08069D20:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_69d78:
-	.4byte	0x2036060
+	.4byte	0x02036060
 .size sub_08069D20, .-sub_08069D20

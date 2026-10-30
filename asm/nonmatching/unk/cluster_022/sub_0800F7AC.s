@@ -6,15 +6,15 @@
 .thumb_func
 sub_0800F7AC:
 	push	{r4, r5, r6, r7, lr}
-	.2byte	0x1C07
+	add	r7, r0, #0
 	lsl	r2, r2, #16
 	lsr	r6, r2, #16
 	lsl	r1, r1, #16
 	asr	r5, r1, #16
-	.2byte	0x1C28
+	add	r0, r5, #0
 	mov	r1, #16
 	bl	sub_080F8708
-	.2byte	0x1C04
+	add	r4, r0, #0
 	lsl	r4, r4, #16
 	lsr	r4, r4, #16
 	lsl	r0, r6, #16
@@ -27,7 +27,7 @@ sub_0800F7AC:
 	asr	r1, r4, #16
 	cmp	r1, #0
 	bge	.L_f7e4
-	.2byte	0x1C28
+	add	r0, r5, #0
 	sub	r0, #16
 	sub	r0, r0, r1
 	b	.L_f7e6
@@ -56,5 +56,5 @@ sub_0800F7AC:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0800F7AC, .-sub_0800F7AC

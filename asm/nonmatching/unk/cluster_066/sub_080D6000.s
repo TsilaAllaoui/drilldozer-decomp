@@ -5,8 +5,14 @@
 .type sub_080D6000, %function
 .thumb_func
 sub_080D6000:
-	@ Exact original ROM bytes from 0x080D6000.
-	.byte	0x02, 0x1C, 0x4E, 0x32, 0x52, 0x30, 0x00, 0x88, 0x00, 0x04, 0x13, 0x88, 0x03, 0x43, 0x0B, 0x60
+	add	r2, r0, #0
+	add	r2, #78
+	add	r0, #82
+	ldrh	r0, [r0, #0]
+	lsl	r0, r0, #16
+	ldrh	r3, [r2, #0]
+	orr	r3, r0
+	str	r3, [r1, #0]
 	bx	lr
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080D6000, .-sub_080D6000

@@ -7,12 +7,12 @@
 sub_08053180:
 	push	{r4, r5, r6, r7, lr}
 	sub	sp, #16
-	.2byte	0x1C06
-	.2byte	0x1C0B
+	add	r6, r0, #0
+	add	r3, r1, #0
 	mov	r2, #0
-	ldr	r4, [pc, #68]	@ (0x80531d0)
+	ldr	r4, .L_531d0	@ =0x082F4524
 	add	r7, sp, #12
-	.2byte	0x1C25
+	add	r5, r4, #0
 .L_53190:
 	mov	r1, sp
 	add	r0, r1, r2
@@ -23,14 +23,14 @@ sub_08053180:
 	cmp	r2, #9
 	bls	.L_53190
 	ldr	r5, [r3, #4]
-	.2byte	0x1C30
-	add	r0, #120	@ 0x78
-	.2byte	0x1D1E
-	add	r3, #112	@ 0x70
+	add	r0, r6, #0
+	add	r0, #120
+	add	r6, r3, #4
+	add	r3, #112
 	mov	ip, r3
-	.2byte	0x1C3A
+	add	r2, r7, #0
 	mov	r3, #0
-	.2byte	0x1C79
+	add	r1, r7, #1
 .L_531b2:
 	strb	r3, [r1, #0]
 	sub	r1, #1
@@ -42,67 +42,51 @@ sub_08053180:
 	cmp	r0, #17
 	bhi	.L_53258
 	lsl	r0, r0, #2
-	ldr	r1, [pc, #12]	@ (0x80531d4)
+	ldr	r1, .L_531d4	@ =0x080531D8
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]
 	mov	pc, r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_531d0:
-	.4byte	0x82F4524
-	.align	2, 0
+	.4byte	0x082F4524
 .L_531d4:
-	.4byte	.L_531d8
-.L_531d8:
-	add	r2, #32
-	lsr	r5, r0, #32
-	add	r2, #36	@ 0x24
-	lsr	r5, r0, #32
-	add	r2, #36	@ 0x24
-	lsr	r5, r0, #32
-	add	r2, #88	@ 0x58
-	lsr	r5, r0, #32
-	add	r2, #88	@ 0x58
-	lsr	r5, r0, #32
-	add	r2, #88	@ 0x58
-	lsr	r5, r0, #32
-	add	r2, #88	@ 0x58
-	lsr	r5, r0, #32
-	add	r2, #88	@ 0x58
-	lsr	r5, r0, #32
-	add	r2, #44	@ 0x2c
-	lsr	r5, r0, #32
-	add	r2, #88	@ 0x58
-	lsr	r5, r0, #32
-	add	r2, #50	@ 0x32
-	lsr	r5, r0, #32
-	add	r2, #80	@ 0x50
-	lsr	r5, r0, #32
-	add	r2, #80	@ 0x50
-	lsr	r5, r0, #32
-	add	r2, #88	@ 0x58
-	lsr	r5, r0, #32
-	add	r2, #56	@ 0x38
-	lsr	r5, r0, #32
-	add	r2, #76	@ 0x4c
-	lsr	r5, r0, #32
-	add	r2, #88	@ 0x58
-	lsr	r5, r0, #32
-	add	r2, #80	@ 0x50
-	lsr	r5, r0, #32
+	.4byte	0x080531D8
+	.4byte	0x08053220	@ case .L_53220
+	.4byte	0x08053224	@ case .L_53224
+	.4byte	0x08053224	@ case .L_53224
+	.4byte	0x08053258	@ case .L_53258
+	.4byte	0x08053258	@ case .L_53258
+	.4byte	0x08053258	@ case .L_53258
+	.4byte	0x08053258	@ case .L_53258
+	.4byte	0x08053258	@ case .L_53258
+	.4byte	0x0805322C	@ case .L_5322c
+	.4byte	0x08053258	@ case .L_53258
+	.4byte	0x08053232	@ case .L_53232
+	.4byte	0x08053250	@ case .L_53250
+	.4byte	0x08053250	@ case .L_53250
+	.4byte	0x08053258	@ case .L_53258
+	.4byte	0x08053238	@ case .L_53238
+	.4byte	0x0805324C	@ case .L_5324c
+	.4byte	0x08053258	@ case .L_53258
+	.4byte	0x08053250	@ case .L_53250
+.L_53220:
 	ldrb	r0, [r4, #3]
 	b	.L_53226
+.L_53224:
 	ldrb	r0, [r4, #5]
 .L_53226:
 	sub	r0, #1
 	strb	r0, [r7, #1]
 	b	.L_53258
+.L_5322c:
 	cmp	r2, #1
 	ble	.L_53258
 	b	.L_53250
+.L_53232:
 	cmp	r2, #0
 	ble	.L_53258
 	b	.L_53250
+.L_53238:
 	cmp	r2, #0
 	ble	.L_53258
 	mov	r1, sp
@@ -113,6 +97,7 @@ sub_08053180:
 	sub	r0, #1
 	strb	r0, [r1, #6]
 	b	.L_53258
+.L_5324c:
 	cmp	r2, #2
 	bgt	.L_53258
 .L_53250:
@@ -122,7 +107,7 @@ sub_08053180:
 	strb	r0, [r1, #0]
 .L_53258:
 	mov	r2, #0
-	.2byte	0x1C33
+	add	r3, r6, #0
 .L_5325c:
 	ldr	r1, [r3, #0]
 	cmp	r1, #0
@@ -138,7 +123,7 @@ sub_08053180:
 	ble	.L_5325c
 	mov	r2, #0
 	mov	r4, ip
-	.2byte	0x1C3B
+	add	r3, r7, #0
 .L_53278:
 	add	r0, r4, r2
 	add	r1, r3, r2
@@ -151,5 +136,5 @@ sub_08053180:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08053180, .-sub_08053180

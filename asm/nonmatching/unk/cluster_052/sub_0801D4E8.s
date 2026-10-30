@@ -6,7 +6,7 @@
 .thumb_func
 sub_0801D4E8:
 	push	{lr}
-	.2byte	0x1C02
+	add	r2, r0, #0
 	ldr	r1, [r2, #20]
 	cmp	r1, #0
 	beq	.L_1d50c
@@ -17,13 +17,13 @@ sub_0801D4E8:
 	b	.L_1d50c
 .L_1d4fc:
 	ldrh	r0, [r2, #28]
-	ldrh	r3, [r1, #36]	@ 0x24
+	ldrh	r3, [r1, #36]
 	add	r0, r0, r3
 	strh	r0, [r2, #32]
 	ldrh	r0, [r2, #30]
-	ldrh	r1, [r1, #38]	@ 0x26
+	ldrh	r1, [r1, #38]
 	add	r0, r0, r1
-	strh	r0, [r2, #34]	@ 0x22
+	strh	r0, [r2, #34]
 .L_1d50c:
 	pop	{r0}
 	bx	r0

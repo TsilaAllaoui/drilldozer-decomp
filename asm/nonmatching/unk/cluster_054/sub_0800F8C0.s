@@ -12,7 +12,7 @@ sub_0800F8C0:
 	asr	r1, r1, #16
 	cmp	r1, #0
 	blt	.L_f8e8
-	ldr	r3, [r0, #52]	@ 0x34
+	ldr	r3, [r0, #52]
 	mov	r4, #24
 	ldrsh	r0, [r3, r4]
 	cmp	r1, r0
@@ -30,7 +30,7 @@ sub_0800F8C0:
 	neg	r0, r0
 	b	.L_f900
 .L_f8ee:
-	.2byte	0x1C18
+	add	r0, r3, #0
 	bl	sub_08015EDC
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
@@ -41,5 +41,5 @@ sub_0800F8C0:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0800F8C0, .-sub_0800F8C0

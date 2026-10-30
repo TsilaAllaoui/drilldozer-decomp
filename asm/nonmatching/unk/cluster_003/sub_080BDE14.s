@@ -14,16 +14,16 @@ sub_080BDE14:
 	lsr	r6, r2, #24
 	mov	r0, #12
 	bl	sub_080016E8
-	.2byte	0x1C04
+	add	r4, r0, #0
 	cmp	r4, #0
 	beq	.L_bde62
-	ldr	r0, [pc, #36]	@ (0x80bde54)
-	ldr	r2, [pc, #36]	@ (0x80bde58)
-	.2byte	0x1C21
+	ldr	r0, .L_bde54	@ =0x080BDE69
+	ldr	r2, .L_bde58	@ =0x000017FF
+	add	r1, r4, #0
 	bl	sub_0800089C
 	cmp	r0, #0
 	beq	.L_bde5c
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08001FD0
 	str	r0, [r4, #0]
 	mov	r0, #0
@@ -33,15 +33,13 @@ sub_080BDE14:
 	strb	r0, [r4, #8]
 	strb	r0, [r4, #9]
 	b	.L_bde62
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_bde54:
-	.4byte	0x80BDE69
-	.align	2, 0
+	.4byte	0x080BDE69
 .L_bde58:
-	.4byte	0x17FF
+	.4byte	0x000017FF
 .L_bde5c:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08001768
 .L_bde62:
 	pop	{r4, r5, r6, r7}

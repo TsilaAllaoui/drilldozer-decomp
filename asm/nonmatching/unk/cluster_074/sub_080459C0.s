@@ -6,18 +6,18 @@
 .thumb_func
 sub_080459C0:
 	push	{r4, r5, r6, r7, lr}
-	.2byte	0x1C0E
-	.2byte	0x1C34
-	add	r4, #50	@ 0x32
+	add	r6, r1, #0
+	add	r4, r6, #0
+	add	r4, #50
 	ldrb	r1, [r4, #0]
 	mov	r0, #2
 	and	r0, r1
 	cmp	r0, #0
 	beq	.L_459fa
-	.2byte	0x1C35
+	add	r5, r6, #0
 	ldmia	r5!, {r0}
 	bl	sub_0801B064
-	.2byte	0x1C27
+	add	r7, r4, #0
 	mov	r4, #2
 .L_459de:
 	ldmia	r5!, {r0}

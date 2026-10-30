@@ -5,9 +5,18 @@
 .type sub_08024D6C, %function
 .thumb_func
 sub_08024D6C:
-	@ Exact original ROM bytes from 0x08024D6C.
-	.byte	0x00, 0x22, 0x0A, 0x60, 0x4A, 0x60, 0x03, 0x68, 0x98, 0x8C, 0x1A, 0x8D, 0x80, 0x1A, 0x48, 0x80
-	.byte	0xD8, 0x8C, 0x5A, 0x8D, 0x80, 0x1A, 0xC8, 0x80
+	mov	r2, #0
+	str	r2, [r1, #0]
+	str	r2, [r1, #4]
+	ldr	r3, [r0, #0]
+	ldrh	r0, [r3, #36]
+	ldrh	r2, [r3, #40]
+	sub	r0, r0, r2
+	strh	r0, [r1, #2]
+	ldrh	r0, [r3, #38]
+	ldrh	r2, [r3, #42]
+	sub	r0, r0, r2
+	strh	r0, [r1, #6]
 	bx	lr
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08024D6C, .-sub_08024D6C

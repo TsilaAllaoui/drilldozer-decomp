@@ -6,7 +6,7 @@
 .thumb_func
 sub_0803619C:
 	push	{lr}
-	.2byte	0x1C01
+	add	r1, r0, #0
 	lsr	r1, r1, #14
 	mov	r2, #0
 	mov	r0, #1
@@ -17,12 +17,12 @@ sub_0803619C:
 .L_361ae:
 	add	r2, #1
 	lsr	r1, r1, #1
-	.2byte	0x1C08
+	add	r0, r1, #0
 	and	r0, r3
 	cmp	r0, #0
 	beq	.L_361ae
 .L_361ba:
-	.2byte	0x1C10
+	add	r0, r2, #0
 	pop	{r1}
 	bx	r1
 .size sub_0803619C, .-sub_0803619C

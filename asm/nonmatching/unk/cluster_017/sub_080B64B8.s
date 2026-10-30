@@ -10,7 +10,7 @@ sub_080B64B8:
 	mov	r6, r9
 	mov	r5, r8
 	push	{r5, r6, r7}
-	.2byte	0x1C05
+	add	r5, r0, #0
 	lsl	r1, r1, #16
 	lsr	r0, r1, #16
 	mov	r8, r0
@@ -34,7 +34,7 @@ sub_080B64B8:
 	asr	r1, r1, #21
 	sub	r0, r0, r1
 	lsl	r0, r0, #5
-	.2byte	0x1C31
+	add	r1, r6, #0
 	bl	sub_080F8700
 	strh	r0, [r5, #8]
 	lsl	r0, r7, #16
@@ -43,7 +43,7 @@ sub_080B64B8:
 	asr	r4, r4, #16
 	sub	r0, r0, r4
 	lsl	r0, r0, #5
-	.2byte	0x1C31
+	add	r1, r6, #0
 	bl	sub_080F8700
 	strh	r0, [r5, #10]
 .L_b650e:

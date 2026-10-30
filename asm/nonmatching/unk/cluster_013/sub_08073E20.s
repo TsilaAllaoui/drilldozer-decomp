@@ -8,11 +8,11 @@ sub_08073E20:
 	push	{r4, r5, r6, r7, lr}
 	mov	r7, r8
 	push	{r7}
-	.2byte	0x1C05
+	add	r5, r0, #0
 	mov	r8, r1
-	.2byte	0x1C16
-	.2byte	0x1C1F
-	ldr	r4, [pc, #32]	@ (0x8073e50)
+	add	r6, r2, #0
+	add	r7, r3, #0
+	ldr	r4, .L_73e50	@ =0x020360F4
 	ldrb	r1, [r4, #4]
 	mov	r0, #1
 	and	r0, r1
@@ -21,17 +21,16 @@ sub_08073E20:
 	ldr	r0, [r4, #8]
 	cmp	r0, #0
 	bne	.L_73e4a
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08048938
 	cmp	r0, #0
 	bne	.L_73e54
 .L_73e4a:
 	mov	r0, #0
 	b	.L_73e5e
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_73e50:
-	.4byte	0x20360F4
+	.4byte	0x020360F4
 .L_73e54:
 	str	r6, [r4, #8]
 	str	r7, [r4, #12]

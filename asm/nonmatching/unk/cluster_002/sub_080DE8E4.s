@@ -6,16 +6,16 @@
 .thumb_func
 sub_080DE8E4:
 	push	{r4, lr}
-	ldr	r0, [pc, #60]	@ (0x80de924)
+	ldr	r0, .L_de924	@ =0x080DE875
 	bl	sub_08000960
 	bl	sub_0800098C
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldrb	r0, [r4, #7]
 	cmp	r0, #0
 	bne	.L_de91c
 	ldr	r0, [r4, #0]
 	bl	sub_0800C1E8
-	cmp	r0, #179	@ 0xb3
+	cmp	r0, #179
 	bne	.L_de910
 	ldr	r0, [r4, #0]
 	mov	r1, #1
@@ -34,8 +34,7 @@ sub_080DE8E4:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_de924:
-	.4byte	0x80DE875
+	.4byte	0x080DE875
 .size sub_080DE8E4, .-sub_080DE8E4

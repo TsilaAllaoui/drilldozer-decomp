@@ -6,10 +6,10 @@
 .thumb_func
 sub_08064FB4:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	bl	sub_08002DD0
-	.2byte	0x1C01
-	add	r4, #55	@ 0x37
+	add	r1, r0, #0
+	add	r4, #55
 	ldrb	r0, [r4, #0]
 	cmp	r0, #0
 	beq	.L_64fd4

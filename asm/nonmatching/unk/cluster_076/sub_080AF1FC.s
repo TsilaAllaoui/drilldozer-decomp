@@ -6,14 +6,14 @@
 .thumb_func
 sub_080AF1FC:
 	push	{lr}
-	.2byte	0x1C01
-	add	r0, #119	@ 0x77
+	add	r1, r0, #0
+	add	r0, #119
 	ldrb	r0, [r0, #0]
 	cmp	r0, #0
 	beq	.L_af218
-	add	r1, #115	@ 0x73
+	add	r1, #115
 	ldrb	r0, [r1, #0]
-	cmp	r0, #44	@ 0x2c
+	cmp	r0, #44
 	bls	.L_af214
 	mov	r0, #1
 	b	.L_af21a
@@ -25,5 +25,5 @@ sub_080AF1FC:
 .L_af21a:
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080AF1FC, .-sub_080AF1FC

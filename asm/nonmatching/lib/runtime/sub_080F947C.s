@@ -5,16 +5,16 @@
 .type sub_080F947C, %function
 .thumb_func
 sub_080F947C:
-	.2byte	0xB5F0
+	push	{r4, r5, r6, r7, lr}
 	sub	sp, #8
-	.2byte	0x1C02
-	.2byte	0x1C0E
+	add	r2, r0, #0
+	add	r6, r1, #0
 	ldr	r1, [r2, #4]
 	str	r1, [sp, #0]
 	ldr	r0, [r2, #0]
 	str	r0, [sp, #4]
 	mov	r2, sp
-	.2byte	0x1C0C
+	add	r4, r1, #0
 	lsl	r0, r0, #12
 	lsr	r5, r0, #12
 	ldrh	r3, [r2, #6]
@@ -32,43 +32,41 @@ sub_080F947C:
 	str	r0, [r6, #0]
 	b	.L_f9544
 .L_f94b0:
-	ldr	r0, [pc, #52]	@ (0x80f94e8)
+	ldr	r0, .L_f94e8	@ =0xFFFFFC02
 	str	r0, [r6, #8]
 	lsr	r3, r4, #24
 	lsl	r2, r5, #8
-	.2byte	0x1C19
+	add	r1, r3, #0
 	orr	r1, r2
 	lsl	r0, r4, #8
-	.2byte	0x1C0D
-	.2byte	0x1C04
+	add	r5, r1, #0
+	add	r4, r0, #0
 	mov	r0, #3
 	str	r0, [r6, #0]
-	ldr	r0, [pc, #36]	@ (0x80f94ec)
+	ldr	r0, .L_f94ec	@ =0x0FFFFFFF
 	cmp	r5, r0
 	bhi	.L_f9520
-	.2byte	0x1C07
+	add	r7, r0, #0
 .L_f94ce:
 	lsr	r3, r4, #31
 	lsl	r2, r5, #1
-	.2byte	0x1C19
+	add	r1, r3, #0
 	orr	r1, r2
 	lsl	r0, r4, #1
-	.2byte	0x1C0D
-	.2byte	0x1C04
+	add	r5, r1, #0
+	add	r4, r0, #0
 	ldr	r0, [r6, #8]
 	sub	r0, #1
 	str	r0, [r6, #8]
 	cmp	r5, r7
 	bls	.L_f94ce
 	b	.L_f9520
-	.align	2, 0
 .L_f94e8:
 	.4byte	0xFFFFFC02
-	.align	2, 0
 .L_f94ec:
-	.4byte	0xFFFFFFF
+	.4byte	0x0FFFFFFF
 .L_f94f0:
-	ldr	r0, [pc, #16]	@ (0x80f9504)
+	ldr	r0, .L_f9504	@ =0x000007FF
 	cmp	r3, r0
 	bne	.L_f9526
 	orr	r1, r5
@@ -77,15 +75,14 @@ sub_080F947C:
 	mov	r0, #4
 	str	r0, [r6, #0]
 	b	.L_f9544
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_f9504:
-	.4byte	0x7FF
+	.4byte	0x000007FF
 .L_f9508:
-	mov	r2, #128	@ 0x80
+	mov	r2, #128
 	lsl	r2, r2, #12
 	mov	r0, #0
-	.2byte	0x1C29
+	add	r1, r5, #0
 	and	r1, r2
 	orr	r1, r0
 	cmp	r1, #0
@@ -100,31 +97,28 @@ sub_080F947C:
 	str	r5, [r6, #16]
 	b	.L_f9544
 .L_f9526:
-	ldr	r1, [pc, #32]	@ (0x80f9548)
+	ldr	r1, .L_f9548	@ =0xFFFFFC01
 	add	r0, r3, r1
 	str	r0, [r6, #8]
 	mov	r0, #3
 	str	r0, [r6, #0]
 	lsr	r3, r4, #24
 	lsl	r2, r5, #8
-	.2byte	0x1C19
+	add	r1, r3, #0
 	orr	r1, r2
 	lsl	r0, r4, #8
-	ldr	r2, [pc, #16]	@ (0x80f954c)
-	ldr	r3, [pc, #16]	@ (0x80f9550)
+	ldr	r2, .L_f954c	@ =0x00000000
+	ldr	r3, .L_f9550	@ =0x10000000
 	orr	r1, r3
 	str	r0, [r6, #12]
 	str	r1, [r6, #16]
 .L_f9544:
 	add	sp, #8
 	pop	{r4, r5, r6, r7, pc}
-	.align	2, 0
 .L_f9548:
 	.4byte	0xFFFFFC01
-	.align	2, 0
 .L_f954c:
-	.4byte	0x0
-	.align	2, 0
+	.4byte	0x00000000
 .L_f9550:
 	.4byte	0x10000000
 .size sub_080F947C, .-sub_080F947C

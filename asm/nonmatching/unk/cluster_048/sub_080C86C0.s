@@ -6,14 +6,14 @@
 .thumb_func
 sub_080C86C0:
 	push	{r4, lr}
-	.2byte	0x1C04
-	add	r0, #88	@ 0x58
+	add	r4, r0, #0
+	add	r0, #88
 	mov	r1, #0
 	ldrsh	r0, [r0, r1]
 	mov	r1, #3
 	bl	sub_080F8FF0
 	mov	r2, #0
-	add	r4, #86	@ 0x56
+	add	r4, #86
 	mov	r1, #0
 	ldrsh	r3, [r4, r1]
 	lsl	r0, r0, #16
@@ -23,7 +23,7 @@ sub_080C86C0:
 .L_c86e0:
 	cmp	r3, r1
 	ble	.L_c86e8
-	.2byte	0x1C10
+	add	r0, r2, #0
 	b	.L_c86f2
 .L_c86e8:
 	add	r1, r1, r0

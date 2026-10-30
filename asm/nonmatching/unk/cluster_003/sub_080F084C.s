@@ -7,9 +7,9 @@
 sub_080F084C:
 	push	{r4, r5, r6, lr}
 	sub	sp, #8
-	.2byte	0x1C06
-	.2byte	0x1C0C
-	.2byte	0x1C25
+	add	r6, r0, #0
+	add	r4, r1, #0
+	add	r5, r4, #0
 	ldr	r0, [r4, #4]
 	mov	r1, sp
 	bl	sub_0800E014
@@ -25,15 +25,15 @@ sub_080F084C:
 	ldr	r0, [r5, #4]
 	bl	sub_0800FCB4
 	ldr	r0, [r5, #8]
-	.2byte	0x1C29
+	add	r1, r5, #0
 	add	r1, #28
 	bl	sub_080F06D0
 	ldr	r1, [r5, #8]
 	mov	r0, #0
-	str	r0, [r1, #96]	@ 0x60
-	.2byte	0x1C28
+	str	r0, [r1, #96]
+	add	r0, r5, #0
 	bl	sub_08001768
-	.2byte	0x1C30
+	add	r0, r6, #0
 	bl	sub_0800090C
 .L_f0890:
 	add	sp, #8

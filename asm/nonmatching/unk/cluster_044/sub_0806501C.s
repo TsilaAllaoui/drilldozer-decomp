@@ -6,7 +6,7 @@
 .thumb_func
 sub_0806501C:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldr	r0, [r4, #16]
 	cmp	r0, #0
 	beq	.L_6502c
@@ -15,21 +15,21 @@ sub_0806501C:
 	b	.L_65054
 .L_6502c:
 	mov	r0, #16
-	strh	r0, [r4, #52]	@ 0x34
+	strh	r0, [r4, #52]
 	mov	r0, #1
 	str	r0, [r4, #16]
 	b	.L_65054
 .L_65036:
-	ldrh	r1, [r4, #52]	@ 0x34
+	ldrh	r1, [r4, #52]
 	sub	r1, #2
-	strh	r1, [r4, #52]	@ 0x34
+	strh	r1, [r4, #52]
 	mov	r0, #1
 	neg	r0, r0
 	lsl	r1, r1, #24
 	lsr	r1, r1, #24
 	mov	r2, #0
 	bl	sub_08019950
-	ldrh	r0, [r4, #52]	@ 0x34
+	ldrh	r0, [r4, #52]
 	cmp	r0, #0
 	bne	.L_65054
 	mov	r0, #1

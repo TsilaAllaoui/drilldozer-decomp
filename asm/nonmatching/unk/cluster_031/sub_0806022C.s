@@ -9,9 +9,9 @@ sub_0806022C:
 	mov	r7, r8
 	push	{r7}
 	sub	sp, #12
-	.2byte	0x1C06
-	.2byte	0x1C0F
-	add	r7, #48	@ 0x30
+	add	r6, r0, #0
+	add	r7, r1, #0
+	add	r7, #48
 	ldrb	r0, [r7, #0]
 	add	r0, #1
 	mov	r1, #0
@@ -26,25 +26,25 @@ sub_0806022C:
 	lsr	r0, r0, #16
 	mov	r1, #32
 	bl	sub_080F8708
-	.2byte	0x1C05
+	add	r5, r0, #0
 	mov	r0, #1
 	and	r0, r5
 	cmp	r0, #0
 	beq	.L_60266
 	neg	r5, r5
 .L_60266:
-	ldr	r0, [pc, #48]	@ (0x8060298)
+	ldr	r0, .L_60298	@ =0x082334A0
 	ldr	r1, [r6, #12]
-	mov	r2, #140	@ 0x8c
+	mov	r2, #140
 	lsl	r2, r2, #1
-	mov	r3, #255	@ 0xff
+	mov	r3, #255
 	lsl	r3, r3, #8
-	ldrh	r4, [r6, #36]	@ 0x24
+	ldrh	r4, [r6, #36]
 	add	r4, r4, r5
 	lsl	r4, r4, #16
 	asr	r4, r4, #16
 	str	r4, [sp, #0]
-	mov	r5, #62	@ 0x3e
+	mov	r5, #62
 	ldrsh	r4, [r6, r5]
 	str	r4, [sp, #4]
 	mov	r4, r8
@@ -58,7 +58,6 @@ sub_0806022C:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_60298:
-	.4byte	0x82334A0
+	.4byte	0x082334A0
 .size sub_0806022C, .-sub_0806022C

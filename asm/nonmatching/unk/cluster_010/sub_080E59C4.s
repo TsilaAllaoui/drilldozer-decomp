@@ -6,7 +6,7 @@
 .thumb_func
 sub_080E59C4:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C06
+	add	r6, r0, #0
 	mov	r5, #0
 	mov	r1, #0
 	mov	r2, #2
@@ -15,8 +15,8 @@ sub_080E59C4:
 	beq	.L_e5a0c
 	mov	r4, #0
 .L_e59d8:
-	.2byte	0x1C30
-	.2byte	0x1C21
+	add	r0, r6, #0
+	add	r1, r4, #0
 	mov	r2, #2
 	bl	sub_0800B728
 	cmp	r0, #1
@@ -28,12 +28,12 @@ sub_080E59C4:
 	ble	.L_e59d8
 	cmp	r5, #0
 	beq	.L_e5a0c
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_080E5430
-	.2byte	0x1C04
-	.2byte	0x1E68
+	add	r4, r0, #0
+	sub	r0, r5, #1
 	bl	sub_080E5430
-	.2byte	0x1C01
+	add	r1, r0, #0
 	eor	r1, r4
 	neg	r0, r1
 	orr	r0, r1

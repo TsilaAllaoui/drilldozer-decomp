@@ -6,40 +6,34 @@
 .thumb_func
 sub_080F29E8:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
-	.2byte	0x1C0C
+	add	r5, r0, #0
+	add	r4, r1, #0
 	ldr	r0, [r4, #0]
 	cmp	r0, #4
 	bhi	.L_f2ace
 	lsl	r0, r0, #2
-	ldr	r1, [pc, #8]	@ (0x80f2a00)
+	ldr	r1, .L_f2a00	@ =0x080F2A04
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]
 	mov	pc, r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_f2a00:
-	.4byte	.L_f2a04
-.L_f2a04:
-	cmp	r2, #24
-	lsr	r7, r1, #32
-	cmp	r2, #62	@ 0x3e
-	lsr	r7, r1, #32
-	cmp	r2, #82	@ 0x52
-	lsr	r7, r1, #32
-	cmp	r2, #120	@ 0x78
-	lsr	r7, r1, #32
-	cmp	r2, #172	@ 0xac
-	lsr	r7, r1, #32
+	.4byte	0x080F2A04
+	.4byte	0x080F2A18	@ case .L_f2a18
+	.4byte	0x080F2A3E	@ case .L_f2a3e
+	.4byte	0x080F2A52	@ case .L_f2a52
+	.4byte	0x080F2A78	@ case .L_f2a78
+	.4byte	0x080F2AAC	@ case .L_f2aac
+.L_f2a18:
 	ldr	r0, [r4, #4]
-	mov	r1, #128	@ 0x80
+	mov	r1, #128
 	lsl	r1, r1, #9
 	add	r0, r0, r1
 	str	r0, [r4, #4]
 	asr	r0, r0, #16
 	cmp	r0, #15
 	ble	.L_f2a34
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	lsl	r0, r0, #13
 	str	r0, [r4, #4]
 	ldr	r0, [r4, #0]
@@ -50,7 +44,8 @@ sub_080F29E8:
 	ldrsh	r0, [r4, r1]
 	bl	sub_080F2AD4
 	b	.L_f2ace
-	mov	r0, #128	@ 0x80
+.L_f2a3e:
+	mov	r0, #128
 	lsl	r0, r0, #6
 	bl	sub_08019B94
 	mov	r0, #0
@@ -59,15 +54,16 @@ sub_080F29E8:
 	add	r0, #1
 	str	r0, [r4, #0]
 	b	.L_f2ace
+.L_f2a52:
 	ldr	r0, [r4, #4]
-	mov	r1, #128	@ 0x80
+	mov	r1, #128
 	lsl	r1, r1, #10
 	add	r0, r0, r1
 	str	r0, [r4, #4]
 	asr	r0, r0, #16
 	cmp	r0, #15
 	ble	.L_f2a6e
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	lsl	r0, r0, #13
 	str	r0, [r4, #4]
 	ldr	r0, [r4, #0]
@@ -78,8 +74,9 @@ sub_080F29E8:
 	ldrsh	r0, [r4, r1]
 	bl	sub_080F2B00
 	b	.L_f2ace
+.L_f2a78:
 	ldr	r0, [r4, #4]
-	ldr	r1, [pc, #44]	@ (0x80f2aa8)
+	ldr	r1, .L_f2aa8	@ =0xFFFF0000
 	add	r0, r0, r1
 	str	r0, [r4, #4]
 	asr	r0, r0, #16
@@ -94,24 +91,24 @@ sub_080F29E8:
 	ldr	r0, [r4, #4]
 	cmp	r0, #0
 	bne	.L_f2ace
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08001768
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0800090C
 	b	.L_f2ace
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_f2aa8:
 	.4byte	0xFFFF0000
-	.2byte	0x6860
-	mov	r1, #128	@ 0x80
+.L_f2aac:
+	ldr	r0, [r4, #4]
+	mov	r1, #128
 	lsl	r1, r1, #9
 	add	r0, r0, r1
 	str	r0, [r4, #4]
 	asr	r0, r0, #16
 	cmp	r0, #15
 	ble	.L_f2ac6
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	lsl	r0, r0, #13
 	str	r0, [r4, #4]
 	mov	r0, #3

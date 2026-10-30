@@ -6,17 +6,17 @@
 .thumb_func
 sub_080F9E1C:
 	push	{r4, lr}
-	sub	sp, #56	@ 0x38
-	str	r0, [sp, #40]	@ 0x28
-	str	r1, [sp, #44]	@ 0x2c
-	str	r2, [sp, #48]	@ 0x30
-	str	r3, [sp, #52]	@ 0x34
-	add	r0, sp, #40	@ 0x28
+	sub	sp, #56
+	str	r0, [sp, #40]
+	str	r1, [sp, #44]
+	str	r2, [sp, #48]
+	str	r3, [sp, #52]
+	add	r0, sp, #40
 	mov	r1, sp
 	bl	sub_080F947C
-	add	r0, sp, #48	@ 0x30
+	add	r0, sp, #48
 	add	r4, sp, #20
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_080F947C
 	mov	r1, #0
 	ldr	r0, [sp, #0]
@@ -40,9 +40,9 @@ sub_080F9E1C:
 	b	.L_f9e64
 .L_f9e5c:
 	mov	r0, sp
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_080F9C58
 .L_f9e64:
-	add	sp, #56	@ 0x38
+	add	sp, #56
 	pop	{r4, pc}
 .size sub_080F9E1C, .-sub_080F9E1C

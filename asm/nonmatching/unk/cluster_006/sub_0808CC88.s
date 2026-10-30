@@ -7,9 +7,9 @@
 sub_0808CC88:
 	push	{r4, r5, r6, r7, lr}
 	sub	sp, #12
-	.2byte	0x1C04
-	.2byte	0x1C0F
-	.2byte	0x1C3D
+	add	r4, r0, #0
+	add	r7, r1, #0
+	add	r5, r7, #0
 	ldr	r0, [r7, #0]
 	mov	r6, sp
 	mov	r1, sp
@@ -18,14 +18,14 @@ sub_0808CC88:
 	bl	sub_0800B220
 	cmp	r0, #1
 	bne	.L_8ccb4
-	.2byte	0x1C38
+	add	r0, r7, #0
 	bl	sub_08001768
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0800090C
 	b	.L_8cd4c
 .L_8ccb4:
 	ldr	r0, [r7, #0]
-	mov	r1, #64	@ 0x40
+	mov	r1, #64
 	bl	sub_0800B234
 	cmp	r0, #1
 	beq	.L_8cd4c
@@ -43,27 +43,27 @@ sub_0808CC88:
 	mov	r0, #4
 	strb	r0, [r7, #5]
 	bl	sub_080051DC
-	.2byte	0x1C05
+	add	r5, r0, #0
 	bl	sub_080051DC
-	mov	r4, #112	@ 0x70
-	.2byte	0x1C22
+	mov	r4, #112
+	add	r2, r4, #0
 	and	r2, r5
 	ldrh	r6, [r6, #4]
 	add	r2, r2, r6
 	mov	r5, #15
-	.2byte	0x1C29
+	add	r1, r5, #0
 	and	r1, r0
 	add	r2, r2, r1
 	add	r2, #32
 	lsl	r2, r2, #16
 	lsr	r2, r2, #16
-	ldr	r1, [pc, #64]	@ (0x808cd40)
+	ldr	r1, .L_8cd40	@ =0xFFFF0000
 	ldr	r0, [sp, #8]
 	and	r0, r1
 	orr	r0, r2
 	str	r0, [sp, #8]
 	bl	sub_080051DC
-	.2byte	0x1C06
+	add	r6, r0, #0
 	bl	sub_080051DC
 	mov	r1, sp
 	and	r4, r6
@@ -73,7 +73,7 @@ sub_0808CC88:
 	add	r4, r4, r5
 	add	r4, #16
 	lsl	r4, r4, #16
-	ldr	r1, [pc, #32]	@ (0x808cd44)
+	ldr	r1, .L_8cd44	@ =0x0000FFFF
 	ldr	r0, [sp, #8]
 	and	r0, r1
 	orr	r0, r4
@@ -83,16 +83,14 @@ sub_0808CC88:
 	mov	r2, #0
 	mov	r3, #0
 	bl	sub_0804CEDC
-	mov	r0, #145	@ 0x91
+	mov	r0, #145
 	lsl	r0, r0, #1
 	bl	sub_08029E54
 	b	.L_8cd4c
-	.align	2, 0
 .L_8cd40:
 	.4byte	0xFFFF0000
-	.align	2, 0
 .L_8cd44:
-	.4byte	0xFFFF
+	.4byte	0x0000FFFF
 .L_8cd48:
 	sub	r0, #1
 	strb	r0, [r5, #5]

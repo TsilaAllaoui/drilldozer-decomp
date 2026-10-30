@@ -6,23 +6,23 @@
 .thumb_func
 sub_0801C228:
 	push	{r4, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0A
-	str	r2, [r4, #76]	@ 0x4c
+	add	r4, r0, #0
+	add	r2, r1, #0
+	str	r2, [r4, #76]
 	ldr	r0, [r4, #12]
-	ldr	r1, [r4, #68]	@ 0x44
+	ldr	r1, [r4, #68]
 	add	r1, r1, r2
 	lsr	r1, r1, #16
-	ldrh	r2, [r4, #62]	@ 0x3e
+	ldrh	r2, [r4, #62]
 	bl	sub_08015010
-	.2byte	0x1C22
-	add	r2, #82	@ 0x52
+	add	r2, r4, #0
+	add	r2, #82
 	mov	r1, #0
 	strh	r0, [r2, #0]
-	.2byte	0x1C20
-	add	r0, #80	@ 0x50
+	add	r0, r4, #0
+	add	r0, #80
 	strh	r1, [r0, #0]
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0801C1C8
 	pop	{r4}
 	pop	{r0}

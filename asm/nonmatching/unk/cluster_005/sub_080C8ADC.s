@@ -7,13 +7,12 @@
 sub_080C8ADC:
 	push	{r4, r5, r6, lr}
 	lsl	r0, r0, #24
-.L_c8ae0:
 	lsr	r5, r0, #24
-	ldr	r0, [pc, #36]	@ (0x80c8b08)
+	ldr	r0, .L_c8b08	@ =0x080C89D9
 	bl	sub_08000960
 	bl	sub_0800098C
 	mov	r3, #0
-	.2byte	0x1D04
+	add	r4, r0, #4
 	mov	r6, #1
 	add	r0, #8
 .L_c8af4:
@@ -26,10 +25,9 @@ sub_080C8ADC:
 	strb	r1, [r0, #4]
 	strb	r1, [r0, #8]
 	b	.L_c8b14
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_c8b08:
-	.4byte	0x80C89D9
+	.4byte	0x080C89D9
 .L_c8b0c:
 	add	r0, #1
 	add	r3, #1
@@ -39,5 +37,5 @@ sub_080C8ADC:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080C8ADC, .-sub_080C8ADC

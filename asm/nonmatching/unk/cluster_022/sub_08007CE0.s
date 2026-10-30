@@ -6,7 +6,7 @@
 .thumb_func
 sub_08007CE0:
 	push	{lr}
-	.2byte	0x1C02
+	add	r2, r0, #0
 	mov	r0, #0
 	strh	r0, [r2, #12]
 	ldrh	r1, [r2, #26]
@@ -14,7 +14,7 @@ sub_08007CE0:
 	strh	r0, [r2, #16]
 	ldrh	r0, [r2, #24]
 	strh	r0, [r2, #18]
-	ldr	r3, [r2, #64]	@ 0x40
+	ldr	r3, [r2, #64]
 	cmp	r3, #0
 	beq	.L_7d00
 	ldr	r0, [r2, #12]

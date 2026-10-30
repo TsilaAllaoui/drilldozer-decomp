@@ -20,7 +20,7 @@ sub_08055B3C:
 	ldrh	r1, [r0, #0]
 	mov	r2, #16
 	neg	r2, r2
-	.2byte	0x1C10
+	add	r0, r2, #0
 	and	r0, r1
 	mov	r1, sp
 	strh	r0, [r1, #0]
@@ -32,7 +32,7 @@ sub_08055B3C:
 .L_55b6e:
 	mov	r5, #0
 	lsl	r7, r0, #4
-	.2byte	0x1C41
+	add	r1, r0, #1
 	mov	r8, r1
 	lsl	r0, r0, #7
 	mov	r1, sl
@@ -49,10 +49,10 @@ sub_08055B3C:
 	asr	r2, r2, #16
 	mov	r0, r9
 	bl	sub_0800D814
-	.2byte	0x1C01
+	add	r1, r0, #0
 	lsl	r1, r1, #24
 	lsr	r1, r1, #24
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08055AF8
 	add	r4, #4
 	add	r5, #1
@@ -69,5 +69,5 @@ sub_08055B3C:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08055B3C, .-sub_08055B3C

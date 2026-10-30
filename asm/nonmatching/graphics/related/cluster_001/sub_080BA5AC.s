@@ -6,12 +6,12 @@
 .thumb_func
 sub_080BA5AC:
 	push	{r4, lr}
-	.2byte	0x1C02
-	.2byte	0x1C0C
+	add	r2, r0, #0
+	add	r4, r1, #0
 	ldrb	r0, [r4, #15]
 	cmp	r0, #0
 	bne	.L_ba5be
-	.2byte	0x1C10
+	add	r0, r2, #0
 	bl	sub_0800090C
 .L_ba5be:
 	ldrb	r0, [r4, #14]
@@ -33,18 +33,18 @@ sub_080BA5AC:
 	sub	r0, #5
 	strh	r0, [r4, #12]
 	ldrh	r0, [r4, #12]
-	mov	r1, #50	@ 0x32
+	mov	r1, #50
 	bl	sub_080050F4
 	ldr	r2, [r4, #0]
-	mov	r1, #124	@ 0x7c
+	mov	r1, #124
 	sub	r1, r1, r0
 	strh	r1, [r2, #22]
 	mov	r1, #12
 	ldrsh	r0, [r4, r1]
-	cmp	r0, #63	@ 0x3f
+	cmp	r0, #63
 	bgt	.L_ba684
 	ldr	r1, [r4, #0]
-	add	r1, #37	@ 0x25
+	add	r1, #37
 	ldrb	r2, [r1, #0]
 	mov	r0, #13
 	neg	r0, r0
@@ -58,17 +58,17 @@ sub_080BA5AC:
 	lsl	r0, r0, #16
 	cmp	r0, #0
 	bge	.L_ba624
-	mov	r0, #153	@ 0x99
+	mov	r0, #153
 	bl	sub_08029E54
 	ldrh	r0, [r4, #12]
-	add	r0, #128	@ 0x80
+	add	r0, #128
 	strh	r0, [r4, #12]
 	ldrb	r0, [r4, #14]
 	add	r0, #1
 	strb	r0, [r4, #14]
 .L_ba624:
 	ldrh	r0, [r4, #12]
-	mov	r1, #50	@ 0x32
+	mov	r1, #50
 	b	.L_ba64c
 .L_ba62a:
 	ldrh	r0, [r4, #12]
@@ -77,7 +77,7 @@ sub_080BA5AC:
 	lsl	r0, r0, #16
 	cmp	r0, #0
 	bge	.L_ba648
-	mov	r0, #153	@ 0x99
+	mov	r0, #153
 	bl	sub_08029E54
 	mov	r0, #0
 	strh	r0, [r4, #12]
@@ -91,7 +91,7 @@ sub_080BA5AC:
 .L_ba64c:
 	bl	sub_080050F4
 	ldr	r2, [r4, #0]
-	mov	r1, #124	@ 0x7c
+	mov	r1, #124
 	sub	r1, r1, r0
 	strh	r1, [r2, #22]
 	b	.L_ba684
@@ -104,7 +104,7 @@ sub_080BA5AC:
 	cmp	r0, #2
 	bls	.L_ba684
 	ldr	r0, [r4, #0]
-	add	r0, #35	@ 0x23
+	add	r0, #35
 	ldrb	r0, [r0, #0]
 	lsl	r0, r0, #26
 	lsr	r0, r0, #27
@@ -134,11 +134,11 @@ sub_080BA5AC:
 	asr	r0, r0, #8
 	strh	r0, [r1, #20]
 	ldr	r0, [r4, #0]
-	add	r0, #35	@ 0x23
+	add	r0, #35
 	ldrb	r0, [r0, #0]
 	lsl	r0, r0, #26
 	lsr	r0, r0, #27
-	ldr	r2, [pc, #20]	@ (0x80ba6c0)
+	ldr	r2, .L_ba6c0	@ =0x0844070C
 	ldrb	r1, [r4, #16]
 	lsl	r1, r1, #2
 	add	r1, r1, r2
@@ -147,8 +147,7 @@ sub_080BA5AC:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_ba6c0:
-	.4byte	0x844070C
+	.4byte	0x0844070C
 .size sub_080BA5AC, .-sub_080BA5AC

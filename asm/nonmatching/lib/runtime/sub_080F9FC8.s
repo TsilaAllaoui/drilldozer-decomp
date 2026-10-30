@@ -36,12 +36,11 @@ sub_080F9FC8:
 	beq	.L_fa010
 .L_f9ffe:
 	ldr	r0, [sp, #4]
-	ldr	r1, [pc, #8]	@ (0x80fa00c)
+	ldr	r1, .L_fa00c	@ =0x7FFFFFFF
 	cmp	r0, #0
 	beq	.L_fa034
 	add	r1, #1
 	b	.L_fa034
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_fa00c:
 	.4byte	0x7FFFFFFF
@@ -55,20 +54,20 @@ sub_080F9FC8:
 .L_fa01a:
 	cmp	r0, #30
 	bgt	.L_f9ffe
-	mov	r2, #60	@ 0x3c
+	mov	r2, #60
 	sub	r2, r2, r0
 	ldr	r0, [sp, #12]
 	ldr	r1, [sp, #16]
 	bl	sub_080FAA1C
-	.2byte	0x1C01
+	add	r1, r0, #0
 	ldr	r0, [sp, #4]
 	cmp	r0, #0
 	beq	.L_fa034
 	neg	r1, r1
 .L_fa034:
-	.2byte	0x1C08
+	add	r0, r1, #0
 .L_fa036:
 	add	sp, #28
 	pop	{pc}
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080F9FC8, .-sub_080F9FC8

@@ -7,11 +7,11 @@
 sub_08070CDC:
 	push	{r4, lr}
 	sub	sp, #4
-	.2byte	0x1C04
-	ldr	r0, [r4, #36]	@ 0x24
+	add	r4, r0, #0
+	ldr	r0, [r4, #36]
 	str	r0, [sp, #0]
-	.2byte	0x1C20
-	add	r0, #118	@ 0x76
+	add	r0, r4, #0
+	add	r0, #118
 	ldrb	r0, [r0, #0]
 	cmp	r0, #8
 	blt	.L_70d1c
@@ -31,21 +31,21 @@ sub_08070CDC:
 	cmp	r0, #11
 	blt	.L_70d1c
 .L_70d0c:
-	.2byte	0x1C20
-	add	r0, #52	@ 0x34
+	add	r0, r4, #0
+	add	r0, #52
 	mov	r1, sp
 	mov	r2, #13
 	mov	r3, #32
 	bl	sub_08012C08
 	b	.L_70d36
 .L_70d1c:
-	add	r4, #52	@ 0x34
-	.2byte	0x1C20
+	add	r4, #52
+	add	r0, r4, #0
 	mov	r1, sp
 	mov	r2, #13
 	mov	r3, #1
 	bl	sub_08012C08
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, sp
 	mov	r2, #13
 	mov	r3, #1
@@ -55,5 +55,5 @@ sub_08070CDC:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08070CDC, .-sub_08070CDC

@@ -7,8 +7,8 @@
 sub_08016484:
 	push	{r4, r5, r6, r7, lr}
 	sub	sp, #8
-	.2byte	0x1C04
-	.2byte	0x1C0E
+	add	r4, r0, #0
+	add	r6, r1, #0
 	mov	r7, #0
 	mov	r5, sp
 	mov	r1, sp
@@ -29,14 +29,14 @@ sub_08016484:
 	strh	r0, [r6, #0]
 	b	.L_164d2
 .L_164b4:
-	.2byte	0x1C11
-	add	r1, #240	@ 0xf0
+	add	r1, r2, #0
+	add	r1, #240
 	mov	r3, #6
 	ldrsh	r0, [r5, r3]
 	cmp	r1, r0
 	blt	.L_164ce
 	ldrh	r1, [r5, #6]
-	sub	r1, #240	@ 0xf0
+	sub	r1, #240
 	sub	r1, r2, r1
 	ldrh	r0, [r6, #0]
 	sub	r0, r0, r1

@@ -35,12 +35,11 @@ sub_080FA94C:
 	beq	.L_fa990
 .L_fa980:
 	ldr	r0, [sp, #4]
-	ldr	r1, [pc, #8]	@ (0x80fa98c)
+	ldr	r1, .L_fa98c	@ =0x7FFFFFFF
 	cmp	r0, #0
 	beq	.L_fa9ae
 	add	r1, #1
 	b	.L_fa9ae
-	.align	2, 0
 .L_fa98c:
 	.4byte	0x7FFFFFFF
 .L_fa990:
@@ -62,7 +61,7 @@ sub_080FA94C:
 	beq	.L_fa9ae
 	neg	r1, r1
 .L_fa9ae:
-	.2byte	0x1C08
+	add	r0, r1, #0
 .L_fa9b0:
 	add	sp, #20
 	pop	{pc}

@@ -7,7 +7,7 @@
 sub_0801BBB0:
 	push	{r4, lr}
 	mov	ip, r0
-	.2byte	0x1C0C
+	add	r4, r1, #0
 	ldr	r0, [r0, #12]
 	cmp	r0, #0
 	beq	.L_1bbde
@@ -18,15 +18,15 @@ sub_0801BBB0:
 	cmp	r0, #0
 	beq	.L_1bbde
 	mov	r0, ip
-	add	r0, #108	@ 0x6c
+	add	r0, #108
 	strb	r4, [r0, #0]
 	mov	r1, ip
-	add	r1, #110	@ 0x6e
+	add	r1, #110
 	ldrh	r0, [r1, #0]
 	add	r0, r0, r2
 	strh	r0, [r1, #0]
 	mov	r0, ip
-	add	r0, #109	@ 0x6d
+	add	r0, #109
 	strb	r3, [r0, #0]
 .L_1bbde:
 	pop	{r4}

@@ -6,8 +6,8 @@
 .thumb_func
 sub_08030F20:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
-	mov	r0, #130	@ 0x82
+	add	r5, r0, #0
+	mov	r0, #130
 	lsl	r0, r0, #2
 	add	r3, r5, r0
 	sub	r0, #4
@@ -17,12 +17,12 @@ sub_08030F20:
 	str	r1, [r4, #0]
 	cmp	r2, #1
 	bne	.L_30f3e
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08021A78
 .L_30f3e:
 	ldr	r0, [r4, #0]
 	bl	sub_08031138
-	ldr	r4, [r0, #44]	@ 0x2c
+	ldr	r4, [r0, #44]
 	cmp	r4, #0
 	beq	.L_30fb6
 	ldr	r0, [r4, #0]

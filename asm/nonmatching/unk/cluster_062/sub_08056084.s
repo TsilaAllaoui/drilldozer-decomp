@@ -1,11 +1,19 @@
 .syntax divided
-.align 1, 0
+.align 2, 0
 .global sub_08056084
 .thumb
 .type sub_08056084, %function
 .thumb_func
 sub_08056084:
-	@ Exact original ROM bytes from 0x08056084.
-	.byte	0x00, 0xB5, 0x03, 0x48, 0x00, 0x68, 0x00, 0x28, 0x00, 0xD0, 0x01, 0x20, 0x02, 0xBC, 0x08, 0x47
-	.byte	0x18, 0x60, 0x03, 0x02
+	push	{lr}
+	ldr	r0, .L_56094	@ =0x02036018
+	ldr	r0, [r0, #0]
+	cmp	r0, #0
+	beq	.L_56090
+	mov	r0, #1
+.L_56090:
+	pop	{r1}
+	bx	r1
+.L_56094:
+	.4byte	0x02036018
 .size sub_08056084, .-sub_08056084

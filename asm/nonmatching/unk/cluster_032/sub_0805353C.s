@@ -7,13 +7,13 @@
 sub_0805353C:
 	push	{r4, r5, lr}
 	sub	sp, #8
-	.2byte	0x1C04
-	.2byte	0x1C15
+	add	r4, r0, #0
+	add	r5, r2, #0
 	ldr	r0, [r4, #12]
 	mov	r1, sp
 	bl	sub_0800FCD8
-	.2byte	0x1C20
-	add	r0, #84	@ 0x54
+	add	r0, r4, #0
+	add	r0, #84
 	ldrb	r0, [r0, #0]
 	lsl	r0, r0, #24
 	asr	r0, r0, #24
@@ -30,10 +30,10 @@ sub_0805353C:
 	mov	r0, sp
 	mov	r1, #6
 	ldrsh	r0, [r0, r1]
-	.2byte	0x1C01
-	sub	r1, #140	@ 0x8c
-	sub	r0, #100	@ 0x64
-	mov	r3, #36	@ 0x24
+	add	r1, r0, #0
+	sub	r1, #140
+	sub	r0, #100
+	mov	r3, #36
 	ldrsh	r2, [r4, r3]
 	cmp	r2, r1
 	blt	.L_535a0
@@ -44,10 +44,10 @@ sub_0805353C:
 	mov	r0, sp
 	mov	r1, #4
 	ldrsh	r0, [r0, r1]
-	.2byte	0x1C01
-	add	r1, #100	@ 0x64
-	add	r0, #140	@ 0x8c
-	mov	r3, #36	@ 0x24
+	add	r1, r0, #0
+	add	r1, #100
+	add	r0, #140
+	mov	r3, #36
 	ldrsh	r2, [r4, r3]
 	cmp	r2, r1
 	bge	.L_53598
@@ -67,5 +67,5 @@ sub_0805353C:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0805353C, .-sub_0805353C

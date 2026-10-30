@@ -7,22 +7,22 @@
 sub_08067400:
 	push	{r4, r5, lr}
 	sub	sp, #20
-	.2byte	0x1C04
-	.2byte	0x1C0D
+	add	r4, r0, #0
+	add	r5, r1, #0
 	lsl	r3, r2, #16
 	lsr	r3, r3, #16
 	mov	r0, #0
 	str	r0, [sp, #16]
 	add	r2, sp, #16
 	str	r0, [sp, #0]
-	.2byte	0x1C20
-	mov	r1, #148	@ 0x94
+	add	r0, r4, #0
+	mov	r1, #148
 	bl	sub_08012310
-	cmp	r0, #255	@ 0xff
+	cmp	r0, #255
 	beq	.L_67438
 	lsl	r1, r0, #24
 	lsr	r1, r1, #24
-	.2byte	0x1C20
+	add	r0, r4, #0
 	add	r2, sp, #4
 	bl	sub_08012710
 	add	r0, sp, #4

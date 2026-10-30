@@ -5,9 +5,19 @@
 .type sub_080EFA00, %function
 .thumb_func
 sub_080EFA00:
-	@ Exact original ROM bytes from 0x080EFA00.
-	.byte	0x00, 0xB5, 0x03, 0x48, 0x10, 0xF7, 0xAC, 0xFF, 0x00, 0x28, 0x03, 0xD0, 0x01, 0x20, 0x02, 0xE0
-	.byte	0x21, 0xF9, 0x0E, 0x08, 0x00, 0x20, 0x02, 0xBC
+	push	{lr}
+	ldr	r0, .L_efa10	@ =0x080EF921
+	bl	sub_08000960
+	cmp	r0, #0
+	beq	.L_efa14
+	mov	r0, #1
+	b	.L_efa16
+.L_efa10:
+	.4byte	0x080EF921
+.L_efa14:
+	mov	r0, #0
+.L_efa16:
+	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080EFA00, .-sub_080EFA00

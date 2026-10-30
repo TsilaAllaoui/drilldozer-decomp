@@ -6,25 +6,25 @@
 .thumb_func
 sub_08011ACC:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
+	add	r5, r0, #0
 	bl	sub_080177BC
-	.2byte	0x1C04
+	add	r4, r0, #0
 	cmp	r4, #3
 	beq	.L_11b1c
-	.2byte	0x1C28
-	mov	r1, #228	@ 0xe4
+	add	r0, r5, #0
+	mov	r1, #228
 	bl	sub_08011978
 	cmp	r0, #0
 	beq	.L_11b1c
-	ldr	r0, [r5, #36]	@ 0x24
+	ldr	r0, [r5, #36]
 	cmp	r0, #0
 	bne	.L_11af2
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08011B40
 .L_11af2:
-	ldr	r0, [r5, #36]	@ 0x24
+	ldr	r0, [r5, #36]
 	add	r0, #1
-	str	r0, [r5, #36]	@ 0x24
+	str	r0, [r5, #36]
 	cmp	r4, #1
 	beq	.L_11b10
 	cmp	r4, #1
@@ -45,15 +45,15 @@ sub_08011ACC:
 .L_11b14:
 	mov	r4, #4
 .L_11b16:
-	ldr	r0, [r5, #36]	@ 0x24
+	ldr	r0, [r5, #36]
 	cmp	r0, r4
 	blt	.L_11b20
 .L_11b1c:
 	mov	r0, #0
-	str	r0, [r5, #36]	@ 0x24
+	str	r0, [r5, #36]
 .L_11b20:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08011ACC, .-sub_08011ACC

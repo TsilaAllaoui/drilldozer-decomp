@@ -7,8 +7,8 @@
 sub_08094C10:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C04
-	.2byte	0x1C0D
+	add	r4, r0, #0
+	add	r5, r1, #0
 	ldr	r0, [r4, #12]
 	mov	r1, #2
 	bl	sub_08011A50
@@ -19,7 +19,7 @@ sub_08094C10:
 	add	r2, #2
 	mov	r1, sp
 	bl	sub_0801174C
-	.2byte	0x1D28
+	add	r0, r5, #4
 	mov	r1, sp
 	bl	sub_08012D40
 	cmp	r0, #0
@@ -29,8 +29,8 @@ sub_08094C10:
 	neg	r0, r0
 	b	.L_94c80
 .L_94c42:
-	.2byte	0x1C20
-	add	r0, #84	@ 0x54
+	add	r0, r4, #0
+	add	r0, #84
 	ldrb	r0, [r0, #0]
 	lsl	r0, r0, #24
 	asr	r0, r0, #24
@@ -39,7 +39,7 @@ sub_08094C10:
 	cmp	r0, #0
 	blt	.L_94c6a
 	mov	r0, sp
-	mov	r2, #36	@ 0x24
+	mov	r2, #36
 	ldrsh	r1, [r4, r2]
 	mov	r2, #0
 	ldrsh	r0, [r0, r2]
@@ -53,7 +53,7 @@ sub_08094C10:
 .L_94c6a:
 	mov	r0, sp
 	ldrh	r0, [r0, #2]
-	mov	r2, #38	@ 0x26
+	mov	r2, #38
 	ldrsh	r1, [r4, r2]
 	lsl	r0, r0, #16
 	asr	r0, r0, #16

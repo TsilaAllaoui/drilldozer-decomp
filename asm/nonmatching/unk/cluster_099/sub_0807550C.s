@@ -6,22 +6,20 @@
 .thumb_func
 sub_0807550C:
 	push	{lr}
-	.2byte	0x1C0B
+	add	r3, r1, #0
 	lsl	r0, r0, #3
-	ldr	r2, [pc, #20]	@ (0x8075528)
+	ldr	r2, .L_75528	@ =0x08363380
 	add	r2, r0, r2
-	ldr	r1, [pc, #20]	@ (0x807552c)
+	ldr	r1, .L_7552c	@ =0x08363340
 	add	r0, r0, r1
 	ldr	r1, [r0, #0]
 	ldr	r2, [r2, #0]
-	.2byte	0x1C18
+	add	r0, r3, #0
 	bl	sub_080754C0
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_75528:
-	.4byte	0x8363380
-	.align	2, 0
+	.4byte	0x08363380
 .L_7552c:
-	.4byte	0x8363340
+	.4byte	0x08363340
 .size sub_0807550C, .-sub_0807550C

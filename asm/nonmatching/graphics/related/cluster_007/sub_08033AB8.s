@@ -7,13 +7,13 @@
 sub_08033AB8:
 	push	{r4, r5, r6, r7, lr}
 	mov	r1, #0
-	.2byte	0x1C06
-	add	r6, #144	@ 0x90
-	ldr	r7, [pc, #44]	@ (0x8033af0)
+	add	r6, r0, #0
+	add	r6, #144
+	ldr	r7, .L_33af0	@ =0x0827D1D8
 .L_33ac2:
-	.2byte	0x1C08
+	add	r0, r1, #0
 	add	r0, #32
-	.2byte	0x1C4D
+	add	r5, r1, #1
 	lsl	r0, r0, #6
 	add	r3, r0, r7
 	lsl	r2, r1, #6
@@ -28,15 +28,13 @@ sub_08033AB8:
 	sub	r4, #1
 	cmp	r4, #0
 	bge	.L_33ad0
-	.2byte	0x1C29
-.L_33ae4:
+	add	r1, r5, #0
 	cmp	r1, #31
 	ble	.L_33ac2
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_33af0:
-	.4byte	0x827D1D8
+	.4byte	0x0827D1D8
 .size sub_08033AB8, .-sub_08033AB8

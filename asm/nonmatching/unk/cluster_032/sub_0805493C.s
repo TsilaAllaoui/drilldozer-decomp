@@ -6,9 +6,9 @@
 .thumb_func
 sub_0805493C:
 	push	{r4, r5, r6, r7, lr}
-	.2byte	0x1C07
-	.2byte	0x1C16
-	.2byte	0x1D0D
+	add	r7, r0, #0
+	add	r6, r2, #0
+	add	r5, r1, #4
 	mov	r4, #1
 .L_54946:
 	ldmia	r5!, {r0}
@@ -18,11 +18,11 @@ sub_0805493C:
 	sub	r4, #1
 	cmp	r4, #0
 	bge	.L_54946
-	.2byte	0x1C38
-	add	r0, #120	@ 0x78
+	add	r0, r7, #0
+	add	r0, #120
 	strb	r6, [r0, #0]
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0805493C, .-sub_0805493C

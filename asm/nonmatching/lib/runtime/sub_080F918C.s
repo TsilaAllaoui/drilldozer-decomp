@@ -12,21 +12,21 @@ sub_080F918C:
 	str	r2, [sp, #8]
 	str	r3, [sp, #12]
 	ldr	r3, [sp, #0]
-	ldr	r0, [pc, #92]	@ (0x80f91f8)
+	ldr	r0, .L_f91f8	@ =0x0000FFFF
 	mov	ip, r0
-	.2byte	0x1C1A
+	add	r2, r3, #0
 	and	r2, r0
 	lsr	r3, r3, #16
 	ldr	r1, [sp, #8]
-	.2byte	0x1C08
+	add	r0, r1, #0
 	mov	r4, ip
 	and	r0, r4
 	lsr	r1, r1, #16
-	.2byte	0x1C15
+	add	r5, r2, #0
 	mul	r5, r0
-	.2byte	0x1C14
+	add	r4, r2, #0
 	mul	r4, r1
-	.2byte	0x1C1A
+	add	r2, r3, #0
 	mul	r2, r0
 	mul	r3, r1
 	lsr	r0, r5, #16
@@ -34,7 +34,7 @@ sub_080F918C:
 	add	r4, r4, r2
 	cmp	r4, r2
 	bcs	.L_f91cc
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	lsl	r0, r0, #9
 	add	r3, r3, r0
 .L_f91cc:
@@ -44,23 +44,22 @@ sub_080F918C:
 	and	r4, r1
 	lsl	r0, r4, #16
 	and	r5, r1
-	.2byte	0x1C06
+	add	r6, r0, #0
 	orr	r6, r5
-	.2byte	0x1C39
-	.2byte	0x1C30
+	add	r1, r7, #0
+	add	r0, r6, #0
 	ldr	r3, [sp, #0]
 	ldr	r4, [sp, #12]
-	.2byte	0x1C1A
+	add	r2, r3, #0
 	mul	r2, r4
 	ldr	r5, [sp, #4]
 	ldr	r4, [sp, #8]
-	.2byte	0x1C2B
+	add	r3, r5, #0
 	mul	r3, r4
 	add	r2, r2, r3
 	add	r1, r7, r2
 	add	sp, #16
 	pop	{r4, r5, r6, r7, pc}
-	.align	2, 0
 .L_f91f8:
-	.4byte	0xFFFF
+	.4byte	0x0000FFFF
 .size sub_080F918C, .-sub_080F918C

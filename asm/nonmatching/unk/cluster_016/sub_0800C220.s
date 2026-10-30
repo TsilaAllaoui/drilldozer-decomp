@@ -7,11 +7,11 @@
 sub_0800C220:
 	push	{r4, r5, r6, lr}
 	sub	sp, #4
-	.2byte	0x1C04
-	ldr	r5, [pc, #80]	@ (0x800c278)
-	ldr	r1, [pc, #80]	@ (0x800c27c)
-	ldr	r0, [pc, #84]	@ (0x800c280)
-	str	r0, [r4, #52]	@ 0x34
+	add	r4, r0, #0
+	ldr	r5, .L_c278	@ =0x0821B314
+	ldr	r1, .L_c27c	@ =0x02034748
+	ldr	r0, .L_c280	@ =0x02025A60
+	str	r0, [r4, #52]
 	ldrb	r0, [r1, #8]
 	mov	r6, #0
 	strb	r0, [r4, #18]
@@ -35,9 +35,9 @@ sub_0800C220:
 	add	r0, #32
 	ldrb	r0, [r0, #0]
 	strb	r0, [r4, #17]
-	add	r4, #72	@ 0x48
+	add	r4, #72
 	str	r6, [sp, #0]
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #0
 	mov	r2, #0
 	mov	r3, #0
@@ -46,13 +46,10 @@ sub_0800C220:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_c278:
-	.4byte	0x821B314
-	.align	2, 0
+	.4byte	0x0821B314
 .L_c27c:
-	.4byte	0x2034748
-	.align	2, 0
+	.4byte	0x02034748
 .L_c280:
-	.4byte	0x2025A60
+	.4byte	0x02025A60
 .size sub_0800C220, .-sub_0800C220

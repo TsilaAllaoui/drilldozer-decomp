@@ -6,7 +6,7 @@
 .thumb_func
 sub_080B9D1C:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldr	r0, [r4, #0]
 	cmp	r0, #0
 	beq	.L_b9d2c
@@ -31,7 +31,7 @@ sub_080B9D1C:
 	str	r0, [r4, #4]
 	ldr	r1, [r4, #4]
 	asr	r1, r1, #8
-	mov	r0, #136	@ 0x88
+	mov	r0, #136
 	bl	sub_080B29E8
 	mov	r1, #0
 	ldr	r0, [r4, #16]
@@ -39,7 +39,7 @@ sub_080B9D1C:
 	bne	.L_b9d58
 	mov	r1, #1
 .L_b9d58:
-	.2byte	0x1C08
+	add	r0, r1, #0
 .L_b9d5a:
 	pop	{r4}
 	pop	{r1}

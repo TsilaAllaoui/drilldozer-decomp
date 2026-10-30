@@ -6,7 +6,7 @@
 .thumb_func
 sub_0806E800:
 	push	{r4, lr}
-	.2byte	0x1C01
+	add	r1, r0, #0
 	ldrb	r2, [r1, #8]
 	cmp	r2, #0
 	bne	.L_6e854
@@ -23,7 +23,7 @@ sub_0806E800:
 	strh	r0, [r1, #12]
 	lsl	r0, r0, #16
 	asr	r0, r0, #16
-	mov	r2, #150	@ 0x96
+	mov	r2, #150
 	lsl	r2, r2, #1
 	cmp	r0, r2
 	ble	.L_6e82e
@@ -43,9 +43,9 @@ sub_0806E800:
 	strh	r0, [r1, #14]
 	lsl	r0, r0, #16
 	asr	r0, r0, #16
-	cmp	r0, #240	@ 0xf0
+	cmp	r0, #240
 	ble	.L_6e8a0
-	mov	r0, #240	@ 0xf0
+	mov	r0, #240
 	strh	r0, [r1, #14]
 	b	.L_6e8a0
 .L_6e854:
@@ -63,7 +63,7 @@ sub_0806E800:
 	ldrsh	r0, [r1, r4]
 	cmp	r0, #0
 	ble	.L_6e878
-	.2byte	0x1C10
+	add	r0, r2, #0
 	sub	r0, #15
 	strh	r0, [r1, #12]
 	b	.L_6e87a
@@ -84,7 +84,7 @@ sub_0806E800:
 	ldrsh	r0, [r1, r4]
 	cmp	r0, #0
 	ble	.L_6e89e
-	.2byte	0x1C10
+	add	r0, r2, #0
 	sub	r0, #15
 	strh	r0, [r1, #14]
 	b	.L_6e8a0
@@ -94,5 +94,5 @@ sub_0806E800:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0806E800, .-sub_0806E800

@@ -6,7 +6,7 @@
 .thumb_func
 sub_080E44B4:
 	push	{lr}
-	.2byte	0x1C02
+	add	r2, r0, #0
 	ldrb	r0, [r2, #8]
 	cmp	r0, #0
 	bne	.L_e44c2
@@ -22,5 +22,5 @@ sub_080E44B4:
 	strb	r0, [r2, #5]
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080E44B4, .-sub_080E44B4

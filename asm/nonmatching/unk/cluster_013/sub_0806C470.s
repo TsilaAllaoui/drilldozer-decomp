@@ -11,7 +11,7 @@ sub_0806C470:
 	push	{r6, r7}
 	sub	sp, #4
 	mov	r8, r0
-	.2byte	0x1C0F
+	add	r7, r1, #0
 	lsl	r4, r2, #24
 	lsr	r4, r4, #24
 	mov	r5, #32

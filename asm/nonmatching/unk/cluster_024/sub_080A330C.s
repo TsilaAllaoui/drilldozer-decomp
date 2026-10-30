@@ -6,7 +6,7 @@
 .thumb_func
 sub_080A330C:
 	push	{lr}
-	.2byte	0x1C02
+	add	r2, r0, #0
 	lsl	r1, r1, #24
 	lsr	r1, r1, #24
 	mov	r0, #0

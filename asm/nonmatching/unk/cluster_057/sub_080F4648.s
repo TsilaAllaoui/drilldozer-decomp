@@ -9,20 +9,20 @@ sub_080F4648:
 	mov	r7, r9
 	mov	r6, r8
 	push	{r6, r7}
-	.2byte	0x1C05
+	add	r5, r0, #0
 	mov	r9, r1
 	mov	r8, r2
-	add	r0, #68	@ 0x44
+	add	r0, #68
 	ldrh	r1, [r0, #0]
-	mov	r0, #192	@ 0xc0
+	mov	r0, #192
 	lsl	r0, r0, #2
 	cmp	r1, r0
 	bne	.L_f4714
 	mov	r4, #0
-	ldr	r0, [pc, #160]	@ (0x80f4708)
+	ldr	r0, .L_f4708	@ =0x084E8138
 	mov	ip, r0
-	.2byte	0x1C2F
-	add	r7, #60	@ 0x3c
+	add	r7, r5, #0
+	add	r7, #60
 .L_f466c:
 	mov	r2, #0
 	lsl	r1, r4, #4
@@ -32,14 +32,14 @@ sub_080F4648:
 	mvn	r0, r0
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
-	sub	r0, #158	@ 0x9e
+	sub	r0, #158
 	add	r0, r7, r0
 	ldrb	r0, [r0, #0]
-	.2byte	0x1C0E
+	add	r6, r1, #0
 	add	r4, #1
 	cmp	r0, #0
 	bne	.L_f46c4
-	ldr	r0, [pc, #124]	@ (0x80f4708)
+	ldr	r0, .L_f4708	@ =0x084E8138
 	add	r3, r6, r0
 .L_f468e:
 	ldrb	r0, [r3, #0]
@@ -47,13 +47,13 @@ sub_080F4648:
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
 	add	r0, r5, r0
-	sub	r0, #94	@ 0x5e
+	sub	r0, #94
 	ldrb	r1, [r0, #0]
 	ldrb	r0, [r3, #1]
 	mvn	r0, r0
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
-	sub	r0, #199	@ 0xc7
+	sub	r0, #199
 	cmp	r1, r0
 	bne	.L_f46c4
 	add	r3, #4
@@ -64,7 +64,7 @@ sub_080F4648:
 	mvn	r0, r0
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
-	sub	r0, #158	@ 0x9e
+	sub	r0, #158
 	add	r0, r7, r0
 	ldrb	r0, [r0, #0]
 	cmp	r0, r2
@@ -72,7 +72,7 @@ sub_080F4648:
 .L_f46c4:
 	cmp	r2, #3
 	bne	.L_f4710
-	.2byte	0x1C32
+	add	r2, r6, #0
 	add	r2, #12
 	add	r2, ip
 	ldrb	r0, [r2, #0]
@@ -80,10 +80,10 @@ sub_080F4648:
 	lsl	r0, r0, #24
 	lsr	r0, r0, #22
 	add	r0, r5, r0
-	ldr	r1, [pc, #48]	@ (0x80f470c)
+	ldr	r1, .L_f470c	@ =0xFFFFFD8C
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]
-	add	r0, #144	@ 0x90
+	add	r0, #144
 	ldrh	r1, [r0, #0]
 	lsl	r1, r1, #16
 	asr	r1, r1, #24
@@ -91,11 +91,11 @@ sub_080F4648:
 	mvn	r0, r0
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
-	sub	r0, #199	@ 0xc7
+	sub	r0, #199
 	cmp	r1, r0
 	bne	.L_f4710
-	.2byte	0x1C28
-	add	r0, #55	@ 0x37
+	add	r0, r5, #0
+	add	r0, #55
 	ldrb	r2, [r0, #0]
 	cmp	r4, r2
 	beq	.L_f4714
@@ -103,11 +103,9 @@ sub_080F4648:
 	mov	r0, #2
 	neg	r0, r0
 	b	.L_f4786
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_f4708:
-	.4byte	0x84E8138
-	.align	2, 0
+	.4byte	0x084E8138
 .L_f470c:
 	.4byte	0xFFFFFD8C
 .L_f4710:
@@ -116,14 +114,14 @@ sub_080F4648:
 .L_f4714:
 	mov	r4, #0
 .L_f4716:
-	ldr	r1, [pc, #44]	@ (0x80f4744)
+	ldr	r1, .L_f4744	@ =0x084E8168
 	lsl	r0, r4, #3
 	add	r1, r0, r1
 	ldrh	r0, [r1, #2]
 	mvn	r0, r0
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
-	ldr	r3, [pc, #32]	@ (0x80f4748)
+	ldr	r3, .L_f4748	@ =0xFFFFB03F
 	add	r0, r0, r3
 	cmp	r9, r0
 	bne	.L_f477c
@@ -138,15 +136,13 @@ sub_080F4648:
 	cmp	r0, #1
 	beq	.L_f4752
 	b	.L_f475c
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_f4744:
-	.4byte	0x84E8168
-	.align	2, 0
+	.4byte	0x084E8168
 .L_f4748:
 	.4byte	0xFFFFB03F
 .L_f474c:
-	.2byte	0x2812
+	cmp	r0, #18
 	beq	.L_f476e
 	b	.L_f475c
 .L_f4752:
@@ -155,7 +151,7 @@ sub_080F4648:
 	cmp	r0, #30
 	ble	.L_f477c
 .L_f475c:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	b	.L_f4786
 .L_f4760:
 	ldr	r0, [r5, #0]
@@ -184,5 +180,5 @@ sub_080F4648:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080F4648, .-sub_080F4648

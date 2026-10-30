@@ -6,7 +6,7 @@
 .thumb_func
 sub_080AEDDC:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldrb	r0, [r4, #9]
 	cmp	r0, #32
 	beq	.L_aedee
@@ -24,5 +24,5 @@ sub_080AEDDC:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080AEDDC, .-sub_080AEDDC

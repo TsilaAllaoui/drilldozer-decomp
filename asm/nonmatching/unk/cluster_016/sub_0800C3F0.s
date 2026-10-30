@@ -6,10 +6,10 @@
 .thumb_func
 sub_0800C3F0:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
+	add	r5, r0, #0
 	mov	r4, #1
 	neg	r4, r4
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080014AC
 	lsl	r0, r0, #16
 	asr	r0, r0, #16

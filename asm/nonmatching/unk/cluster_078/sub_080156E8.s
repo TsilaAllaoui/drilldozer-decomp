@@ -7,7 +7,7 @@
 sub_080156E8:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C1D
+	add	r5, r3, #0
 	ldr	r4, [r2, #0]
 	ldr	r3, [r5, #0]
 	add	r3, r4, r3
@@ -25,7 +25,7 @@ sub_080156E8:
 	add	r4, #2
 	strh	r2, [r4, #0]
 	mov	r2, sp
-	.2byte	0x1C23
+	add	r3, r4, #0
 	bl	sub_08014AF8
 	cmp	r0, #1
 	beq	.L_1571e
@@ -47,5 +47,5 @@ sub_080156E8:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080156E8, .-sub_080156E8

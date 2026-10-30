@@ -7,9 +7,9 @@
 sub_0803DE40:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C04
-	.2byte	0x1C0D
-	mov	r0, #172	@ 0xac
+	add	r4, r0, #0
+	add	r5, r1, #0
+	mov	r0, #172
 	lsl	r0, r0, #1
 	add	r4, r4, r0
 	ldr	r0, [r4, #0]

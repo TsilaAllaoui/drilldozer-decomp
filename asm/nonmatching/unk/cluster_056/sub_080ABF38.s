@@ -5,8 +5,8 @@
 .type sub_080ABF38, %function
 .thumb_func
 sub_080ABF38:
-	@ Exact original ROM bytes from 0x080ABF38.
-	.byte	0x7C, 0x30, 0x40, 0x69
+	add	r0, #124
+	ldr	r0, [r0, #20]
 	bx	lr
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080ABF38, .-sub_080ABF38

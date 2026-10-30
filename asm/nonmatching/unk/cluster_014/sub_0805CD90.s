@@ -6,12 +6,12 @@
 .thumb_func
 sub_0805CD90:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C06
+	add	r6, r0, #0
 	mov	r5, #0
 	ldrb	r0, [r6, #7]
 	cmp	r5, r0
 	bge	.L_5cdb6
-	mov	r0, #236	@ 0xec
+	mov	r0, #236
 	lsl	r0, r0, #1
 	add	r4, r6, r0
 .L_5cda2:
@@ -26,7 +26,7 @@ sub_0805CD90:
 	cmp	r5, r0
 	blt	.L_5cda2
 .L_5cdb6:
-	ldrh	r0, [r6, #42]	@ 0x2a
+	ldrh	r0, [r6, #42]
 	mov	r1, #2
 	bl	sub_080066B8
 	pop	{r4, r5, r6}

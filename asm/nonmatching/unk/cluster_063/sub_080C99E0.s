@@ -6,16 +6,16 @@
 .thumb_func
 sub_080C99E0:
 	push	{r4, lr}
-	.2byte	0x1C04
-	mov	r1, #196	@ 0xc4
+	add	r4, r0, #0
+	mov	r1, #196
 	bl	sub_08011978
 	cmp	r0, #0
 	beq	.L_c99f2
 	mov	r0, #1
 	b	.L_c9a04
 .L_c99f2:
-	.2byte	0x1C20
-	mov	r1, #155	@ 0x9b
+	add	r0, r4, #0
+	mov	r1, #155
 	bl	sub_08011978
 	cmp	r0, #0
 	bne	.L_c9a02
@@ -27,5 +27,5 @@ sub_080C99E0:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080C99E0, .-sub_080C99E0

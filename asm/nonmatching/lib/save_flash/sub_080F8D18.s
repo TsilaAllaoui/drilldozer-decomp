@@ -6,9 +6,9 @@
 .thumb_func
 sub_080F8D18:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
-	.2byte	0x1C0B
-	.2byte	0x1E54
+	add	r5, r0, #0
+	add	r3, r1, #0
+	sub	r4, r2, #1
 	cmp	r2, #0
 	beq	.L_f8d3e
 	mov	r2, #1
@@ -20,7 +20,7 @@ sub_080F8D18:
 	add	r3, #1
 	cmp	r1, r0
 	beq	.L_f8d38
-	.2byte	0x1E58
+	sub	r0, r3, #1
 	b	.L_f8d40
 .L_f8d38:
 	sub	r4, #1
@@ -32,5 +32,5 @@ sub_080F8D18:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080F8D18, .-sub_080F8D18

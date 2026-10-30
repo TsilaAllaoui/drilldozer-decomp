@@ -9,50 +9,49 @@ sub_080338C8:
 	mov	r7, r8
 	push	{r7}
 	sub	sp, #8
-	.2byte	0x1C07
-	ldr	r0, [pc, #132]	@ (0x8033958)
+	add	r7, r0, #0
+	ldr	r0, .L_33958	@ =0x0050007A
 	str	r0, [sp, #4]
-	ldr	r5, [pc, #132]	@ (0x803395c)
+	ldr	r5, .L_3395c	@ =0x082AD298
 	add	r6, sp, #4
-	ldr	r3, [pc, #132]	@ (0x8033960)
+	ldr	r3, .L_33960	@ =0x082AD29C
 	mov	r4, #1
 	str	r4, [sp, #0]
-	.2byte	0x1C28
+	add	r0, r5, #0
 	mov	r1, #0
-	.2byte	0x1C32
+	add	r2, r6, #0
 	bl	sub_08033608
-	mov	r1, #216	@ 0xd8
+	mov	r1, #216
 	add	r1, r1, r7
 	mov	r8, r1
 	str	r0, [r1, #0]
-	mov	r1, #132	@ 0x84
+	mov	r1, #132
 	add	r0, sp, #4
 	strh	r1, [r0, #0]
-	mov	r0, #78	@ 0x4e
+	mov	r0, #78
 	strh	r0, [r6, #2]
-	ldr	r3, [pc, #100]	@ (0x8033964)
+	ldr	r3, .L_33964	@ =0x082AD2A4
 	str	r4, [sp, #0]
-	.2byte	0x1C28
+	add	r0, r5, #0
 	mov	r1, #0
 	add	r2, sp, #4
 	bl	sub_08033608
-	.2byte	0x1C39
-	add	r1, #220	@ 0xdc
+	add	r1, r7, #0
+	add	r1, #220
 	str	r0, [r1, #0]
-	mov	r1, #126	@ 0x7e
+	mov	r1, #126
 	add	r0, sp, #4
 	strh	r1, [r0, #0]
-	mov	r0, #87	@ 0x57
+	mov	r0, #87
 	strh	r0, [r6, #2]
-	ldr	r3, [pc, #76]	@ (0x8033968)
-.L_3391c:
+	ldr	r3, .L_33968	@ =0x082AD2AC
 	str	r4, [sp, #0]
-	.2byte	0x1C28
+	add	r0, r5, #0
 	mov	r1, #0
 	add	r2, sp, #4
 	bl	sub_08033608
-	.2byte	0x1C39
-	add	r1, #224	@ 0xe0
+	add	r1, r7, #0
+	add	r1, #224
 	str	r0, [r1, #0]
 	mov	r5, r8
 	mov	r4, #2
@@ -62,8 +61,8 @@ sub_080338C8:
 	sub	r4, #1
 	cmp	r4, #0
 	bge	.L_33932
-	ldr	r0, [pc, #44]	@ (0x803396c)
-	mov	r1, #128	@ 0x80
+	ldr	r0, .L_3396c	@ =0x082A2698
+	mov	r1, #128
 	lsl	r1, r1, #1
 	mov	r2, #32
 	bl	sub_08018E94
@@ -73,23 +72,17 @@ sub_080338C8:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_33958:
-	.4byte	0x50007A
-	.align	2, 0
+	.4byte	0x0050007A
 .L_3395c:
-	.4byte	0x82AD298
-	.align	2, 0
+	.4byte	0x082AD298
 .L_33960:
-	.4byte	0x82AD29C
-	.align	2, 0
+	.4byte	0x082AD29C
 .L_33964:
-	.4byte	0x82AD2A4
-	.align	2, 0
+	.4byte	0x082AD2A4
 .L_33968:
-	.4byte	0x82AD2AC
-	.align	2, 0
+	.4byte	0x082AD2AC
 .L_3396c:
-	.4byte	0x82A2698
+	.4byte	0x082A2698
 .size sub_080338C8, .-sub_080338C8

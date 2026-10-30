@@ -7,9 +7,9 @@
 sub_08001618:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C0C
+	add	r4, r1, #0
 	bl	sub_0800151C
-	.2byte	0x1C05
+	add	r5, r0, #0
 	cmp	r5, #0
 	beq	.L_164c
 	mov	r0, #3
@@ -24,17 +24,17 @@ sub_08001618:
 	str	r0, [sp, #0]
 	lsl	r2, r4, #9
 	lsr	r2, r2, #11
-	mov	r0, #160	@ 0xa0
+	mov	r0, #160
 	lsl	r0, r0, #19
 	orr	r2, r0
 	mov	r0, sp
-	.2byte	0x1C29
+	add	r1, r5, #0
 	bl	sub_080F86FC
 .L_164c:
-	.2byte	0x1C28
+	add	r0, r5, #0
 	add	sp, #4
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08001618, .-sub_08001618

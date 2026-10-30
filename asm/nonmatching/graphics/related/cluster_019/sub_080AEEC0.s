@@ -6,7 +6,7 @@
 .thumb_func
 sub_080AEEC0:
 	push	{r4, r5, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	mov	r5, #0
 	ldrb	r0, [r4, #4]
 	cmp	r0, #0
@@ -15,7 +15,7 @@ sub_080AEEC0:
 	cmp	r0, #0
 	beq	.L_aef04
 	ldrb	r0, [r4, #9]
-	ldr	r2, [pc, #96]	@ (0x80aef38)
+	ldr	r2, .L_aef38	@ =0x08416B60
 	ldrb	r1, [r4, #10]
 	lsl	r1, r1, #2
 	add	r1, r1, r2
@@ -34,7 +34,7 @@ sub_080AEEC0:
 	lsr	r0, r0, #24
 	cmp	r1, r0
 	beq	.L_aef04
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080AEE64
 .L_aef04:
 	ldrb	r0, [r4, #5]
@@ -48,15 +48,15 @@ sub_080AEEC0:
 .L_aef12:
 	ldr	r1, [r4, #16]
 	ldr	r0, [r4, #20]
-	ldrh	r0, [r0, #36]	@ 0x24
+	ldrh	r0, [r0, #36]
 	strh	r0, [r1, #20]
 	ldr	r1, [r4, #16]
 	ldr	r0, [r4, #20]
-	ldrh	r0, [r0, #38]	@ 0x26
+	ldrh	r0, [r0, #38]
 	add	r0, r0, r5
 	strh	r0, [r1, #22]
 	ldr	r0, [r4, #20]
-	add	r0, #118	@ 0x76
+	add	r0, #118
 	ldrb	r1, [r0, #0]
 	cmp	r1, #1
 	bne	.L_aef3c
@@ -65,9 +65,8 @@ sub_080AEEC0:
 	beq	.L_aef54
 	strb	r1, [r4, #13]
 	b	.L_aef54
-	.align	2, 0
 .L_aef38:
-	.4byte	0x8416B60
+	.4byte	0x08416B60
 .L_aef3c:
 	ldrb	r0, [r4, #11]
 	cmp	r0, #1
@@ -83,15 +82,15 @@ sub_080AEEC0:
 	strb	r0, [r4, #13]
 .L_aef54:
 	ldr	r1, [r4, #20]
-	.2byte	0x1C08
-	add	r0, #118	@ 0x76
+	add	r0, r1, #0
+	add	r0, #118
 	ldrb	r0, [r0, #0]
 	strb	r0, [r4, #11]
 	ldrb	r0, [r4, #13]
 	cmp	r0, #0
 	beq	.L_aef84
 	ldrb	r0, [r4, #5]
-	add	r1, #84	@ 0x54
+	add	r1, #84
 	ldrb	r1, [r1, #0]
 	lsl	r1, r1, #24
 	asr	r1, r1, #24
@@ -107,7 +106,7 @@ sub_080AEEC0:
 	strb	r0, [r4, #13]
 .L_aef84:
 	ldr	r0, [r4, #16]
-	ldr	r2, [pc, #36]	@ (0x80aefac)
+	ldr	r2, .L_aefac	@ =0x08416AC4
 	ldrb	r1, [r4, #12]
 	lsl	r1, r1, #2
 	add	r1, r1, r2
@@ -115,7 +114,7 @@ sub_080AEEC0:
 	bl	sub_08005814
 	ldr	r1, [r4, #20]
 	ldr	r0, [r1, #12]
-	add	r1, #60	@ 0x3c
+	add	r1, #60
 	bl	sub_0800DDD4
 	lsl	r0, r0, #24
 	cmp	r0, #0
@@ -123,10 +122,9 @@ sub_080AEEC0:
 	ldr	r1, [r4, #16]
 	mov	r0, #0
 	b	.L_aefb4
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_aefac:
-	.4byte	0x8416AC4
+	.4byte	0x08416AC4
 .L_aefb0:
 	ldr	r1, [r4, #16]
 	mov	r0, #1

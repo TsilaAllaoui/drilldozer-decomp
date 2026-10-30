@@ -6,14 +6,14 @@
 .thumb_func
 sub_080E8034:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
-	.2byte	0x1C0C
+	add	r5, r0, #0
+	add	r4, r1, #0
 	ldr	r0, [r5, #16]
 	sub	r0, #3
 	str	r0, [r5, #16]
 	ldr	r0, [r4, #12]
 	sub	r0, #1
-	mov	r1, #255	@ 0xff
+	mov	r1, #255
 	and	r0, r1
 	str	r0, [r4, #12]
 	ldrh	r1, [r4, #26]
@@ -24,17 +24,17 @@ sub_080E8034:
 	add	r1, r1, r0
 	str	r1, [r5, #20]
 	ldr	r0, [r4, #28]
-	ldr	r1, [r4, #40]	@ 0x28
+	ldr	r1, [r4, #40]
 	bl	sub_08005814
 	ldr	r1, [r4, #28]
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0807EADC
 	ldr	r1, [r5, #16]
 	mov	r0, #8
 	neg	r0, r0
 	cmp	r1, r0
 	bgt	.L_e807a
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0807E4B4
 .L_e807a:
 	pop	{r4, r5}

@@ -6,7 +6,7 @@
 .thumb_func
 sub_0808EC78:
 	push	{r4, r5, lr}
-	.2byte	0x1C0D
+	add	r5, r1, #0
 	ldr	r0, [r5, #4]
 	cmp	r0, #0
 	beq	.L_8ec88
@@ -19,27 +19,27 @@ sub_0808EC78:
 	str	r0, [r5, #4]
 	b	.L_8ecdc
 .L_8ec90:
-	ldr	r0, [r5, #84]	@ 0x54
+	ldr	r0, [r5, #84]
 	ldrb	r0, [r0, #5]
 	lsl	r0, r0, #20
-	mov	r1, #128	@ 0x80
+	mov	r1, #128
 	lsl	r1, r1, #17
 	add	r0, r0, r1
 	lsr	r0, r0, #16
 	ldrb	r2, [r5, #12]
-	ldr	r4, [pc, #48]	@ (0x808ecd4)
+	ldr	r4, .L_8ecd4	@ =0x0000FFFF
 	mov	r1, #16
-	.2byte	0x1C23
+	add	r3, r4, #0
 	bl	sub_08019D9C
 	ldrb	r2, [r5, #12]
-	mov	r0, #112	@ 0x70
+	mov	r0, #112
 	mov	r1, #16
-	.2byte	0x1C23
+	add	r3, r4, #0
 	bl	sub_08019D9C
 	ldrb	r2, [r5, #12]
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	mov	r1, #16
-	.2byte	0x1C23
+	add	r3, r4, #0
 	bl	sub_08019D9C
 	ldr	r0, [r5, #12]
 	cmp	r0, #15
@@ -49,10 +49,9 @@ sub_0808EC78:
 	str	r0, [r5, #4]
 	mov	r0, #1
 	b	.L_8ecde
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_8ecd4:
-	.4byte	0xFFFF
+	.4byte	0x0000FFFF
 .L_8ecd8:
 	add	r0, #2
 	str	r0, [r5, #12]

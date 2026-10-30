@@ -6,10 +6,10 @@
 .thumb_func
 sub_0805CDC4:
 	push	{r4, lr}
-	.2byte	0x1C03
+	add	r3, r0, #0
 	lsl	r1, r1, #24
 	lsr	r1, r1, #24
-	mov	r0, #218	@ 0xda
+	mov	r0, #218
 	lsl	r0, r0, #1
 	add	r4, r3, r0
 	mov	r2, #6
@@ -19,7 +19,7 @@ sub_0805CDC4:
 	sub	r2, #1
 	cmp	r2, #0
 	bge	.L_5cdd4
-	mov	r0, #232	@ 0xe8
+	mov	r0, #232
 	lsl	r0, r0, #1
 	add	r4, r3, r0
 	mov	r2, #1
@@ -33,7 +33,7 @@ sub_0805CDC4:
 	ldrb	r0, [r3, #7]
 	cmp	r2, r0
 	bge	.L_5ce0a
-	mov	r0, #236	@ 0xec
+	mov	r0, #236
 	lsl	r0, r0, #1
 	add	r4, r3, r0
 .L_5cdfe:

@@ -7,11 +7,11 @@
 sub_08070C14:
 	push	{r4, lr}
 	sub	sp, #4
-	.2byte	0x1C02
-	ldr	r0, [r2, #36]	@ 0x24
+	add	r2, r0, #0
+	ldr	r0, [r2, #36]
 	str	r0, [sp, #0]
-	.2byte	0x1C10
-	add	r0, #118	@ 0x76
+	add	r0, r2, #0
+	add	r0, #118
 	ldrb	r0, [r0, #0]
 	cmp	r0, #5
 	beq	.L_70c4e
@@ -26,11 +26,11 @@ sub_08070C14:
 	sub	r0, #3
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
-	.2byte	0x1C14
-	add	r4, #44	@ 0x2c
+	add	r4, r2, #0
+	add	r4, #44
 	cmp	r0, #5
 	bhi	.L_70cc6
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, sp
 	mov	r2, #13
 	b	.L_70cae
@@ -40,15 +40,15 @@ sub_08070C14:
 	sub	r0, #5
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
-	.2byte	0x1C14
-	add	r4, #44	@ 0x2c
+	add	r4, r2, #0
+	add	r4, #44
 	cmp	r0, #9
 	bhi	.L_70cc6
 	ldrb	r0, [r1, #20]
 	cmp	r0, #0
 	bne	.L_70c82
-	.2byte	0x1C10
-	add	r0, #84	@ 0x54
+	add	r0, r2, #0
+	add	r0, #84
 	ldrb	r0, [r0, #0]
 	lsl	r0, r0, #24
 	asr	r0, r0, #24
@@ -63,8 +63,8 @@ sub_08070C14:
 	bne	.L_70ca6
 	b	.L_70c9c
 .L_70c82:
-	.2byte	0x1C10
-	add	r0, #84	@ 0x54
+	add	r0, r2, #0
+	add	r0, #84
 	ldrb	r0, [r0, #0]
 	lsl	r0, r0, #24
 	asr	r0, r0, #24
@@ -85,8 +85,8 @@ sub_08070C14:
 	mov	r1, sp
 	strh	r0, [r1, #0]
 .L_70ca6:
-	.2byte	0x1C10
-	add	r0, #44	@ 0x2c
+	add	r0, r2, #0
+	add	r0, #44
 	mov	r1, sp
 	mov	r2, #10
 .L_70cae:
@@ -94,15 +94,15 @@ sub_08070C14:
 	bl	sub_08012C08
 	b	.L_70cd2
 .L_70cb6:
-	.2byte	0x1C14
-	add	r4, #44	@ 0x2c
-	.2byte	0x1C20
+	add	r4, r2, #0
+	add	r4, #44
+	add	r0, r4, #0
 	mov	r1, sp
 	mov	r2, #13
 	mov	r3, #1
 	bl	sub_08012C08
 .L_70cc6:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, sp
 	mov	r2, #13
 	mov	r3, #1
@@ -112,5 +112,5 @@ sub_08070C14:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08070C14, .-sub_08070C14

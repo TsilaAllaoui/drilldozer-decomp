@@ -5,9 +5,22 @@
 .type sub_0802155C, %function
 .thumb_func
 sub_0802155C:
-	@ Exact original ROM bytes from 0x0802155C.
-	.byte	0xAB, 0x21, 0x89, 0x00, 0x40, 0x18, 0x02, 0x68, 0x21, 0x32, 0x11, 0x78, 0x03, 0x23, 0x19, 0x43
-	.byte	0x11, 0x70, 0x01, 0x68, 0x23, 0x31, 0x0A, 0x78, 0x3F, 0x20, 0x40, 0x42, 0x10, 0x40, 0x08, 0x70
+	mov	r1, #171
+	lsl	r1, r1, #2
+	add	r0, r0, r1
+	ldr	r2, [r0, #0]
+	add	r2, #33
+	ldrb	r1, [r2, #0]
+	mov	r3, #3
+	orr	r1, r3
+	strb	r1, [r2, #0]
+	ldr	r1, [r0, #0]
+	add	r1, #35
+	ldrb	r2, [r1, #0]
+	mov	r0, #63
+	neg	r0, r0
+	and	r0, r2
+	strb	r0, [r1, #0]
 	bx	lr
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0802155C, .-sub_0802155C

@@ -7,10 +7,10 @@
 sub_080DA808:
 	push	{r4, lr}
 	sub	sp, #12
-	.2byte	0x1C01
+	add	r1, r0, #0
 	mov	r0, #0
 	str	r0, [sp, #8]
-	add	r1, #36	@ 0x24
+	add	r1, #36
 	mov	r0, sp
 	mov	r2, #32
 	mov	r3, #32
@@ -19,21 +19,21 @@ sub_080DA808:
 	b	.L_da830
 .L_da822:
 	ldrh	r0, [r1, #22]
-	cmp	r0, #248	@ 0xf8
+	cmp	r0, #248
 	bne	.L_da830
-	.2byte	0x1C08
+	add	r0, r1, #0
 	mov	r1, #1
 	bl	sub_080DA28C
 .L_da830:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, sp
 	bl	sub_0801BC98
-	.2byte	0x1C01
+	add	r1, r0, #0
 	cmp	r1, #0
 	bne	.L_da822
 	add	sp, #12
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080DA808, .-sub_080DA808

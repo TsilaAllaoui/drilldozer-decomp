@@ -7,35 +7,33 @@
 sub_08018838:
 	push	{r4, lr}
 	sub	sp, #12
-	.2byte	0x1C03
-	.2byte	0x1C0C
+	add	r3, r0, #0
+	add	r4, r1, #0
 	cmp	r2, #0
 	bne	.L_18860
-	ldr	r0, [pc, #20]	@ (0x801885c)
+	ldr	r0, .L_1885c	@ =0x0822DAE8
 	mov	r2, #2
 	str	r2, [sp, #0]
 	mov	r1, #13
 	str	r1, [sp, #4]
 	str	r2, [sp, #8]
-	.2byte	0x1C19
-	.2byte	0x1C22
-.L_18854:
+	add	r1, r3, #0
+	add	r2, r4, #0
 	mov	r3, #0
 	bl	sub_08018E3C
 	b	.L_18878
-	.align	2, 0
 .L_1885c:
-	.4byte	0x822DAE8
+	.4byte	0x0822DAE8
 .L_18860:
-	ldr	r0, [pc, #28]	@ (0x8018880)
+	ldr	r0, .L_18880	@ =0x0822DAE8
 	mov	r1, #0
 	str	r1, [sp, #0]
 	mov	r1, #13
 	str	r1, [sp, #4]
 	mov	r1, #2
 	str	r1, [sp, #8]
-	.2byte	0x1C19
-	.2byte	0x1C22
+	add	r1, r3, #0
+	add	r2, r4, #0
 	mov	r3, #0
 	bl	sub_08018E3C
 .L_18878:
@@ -43,7 +41,6 @@ sub_08018838:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_18880:
-	.4byte	0x822DAE8
+	.4byte	0x0822DAE8
 .size sub_08018838, .-sub_08018838

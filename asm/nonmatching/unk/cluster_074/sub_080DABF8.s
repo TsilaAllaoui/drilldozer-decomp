@@ -5,9 +5,14 @@
 .type sub_080DABF8, %function
 .thumb_func
 sub_080DABF8:
-	@ Exact original ROM bytes from 0x080DABF8.
-	.byte	0x00, 0xB5, 0xFF, 0xF7, 0x13, 0xFB, 0x01, 0xBC, 0x00, 0x47, 0x00, 0x00, 0x00, 0xB5, 0xFF, 0xF7
-	.byte	0xC9, 0xFA, 0x01, 0xBC
+	push	{lr}
+	bl	sub_080DA224
+	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
+	push	{lr}
+	bl	sub_080DA19C
+	pop	{r0}
+	bx	r0
+	.align	2, 0
 .size sub_080DABF8, .-sub_080DABF8

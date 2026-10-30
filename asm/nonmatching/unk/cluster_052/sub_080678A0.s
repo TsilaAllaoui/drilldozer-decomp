@@ -6,10 +6,10 @@
 .thumb_func
 sub_080678A0:
 	push	{lr}
-	.2byte	0x1C02
+	add	r2, r0, #0
 	mov	r0, #0
-	strh	r0, [r2, #40]	@ 0x28
-	strh	r0, [r2, #42]	@ 0x2a
+	strh	r0, [r2, #40]
+	strh	r0, [r2, #42]
 	ldrb	r0, [r2, #25]
 	cmp	r0, #0
 	beq	.L_678dc
@@ -38,17 +38,17 @@ sub_080678A0:
 	strb	r1, [r2, #26]
 	ldrb	r0, [r2, #26]
 .L_678da:
-	strh	r0, [r2, #42]	@ 0x2a
+	strh	r0, [r2, #42]
 .L_678dc:
 	ldrb	r0, [r2, #23]
 	cmp	r0, #0
 	beq	.L_67900
-	ldr	r1, [pc, #32]	@ (0x8067904)
+	ldr	r1, .L_67904	@ =0x0833702C
 	ldrb	r0, [r2, #24]
 	lsl	r0, r0, #1
 	add	r0, r0, r1
 	ldrh	r0, [r0, #0]
-	strh	r0, [r2, #40]	@ 0x28
+	strh	r0, [r2, #40]
 	ldrb	r0, [r2, #24]
 	add	r0, #1
 	strb	r0, [r2, #24]
@@ -61,7 +61,6 @@ sub_080678A0:
 .L_67900:
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_67904:
-	.4byte	0x833702C
+	.4byte	0x0833702C
 .size sub_080678A0, .-sub_080678A0

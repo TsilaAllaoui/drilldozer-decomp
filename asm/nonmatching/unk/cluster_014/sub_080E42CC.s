@@ -6,9 +6,9 @@
 .thumb_func
 sub_080E42CC:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C06
-	.2byte	0x1C33
-	add	r3, #48	@ 0x30
+	add	r6, r0, #0
+	add	r3, r6, #0
+	add	r3, #48
 	ldrb	r4, [r3, #3]
 	strb	r4, [r3, #5]
 	mov	r1, #2
@@ -22,7 +22,7 @@ sub_080E42CC:
 	asr	r0, r0, #24
 	cmp	r0, #2
 	bgt	.L_e42f2
-	.2byte	0x1C60
+	add	r0, r4, #1
 	b	.L_e432e
 .L_e42f2:
 	mov	r2, #1
@@ -36,7 +36,7 @@ sub_080E42CC:
 	add	r0, r0, r5
 	b	.L_e4322
 .L_e4306:
-	.2byte	0x1C60
+	add	r0, r4, #1
 	b	.L_e432e
 .L_e430a:
 	cmp	r5, #0
@@ -58,7 +58,7 @@ sub_080E42CC:
 	strb	r0, [r3, #1]
 	b	.L_e4330
 .L_e432c:
-	.2byte	0x1E60
+	sub	r0, r4, #1
 .L_e432e:
 	strb	r0, [r3, #3]
 .L_e4330:
@@ -67,5 +67,5 @@ sub_080E42CC:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080E42CC, .-sub_080E42CC

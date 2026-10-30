@@ -5,9 +5,19 @@
 .type sub_0800698C, %function
 .thumb_func
 sub_0800698C:
-	@ Exact original ROM bytes from 0x0800698C.
-	.byte	0x00, 0xB5, 0x00, 0x04, 0x00, 0x0C, 0x00, 0xF0, 0x09, 0xF8, 0x00, 0x28, 0x02, 0xD1, 0x80, 0x20
-	.byte	0xC0, 0x00, 0x00, 0xE0, 0x80, 0x88, 0x02, 0xBC
+	push	{lr}
+	lsl	r0, r0, #16
+	lsr	r0, r0, #16
+	bl	sub_080069A8
+	cmp	r0, #0
+	bne	.L_69a0
+	mov	r0, #128
+	lsl	r0, r0, #3
+	b	.L_69a2
+.L_69a0:
+	ldrh	r0, [r0, #4]
+.L_69a2:
+	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0800698C, .-sub_0800698C

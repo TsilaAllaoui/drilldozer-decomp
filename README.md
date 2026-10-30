@@ -5,11 +5,15 @@
 <!-- DECOMP_PROGRESS:START -->
 ## Decompilation Progress
 
-**3.41%** matched C · **1,959 / 8,160** candidate functions · **35,712 / 1,047,988** bytes.
+**4.12%** verified C coverage of the fixed tracked code region · **43,200 / 1,047,988** code bytes.
 
-*Verified by a current byte-identical full-ROM rebuild. Main percentage uses matched tracked-range bytes for a ROM-verified checkpoint; without ROM evidence it uses independent objdiff code bytes where available. The 8,160 ranges are candidate boundaries, not all proven functions.*
+**2,071 / 9,085** functions fully matched (69 partially C-covered). A function is an entry with `bl` or function-pointer evidence in the ROM, extending to the next entry; it counts only when all of its bytes are verified C.
 
-*Separate objdiff object comparison: 515 fully matched units, 0.71% of its measured code. This independent metric may differ due to target object construction, relocations or function boundaries, and does not override the byte-identical full-ROM checkpoint.*
+1,535 / 5,392 frozen original candidate intervals fully C-covered (329 partially covered).
+
+*Verified by a current byte-identical full-ROM rebuild. The fixed baseline is not a proven true function count. Working ASM/C fragments: 2,247 matched C ranges out of 8,160 split ranges. These secondary counts can change with splitting without affecting the primary percentage or baseline denominator.*
+
+*Separate objdiff object comparison: 695 fully matched units, 1.14% of its measured code. This independent metric may differ due to target object construction, relocations or function boundaries, and does not override the byte-identical full-ROM checkpoint.*
 
 ![Decompilation progress](docs/progress-treemap.svg)
 

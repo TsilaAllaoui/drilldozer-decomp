@@ -6,8 +6,8 @@
 .thumb_func
 sub_080E421C:
 	push	{r4, lr}
-	.2byte	0x1C01
-	add	r1, #50	@ 0x32
+	add	r1, r0, #0
+	add	r1, #50
 	mov	r2, #0
 	ldrsb	r2, [r1, r2]
 	lsl	r1, r2, #2
@@ -15,7 +15,7 @@ sub_080E421C:
 	lsl	r1, r1, #2
 	add	r1, r0, r1
 	add	r0, #28
-	add	r1, #56	@ 0x38
+	add	r1, #56
 	ldmia	r1!, {r2, r3, r4}
 	stmia	r0!, {r2, r3, r4}
 	ldmia	r1!, {r2, r3}

@@ -6,7 +6,7 @@
 .thumb_func
 sub_0800BEAC:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	mov	r1, #3
 	bl	sub_0800BB9C
 	cmp	r0, #1
@@ -14,7 +14,7 @@ sub_0800BEAC:
 	mov	r0, #1
 	b	.L_bf00
 .L_bebe:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #4
 	bl	sub_0800BB9C
 	cmp	r0, #1
@@ -22,7 +22,7 @@ sub_0800BEAC:
 	mov	r0, #2
 	b	.L_bf00
 .L_bece:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #5
 	bl	sub_0800BB9C
 	cmp	r0, #1
@@ -30,7 +30,7 @@ sub_0800BEAC:
 	mov	r0, #3
 	b	.L_bf00
 .L_bede:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #6
 	bl	sub_0800BB9C
 	cmp	r0, #1
@@ -38,7 +38,7 @@ sub_0800BEAC:
 	mov	r0, #4
 	b	.L_bf00
 .L_beee:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #7
 	bl	sub_0800BB9C
 	cmp	r0, #1
@@ -51,5 +51,5 @@ sub_0800BEAC:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0800BEAC, .-sub_0800BEAC

@@ -6,8 +6,8 @@
 .thumb_func
 sub_08084D14:
 	push	{r4, r5, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0D
+	add	r4, r0, #0
+	add	r5, r1, #0
 	ldrb	r0, [r5, #26]
 	cmp	r0, #1
 	beq	.L_84d3e
@@ -29,39 +29,38 @@ sub_08084D14:
 	add	r0, #1
 	strb	r0, [r5, #26]
 .L_84d3e:
-	ldr	r0, [r4, #72]	@ 0x48
-	ldr	r1, [pc, #32]	@ (0x8084d64)
+	ldr	r0, [r4, #72]
+	ldr	r1, .L_84d64	@ =0xFFFE0000
 	add	r0, r0, r1
-	str	r0, [r4, #72]	@ 0x48
-	.2byte	0x1C22
-	add	r2, #74	@ 0x4a
+	str	r0, [r4, #72]
+	add	r2, r4, #0
+	add	r2, #74
 	mov	r3, #0
 	ldrsh	r1, [r2, r3]
-	mov	r3, #34	@ 0x22
+	mov	r3, #34
 	ldrsh	r0, [r4, r3]
-	sub	r0, #96	@ 0x60
+	sub	r0, #96
 	cmp	r1, r0
 	bgt	.L_84dd8
 	mov	r0, #0
-	str	r0, [r4, #72]	@ 0x48
-	ldrh	r0, [r4, #34]	@ 0x22
-	sub	r0, #96	@ 0x60
+	str	r0, [r4, #72]
+	ldrh	r0, [r4, #34]
+	sub	r0, #96
 	b	.L_84dbc
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_84d64:
 	.4byte	0xFFFE0000
 .L_84d68:
-	.2byte	0x7EE8
+	ldrb	r0, [r5, #27]
 	mov	r1, #1
 	bl	sub_080F8708
-	ldr	r1, [pc, #32]	@ (0x8084d94)
+	ldr	r1, .L_84d94	@ =0x0839D964
 	lsl	r0, r0, #2
 	add	r0, r0, r1
-	ldr	r1, [r4, #72]	@ 0x48
+	ldr	r1, [r4, #72]
 	ldr	r0, [r0, #0]
 	add	r1, r1, r0
-	str	r1, [r4, #72]	@ 0x48
+	str	r1, [r4, #72]
 	ldrb	r0, [r5, #27]
 	add	r0, #1
 	strb	r0, [r5, #27]
@@ -72,29 +71,28 @@ sub_08084D14:
 	mov	r0, #0
 	strb	r0, [r5, #24]
 	b	.L_84dbe
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_84d94:
-	.4byte	0x839D964
+	.4byte	0x0839D964
 .L_84d98:
-	ldr	r0, [r4, #72]	@ 0x48
-	mov	r1, #128	@ 0x80
+	ldr	r0, [r4, #72]
+	mov	r1, #128
 	lsl	r1, r1, #10
 	add	r0, r0, r1
-	str	r0, [r4, #72]	@ 0x48
-	.2byte	0x1C22
-	add	r2, #74	@ 0x4a
+	str	r0, [r4, #72]
+	add	r2, r4, #0
+	add	r2, #74
 	mov	r3, #0
 	ldrsh	r1, [r2, r3]
-	mov	r3, #34	@ 0x22
+	mov	r3, #34
 	ldrsh	r0, [r4, r3]
-	sub	r0, #80	@ 0x50
+	sub	r0, #80
 	cmp	r1, r0
 	blt	.L_84dd8
 	mov	r0, #0
-	str	r0, [r4, #72]	@ 0x48
-	ldrh	r0, [r4, #34]	@ 0x22
-	sub	r0, #80	@ 0x50
+	str	r0, [r4, #72]
+	ldrh	r0, [r4, #34]
+	sub	r0, #80
 .L_84dbc:
 	strh	r0, [r2, #0]
 .L_84dbe:
@@ -107,8 +105,8 @@ sub_08084D14:
 	strb	r0, [r5, #26]
 	strb	r0, [r5, #27]
 	strb	r0, [r5, #25]
-	.2byte	0x1C21
-	add	r1, #115	@ 0x73
+	add	r1, r4, #0
+	add	r1, #115
 	strb	r0, [r1, #0]
 	mov	r0, #1
 	b	.L_84dda

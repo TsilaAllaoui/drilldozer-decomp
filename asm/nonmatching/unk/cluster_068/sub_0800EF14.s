@@ -9,10 +9,10 @@ sub_0800EF14:
 	mov	r7, r8
 	push	{r7}
 	sub	sp, #4
-	.2byte	0x1C07
+	add	r7, r0, #0
 	mov	r8, r1
-	.2byte	0x1C14
-	.2byte	0x1C1E
+	add	r4, r2, #0
+	add	r6, r3, #0
 	mov	r0, r8
 	bl	sub_080165A8
 	cmp	r0, #0
@@ -20,17 +20,17 @@ sub_0800EF14:
 	mov	r0, #0
 	b	.L_ef72
 .L_ef32:
-	ldr	r0, [r7, #52]	@ 0x34
-	ldr	r0, [r0, #64]	@ 0x40
-	.2byte	0x1C21
+	ldr	r0, [r7, #52]
+	ldr	r0, [r0, #64]
+	add	r1, r4, #0
 	bl	sub_08015D54
-	.2byte	0x1C04
+	add	r4, r0, #0
 	mov	r1, #4
 	bl	sub_080F8708
-	.2byte	0x1EA5
+	sub	r5, r4, #2
 	cmp	r0, #0
 	bne	.L_ef4c
-	.2byte	0x1C25
+	add	r5, r4, #0
 .L_ef4c:
 	ldrh	r3, [r6, #0]
 	add	r3, #16
@@ -41,11 +41,11 @@ sub_0800EF14:
 	lsl	r0, r0, #16
 	asr	r0, r0, #16
 	str	r0, [sp, #0]
-	.2byte	0x1C38
-	mov	r1, #134	@ 0x86
+	add	r0, r7, #0
+	mov	r1, #134
 	mov	r2, #0
 	bl	sub_0801B298
-	add	r0, #124	@ 0x7c
+	add	r0, #124
 	mov	r1, r8
 	strh	r1, [r0, #22]
 	strh	r5, [r0, #20]
@@ -57,5 +57,5 @@ sub_0800EF14:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0800EF14, .-sub_0800EF14

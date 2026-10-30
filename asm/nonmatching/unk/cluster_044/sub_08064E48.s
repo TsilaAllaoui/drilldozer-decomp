@@ -6,7 +6,7 @@
 .thumb_func
 sub_08064E48:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldr	r0, [r4, #16]
 	cmp	r0, #1
 	beq	.L_64e74
@@ -43,7 +43,7 @@ sub_08064E48:
 	bne	.L_64f08
 	mov	r0, #3
 	bl	sub_08066D30
-	ldr	r0, [pc, #24]	@ (0x8064eb0)
+	ldr	r0, .L_64eb0	@ =0x00000107
 	bl	sub_08029E54
 	ldr	r0, [r4, #32]
 	add	r0, #1
@@ -55,10 +55,9 @@ sub_08064E48:
 	str	r0, [r4, #16]
 	mov	r0, #1
 	b	.L_64f0a
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_64eb0:
-	.4byte	0x107
+	.4byte	0x00000107
 .L_64eb4:
 	mov	r0, #0
 	str	r0, [r4, #16]
@@ -68,7 +67,7 @@ sub_08064E48:
 	bl	sub_080176D8
 	cmp	r0, #8
 	bne	.L_64edc
-	mov	r0, #131	@ 0x83
+	mov	r0, #131
 	lsl	r0, r0, #1
 	bl	sub_08029E54
 	mov	r0, #2
@@ -85,19 +84,18 @@ sub_08064E48:
 	bne	.L_64f08
 	mov	r0, #3
 	bl	sub_08066D30
-	mov	r0, #198	@ 0xc6
+	mov	r0, #198
 	bl	sub_0802A0B0
-	ldr	r0, [pc, #16]	@ (0x8064f04)
+	ldr	r0, .L_64f04	@ =0x00000107
 	bl	sub_08029E54
 	mov	r0, #0
 	str	r0, [r4, #32]
 	str	r0, [r4, #16]
 	mov	r0, #2
 	b	.L_64f0a
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_64f04:
-	.4byte	0x107
+	.4byte	0x00000107
 .L_64f08:
 	mov	r0, #0
 .L_64f0a:

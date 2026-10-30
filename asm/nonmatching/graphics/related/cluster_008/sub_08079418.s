@@ -6,12 +6,12 @@
 .thumb_func
 sub_08079418:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C06
+	add	r6, r0, #0
 	mov	r5, #0
-	ldr	r0, [pc, #56]	@ (0x8079458)
-	.2byte	0x1C84
-	.2byte	0x1C33
-	add	r3, #36	@ 0x24
+	ldr	r0, .L_79458	@ =0x083744F4
+	add	r4, r0, #2
+	add	r3, r6, #0
+	add	r3, #36
 	mov	r2, #3
 .L_79428:
 	ldr	r1, [r3, #0]
@@ -38,7 +38,6 @@ sub_08079418:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_79458:
-	.4byte	0x83744F4
+	.4byte	0x083744F4
 .size sub_08079418, .-sub_08079418

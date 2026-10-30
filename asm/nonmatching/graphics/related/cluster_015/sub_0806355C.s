@@ -9,23 +9,23 @@ sub_0806355C:
 	mov	r6, r9
 	mov	r5, r8
 	push	{r5, r6}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	mov	r8, r1
 	lsl	r4, r4, #24
 	lsr	r4, r4, #24
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #1
 	bl	sub_08004114
-	.2byte	0x1C05
-	.2byte	0x1C20
+	add	r5, r0, #0
+	add	r0, r4, #0
 	mov	r1, #2
 	bl	sub_08004114
-	.2byte	0x1C06
-	.2byte	0x1C20
+	add	r6, r0, #0
+	add	r0, r4, #0
 	mov	r1, #3
 	bl	sub_08004114
 	mov	r9, r0
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #4
 	bl	sub_08004114
 	lsl	r1, r5, #3

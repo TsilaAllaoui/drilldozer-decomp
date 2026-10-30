@@ -7,16 +7,16 @@
 sub_0804B41C:
 	push	{r4, r5, r6, lr}
 	sub	sp, #4
-	.2byte	0x1C06
-	.2byte	0x1C0D
+	add	r6, r0, #0
+	add	r5, r1, #0
 	mov	r0, #0
 	str	r0, [sp, #0]
 	mov	r4, #0
 .L_4b42a:
 	mov	r0, sp
-	.2byte	0x1C31
+	add	r1, r6, #0
 	bl	sub_0801BD88
-	.2byte	0x1C01
+	add	r1, r0, #0
 	cmp	r1, #0
 	beq	.L_4b460
 	mov	r3, #0
@@ -24,8 +24,8 @@ sub_0804B41C:
 	ldrh	r1, [r1, #22]
 	cmp	r0, r1
 	beq	.L_4b454
-	.2byte	0x1C0A
-	.2byte	0x1D29
+	add	r2, r1, #0
+	add	r1, r5, #4
 .L_4b446:
 	add	r1, #2
 	add	r3, #1
@@ -42,10 +42,10 @@ sub_0804B41C:
 	cmp	r4, r0
 	bne	.L_4b42a
 .L_4b460:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	add	sp, #4
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0804B41C, .-sub_0804B41C

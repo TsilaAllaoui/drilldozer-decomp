@@ -7,11 +7,11 @@
 sub_080360E8:
 	push	{lr}
 	mov	r2, #0
-	mov	r0, #255	@ 0xff
+	mov	r0, #255
 	and	r1, r0
 	mov	r3, #1
 .L_360f2:
-	.2byte	0x1C08
+	add	r0, r1, #0
 	and	r0, r3
 	cmp	r0, #0
 	bne	.L_36102
@@ -20,7 +20,7 @@ sub_080360E8:
 	cmp	r2, #7
 	ble	.L_360f2
 .L_36102:
-	.2byte	0x1C10
+	add	r0, r2, #0
 	pop	{r1}
 	bx	r1
 .size sub_080360E8, .-sub_080360E8

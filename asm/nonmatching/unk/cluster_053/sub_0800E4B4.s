@@ -7,15 +7,15 @@
 sub_0800E4B4:
 	push	{r4, r5, r6, lr}
 	sub	sp, #32
-	.2byte	0x1C05
-	.2byte	0x1C0E
+	add	r5, r0, #0
+	add	r6, r1, #0
 	mov	r0, #0
 	str	r0, [sp, #28]
 	cmp	r2, #0
 	bne	.L_e4d0
 	add	r4, sp, #20
-	.2byte	0x1C28
-	.2byte	0x1C21
+	add	r0, r5, #0
+	add	r1, r4, #0
 	bl	sub_0800E9AC
 	b	.L_e4da
 .L_e4d0:
@@ -31,7 +31,7 @@ sub_0800E4B4:
 	lsr	r1, r1, #16
 	add	r2, sp, #28
 	str	r2, [sp, #0]
-	.2byte	0x1C22
+	add	r2, r4, #0
 	add	r3, sp, #4
 	bl	sub_080120A8
 	cmp	r0, #1
@@ -47,5 +47,5 @@ sub_0800E4B4:
 	pop	{r4, r5, r6}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0800E4B4, .-sub_0800E4B4

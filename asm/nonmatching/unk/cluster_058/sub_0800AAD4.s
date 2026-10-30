@@ -6,42 +6,40 @@
 .thumb_func
 sub_0800AAD4:
 	push	{lr}
-	.2byte	0x1C03
+	add	r3, r0, #0
 	cmp	r1, #4
 	bhi	.L_ab20
 	lsl	r0, r1, #2
-	ldr	r1, [pc, #8]	@ (0x800aae8)
+	ldr	r1, .L_aae8	@ =0x0800AAEC
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]
 	mov	pc, r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_aae8:
-	.4byte	.L_aaec
-.L_aaec:
-	add	r3, sp, #72	@ 0x48
-	lsr	r0, r0, #32
-	add	r3, sp, #96	@ 0x60
-	lsr	r0, r0, #32
-	add	r3, sp, #48	@ 0x30
-	lsr	r0, r0, #32
-	add	r3, sp, #0
-	lsr	r0, r0, #32
-	add	r3, sp, #24
-	lsr	r0, r0, #32
-	mov	r1, #168	@ 0xa8
+	.4byte	0x0800AAEC
+	.4byte	0x0800AB12	@ case .L_ab12
+	.4byte	0x0800AB18	@ case .L_ab18
+	.4byte	0x0800AB0C	@ case .L_ab0c
+	.4byte	0x0800AB00	@ case .L_ab00
+	.4byte	0x0800AB06	@ case .L_ab06
+.L_ab00:
+	mov	r1, #168
 	lsl	r1, r1, #1
 	b	.L_ab1c
-	mov	r1, #170	@ 0xaa
+.L_ab06:
+	mov	r1, #170
 	lsl	r1, r1, #1
 	b	.L_ab1c
-	mov	r1, #166	@ 0xa6
+.L_ab0c:
+	mov	r1, #166
 	lsl	r1, r1, #1
 	b	.L_ab1c
-	mov	r1, #162	@ 0xa2
+.L_ab12:
+	mov	r1, #162
 	lsl	r1, r1, #1
 	b	.L_ab1c
-	mov	r1, #164	@ 0xa4
+.L_ab18:
+	mov	r1, #164
 	lsl	r1, r1, #1
 .L_ab1c:
 	add	r0, r3, r1

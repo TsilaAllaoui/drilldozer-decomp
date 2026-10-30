@@ -11,9 +11,9 @@ sub_080154F4:
 	mov	r5, r8
 	push	{r5, r6, r7}
 	sub	sp, #12
-	.2byte	0x1C05
-	.2byte	0x1C0F
-	.2byte	0x1C14
+	add	r5, r0, #0
+	add	r7, r1, #0
+	add	r4, r2, #0
 	mov	r8, r3
 	mov	r0, #0
 	mov	sl, r0
@@ -27,31 +27,25 @@ sub_080154F4:
 	add	r2, #1
 	lsl	r2, r2, #16
 	asr	r2, r2, #16
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08014E20
-	.2byte	0x1C06
+	add	r6, r0, #0
 	cmp	r6, #4
 	bhi	.L_155d2
 	lsl	r0, r6, #2
-	ldr	r1, [pc, #8]	@ (0x8015538)
+	ldr	r1, .L_15538	@ =0x0801553C
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]
 	mov	pc, r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_15538:
-	.4byte	.L_1553c
-.L_1553c:
-	strb	r0, [r2, r5]
-	lsr	r1, r0, #32
-	strb	r0, [r4, r6]
-	lsr	r1, r0, #32
-	strb	r6, [r5, r6]
-	lsr	r1, r0, #32
-	strb	r0, [r7, r6]
-	lsr	r1, r0, #32
-	strb	r0, [r4, r6]
-	lsr	r1, r0, #32
+	.4byte	0x0801553C
+	.4byte	0x08015550	@ case .L_15550
+	.4byte	0x080155A0	@ case .L_155a0
+	.4byte	0x080155AE	@ case .L_155ae
+	.4byte	0x080155B8	@ case .L_155b8
+	.4byte	0x080155A0	@ case .L_155a0
+.L_15550:
 	ldr	r1, [r4, #0]
 	mov	r2, r8
 	ldr	r0, [r2, #0]
@@ -70,10 +64,10 @@ sub_080154F4:
 	mov	r4, sp
 	add	r4, #6
 	strh	r0, [r4, #0]
-	.2byte	0x1C28
-	.2byte	0x1C39
+	add	r0, r5, #0
+	add	r1, r7, #0
 	add	r2, sp, #4
-	.2byte	0x1C23
+	add	r3, r4, #0
 	bl	sub_08014AF8
 	cmp	r0, #1
 	bne	.L_1559c
@@ -92,17 +86,20 @@ sub_080154F4:
 .L_1559c:
 	mov	r0, #0
 	b	.L_15684
-	.2byte	0x1C28
-	.2byte	0x1C39
-	.2byte	0x1C22
+.L_155a0:
+	add	r0, r5, #0
+	add	r1, r7, #0
+	add	r2, r4, #0
 	mov	r3, r8
 	bl	sub_0801535C
 	b	.L_155d0
+.L_155ae:
 	mov	r0, #2
 	mov	r3, sl
 	orr	r3, r0
 	mov	sl, r3
 	b	.L_155c2
+.L_155b8:
 	mov	r0, #2
 	mov	r1, sl
 	orr	r1, r0
@@ -110,9 +107,9 @@ sub_080154F4:
 	mov	r0, #3
 .L_155c2:
 	str	r0, [sp, #0]
-	.2byte	0x1C28
-	.2byte	0x1C39
-	.2byte	0x1C22
+	add	r0, r5, #0
+	add	r1, r7, #0
+	add	r2, r4, #0
 	mov	r3, r8
 	bl	sub_08015278
 .L_155d0:
@@ -135,7 +132,7 @@ sub_080154F4:
 	asr	r1, r1, #16
 	sub	r0, r0, r1
 	strh	r0, [r2, #0]
-	.2byte	0x1C14
+	add	r4, r2, #0
 	cmp	r6, #3
 	bgt	.L_15604
 	cmp	r6, #2
@@ -146,17 +143,17 @@ sub_080154F4:
 .L_15604:
 	cmp	r6, #4
 	bne	.L_15624
-	.2byte	0x1C28
-	.2byte	0x1C39
+	add	r0, r5, #0
+	add	r1, r7, #0
 	add	r2, sp, #4
-	.2byte	0x1C23
+	add	r3, r4, #0
 	bl	sub_08014AF8
 	b	.L_15622
 .L_15616:
-	.2byte	0x1C28
-	.2byte	0x1C39
+	add	r0, r5, #0
+	add	r1, r7, #0
 	add	r2, sp, #4
-	.2byte	0x1C23
+	add	r3, r4, #0
 	bl	sub_080150F4
 .L_15622:
 	str	r0, [sp, #8]

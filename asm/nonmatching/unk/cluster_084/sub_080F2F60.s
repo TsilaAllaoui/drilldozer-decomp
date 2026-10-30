@@ -6,21 +6,21 @@
 .thumb_func
 sub_080F2F60:
 	push	{r4, r5, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0D
+	add	r4, r0, #0
+	add	r5, r1, #0
 	ldr	r1, [r5, #8]
 	cmp	r1, #0
 	beq	.L_f2f9a
-	ldrh	r0, [r4, #36]	@ 0x24
+	ldrh	r0, [r4, #36]
 	strh	r0, [r1, #20]
 	ldr	r1, [r5, #8]
-	ldrh	r0, [r4, #38]	@ 0x26
+	ldrh	r0, [r4, #38]
 	strh	r0, [r1, #22]
 	ldr	r1, [r5, #12]
-	ldrh	r0, [r4, #36]	@ 0x24
+	ldrh	r0, [r4, #36]
 	strh	r0, [r1, #20]
 	ldr	r1, [r5, #12]
-	ldrh	r0, [r4, #38]	@ 0x26
+	ldrh	r0, [r4, #38]
 	strh	r0, [r1, #22]
 	ldr	r0, [r4, #12]
 	ldr	r1, [r5, #8]

@@ -6,7 +6,7 @@
 .thumb_func
 sub_080C97C0:
 	push	{lr}
-	.2byte	0x1C02
+	add	r2, r0, #0
 	cmp	r1, #0
 	bge	.L_c97ca
 	neg	r1, r1
@@ -32,5 +32,5 @@ sub_080C97C0:
 .L_c97ea:
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080C97C0, .-sub_080C97C0

@@ -8,24 +8,24 @@ sub_0804FF28:
 	push	{r4, r5, lr}
 	lsl	r2, r2, #16
 	lsr	r2, r2, #16
-	ldr	r1, [pc, #52]	@ (0x804ff64)
+	ldr	r1, .L_4ff64	@ =0x082F43A4
 	ldrh	r0, [r0, #24]
 	lsl	r0, r0, #1
 	add	r1, r0, r1
 	ldrh	r3, [r1, #0]
-	.2byte	0x1C1D
-	ldr	r1, [pc, #44]	@ (0x804ff68)
+	add	r5, r3, #0
+	ldr	r1, .L_4ff68	@ =0x082F438C
 	add	r0, r0, r1
 	ldrh	r1, [r0, #0]
 	lsl	r1, r1, #1
 	sub	r0, r2, r1
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
-	.2byte	0x1C04
+	add	r4, r0, #0
 	add	r2, r2, r1
 	lsl	r2, r2, #16
 	lsr	r2, r2, #16
-	.2byte	0x1C11
+	add	r1, r2, #0
 	cmp	r0, r2
 	bcs	.L_4ff6c
 	cmp	r0, r3
@@ -35,13 +35,11 @@ sub_0804FF28:
 .L_4ff5e:
 	mov	r0, #1
 	b	.L_4ff7e
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_4ff64:
-	.4byte	0x82F43A4
-	.align	2, 0
+	.4byte	0x082F43A4
 .L_4ff68:
-	.4byte	0x82F438C
+	.4byte	0x082F438C
 .L_4ff6c:
 	cmp	r4, r3
 	bhi	.L_4ff78

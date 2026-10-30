@@ -7,17 +7,17 @@
 sub_080C9A0C:
 	push	{r4, r5, r6, r7, lr}
 	sub	sp, #16
-	.2byte	0x1C05
+	add	r5, r0, #0
 	mov	r7, sp
 	mov	r1, sp
 	bl	sub_08011AA0
 	add	r6, sp, #4
-	.2byte	0x1C28
-	.2byte	0x1C31
+	add	r0, r5, #0
+	add	r1, r6, #0
 	bl	sub_08011834
 	add	r4, sp, #8
-	.2byte	0x1C28
-	.2byte	0x1C21
+	add	r0, r5, #0
+	add	r1, r4, #0
 	bl	sub_0802E55C
 	mov	r1, #2
 	ldrsh	r0, [r4, r1]
@@ -34,7 +34,7 @@ sub_080C9A0C:
 	mov	r2, #0
 	ldrsh	r0, [r0, r2]
 	sub	r2, r1, r0
-	.2byte	0x1C30
+	add	r0, r6, #0
 	cmp	r2, #0
 	bge	.L_c9a54
 	neg	r2, r2
@@ -77,5 +77,5 @@ sub_080C9A0C:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080C9A0C, .-sub_080C9A0C

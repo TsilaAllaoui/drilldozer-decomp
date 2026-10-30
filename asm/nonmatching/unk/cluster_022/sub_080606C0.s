@@ -6,50 +6,50 @@
 .thumb_func
 sub_080606C0:
 	push	{r4, r5, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0D
+	add	r4, r0, #0
+	add	r5, r1, #0
 	ldr	r1, [r5, #0]
 	bl	sub_0801AEF0
-	.2byte	0x1C20
-	add	r0, #60	@ 0x3c
-	.2byte	0x1C21
-	add	r1, #36	@ 0x24
+	add	r0, r4, #0
+	add	r0, #60
+	add	r1, r4, #0
+	add	r1, #36
 	mov	r2, #14
 	mov	r3, #4
 	bl	sub_08012C08
-	ldr	r0, [r4, #60]	@ 0x3c
-	ldr	r1, [r4, #64]	@ 0x40
-	str	r0, [r4, #44]	@ 0x2c
-	str	r1, [r4, #48]	@ 0x30
-	.2byte	0x1C20
-	add	r0, #84	@ 0x54
+	ldr	r0, [r4, #60]
+	ldr	r1, [r4, #64]
+	str	r0, [r4, #44]
+	str	r1, [r4, #48]
+	add	r0, r4, #0
+	add	r0, #84
 	ldrb	r0, [r0, #0]
 	lsl	r0, r0, #24
 	asr	r0, r0, #24
 	cmp	r0, #2
 	bne	.L_60700
-	ldrh	r0, [r4, #48]	@ 0x30
-	.2byte	0x1C01
+	ldrh	r0, [r4, #48]
+	add	r1, r0, #0
 	add	r1, #12
-	strh	r1, [r4, #48]	@ 0x30
+	strh	r1, [r4, #48]
 	add	r0, #16
-	strh	r0, [r4, #50]	@ 0x32
+	strh	r0, [r4, #50]
 	b	.L_6070c
 .L_60700:
-	ldrh	r0, [r4, #50]	@ 0x32
-	.2byte	0x1C01
+	ldrh	r0, [r4, #50]
+	add	r1, r0, #0
 	sub	r1, #12
-	strh	r1, [r4, #50]	@ 0x32
+	strh	r1, [r4, #50]
 	sub	r0, #16
-	strh	r0, [r4, #48]	@ 0x30
+	strh	r0, [r4, #48]
 .L_6070c:
-	ldr	r0, [r4, #60]	@ 0x3c
-	ldr	r1, [r4, #64]	@ 0x40
-	str	r0, [r4, #52]	@ 0x34
-	str	r1, [r4, #56]	@ 0x38
+	ldr	r0, [r4, #60]
+	ldr	r1, [r4, #64]
+	str	r0, [r4, #52]
+	str	r1, [r4, #56]
 	ldrb	r1, [r5, #6]
 	mov	r2, #1
-	.2byte	0x1C10
+	add	r0, r2, #0
 	and	r0, r1
 	cmp	r0, #0
 	beq	.L_60724
@@ -59,5 +59,5 @@ sub_080606C0:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080606C0, .-sub_080606C0

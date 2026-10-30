@@ -7,7 +7,7 @@
 sub_08024984:
 	push	{r4, lr}
 	sub	sp, #4
-	.2byte	0x1C1C
+	add	r4, r3, #0
 	mov	r3, sp
 	bl	sub_0802479C
 	str	r0, [r4, #0]

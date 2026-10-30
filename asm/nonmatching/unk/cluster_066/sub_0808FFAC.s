@@ -6,8 +6,8 @@
 .thumb_func
 sub_0808FFAC:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C0E
-	.2byte	0x1C35
+	add	r6, r1, #0
+	add	r5, r6, #0
 	add	r5, #12
 	mov	r4, #7
 .L_8ffb6:
@@ -21,5 +21,5 @@ sub_0808FFAC:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0808FFAC, .-sub_0808FFAC

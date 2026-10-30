@@ -6,19 +6,19 @@
 .thumb_func
 sub_0805B2F0:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C05
-	.2byte	0x1C0E
+	add	r5, r0, #0
+	add	r6, r1, #0
 	mov	r4, #0
 .L_5b2f8:
 	ldr	r0, [r5, #12]
-	mov	r2, #36	@ 0x24
+	mov	r2, #36
 	ldrsh	r1, [r5, r2]
 	lsl	r4, r4, #24
 	asr	r4, r4, #24
 	ldrb	r2, [r6, #6]
-	.2byte	0x1C23
+	add	r3, r4, #0
 	mul	r3, r2
-	ldrh	r2, [r5, #38]	@ 0x26
+	ldrh	r2, [r5, #38]
 	sub	r2, r2, r3
 	lsl	r2, r2, #16
 	asr	r2, r2, #16

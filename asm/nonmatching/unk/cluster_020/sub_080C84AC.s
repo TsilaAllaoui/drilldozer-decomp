@@ -7,8 +7,8 @@
 sub_080C84AC:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C05
-	.2byte	0x1C0C
+	add	r5, r0, #0
+	add	r4, r1, #0
 	ldr	r0, [r4, #0]
 	bl	sub_08011720
 	ldrb	r1, [r4, #4]
@@ -43,7 +43,7 @@ sub_080C84AC:
 	mov	r1, #1
 	neg	r1, r1
 	str	r5, [sp, #0]
-	.2byte	0x1C08
+	add	r0, r1, #0
 	mov	r2, #0
 	mov	r3, #16
 	bl	sub_08019250
@@ -59,13 +59,13 @@ sub_080C84AC:
 	bne	.L_c8544
 	ldr	r0, [r4, #0]
 	str	r1, [sp, #0]
-	mov	r1, #138	@ 0x8a
-	mov	r2, #255	@ 0xff
+	mov	r1, #138
+	mov	r2, #255
 	mov	r3, #0
 	bl	sub_0800CCA4
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08001768
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0800090C
 	bl	sub_08048C08
 	cmp	r0, #0

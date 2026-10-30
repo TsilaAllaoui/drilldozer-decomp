@@ -9,8 +9,8 @@ sub_08067500:
 	mov	r7, r8
 	push	{r7}
 	sub	sp, #4
-	.2byte	0x1C0C
-	.2byte	0x1C15
+	add	r4, r1, #0
+	add	r5, r2, #0
 	mov	r8, r3
 	mov	r6, sp
 	mov	r1, sp

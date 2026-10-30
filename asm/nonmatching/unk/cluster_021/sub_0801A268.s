@@ -7,7 +7,7 @@
 sub_0801A268:
 	push	{r4, r5, lr}
 	sub	sp, #8
-	.2byte	0x1C05
+	add	r5, r0, #0
 	ldrb	r0, [r5, #4]
 	ldrb	r2, [r5, #13]
 	lsl	r2, r2, #28
@@ -28,5 +28,5 @@ sub_0801A268:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0801A268, .-sub_0801A268

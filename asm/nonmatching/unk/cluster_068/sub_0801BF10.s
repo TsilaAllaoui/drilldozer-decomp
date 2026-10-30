@@ -7,8 +7,8 @@
 sub_0801BF10:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C05
-	.2byte	0x1C0C
+	add	r5, r0, #0
+	add	r4, r1, #0
 	bl	sub_080051DC
 	mov	r1, #15
 	and	r1, r0
@@ -22,8 +22,8 @@ sub_0801BF10:
 	mov	r1, #2
 	ldrsh	r0, [r4, r1]
 	str	r0, [sp, #0]
-	.2byte	0x1C28
-	mov	r1, #174	@ 0xae
+	add	r0, r5, #0
+	mov	r1, #174
 	mov	r2, #0
 	bl	sub_0801B298
 	mov	r0, #1
@@ -32,5 +32,5 @@ sub_0801BF10:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0801BF10, .-sub_0801BF10

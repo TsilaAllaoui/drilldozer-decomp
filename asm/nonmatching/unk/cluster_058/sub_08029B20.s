@@ -9,9 +9,9 @@ sub_08029B20:
 	lsl	r0, r0, #16
 	lsr	r2, r0, #16
 	mov	r4, #0
-	ldr	r1, [pc, #56]	@ (0x8029b64)
+	ldr	r1, .L_29b64	@ =0x0824A444
 	ldrh	r0, [r1, #0]
-	ldr	r3, [pc, #56]	@ (0x8029b68)
+	ldr	r3, .L_29b68	@ =0x03006AD0
 	cmp	r0, r2
 	beq	.L_29b40
 .L_29b32:
@@ -27,26 +27,23 @@ sub_08029B20:
 	bne	.L_29b46
 	mov	r4, #0
 .L_29b46:
-	.2byte	0x1C18
+	add	r0, r3, #0
 	bl	sub_080F780C
-	ldr	r0, [pc, #20]	@ (0x8029b64)
+	ldr	r0, .L_29b64	@ =0x0824A444
 	lsl	r1, r4, #2
 	add	r1, r1, r0
 	ldrh	r0, [r1, #0]
-	ldr	r2, [pc, #20]	@ (0x8029b6c)
+	ldr	r2, .L_29b6c	@ =0x030012A8
 	ldrh	r1, [r1, #2]
 	strh	r1, [r2, #0]
 	bl	sub_0802A210
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_29b64:
-	.4byte	0x824A444
-	.align	2, 0
+	.4byte	0x0824A444
 .L_29b68:
-	.4byte	0x3006AD0
-	.align	2, 0
+	.4byte	0x03006AD0
 .L_29b6c:
-	.4byte	0x30012A8
+	.4byte	0x030012A8
 .size sub_08029B20, .-sub_08029B20

@@ -5,9 +5,25 @@
 .type sub_080C966C, %function
 .thumb_func
 sub_080C966C:
-	@ Exact original ROM bytes from 0x080C966C.
-	.byte	0x00, 0xB5, 0x82, 0x68, 0x01, 0x20, 0x40, 0x42, 0x82, 0x42, 0x01, 0xD1, 0x00, 0x20, 0x06, 0xE0
-	.byte	0x03, 0x20, 0x02, 0x2A, 0x00, 0xD1, 0x01, 0x20, 0x48, 0x70, 0x01, 0x20, 0x08, 0x70, 0x02, 0xBC
+	push	{lr}
+	ldr	r2, [r0, #8]
+	mov	r0, #1
+	neg	r0, r0
+	cmp	r2, r0
+	bne	.L_c967c
+	mov	r0, #0
+	b	.L_c968a
+.L_c967c:
+	mov	r0, #3
+	cmp	r2, #2
+	bne	.L_c9684
+	mov	r0, #1
+.L_c9684:
+	strb	r0, [r1, #1]
+	mov	r0, #1
+	strb	r0, [r1, #0]
+.L_c968a:
+	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080C966C, .-sub_080C966C

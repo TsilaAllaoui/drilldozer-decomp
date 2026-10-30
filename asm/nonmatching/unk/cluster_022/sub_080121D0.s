@@ -7,7 +7,7 @@
 sub_080121D0:
 	push	{r4, lr}
 	sub	sp, #8
-	.2byte	0x1C14
+	add	r4, r2, #0
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
 	lsl	r1, r1, #16
@@ -16,7 +16,7 @@ sub_080121D0:
 	str	r2, [sp, #4]
 	str	r3, [sp, #0]
 	add	r2, sp, #4
-	.2byte	0x1C23
+	add	r3, r4, #0
 	bl	sub_080121F8
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24

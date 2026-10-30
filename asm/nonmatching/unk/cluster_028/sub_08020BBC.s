@@ -6,8 +6,8 @@
 .thumb_func
 sub_08020BBC:
 	push	{lr}
-	.2byte	0x1C02
-	mov	r1, #171	@ 0xab
+	add	r2, r0, #0
+	mov	r1, #171
 	lsl	r1, r1, #2
 	add	r0, r2, r1
 	ldr	r1, [r0, #0]
@@ -16,7 +16,7 @@ sub_08020BBC:
 	mov	r0, #0
 	strb	r0, [r1, #1]
 .L_20bd0:
-	mov	r1, #172	@ 0xac
+	mov	r1, #172
 	lsl	r1, r1, #2
 	add	r0, r2, r1
 	ldr	r1, [r0, #0]
@@ -25,7 +25,7 @@ sub_08020BBC:
 	mov	r0, #0
 	strb	r0, [r1, #1]
 .L_20be0:
-	mov	r1, #173	@ 0xad
+	mov	r1, #173
 	lsl	r1, r1, #2
 	add	r0, r2, r1
 	ldr	r1, [r0, #0]

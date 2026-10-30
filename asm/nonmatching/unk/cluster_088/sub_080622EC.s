@@ -19,7 +19,7 @@ sub_080622EC:
 	lsl	r2, r2, #24
 	lsr	r2, r2, #24
 	mov	sl, r2
-	ldr	r5, [pc, #136]	@ (0x8062394)
+	ldr	r5, .L_62394	@ =0x0203603C
 	ldr	r6, [r5, #0]
 	cmp	r6, #0
 	bne	.L_62398
@@ -27,7 +27,7 @@ sub_080622EC:
 	bl	sub_08001728
 	str	r0, [r5, #0]
 	mov	r4, #1
-	.2byte	0x1C3A
+	add	r2, r7, #0
 	and	r2, r4
 	ldrb	r3, [r0, #2]
 	mov	r1, #2
@@ -52,7 +52,7 @@ sub_080622EC:
 	mov	r0, #13
 	strb	r0, [r1, #10]
 	ldr	r1, [r5, #0]
-	mov	r0, #255	@ 0xff
+	mov	r0, #255
 	strb	r0, [r1, #5]
 	ldr	r1, [r5, #0]
 	mov	r2, #2
@@ -88,9 +88,8 @@ sub_080622EC:
 	strb	r0, [r1, #4]
 	mov	r0, #1
 	b	.L_6239a
-	.align	2, 0
 .L_62394:
-	.4byte	0x203603C
+	.4byte	0x0203603C
 .L_62398:
 	mov	r0, #0
 .L_6239a:

@@ -6,10 +6,10 @@
 .thumb_func
 sub_0805B454:
 	push	{r4, r5, lr}
-	.2byte	0x1C03
+	add	r3, r0, #0
 	ldr	r0, [r3, #20]
-	.2byte	0x1C04
-	add	r4, #124	@ 0x7c
+	add	r4, r0, #0
+	add	r4, #124
 	ldrb	r0, [r4, #6]
 	cmp	r0, #16
 	bne	.L_5b476
@@ -41,7 +41,7 @@ sub_0805B454:
 	lsl	r0, r1, #16
 	asr	r0, r0, #16
 	asr	r1, r1, #16
-	.2byte	0x1C2A
+	add	r2, r5, #0
 	bl	sub_080B1850
 	pop	{r4, r5}
 	pop	{r0}

@@ -7,28 +7,27 @@
 sub_0807E530:
 	push	{r4, r5, lr}
 	bl	sub_0807E43C
-	.2byte	0x1C04
-	mov	r5, #63	@ 0x3f
+	add	r4, r0, #0
+	mov	r5, #63
 .L_7e53a:
 	ldr	r0, [r4, #0]
 	cmp	r0, #0
 	bge	.L_7e55a
-	.2byte	0x1C20
-.L_7e542:
-	add	r0, #176	@ 0xb0
-	.2byte	0x1C21
-	add	r1, #40	@ 0x28
+	add	r0, r4, #0
+	add	r0, #176
+	add	r1, r4, #0
+	add	r1, #40
 	ldr	r2, [r0, #0]
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080F8FBC
 	ldr	r0, [r4, #0]
-	mov	r1, #128	@ 0x80
+	mov	r1, #128
 	lsl	r1, r1, #22
 	orr	r0, r1
 	str	r0, [r4, #0]
 .L_7e55a:
 	sub	r5, #1
-	add	r4, #188	@ 0xbc
+	add	r4, #188
 	cmp	r5, #0
 	bge	.L_7e53a
 	bl	sub_0807E7E8

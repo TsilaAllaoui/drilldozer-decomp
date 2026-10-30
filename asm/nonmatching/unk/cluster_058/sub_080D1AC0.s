@@ -9,29 +9,29 @@ sub_080D1AC0:
 	sub	sp, #12
 	mov	r1, #1
 	neg	r1, r1
-	ldr	r0, [pc, #112]	@ (0x80d1b3c)
+	ldr	r0, .L_d1b3c	@ =0x0000FFFF
 	str	r0, [sp, #0]
-	.2byte	0x1C08
+	add	r0, r1, #0
 	mov	r2, #16
 	mov	r3, #0
 	bl	sub_08019250
 	mov	r0, #0
 	bl	sub_08019B54
-	ldr	r0, [pc, #96]	@ (0x80d1b40)
+	ldr	r0, .L_d1b40	@ =0x080D0E11
 	bl	sub_08000960
 	bl	sub_0800098C
-	.2byte	0x1C04
+	add	r4, r0, #0
 	bl	sub_080D0EE0
 	ldr	r0, [r4, #0]
 	add	r5, sp, #4
-	.2byte	0x1C29
+	add	r1, r5, #0
 	bl	sub_0800E014
 	ldr	r0, [r4, #0]
 	ldrh	r1, [r5, #4]
 	add	r1, #32
 	lsl	r1, r1, #16
 	asr	r1, r1, #16
-	mov	r3, #42	@ 0x2a
+	mov	r3, #42
 	ldrsh	r2, [r4, r3]
 	bl	sub_08030190
 	ldr	r0, [r4, #0]
@@ -54,10 +54,8 @@ sub_080D1AC0:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_d1b3c:
-	.4byte	0xFFFF
-	.align	2, 0
+	.4byte	0x0000FFFF
 .L_d1b40:
-	.4byte	0x80D0E11
+	.4byte	0x080D0E11
 .size sub_080D1AC0, .-sub_080D1AC0

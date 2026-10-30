@@ -6,34 +6,31 @@
 .thumb_func
 sub_080F8964:
 	push	{lr}
-	.2byte	0x1C02
-	ldr	r1, [pc, #20]	@ (0x80f8980)
-	.2byte	0x1C50
+	add	r2, r0, #0
+	ldr	r1, .L_f8980	@ =0x03006C24
+	add	r0, r2, #1
 	str	r0, [r1, #0]
-	ldr	r3, [pc, #20]	@ (0x80f8984)
+	ldr	r3, .L_f8984	@ =0x080F8961
 	mov	r0, #1
 	bic	r3, r0
-	ldr	r0, [pc, #16]	@ (0x80f8988)
-	ldr	r1, [pc, #12]	@ (0x80f8984)
+	ldr	r0, .L_f8988	@ =0x080F8965
+	ldr	r1, .L_f8984	@ =0x080F8961
 	sub	r0, r0, r1
 	lsl	r0, r0, #15
 	b	.L_f8998
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_f8980:
-	.4byte	0x3006C24
-	.align	2, 0
+	.4byte	0x03006C24
 .L_f8984:
-	.4byte	0x80F8961
-	.align	2, 0
+	.4byte	0x080F8961
 .L_f8988:
-	.4byte	0x80F8965
+	.4byte	0x080F8965
 .L_f898c:
 	ldrh	r0, [r3, #0]
 	strh	r0, [r2, #0]
 	add	r3, #2
 	add	r2, #2
-	.2byte	0x1E48
+	sub	r0, r1, #1
 	lsl	r0, r0, #16
 .L_f8998:
 	lsr	r1, r0, #16
@@ -41,5 +38,5 @@ sub_080F8964:
 	bne	.L_f898c
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080F8964, .-sub_080F8964

@@ -6,8 +6,8 @@
 .thumb_func
 sub_08078A0C:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
-	.2byte	0x1C0C
+	add	r5, r0, #0
+	add	r4, r1, #0
 	mov	r0, #0
 	mov	r1, #0
 	mov	r2, #0
@@ -40,25 +40,25 @@ sub_08078A0C:
 	mov	r1, #0
 	mov	r2, #0
 	bl	sub_08001E94
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08079228
 	bl	sub_0807C408
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08078C08
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08079034
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08079120
 	bl	sub_0807BEB0
 	bl	sub_0807C218
 	ldrb	r0, [r4, #14]
 	bl	sub_0807C9BC
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08001768
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0800090C
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08078A0C, .-sub_08078A0C

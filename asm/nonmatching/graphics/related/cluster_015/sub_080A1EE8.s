@@ -9,7 +9,7 @@ sub_080A1EE8:
 	mov	r7, r8
 	push	{r7}
 	sub	sp, #12
-	.2byte	0x1C07
+	add	r7, r0, #0
 	mov	r0, #3
 	mov	r1, #1
 	bl	sub_080C38D4
@@ -30,7 +30,7 @@ sub_080A1EE8:
 	beq	.L_a1f88
 	b	.L_a2028
 .L_a1f18:
-	ldr	r0, [pc, #24]	@ (0x80a1f34)
+	ldr	r0, .L_a1f34	@ =0x00000125
 	bl	sub_08029E54
 	mov	r0, #6
 	str	r0, [sp, #0]
@@ -40,12 +40,11 @@ sub_080A1EE8:
 	lsr	r0, r0, #24
 	str	r0, [sp, #8]
 	mov	r0, #0
-	mov	r1, #69	@ 0x45
+	mov	r1, #69
 	mov	r2, #14
 	b	.L_a1f4c
-	.align	2, 0
 .L_a1f34:
-	.4byte	0x125
+	.4byte	0x00000125
 .L_a1f38:
 	mov	r0, #11
 	str	r0, [sp, #0]
@@ -55,7 +54,7 @@ sub_080A1EE8:
 	lsr	r0, r0, #24
 	str	r0, [sp, #8]
 	mov	r0, #0
-	mov	r1, #69	@ 0x45
+	mov	r1, #69
 	mov	r2, #13
 .L_a1f4c:
 	mov	r3, #10
@@ -70,13 +69,13 @@ sub_080A1EE8:
 	lsr	r0, r0, #24
 	str	r0, [sp, #8]
 	mov	r0, #0
-	mov	r1, #69	@ 0x45
+	mov	r1, #69
 	mov	r2, #12
 	mov	r3, #9
 	bl	sub_080026E0
-	.2byte	0x1C38
+	add	r0, r7, #0
 	bl	sub_080A1B54
-	.2byte	0x1C3C
+	add	r4, r7, #0
 	add	r4, #32
 	ldrb	r0, [r4, #0]
 	mov	r1, #3
@@ -92,7 +91,7 @@ sub_080A1EE8:
 	lsr	r5, r5, #24
 	str	r5, [sp, #8]
 	mov	r0, #0
-	mov	r1, #70	@ 0x46
+	mov	r1, #70
 	mov	r2, #11
 	mov	r3, #8
 	bl	sub_080026E0
@@ -102,7 +101,7 @@ sub_080A1EE8:
 	str	r4, [sp, #4]
 	str	r5, [sp, #8]
 	mov	r0, #0
-	mov	r1, #71	@ 0x47
+	mov	r1, #71
 	mov	r2, #12
 	mov	r3, #8
 	bl	sub_080026E0
@@ -110,7 +109,7 @@ sub_080A1EE8:
 	str	r4, [sp, #4]
 	str	r5, [sp, #8]
 	mov	r0, #0
-	mov	r1, #72	@ 0x48
+	mov	r1, #72
 	mov	r2, #29
 	mov	r3, #8
 	bl	sub_080026E0
@@ -119,7 +118,7 @@ sub_080A1EE8:
 	str	r6, [sp, #4]
 	str	r5, [sp, #8]
 	mov	r0, #0
-	mov	r1, #73	@ 0x49
+	mov	r1, #73
 	mov	r2, #11
 	mov	r3, #9
 	bl	sub_080026E0
@@ -127,7 +126,7 @@ sub_080A1EE8:
 	str	r6, [sp, #4]
 	str	r5, [sp, #8]
 	mov	r0, #0
-	mov	r1, #105	@ 0x69
+	mov	r1, #105
 	mov	r2, #29
 	mov	r3, #9
 	bl	sub_080026E0
@@ -135,7 +134,7 @@ sub_080A1EE8:
 	str	r4, [sp, #4]
 	str	r5, [sp, #8]
 	mov	r0, #0
-	mov	r1, #102	@ 0x66
+	mov	r1, #102
 	mov	r2, #11
 	mov	r3, #13
 	bl	sub_080026E0
@@ -144,7 +143,7 @@ sub_080A1EE8:
 	str	r4, [sp, #4]
 	str	r5, [sp, #8]
 	mov	r0, #0
-	mov	r1, #103	@ 0x67
+	mov	r1, #103
 	mov	r2, #12
 	mov	r3, #13
 	bl	sub_080026E0
@@ -152,7 +151,7 @@ sub_080A1EE8:
 	str	r4, [sp, #4]
 	str	r5, [sp, #8]
 	mov	r0, #0
-	mov	r1, #104	@ 0x68
+	mov	r1, #104
 	mov	r2, #29
 	mov	r3, #13
 	bl	sub_080026E0
@@ -176,5 +175,5 @@ sub_080A1EE8:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080A1EE8, .-sub_080A1EE8

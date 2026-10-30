@@ -6,15 +6,15 @@
 .thumb_func
 sub_080FA544:
 	push	{r4, r5, r6, lr}
-	sub	sp, #40	@ 0x28
+	sub	sp, #40
 	str	r0, [sp, #32]
-	str	r1, [sp, #36]	@ 0x24
+	str	r1, [sp, #36]
 	add	r0, sp, #32
 	mov	r1, sp
 	bl	sub_080FA188
-	add	r0, sp, #36	@ 0x24
+	add	r0, sp, #36
 	add	r5, sp, #16
-	.2byte	0x1C29
+	add	r1, r5, #0
 	bl	sub_080FA188
 	mov	r4, sp
 	mov	r0, #0
@@ -30,14 +30,14 @@ sub_080FA544:
 .L_fa572:
 	mov	r0, #0
 	ldr	r2, [sp, #16]
-	.2byte	0x1C16
+	add	r6, r2, #0
 	cmp	r2, #1
 	bhi	.L_fa57e
 	mov	r0, #1
 .L_fa57e:
 	cmp	r0, #0
 	beq	.L_fa586
-	.2byte	0x1C29
+	add	r1, r5, #0
 	b	.L_fa624
 .L_fa586:
 	ldr	r0, [sp, #4]
@@ -60,15 +60,14 @@ sub_080FA544:
 	beq	.L_fa5b8
 .L_fa5a6:
 	ldr	r0, [r4, #0]
-	.2byte	0x1C21
+	add	r1, r4, #0
 	cmp	r0, r6
 	bne	.L_fa624
-	ldr	r1, [pc, #4]	@ (0x80fa5b4)
+	ldr	r1, .L_fa5b4	@ =0x030042D8
 	b	.L_fa624
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_fa5b4:
-	.4byte	0x30042D8
+	.4byte	0x030042D8
 .L_fa5b8:
 	mov	r1, #0
 	cmp	r2, #4
@@ -105,7 +104,7 @@ sub_080FA544:
 	sub	r0, #1
 	str	r0, [r4, #8]
 .L_fa5f4:
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	lsl	r0, r0, #23
 	mov	r1, #0
 .L_fa5fa:
@@ -118,26 +117,26 @@ sub_080FA544:
 	lsl	r2, r2, #1
 	cmp	r0, #0
 	bne	.L_fa5fa
-	mov	r0, #127	@ 0x7f
+	mov	r0, #127
 	and	r0, r1
-	cmp	r0, #64	@ 0x40
+	cmp	r0, #64
 	bne	.L_fa620
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	and	r0, r1
 	cmp	r0, #0
 	bne	.L_fa61e
 	cmp	r2, #0
 	beq	.L_fa620
 .L_fa61e:
-	add	r1, #64	@ 0x40
+	add	r1, #64
 .L_fa620:
 	str	r1, [r4, #12]
 .L_fa622:
-	.2byte	0x1C21
+	add	r1, r4, #0
 .L_fa624:
-	.2byte	0x1C08
+	add	r0, r1, #0
 	bl	sub_080FA0D0
-	add	sp, #40	@ 0x28
+	add	sp, #40
 	pop	{r4, r5, r6, pc}
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080FA544, .-sub_080FA544

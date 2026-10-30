@@ -5,7 +5,16 @@
 .type sub_0800E094, %function
 .thumb_func
 sub_0800E094:
-	@ Exact original ROM bytes from 0x0800E094.
-	.byte	0x10, 0xB5, 0x0B, 0x88, 0xC4, 0x8A, 0x1B, 0x19, 0x13, 0x80, 0x49, 0x88, 0x00, 0x8B, 0x09, 0x18
-	.byte	0x51, 0x80, 0x10, 0xBC, 0x01, 0xBC, 0x00, 0x47
+	push	{r4, lr}
+	ldrh	r3, [r1, #0]
+	ldrh	r4, [r0, #22]
+	add	r3, r3, r4
+	strh	r3, [r2, #0]
+	ldrh	r1, [r1, #2]
+	ldrh	r0, [r0, #24]
+	add	r1, r1, r0
+	strh	r1, [r2, #2]
+	pop	{r4}
+	pop	{r0}
+	bx	r0
 .size sub_0800E094, .-sub_0800E094

@@ -10,7 +10,7 @@ sub_0800FEEC:
 	mov	r6, r9
 	mov	r5, r8
 	push	{r5, r6, r7}
-	sub	sp, #36	@ 0x24
+	sub	sp, #36
 	str	r0, [sp, #32]
 	mov	r8, r1
 	mov	r0, #0
@@ -20,7 +20,7 @@ sub_0800FEEC:
 	mov	sl, r0
 	add	r4, sp, #24
 	ldr	r0, [sp, #32]
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_0802F8E4
 	mov	r1, #4
 	ldrsh	r2, [r4, r1]
@@ -43,36 +43,25 @@ sub_0800FEEC:
 	ldr	r0, [sp, #32]
 	bl	sub_0803007C
 	add	r0, #1
-	.2byte	0x1C25
+	add	r5, r4, #0
 	cmp	r0, #8
 	bhi	.L_ff74
 	lsl	r0, r0, #2
-	ldr	r1, [pc, #4]	@ (0x800ff4c)
+	ldr	r1, .L_ff4c	@ =0x0800FF50
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]
 	mov	pc, r0
-	.align	2, 0
 .L_ff4c:
-	.4byte	.L_ff50
-.L_ff50:
-	.2byte	0xFF74
-	.2byte	0x0800
-	.2byte	0xFF9C
-	.2byte	0x0800
-	.2byte	0xFF74
-	.2byte	0x0800
-	.2byte	0xFFCE
-	.2byte	0x0800
-	lsl	r2, r2, #0
-	lsr	r1, r0, #32
-	lsl	r6, r2, #1
-	lsr	r1, r0, #32
-	lsl	r2, r1, #3
-	lsr	r1, r0, #32
-	lsl	r6, r6, #4
-	lsr	r1, r0, #32
-	lsl	r2, r5, #6
-	lsr	r1, r0, #32
+	.4byte	0x0800FF50
+	.4byte	0x0800FF74	@ case .L_ff74
+	.4byte	0x0800FF9C	@ case .L_ff9c
+	.4byte	0x0800FF74	@ case .L_ff74
+	.4byte	0x0800FFCE	@ case .L_ffce
+	.4byte	0x08010012	@ case .L_10012
+	.4byte	0x08010056	@ case .L_10056
+	.4byte	0x080100CA	@ case .L_100ca
+	.4byte	0x08010136	@ case .L_10136
+	.4byte	0x080101AA	@ case .L_101aa
 .L_ff74:
 	lsl	r1, r7, #16
 	asr	r1, r1, #16
@@ -92,6 +81,7 @@ sub_0800FEEC:
 	bl	sub_08012BAC
 	add	r0, sp, #8
 	b	.L_10198
+.L_ff9c:
 	lsl	r1, r7, #16
 	asr	r1, r1, #16
 	ldrh	r2, [r5, #0]
@@ -115,6 +105,7 @@ sub_0800FEEC:
 	ldrh	r2, [r4, #0]
 	sub	r2, #1
 	b	.L_101a0
+.L_ffce:
 	ldrh	r1, [r5, #4]
 	sub	r1, #1
 	lsl	r1, r1, #16
@@ -146,6 +137,7 @@ sub_0800FEEC:
 	lsl	r1, r7, #16
 	asr	r1, r1, #16
 	b	.L_1019c
+.L_10012:
 	ldrh	r1, [r5, #6]
 	add	r1, #1
 	lsl	r1, r1, #16
@@ -177,6 +169,7 @@ sub_0800FEEC:
 	lsl	r1, r7, #16
 	asr	r1, r1, #16
 	b	.L_1019c
+.L_10056:
 	lsl	r1, r7, #16
 	asr	r1, r1, #16
 	ldrh	r2, [r5, #0]
@@ -229,6 +222,7 @@ sub_0800FEEC:
 	ldrsh	r2, [r4, r3]
 	bl	sub_08012BAC
 	b	.L_1021c
+.L_100ca:
 	ldrh	r1, [r5, #6]
 	add	r1, #1
 	lsl	r1, r1, #16
@@ -278,6 +272,7 @@ sub_0800FEEC:
 	ldrh	r2, [r4, #0]
 	sub	r2, #1
 	b	.L_101a0
+.L_10136:
 	ldrh	r1, [r5, #4]
 	sub	r1, #1
 	lsl	r1, r1, #16
@@ -333,6 +328,7 @@ sub_0800FEEC:
 	asr	r2, r2, #16
 	bl	sub_08012BAC
 	b	.L_1021c
+.L_101aa:
 	ldrh	r1, [r5, #6]
 	add	r1, #1
 	lsl	r1, r1, #16
@@ -401,7 +397,7 @@ sub_0800FEEC:
 	ldr	r0, [sp, #32]
 	bl	sub_0800D814
 	mov	sl, r0
-	cmp	r0, #176	@ 0xb0
+	cmp	r0, #176
 	bne	.L_10246
 	mov	r0, #8
 	mov	r1, r8
@@ -437,7 +433,7 @@ sub_0800FEEC:
 	ldr	r0, [sp, #32]
 	bl	sub_0800D814
 	mov	sl, r0
-	cmp	r0, #176	@ 0xb0
+	cmp	r0, #176
 	bne	.L_1028a
 	mov	r0, #8
 	mov	r1, r8
@@ -453,7 +449,7 @@ sub_0800FEEC:
 	strh	r0, [r2, #0]
 .L_1029a:
 	mov	r0, sl
-	add	sp, #36	@ 0x24
+	add	sp, #36
 	pop	{r3, r4, r5}
 	mov	r8, r3
 	mov	r9, r4

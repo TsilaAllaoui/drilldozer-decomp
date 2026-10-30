@@ -5,7 +5,14 @@
 .type sub_080D55AC, %function
 .thumb_func
 sub_080D55AC:
-	@ Exact original ROM bytes from 0x080D55AC.
-	.byte	0x0B, 0x1C, 0x18, 0x1C, 0x48, 0x30, 0x00, 0x21, 0x02, 0x70, 0x01, 0x30, 0x01, 0x70, 0x01, 0x30
-	.byte	0x01, 0x70, 0x70, 0x47
+	add	r3, r1, #0
+	add	r0, r3, #0
+	add	r0, #72
+	mov	r1, #0
+	strb	r2, [r0, #0]
+	add	r0, #1
+	strb	r1, [r0, #0]
+	add	r0, #1
+	strb	r1, [r0, #0]
+	bx	lr
 .size sub_080D55AC, .-sub_080D55AC

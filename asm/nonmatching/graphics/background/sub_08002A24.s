@@ -8,7 +8,7 @@ sub_08002A24:
 	push	{r4, r5, lr}
 	lsl	r0, r0, #24
 	lsr	r4, r0, #24
-	.2byte	0x1C25
+	add	r5, r4, #0
 	bl	sub_080009C8
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
@@ -45,13 +45,12 @@ sub_08002A24:
 	cmp	r0, #2
 	beq	.L_2a5e
 .L_2a6a:
-	ldr	r0, [pc, #8]	@ (0x8002a74)
+	ldr	r0, .L_2a74	@ =0x0000FFFF
 .L_2a6c:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_2a74:
-	.4byte	0xFFFF
+	.4byte	0x0000FFFF
 .size sub_08002A24, .-sub_08002A24

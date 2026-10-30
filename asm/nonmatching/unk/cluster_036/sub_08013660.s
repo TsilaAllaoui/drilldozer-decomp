@@ -6,7 +6,7 @@
 .thumb_func
 sub_08013660:
 	push	{r4, lr}
-	.2byte	0x1C03
+	add	r3, r0, #0
 	lsl	r1, r1, #16
 	lsr	r2, r1, #16
 	mov	r1, #2
@@ -18,7 +18,7 @@ sub_08013660:
 	bgt	.L_13694
 	lsl	r0, r2, #16
 	asr	r1, r0, #16
-	.2byte	0x1C08
+	add	r0, r1, #0
 	cmp	r1, #0
 	bge	.L_13682
 	add	r0, #15
@@ -35,7 +35,7 @@ sub_08013660:
 .L_13694:
 	lsl	r0, r2, #16
 	asr	r0, r0, #16
-	.2byte	0x1C01
+	add	r1, r0, #0
 	cmp	r0, #0
 	bge	.L_136a0
 	add	r1, #15

@@ -6,7 +6,7 @@
 .thumb_func
 sub_080102AC:
 	push	{lr}
-	.2byte	0x1C02
+	add	r2, r0, #0
 	mov	r0, #0
 	ldrsh	r1, [r2, r0]
 	cmp	r1, #0

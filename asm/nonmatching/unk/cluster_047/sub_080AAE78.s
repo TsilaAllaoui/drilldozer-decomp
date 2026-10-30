@@ -6,9 +6,9 @@
 .thumb_func
 sub_080AAE78:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
-	.2byte	0x1C0C
-	.2byte	0x1C10
+	add	r5, r0, #0
+	add	r4, r1, #0
+	add	r0, r2, #0
 	ldrb	r1, [r4, #0]
 	cmp	r5, r1
 	beq	.L_aae94

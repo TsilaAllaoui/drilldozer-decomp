@@ -6,8 +6,8 @@
 .thumb_func
 sub_080C9B5C:
 	push	{r4, lr}
-	.2byte	0x1C04
-	ldr	r0, [pc, #28]	@ (0x80c9b80)
+	add	r4, r0, #0
+	ldr	r0, .L_c9b80	@ =0x08462ACC
 	lsl	r2, r2, #2
 	add	r2, r2, r0
 	ldr	r2, [r2, #0]
@@ -24,11 +24,10 @@ sub_080C9B5C:
 	bgt	.L_c9b84
 	mov	r0, #0
 	b	.L_c9b8c
-	.align	2, 0
 .L_c9b80:
-	.4byte	0x8462ACC
+	.4byte	0x08462ACC
 .L_c9b84:
-	ldr	r0, [pc, #20]	@ (0x80c9b9c)
+	ldr	r0, .L_c9b9c	@ =0x0002FFFF
 	cmp	r3, r0
 	ble	.L_c9b92
 	add	r0, #1
@@ -42,7 +41,6 @@ sub_080C9B5C:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	.align	2, 0
 .L_c9b9c:
-	.4byte	0x2FFFF
+	.4byte	0x0002FFFF
 .size sub_080C9B5C, .-sub_080C9B5C

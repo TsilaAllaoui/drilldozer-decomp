@@ -6,14 +6,14 @@
 .thumb_func
 sub_080226F0:
 	push	{r4, r5, r6, r7, lr}
-	ldr	r0, [pc, #56]	@ (0x802272c)
+	ldr	r0, .L_2272c	@ =0x08022731
 	bl	sub_08000960
-	.2byte	0x1C06
+	add	r6, r0, #0
 	cmp	r6, #0
 	beq	.L_22726
 	bl	sub_0800098C
-	.2byte	0x1C05
-	.2byte	0x1D2F
+	add	r5, r0, #0
+	add	r7, r5, #4
 	mov	r4, #4
 .L_22708:
 	ldmia	r7!, {r0}
@@ -23,15 +23,14 @@ sub_080226F0:
 	bge	.L_22708
 	ldr	r0, [r5, #24]
 	bl	sub_08006CBC
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08001768
-	.2byte	0x1C30
+	add	r0, r6, #0
 	bl	sub_0800090C
 .L_22726:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_2272c:
-	.4byte	0x8022731
+	.4byte	0x08022731
 .size sub_080226F0, .-sub_080226F0

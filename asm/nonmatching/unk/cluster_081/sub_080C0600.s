@@ -7,7 +7,7 @@
 sub_080C0600:
 	push	{r4, lr}
 	sub	sp, #8
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldr	r0, [r4, #16]
 	cmp	r0, #1
 	beq	.L_c065a
@@ -23,7 +23,7 @@ sub_080C0600:
 	beq	.L_c0686
 	b	.L_c068a
 .L_c0620:
-	ldr	r0, [r4, #116]	@ 0x74
+	ldr	r0, [r4, #116]
 	mov	r1, sp
 	bl	sub_080117BC
 	add	r0, sp, #4
@@ -36,7 +36,7 @@ sub_080C0600:
 	asr	r0, r0, #16
 	cmp	r1, r0
 	ble	.L_c064e
-	ldr	r0, [r4, #116]	@ 0x74
+	ldr	r0, [r4, #116]
 	mov	r1, #1
 	bl	sub_0802140C
 	ldr	r0, [r4, #16]
@@ -44,29 +44,29 @@ sub_080C0600:
 	str	r0, [r4, #16]
 	b	.L_c068a
 .L_c064e:
-	ldr	r0, [r4, #116]	@ 0x74
+	ldr	r0, [r4, #116]
 	mov	r1, #3
 	mov	r2, #0
 	bl	sub_0803044C
 	b	.L_c068a
 .L_c065a:
-	ldr	r0, [r4, #40]	@ 0x28
+	ldr	r0, [r4, #40]
 	add	r0, #1
-	str	r0, [r4, #40]	@ 0x28
+	str	r0, [r4, #40]
 	cmp	r0, #4
 	ble	.L_c068a
 	mov	r0, #0
-	str	r0, [r4, #40]	@ 0x28
+	str	r0, [r4, #40]
 	mov	r0, #2
 	str	r0, [r4, #16]
-	ldr	r0, [r4, #116]	@ 0x74
+	ldr	r0, [r4, #116]
 	mov	r1, #2
 	bl	sub_0802140C
 	b	.L_c068a
 .L_c0676:
-	ldr	r0, [r4, #40]	@ 0x28
+	ldr	r0, [r4, #40]
 	add	r0, #1
-	str	r0, [r4, #40]	@ 0x28
+	str	r0, [r4, #40]
 	cmp	r0, #30
 	ble	.L_c068a
 	mov	r0, #3

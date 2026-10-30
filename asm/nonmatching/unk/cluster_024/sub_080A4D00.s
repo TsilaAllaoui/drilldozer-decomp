@@ -7,11 +7,11 @@
 sub_080A4D00:
 	push	{r4, r5, r6, r7, lr}
 	sub	sp, #4
-	.2byte	0x1C06
-	.2byte	0x1C35
-	add	r5, #188	@ 0xbc
-	.2byte	0x1C34
-	add	r4, #36	@ 0x24
+	add	r6, r0, #0
+	add	r5, r6, #0
+	add	r5, #188
+	add	r4, r6, #0
+	add	r4, #36
 	mov	r2, #0
 	mov	r7, #2
 .L_a4d12:
@@ -30,11 +30,11 @@ sub_080A4D00:
 	mov	r0, #0
 .L_a4d28:
 	strb	r0, [r1, #1]
-	.2byte	0x1C30
-	add	r0, #188	@ 0xbc
+	add	r0, r6, #0
+	add	r0, #188
 	add	r0, r0, r2
 	ldr	r0, [r0, #0]
-	ldr	r1, [pc, #28]	@ (0x80a4d50)
+	ldr	r1, .L_a4d50	@ =0x083FB864
 	str	r2, [sp, #0]
 	bl	sub_08005814
 	add	r5, #8
@@ -48,7 +48,6 @@ sub_080A4D00:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_a4d50:
-	.4byte	0x83FB864
+	.4byte	0x083FB864
 .size sub_080A4D00, .-sub_080A4D00

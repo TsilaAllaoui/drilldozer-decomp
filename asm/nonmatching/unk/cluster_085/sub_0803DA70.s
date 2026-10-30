@@ -6,8 +6,8 @@
 .thumb_func
 sub_0803DA70:
 	push	{r4, lr}
-	.2byte	0x1C14
-	mov	r2, #165	@ 0xa5
+	add	r4, r2, #0
+	mov	r2, #165
 	lsl	r2, r2, #1
 	add	r2, r2, r0
 	mov	ip, r2
@@ -23,11 +23,11 @@ sub_0803DA70:
 	mov	r2, ip
 	strh	r4, [r2, #0]
 	bl	sub_08040764
-	mov	r0, #124	@ 0x7c
+	mov	r0, #124
 	bl	sub_08029E54
 .L_3da9c:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0803DA70, .-sub_0803DA70

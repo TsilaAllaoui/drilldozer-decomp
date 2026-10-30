@@ -5,13 +5,12 @@
 .type sub_080F5EE0, %function
 .thumb_func
 sub_080F5EE0:
-	add	r2, pc, #0	@ (adr r2, 0x80f5ee4)
-.L_f5ee2:
+	add	r2, pc, #0
 	bx	r2
-	mov	r1, #144	@ 0x90
-	b	.L_f5ff0
-	lsl	r0, r0, #0
-	b	.L_f63f4
-	.2byte	0xFF1E
-	.2byte	0xE12F
+.arm
+.La_f5ee4:
+	umull	r2, r3, r0, r1
+	add	r0, r3, #0
+	bx	lr
+.thumb
 .size sub_080F5EE0, .-sub_080F5EE0

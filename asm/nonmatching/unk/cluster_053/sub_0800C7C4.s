@@ -6,22 +6,21 @@
 .thumb_func
 sub_0800C7C4:
 	push	{r4, lr}
-	ldr	r4, [pc, #24]	@ (0x800c7e0)
+	ldr	r4, .L_c7e0	@ =0x02034748
 	ldr	r1, [r4, #12]
 	cmp	r1, #0
 	beq	.L_c7e4
 	bl	sub_080F8FB8
-	.2byte	0x1C01
+	add	r1, r0, #0
 	cmp	r1, #1
 	bne	.L_c7dc
 	mov	r0, #0
 	str	r0, [r4, #12]
 .L_c7dc:
-	.2byte	0x1C08
+	add	r0, r1, #0
 	b	.L_c7e6
-	.align	2, 0
 .L_c7e0:
-	.4byte	0x2034748
+	.4byte	0x02034748
 .L_c7e4:
 	mov	r0, #1
 .L_c7e6:

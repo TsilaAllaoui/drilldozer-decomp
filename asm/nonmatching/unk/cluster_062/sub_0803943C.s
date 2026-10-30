@@ -9,9 +9,9 @@ sub_0803943C:
 	mov	r7, r8
 	push	{r7}
 	sub	sp, #12
-	.2byte	0x1C07
-	.2byte	0x1C0D
-	.2byte	0x1C28
+	add	r7, r0, #0
+	add	r5, r1, #0
+	add	r0, r5, #0
 	bl	sub_0800C1F4
 	mov	r8, r0
 	ldrb	r0, [r7, #12]
@@ -26,12 +26,12 @@ sub_0803943C:
 	b	.L_39568
 .L_39462:
 	add	r4, sp, #4
-	.2byte	0x1C28
-	.2byte	0x1C21
+	add	r0, r5, #0
+	add	r1, r4, #0
 	bl	sub_0800E014
 	mov	r2, sp
 	add	r2, #2
-	.2byte	0x1C28
+	add	r0, r5, #0
 	mov	r1, sp
 	bl	sub_0801174C
 	mov	r6, #7
@@ -55,12 +55,12 @@ sub_0803943C:
 	bne	.L_394b4
 	cmp	r6, #7
 	bne	.L_394aa
-	.2byte	0x1C28
+	add	r0, r5, #0
 	mov	r1, #3
 	bl	sub_08075C60
 	b	.L_394d8
 .L_394aa:
-	.2byte	0x1C28
+	add	r0, r5, #0
 	mov	r1, #2
 	bl	sub_08075C60
 	b	.L_394d8
@@ -70,15 +70,15 @@ sub_0803943C:
 	bne	.L_394d8
 	cmp	r6, #7
 	bne	.L_394cc
-	mov	r6, #150	@ 0x96
-	.2byte	0x1C28
+	mov	r6, #150
+	add	r0, r5, #0
 	mov	r1, #0
 	mov	r2, #0
 	bl	sub_08021488
 	b	.L_394d8
 .L_394cc:
-	mov	r6, #148	@ 0x94
-	.2byte	0x1C28
+	mov	r6, #148
+	add	r0, r5, #0
 	mov	r1, #0
 	mov	r2, #0
 	bl	sub_08021488
@@ -86,8 +86,8 @@ sub_0803943C:
 	mov	r2, r8
 	cmp	r2, #1
 	beq	.L_394e6
-	.2byte	0x1C28
-	.2byte	0x1C31
+	add	r0, r5, #0
+	add	r1, r6, #0
 	bl	sub_0802140C
 .L_394e6:
 	mov	r0, #6
@@ -95,12 +95,12 @@ sub_0803943C:
 	b	.L_39520
 .L_394ec:
 	add	r4, sp, #4
-	.2byte	0x1C28
-	.2byte	0x1C21
+	add	r0, r5, #0
+	add	r1, r4, #0
 	bl	sub_0800E014
 	mov	r2, sp
 	add	r2, #2
-	.2byte	0x1C28
+	add	r0, r5, #0
 	mov	r1, sp
 	bl	sub_0801174C
 	mov	r0, sp
@@ -108,14 +108,14 @@ sub_0803943C:
 	ldrsh	r2, [r0, r1]
 	mov	r0, #4
 	ldrsh	r6, [r4, r0]
-	.2byte	0x1C30
-	sub	r0, #48	@ 0x30
+	add	r0, r6, #0
+	sub	r0, #48
 	cmp	r2, r0
 	blt	.L_39520
 	mov	r0, #6
 	ldrsh	r1, [r4, r0]
-	.2byte	0x1C08
-	add	r0, #48	@ 0x30
+	add	r0, r1, #0
+	add	r0, #48
 	cmp	r2, r0
 	ble	.L_39528
 .L_39520:
@@ -133,8 +133,8 @@ sub_0803943C:
 	ble	.L_39538
 	neg	r3, r3
 .L_39538:
-	.2byte	0x1C28
-	.2byte	0x1C19
+	add	r0, r5, #0
+	add	r1, r3, #0
 	mov	r2, #0
 	bl	sub_0803044C
 	ldrb	r0, [r7, #13]
@@ -151,7 +151,7 @@ sub_0803943C:
 	mov	r1, r8
 	cmp	r1, #2
 	bne	.L_39584
-	.2byte	0x1C28
+	add	r0, r5, #0
 	mov	r1, #0
 	mov	r2, #0
 	bl	sub_08021488
@@ -160,12 +160,12 @@ sub_0803943C:
 	mov	r2, r8
 	cmp	r2, #2
 	bne	.L_39578
-	.2byte	0x1C28
+	add	r0, r5, #0
 	mov	r1, #3
 	mov	r2, #2
 	bl	sub_08021488
 .L_39578:
-	.2byte	0x1C28
+	add	r0, r5, #0
 	mov	r1, #1
 	bl	sub_080118BC
 	mov	r0, #1
@@ -179,5 +179,5 @@ sub_0803943C:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0803943C, .-sub_0803943C

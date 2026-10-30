@@ -10,45 +10,44 @@ sub_080124B0:
 	push	{r7}
 	sub	sp, #4
 	mov	r8, r1
-	.2byte	0x1C16
+	add	r6, r2, #0
 	bl	sub_0800C1E8
-	.2byte	0x1C07
+	add	r7, r0, #0
 .L_124c2:
-	ldr	r0, [pc, #12]	@ (0x80124d0)
+	ldr	r0, .L_124d0	@ =0x02034A3C
 	ldrb	r1, [r0, #0]
 	ldr	r0, [r6, #0]
 	cmp	r0, r1
 	bcs	.L_124d4
 	mov	r5, #0
 	b	.L_124d8
-	.align	2, 0
 .L_124d0:
-	.4byte	0x2034A3C
+	.4byte	0x02034A3C
 .L_124d4:
 	mov	r5, #1
 	sub	r0, r0, r1
 .L_124d8:
 	str	r0, [sp, #0]
 	ldr	r4, [sp, #0]
-	.2byte	0x1C38
+	add	r0, r7, #0
 	mov	r1, r8
 	mov	r2, sp
-	.2byte	0x1C2B
+	add	r3, r5, #0
 	bl	sub_0801243C
-	.2byte	0x1C02
+	add	r2, r0, #0
 	ldr	r1, [sp, #0]
 	sub	r1, r1, r4
 	ldr	r0, [r6, #0]
 	add	r0, r0, r1
 	str	r0, [r6, #0]
-	cmp	r2, #255	@ 0xff
+	cmp	r2, #255
 	bne	.L_12500
 	cmp	r5, #1
 	bne	.L_124c2
-	mov	r0, #255	@ 0xff
+	mov	r0, #255
 	b	.L_12502
 .L_12500:
-	.2byte	0x1C10
+	add	r0, r2, #0
 .L_12502:
 	add	sp, #4
 	pop	{r3}
@@ -56,5 +55,5 @@ sub_080124B0:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080124B0, .-sub_080124B0

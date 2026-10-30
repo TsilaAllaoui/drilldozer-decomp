@@ -6,20 +6,20 @@
 .thumb_func
 sub_0808CECC:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
-	.2byte	0x1C0C
+	add	r5, r0, #0
+	add	r4, r1, #0
 	ldr	r0, [r4, #0]
 	bl	sub_0800B220
 	cmp	r0, #1
 	bne	.L_8ceea
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08001768
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0800090C
 	b	.L_8cf30
 .L_8ceea:
 	ldr	r0, [r4, #0]
-	mov	r1, #64	@ 0x40
+	mov	r1, #64
 	bl	sub_0800B234
 	cmp	r0, #1
 	beq	.L_8cf30
@@ -52,15 +52,14 @@ sub_0808CECC:
 .L_8cf24:
 	ldrh	r0, [r4, #8]
 	ldrb	r2, [r4, #10]
-	ldr	r3, [pc, #12]	@ (0x808cf38)
+	ldr	r3, .L_8cf38	@ =0x000014A6
 	mov	r1, #3
 	bl	sub_080199F0
 .L_8cf30:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_8cf38:
-	.4byte	0x14A6
+	.4byte	0x000014A6
 .size sub_0808CECC, .-sub_0808CECC

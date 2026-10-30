@@ -7,9 +7,9 @@
 sub_080259E8:
 	push	{r4, r5, r6, r7, lr}
 	sub	sp, #4
-	.2byte	0x1C05
-	.2byte	0x1C0E
-	.2byte	0x1C14
+	add	r5, r0, #0
+	add	r6, r1, #0
+	add	r4, r2, #0
 	ldr	r2, [sp, #24]
 	ldr	r7, [sp, #28]
 	lsl	r2, r2, #16
@@ -20,14 +20,14 @@ sub_080259E8:
 	asr	r3, r3, #16
 	str	r3, [sp, #0]
 	mov	r1, #20
-	.2byte	0x1C23
+	add	r3, r4, #0
 	bl	sub_0801B2C4
-	add	r0, #124	@ 0x7c
+	add	r0, #124
 	ldrb	r1, [r5, #20]
 	strh	r1, [r0, #16]
 	str	r6, [r0, #12]
 	str	r7, [r0, #8]
-	.2byte	0x1C05
+	add	r5, r0, #0
 	mov	r4, #1
 .L_25a1a:
 	ldmia	r5!, {r0}

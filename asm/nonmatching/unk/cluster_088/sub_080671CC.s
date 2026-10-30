@@ -7,7 +7,7 @@
 sub_080671CC:
 	push	{lr}
 	bl	sub_08066D60
-	.2byte	0x1C01
+	add	r1, r0, #0
 	cmp	r1, #0
 	beq	.L_671f2
 	ldr	r0, [r1, #12]
@@ -15,8 +15,8 @@ sub_080671CC:
 	bne	.L_671f2
 	mov	r0, #1
 	str	r0, [r1, #12]
-	mov	r0, #224	@ 0xe0
-	mov	r1, #40	@ 0x28
+	mov	r0, #224
+	mov	r1, #40
 	mov	r2, #2
 	bl	sub_08063B64
 	mov	r0, #0
@@ -24,5 +24,5 @@ sub_080671CC:
 .L_671f2:
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080671CC, .-sub_080671CC

@@ -8,7 +8,7 @@ sub_080F8FF0:
 	cmp	r1, #0
 	beq	.L_f9078
 	push	{r4}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	eor	r4, r1
 	mov	ip, r4
 	mov	r3, #1
@@ -77,7 +77,7 @@ sub_080F8FF0:
 	lsr	r1, r1, #4
 	b	.L_f9032
 .L_f906a:
-	.2byte	0x1C10
+	add	r0, r2, #0
 	mov	r4, ip
 	cmp	r4, #0
 	bpl	.L_f9074
@@ -90,5 +90,5 @@ sub_080F8FF0:
 	bl	sub_080F9084
 	mov	r0, #0
 	pop	{pc}
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080F8FF0, .-sub_080F8FF0

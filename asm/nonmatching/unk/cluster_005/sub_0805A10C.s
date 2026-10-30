@@ -6,20 +6,19 @@
 .thumb_func
 sub_0805A10C:
 	push	{r4, lr}
-	.2byte	0x1C04
-	ldr	r0, [pc, #8]	@ (0x805a11c)
+	add	r4, r0, #0
+	ldr	r0, .L_5a11c	@ =0x0203601C
 	ldr	r0, [r0, #0]
 	cmp	r0, #0
 	bne	.L_5a120
 .L_5a118:
 	mov	r0, #1
 	b	.L_5a152
-	.align	2, 0
 .L_5a11c:
-	.4byte	0x203601C
+	.4byte	0x0203601C
 .L_5a120:
 	bl	sub_0800098C
-	.2byte	0x1C01
+	add	r1, r0, #0
 	ldrb	r0, [r1, #22]
 	cmp	r0, r4
 	beq	.L_5a138

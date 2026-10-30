@@ -11,8 +11,8 @@ sub_08033A00:
 	lsr	r5, r2, #16
 	lsr	r6, r1, #16
 	asr	r4, r1, #16
-	.2byte	0x1C01
-	add	r1, #216	@ 0xd8
+	add	r1, r0, #0
+	add	r1, #216
 	mov	r2, #2
 .L_33a12:
 	ldr	r0, [r1, #0]

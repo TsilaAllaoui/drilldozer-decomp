@@ -5,9 +5,23 @@
 .type sub_080D91B0, %function
 .thumb_func
 sub_080D91B0:
-	@ Exact original ROM bytes from 0x080D91B0.
-	.byte	0x10, 0xB5, 0x0C, 0x1C, 0x1C, 0xF0, 0x66, 0xFD, 0x01, 0x1C, 0x02, 0x2C, 0x03, 0xD0, 0x01, 0x20
-	.byte	0xC8, 0x70, 0x48, 0x6C, 0x02, 0xE0, 0x01, 0x20, 0x88, 0x70, 0x08, 0x6C, 0x10, 0xBC, 0x02, 0xBC
+	push	{r4, lr}
+	add	r4, r1, #0
+	bl	sub_080F5C84
+	add	r1, r0, #0
+	cmp	r4, #2
+	beq	.L_d91c6
+	mov	r0, #1
+	strb	r0, [r1, #3]
+	ldr	r0, [r1, #68]
+	b	.L_d91cc
+.L_d91c6:
+	mov	r0, #1
+	strb	r0, [r1, #2]
+	ldr	r0, [r1, #64]
+.L_d91cc:
+	pop	{r4}
+	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080D91B0, .-sub_080D91B0

@@ -7,7 +7,7 @@
 sub_08064D1C:
 	push	{lr}
 	sub	sp, #4
-	.2byte	0x1C01
+	add	r1, r0, #0
 	mov	r0, #0
 	str	r0, [sp, #0]
 	lsl	r1, r1, #16
@@ -16,9 +16,9 @@ sub_08064D1C:
 	bl	sub_0801BC0C
 	cmp	r0, #0
 	beq	.L_64d46
-	.2byte	0x1C01
-	add	r1, #86	@ 0x56
-	add	r0, #88	@ 0x58
+	add	r1, r0, #0
+	add	r1, #86
+	add	r0, #88
 	mov	r2, #0
 	ldrsh	r1, [r1, r2]
 	mov	r2, #0
@@ -34,5 +34,5 @@ sub_08064D1C:
 	add	sp, #4
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08064D1C, .-sub_08064D1C

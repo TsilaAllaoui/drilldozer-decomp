@@ -6,7 +6,7 @@
 .thumb_func
 sub_080DAD10:
 	push	{lr}
-	.2byte	0x1C02
+	add	r2, r0, #0
 	ldr	r0, [r1, #8]
 	cmp	r0, #1
 	beq	.L_dad24

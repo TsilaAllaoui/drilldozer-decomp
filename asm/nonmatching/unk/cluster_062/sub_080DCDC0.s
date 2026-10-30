@@ -6,10 +6,10 @@
 .thumb_func
 sub_080DCDC0:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0D
-	.2byte	0x1C2E
-	add	r6, #124	@ 0x7c
+	add	r4, r0, #0
+	add	r5, r1, #0
+	add	r6, r5, #0
+	add	r6, #124
 	ldrb	r0, [r6, #8]
 	cmp	r0, #1
 	beq	.L_dce0a
@@ -25,19 +25,19 @@ sub_080DCDC0:
 	beq	.L_dce3c
 	b	.L_dce64
 .L_dcde4:
-	.2byte	0x1C28
-	.2byte	0x1C31
+	add	r0, r5, #0
+	add	r1, r6, #0
 	bl	sub_080DD290
-	str	r0, [r5, #124]	@ 0x7c
+	str	r0, [r5, #124]
 	ldr	r0, [r5, #12]
 	bl	sub_080304C8
-	mov	r4, #104	@ 0x68
+	mov	r4, #104
 	cmp	r0, #2
 	bne	.L_dcdfc
-	mov	r4, #103	@ 0x67
+	mov	r4, #103
 .L_dcdfc:
 	ldr	r0, [r5, #12]
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_0802140C
 	ldrb	r0, [r6, #8]
 	add	r0, #1
@@ -53,15 +53,15 @@ sub_080DCDC0:
 .L_dce1a:
 	ldr	r0, [r5, #12]
 	bl	sub_080304C8
-	mov	r4, #106	@ 0x6a
+	mov	r4, #106
 	cmp	r0, #2
 	bne	.L_dce28
-	mov	r4, #105	@ 0x69
+	mov	r4, #105
 .L_dce28:
-	mov	r0, #236	@ 0xec
+	mov	r0, #236
 	bl	sub_08029E54
 	ldr	r0, [r5, #12]
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_0802140C
 	ldrb	r0, [r6, #8]
 	add	r0, #1
@@ -71,14 +71,14 @@ sub_080DCDC0:
 	bl	sub_080213D4
 	lsl	r0, r0, #24
 	lsr	r4, r0, #24
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_080DCF88
 	cmp	r4, #1
 	bne	.L_dcea0
 	cmp	r0, #1
 	bne	.L_dcea0
-	.2byte	0x1C29
-	add	r1, #116	@ 0x74
+	add	r1, r5, #0
+	add	r1, #116
 	mov	r0, #0
 	strb	r0, [r1, #0]
 .L_dce5c:
@@ -90,7 +90,7 @@ sub_080DCDC0:
 	ldr	r2, [r6, #0]
 	cmp	r2, #0
 	beq	.L_dce76
-	add	r2, #125	@ 0x7d
+	add	r2, #125
 	ldrb	r1, [r2, #0]
 	mov	r0, #2
 	neg	r0, r0
@@ -102,21 +102,21 @@ sub_080DCDC0:
 	mov	r0, #1
 	strb	r0, [r6, #9]
 	ldr	r0, [r5, #12]
-	.2byte	0x1C32
+	add	r2, r6, #0
 	add	r2, #10
-	.2byte	0x1C29
+	add	r1, r5, #0
 	bl	sub_080DD494
 	ldr	r0, [r5, #12]
 	mov	r1, #0
 	bl	sub_080DD4C4
-	.2byte	0x1C28
+	add	r0, r5, #0
 	mov	r1, #1
 	bl	sub_080DCF24
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0800090C
 .L_dcea0:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080DCDC0, .-sub_080DCDC0

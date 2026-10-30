@@ -9,26 +9,26 @@ sub_0807E46C:
 	mov	r7, r8
 	push	{r7}
 	sub	sp, #8
-	.2byte	0x1C06
-	.2byte	0x1C0F
+	add	r6, r0, #0
+	add	r7, r1, #0
 	mov	r8, r2
-	.2byte	0x1C1D
+	add	r5, r3, #0
 	bl	sub_0807E7BC
-	.2byte	0x1C04
+	add	r4, r0, #0
 	cmp	r4, #0
 	beq	.L_7e4a4
 	str	r5, [sp, #0]
 	ldr	r0, [sp, #32]
 	str	r0, [sp, #4]
-	.2byte	0x1C20
-	.2byte	0x1C31
-	.2byte	0x1C3A
+	add	r0, r4, #0
+	add	r1, r6, #0
+	add	r2, r7, #0
 	mov	r3, r8
 	bl	sub_0807E734
 	cmp	r0, #0
 	beq	.L_7e4a4
 	bl	sub_0807E7E8
-	.2byte	0x1C20
+	add	r0, r4, #0
 	b	.L_7e4a6
 .L_7e4a4:
 	mov	r0, #0
@@ -39,5 +39,5 @@ sub_0807E46C:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0807E46C, .-sub_0807E46C

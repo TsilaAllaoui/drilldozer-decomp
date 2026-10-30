@@ -10,11 +10,11 @@ sub_08082824:
 	push	{r7}
 	mov	ip, r0
 	mov	r5, ip
-	add	r5, #124	@ 0x7c
-	add	r0, #84	@ 0x54
+	add	r5, #124
+	add	r0, #84
 	strb	r1, [r0, #0]
 	mov	r4, ip
-	add	r4, #116	@ 0x74
+	add	r4, #116
 	ldrb	r3, [r4, #0]
 	cmp	r3, #1
 	beq	.L_82864
@@ -28,21 +28,20 @@ sub_08082824:
 	beq	.L_82884
 	b	.L_828da
 .L_8284e:
-	ldr	r1, [pc, #16]	@ (0x8082860)
+	ldr	r1, .L_82860	@ =0x08392528
 	mov	r2, ip
-	add	r2, #159	@ 0x9f
+	add	r2, #159
 	mov	r0, ip
 	mov	r3, #2
 	bl	sub_0801CD90
 	b	.L_82876
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_82860:
-	.4byte	0x8392528
+	.4byte	0x08392528
 .L_82864:
-	ldr	r1, [pc, #24]	@ (0x8082880)
+	ldr	r1, .L_82880	@ =0x08392528
 	mov	r2, ip
-	add	r2, #159	@ 0x9f
+	add	r2, #159
 	mov	r0, ip
 	mov	r3, #1
 	bl	sub_0801CCF0
@@ -53,13 +52,12 @@ sub_08082824:
 	add	r0, #1
 	strb	r0, [r4, #0]
 	b	.L_828de
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_82880:
-	.4byte	0x8392528
+	.4byte	0x08392528
 .L_82884:
 	mov	r2, ip
-	add	r2, #117	@ 0x75
+	add	r2, #117
 	ldrb	r0, [r2, #0]
 	add	r0, #1
 	strb	r0, [r2, #0]
@@ -75,16 +73,16 @@ sub_08082824:
 	cmp	r3, r0
 	bge	.L_828c6
 	mov	r0, #3
-	.2byte	0x1C0E
+	add	r6, r1, #0
 	and	r6, r0
 	mov	r7, #4
 	neg	r7, r7
-	.2byte	0x1C2C
+	add	r4, r5, #0
 .L_828b0:
 	ldmia	r4!, {r0}
-	add	r0, #33	@ 0x21
+	add	r0, #33
 	ldrb	r2, [r0, #0]
-	.2byte	0x1C39
+	add	r1, r7, #0
 	and	r1, r2
 	orr	r1, r6
 	strb	r1, [r0, #0]
@@ -98,7 +96,7 @@ sub_08082824:
 	cmp	r0, #20
 	bls	.L_828de
 	mov	r1, ip
-	add	r1, #116	@ 0x74
+	add	r1, #116
 	ldrb	r0, [r1, #0]
 	add	r0, #1
 	strb	r0, [r1, #0]
@@ -114,5 +112,5 @@ sub_08082824:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08082824, .-sub_08082824

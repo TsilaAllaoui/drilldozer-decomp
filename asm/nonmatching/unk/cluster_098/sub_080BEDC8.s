@@ -10,28 +10,28 @@ sub_080BEDC8:
 	bne	.L_bedd0
 	add	r1, #2
 .L_bedd0:
-	mov	r5, #255	@ 0xff
-	mov	r4, #159	@ 0x9f
+	mov	r5, #255
+	mov	r4, #159
 .L_bedd4:
 	ldrb	r3, [r1, #1]
-	.2byte	0x1C1A
-	cmp	r2, #255	@ 0xff
+	add	r2, r3, #0
+	cmp	r2, #255
 	bne	.L_bede6
 	ldrb	r0, [r1, #0]
-	cmp	r0, #255	@ 0xff
+	cmp	r0, #255
 	beq	.L_bee06
 	strb	r2, [r1, #0]
 	b	.L_bee06
 .L_bede6:
 	ldrb	r0, [r1, #0]
-	cmp	r0, #255	@ 0xff
+	cmp	r0, #255
 	bne	.L_bedfe
-	.2byte	0x1F08
+	sub	r0, r1, #4
 	ldrb	r0, [r0, #0]
 	strb	r0, [r1, #0]
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
-	cmp	r0, #255	@ 0xff
+	cmp	r0, #255
 	bne	.L_bee06
 	strb	r3, [r1, #0]
 	b	.L_bee06

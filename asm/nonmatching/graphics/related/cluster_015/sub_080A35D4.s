@@ -9,7 +9,7 @@ sub_080A35D4:
 	mov	r7, r8
 	push	{r7}
 	sub	sp, #12
-	.2byte	0x1C06
+	add	r6, r0, #0
 	mov	r0, #2
 	mov	r1, #1
 	bl	sub_080C38D4
@@ -29,7 +29,7 @@ sub_080A35D4:
 	beq	.L_a36f0
 	b	.L_a370a
 .L_a3602:
-	mov	r0, #147	@ 0x93
+	mov	r0, #147
 	lsl	r0, r0, #1
 	bl	sub_08029E54
 	mov	r0, #0
@@ -89,7 +89,7 @@ sub_080A35D4:
 	str	r7, [sp, #4]
 	str	r4, [sp, #8]
 	mov	r0, #0
-	mov	r1, #39	@ 0x27
+	mov	r1, #39
 	mov	r2, #22
 	mov	r3, #12
 	bl	sub_080026E0
@@ -105,7 +105,7 @@ sub_080A35D4:
 	str	r5, [sp, #4]
 	str	r4, [sp, #8]
 	mov	r0, #0
-	mov	r1, #42	@ 0x2a
+	mov	r1, #42
 	mov	r2, #28
 	mov	r3, #10
 	bl	sub_080026E0
@@ -113,7 +113,7 @@ sub_080A35D4:
 	str	r7, [sp, #4]
 	str	r4, [sp, #8]
 	mov	r0, #0
-	mov	r1, #41	@ 0x29
+	mov	r1, #41
 	mov	r2, #28
 	mov	r3, #12
 	bl	sub_080026E0
@@ -131,7 +131,7 @@ sub_080A35D4:
 	str	r7, [sp, #4]
 	str	r4, [sp, #8]
 	mov	r0, #0
-	mov	r1, #40	@ 0x28
+	mov	r1, #40
 	mov	r2, #23
 	mov	r3, #12
 	bl	sub_080026E0

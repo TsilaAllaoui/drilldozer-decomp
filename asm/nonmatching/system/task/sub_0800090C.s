@@ -6,7 +6,7 @@
 .thumb_func
 sub_0800090C:
 	push	{lr}
-	.2byte	0x1C02
+	add	r2, r0, #0
 	ldr	r1, [r2, #8]
 	mov	r0, #1
 	neg	r0, r0
@@ -18,12 +18,11 @@ sub_0800090C:
 	ldr	r0, [r2, #0]
 	cmp	r0, #0
 	bne	.L_930
-	ldr	r0, [pc, #4]	@ (0x800092c)
+	ldr	r0, .L_92c	@ =0x02020D84
 	str	r3, [r0, #0]
 	b	.L_950
-	.align	2, 0
 .L_92c:
-	.4byte	0x2020D84
+	.4byte	0x02020D84
 .L_930:
 	str	r3, [r0, #4]
 	b	.L_950
@@ -31,14 +30,13 @@ sub_0800090C:
 	ldr	r1, [r2, #0]
 	cmp	r1, #0
 	bne	.L_948
-	ldr	r0, [pc, #8]	@ (0x8000944)
+	ldr	r0, .L_944	@ =0x02020D84
 	str	r3, [r0, #0]
 	str	r1, [r3, #0]
 	b	.L_950
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_944:
-	.4byte	0x2020D84
+	.4byte	0x02020D84
 .L_948:
 	str	r3, [r1, #4]
 	ldr	r1, [r2, #4]
@@ -48,7 +46,7 @@ sub_0800090C:
 	mov	r0, #1
 	neg	r0, r0
 	str	r0, [r2, #8]
-	.2byte	0x1C10
+	add	r0, r2, #0
 	bl	sub_080007F0
 .L_95c:
 	pop	{r0}

@@ -17,9 +17,9 @@ sub_0804CE48:
 	strh	r0, [r1, #28]
 .L_4ce5a:
 	mov	r0, sp
-	mov	r1, #182	@ 0xb6
+	mov	r1, #182
 	bl	sub_0801BC0C
-	.2byte	0x1C01
+	add	r1, r0, #0
 	cmp	r1, #0
 	bne	.L_4ce54
 	str	r1, [sp, #0]
@@ -31,14 +31,14 @@ sub_0804CE48:
 	strh	r0, [r1, #28]
 .L_4ce74:
 	mov	r0, sp
-	mov	r1, #183	@ 0xb7
+	mov	r1, #183
 	bl	sub_0801BC0C
-	.2byte	0x1C01
+	add	r1, r0, #0
 	cmp	r1, #0
 	bne	.L_4ce6e
 	add	sp, #4
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0804CE48, .-sub_0804CE48

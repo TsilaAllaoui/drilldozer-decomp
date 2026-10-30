@@ -6,17 +6,17 @@
 .thumb_func
 sub_080E0EEC:
 	push	{r4, r5, lr}
-	.2byte	0x1C0C
-	.2byte	0x1C03
-	add	r3, #120	@ 0x78
+	add	r4, r1, #0
+	add	r3, r0, #0
+	add	r3, #120
 	ldrb	r1, [r3, #0]
 	cmp	r2, r1
 	beq	.L_e0f16
 	mov	r1, #0
 	strb	r2, [r3, #0]
-	add	r0, #121	@ 0x79
+	add	r0, #121
 	strb	r1, [r0, #0]
-	.2byte	0x1C25
+	add	r5, r4, #0
 	mov	r4, #1
 .L_e0f06:
 	ldmia	r5!, {r0}

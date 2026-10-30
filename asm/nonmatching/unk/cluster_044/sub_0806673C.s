@@ -7,7 +7,7 @@
 sub_0806673C:
 	push	{lr}
 	bl	sub_0800098C
-	.2byte	0x1C02
+	add	r2, r0, #0
 	ldr	r0, [r2, #0]
 	cmp	r0, #2
 	bne	.L_6675c
@@ -25,5 +25,5 @@ sub_0806673C:
 .L_6675e:
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0806673C, .-sub_0806673C

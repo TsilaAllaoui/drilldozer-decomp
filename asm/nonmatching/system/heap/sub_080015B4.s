@@ -8,8 +8,8 @@ sub_080015B4:
 	push	{r4, r5, lr}
 	cmp	r1, #0
 	beq	.L_1610
-	.2byte	0x1C05
-	.2byte	0x1C0A
+	add	r5, r0, #0
+	add	r2, r1, #0
 	sub	r2, #16
 	mov	r0, #0
 	strh	r0, [r2, #0]
@@ -57,5 +57,5 @@ sub_080015B4:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080015B4, .-sub_080015B4

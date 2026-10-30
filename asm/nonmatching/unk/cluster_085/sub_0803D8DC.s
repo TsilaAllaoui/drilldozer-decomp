@@ -9,7 +9,7 @@ sub_0803D8DC:
 	mov	r7, r8
 	push	{r7}
 	sub	sp, #4
-	.2byte	0x1C07
+	add	r7, r0, #0
 	cmp	r1, #0
 	bne	.L_3d8f4
 	ldr	r0, [r7, #16]
@@ -19,12 +19,12 @@ sub_0803D8DC:
 	bne	.L_3d95c
 .L_3d8f4:
 	mov	r6, sp
-	.2byte	0x1C38
+	add	r0, r7, #0
 	mov	r1, sp
 	bl	sub_0803DD80
 	bl	sub_080051DC
 	mov	r5, #15
-	.2byte	0x1C2C
+	add	r4, r5, #0
 	and	r4, r0
 	mov	r0, sp
 	ldrh	r0, [r0, #0]
@@ -33,9 +33,9 @@ sub_0803D8DC:
 	mov	r1, sp
 	strh	r0, [r1, #0]
 	ldrh	r0, [r6, #2]
-	add	r0, #64	@ 0x40
+	add	r0, #64
 	strh	r0, [r6, #2]
-	mov	r0, #172	@ 0xac
+	mov	r0, #172
 	lsl	r0, r0, #1
 	add	r0, r0, r7
 	mov	r8, r0

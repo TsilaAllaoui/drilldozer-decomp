@@ -6,39 +6,35 @@
 .thumb_func
 sub_080DDE6C:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
-	mov	r0, #44	@ 0x2c
+	add	r5, r0, #0
+	mov	r0, #44
 	bl	sub_08001728
-	.2byte	0x1C04
+	add	r4, r0, #0
 	str	r5, [r4, #0]
-	.2byte	0x1C21
-	add	r1, #34	@ 0x22
-	mov	r0, #255	@ 0xff
+	add	r1, r4, #0
+	add	r1, #34
+	mov	r0, #255
 	strb	r0, [r1, #0]
-	ldr	r0, [pc, #32]	@ (0x80ddea4)
-	ldr	r1, [pc, #32]	@ (0x80ddea8)
-	.2byte	0x1C22
+	ldr	r0, .L_ddea4	@ =0x080DDF39
+	ldr	r1, .L_ddea8	@ =0x080DDF49
+	add	r2, r4, #0
 	bl	sub_0807CC74
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08010E20
-	ldr	r0, [pc, #24]	@ (0x80ddeac)
-	ldr	r2, [pc, #24]	@ (0x80ddeb0)
-	.2byte	0x1C21
+	ldr	r0, .L_ddeac	@ =0x080DDEB5
+	ldr	r2, .L_ddeb0	@ =0x00001801
+	add	r1, r4, #0
 	bl	sub_0800089C
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_ddea4:
-	.4byte	0x80DDF39
-	.align	2, 0
+	.4byte	0x080DDF39
 .L_ddea8:
-	.4byte	0x80DDF49
-	.align	2, 0
+	.4byte	0x080DDF49
 .L_ddeac:
-	.4byte	0x80DDEB5
-	.align	2, 0
+	.4byte	0x080DDEB5
 .L_ddeb0:
-	.4byte	0x1801
+	.4byte	0x00001801
 .size sub_080DDE6C, .-sub_080DDE6C

@@ -8,7 +8,7 @@ sub_080BDF30:
 	push	{r4, r5, r6, r7, lr}
 	mov	r7, r8
 	push	{r7}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	lsl	r1, r1, #24
 	lsr	r7, r1, #24
 	lsl	r2, r2, #24
@@ -18,12 +18,12 @@ sub_080BDF30:
 	mov	r8, r3
 	mov	r0, #16
 	bl	sub_080016E8
-	.2byte	0x1C05
+	add	r5, r0, #0
 	cmp	r5, #0
 	beq	.L_bdf96
-	ldr	r0, [pc, #52]	@ (0x80bdf88)
-	ldr	r2, [pc, #52]	@ (0x80bdf8c)
-	.2byte	0x1C29
+	ldr	r0, .L_bdf88	@ =0x080BDFA1
+	ldr	r2, .L_bdf8c	@ =0x000017FF
+	add	r1, r5, #0
 	bl	sub_0800089C
 	cmp	r0, #0
 	beq	.L_bdf90
@@ -33,7 +33,7 @@ sub_080BDF30:
 	str	r0, [r5, #4]
 	mov	r4, #0
 	strb	r7, [r5, #8]
-	.2byte	0x1C30
+	add	r0, r6, #0
 	mov	r1, #2
 	bl	sub_080F8700
 	strb	r0, [r5, #9]
@@ -46,14 +46,12 @@ sub_080BDF30:
 	strb	r4, [r5, #12]
 	strb	r4, [r5, #13]
 	b	.L_bdf96
-	.align	2, 0
 .L_bdf88:
-	.4byte	0x80BDFA1
-	.align	2, 0
+	.4byte	0x080BDFA1
 .L_bdf8c:
-	.4byte	0x17FF
+	.4byte	0x000017FF
 .L_bdf90:
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08001768
 .L_bdf96:
 	pop	{r3}

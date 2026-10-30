@@ -6,10 +6,10 @@
 .thumb_func
 sub_08075318:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C05
-	.2byte	0x1C0E
-	.2byte	0x1C14
-	.2byte	0x1C19
+	add	r5, r0, #0
+	add	r6, r1, #0
+	add	r4, r2, #0
+	add	r1, r3, #0
 	cmp	r1, #0
 	bge	.L_75328
 	neg	r1, r1
@@ -24,7 +24,7 @@ sub_08075318:
 	cmn	r0, r4
 	bge	.L_7533e
 .L_75338:
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0807524C
 .L_7533e:
 	ldr	r0, [r5, #0]
@@ -42,7 +42,7 @@ sub_08075318:
 	str	r1, [r5, #0]
 	b	.L_75380
 .L_7535a:
-	.2byte	0x1C01
+	add	r1, r0, #0
 	cmp	r1, r4
 	ble	.L_75372
 	cmp	r6, #0
@@ -67,5 +67,5 @@ sub_08075318:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08075318, .-sub_08075318

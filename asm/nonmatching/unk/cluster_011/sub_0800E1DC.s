@@ -7,11 +7,11 @@
 sub_0800E1DC:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C05
+	add	r5, r0, #0
 	mov	r4, sp
 	add	r4, #2
 	mov	r0, sp
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_0800E1CC
 	mov	r0, sp
 	mov	r1, #0
@@ -53,17 +53,17 @@ sub_0800E1DC:
 	ldrsh	r1, [r0, r2]
 	mov	r0, #0
 	ldrsh	r2, [r4, r0]
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0800CF5C
 	mov	r0, sp
 	mov	r2, #0
 	ldrsh	r1, [r0, r2]
 	mov	r0, #0
 	ldrsh	r2, [r4, r0]
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0800E384
 	bl	sub_08007034
-	ldr	r1, [r5, #52]	@ 0x34
+	ldr	r1, [r5, #52]
 	ldrh	r0, [r1, #20]
 	strh	r0, [r5, #22]
 	ldrh	r1, [r1, #22]

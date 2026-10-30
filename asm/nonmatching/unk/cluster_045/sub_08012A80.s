@@ -9,38 +9,38 @@ sub_08012A80:
 	mov	r7, r8
 	push	{r7}
 	sub	sp, #32
-	.2byte	0x1C05
+	add	r5, r0, #0
 	mov	r8, r1
-	.2byte	0x1C17
+	add	r7, r2, #0
 	mov	r4, #0
 	str	r4, [sp, #28]
 	add	r6, sp, #28
 	str	r4, [sp, #0]
-	mov	r1, #83	@ 0x53
-	.2byte	0x1C32
-	.2byte	0x1C3B
+	mov	r1, #83
+	add	r2, r6, #0
+	add	r3, r7, #0
 	bl	sub_08012310
-	cmp	r0, #255	@ 0xff
+	cmp	r0, #255
 	beq	.L_12b00
 	lsl	r1, r0, #24
 	lsr	r1, r1, #24
-	.2byte	0x1C28
+	add	r0, r5, #0
 	add	r2, sp, #4
 	bl	sub_08012710
 	str	r4, [sp, #28]
 	str	r4, [sp, #0]
-	.2byte	0x1C28
-	mov	r1, #84	@ 0x54
-	.2byte	0x1C32
-	.2byte	0x1C3B
+	add	r0, r5, #0
+	mov	r1, #84
+	add	r2, r6, #0
+	add	r3, r7, #0
 	bl	sub_08012310
-	cmp	r0, #255	@ 0xff
+	cmp	r0, #255
 	beq	.L_12b00
 	lsl	r1, r0, #24
 	lsr	r1, r1, #24
 	add	r4, sp, #16
-	.2byte	0x1C28
-	.2byte	0x1C22
+	add	r0, r5, #0
+	add	r2, r4, #0
 	bl	sub_08012710
 	add	r0, sp, #4
 	ldrh	r1, [r0, #2]
@@ -73,5 +73,5 @@ sub_08012A80:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08012A80, .-sub_08012A80

@@ -6,8 +6,8 @@
 .thumb_func
 sub_080F7AC0:
 	push	{r4, lr}
-	.2byte	0x1C02
-	ldr	r0, [pc, #40]	@ (0x80f7af0)
+	add	r2, r0, #0
+	ldr	r0, .L_f7af0	@ =0x03007FF0
 	ldr	r1, [r0, #0]
 	mov	r0, #1
 	ldrb	r1, [r1, #9]
@@ -28,19 +28,18 @@ sub_080F7AC0:
 	mov	r0, #15
 	strb	r0, [r2, #27]
 	b	.L_f7b0e
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_f7af0:
-	.4byte	0x3007FF0
+	.4byte	0x03007FF0
 .L_f7af4:
 	lsr	r0, r0, #25
 	cmp	r0, r4
 	bcc	.L_f7b00
-	mov	r0, #240	@ 0xf0
+	mov	r0, #240
 	strb	r0, [r2, #27]
 	b	.L_f7b0e
 .L_f7b00:
-	mov	r0, #255	@ 0xff
+	mov	r0, #255
 	strb	r0, [r2, #27]
 	ldrb	r1, [r2, #3]
 	ldrb	r3, [r2, #2]
@@ -61,7 +60,7 @@ sub_080F7AC0:
 .L_f7b20:
 	ldrb	r1, [r2, #6]
 	ldrb	r3, [r2, #10]
-	.2byte	0x1C08
+	add	r0, r1, #0
 	mul	r0, r3
 	add	r0, #15
 	asr	r0, r0, #4

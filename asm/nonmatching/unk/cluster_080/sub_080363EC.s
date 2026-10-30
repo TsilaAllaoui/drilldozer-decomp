@@ -6,7 +6,7 @@
 .thumb_func
 sub_080363EC:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	mov	r2, #0
 	bl	sub_08017D74
 	cmp	r0, #2
@@ -17,7 +17,7 @@ sub_080363EC:
 .L_363fe:
 	cmp	r0, #3
 	bne	.L_3640c
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08017DD8
 	cmp	r0, #3
 	bne	.L_363fa

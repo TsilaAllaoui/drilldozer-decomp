@@ -6,7 +6,7 @@
 .thumb_func
 sub_0803F834:
 	push	{r4, lr}
-	ldr	r4, [r0, #92]	@ 0x5c
+	ldr	r4, [r0, #92]
 	ldr	r0, [r0, #4]
 	cmp	r0, #0
 	beq	.L_3f84a
@@ -21,10 +21,10 @@ sub_0803F834:
 	ldrh	r1, [r4, #18]
 	bl	sub_080066B8
 .L_3f852:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08005560
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0803F834, .-sub_0803F834

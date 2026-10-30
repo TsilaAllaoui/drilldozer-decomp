@@ -6,25 +6,25 @@
 .thumb_func
 sub_08007D18:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldrh	r0, [r1, #4]
-	ldr	r2, [pc, #108]	@ (0x8007d8c)
-	.2byte	0x1C15
+	ldr	r2, .L_7d8c	@ =0x0000FFF0
+	add	r5, r2, #0
 	and	r5, r0
 	strh	r5, [r4, #8]
 	ldrh	r3, [r1, #6]
-	.2byte	0x1C10
+	add	r0, r2, #0
 	and	r0, r3
 	strh	r0, [r4, #10]
 	ldrh	r3, [r1, #0]
-	.2byte	0x1C10
+	add	r0, r2, #0
 	and	r0, r3
 	strh	r0, [r4, #4]
 	ldrh	r0, [r1, #2]
 	and	r2, r0
 	strh	r2, [r4, #6]
-	.2byte	0x1C20
-	add	r0, #60	@ 0x3c
+	add	r0, r4, #0
+	add	r0, #60
 	ldrb	r1, [r0, #0]
 	mov	r0, #4
 	and	r0, r1
@@ -66,9 +66,8 @@ sub_08007D18:
 	ble	.L_7dd4
 	strh	r2, [r4, #6]
 	b	.L_7dd4
-	.align	2, 0
 .L_7d8c:
-	.4byte	0xFFF0
+	.4byte	0x0000FFF0
 .L_7d90:
 	ldr	r2, [r4, #0]
 	lsl	r0, r5, #16
@@ -76,7 +75,7 @@ sub_08007D18:
 	ldrh	r5, [r2, #20]
 	mov	r3, #20
 	ldrsh	r1, [r2, r3]
-	.2byte	0x1C13
+	add	r3, r2, #0
 	cmp	r0, r1
 	bge	.L_7da4
 	strh	r5, [r4, #8]
@@ -108,7 +107,7 @@ sub_08007D18:
 	ble	.L_7dd4
 	strh	r3, [r4, #6]
 .L_7dd4:
-	ldr	r2, [r4, #64]	@ 0x40
+	ldr	r2, [r4, #64]
 	cmp	r2, #0
 	beq	.L_7de2
 	ldr	r0, [r4, #4]

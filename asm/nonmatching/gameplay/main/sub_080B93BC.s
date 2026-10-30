@@ -6,7 +6,7 @@
 .thumb_func
 sub_080B93BC:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C05
+	add	r5, r0, #0
 	lsl	r1, r1, #16
 	lsr	r4, r1, #16
 	lsl	r3, r3, #16
@@ -17,13 +17,13 @@ sub_080B93BC:
 	lsr	r0, r0, #16
 	lsl	r0, r0, #16
 	asr	r0, r0, #16
-	.2byte	0x1C31
+	add	r1, r6, #0
 	bl	sub_080F8700
-	.2byte	0x1C29
-	add	r1, #88	@ 0x58
+	add	r1, r5, #0
+	add	r1, #88
 	strh	r0, [r1, #0]
-	.2byte	0x1C28
-	add	r0, #90	@ 0x5a
+	add	r0, r5, #0
+	add	r0, #90
 	strh	r4, [r0, #0]
 	add	r0, #5
 	strb	r6, [r0, #0]

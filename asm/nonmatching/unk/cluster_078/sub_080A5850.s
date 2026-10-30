@@ -6,15 +6,15 @@
 .thumb_func
 sub_080A5850:
 	push	{lr}
-	.2byte	0x1C02
-	add	r0, #180	@ 0xb4
+	add	r2, r0, #0
+	add	r0, #180
 	ldrb	r1, [r0, #0]
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	and	r0, r1
 	cmp	r0, #0
 	beq	.L_a5870
 	mov	r3, #1
-	add	r2, #132	@ 0x84
+	add	r2, #132
 	mov	r1, #1
 .L_a5866:
 	ldmia	r2!, {r0}

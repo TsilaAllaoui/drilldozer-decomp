@@ -6,20 +6,20 @@
 .thumb_func
 sub_08044E8C:
 	push	{r4, r5, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0D
+	add	r4, r0, #0
+	add	r5, r1, #0
 	mov	r0, #4
 	ldrsh	r1, [r5, r0]
-	mov	r0, #100	@ 0x64
+	mov	r0, #100
 	mul	r0, r1
 	mov	r2, #6
 	ldrsh	r1, [r5, r2]
 	bl	sub_080F8FF0
 	ldrb	r1, [r5, #16]
 	mul	r0, r1
-	mov	r1, #100	@ 0x64
+	mov	r1, #100
 	bl	sub_080F8FF0
-	.2byte	0x1C01
+	add	r1, r0, #0
 	mov	r0, #10
 	ldrsb	r0, [r5, r0]
 	cmp	r0, #2
@@ -37,17 +37,17 @@ sub_08044E8C:
 	bhi	.L_44ed2
 	ldrh	r0, [r4, #32]
 	add	r0, r0, r1
-	strh	r0, [r4, #36]	@ 0x24
-	ldrh	r0, [r4, #34]	@ 0x22
+	strh	r0, [r4, #36]
+	ldrh	r0, [r4, #34]
 	b	.L_44eda
 .L_44ed2:
 	ldrh	r0, [r4, #32]
-	strh	r0, [r4, #36]	@ 0x24
-	ldrh	r0, [r4, #34]	@ 0x22
+	strh	r0, [r4, #36]
+	ldrh	r0, [r4, #34]
 	add	r0, r0, r1
 .L_44eda:
-	strh	r0, [r4, #38]	@ 0x26
-	.2byte	0x1C08
+	strh	r0, [r4, #38]
+	add	r0, r1, #0
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1

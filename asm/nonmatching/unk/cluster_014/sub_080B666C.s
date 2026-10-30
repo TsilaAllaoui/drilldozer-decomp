@@ -6,12 +6,12 @@
 .thumb_func
 sub_080B666C:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldrh	r0, [r4, #24]
 	cmp	r0, #0
 	beq	.L_b668a
 	ldr	r0, [r4, #28]
-	add	r0, #35	@ 0x23
+	add	r0, #35
 	ldrb	r0, [r0, #0]
 	lsl	r0, r0, #26
 	lsr	r0, r0, #27

@@ -5,9 +5,22 @@
 .type sub_080E4D00, %function
 .thumb_func
 sub_080E4D00:
-	@ Exact original ROM bytes from 0x080E4D00.
-	.byte	0x00, 0xB5, 0x04, 0x48, 0x00, 0x68, 0x00, 0x28, 0x06, 0xD0, 0x41, 0x7D, 0x48, 0x42, 0x08, 0x43
-	.byte	0xC0, 0x0F, 0x02, 0xE0, 0xF0, 0x91, 0x03, 0x02, 0x00, 0x20, 0x02, 0xBC
+	push	{lr}
+	ldr	r0, .L_e4d14	@ =0x020391F0
+	ldr	r0, [r0, #0]
+	cmp	r0, #0
+	beq	.L_e4d18
+	ldrb	r1, [r0, #21]
+	neg	r0, r1
+	orr	r0, r1
+	lsr	r0, r0, #31
+	b	.L_e4d1a
+.L_e4d14:
+	.4byte	0x020391F0
+.L_e4d18:
+	mov	r0, #0
+.L_e4d1a:
+	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080E4D00, .-sub_080E4D00

@@ -6,10 +6,10 @@
 .thumb_func
 sub_080ED06C:
 	push	{r4, r5, lr}
-	sub	sp, #36	@ 0x24
-	.2byte	0x1C04
+	sub	sp, #36
+	add	r4, r0, #0
 	mov	r1, sp
-	ldr	r0, [pc, #56]	@ (0x80ed0b0)
+	ldr	r0, .L_ed0b0	@ =0x084CDAFC
 	ldmia	r0!, {r2, r3, r5}
 	stmia	r1!, {r2, r3, r5}
 	ldmia	r0!, {r2, r3, r5}
@@ -29,15 +29,13 @@ sub_080ED06C:
 	mov	r3, #2
 	ldrsh	r2, [r0, r3]
 	add	r2, #32
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080ECFBC
-	add	sp, #36	@ 0x24
+	add	sp, #36
 	pop	{r4, r5}
 	pop	{r1}
-.L_ed0ac:
 	bx	r1
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_ed0b0:
-	.4byte	0x84CDAFC
+	.4byte	0x084CDAFC
 .size sub_080ED06C, .-sub_080ED06C

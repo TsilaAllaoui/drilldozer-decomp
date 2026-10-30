@@ -6,26 +6,26 @@
 .thumb_func
 sub_080F0408:
 	push	{r4, lr}
-	.2byte	0x1C04
-	add	r0, #92	@ 0x5c
+	add	r4, r0, #0
+	add	r0, #92
 	bl	sub_080F03E4
-	.2byte	0x1C20
-	add	r0, #96	@ 0x60
+	add	r0, r4, #0
+	add	r0, #96
 	bl	sub_080F03E4
-	.2byte	0x1C20
-	add	r0, #100	@ 0x64
+	add	r0, r4, #0
+	add	r0, #100
 	bl	sub_080F03E4
-	.2byte	0x1C20
-	add	r0, #104	@ 0x68
+	add	r0, r4, #0
+	add	r0, #104
 	bl	sub_080F03E4
-	.2byte	0x1C20
-	add	r0, #108	@ 0x6c
+	add	r0, r4, #0
+	add	r0, #108
 	bl	sub_080F03E4
-	.2byte	0x1C20
-	add	r0, #116	@ 0x74
+	add	r0, r4, #0
+	add	r0, #116
 	bl	sub_080F03E4
-	.2byte	0x1C20
-	add	r0, #112	@ 0x70
+	add	r0, r4, #0
+	add	r0, #112
 	bl	sub_080F03E4
 	pop	{r4}
 	pop	{r0}

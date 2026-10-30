@@ -7,17 +7,17 @@
 sub_0802E7C4:
 	push	{r4, r5, r6, r7, lr}
 	sub	sp, #8
-	.2byte	0x1C0F
+	add	r7, r1, #0
 	bl	sub_08011720
-	.2byte	0x1C04
+	add	r4, r0, #0
 	bl	sub_080118FC
-	.2byte	0x1C06
-	.2byte	0x1C20
+	add	r6, r0, #0
+	add	r0, r4, #0
 	bl	sub_08011AC4
-	.2byte	0x1C05
-	.2byte	0x1C20
-	.2byte	0x1C31
-	.2byte	0x1C2A
+	add	r5, r0, #0
+	add	r0, r4, #0
+	add	r1, r6, #0
+	add	r2, r5, #0
 	mov	r3, sp
 	bl	sub_0802E6C0
 	cmp	r5, #2
@@ -25,24 +25,18 @@ sub_0802E7C4:
 	cmp	r6, #4
 	bhi	.L_2e83a
 	lsl	r0, r6, #2
-	ldr	r1, [pc, #4]	@ (0x802e7fc)
+	ldr	r1, .L_2e7fc	@ =0x0802E800
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]
 	mov	pc, r0
-	.align	2, 0
 .L_2e7fc:
-	.4byte	.L_2e800
-.L_2e800:
-	.2byte	0xE814
-	.2byte	0x0802
-	.2byte	0xE82E
-	.2byte	0x0802
-	.2byte	0xE82E
-	.2byte	0x0802
-	.2byte	0xE83A
-	.2byte	0x0802
-	.2byte	0xE83A
-	.2byte	0x0802
+	.4byte	0x0802E800
+	.4byte	0x0802E814	@ case .L_2e814
+	.4byte	0x0802E82E	@ case .L_2e82e
+	.4byte	0x0802E82E	@ case .L_2e82e
+	.4byte	0x0802E83A	@ case .L_2e83a
+	.4byte	0x0802E83A	@ case .L_2e83a
+.L_2e814:
 	mov	r2, sp
 	mov	r1, #6
 	ldrsh	r0, [r2, r1]
@@ -56,6 +50,7 @@ sub_0802E7C4:
 	mov	r0, sp
 	ldrh	r0, [r0, #0]
 	b	.L_2e8c6
+.L_2e82e:
 	mov	r0, sp
 	ldrh	r0, [r0, #4]
 	strh	r0, [r7, #0]
@@ -64,7 +59,6 @@ sub_0802E7C4:
 	b	.L_2e8c6
 .L_2e83a:
 	mov	r0, sp
-.L_2e83c:
 	ldrh	r0, [r0, #6]
 	strh	r0, [r7, #0]
 	mov	r0, sp
@@ -74,26 +68,19 @@ sub_0802E7C4:
 	cmp	r6, #5
 	bhi	.L_2e8c8
 	lsl	r0, r6, #2
-	ldr	r1, [pc, #4]	@ (0x802e854)
+	ldr	r1, .L_2e854	@ =0x0802E858
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]
 	mov	pc, r0
-	.align	2, 0
 .L_2e854:
-	.4byte	.L_2e858
-.L_2e858:
-	.2byte	0xE870
-	.2byte	0x0802
-	.2byte	0xE88A
-	.2byte	0x0802
-	.2byte	0xE8A2
-	.2byte	0x0802
-	.2byte	0xE8AE
-	.2byte	0x0802
-	.2byte	0xE8A8
-	.2byte	0x0802
-	.2byte	0xE8AE
-	.2byte	0x0802
+	.4byte	0x0802E858
+	.4byte	0x0802E870	@ case .L_2e870
+	.4byte	0x0802E88A	@ case .L_2e88a
+	.4byte	0x0802E8A2	@ case .L_2e8a2
+	.4byte	0x0802E8AE	@ case .L_2e8ae
+	.4byte	0x0802E8A8	@ case .L_2e8a8
+	.4byte	0x0802E8AE	@ case .L_2e8ae
+.L_2e870:
 	mov	r2, sp
 	mov	r1, #6
 	ldrsh	r0, [r2, r1]
@@ -107,8 +94,8 @@ sub_0802E7C4:
 	mov	r0, sp
 	ldrh	r0, [r0, #0]
 	b	.L_2e8c6
+.L_2e88a:
 	mov	r2, sp
-.L_2e88c:
 	mov	r1, #6
 	ldrsh	r0, [r2, r1]
 	mov	r3, #4
@@ -120,12 +107,15 @@ sub_0802E7C4:
 	strh	r0, [r7, #0]
 	ldrh	r0, [r2, #2]
 	b	.L_2e8c6
+.L_2e8a2:
 	mov	r1, sp
 	ldrh	r0, [r1, #4]
 	b	.L_2e8b2
+.L_2e8a8:
 	mov	r1, sp
 	ldrh	r0, [r1, #4]
 	b	.L_2e8b2
+.L_2e8ae:
 	mov	r1, sp
 	ldrh	r0, [r1, #6]
 .L_2e8b2:

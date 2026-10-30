@@ -7,8 +7,8 @@
 sub_080F08E8:
 	push	{r4, r5, r6, lr}
 	sub	sp, #4
-	.2byte	0x1C0C
-	.2byte	0x1C26
+	add	r4, r1, #0
+	add	r6, r4, #0
 	ldr	r0, [r4, #4]
 	cmp	r0, #1
 	beq	.L_f094a
@@ -38,14 +38,14 @@ sub_080F08E8:
 	cmp	r2, #0
 	bne	.L_f094a
 	ldr	r0, [r4, #8]
-	cmp	r0, #248	@ 0xf8
+	cmp	r0, #248
 	beq	.L_f0942
 	ldr	r0, [r4, #12]
 	str	r5, [r0, #0]
 	ldr	r0, [r4, #16]
 	ldr	r1, [r4, #8]
 	str	r2, [sp, #0]
-	mov	r2, #255	@ 0xff
+	mov	r2, #255
 	mov	r3, #0
 	bl	sub_0800CCA4
 .L_f0942:
@@ -58,5 +58,5 @@ sub_080F08E8:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080F08E8, .-sub_080F08E8

@@ -6,7 +6,7 @@
 .thumb_func
 sub_080D35F4:
 	push	{r4, r5, r6, r7, lr}
-	.2byte	0x1C0E
+	add	r6, r1, #0
 	ldrb	r0, [r6, #16]
 	mov	r7, #12
 	cmp	r0, #0
@@ -18,24 +18,24 @@ sub_080D35F4:
 	bge	.L_d3638
 .L_d3608:
 	lsl	r1, r5, #2
-	.2byte	0x1C30
+	add	r0, r6, #0
 	add	r0, #20
 	add	r0, r0, r1
 	ldr	r2, [r0, #0]
 	cmp	r2, #0
 	beq	.L_d3632
-	.2byte	0x1C30
-	add	r0, #172	@ 0xac
+	add	r0, r6, #0
+	add	r0, #172
 	ldr	r1, [r0, #0]
 	ldrh	r0, [r1, #26]
 	ldrh	r1, [r1, #22]
 	add	r0, r0, r1
 	add	r0, #6
 	lsl	r0, r0, #16
-	ldrh	r4, [r2, #36]	@ 0x24
+	ldrh	r4, [r2, #36]
 	orr	r4, r0
-	.2byte	0x1C10
-	.2byte	0x1C21
+	add	r0, r2, #0
+	add	r1, r4, #0
 	bl	sub_080D6468
 .L_d3632:
 	add	r5, #1
@@ -45,5 +45,5 @@ sub_080D35F4:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080D35F4, .-sub_080D35F4

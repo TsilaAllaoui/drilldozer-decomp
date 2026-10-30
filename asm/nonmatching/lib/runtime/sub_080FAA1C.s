@@ -6,8 +6,8 @@
 .thumb_func
 sub_080FAA1C:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C0E
-	.2byte	0x1C05
+	add	r6, r1, #0
+	add	r5, r0, #0
 	cmp	r2, #0
 	beq	.L_faa4c
 	mov	r0, #32
@@ -16,22 +16,22 @@ sub_080FAA1C:
 	bgt	.L_faa38
 	mov	r4, #0
 	neg	r0, r0
-	.2byte	0x1C33
+	add	r3, r6, #0
 	lsr	r3, r0
 	b	.L_faa48
 .L_faa38:
-	.2byte	0x1C31
+	add	r1, r6, #0
 	lsl	r1, r0
-	.2byte	0x1C34
+	add	r4, r6, #0
 	lsr	r4, r2
-	.2byte	0x1C28
+	add	r0, r5, #0
 	lsr	r0, r2
-	.2byte	0x1C03
+	add	r3, r0, #0
 	orr	r3, r1
 .L_faa48:
-	.2byte	0x1C21
-	.2byte	0x1C18
+	add	r1, r4, #0
+	add	r0, r3, #0
 .L_faa4c:
 	pop	{r4, r5, r6, pc}
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080FAA1C, .-sub_080FAA1C

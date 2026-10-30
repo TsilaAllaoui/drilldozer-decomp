@@ -6,7 +6,7 @@
 .thumb_func
 sub_08033128:
 	push	{r4, r5, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldr	r0, [r4, #4]
 	cmp	r0, #0
 	beq	.L_33138
@@ -14,7 +14,7 @@ sub_08033128:
 	beq	.L_33146
 	b	.L_33174
 .L_33138:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0803317C
 	ldr	r0, [r4, #4]
 	add	r0, #1
@@ -32,7 +32,7 @@ sub_08033128:
 	bne	.L_33174
 	mov	r0, #2
 	bl	sub_08001B48
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08033DAC
 	mov	r0, #0
 	bl	sub_08001B34

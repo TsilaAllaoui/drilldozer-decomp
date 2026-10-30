@@ -6,31 +6,30 @@
 .thumb_func
 sub_08092AAC:
 	push	{r4, lr}
-	.2byte	0x1C02
-	.2byte	0x1C0C
+	add	r2, r0, #0
+	add	r4, r1, #0
 	ldrb	r0, [r4, #7]
 	lsl	r0, r0, #2
-	ldr	r1, [pc, #28]	@ (0x8092ad4)
+	ldr	r1, .L_92ad4	@ =0x083C8C88
 	add	r0, r0, r1
-	mov	r3, #36	@ 0x24
+	mov	r3, #36
 	ldrsh	r1, [r2, r3]
-	mov	r3, #38	@ 0x26
+	mov	r3, #38
 	ldrsh	r2, [r2, r3]
-	mov	r3, #35	@ 0x23
+	mov	r3, #35
 	bl	sub_08006CD4
 	str	r0, [r4, #0]
 	cmp	r0, #0
 	bne	.L_92ad8
 	mov	r0, #0
 	b	.L_92b2c
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_92ad4:
-	.4byte	0x83C8C88
+	.4byte	0x083C8C88
 .L_92ad8:
 	bl	sub_0801C170
 	ldr	r2, [r4, #0]
-	add	r2, #37	@ 0x25
+	add	r2, #37
 	mov	r1, #3
 	and	r0, r1
 	lsl	r0, r0, #2
@@ -54,7 +53,7 @@ sub_08092AAC:
 	mov	r0, #0
 	bl	sub_0802BBD0
 .L_92b0e:
-	.2byte	0x1C02
+	add	r2, r0, #0
 	ldr	r1, [r4, #0]
 	mov	r0, #1
 	strb	r0, [r1, #5]
@@ -71,5 +70,5 @@ sub_08092AAC:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08092AAC, .-sub_08092AAC

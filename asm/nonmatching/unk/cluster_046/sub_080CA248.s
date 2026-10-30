@@ -6,13 +6,13 @@
 .thumb_func
 sub_080CA248:
 	push	{r4, r5, r6, lr}
-	mov	r2, #70	@ 0x46
+	mov	r2, #70
 	add	r2, r2, r0
 	mov	ip, r2
-	.2byte	0x1C05
-	add	r5, #74	@ 0x4a
+	add	r5, r0, #0
+	add	r5, #74
 	mov	r4, #16
-	.2byte	0x1C0A
+	add	r2, r1, #0
 	mov	r3, #3
 .L_ca25a:
 	ldr	r1, [r2, #0]

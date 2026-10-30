@@ -7,7 +7,7 @@
 sub_080F11CC:
 	push	{r4, r5, lr}
 	sub	sp, #12
-	.2byte	0x1C0D
+	add	r5, r1, #0
 	ldr	r0, [r5, #0]
 	cmp	r0, #1
 	beq	.L_f120e
@@ -25,7 +25,7 @@ sub_080F11CC:
 	mov	r4, sp
 	mov	r1, sp
 	bl	sub_080117BC
-	.2byte	0x1C28
+	add	r0, r5, #0
 	add	r0, #20
 	mov	r1, sp
 	mov	r2, #0
@@ -53,7 +53,7 @@ sub_080F11CC:
 	strh	r1, [r0, #2]
 	ldr	r0, [r5, #8]
 	add	r4, sp, #4
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_0800E014
 	mov	r0, #4
 	ldrsh	r1, [r4, r0]

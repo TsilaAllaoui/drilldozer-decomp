@@ -6,13 +6,13 @@
 .thumb_func
 sub_08017E18:
 	push	{r4, r5, r6, r7, lr}
-	.2byte	0x1C0C
-	.2byte	0x1C15
-	.2byte	0x1C1E
+	add	r4, r1, #0
+	add	r5, r2, #0
+	add	r6, r3, #0
 	ldr	r7, [sp, #20]
 	bl	sub_08011720
-	.2byte	0x1C01
-	mov	r2, #252	@ 0xfc
+	add	r1, r0, #0
+	mov	r2, #252
 	lsl	r2, r2, #2
 	add	r0, r1, r2
 	str	r4, [r0, #0]

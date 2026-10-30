@@ -6,8 +6,8 @@
 .thumb_func
 sub_0803DA44:
 	push	{r4, lr}
-	.2byte	0x1C14
-	mov	r2, #165	@ 0xa5
+	add	r4, r2, #0
+	mov	r2, #165
 	lsl	r2, r2, #1
 	add	r2, r2, r0
 	mov	ip, r2

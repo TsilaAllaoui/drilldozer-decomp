@@ -6,14 +6,14 @@
 .thumb_func
 sub_0804F130:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldr	r0, [r4, #4]
 	ldrh	r0, [r0, #16]
-	mov	r1, #64	@ 0x40
+	mov	r1, #64
 	bl	sub_080066B8
 	ldr	r0, [r4, #8]
 	ldrh	r0, [r0, #16]
-	mov	r1, #64	@ 0x40
+	mov	r1, #64
 	bl	sub_080066B8
 	ldr	r0, [r4, #4]
 	bl	sub_08005560
@@ -22,5 +22,5 @@ sub_0804F130:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0804F130, .-sub_0804F130

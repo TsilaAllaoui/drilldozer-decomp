@@ -5,10 +5,28 @@
 .type sub_08072CFC, %function
 .thumb_func
 sub_08072CFC:
-	@ Exact original ROM bytes from 0x08072CFC.
-	.byte	0x10, 0xB5, 0x04, 0x1C, 0x50, 0x1A, 0x03, 0x1C, 0x00, 0x28, 0x00, 0xDA, 0x43, 0x42, 0xA3, 0x42
-	.byte	0x04, 0xDD, 0x8A, 0x42, 0x01, 0xDD, 0x20, 0x04, 0x01, 0xE0, 0x60, 0x42, 0x00, 0x04, 0x00, 0x14
-	.byte	0x10, 0xBC, 0x02, 0xBC
+	push	{r4, lr}
+	add	r4, r0, #0
+	sub	r0, r2, r1
+	add	r3, r0, #0
+	cmp	r0, #0
+	bge	.L_72d0a
+	neg	r3, r0
+.L_72d0a:
+	cmp	r3, r4
+	ble	.L_72d18
+	cmp	r2, r1
+	ble	.L_72d16
+	lsl	r0, r4, #16
+	b	.L_72d1a
+.L_72d16:
+	neg	r0, r4
+.L_72d18:
+	lsl	r0, r0, #16
+.L_72d1a:
+	asr	r0, r0, #16
+	pop	{r4}
+	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08072CFC, .-sub_08072CFC

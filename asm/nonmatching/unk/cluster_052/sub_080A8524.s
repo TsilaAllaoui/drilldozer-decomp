@@ -12,15 +12,15 @@ sub_080A8524:
 	push	{r5, r6, r7}
 	sub	sp, #24
 	mov	r8, r0
-	.2byte	0x1C0D
+	add	r5, r1, #0
 	mov	r0, #0
 	str	r0, [sp, #0]
 	mov	r4, r8
-	add	r4, #120	@ 0x78
+	add	r4, #120
 	ldrb	r6, [r4, #0]
-	ldr	r2, [pc, #88]	@ (0x80a8598)
+	ldr	r2, .L_a8598	@ =0x084021B0
 	mov	r0, r8
-	add	r0, #118	@ 0x76
+	add	r0, #118
 	ldrb	r1, [r0, #0]
 	lsl	r0, r1, #1
 	add	r0, r0, r1
@@ -37,23 +37,23 @@ sub_080A8524:
 	mov	r1, #1
 	str	r1, [sp, #0]
 .L_a8564:
-	ldr	r0, [pc, #52]	@ (0x80a859c)
+	ldr	r0, .L_a859c	@ =0x08402258
 	ldrb	r1, [r4, #0]
 	ldr	r0, [r0, #8]
 	lsl	r1, r1, #2
 	add	r1, r1, r0
-	ldr	r0, [r5, #52]	@ 0x34
+	ldr	r0, [r5, #52]
 	ldrb	r0, [r0, #8]
 	ldr	r1, [r1, #0]
 	lsl	r0, r0, #3
 	add	r2, r0, r1
 	ldrh	r1, [r2, #0]
-	ldr	r0, [pc, #36]	@ (0x80a85a0)
+	ldr	r0, .L_a85a0	@ =0x0000FFFC
 	cmp	r1, r0
 	bhi	.L_a85a8
 	ldrb	r1, [r2, #11]
 	mov	r3, #1
-	.2byte	0x1C18
+	add	r0, r3, #0
 	and	r0, r1
 	cmp	r0, #0
 	beq	.L_a85a4
@@ -62,22 +62,19 @@ sub_080A8524:
 	beq	.L_a85a4
 	strb	r3, [r5, #21]
 	b	.L_a85a8
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_a8598:
-	.4byte	0x84021B0
-	.align	2, 0
+	.4byte	0x084021B0
 .L_a859c:
-	.4byte	0x8402258
-	.align	2, 0
+	.4byte	0x08402258
 .L_a85a0:
-	.4byte	0xFFFC
+	.4byte	0x0000FFFC
 .L_a85a4:
 	mov	r0, #0
 	strb	r0, [r5, #21]
 .L_a85a8:
 	mov	r0, r8
-	add	r0, #118	@ 0x76
+	add	r0, #118
 	ldrb	r1, [r0, #0]
 	mov	r9, r0
 	cmp	r1, #12
@@ -86,13 +83,13 @@ sub_080A8524:
 	strb	r0, [r5, #21]
 .L_a85b8:
 	mov	r0, r8
-	add	r0, #120	@ 0x78
+	add	r0, #120
 	str	r0, [sp, #8]
-	mov	r2, #52	@ 0x34
+	mov	r2, #52
 	add	r2, r2, r5
 	mov	sl, r2
 	mov	r3, r8
-	add	r3, #84	@ 0x54
+	add	r3, #84
 	str	r3, [sp, #4]
 	ldrb	r0, [r0, #0]
 	cmp	r6, r0
@@ -109,7 +106,7 @@ sub_080A8524:
 	bge	.L_a85d4
 .L_a85e4:
 	mov	r2, r8
-	mov	r3, #38	@ 0x26
+	mov	r3, #38
 	ldrsh	r1, [r2, r3]
 	mov	r2, #18
 	ldrsh	r0, [r5, r2]
@@ -119,7 +116,7 @@ sub_080A8524:
 	mov	r7, #15
 	mov	r4, sl
 .L_a85f8:
-	.2byte	0x1FB0
+	sub	r0, r6, #6
 	cmp	r0, #1
 	bls	.L_a8618
 	cmp	r6, #3
@@ -127,11 +124,11 @@ sub_080A8524:
 	cmp	r6, #4
 	beq	.L_a8618
 	ldr	r3, [r4, #0]
-	add	r3, #37	@ 0x25
+	add	r3, #37
 	ldrb	r1, [r5, #10]
 	lsl	r1, r1, #4
 	ldrb	r2, [r3, #0]
-	.2byte	0x1C38
+	add	r0, r7, #0
 	and	r0, r2
 	orr	r0, r1
 	strb	r0, [r3, #0]
@@ -146,7 +143,7 @@ sub_080A8524:
 	mov	r7, #15
 	mov	r4, sl
 .L_a8628:
-	.2byte	0x1FB0
+	sub	r0, r6, #6
 	cmp	r0, #1
 	bls	.L_a8648
 	cmp	r6, #3
@@ -154,11 +151,11 @@ sub_080A8524:
 	cmp	r6, #4
 	beq	.L_a8648
 	ldr	r3, [r4, #0]
-	add	r3, #37	@ 0x25
+	add	r3, #37
 	ldrb	r1, [r5, #12]
 	lsl	r1, r1, #4
 	ldrb	r2, [r3, #0]
-	.2byte	0x1C38
+	add	r0, r7, #0
 	and	r0, r2
 	orr	r0, r1
 	strb	r0, [r3, #0]
@@ -170,35 +167,34 @@ sub_080A8524:
 .L_a8650:
 	mov	r6, #0
 	mov	r7, #1
-	ldr	r0, [pc, #48]	@ (0x80a8688)
+	ldr	r0, .L_a8688	@ =0x08402258
 	mov	r3, #0
 	str	r3, [sp, #12]
 	mov	r1, #0
 	str	r1, [sp, #16]
-	.2byte	0x1C03
+	add	r3, r0, #0
 	add	r3, #12
 .L_a8662:
 	ldr	r0, [sp, #16]
 	add	r0, sl
 	ldr	r4, [r0, #0]
 	mov	r0, r8
-	.2byte	0x1C21
+	add	r1, r4, #0
 	str	r3, [sp, #20]
 	bl	sub_0801AEF0
 	mov	r2, #24
 	ldrsh	r0, [r4, r2]
 	ldr	r3, [sp, #20]
-	cmp	r0, #254	@ 0xfe
+	cmp	r0, #254
 	ble	.L_a868c
 	mov	r1, #26
 	ldrsh	r0, [r4, r1]
-	cmp	r0, #254	@ 0xfe
+	cmp	r0, #254
 	ble	.L_a868c
 	strb	r7, [r4, #1]
 	b	.L_a8690
-	.align	2, 0
 .L_a8688:
-	.4byte	0x8402258
+	.4byte	0x08402258
 .L_a868c:
 	mov	r0, #0
 	strb	r0, [r4, #1]
@@ -208,19 +204,18 @@ sub_080A8524:
 	bne	.L_a86a4
 	ldr	r0, [r3, #4]
 	strb	r0, [r4, #3]
-	ldr	r2, [pc, #4]	@ (0x80a86a0)
+	ldr	r2, .L_a86a0	@ =0x08402258
 	mov	ip, r2
 	b	.L_a86ac
-	.align	2, 0
 .L_a86a0:
-	.4byte	0x8402258
+	.4byte	0x08402258
 .L_a86a4:
 	ldr	r0, [r3, #0]
 	strb	r0, [r4, #3]
-	ldr	r0, [pc, #36]	@ (0x80a86d0)
+	ldr	r0, .L_a86d0	@ =0x08402258
 	mov	ip, r0
 .L_a86ac:
-	ldr	r2, [pc, #36]	@ (0x80a86d4)
+	ldr	r2, .L_a86d4	@ =0x084021B0
 	mov	r0, r9
 	ldrb	r1, [r0, #0]
 	lsl	r0, r1, #1
@@ -237,13 +232,11 @@ sub_080A8524:
 	mov	r2, #0
 	strb	r2, [r4, #11]
 	b	.L_a86da
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_a86d0:
-	.4byte	0x8402258
-	.align	2, 0
+	.4byte	0x08402258
 .L_a86d4:
-	.4byte	0x84021B0
+	.4byte	0x084021B0
 .L_a86d8:
 	strb	r7, [r4, #11]
 .L_a86da:
@@ -263,7 +256,7 @@ sub_080A8524:
 	bne	.L_a873a
 	cmp	r6, #3
 	bne	.L_a8720
-	ldr	r0, [r5, #52]	@ 0x34
+	ldr	r0, [r5, #52]
 	ldrb	r0, [r0, #8]
 	cmp	r0, #5
 	bhi	.L_a8706
@@ -282,13 +275,13 @@ sub_080A8524:
 	strb	r7, [r4, #1]
 	strb	r7, [r4, #1]
 .L_a8716:
-	ldr	r0, [r5, #52]	@ 0x34
+	ldr	r0, [r5, #52]
 	ldrb	r0, [r0, #8]
 	cmp	r0, #4
 	bls	.L_a8728
 	b	.L_a872e
 .L_a8720:
-	ldr	r0, [r5, #52]	@ 0x34
+	ldr	r0, [r5, #52]
 	ldrb	r0, [r0, #8]
 	cmp	r0, #3
 	bhi	.L_a872e
@@ -297,8 +290,8 @@ sub_080A8524:
 	strb	r0, [r4, #3]
 	b	.L_a877a
 .L_a872e:
-	ldr	r1, [r5, #64]	@ 0x40
-	ldr	r0, [r5, #60]	@ 0x3c
+	ldr	r1, [r5, #64]
+	ldr	r0, [r5, #60]
 	ldrb	r0, [r0, #3]
 	add	r0, #1
 	strb	r0, [r1, #3]
@@ -308,11 +301,11 @@ sub_080A8524:
 	bne	.L_a8764
 	cmp	r6, #3
 	bne	.L_a877a
-	ldr	r0, [r5, #52]	@ 0x34
+	ldr	r0, [r5, #52]
 	ldrb	r0, [r0, #8]
 	cmp	r0, #2
 	bls	.L_a8752
-	ldr	r0, [r5, #60]	@ 0x3c
+	ldr	r0, [r5, #60]
 	strb	r7, [r0, #1]
 	strb	r7, [r5, #23]
 	b	.L_a877a
@@ -353,13 +346,13 @@ sub_080A8524:
 	lsl	r1, r0, #1
 	add	r1, r1, r0
 	lsl	r1, r1, #2
-	ldr	r0, [pc, #112]	@ (0x80a8800)
+	ldr	r0, .L_a8800	@ =0x084021B0
 	add	r1, r1, r0
 	ldrb	r0, [r1, #5]
 	cmp	r0, #0
 	beq	.L_a879e
 	ldrb	r1, [r4, #11]
-	.2byte	0x1C38
+	add	r0, r7, #0
 	eor	r0, r1
 	strb	r0, [r4, #11]
 .L_a879e:
@@ -373,7 +366,7 @@ sub_080A8524:
 	lsl	r0, r0, #2
 	add	r0, r0, r1
 	ldr	r1, [r0, #0]
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r2, #0
 	str	r3, [sp, #20]
 	bl	sub_08005F64
@@ -390,13 +383,13 @@ sub_080A8524:
 	bgt	.L_a87d4
 	b	.L_a8662
 .L_a87d4:
-	ldr	r2, [r5, #60]	@ 0x3c
+	ldr	r2, [r5, #60]
 	ldrb	r3, [r2, #1]
 	cmp	r3, #0
 	bne	.L_a880e
 	ldr	r0, [sp, #8]
 	ldrb	r1, [r0, #0]
-	.2byte	0x1F88
+	sub	r0, r1, #6
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
 	cmp	r0, #1
@@ -405,19 +398,18 @@ sub_080A8524:
 	lsr	r0, r0, #24
 	cmp	r0, #5
 	bne	.L_a880a
-	ldr	r0, [r5, #52]	@ 0x34
+	ldr	r0, [r5, #52]
 	ldrb	r0, [r0, #8]
 	cmp	r0, #5
 	bls	.L_a8804
 .L_a87fa:
 	strb	r3, [r2, #1]
 	b	.L_a880e
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_a8800:
-	.4byte	0x84021B0
+	.4byte	0x084021B0
 .L_a8804:
-	ldr	r0, [r5, #64]	@ 0x40
+	ldr	r0, [r5, #64]
 	ldrb	r0, [r0, #1]
 	b	.L_a880c
 .L_a880a:
@@ -425,7 +417,7 @@ sub_080A8524:
 .L_a880c:
 	strb	r0, [r2, #1]
 .L_a880e:
-	ldr	r1, [r5, #68]	@ 0x44
+	ldr	r1, [r5, #68]
 	ldrb	r2, [r1, #1]
 	cmp	r2, #0
 	bne	.L_a8826
@@ -464,10 +456,10 @@ sub_080A8524:
 	ldrb	r0, [r5, #0]
 	cmp	r0, #0
 	beq	.L_a8860
-	ldr	r0, [r5, #64]	@ 0x40
+	ldr	r0, [r5, #64]
 	mov	r1, #1
 	strb	r1, [r0, #1]
-	ldr	r0, [r5, #68]	@ 0x44
+	ldr	r0, [r5, #68]
 	strb	r1, [r0, #1]
 .L_a8860:
 	add	sp, #24

@@ -5,7 +5,24 @@
 .type sub_080F6690, %function
 .thumb_func
 sub_080F6690:
-	@ Exact original ROM bytes from 0x080F6690.
-	.byte	0xC3, 0x6A, 0x00, 0x2B, 0x0B, 0xD0, 0x41, 0x6B, 0x02, 0x6B, 0x00, 0x2A, 0x01, 0xD0, 0x51, 0x63
-	.byte	0x00, 0xE0, 0x19, 0x62, 0x00, 0x29, 0x00, 0xD0, 0x0A, 0x63, 0x00, 0x21, 0xC1, 0x62, 0x70, 0x47
+	ldr	r3, [r0, #44]
+	cmp	r3, #0
+	beq	.L_f66ae
+	ldr	r1, [r0, #52]
+	ldr	r2, [r0, #48]
+	cmp	r2, #0
+	beq	.L_f66a2
+	str	r1, [r2, #52]
+	b	.L_f66a4
+.L_f66a2:
+	str	r1, [r3, #32]
+.L_f66a4:
+	cmp	r1, #0
+	beq	.L_f66aa
+	str	r2, [r1, #48]
+.L_f66aa:
+	mov	r1, #0
+	str	r1, [r0, #44]
+.L_f66ae:
+	bx	lr
 .size sub_080F6690, .-sub_080F6690

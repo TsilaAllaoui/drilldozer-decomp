@@ -5,9 +5,20 @@
 .type sub_0807DFE8, %function
 .thumb_func
 sub_0807DFE8:
-	@ Exact original ROM bytes from 0x0807DFE8.
-	.byte	0x00, 0xB5, 0x81, 0x7F, 0x01, 0x31, 0x81, 0x77, 0x09, 0x06, 0x09, 0x0E, 0x1E, 0x29, 0x01, 0xD8
-	.byte	0x05, 0x20, 0x00, 0xE0, 0x06, 0x20, 0x02, 0xBC
+	push	{lr}
+	ldrb	r1, [r0, #30]
+	add	r1, #1
+	strb	r1, [r0, #30]
+	lsl	r1, r1, #24
+	lsr	r1, r1, #24
+	cmp	r1, #30
+	bhi	.L_7dffc
+	mov	r0, #5
+	b	.L_7dffe
+.L_7dffc:
+	mov	r0, #6
+.L_7dffe:
+	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0807DFE8, .-sub_0807DFE8

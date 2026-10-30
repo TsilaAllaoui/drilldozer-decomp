@@ -6,17 +6,17 @@
 .thumb_func
 sub_08017B6C:
 	push	{lr}
-	.2byte	0x1C01
-	mov	r2, #254	@ 0xfe
+	add	r1, r0, #0
+	mov	r2, #254
 	lsl	r2, r2, #2
 	add	r0, r1, r2
 	ldr	r0, [r0, #0]
 	cmp	r0, #1
 	beq	.L_17b80
-	add	r2, #64	@ 0x40
+	add	r2, #64
 	b	.L_17b84
 .L_17b80:
-	mov	r2, #255	@ 0xff
+	mov	r2, #255
 	lsl	r2, r2, #2
 .L_17b84:
 	add	r0, r1, r2

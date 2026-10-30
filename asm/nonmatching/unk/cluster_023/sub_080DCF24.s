@@ -6,9 +6,9 @@
 .thumb_func
 sub_080DCF24:
 	push	{r4, lr}
-	.2byte	0x1C03
-	add	r3, #124	@ 0x7c
-	add	r0, #120	@ 0x78
+	add	r3, r0, #0
+	add	r3, #124
+	add	r0, #120
 	ldrb	r2, [r0, #0]
 	eor	r2, r1
 	neg	r4, r2
@@ -18,12 +18,10 @@ sub_080DCF24:
 	ldr	r0, [r3, #4]
 	mov	r1, #0
 	mov	r2, #0
-	.2byte	0xF728
-.L_dcf40:
-	.2byte	0xFC57
-	.2byte	0x1C20
+	bl	sub_080057F0
+	add	r0, r4, #0
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080DCF24, .-sub_080DCF24

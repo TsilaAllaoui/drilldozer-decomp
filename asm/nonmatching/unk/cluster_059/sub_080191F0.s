@@ -20,22 +20,21 @@ sub_080191F0:
 	bl	sub_08019084
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
-	.2byte	0x1C03
+	add	r3, r0, #0
 	cmp	r3, #1
 	bne	.L_19220
-	ldr	r0, [pc, #20]	@ (0x801922c)
+	ldr	r0, .L_1922c	@ =0x02035454
 	ldrb	r1, [r0, #10]
-	mov	r2, #128	@ 0x80
+	mov	r2, #128
 	orr	r1, r2
 	strb	r1, [r0, #10]
 .L_19220:
-	.2byte	0x1C18
+	add	r0, r3, #0
 	add	sp, #4
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_1922c:
-	.4byte	0x2035454
+	.4byte	0x02035454
 .size sub_080191F0, .-sub_080191F0

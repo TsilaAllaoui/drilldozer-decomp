@@ -8,9 +8,7 @@ sub_080BE148:
 	push	{lr}
 	mov	r0, #0
 	mov	r1, #0
-	.2byte	0xF742
-.L_be150:
-	.2byte	0xFEEB
+	bl	sub_08000F28
 	mov	r0, #1
 	bl	sub_08019B54
 	mov	r0, #0
@@ -35,7 +33,6 @@ sub_080BE148:
 	bl	sub_08001D1C
 	mov	r0, #2
 	mov	r1, #0
-.L_be18e:
 	mov	r2, #0
 	bl	sub_08001E94
 	mov	r0, #3

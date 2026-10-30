@@ -5,10 +5,10 @@
 .type sub_0803D9C4, %function
 .thumb_func
 sub_0803D9C4:
-	.2byte	0xB510
+	push	{r4, lr}
 	mov	ip, r0
-	.2byte	0x1C0C
-	mov	r1, #165	@ 0xa5
+	add	r4, r1, #0
+	mov	r1, #165
 	lsl	r1, r1, #1
 	add	r1, ip
 	mov	r0, #0
@@ -29,7 +29,7 @@ sub_0803D9C4:
 	blt	.L_3d9fa
 	mov	r0, #0
 	str	r0, [r4, #0]
-	mov	r0, #165	@ 0xa5
+	mov	r0, #165
 	lsl	r0, r0, #1
 	add	r0, ip
 	strh	r2, [r0, #0]

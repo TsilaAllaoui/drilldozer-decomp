@@ -1,0 +1,158 @@
+.syntax divided
+.align 2, 0
+.global sub_0801B72C
+.thumb
+.type sub_0801B72C, %function
+.thumb_func
+sub_0801B72C:
+	push	{r4, r5, r6, r7, lr}
+	mov	r7, sl
+	mov	r6, r9
+	mov	r5, r8
+	push	{r5, r6, r7}
+	sub	sp, #12
+	.2byte	0x1C07
+	mov	r0, #0
+	mov	sl, r0
+	.2byte	0x1C38
+	mov	r1, sp
+	bl	sub_08017604
+	mov	r9, r0
+	.2byte	0x1C38
+	bl	sub_080176D8
+	.2byte	0x1C04
+	.2byte	0x1C38
+	bl	sub_080176FC
+	.2byte	0x1C05
+	.2byte	0x1C38
+	bl	sub_080175B8
+	.2byte	0x1C06
+	.2byte	0x1C38
+	bl	sub_080177F0
+	mov	r1, #15
+	mov	r8, r1
+	mov	r2, r9
+	and	r2, r1
+	lsl	r2, r2, #20
+	ldr	r3, [pc, #148]	@ (0x801b808)
+	ldr	r1, [sp, #8]
+	and	r1, r3
+	orr	r1, r2
+	lsl	r4, r4, #24
+	lsr	r4, r4, #16
+	ldr	r2, [pc, #140]	@ (0x801b80c)
+	and	r1, r2
+	orr	r1, r4
+	lsl	r5, r5, #24
+	lsr	r5, r5, #24
+	ldr	r2, [pc, #136]	@ (0x801b810)
+	and	r1, r2
+	orr	r1, r5
+	mov	r2, r8
+	and	r6, r2
+	lsl	r6, r6, #24
+	ldr	r2, [pc, #128]	@ (0x801b814)
+	and	r1, r2
+	orr	r1, r6
+	lsl	r0, r0, #28
+	ldr	r2, [pc, #124]	@ (0x801b818)
+	and	r1, r2
+	orr	r1, r0
+	str	r1, [sp, #8]
+	mov	r0, r9
+	cmp	r0, #2
+	beq	.L_1b842
+	ldr	r0, [pc, #112]	@ (0x801b81c)
+	ldr	r4, [r0, #0]
+	mov	r6, #63	@ 0x3f
+	.2byte	0x1C25
+	add	r5, #104	@ 0x68
+.L_1b7b2:
+	ldr	r0, [r4, #12]
+	cmp	r0, #0
+	beq	.L_1b830
+	ldrh	r2, [r4, #28]
+	mov	r3, #4
+	.2byte	0x1C18
+	and	r0, r2
+	cmp	r0, #0
+	bne	.L_1b830
+	ldrh	r1, [r4, #26]
+	.2byte	0x1C18
+	and	r0, r1
+	cmp	r0, #0
+	beq	.L_1b820
+	mov	r0, #2
+	and	r0, r2
+	cmp	r0, #0
+	bne	.L_1b820
+	.2byte	0x1C21
+	add	r1, #52	@ 0x34
+	mov	r0, sp
+	bl	sub_08012D78
+	cmp	r0, #1
+	bne	.L_1b820
+	ldrb	r0, [r5, #8]
+	mov	r1, #2
+	orr	r0, r1
+	strb	r0, [r5, #8]
+	ldr	r0, [r4, #4]
+	ldr	r2, [r0, #20]
+	.2byte	0x1C20
+	add	r1, sp, #8
+	bl	sub_080F8FBC
+	cmp	r0, #2
+	bhi	.L_1b830
+	cmp	r0, #1
+	bcc	.L_1b830
+	mov	r1, #1
+	mov	sl, r1
+	b	.L_1b830
+	lsl	r0, r0, #0
+	.align	2, 0
+.L_1b808:
+	.4byte	0xFF0FFFFF
+	.align	2, 0
+.L_1b80c:
+	.4byte	0xFFFF00FF
+	.align	2, 0
+.L_1b810:
+	.4byte	0xFFFFFF00
+	.align	2, 0
+.L_1b814:
+	.4byte	0xF0FFFFFF
+	.align	2, 0
+.L_1b818:
+	.4byte	0xFFFFFFF
+	.align	2, 0
+.L_1b81c:
+	.4byte	0x2035868
+.L_1b820:
+	ldrb	r0, [r5, #8]
+	mov	r2, #3
+	neg	r2, r2
+	.2byte	0x1C11
+	and	r0, r1
+	strb	r0, [r5, #8]
+	mov	r0, #0
+	strb	r0, [r5, #0]
+.L_1b830:
+	sub	r6, #1
+	add	r5, #252	@ 0xfc
+	add	r4, #252	@ 0xfc
+	cmp	r6, #0
+	bge	.L_1b7b2
+	.2byte	0x1C38
+	mov	r1, sl
+	bl	sub_08017790
+.L_1b842:
+	add	sp, #12
+	pop	{r3, r4, r5}
+	mov	r8, r3
+	mov	r9, r4
+	mov	sl, r5
+	pop	{r4, r5, r6, r7}
+	pop	{r0}
+	bx	r0
+	lsl	r0, r0, #0
+.size sub_0801B72C, .-sub_0801B72C

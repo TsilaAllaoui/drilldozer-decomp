@@ -7,19 +7,19 @@
 sub_080DB0D4:
 	push	{lr}
 	sub	sp, #4
-	.2byte	0x1C03
-	.2byte	0x1C0A
-	ldr	r0, [pc, #48]	@ (0x80db110)
+	add	r3, r0, #0
+	add	r2, r1, #0
+	ldr	r0, .L_db110	@ =0x08488610
 	lsl	r3, r3, #16
 	asr	r3, r3, #16
 	lsl	r2, r2, #16
 	asr	r2, r2, #16
 	mov	r1, #0
 	str	r1, [sp, #0]
-	.2byte	0x1C19
+	add	r1, r3, #0
 	mov	r3, #0
 	bl	sub_0807E46C
-	ldr	r1, [pc, #32]	@ (0x80db114)
+	ldr	r1, .L_db114	@ =0x030019FD
 	ldrb	r0, [r1, #0]
 	add	r0, #1
 	strb	r0, [r1, #0]
@@ -34,10 +34,8 @@ sub_080DB0D4:
 	add	sp, #4
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_db110:
-	.4byte	0x8488610
-	.align	2, 0
+	.4byte	0x08488610
 .L_db114:
-	.4byte	0x30019FD
+	.4byte	0x030019FD
 .size sub_080DB0D4, .-sub_080DB0D4

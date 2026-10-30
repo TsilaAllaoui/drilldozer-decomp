@@ -6,9 +6,9 @@
 .thumb_func
 sub_08075C60:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C0D
+	add	r5, r1, #0
 	bl	sub_08011720
-	.2byte	0x1C06
+	add	r6, r0, #0
 	mov	r4, #0
 	bl	sub_080119C8
 	cmp	r5, #1
@@ -25,28 +25,28 @@ sub_08075C60:
 	beq	.L_75ca0
 	b	.L_75ca2
 .L_75c88:
-	mov	r4, #88	@ 0x58
+	mov	r4, #88
 	cmp	r0, #2
 	bne	.L_75ca2
-	mov	r4, #89	@ 0x59
+	mov	r4, #89
 	b	.L_75ca2
 .L_75c92:
-	mov	r4, #91	@ 0x5b
+	mov	r4, #91
 	cmp	r0, #2
 	bne	.L_75ca2
-	mov	r4, #90	@ 0x5a
+	mov	r4, #90
 	b	.L_75ca2
 .L_75c9c:
-	mov	r4, #92	@ 0x5c
+	mov	r4, #92
 	b	.L_75ca2
 .L_75ca0:
-	mov	r4, #93	@ 0x5d
+	mov	r4, #93
 .L_75ca2:
-	.2byte	0x1C30
-	.2byte	0x1C21
+	add	r0, r6, #0
+	add	r1, r4, #0
 	bl	sub_080213F4
-	.2byte	0x1C30
-	.2byte	0x1C29
+	add	r0, r6, #0
+	add	r1, r5, #0
 	bl	sub_0802144C
 	pop	{r4, r5, r6}
 	pop	{r0}

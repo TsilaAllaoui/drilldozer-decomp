@@ -6,8 +6,8 @@
 .thumb_func
 sub_080A50E4:
 	push	{r4, r5, r6, r7, lr}
-	.2byte	0x1C07
-	add	r0, #216	@ 0xd8
+	add	r7, r0, #0
+	add	r0, #216
 	ldrh	r0, [r0, #0]
 	mov	r1, #2
 	bl	sub_080066B8
@@ -15,15 +15,15 @@ sub_080A50E4:
 .L_a50f4:
 	mov	r5, #0
 	lsl	r0, r1, #3
-	.2byte	0x1C4E
+	add	r6, r1, #1
 	sub	r0, r0, r1
 	lsl	r0, r0, #3
-	add	r0, #208	@ 0xd0
+	add	r0, #208
 	add	r4, r7, r0
 .L_a5102:
 	cmp	r5, #0
 	bne	.L_a510e
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0805D10C
 	b	.L_a5118
 .L_a510e:
@@ -36,7 +36,7 @@ sub_080A50E4:
 	add	r5, #1
 	cmp	r5, #6
 	ble	.L_a5102
-	.2byte	0x1C31
+	add	r1, r6, #0
 	cmp	r1, #2
 	ble	.L_a50f4
 	pop	{r4, r5, r6, r7}

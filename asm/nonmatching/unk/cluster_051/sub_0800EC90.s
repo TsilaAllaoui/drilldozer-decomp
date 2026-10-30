@@ -6,26 +6,26 @@
 .thumb_func
 sub_0800EC90:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C06
+	add	r6, r0, #0
 	lsl	r1, r1, #16
 	lsr	r1, r1, #16
 	lsl	r2, r2, #16
 	lsr	r2, r2, #16
-	ldr	r0, [r6, #52]	@ 0x34
-	ldr	r0, [r0, #64]	@ 0x40
+	ldr	r0, [r6, #52]
+	ldr	r0, [r0, #64]
 	cmp	r0, #0
 	beq	.L_ecc2
 	lsl	r5, r1, #16
 	asr	r5, r5, #16
 	lsl	r4, r2, #16
 	asr	r4, r4, #16
-	.2byte	0x1C29
-	.2byte	0x1C22
+	add	r1, r5, #0
+	add	r2, r4, #0
 	mov	r3, #0
 	bl	sub_08016034
-	ldr	r0, [r6, #52]	@ 0x34
-	.2byte	0x1C29
-	.2byte	0x1C22
+	ldr	r0, [r6, #52]
+	add	r1, r5, #0
+	add	r2, r4, #0
 	mov	r3, #0
 	bl	sub_080160D4
 .L_ecc2:

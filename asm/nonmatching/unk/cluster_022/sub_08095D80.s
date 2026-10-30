@@ -6,39 +6,30 @@
 .thumb_func
 sub_08095D80:
 	push	{r4, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0B
+	add	r4, r0, #0
+	add	r3, r1, #0
 	mov	r0, #0
 	strh	r0, [r3, #2]
 	strh	r0, [r3, #6]
 	cmp	r4, #7
 	bhi	.L_95e4a
 	lsl	r0, r4, #2
-	ldr	r1, [pc, #8]	@ (0x8095d9c)
+	ldr	r1, .L_95d9c	@ =0x08095DA0
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]
 	mov	pc, r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_95d9c:
-	.4byte	.L_95da0
-.L_95da0:
-	ldrb	r0, [r0, r7]
-	lsr	r1, r1, #32
-	ldrb	r0, [r0, r7]
-	lsr	r1, r1, #32
-	ldrb	r0, [r3, r7]
-	lsr	r1, r1, #32
-	ldrb	r0, [r3, r7]
-	lsr	r1, r1, #32
-	ldrb	r0, [r6, r7]
-	lsr	r1, r1, #32
-	ldrsh	r2, [r1, r0]
-	lsr	r1, r1, #32
-	ldrsh	r4, [r4, r0]
-	lsr	r1, r1, #32
-	ldrsh	r6, [r7, r0]
-	lsr	r1, r1, #32
+	.4byte	0x08095DA0
+	.4byte	0x08095DC0	@ case .L_95dc0
+	.4byte	0x08095DC0	@ case .L_95dc0
+	.4byte	0x08095DD8	@ case .L_95dd8
+	.4byte	0x08095DD8	@ case .L_95dd8
+	.4byte	0x08095DF0	@ case .L_95df0
+	.4byte	0x08095E0A	@ case .L_95e0a
+	.4byte	0x08095E24	@ case .L_95e24
+	.4byte	0x08095E3E	@ case .L_95e3e
+.L_95dc0:
 	mov	r0, #0
 	str	r0, [r3, #0]
 	ldr	r0, [r3, #4]
@@ -51,6 +42,7 @@ sub_08095D80:
 	cmp	r4, #0
 	bne	.L_95e4e
 	b	.L_95e1e
+.L_95dd8:
 	ldr	r0, [r3, #0]
 	add	r0, r0, r2
 	str	r0, [r3, #0]
@@ -63,6 +55,7 @@ sub_08095D80:
 	cmp	r4, #2
 	bne	.L_95e4e
 	b	.L_95e38
+.L_95df0:
 	ldr	r0, [r3, #0]
 	add	r0, r0, r2
 	str	r0, [r3, #0]
@@ -76,6 +69,7 @@ sub_08095D80:
 	neg	r0, r0
 	strh	r0, [r3, #2]
 	b	.L_95e16
+.L_95e0a:
 	ldr	r0, [r3, #0]
 	add	r0, r0, r2
 	str	r0, [r3, #0]
@@ -91,6 +85,7 @@ sub_08095D80:
 	neg	r0, r0
 	strh	r0, [r3, #6]
 	b	.L_95e4e
+.L_95e24:
 	ldr	r0, [r3, #0]
 	add	r0, r0, r2
 	str	r0, [r3, #0]
@@ -105,6 +100,7 @@ sub_08095D80:
 	neg	r0, r0
 	strh	r0, [r3, #2]
 	b	.L_95e4e
+.L_95e3e:
 	ldr	r0, [r3, #0]
 	add	r0, r0, r2
 	str	r0, [r3, #0]

@@ -8,9 +8,9 @@ sub_080FA204:
 	push	{r4, r5, r6, r7, lr}
 	mov	r7, r8
 	push	{r7}
-	.2byte	0x1C06
-	.2byte	0x1C0F
-	.2byte	0x1C15
+	add	r6, r0, #0
+	add	r7, r1, #0
+	add	r5, r2, #0
 	mov	r0, #0
 	ldr	r2, [r6, #0]
 	cmp	r2, #1
@@ -20,7 +20,7 @@ sub_080FA204:
 	cmp	r0, #0
 	beq	.L_fa222
 .L_fa21e:
-	.2byte	0x1C30
+	add	r0, r6, #0
 	b	.L_fa378
 .L_fa222:
 	mov	r1, #0
@@ -49,11 +49,10 @@ sub_080FA204:
 	ldr	r0, [r7, #4]
 	cmp	r1, r0
 	beq	.L_fa21e
-	ldr	r0, [pc, #0]	@ (0x80fa254)
+	ldr	r0, .L_fa254	@ =0x030042D8
 	b	.L_fa378
-	.align	2, 0
 .L_fa254:
-	.4byte	0x30042D8
+	.4byte	0x030042D8
 .L_fa258:
 	mov	r1, #0
 	cmp	r0, #4
@@ -76,8 +75,8 @@ sub_080FA204:
 .L_fa278:
 	cmp	r0, #0
 	beq	.L_fa21e
-	.2byte	0x1C29
-	.2byte	0x1C30
+	add	r1, r5, #0
+	add	r0, r6, #0
 	ldmia	r0!, {r2, r3, r4}
 	stmia	r1!, {r2, r3, r4}
 	ldr	r0, [r0, #0]
@@ -97,7 +96,7 @@ sub_080FA204:
 	cmp	r1, #0
 	beq	.L_fa2a4
 .L_fa2a0:
-	.2byte	0x1C38
+	add	r0, r7, #0
 	b	.L_fa378
 .L_fa2a4:
 	ldr	r1, [r6, #8]
@@ -121,14 +120,14 @@ sub_080FA204:
 	sub	r3, r1, r3
 .L_fa2c8:
 	sub	r3, #1
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r7, ip
 	and	r0, r7
 	lsr	r4, r4, #1
 	orr	r4, r0
 	cmp	r3, #0
 	bne	.L_fa2c8
-	.2byte	0x1C0B
+	add	r3, r1, #0
 .L_fa2da:
 	cmp	r3, r1
 	ble	.L_fa30a
@@ -137,14 +136,14 @@ sub_080FA204:
 	sub	r1, r3, r1
 .L_fa2e4:
 	sub	r1, #1
-	.2byte	0x1C10
+	add	r0, r2, #0
 	mov	r7, ip
 	and	r0, r7
 	lsr	r2, r2, #1
 	orr	r2, r0
 	cmp	r1, #0
 	bne	.L_fa2e4
-	.2byte	0x1C19
+	add	r1, r3, #0
 	b	.L_fa30a
 .L_fa2f8:
 	cmp	r1, r3
@@ -152,7 +151,7 @@ sub_080FA204:
 	mov	r4, #0
 	b	.L_fa304
 .L_fa300:
-	.2byte	0x1C19
+	add	r1, r3, #0
 	mov	r2, #0
 .L_fa304:
 	ldr	r6, [r6, #4]
@@ -183,8 +182,8 @@ sub_080FA204:
 	str	r0, [r5, #12]
 .L_fa330:
 	ldr	r1, [r5, #12]
-	.2byte	0x1E48
-	ldr	r2, [pc, #24]	@ (0x80fa350)
+	sub	r0, r1, #1
+	ldr	r2, .L_fa350	@ =0x3FFFFFFE
 	cmp	r0, r2
 	bhi	.L_fa35c
 .L_fa33a:
@@ -193,12 +192,11 @@ sub_080FA204:
 	ldr	r1, [r5, #8]
 	sub	r1, #1
 	str	r1, [r5, #8]
-	.2byte	0x1C01
-	.2byte	0x1E48
+	add	r1, r0, #0
+	sub	r0, r1, #1
 	cmp	r0, r2
 	bls	.L_fa33a
 	b	.L_fa35c
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_fa350:
 	.4byte	0x3FFFFFFE
@@ -222,10 +220,10 @@ sub_080FA204:
 	add	r0, #1
 	str	r0, [r5, #8]
 .L_fa376:
-	.2byte	0x1C28
+	add	r0, r5, #0
 .L_fa378:
 	pop	{r3}
 	mov	r8, r3
 	pop	{r4, r5, r6, r7, pc}
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080FA204, .-sub_080FA204

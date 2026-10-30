@@ -6,8 +6,8 @@
 .thumb_func
 sub_0800D79C:
 	push	{lr}
-	.2byte	0x1C0B
-	ldr	r1, [pc, #28]	@ (0x800d7c0)
+	add	r3, r1, #0
+	ldr	r1, .L_d7c0	@ =0x08221DE4
 	ldrb	r0, [r0, #18]
 	lsl	r0, r0, #2
 	add	r0, r0, r1
@@ -24,9 +24,8 @@ sub_0800D79C:
 	ldrh	r0, [r1, #0]
 	lsl	r0, r0, #23
 	b	.L_d7d4
-	.align	2, 0
 .L_d7c0:
-	.4byte	0x8221DE4
+	.4byte	0x08221DE4
 .L_d7c4:
 	ldrb	r0, [r1, #1]
 	lsl	r0, r0, #28

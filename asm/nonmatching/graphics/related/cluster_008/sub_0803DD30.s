@@ -7,9 +7,9 @@
 sub_0803DD30:
 	push	{r4, r5, r6, lr}
 	sub	sp, #8
-	.2byte	0x1C06
-	.2byte	0x1C0C
-	.2byte	0x1C15
+	add	r6, r0, #0
+	add	r4, r1, #0
+	add	r5, r2, #0
 	ldr	r0, [sp, #24]
 	lsl	r4, r4, #24
 	lsr	r4, r4, #24
@@ -22,9 +22,9 @@ sub_0803DD30:
 	lsr	r0, r0, #24
 	str	r0, [sp, #4]
 	mov	r0, #3
-	.2byte	0x1C31
-	.2byte	0x1C22
-	.2byte	0x1C2B
+	add	r1, r6, #0
+	add	r2, r4, #0
+	add	r3, r5, #0
 	bl	sub_080022B0
 	add	sp, #8
 	pop	{r4, r5, r6}

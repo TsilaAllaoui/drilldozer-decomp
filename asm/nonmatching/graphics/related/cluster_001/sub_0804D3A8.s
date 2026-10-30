@@ -10,7 +10,7 @@ sub_0804D3A8:
 	mov	r6, r8
 	push	{r6, r7}
 	mov	r9, r0
-	.2byte	0x1C0E
+	add	r6, r1, #0
 	mov	r7, #0
 	mov	r8, r6
 .L_4d3b8:
@@ -23,7 +23,7 @@ sub_0804D3A8:
 	ldrh	r1, [r6, #24]
 	lsr	r1, r1, #8
 	bl	sub_080050F4
-	.2byte	0x1C04
+	add	r4, r0, #0
 	lsl	r4, r4, #16
 	lsr	r4, r4, #16
 	ldrh	r0, [r6, #26]
@@ -48,7 +48,7 @@ sub_0804D3A8:
 	lsl	r0, r0, #16
 	asr	r0, r0, #16
 	mov	r2, r9
-	ldrh	r2, [r2, #34]	@ 0x22
+	ldrh	r2, [r2, #34]
 	add	r0, r0, r2
 	strh	r0, [r1, #22]
 	add	r7, #1

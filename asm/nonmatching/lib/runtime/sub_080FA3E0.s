@@ -9,15 +9,15 @@ sub_080FA3E0:
 	mov	r7, r9
 	mov	r6, r8
 	push	{r6, r7}
-	sub	sp, #56	@ 0x38
-	str	r0, [sp, #48]	@ 0x30
-	str	r1, [sp, #52]	@ 0x34
-	add	r0, sp, #48	@ 0x30
+	sub	sp, #56
+	str	r0, [sp, #48]
+	str	r1, [sp, #52]
+	add	r0, sp, #48
 	mov	r1, sp
 	bl	sub_080FA188
-	add	r0, sp, #52	@ 0x34
+	add	r0, sp, #52
 	add	r4, sp, #16
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_080FA188
 	mov	r7, sp
 	add	r0, sp, #32
@@ -73,12 +73,11 @@ sub_080FA3E0:
 	cmp	r0, #0
 	beq	.L_fa48e
 .L_fa45a:
-	ldr	r0, [pc, #4]	@ (0x80fa460)
+	ldr	r0, .L_fa460	@ =0x030042D8
 	b	.L_fa532
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_fa460:
-	.4byte	0x30042D8
+	.4byte	0x030042D8
 .L_fa464:
 	mov	r2, #0
 	cmp	r1, #2
@@ -114,7 +113,7 @@ sub_080FA3E0:
 	orr	r1, r0
 	lsr	r1, r1, #31
 	str	r1, [sp, #20]
-	.2byte	0x1C20
+	add	r0, r4, #0
 	b	.L_fa532
 .L_fa4a0:
 	ldr	r0, [r7, #12]
@@ -122,30 +121,30 @@ sub_080FA3E0:
 	ldr	r2, [sp, #28]
 	mov	r3, #0
 	bl	sub_080F918C
-	.2byte	0x1C0A
-	.2byte	0x1C15
-	.2byte	0x1C06
+	add	r2, r1, #0
+	add	r5, r2, #0
+	add	r6, r0, #0
 	ldr	r4, [r7, #8]
 	ldr	r0, [sp, #24]
 	add	r4, r4, r0
-	str	r4, [sp, #40]	@ 0x28
+	str	r4, [sp, #40]
 	ldr	r1, [r7, #4]
 	ldr	r0, [sp, #20]
 	eor	r1, r0
 	neg	r0, r1
 	orr	r0, r1
 	lsr	r0, r0, #31
-	str	r0, [sp, #36]	@ 0x24
+	str	r0, [sp, #36]
 	add	r4, #2
-	str	r4, [sp, #40]	@ 0x28
+	str	r4, [sp, #40]
 	cmp	r2, #0
 	bge	.L_fa4ec
 	mov	r2, #1
-	mov	r1, #128	@ 0x80
+	mov	r1, #128
 	lsl	r1, r1, #24
 .L_fa4d6:
 	add	r4, #1
-	.2byte	0x1C28
+	add	r0, r5, #0
 	and	r0, r2
 	cmp	r0, #0
 	beq	.L_fa4e4
@@ -155,20 +154,20 @@ sub_080FA3E0:
 	lsr	r5, r5, #1
 	cmp	r5, #0
 	blt	.L_fa4d6
-	str	r4, [sp, #40]	@ 0x28
+	str	r4, [sp, #40]
 .L_fa4ec:
-	ldr	r0, [pc, #80]	@ (0x80fa540)
+	ldr	r0, .L_fa540	@ =0x3FFFFFFF
 	cmp	r5, r0
 	bhi	.L_fa512
-	mov	r4, #128	@ 0x80
+	mov	r4, #128
 	lsl	r4, r4, #24
 	mov	r3, #1
-	.2byte	0x1C02
-	ldr	r1, [sp, #40]	@ 0x28
+	add	r2, r0, #0
+	ldr	r1, [sp, #40]
 .L_fa4fc:
 	sub	r1, #1
 	lsl	r5, r5, #1
-	.2byte	0x1C30
+	add	r0, r6, #0
 	and	r0, r4
 	cmp	r0, #0
 	beq	.L_fa50a
@@ -177,34 +176,33 @@ sub_080FA3E0:
 	lsl	r6, r6, #1
 	cmp	r5, r2
 	bls	.L_fa4fc
-	str	r1, [sp, #40]	@ 0x28
+	str	r1, [sp, #40]
 .L_fa512:
-	mov	r0, #127	@ 0x7f
+	mov	r0, #127
 	and	r0, r5
-	cmp	r0, #64	@ 0x40
+	cmp	r0, #64
 	bne	.L_fa528
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	and	r0, r5
 	cmp	r0, #0
 	bne	.L_fa526
 	cmp	r6, #0
 	beq	.L_fa528
 .L_fa526:
-	add	r5, #64	@ 0x40
+	add	r5, #64
 .L_fa528:
-	str	r5, [sp, #44]	@ 0x2c
+	str	r5, [sp, #44]
 	mov	r0, #3
 	mov	r1, r8
 	str	r0, [r1, #0]
 	mov	r0, r9
 .L_fa532:
 	bl	sub_080FA0D0
-	add	sp, #56	@ 0x38
+	add	sp, #56
 	pop	{r3, r4}
 	mov	r8, r3
 	mov	r9, r4
 	pop	{r4, r5, r6, r7, pc}
-	.align	2, 0
 .L_fa540:
 	.4byte	0x3FFFFFFF
 .size sub_080FA3E0, .-sub_080FA3E0

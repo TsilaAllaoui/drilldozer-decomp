@@ -5,6 +5,12 @@
 .type sub_0802B8E0, %function
 .thumb_func
 sub_0802B8E0:
-	@ Exact original ROM bytes from 0x0802B8E0.
-	.byte	0x02, 0x48, 0x81, 0x79, 0x02, 0x22, 0x11, 0x43, 0x81, 0x71, 0x70, 0x47, 0xA4, 0x58, 0x03, 0x02
+	ldr	r0, .L_2b8ec	@ =0x020358A4
+	ldrb	r1, [r0, #6]
+	mov	r2, #2
+	orr	r1, r2
+	strb	r1, [r0, #6]
+	bx	lr
+.L_2b8ec:
+	.4byte	0x020358A4
 .size sub_0802B8E0, .-sub_0802B8E0

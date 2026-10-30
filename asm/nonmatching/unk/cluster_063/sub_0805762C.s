@@ -7,7 +7,7 @@
 sub_0805762C:
 	push	{r4, r5, lr}
 	mov	ip, r0
-	.2byte	0x1C0C
+	add	r4, r1, #0
 	mov	r1, #0
 	cmp	r4, #0
 	blt	.L_57654
@@ -48,28 +48,28 @@ sub_0805762C:
 	beq	.L_5769a
 	b	.L_576f4
 .L_57676:
-	mov	r1, #179	@ 0xb3
+	mov	r1, #179
 	lsl	r1, r1, #1
 	add	r1, ip
 	ldrh	r0, [r1, #0]
 	sub	r0, #1
 	b	.L_576f2
 .L_57682:
-	mov	r1, #179	@ 0xb3
+	mov	r1, #179
 	lsl	r1, r1, #1
 	add	r1, ip
 	ldrh	r0, [r1, #0]
 	add	r0, #1
 	b	.L_576f2
 .L_5768e:
-	mov	r1, #177	@ 0xb1
+	mov	r1, #177
 	lsl	r1, r1, #1
 	add	r1, ip
 	ldrh	r0, [r1, #0]
 	sub	r0, #1
 	b	.L_576f2
 .L_5769a:
-	mov	r1, #177	@ 0xb1
+	mov	r1, #177
 	lsl	r1, r1, #1
 	add	r1, ip
 	ldrh	r0, [r1, #0]
@@ -97,25 +97,25 @@ sub_0805762C:
 	beq	.L_576e8
 	b	.L_576f4
 .L_576ca:
-	mov	r1, #179	@ 0xb3
+	mov	r1, #179
 	lsl	r1, r1, #1
 	add	r1, ip
 	ldrh	r0, [r1, #0]
 	add	r0, r0, r2
 	b	.L_576f2
 .L_576d6:
-	mov	r1, #179	@ 0xb3
+	mov	r1, #179
 	lsl	r1, r1, #1
 	b	.L_576ec
 .L_576dc:
-	mov	r1, #177	@ 0xb1
+	mov	r1, #177
 	lsl	r1, r1, #1
 	add	r1, ip
 	ldrh	r0, [r1, #0]
 	add	r0, r0, r2
 	b	.L_576f2
 .L_576e8:
-	mov	r1, #177	@ 0xb1
+	mov	r1, #177
 	lsl	r1, r1, #1
 .L_576ec:
 	add	r1, ip
@@ -127,5 +127,5 @@ sub_0805762C:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0805762C, .-sub_0805762C

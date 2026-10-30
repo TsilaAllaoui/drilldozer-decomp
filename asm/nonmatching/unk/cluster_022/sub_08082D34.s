@@ -7,18 +7,18 @@
 sub_08082D34:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C04
-	.2byte	0x1C0D
+	add	r4, r0, #0
+	add	r5, r1, #0
 	cmp	r5, #0
 	beq	.L_82d44
 	cmp	r5, #2
 	bne	.L_82d5c
 .L_82d44:
 	ldr	r0, [r4, #12]
-	mov	r2, #36	@ 0x24
+	mov	r2, #36
 	ldrsh	r1, [r4, r2]
 	sub	r1, #8
-	mov	r3, #38	@ 0x26
+	mov	r3, #38
 	ldrsh	r2, [r4, r3]
 	sub	r2, #8
 	mov	r3, #0
@@ -26,7 +26,7 @@ sub_08082D34:
 	mov	r3, #1
 	bl	sub_0800ECC8
 .L_82d5c:
-	.2byte	0x1E68
+	sub	r0, r5, #1
 	cmp	r0, #1
 	bhi	.L_82d6a
 	ldr	r0, [r4, #12]
@@ -37,5 +37,5 @@ sub_08082D34:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08082D34, .-sub_08082D34

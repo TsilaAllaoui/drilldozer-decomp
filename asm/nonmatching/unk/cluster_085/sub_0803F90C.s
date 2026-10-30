@@ -7,8 +7,8 @@
 sub_0803F90C:
 	push	{lr}
 	mov	r2, #1
-	.2byte	0x1C01
-	add	r1, #168	@ 0xa8
+	add	r1, r0, #0
+	add	r1, #168
 .L_3f914:
 	ldr	r0, [r1, #0]
 	cmp	r0, #0

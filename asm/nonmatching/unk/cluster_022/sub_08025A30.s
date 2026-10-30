@@ -16,25 +16,25 @@ sub_08025A30:
 	lsl	r7, r2, #16
 	mov	r5, #1
 .L_25a44:
-	ldr	r0, [pc, #84]	@ (0x8025a9c)
+	ldr	r0, .L_25a9c	@ =0x08241090
 	mov	r2, r8
 	asr	r1, r2, #16
 	asr	r2, r7, #16
-	mov	r3, #90	@ 0x5a
+	mov	r3, #90
 	bl	sub_080054D8
-	.2byte	0x1C04
+	add	r4, r0, #0
 	strb	r6, [r4, #5]
 	mov	r1, #0
 	bl	sub_08005580
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #0
 	mov	r2, #0
 	bl	sub_080057F0
 	strb	r6, [r4, #1]
 	mov	r0, #10
 	bl	sub_080128B0
-	.2byte	0x1C23
-	add	r3, #37	@ 0x25
+	add	r3, r4, #0
+	add	r3, #37
 	lsl	r0, r0, #4
 	ldrb	r2, [r3, #0]
 	mov	r1, #15
@@ -55,8 +55,7 @@ sub_08025A30:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_25a9c:
-	.4byte	0x8241090
+	.4byte	0x08241090
 .size sub_08025A30, .-sub_08025A30

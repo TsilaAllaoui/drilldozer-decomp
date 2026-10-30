@@ -6,7 +6,7 @@
 .thumb_func
 sub_080198B8:
 	push	{r4, lr}
-	ldr	r2, [pc, #68]	@ (0x8019900)
+	ldr	r2, .L_19900	@ =0x02035454
 	ldrb	r4, [r2, #10]
 	lsl	r0, r4, #30
 	cmp	r0, #0
@@ -17,8 +17,8 @@ sub_080198B8:
 	cmp	r0, #4
 	bne	.L_19908
 	ldrb	r1, [r2, #7]
-	mov	r3, #127	@ 0x7f
-	.2byte	0x1C18
+	mov	r3, #127
+	add	r0, r3, #0
 	and	r0, r1
 	strb	r0, [r2, #7]
 	mov	r0, #0
@@ -27,42 +27,39 @@ sub_080198B8:
 	and	r0, r4
 	strb	r0, [r2, #10]
 	ldr	r0, [r2, #8]
-	ldr	r1, [pc, #28]	@ (0x8019904)
+	ldr	r1, .L_19904	@ =0xFFFE0FFF
 	and	r0, r1
 	str	r0, [r2, #8]
 	ldrb	r1, [r2, #10]
 	lsr	r0, r1, #7
 	cmp	r0, #1
 	bne	.L_19918
-	.2byte	0x1C18
+	add	r0, r3, #0
 	and	r0, r1
 	strb	r0, [r2, #10]
 	mov	r0, #1
 	bl	sub_08019B54
 	b	.L_19918
-	.align	2, 0
 .L_19900:
-	.4byte	0x2035454
-	.align	2, 0
+	.4byte	0x02035454
 .L_19904:
 	.4byte	0xFFFE0FFF
 .L_19908:
-	.2byte	0x3001
+	add	r0, #1
 	mov	r1, #31
 	and	r0, r1
 	lsl	r0, r0, #12
-	ldr	r1, [pc, #8]	@ (0x801991c)
+	ldr	r1, .L_1991c	@ =0xFFFE0FFF
 	and	r1, r3
 	orr	r1, r0
 	str	r1, [r2, #8]
 .L_19918:
 	mov	r0, #1
 	b	.L_19922
-	.align	2, 0
 .L_1991c:
 	.4byte	0xFFFE0FFF
 .L_19920:
-	.2byte	0x2000
+	mov	r0, #0
 .L_19922:
 	pop	{r4}
 	pop	{r1}

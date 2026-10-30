@@ -7,19 +7,18 @@
 sub_080DE628:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C03
+	add	r3, r0, #0
 	add	r0, #32
 	mov	r5, #0
 	ldrsb	r5, [r0, r5]
 	cmp	r1, #0
 	bne	.L_de6d0
-	.2byte	0x1C1C
-	add	r4, #33	@ 0x21
+	add	r4, r3, #0
+	add	r4, #33
 	ldrb	r0, [r4, #0]
 	cmp	r0, #1
 	beq	.L_de656
 	cmp	r0, #1
-.L_de644:
 	bgt	.L_de64c
 	cmp	r0, #0
 	beq	.L_de652
@@ -29,7 +28,7 @@ sub_080DE628:
 	beq	.L_de670
 	b	.L_de674
 .L_de652:
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	b	.L_de672
 .L_de656:
 	ldrh	r0, [r3, #30]
@@ -37,7 +36,7 @@ sub_080DE628:
 	strh	r0, [r3, #30]
 	lsl	r0, r0, #16
 	asr	r0, r0, #16
-	mov	r2, #128	@ 0x80
+	mov	r2, #128
 	neg	r2, r2
 	cmp	r0, r2
 	bgt	.L_de674
@@ -46,7 +45,7 @@ sub_080DE628:
 	strb	r0, [r4, #0]
 	b	.L_de674
 .L_de670:
-	ldr	r0, [pc, #64]	@ (0x80de6b4)
+	ldr	r0, .L_de6b4	@ =0x0000FF80
 .L_de672:
 	strh	r0, [r3, #30]
 .L_de674:
@@ -61,12 +60,11 @@ sub_080DE628:
 	strh	r2, [r3, #28]
 	lsl	r0, r2, #16
 	asr	r0, r0, #16
-.L_de688:
-	cmp	r0, #255	@ 0xff
+	cmp	r0, #255
 	ble	.L_de6d0
 	cmp	r1, #0
 	bne	.L_de696
-	ldr	r4, [pc, #36]	@ (0x80de6b8)
+	ldr	r4, .L_de6b8	@ =0xFFFFFF00
 	add	r0, r2, r4
 	strh	r0, [r3, #28]
 .L_de696:
@@ -74,7 +72,7 @@ sub_080DE628:
 	ldrsh	r0, [r3, r2]
 	cmp	r0, #0
 	ble	.L_de6bc
-	.2byte	0x1C1A
+	add	r2, r3, #0
 	add	r2, #32
 	ldrb	r0, [r2, #0]
 	add	r0, #1
@@ -85,14 +83,12 @@ sub_080DE628:
 	ble	.L_de6d0
 	mov	r0, #0
 	b	.L_de6ce
-	.align	2, 0
 .L_de6b4:
-	.4byte	0xFF80
-	.align	2, 0
+	.4byte	0x0000FF80
 .L_de6b8:
 	.4byte	0xFFFFFF00
 .L_de6bc:
-	.2byte	0x1C1A
+	add	r2, r3, #0
 	add	r2, #32
 	ldrb	r0, [r2, #0]
 	sub	r0, #1
@@ -104,7 +100,7 @@ sub_080DE628:
 .L_de6ce:
 	strb	r0, [r2, #0]
 .L_de6d0:
-	.2byte	0x1C1C
+	add	r4, r3, #0
 	add	r4, #32
 	mov	r0, #0
 	ldrsb	r0, [r4, r0]
@@ -117,11 +113,11 @@ sub_080DE628:
 	mov	r1, #0
 	mov	r2, #2
 	bl	sub_0800D79C
-	.2byte	0x1C01
+	add	r1, r0, #0
 	mov	r0, #0
 	ldrsb	r0, [r4, r0]
 	lsl	r0, r0, #8
-	ldr	r2, [pc, #24]	@ (0x80de70c)
+	ldr	r2, .L_de70c	@ =0x0848E780
 	add	r0, r0, r2
 	mov	r2, #2
 	str	r2, [sp, #0]
@@ -133,8 +129,7 @@ sub_080DE628:
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_de70c:
-	.4byte	0x848E780
+	.4byte	0x0848E780
 .size sub_080DE628, .-sub_080DE628

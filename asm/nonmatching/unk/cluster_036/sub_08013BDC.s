@@ -11,8 +11,8 @@ sub_08013BDC:
 	push	{r6, r7}
 	sub	sp, #16
 	mov	r8, r0
-	.2byte	0x1C1C
-	ldr	r0, [sp, #44]	@ 0x2c
+	add	r4, r3, #0
+	ldr	r0, [sp, #44]
 	mov	r9, r0
 	lsl	r1, r1, #16
 	asr	r6, r1, #16
@@ -28,11 +28,11 @@ sub_08013BDC:
 	asr	r0, r0, #16
 	str	r0, [sp, #0]
 	add	r0, sp, #4
-	.2byte	0x1C31
-	.2byte	0x1C3A
+	add	r1, r6, #0
+	add	r2, r7, #0
 	bl	sub_08012B98
 	add	r5, sp, #12
-	.2byte	0x1C28
+	add	r0, r5, #0
 	add	r1, sp, #4
 	mov	r2, r8
 	bl	sub_08013BB4
@@ -58,5 +58,5 @@ sub_08013BDC:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08013BDC, .-sub_08013BDC

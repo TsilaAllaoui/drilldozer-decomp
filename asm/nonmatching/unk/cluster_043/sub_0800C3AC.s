@@ -6,7 +6,7 @@
 .thumb_func
 sub_0800C3AC:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	ldrb	r0, [r4, #7]
 	cmp	r0, #0
 	beq	.L_c3bc
@@ -14,7 +14,7 @@ sub_0800C3AC:
 	beq	.L_c3cc
 	b	.L_c3e0
 .L_c3bc:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_0800C220
 	bl	sub_0800701C
 	bl	sub_0801D174
@@ -36,5 +36,5 @@ sub_0800C3AC:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0800C3AC, .-sub_0800C3AC

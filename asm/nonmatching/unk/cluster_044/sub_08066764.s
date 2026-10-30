@@ -7,7 +7,7 @@
 sub_08066764:
 	push	{lr}
 	bl	sub_0800098C
-	.2byte	0x1C01
+	add	r1, r0, #0
 	ldr	r0, [r1, #0]
 	cmp	r0, #3
 	bne	.L_66782

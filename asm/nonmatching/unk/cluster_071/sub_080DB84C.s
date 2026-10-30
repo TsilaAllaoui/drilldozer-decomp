@@ -6,23 +6,23 @@
 .thumb_func
 sub_080DB84C:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C02
+	add	r2, r0, #0
 	ldr	r0, [r1, #28]
 	cmp	r0, #0
 	ble	.L_db876
 	sub	r0, #1
 	str	r0, [r1, #28]
 	ldr	r4, [r2, #12]
-	mov	r0, #36	@ 0x24
+	mov	r0, #36
 	ldrsh	r5, [r2, r0]
-	mov	r0, #38	@ 0x26
+	mov	r0, #38
 	ldrsh	r6, [r2, r0]
 	ldr	r0, [r1, #12]
 	bl	sub_08030410
-	.2byte	0x1C03
-	.2byte	0x1C20
-	.2byte	0x1C29
-	.2byte	0x1C32
+	add	r3, r0, #0
+	add	r0, r4, #0
+	add	r1, r5, #0
+	add	r2, r6, #0
 	bl	sub_0802B728
 .L_db876:
 	pop	{r4, r5, r6}

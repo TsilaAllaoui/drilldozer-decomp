@@ -10,13 +10,13 @@ sub_080ED6AC:
 	mov	r6, r9
 	mov	r5, r8
 	push	{r5, r6, r7}
-	.2byte	0x1C05
+	add	r5, r0, #0
 	mov	r8, r1
 	bl	sub_08019B88
 	lsl	r0, r0, #24
 	cmp	r0, #0
 	beq	.L_ed6ca
-	mov	r0, #255	@ 0xff
+	mov	r0, #255
 	mov	r1, r8
 	strb	r0, [r1, #0]
 .L_ed6ca:
@@ -26,9 +26,9 @@ sub_080ED6AC:
 	beq	.L_ed6f4
 	cmp	r0, #1
 	beq	.L_ed794
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08000990
-	ldr	r1, [pc, #16]	@ (0x80ed6f0)
+	ldr	r1, .L_ed6f0	@ =0x00001802
 	cmp	r0, r1
 	beq	.L_ed6e4
 	b	.L_ed956
@@ -38,20 +38,19 @@ sub_080ED6AC:
 	add	r0, r8
 	mov	r9, r0
 	b	.L_ed922
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_ed6f0:
-	.4byte	0x1802
+	.4byte	0x00001802
 .L_ed6f4:
 	mov	r7, #0
 	mov	r5, r8
 	add	r5, #28
 	mov	r4, r8
 .L_ed6fc:
-	.2byte	0x1C38
+	add	r0, r7, #0
 	cmp	r7, #0
 	bge	.L_ed704
-	.2byte	0x1CF8
+	add	r0, r7, #3
 .L_ed704:
 	asr	r6, r0, #2
 	lsl	r0, r6, #5
@@ -61,27 +60,27 @@ sub_080ED6AC:
 	strh	r0, [r4, #18]
 	mov	r0, #18
 	ldrsh	r1, [r4, r0]
-	.2byte	0x1C08
+	add	r0, r1, #0
 	cmp	r1, #0
 	bge	.L_ed71c
-	add	r0, #255	@ 0xff
+	add	r0, #255
 .L_ed71c:
 	asr	r0, r0, #8
 	lsl	r0, r0, #8
 	sub	r0, r1, r0
 	strh	r0, [r4, #18]
 	strb	r2, [r4, #12]
-	sub	r0, #64	@ 0x40
+	sub	r0, #64
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
-	cmp	r0, #128	@ 0x80
+	cmp	r0, #128
 	bhi	.L_ed734
 	mov	r0, #1
 	strb	r0, [r4, #12]
 .L_ed734:
 	mov	r1, #18
 	ldrsh	r0, [r4, r1]
-	cmp	r0, #128	@ 0x80
+	cmp	r0, #128
 	bne	.L_ed740
 	mov	r0, #2
 	strb	r0, [r4, #12]
@@ -90,9 +89,7 @@ sub_080ED6AC:
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
 	mov	r1, #1
-	.2byte	0xF00A
-.L_ed74c:
-	.2byte	0xFFDD
+	bl	sub_080F8708
 	strh	r0, [r4, #16]
 	lsl	r1, r6, #2
 	sub	r1, r7, r1
@@ -171,7 +168,7 @@ sub_080ED6AC:
 	add	r0, #10
 	cmp	r1, r0
 	ble	.L_ed7fe
-	.2byte	0x1C08
+	add	r0, r1, #0
 	mov	r1, #3
 	bl	sub_080F90BC
 	lsl	r0, r0, #16
@@ -315,7 +312,7 @@ sub_080ED6AC:
 	add	sl, r0
 	add	r5, #20
 	add	r6, #20
-	mov	r0, #155	@ 0x9b
+	mov	r0, #155
 	lsl	r0, r0, #2
 	add	r0, r9
 	cmp	r6, r0
@@ -353,7 +350,7 @@ sub_080ED6AC:
 	ble	.L_ed922
 	mov	r0, r8
 	bl	sub_080ED5B0
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0800090C
 	mov	r0, #0
 	mov	r1, r8

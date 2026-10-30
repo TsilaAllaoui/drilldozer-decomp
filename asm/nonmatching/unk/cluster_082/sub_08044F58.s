@@ -6,8 +6,8 @@
 .thumb_func
 sub_08044F58:
 	push	{r4, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0A
+	add	r4, r0, #0
+	add	r2, r1, #0
 	cmp	r2, #0
 	ble	.L_44f74
 	mov	r1, #4
@@ -32,7 +32,7 @@ sub_08044F58:
 	add	r0, r0, r2
 .L_44f86:
 	strh	r0, [r4, #4]
-	mov	r0, #167	@ 0xa7
+	mov	r0, #167
 	bl	sub_08029E54
 	mov	r3, #4
 	ldrsh	r0, [r4, r3]

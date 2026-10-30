@@ -10,7 +10,7 @@ sub_08003E34:
 	lsr	r0, r0, #24
 	lsl	r1, r1, #24
 	lsr	r5, r1, #24
-	ldr	r6, [pc, #48]	@ (0x8003e70)
+	ldr	r6, .L_3e70	@ =0x020212A8
 	lsl	r1, r0, #1
 	add	r1, r1, r0
 	lsl	r4, r1, #2
@@ -23,7 +23,7 @@ sub_08003E34:
 	mov	r2, #0
 	cmp	r2, r3
 	bge	.L_3e6a
-	.2byte	0x1C30
+	add	r0, r6, #0
 	add	r0, #8
 	add	r1, r4, r0
 .L_3e5e:
@@ -37,7 +37,6 @@ sub_08003E34:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_3e70:
-	.4byte	0x20212A8
+	.4byte	0x020212A8
 .size sub_08003E34, .-sub_08003E34

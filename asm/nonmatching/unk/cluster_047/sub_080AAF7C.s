@@ -7,9 +7,9 @@
 sub_080AAF7C:
 	push	{r4, lr}
 	mov	ip, r1
-	ldr	r2, [pc, #100]	@ (0x80aafe8)
+	ldr	r2, .L_aafe8	@ =0x0840A6D8
 	mov	r0, ip
-	add	r0, #49	@ 0x31
+	add	r0, #49
 	ldrb	r0, [r0, #0]
 	lsl	r0, r0, #25
 	lsr	r0, r0, #31
@@ -27,17 +27,17 @@ sub_080AAF7C:
 	lsl	r0, r0, #3
 	add	r1, r0, r1
 	ldrh	r3, [r1, #0]
-	ldr	r2, [pc, #64]	@ (0x80aafec)
+	ldr	r2, .L_aafec	@ =0xFFFF0002
 	add	r0, r3, r2
 	cmp	r0, #1
 	bhi	.L_aafb6
-	.2byte	0x1C08
+	add	r0, r1, #0
 	sub	r0, #8
 	ldrh	r3, [r0, #0]
 .L_aafb6:
 	mov	r0, ip
 	ldr	r2, [r0, #4]
-	ldr	r1, [pc, #52]	@ (0x80aaff0)
+	ldr	r1, .L_aaff0	@ =0x08407CBC
 	lsl	r0, r3, #1
 	add	r0, r0, r1
 	ldrh	r0, [r0, #0]
@@ -60,14 +60,11 @@ sub_080AAF7C:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_aafe8:
-	.4byte	0x840A6D8
-	.align	2, 0
+	.4byte	0x0840A6D8
 .L_aafec:
 	.4byte	0xFFFF0002
-	.align	2, 0
 .L_aaff0:
-	.4byte	0x8407CBC
+	.4byte	0x08407CBC
 .size sub_080AAF7C, .-sub_080AAF7C

@@ -22,45 +22,45 @@ sub_080483B0:
 	asr	r4, r3, #16
 	lsl	r0, r0, #16
 	asr	r5, r0, #16
-	.2byte	0x1C20
-	.2byte	0x1C29
+	add	r0, r4, #0
+	add	r1, r5, #0
 	bl	sub_08048600
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
 	mov	r9, r0
-	.2byte	0x1C20
+	add	r0, r4, #0
 	cmp	r4, #0
 	bge	.L_483e8
 	neg	r0, r4
 .L_483e8:
-	.2byte	0x1C29
+	add	r1, r5, #0
 	cmp	r5, #0
 	bge	.L_483f0
 	neg	r1, r5
 .L_483f0:
 	bl	sub_08048390
 	lsl	r0, r0, #8
-	.2byte	0x1C31
+	add	r1, r6, #0
 	bl	sub_080F8FF0
-	.2byte	0x1C06
-	.2byte	0x1C20
+	add	r6, r0, #0
+	add	r0, r4, #0
 	cmp	r4, #0
 	bge	.L_48406
 	neg	r0, r4
 .L_48406:
 	lsl	r0, r0, #16
-	.2byte	0x1C31
+	add	r1, r6, #0
 	bl	sub_080F8FF0
-	.2byte	0x1C07
+	add	r7, r0, #0
 	mov	r0, r8
 	str	r7, [r0, #0]
-	.2byte	0x1C28
+	add	r0, r5, #0
 	cmp	r5, #0
 	bge	.L_4841c
 	neg	r0, r5
 .L_4841c:
 	lsl	r0, r0, #16
-	.2byte	0x1C31
+	add	r1, r6, #0
 	bl	sub_080F8FF0
 	mov	r1, r8
 	str	r0, [r1, #4]
@@ -79,7 +79,7 @@ sub_080483B0:
 	ldr	r0, [sp, #28]
 	mov	r1, r9
 	strh	r1, [r0, #0]
-	.2byte	0x1C30
+	add	r0, r6, #0
 	pop	{r3, r4}
 	mov	r8, r3
 	mov	r9, r4

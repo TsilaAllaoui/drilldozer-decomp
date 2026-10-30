@@ -12,16 +12,16 @@ sub_0803A2B8:
 	push	{r5, r6, r7}
 	sub	sp, #28
 	mov	sl, r0
-	.2byte	0x1C0C
-	.2byte	0x1C20
+	add	r4, r1, #0
+	add	r0, r4, #0
 	bl	sub_0800C1F4
 	add	r6, sp, #12
-	.2byte	0x1C20
-	.2byte	0x1C31
+	add	r0, r4, #0
+	add	r1, r6, #0
 	bl	sub_0800E014
 	add	r7, sp, #20
-	.2byte	0x1C20
-	.2byte	0x1C39
+	add	r0, r4, #0
+	add	r1, r7, #0
 	bl	sub_0800FCD8
 	mov	r5, sp
 	add	r5, #5
@@ -30,22 +30,22 @@ sub_0803A2B8:
 	mov	r0, sp
 	add	r0, #7
 	str	r0, [sp, #0]
-	.2byte	0x1C20
+	add	r0, r4, #0
 	add	r1, sp, #4
-	.2byte	0x1C2A
+	add	r2, r5, #0
 	bl	sub_0800C1A4
 	add	r0, sp, #8
 	mov	r9, r0
 	mov	r1, #10
 	add	r1, sp
 	mov	r8, r1
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, r9
 	mov	r2, r8
 	bl	sub_0801174C
 	mov	r2, sl
 	ldrb	r0, [r2, #12]
-	.2byte	0x1C39
+	add	r1, r7, #0
 	cmp	r0, #1
 	beq	.L_3a36c
 	cmp	r0, #1
@@ -54,10 +54,10 @@ sub_0803A2B8:
 	bne	.L_3a400
 	mov	r0, #0
 	ldrsb	r0, [r5, r0]
-	mov	r6, #35	@ 0x23
+	mov	r6, #35
 	cmp	r0, #2
 	bne	.L_3a32c
-	mov	r6, #33	@ 0x21
+	mov	r6, #33
 .L_3a32c:
 	mov	r0, #0
 	ldrsb	r0, [r5, r0]
@@ -67,18 +67,18 @@ sub_0803A2B8:
 	asr	r1, r1, #24
 	bl	sub_0803A62C
 	bl	sub_080219D0
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #0
 	mov	r2, #0
 	bl	sub_08021488
-	.2byte	0x1C20
-	.2byte	0x1C31
+	add	r0, r4, #0
+	add	r1, r6, #0
 	bl	sub_0802140C
 	bl	sub_08029FEC
 	lsl	r0, r0, #24
 	cmp	r0, #0
 	bne	.L_3a362
-	mov	r0, #209	@ 0xd1
+	mov	r0, #209
 	bl	sub_08029E54
 .L_3a362:
 	mov	r3, sl
@@ -100,12 +100,12 @@ sub_0803A2B8:
 	ldrsh	r3, [r0, r2]
 	mov	r2, #4
 	ldrsh	r0, [r6, r2]
-	sub	r0, #48	@ 0x30
+	sub	r0, #48
 	cmp	r3, r0
 	blt	.L_3a396
 	mov	r2, #6
 	ldrsh	r0, [r6, r2]
-	add	r0, #48	@ 0x30
+	add	r0, #48
 	cmp	r3, r0
 	ble	.L_3a39c
 .L_3a396:
@@ -125,8 +125,8 @@ sub_0803A2B8:
 	ble	.L_3a3b2
 	neg	r5, r5
 .L_3a3b2:
-	.2byte	0x1C20
-	.2byte	0x1C29
+	add	r0, r4, #0
+	add	r1, r5, #0
 	mov	r2, #0
 	bl	sub_0803044C
 	b	.L_3a416
@@ -136,12 +136,12 @@ sub_0803A2B8:
 	ldrsh	r2, [r3, r0]
 	mov	r1, #0
 	ldrsh	r0, [r6, r1]
-	sub	r0, #48	@ 0x30
+	sub	r0, #48
 	cmp	r2, r0
 	blt	.L_3a3d8
 	mov	r3, #2
 	ldrsh	r0, [r6, r3]
-	add	r0, #48	@ 0x30
+	add	r0, #48
 	cmp	r2, r0
 	ble	.L_3a3de
 .L_3a3d8:
@@ -161,17 +161,17 @@ sub_0803A2B8:
 	ble	.L_3a3f4
 	neg	r5, r5
 .L_3a3f4:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #0
-	.2byte	0x1C2A
+	add	r2, r5, #0
 	bl	sub_0803044C
 	b	.L_3a416
 .L_3a400:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #3
 	mov	r2, #2
 	bl	sub_08021488
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #1
 	bl	sub_080118BC
 	mov	r0, #1

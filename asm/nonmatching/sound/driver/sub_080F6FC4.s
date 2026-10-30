@@ -7,8 +7,8 @@
 sub_080F6FC4:
 	push	{lr}
 	lsl	r0, r0, #16
-	ldr	r2, [pc, #28]	@ (0x80f6fe8)
-	ldr	r1, [pc, #32]	@ (0x80f6fec)
+	ldr	r2, .L_f6fe8	@ =0x0850797C
+	ldr	r1, .L_f6fec	@ =0x085079B8
 	lsr	r0, r0, #13
 	add	r0, r0, r1
 	ldrh	r3, [r0, #4]
@@ -18,20 +18,18 @@ sub_080F6FC4:
 	add	r1, r1, r2
 	ldr	r2, [r1, #0]
 	ldr	r1, [r0, #0]
-	.2byte	0x1C10
+	add	r0, r2, #0
 	bl	sub_080F7728
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_f6fe8:
-	.4byte	0x850797C
-	.align	2, 0
+	.4byte	0x0850797C
 .L_f6fec:
-	.4byte	0x85079B8
+	.4byte	0x085079B8
 	push	{lr}
 	lsl	r0, r0, #16
-	ldr	r2, [pc, #36]	@ (0x80f701c)
-	ldr	r1, [pc, #40]	@ (0x80f7020)
+	ldr	r2, [pc, #36]	@ =0x0850797C
+	ldr	r1, [pc, #40]	@ =0x085079B8
 	lsr	r0, r0, #13
 	add	r0, r0, r1
 	ldrh	r3, [r0, #4]
@@ -44,17 +42,15 @@ sub_080F6FC4:
 	ldr	r2, [r0, #0]
 	cmp	r3, r2
 	beq	.L_f7024
-	.2byte	0x1C08
-	.2byte	0x1C11
+	add	r0, r1, #0
+	add	r1, r2, #0
 	bl	sub_080F7728
 	b	.L_f7038
-	lsl	r0, r0, #0
 	.align	2, 0
-.L_f701c:
-	.4byte	0x850797C
-	.align	2, 0
-.L_f7020:
-	.4byte	0x85079B8
+	ldrb	r4, [r7, #5]
+	lsr	r0, r2, #1
+	ldrb	r0, [r7, #6]
+	lsr	r0, r2, #1
 .L_f7024:
 	ldr	r2, [r1, #4]
 	ldrh	r0, [r1, #4]
@@ -63,16 +59,16 @@ sub_080F6FC4:
 	cmp	r2, #0
 	bge	.L_f7038
 .L_f7030:
-	.2byte	0x1C08
-	.2byte	0x1C19
+	add	r0, r1, #0
+	add	r1, r3, #0
 	bl	sub_080F7728
 .L_f7038:
 	pop	{r0}
 	bx	r0
 	push	{lr}
 	lsl	r0, r0, #16
-	ldr	r2, [pc, #36]	@ (0x80f7068)
-	ldr	r1, [pc, #40]	@ (0x80f706c)
+	ldr	r2, [pc, #36]	@ =0x0850797C
+	ldr	r1, [pc, #40]	@ =0x085079B8
 	lsr	r0, r0, #13
 	add	r0, r0, r1
 	ldrh	r3, [r0, #4]
@@ -85,30 +81,28 @@ sub_080F6FC4:
 	ldr	r2, [r0, #0]
 	cmp	r3, r2
 	beq	.L_f7070
-	.2byte	0x1C08
-	.2byte	0x1C11
+	add	r0, r1, #0
+	add	r1, r2, #0
 	bl	sub_080F7728
 	b	.L_f708c
-	lsl	r0, r0, #0
 	.align	2, 0
-.L_f7068:
-	.4byte	0x850797C
-	.align	2, 0
-.L_f706c:
-	.4byte	0x85079B8
+	ldrb	r4, [r7, #5]
+	lsr	r0, r2, #1
+	ldrb	r0, [r7, #6]
+	lsr	r0, r2, #1
 .L_f7070:
 	ldr	r2, [r1, #4]
 	ldrh	r0, [r1, #4]
 	cmp	r0, #0
 	bne	.L_f7082
-	.2byte	0x1C08
-	.2byte	0x1C19
+	add	r0, r1, #0
+	add	r1, r3, #0
 	bl	sub_080F7728
 	b	.L_f708c
 .L_f7082:
 	cmp	r2, #0
 	bge	.L_f708c
-	.2byte	0x1C08
+	add	r0, r1, #0
 	bl	sub_080F6EC8
 .L_f708c:
 	pop	{r0}

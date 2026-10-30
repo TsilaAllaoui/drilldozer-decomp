@@ -10,19 +10,19 @@ sub_0802FC7C:
 	push	{r6}
 	sub	sp, #8
 	mov	r8, r1
-	.2byte	0x1C15
-	.2byte	0x1C1E
+	add	r5, r2, #0
+	add	r6, r3, #0
 	bl	sub_080560D0
-	.2byte	0x1C04
-	.2byte	0x1C29
+	add	r4, r0, #0
+	add	r1, r5, #0
 	bl	sub_08011834
-	.2byte	0x1C20
-	.2byte	0x1C31
+	add	r0, r4, #0
+	add	r1, r6, #0
 	bl	sub_08011840
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, sp
 	bl	sub_08011824
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, sp
 	mov	r2, r8
 	bl	sub_0802F86C

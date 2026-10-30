@@ -9,52 +9,51 @@ sub_080359A4:
 	mov	r7, r8
 	push	{r7}
 	sub	sp, #12
-	.2byte	0x1C06
-	.2byte	0x1C0F
+	add	r6, r0, #0
+	add	r7, r1, #0
 	mov	r8, r2
-	.2byte	0x1C1C
-	ldr	r0, [r6, #48]	@ 0x30
+	add	r4, r3, #0
+	ldr	r0, [r6, #48]
 	lsl	r3, r7, #24
 	lsr	r3, r3, #24
 	add	r1, sp, #4
 	str	r1, [sp, #0]
-	.2byte	0x1C21
-.L_359c0:
-	mov	r2, #255	@ 0xff
+	add	r1, r4, #0
+	mov	r2, #255
 	bl	sub_0800DA20
-	.2byte	0x1C05
+	add	r5, r0, #0
 	cmp	r5, #0
 	beq	.L_359dc
-	ldr	r0, [r6, #48]	@ 0x30
-	.2byte	0x1C21
+	ldr	r0, [r6, #48]
+	add	r1, r4, #0
 	mov	r2, #1
 	bl	sub_0800D390
-	.2byte	0x1C04
+	add	r4, r0, #0
 	cmp	r4, #1
 	bne	.L_359e0
 .L_359dc:
 	mov	r0, #0
 	b	.L_35a08
 .L_359e0:
-	.2byte	0x1C38
+	add	r0, r7, #0
 	mov	r1, r8
-	.2byte	0x1C2A
+	add	r2, r5, #0
 	bl	sub_08035A14
-	.2byte	0x1C04
-	ldr	r0, [sp, #36]	@ 0x24
+	add	r4, r0, #0
+	ldr	r0, [sp, #36]
 	cmp	r0, #0
 	bne	.L_35a06
 	cmp	r4, #2
 	bne	.L_35a06
 	add	r0, sp, #4
 	str	r0, [sp, #0]
-	.2byte	0x1C30
-	.2byte	0x1C39
+	add	r0, r6, #0
+	add	r1, r7, #0
 	mov	r2, r8
-	.2byte	0x1C2B
+	add	r3, r5, #0
 	bl	sub_0803606C
 .L_35a06:
-	.2byte	0x1C20
+	add	r0, r4, #0
 .L_35a08:
 	add	sp, #12
 	pop	{r3}

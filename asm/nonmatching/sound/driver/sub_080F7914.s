@@ -6,7 +6,7 @@
 .thumb_func
 sub_080F7914:
 	push	{r4, lr}
-	.2byte	0x1C0A
+	add	r2, r1, #0
 	mov	r0, #1
 	ldrb	r1, [r2, #0]
 	and	r0, r1
@@ -14,7 +14,7 @@ sub_080F7914:
 	beq	.L_f7978
 	ldrb	r3, [r2, #19]
 	ldrb	r1, [r2, #18]
-	.2byte	0x1C18
+	add	r0, r3, #0
 	mul	r0, r1
 	lsr	r3, r0, #5
 	ldrb	r4, [r2, #24]
@@ -22,7 +22,7 @@ sub_080F7914:
 	bne	.L_f793c
 	mov	r0, #22
 	ldrsb	r0, [r2, r0]
-	add	r0, #128	@ 0x80
+	add	r0, #128
 	mul	r0, r3
 	lsr	r3, r0, #7
 .L_f793c:
@@ -38,23 +38,23 @@ sub_080F7914:
 	ldrsb	r0, [r2, r0]
 	add	r1, r1, r0
 .L_f7952:
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	neg	r0, r0
 	cmp	r1, r0
 	bge	.L_f795e
-	.2byte	0x1C01
+	add	r1, r0, #0
 	b	.L_f7964
 .L_f795e:
-	cmp	r1, #127	@ 0x7f
+	cmp	r1, #127
 	ble	.L_f7964
-	mov	r1, #127	@ 0x7f
+	mov	r1, #127
 .L_f7964:
-	.2byte	0x1C08
-	add	r0, #128	@ 0x80
+	add	r0, r1, #0
+	add	r0, #128
 	mul	r0, r3
 	lsr	r0, r0, #8
 	strb	r0, [r2, #16]
-	mov	r0, #127	@ 0x7f
+	mov	r0, #127
 	sub	r0, r0, r1
 	mul	r0, r3
 	lsr	r0, r0, #8
@@ -63,7 +63,7 @@ sub_080F7914:
 	ldrb	r1, [r2, #0]
 	mov	r0, #4
 	and	r0, r1
-	.2byte	0x1C0B
+	add	r3, r1, #0
 	cmp	r0, #0
 	beq	.L_f79bc
 	mov	r0, #14
@@ -96,7 +96,7 @@ sub_080F7914:
 	strb	r0, [r2, #8]
 	strb	r1, [r2, #9]
 .L_f79bc:
-	mov	r0, #250	@ 0xfa
+	mov	r0, #250
 	and	r0, r3
 	strb	r0, [r2, #0]
 	pop	{r4}

@@ -12,10 +12,10 @@ sub_080C1EF0:
 	bls	.L_c1efc
 	mov	r1, #0
 .L_c1efc:
-	.2byte	0x1C02
-	add	r2, #179	@ 0xb3
+	add	r2, r0, #0
+	add	r2, #179
 	strb	r1, [r2, #0]
-	ldr	r0, [r0, #124]	@ 0x7c
+	ldr	r0, [r0, #124]
 	mov	r1, #0
 	mov	r2, #0
 	bl	sub_080057F0

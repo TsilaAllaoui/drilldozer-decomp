@@ -24,9 +24,9 @@ sub_080199F0:
 	mov	r6, #0
 	cmp	r6, ip
 	bcs	.L_19a76
-	ldr	r0, [pc, #112]	@ (0x8019a88)
+	ldr	r0, .L_19a88	@ =0x02035464
 	mov	sl, r0
-	ldr	r1, [pc, #112]	@ (0x8019a8c)
+	ldr	r1, .L_19a8c	@ =0x02035054
 	mov	r9, r1
 .L_19a1e:
 	mov	r0, r8
@@ -61,14 +61,14 @@ sub_080199F0:
 	lsl	r1, r1, #17
 	lsr	r1, r1, #27
 	sub	r1, r1, r3
-	.2byte	0x1C08
+	add	r0, r1, #0
 	mul	r0, r7
 	asr	r0, r0, #4
 	add	r3, r3, r0
 	lsl	r3, r3, #10
 	orr	r4, r3
 	strh	r4, [r5, #0]
-	.2byte	0x1C70
+	add	r0, r6, #1
 	lsl	r0, r0, #16
 	lsr	r6, r0, #16
 	cmp	r6, ip
@@ -82,11 +82,9 @@ sub_080199F0:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_19a88:
-	.4byte	0x2035464
-	.align	2, 0
+	.4byte	0x02035464
 .L_19a8c:
-	.4byte	0x2035054
+	.4byte	0x02035054
 .size sub_080199F0, .-sub_080199F0

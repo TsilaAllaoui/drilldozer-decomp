@@ -7,13 +7,13 @@
 sub_080BDBCC:
 	push	{r4, lr}
 	sub	sp, #4
-	.2byte	0x1C04
+	add	r4, r0, #0
 	bl	sub_0800B3F4
-	mov	r1, #88	@ 0x58
+	mov	r1, #88
 	str	r1, [sp, #0]
-	mov	r1, #218	@ 0xda
+	mov	r1, #218
 	mov	r2, #0
-	mov	r3, #136	@ 0x88
+	mov	r3, #136
 	bl	sub_0801B298
 	str	r0, [r4, #0]
 	cmp	r0, #0

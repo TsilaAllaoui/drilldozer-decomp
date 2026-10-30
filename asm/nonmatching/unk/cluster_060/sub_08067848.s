@@ -8,12 +8,12 @@ sub_08067848:
 	push	{r4, r5, r6, lr}
 	mov	r6, r8
 	push	{r6}
-	.2byte	0x1C06
-	.2byte	0x1C0C
-	.2byte	0x1C15
+	add	r6, r0, #0
+	add	r4, r1, #0
+	add	r5, r2, #0
 	mov	r8, r3
 	bl	sub_080677AC
-	ldr	r2, [pc, #40]	@ (0x8067884)
+	ldr	r2, .L_67884	@ =0x08336FFC
 	ldr	r1, [r6, #4]
 	lsl	r0, r1, #2
 	add	r0, r0, r1
@@ -33,8 +33,7 @@ sub_08067848:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_67884:
-	.4byte	0x8336FFC
+	.4byte	0x08336FFC
 .size sub_08067848, .-sub_08067848

@@ -9,20 +9,20 @@ sub_0801BE68:
 	mov	r7, r8
 	push	{r7}
 	sub	sp, #8
-	.2byte	0x1C05
-	.2byte	0x1C1C
-	add	r0, #100	@ 0x64
+	add	r5, r0, #0
+	add	r4, r3, #0
+	add	r0, #100
 	ldrh	r0, [r0, #0]
 	mov	r8, r0
-	.2byte	0x1C28
-	add	r0, #102	@ 0x66
+	add	r0, r5, #0
+	add	r0, #102
 	ldrb	r7, [r0, #0]
 	add	r6, sp, #4
 	lsl	r1, r1, #16
 	asr	r1, r1, #16
 	lsl	r2, r2, #16
 	asr	r2, r2, #16
-	.2byte	0x1C30
+	add	r0, r6, #0
 	bl	sub_08012BAC
 	cmp	r4, #0
 	ble	.L_1bea4
@@ -53,5 +53,5 @@ sub_0801BE68:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0801BE68, .-sub_0801BE68

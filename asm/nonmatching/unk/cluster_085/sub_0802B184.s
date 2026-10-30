@@ -33,8 +33,8 @@ sub_0802B184:
 	str	r1, [sp, #0]
 	mov	r0, #0
 	str	r0, [sp, #4]
-	ldr	r2, [pc, #108]	@ (0x802b228)
-	.2byte	0x1C10
+	ldr	r2, .L_2b228	@ =0x00002AAA
+	add	r0, r2, #0
 	mul	r0, r4
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
@@ -46,7 +46,7 @@ sub_0802B184:
 	asr	r2, r3, #16
 	asr	r3, r5, #24
 	bl	sub_0802B22C
-	.2byte	0x1C60
+	add	r0, r4, #1
 	lsl	r0, r0, #24
 	lsr	r4, r0, #24
 	lsl	r6, r7, #24
@@ -60,8 +60,8 @@ sub_0802B184:
 	str	r0, [sp, #0]
 	mov	r0, #5
 	str	r0, [sp, #4]
-	ldr	r1, [pc, #52]	@ (0x802b228)
-	.2byte	0x1C08
+	ldr	r1, .L_2b228	@ =0x00002AAA
+	add	r0, r1, #0
 	mul	r0, r4
 	lsl	r0, r0, #16
 	lsr	r0, r0, #16
@@ -73,7 +73,7 @@ sub_0802B184:
 	ldr	r7, [sp, #20]
 	asr	r3, r7, #24
 	bl	sub_0802B22C
-	.2byte	0x1C60
+	add	r0, r4, #1
 	lsl	r0, r0, #24
 	lsr	r4, r0, #24
 	cmp	r4, #5
@@ -86,8 +86,7 @@ sub_0802B184:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_2b228:
-	.4byte	0x2AAA
+	.4byte	0x00002AAA
 .size sub_0802B184, .-sub_0802B184

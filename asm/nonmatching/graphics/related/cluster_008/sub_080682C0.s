@@ -6,7 +6,7 @@
 .thumb_func
 sub_080682C0:
 	push	{r4, r5, lr}
-	.2byte	0x1C0C
+	add	r4, r1, #0
 	ldr	r0, [r4, #0]
 	bl	sub_0800B220
 	cmp	r0, #0
@@ -27,13 +27,13 @@ sub_080682C0:
 	beq	.L_68344
 	b	.L_6834a
 .L_682ea:
-	mov	r0, #128	@ 0x80
+	mov	r0, #128
 	lsl	r0, r0, #4
 	bl	sub_08001728
-	str	r0, [r4, #60]	@ 0x3c
-	ldr	r5, [pc, #52]	@ (0x806832c)
-	.2byte	0x1C02
-	mov	r3, #128	@ 0x80
+	str	r0, [r4, #60]
+	ldr	r5, .L_6832c	@ =0x0833788C
+	add	r2, r0, #0
+	mov	r3, #128
 	lsl	r3, r3, #3
 .L_682fc:
 	ldrh	r1, [r4, #16]
@@ -48,23 +48,22 @@ sub_080682C0:
 	sub	r3, #1
 	cmp	r3, #0
 	bne	.L_682fc
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080681E4
 	ldrb	r0, [r4, #12]
-	ldr	r1, [r4, #60]	@ 0x3c
-	mov	r2, #128	@ 0x80
+	ldr	r1, [r4, #60]
+	mov	r2, #128
 	lsl	r2, r2, #4
 	mov	r3, #0
 	bl	sub_08001A00
 	b	.L_6833c
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_6832c:
-	.4byte	0x833788C
+	.4byte	0x0833788C
 .L_68330:
 	ldrb	r0, [r4, #12]
 	bl	sub_08001B34
-	ldr	r0, [r4, #60]	@ 0x3c
+	ldr	r0, [r4, #60]
 	bl	sub_08001768
 .L_6833c:
 	ldr	r0, [r4, #8]
@@ -72,7 +71,7 @@ sub_080682C0:
 	str	r0, [r4, #8]
 	b	.L_6834a
 .L_68344:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_08068248
 .L_6834a:
 	pop	{r4, r5}

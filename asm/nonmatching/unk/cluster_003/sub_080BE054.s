@@ -6,8 +6,8 @@
 .thumb_func
 sub_080BE054:
 	push	{r4, r5, lr}
-	.2byte	0x1C05
-	.2byte	0x1C0C
+	add	r5, r0, #0
+	add	r4, r1, #0
 	ldrb	r0, [r4, #6]
 	cmp	r0, #0
 	bne	.L_be08a
@@ -25,7 +25,6 @@ sub_080BE054:
 	mov	r1, #2
 	mov	r3, #0
 	bl	sub_080BDF30
-.L_be084:
 	ldrb	r0, [r4, #7]
 	strb	r0, [r4, #6]
 	b	.L_be0ae
@@ -43,13 +42,12 @@ sub_080BE054:
 	strb	r0, [r4, #4]
 	b	.L_be0ae
 .L_be0a2:
-	.2byte	0x1C08
+	add	r0, r1, #0
 	bl	sub_08001768
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0800090C
 .L_be0ae:
 	pop	{r4, r5}
-.L_be0b0:
 	pop	{r0}
 	bx	r0
 .size sub_080BE054, .-sub_080BE054

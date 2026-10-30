@@ -9,20 +9,20 @@ sub_0802ED74:
 	mov	r6, r8
 	push	{r6}
 	sub	sp, #12
-	.2byte	0x1C04
+	add	r4, r0, #0
 	mov	r8, r1
-	.2byte	0x1C16
+	add	r6, r2, #0
 	add	r1, sp, #4
 	bl	sub_08011834
 	add	r5, sp, #8
-	.2byte	0x1C20
-	.2byte	0x1C29
+	add	r0, r4, #0
+	add	r1, r5, #0
 	bl	sub_08011840
 	str	r6, [sp, #0]
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, r8
 	add	r2, sp, #4
-	.2byte	0x1C2B
+	add	r3, r5, #0
 	bl	sub_0802EBAC
 	add	sp, #12
 	pop	{r3}

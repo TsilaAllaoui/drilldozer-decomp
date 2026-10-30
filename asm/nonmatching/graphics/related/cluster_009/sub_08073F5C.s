@@ -7,7 +7,7 @@
 sub_08073F5C:
 	push	{r4, lr}
 	sub	sp, #8
-	.2byte	0x1C0C
+	add	r4, r1, #0
 	mov	r1, sp
 	bl	sub_0802E57C
 	mov	r0, #0
@@ -20,5 +20,5 @@ sub_08073F5C:
 	pop	{r4}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08073F5C, .-sub_08073F5C

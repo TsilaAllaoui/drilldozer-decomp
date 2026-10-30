@@ -1,11 +1,20 @@
 .syntax divided
-.align 1, 0
+.align 2, 0
 .global sub_08011FF0
 .thumb
 .type sub_08011FF0, %function
 .thumb_func
 sub_08011FF0:
-	@ Exact original ROM bytes from 0x08011FF0.
-	.byte	0x00, 0x04, 0x00, 0x0C, 0x03, 0x4A, 0xC1, 0x00, 0x09, 0x18, 0x89, 0x00, 0x08, 0x32, 0x89, 0x18
-	.byte	0x08, 0x68, 0x70, 0x47, 0x14, 0xB3, 0x21, 0x08
+	lsl	r0, r0, #16
+	lsr	r0, r0, #16
+	ldr	r2, .L_12004	@ =0x0821B314
+	lsl	r1, r0, #3
+	add	r1, r1, r0
+	lsl	r1, r1, #2
+	add	r2, #8
+	add	r1, r1, r2
+	ldr	r0, [r1, #0]
+	bx	lr
+.L_12004:
+	.4byte	0x0821B314
 .size sub_08011FF0, .-sub_08011FF0

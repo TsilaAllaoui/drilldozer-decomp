@@ -11,8 +11,8 @@ sub_080F9554:
 	mov	r5, r8
 	push	{r5, r6, r7}
 	sub	sp, #12
-	.2byte	0x1C03
-	.2byte	0x1C0C
+	add	r3, r0, #0
+	add	r4, r1, #0
 	mov	sl, r2
 	mov	r0, #0
 	ldr	r2, [r3, #0]
@@ -23,7 +23,7 @@ sub_080F9554:
 	cmp	r0, #0
 	beq	.L_f9578
 .L_f9574:
-	.2byte	0x1C18
+	add	r0, r3, #0
 	b	.L_f97b0
 .L_f9578:
 	mov	r1, #0
@@ -52,12 +52,11 @@ sub_080F9554:
 	ldr	r0, [r4, #4]
 	cmp	r1, r0
 	beq	.L_f9574
-	ldr	r0, [pc, #4]	@ (0x80f95ac)
+	ldr	r0, .L_f95ac	@ =0x030042C0
 	b	.L_f97b0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_f95ac:
-	.4byte	0x30042C0
+	.4byte	0x030042C0
 .L_f95b0:
 	mov	r1, #0
 	cmp	r0, #4
@@ -81,7 +80,7 @@ sub_080F9554:
 	cmp	r0, #0
 	beq	.L_f9574
 	mov	r1, sl
-	.2byte	0x1C18
+	add	r0, r3, #0
 	ldmia	r0!, {r2, r5, r6}
 	stmia	r1!, {r2, r5, r6}
 	ldmia	r0!, {r2, r5}
@@ -102,7 +101,7 @@ sub_080F9554:
 	cmp	r1, #0
 	beq	.L_f95fe
 .L_f95fa:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	b	.L_f97b0
 .L_f95fe:
 	ldr	r0, [r3, #8]
@@ -122,7 +121,7 @@ sub_080F9554:
 	bge	.L_f961e
 	neg	r0, r0
 .L_f961e:
-	cmp	r0, #63	@ 0x3f
+	cmp	r0, #63
 	bgt	.L_f969c
 	ldr	r3, [r3, #4]
 	mov	ip, r3
@@ -146,14 +145,14 @@ sub_080F9554:
 	lsl	r5, r1, #31
 	ldr	r0, [sp, #0]
 	lsr	r4, r0, #1
-	.2byte	0x1C28
+	add	r0, r5, #0
 	orr	r0, r4
-	.2byte	0x1C0C
+	add	r4, r1, #0
 	lsr	r1, r4, #1
-	.2byte	0x1C15
+	add	r5, r2, #0
 	orr	r5, r0
 	str	r5, [sp, #0]
-	.2byte	0x1C1C
+	add	r4, r3, #0
 	orr	r4, r1
 	str	r4, [sp, #4]
 	mov	r5, r8
@@ -176,12 +175,12 @@ sub_080F9554:
 	mov	r3, #0
 	lsl	r5, r7, #31
 	lsr	r4, r6, #1
-	.2byte	0x1C28
+	add	r0, r5, #0
 	orr	r0, r4
 	lsr	r1, r7, #1
-	.2byte	0x1C16
+	add	r6, r2, #0
 	orr	r6, r0
-	.2byte	0x1C1F
+	add	r7, r3, #0
 	orr	r7, r1
 	mov	r3, r9
 	cmp	r3, #0
@@ -212,19 +211,19 @@ sub_080F9554:
 	mov	r2, ip
 	cmp	r2, #0
 	beq	.L_f96da
-	.2byte	0x1C39
-	.2byte	0x1C30
+	add	r1, r7, #0
+	add	r0, r6, #0
 	bl	sub_080FAA50
-	.2byte	0x1C0B
-	.2byte	0x1C02
+	add	r3, r1, #0
+	add	r2, r0, #0
 	ldr	r4, [sp, #0]
 	ldr	r5, [sp, #4]
 	add	r2, r2, r4
 	adc	r3, r5
 	b	.L_f96e6
 .L_f96da:
-	.2byte	0x1C3B
-	.2byte	0x1C32
+	add	r3, r7, #0
+	add	r2, r6, #0
 	ldr	r0, [sp, #0]
 	ldr	r1, [sp, #4]
 	sub	r2, r2, r0
@@ -247,8 +246,8 @@ sub_080F9554:
 	str	r0, [r6, #4]
 	mov	r0, r9
 	str	r0, [r6, #8]
-	.2byte	0x1C19
-	.2byte	0x1C10
+	add	r1, r3, #0
+	add	r0, r2, #0
 	bl	sub_080FAA50
 	mov	r2, sl
 	str	r0, [r2, #12]
@@ -263,7 +262,7 @@ sub_080F9554:
 .L_f9720:
 	add	r2, r2, r0
 	adc	r3, r1
-	ldr	r0, [pc, #52]	@ (0x80f975c)
+	ldr	r0, .L_f975c	@ =0x0FFFFFFF
 	cmp	r3, r0
 	bhi	.L_f9778
 	cmp	r3, r0
@@ -278,7 +277,7 @@ sub_080F9554:
 	ldr	r1, [r5, #16]
 	lsr	r3, r0, #31
 	lsl	r2, r1, #1
-	.2byte	0x1C19
+	add	r1, r3, #0
 	orr	r1, r2
 	lsl	r0, r0, #1
 	mov	r6, sl
@@ -291,10 +290,9 @@ sub_080F9554:
 	neg	r2, r2
 	asr	r3, r2, #31
 	b	.L_f9720
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_f975c:
-	.4byte	0xFFFFFFF
+	.4byte	0x0FFFFFFF
 .L_f9760:
 	mov	r0, ip
 	mov	r1, sl
@@ -313,13 +311,13 @@ sub_080F9554:
 	mov	r5, sl
 	str	r0, [r5, #0]
 	ldr	r1, [r5, #16]
-	ldr	r0, [pc, #56]	@ (0x80f97bc)
+	ldr	r0, .L_f97bc	@ =0x1FFFFFFF
 	cmp	r1, r0
 	bls	.L_f97ae
 	ldr	r4, [r5, #12]
 	ldr	r5, [r5, #16]
 	mov	r2, #1
-	.2byte	0x1C20
+	add	r0, r4, #0
 	and	r0, r2
 	mov	r1, #0
 	lsl	r6, r5, #31
@@ -345,7 +343,6 @@ sub_080F9554:
 	mov	r9, r4
 	mov	sl, r5
 	pop	{r4, r5, r6, r7, pc}
-	.align	2, 0
 .L_f97bc:
 	.4byte	0x1FFFFFFF
 .size sub_080F9554, .-sub_080F9554

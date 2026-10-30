@@ -7,12 +7,12 @@
 sub_0801C49C:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C05
-	add	r0, #60	@ 0x3c
+	add	r5, r0, #0
+	add	r0, #60
 	mov	r4, sp
 	add	r4, #2
 	mov	r1, sp
-	.2byte	0x1C22
+	add	r2, r4, #0
 	bl	sub_0801C320
 	ldr	r0, [r5, #12]
 	mov	r1, sp
@@ -26,11 +26,11 @@ sub_0801C49C:
 	cmp	r0, #0
 	bne	.L_1c4fc
 	ldr	r0, [r5, #12]
-	.2byte	0x1C29
-	add	r1, #64	@ 0x40
+	add	r1, r5, #0
+	add	r1, #64
 	mov	r2, #0
 	ldrsh	r1, [r1, r2]
-	ldrh	r2, [r5, #62]	@ 0x3e
+	ldrh	r2, [r5, #62]
 	add	r2, #1
 	lsl	r2, r2, #16
 	asr	r2, r2, #16
@@ -38,11 +38,11 @@ sub_0801C49C:
 	cmp	r0, #0
 	bne	.L_1c4fc
 	ldr	r0, [r5, #12]
-	.2byte	0x1C29
-	add	r1, #66	@ 0x42
+	add	r1, r5, #0
+	add	r1, #66
 	mov	r2, #0
 	ldrsh	r1, [r1, r2]
-	ldrh	r2, [r5, #62]	@ 0x3e
+	ldrh	r2, [r5, #62]
 	add	r2, #1
 	lsl	r2, r2, #16
 	asr	r2, r2, #16
@@ -59,5 +59,5 @@ sub_0801C49C:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0801C49C, .-sub_0801C49C

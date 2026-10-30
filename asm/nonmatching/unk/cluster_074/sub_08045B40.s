@@ -7,82 +7,82 @@
 sub_08045B40:
 	push	{r4, r5, r6, r7, lr}
 	sub	sp, #4
-	.2byte	0x1C05
-	.2byte	0x1C2E
-	add	r6, #124	@ 0x7c
+	add	r5, r0, #0
+	add	r6, r5, #0
+	add	r6, #124
 	ldrh	r0, [r5, #22]
-	cmp	r0, #103	@ 0x67
+	cmp	r0, #103
 	beq	.L_45ba0
-	cmp	r0, #103	@ 0x67
+	cmp	r0, #103
 	bgt	.L_45b5a
-	cmp	r0, #102	@ 0x66
+	cmp	r0, #102
 	beq	.L_45b60
 	b	.L_45c2e
 .L_45b5a:
-	cmp	r0, #104	@ 0x68
+	cmp	r0, #104
 	beq	.L_45be6
 	b	.L_45c2e
 .L_45b60:
-	.2byte	0x1C28
-	add	r0, #60	@ 0x3c
-	ldrh	r3, [r5, #36]	@ 0x24
-	.2byte	0x1E99
+	add	r0, r5, #0
+	add	r0, #60
+	ldrh	r3, [r5, #36]
+	sub	r1, r3, #2
 	lsl	r1, r1, #16
 	asr	r1, r1, #16
-	mov	r4, #38	@ 0x26
+	mov	r4, #38
 	ldrsh	r2, [r5, r4]
 	add	r3, #2
 	lsl	r3, r3, #16
 	asr	r3, r3, #16
-	ldrh	r4, [r5, #38]	@ 0x26
-	add	r4, #64	@ 0x40
+	ldrh	r4, [r5, #38]
+	add	r4, #64
 	lsl	r4, r4, #16
 	asr	r4, r4, #16
 	str	r4, [sp, #0]
 	bl	sub_08012B84
-	mov	r7, #60	@ 0x3c
+	mov	r7, #60
 	ldrsh	r1, [r5, r7]
 	ldrh	r2, [r6, #30]
 	mov	r3, #30
 	ldrsh	r0, [r6, r3]
 	cmp	r1, r0
 	bge	.L_45b94
-	strh	r2, [r5, #60]	@ 0x3c
+	strh	r2, [r5, #60]
 .L_45b94:
-	mov	r4, #62	@ 0x3e
+	mov	r4, #62
 	ldrsh	r1, [r5, r4]
 	ldrh	r2, [r6, #26]
 	mov	r7, #26
 	ldrsh	r0, [r6, r7]
 	b	.L_45bde
 .L_45ba0:
-	.2byte	0x1C28
-	add	r0, #60	@ 0x3c
-	ldrh	r3, [r5, #36]	@ 0x24
-	.2byte	0x1E99
+	add	r0, r5, #0
+	add	r0, #60
+	ldrh	r3, [r5, #36]
+	sub	r1, r3, #2
 	lsl	r1, r1, #16
 	asr	r1, r1, #16
-	ldrh	r2, [r5, #38]	@ 0x26
-	sub	r2, #64	@ 0x40
+	ldrh	r2, [r5, #38]
+	sub	r2, #64
 	lsl	r2, r2, #16
 	asr	r2, r2, #16
 	add	r3, #2
 	lsl	r3, r3, #16
 	asr	r3, r3, #16
-	mov	r7, #38	@ 0x26
+	mov	r7, #38
 	ldrsh	r4, [r5, r7]
 	str	r4, [sp, #0]
 	bl	sub_08012B84
-	mov	r0, #60	@ 0x3c
+	mov	r0, #60
 	ldrsh	r1, [r5, r0]
 	ldrh	r2, [r6, #26]
 	mov	r3, #26
 	ldrsh	r0, [r6, r3]
 	cmp	r1, r0
 	bge	.L_45bd4
-	strh	r2, [r5, #60]	@ 0x3c
+	strh	r2, [r5, #60]
 .L_45bd4:
-	mov	r4, #62	@ 0x3e
+	mov	r4, #62
 	ldrsh	r1, [r5, r4]
 	ldrh	r2, [r6, #30]
 	mov	r7, #30
@@ -90,19 +90,19 @@ sub_08045B40:
 .L_45bde:
 	cmp	r1, r0
 	ble	.L_45c7a
-	strh	r2, [r5, #62]	@ 0x3e
+	strh	r2, [r5, #62]
 	b	.L_45c7a
 .L_45be6:
-	.2byte	0x1C28
-	add	r0, #60	@ 0x3c
-	mov	r2, #36	@ 0x24
+	add	r0, r5, #0
+	add	r0, #60
+	mov	r2, #36
 	ldrsh	r1, [r5, r2]
-	ldrh	r4, [r5, #38]	@ 0x26
-	.2byte	0x1EA2
+	ldrh	r4, [r5, #38]
+	sub	r2, r4, #2
 	lsl	r2, r2, #16
 	asr	r2, r2, #16
-	ldrh	r3, [r5, #36]	@ 0x24
-	add	r3, #64	@ 0x40
+	ldrh	r3, [r5, #36]
+	add	r3, #64
 	lsl	r3, r3, #16
 	asr	r3, r3, #16
 	add	r4, #2
@@ -110,8 +110,8 @@ sub_08045B40:
 	asr	r4, r4, #16
 	str	r4, [sp, #0]
 	bl	sub_08012B84
-	.2byte	0x1C2A
-	add	r2, #64	@ 0x40
+	add	r2, r5, #0
+	add	r2, #64
 	mov	r3, #0
 	ldrsh	r1, [r2, r3]
 	ldrh	r3, [r6, #28]
@@ -121,8 +121,8 @@ sub_08045B40:
 	bge	.L_45c1e
 	strh	r3, [r2, #0]
 .L_45c1e:
-	.2byte	0x1C2A
-	add	r2, #66	@ 0x42
+	add	r2, r5, #0
+	add	r2, #66
 	mov	r7, #0
 	ldrsh	r1, [r2, r7]
 	ldrh	r3, [r6, #24]
@@ -130,25 +130,25 @@ sub_08045B40:
 	ldrsh	r0, [r6, r4]
 	b	.L_45c74
 .L_45c2e:
-	.2byte	0x1C28
-	add	r0, #60	@ 0x3c
-	ldrh	r1, [r5, #36]	@ 0x24
-	sub	r1, #64	@ 0x40
+	add	r0, r5, #0
+	add	r0, #60
+	ldrh	r1, [r5, #36]
+	sub	r1, #64
 	lsl	r1, r1, #16
 	asr	r1, r1, #16
-	ldrh	r4, [r5, #38]	@ 0x26
-	.2byte	0x1EA2
+	ldrh	r4, [r5, #38]
+	sub	r2, r4, #2
 	lsl	r2, r2, #16
 	asr	r2, r2, #16
-	mov	r7, #36	@ 0x24
+	mov	r7, #36
 	ldrsh	r3, [r5, r7]
 	add	r4, #2
 	lsl	r4, r4, #16
 	asr	r4, r4, #16
 	str	r4, [sp, #0]
 	bl	sub_08012B84
-	.2byte	0x1C2A
-	add	r2, #64	@ 0x40
+	add	r2, r5, #0
+	add	r2, #64
 	mov	r0, #0
 	ldrsh	r1, [r2, r0]
 	ldrh	r3, [r6, #24]
@@ -158,8 +158,8 @@ sub_08045B40:
 	bge	.L_45c66
 	strh	r3, [r2, #0]
 .L_45c66:
-	.2byte	0x1C2A
-	add	r2, #66	@ 0x42
+	add	r2, r5, #0
+	add	r2, #66
 	mov	r7, #0
 	ldrsh	r1, [r2, r7]
 	ldrh	r3, [r6, #28]
@@ -170,15 +170,15 @@ sub_08045B40:
 	ble	.L_45c7a
 	strh	r3, [r2, #0]
 .L_45c7a:
-	ldr	r0, [r5, #60]	@ 0x3c
-	ldr	r1, [r5, #64]	@ 0x40
-	str	r0, [r5, #52]	@ 0x34
-	str	r1, [r5, #56]	@ 0x38
-	str	r0, [r5, #44]	@ 0x2c
-	str	r1, [r5, #48]	@ 0x30
+	ldr	r0, [r5, #60]
+	ldr	r1, [r5, #64]
+	str	r0, [r5, #52]
+	str	r1, [r5, #56]
+	str	r0, [r5, #44]
+	str	r1, [r5, #48]
 	add	sp, #4
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08045B40, .-sub_08045B40

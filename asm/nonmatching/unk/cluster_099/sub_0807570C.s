@@ -6,14 +6,14 @@
 .thumb_func
 sub_0807570C:
 	push	{r4, lr}
-	.2byte	0x1C13
-	ldr	r2, [pc, #44]	@ (0x8075740)
+	add	r3, r2, #0
+	ldr	r2, .L_75740	@ =0x08363400
 	lsl	r0, r0, #2
 	add	r2, r0, r2
 	lsl	r1, r1, #3
 	ldr	r2, [r2, #0]
 	add	r4, r2, r1
-	ldr	r2, [pc, #36]	@ (0x8075744)
+	ldr	r2, .L_75744	@ =0x08363460
 	add	r0, r0, r2
 	ldr	r0, [r0, #0]
 	add	r2, r0, r1
@@ -30,13 +30,11 @@ sub_0807570C:
 	cmp	r0, r1
 	bge	.L_75760
 	b	.L_7575e
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_75740:
-	.4byte	0x8363400
-	.align	2, 0
+	.4byte	0x08363400
 .L_75744:
-	.4byte	0x8363460
+	.4byte	0x08363460
 .L_75748:
 	cmp	r0, #0
 	ble	.L_75760

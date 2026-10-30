@@ -6,23 +6,23 @@
 .thumb_func
 sub_080D7844:
 	push	{r4, r5, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0A
+	add	r4, r0, #0
+	add	r2, r1, #0
 	ldr	r1, [r2, #0]
-	ldrh	r0, [r4, #36]	@ 0x24
+	ldrh	r0, [r4, #36]
 	sub	r0, #16
 	strh	r0, [r1, #20]
 	ldr	r1, [r2, #0]
-	ldrh	r0, [r4, #38]	@ 0x26
+	ldrh	r0, [r4, #38]
 	strh	r0, [r1, #22]
 	ldr	r1, [r2, #4]
-	ldrh	r0, [r4, #36]	@ 0x24
+	ldrh	r0, [r4, #36]
 	add	r0, #32
 	strh	r0, [r1, #20]
 	ldr	r1, [r2, #4]
-	ldrh	r0, [r4, #38]	@ 0x26
+	ldrh	r0, [r4, #38]
 	strh	r0, [r1, #22]
-	.2byte	0x1C15
+	add	r5, r2, #0
 	mov	r3, #1
 .L_d786a:
 	ldmia	r5!, {r1}
@@ -31,19 +31,19 @@ sub_080D7844:
 	sub	r3, #1
 	cmp	r3, #0
 	bge	.L_d786a
-	.2byte	0x1C20
-	add	r0, #60	@ 0x3c
-	.2byte	0x1C21
-	add	r1, #36	@ 0x24
-	mov	r2, #40	@ 0x28
+	add	r0, r4, #0
+	add	r0, #60
+	add	r1, r4, #0
+	add	r1, #36
+	mov	r2, #40
 	mov	r3, #32
 	bl	sub_08012C08
-	ldr	r0, [r4, #60]	@ 0x3c
-	ldr	r1, [r4, #64]	@ 0x40
-	str	r0, [r4, #44]	@ 0x2c
-	str	r1, [r4, #48]	@ 0x30
-	str	r0, [r4, #52]	@ 0x34
-	str	r1, [r4, #56]	@ 0x38
+	ldr	r0, [r4, #60]
+	ldr	r1, [r4, #64]
+	str	r0, [r4, #44]
+	str	r1, [r4, #48]
+	str	r0, [r4, #52]
+	str	r1, [r4, #56]
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0

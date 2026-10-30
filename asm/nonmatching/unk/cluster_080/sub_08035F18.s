@@ -6,11 +6,11 @@
 .thumb_func
 sub_08035F18:
 	push	{r4, r5, r6, lr}
-	.2byte	0x1C04
-	mov	r0, #140	@ 0x8c
+	add	r4, r0, #0
+	mov	r0, #140
 	lsl	r0, r0, #1
 	add	r5, r4, r0
-	mov	r1, #162	@ 0xa2
+	mov	r1, #162
 	lsl	r1, r1, #1
 	add	r0, r4, r1
 	mov	r3, #0
@@ -25,7 +25,7 @@ sub_08035F18:
 	add	r0, r4, r1
 	mov	r3, #0
 	ldrsh	r1, [r0, r3]
-	mov	r3, #161	@ 0xa1
+	mov	r3, #161
 	lsl	r3, r3, #1
 	add	r0, r4, r3
 	mov	r3, #0
@@ -37,17 +37,17 @@ sub_08035F18:
 	mov	r0, #0
 	b	.L_35f94
 .L_35f56:
-	.2byte	0x1C20
-	add	r0, #196	@ 0xc4
+	add	r0, r4, #0
+	add	r0, #196
 	ldr	r0, [r0, #0]
 	cmp	r0, #0
 	beq	.L_35f64
 	mov	r6, #2
 	b	.L_35f6c
 .L_35f64:
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080177BC
-	.2byte	0x1C06
+	add	r6, r0, #0
 .L_35f6c:
 	cmp	r6, #3
 	beq	.L_35f74
@@ -60,7 +60,7 @@ sub_08035F18:
 	ldr	r0, [r5, #0]
 	cmp	r0, #0
 	bne	.L_35f90
-	.2byte	0x1C20
+	add	r0, r4, #0
 	bl	sub_080802D8
 	mov	r0, #8
 	str	r0, [r5, #0]

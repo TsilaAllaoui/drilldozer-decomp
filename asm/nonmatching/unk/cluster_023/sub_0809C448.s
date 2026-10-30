@@ -5,9 +5,23 @@
 .type sub_0809C448, %function
 .thumb_func
 sub_0809C448:
-	@ Exact original ROM bytes from 0x0809C448.
-	.byte	0x00, 0xB5, 0x02, 0x1C, 0x6C, 0x31, 0x08, 0x88, 0x01, 0x30, 0x08, 0x80, 0x00, 0x04, 0x00, 0x0C
-	.byte	0x1E, 0x28, 0x03, 0xD1, 0x11, 0x1C, 0x76, 0x31, 0x00, 0x20, 0x08, 0x70, 0x01, 0x20, 0x02, 0xBC
+	push	{lr}
+	add	r2, r0, #0
+	add	r1, #108
+	ldrh	r0, [r1, #0]
+	add	r0, #1
+	strh	r0, [r1, #0]
+	lsl	r0, r0, #16
+	lsr	r0, r0, #16
+	cmp	r0, #30
+	bne	.L_9c464
+	add	r1, r2, #0
+	add	r1, #118
+	mov	r0, #0
+	strb	r0, [r1, #0]
+.L_9c464:
+	mov	r0, #1
+	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0809C448, .-sub_0809C448

@@ -7,8 +7,8 @@
 sub_0805D614:
 	push	{r4, r5, r6, r7, lr}
 	sub	sp, #4
-	.2byte	0x1C06
-	.2byte	0x1C34
+	add	r6, r0, #0
+	add	r4, r6, #0
 	add	r4, #8
 	mov	r7, #0
 	mov	r5, #3
@@ -32,16 +32,15 @@ sub_0805D614:
 .L_5d644:
 	mov	r0, #0
 	str	r0, [sp, #0]
-	ldr	r2, [pc, #16]	@ (0x805d65c)
+	ldr	r2, .L_5d65c	@ =0x05000016
 	mov	r0, sp
-	.2byte	0x1C31
+	add	r1, r6, #0
 	bl	sub_080F86FC
 	add	sp, #4
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_5d65c:
-	.4byte	0x5000016
+	.4byte	0x05000016
 .size sub_0805D614, .-sub_0805D614

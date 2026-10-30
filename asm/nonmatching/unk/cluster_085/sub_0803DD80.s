@@ -6,13 +6,13 @@
 .thumb_func
 sub_0803DD80:
 	push	{r4, lr}
-	.2byte	0x1C03
-	mov	r2, #162	@ 0xa2
+	add	r3, r0, #0
+	mov	r2, #162
 	lsl	r2, r2, #1
 	add	r0, r3, r2
 	ldr	r0, [r0, #0]
 	str	r0, [r1, #0]
-	mov	r4, #164	@ 0xa4
+	mov	r4, #164
 	lsl	r4, r4, #1
 	add	r0, r3, r4
 	ldrh	r0, [r0, #0]
@@ -23,13 +23,13 @@ sub_0803DD80:
 	ldrh	r2, [r2, #0]
 	add	r0, r0, r2
 	strh	r0, [r1, #0]
-	mov	r2, #165	@ 0xa5
+	mov	r2, #165
 	lsl	r2, r2, #1
 	add	r0, r3, r2
 	ldrh	r0, [r0, #0]
 	ldrh	r4, [r1, #2]
 	add	r0, r0, r4
-	mov	r4, #167	@ 0xa7
+	mov	r4, #167
 	lsl	r4, r4, #1
 	add	r2, r3, r4
 	ldrh	r2, [r2, #0]
@@ -38,5 +38,5 @@ sub_0803DD80:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0803DD80, .-sub_0803DD80

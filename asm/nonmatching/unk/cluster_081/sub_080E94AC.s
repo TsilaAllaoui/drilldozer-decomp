@@ -5,9 +5,21 @@
 .type sub_080E94AC, %function
 .thumb_func
 sub_080E94AC:
-	@ Exact original ROM bytes from 0x080E94AC.
-	.byte	0x10, 0xB5, 0x04, 0x1C, 0x30, 0xF7, 0x6A, 0xFB, 0x00, 0x06, 0x00, 0x28, 0x03, 0xD1, 0x13, 0x20
-	.byte	0x20, 0x60, 0x01, 0x20, 0x00, 0xE0, 0x00, 0x20, 0x10, 0xBC, 0x02, 0xBC
+	push	{r4, lr}
+	add	r4, r0, #0
+	bl	sub_08019B88
+	lsl	r0, r0, #24
+	cmp	r0, #0
+	bne	.L_e94c2
+	mov	r0, #19
+	str	r0, [r4, #0]
+	mov	r0, #1
+	b	.L_e94c4
+.L_e94c2:
+	mov	r0, #0
+.L_e94c4:
+	pop	{r4}
+	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080E94AC, .-sub_080E94AC

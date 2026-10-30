@@ -7,7 +7,7 @@
 sub_0806E77C:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C0D
+	add	r5, r1, #0
 	ldrb	r0, [r5, #7]
 	cmp	r0, #1
 	beq	.L_6e79e
@@ -38,7 +38,7 @@ sub_0806E77C:
 	bl	sub_08010BE0
 	cmp	r0, #0
 	bne	.L_6e7c6
-	ldr	r0, [pc, #36]	@ (0x806e7e0)
+	ldr	r0, .L_6e7e0	@ =0x00000121
 	bl	sub_08029E54
 	ldrb	r0, [r5, #7]
 	add	r0, #1
@@ -56,9 +56,8 @@ sub_0806E77C:
 	neg	r0, r0
 	strh	r0, [r1, #26]
 	b	.L_6e7e8
-	.align	2, 0
 .L_6e7e0:
-	.4byte	0x121
+	.4byte	0x00000121
 .L_6e7e4:
 	mov	r0, #1
 	b	.L_6e7ea
@@ -69,5 +68,5 @@ sub_0806E77C:
 	pop	{r4, r5}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0806E77C, .-sub_0806E77C

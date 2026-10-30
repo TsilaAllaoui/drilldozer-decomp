@@ -1,0 +1,34 @@
+.syntax divided
+.align 2, 0
+.global sub_080E4834
+.thumb
+.type sub_080E4834, %function
+.thumb_func
+sub_080E4834:
+	push	{lr}
+	.2byte	0x1C03
+	ldr	r0, [pc, #32]	@ (0x80e485c)
+	ldr	r2, [r0, #0]
+	cmp	r2, #0
+	beq	.L_e4856
+	ldr	r1, [r2, #4]
+	ldrb	r0, [r2, #9]
+	mul	r0, r3
+	ldrh	r3, [r2, #14]
+	add	r0, r0, r3
+	strh	r0, [r1, #22]
+	ldr	r0, [r2, #4]
+	ldr	r1, [pc, #16]	@ (0x80e4860)
+	mov	r2, #0
+	bl	sub_08005BBC
+.L_e4856:
+	pop	{r0}
+	bx	r0
+	lsl	r0, r0, #0
+	.align	2, 0
+.L_e485c:
+	.4byte	0x20391EC
+	.align	2, 0
+.L_e4860:
+	.4byte	0x84B822C
+.size sub_080E4834, .-sub_080E4834

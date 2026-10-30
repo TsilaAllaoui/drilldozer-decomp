@@ -7,19 +7,18 @@
 sub_08036634:
 	push	{r4, lr}
 	bl	sub_08011720
-	.2byte	0x1C04
+	add	r4, r0, #0
 	bl	sub_080118A4
 	cmp	r0, #4
 	bne	.L_36654
-	ldr	r0, [pc, #8]	@ (0x8036650)
-	ldr	r1, [r4, #72]	@ 0x48
+	ldr	r0, .L_36650	@ =0x082ADB64
+	ldr	r1, [r4, #72]
 	lsl	r1, r1, #2
 	add	r1, r1, r0
 	ldr	r0, [r1, #0]
 	b	.L_36656
-	.align	2, 0
 .L_36650:
-	.4byte	0x82ADB64
+	.4byte	0x082ADB64
 .L_36654:
 	mov	r0, #0
 .L_36656:

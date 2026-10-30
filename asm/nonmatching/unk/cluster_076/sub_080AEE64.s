@@ -6,8 +6,8 @@
 .thumb_func
 sub_080AEE64:
 	push	{r4, r5, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0D
+	add	r4, r0, #0
+	add	r5, r1, #0
 	strb	r5, [r4, #7]
 	ldrb	r0, [r4, #8]
 	cmp	r0, #0
@@ -20,7 +20,7 @@ sub_080AEE64:
 	strb	r1, [r4, #7]
 	b	.L_aeeba
 .L_aee80:
-	ldr	r0, [pc, #16]	@ (0x80aee94)
+	ldr	r0, .L_aee94	@ =0x08414644
 	ldrb	r1, [r4, #5]
 	add	r0, r1, r0
 	ldrb	r0, [r0, #0]
@@ -31,11 +31,10 @@ sub_080AEE64:
 .L_aee90:
 	strb	r5, [r4, #5]
 	b	.L_aeeba
-	.align	2, 0
 .L_aee94:
-	.4byte	0x8414644
+	.4byte	0x08414644
 .L_aee98:
-	.2byte	0x1C08
+	add	r0, r1, #0
 	cmp	r0, #0
 	beq	.L_aeea2
 	cmp	r0, #2

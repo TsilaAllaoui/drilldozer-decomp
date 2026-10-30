@@ -6,9 +6,9 @@
 .thumb_func
 sub_080165D0:
 	push	{lr}
-	.2byte	0x1C01
-	sub	r0, #69	@ 0x45
-	cmp	r0, #47	@ 0x2f
+	add	r1, r0, #0
+	sub	r0, #69
+	cmp	r0, #47
 	bls	.L_165e0
 	mov	r0, #1
 	neg	r0, r0
@@ -19,15 +19,15 @@ sub_080165D0:
 	mov	r0, #3
 	b	.L_16602
 .L_165e8:
-	.2byte	0x1C08
-	sub	r0, #81	@ 0x51
+	add	r0, r1, #0
+	sub	r0, #81
 	cmp	r0, #11
 	bhi	.L_165f4
 	mov	r0, #2
 	b	.L_16602
 .L_165f4:
-	.2byte	0x1C08
-	sub	r0, #93	@ 0x5d
+	add	r0, r1, #0
+	sub	r0, #93
 	cmp	r0, #11
 	bls	.L_16600
 	mov	r0, #0
@@ -37,5 +37,5 @@ sub_080165D0:
 .L_16602:
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080165D0, .-sub_080165D0

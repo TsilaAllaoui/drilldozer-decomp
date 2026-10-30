@@ -17,13 +17,13 @@ sub_08001370:
 	lsl	r3, r3, #24
 	lsr	r4, r3, #24
 	mov	r5, #0
-	ldr	r1, [pc, #48]	@ (0x80013bc)
+	ldr	r1, .L_13bc	@ =0x030008F0
 	mov	r0, #1
 	strb	r0, [r1, #0]
-	ldr	r0, [pc, #48]	@ (0x80013c0)
+	ldr	r0, .L_13c0	@ =0x030008F1
 	ldrb	r2, [r0, #0]
 	mov	sl, r1
-	ldr	r6, [pc, #44]	@ (0x80013c4)
+	ldr	r6, .L_13c4	@ =0x030000F0
 	mov	r9, r6
 	lsl	r0, r2, #4
 	add	r1, r0, r6
@@ -44,38 +44,34 @@ sub_08001370:
 	bne	.L_13c8
 	strh	r4, [r1, #10]
 	b	.L_13cc
-	.align	2, 0
 .L_13bc:
-	.4byte	0x30008F0
-	.align	2, 0
+	.4byte	0x030008F0
 .L_13c0:
-	.4byte	0x30008F1
-	.align	2, 0
+	.4byte	0x030008F1
 .L_13c4:
-	.4byte	0x30000F0
+	.4byte	0x030000F0
 .L_13c8:
 	mov	r0, #3
 	strh	r0, [r1, #10]
 .L_13cc:
 	mov	r0, #0
-	ldr	r1, [pc, #8]	@ (0x80013d8)
+	ldr	r1, .L_13d8	@ =0x030008F0
 	strb	r0, [r1, #0]
 	lsl	r0, r2, #16
 	asr	r0, r0, #16
 	b	.L_13f8
-	.align	2, 0
 .L_13d8:
-	.4byte	0x30008F0
+	.4byte	0x030008F0
 .L_13dc:
 	add	r1, #16
 	add	r2, #1
-	cmp	r2, #127	@ 0x7f
+	cmp	r2, #127
 	ble	.L_13e8
-	.2byte	0x1C31
+	add	r1, r6, #0
 	mov	r2, #0
 .L_13e8:
 	add	r5, #1
-	cmp	r5, #127	@ 0x7f
+	cmp	r5, #127
 	ble	.L_139c
 	mov	r0, #0
 	mov	r3, sl
@@ -90,5 +86,5 @@ sub_08001370:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08001370, .-sub_08001370

@@ -7,21 +7,21 @@
 sub_0802B5F8:
 	push	{r4, r5, r6, r7, lr}
 	sub	sp, #4
-	.2byte	0x1C05
-	.2byte	0x1C0F
+	add	r5, r0, #0
+	add	r7, r1, #0
 	bl	sub_080177F0
-	.2byte	0x1C04
+	add	r4, r0, #0
 	cmp	r4, #3
 	beq	.L_2b62a
-	.2byte	0x1C28
+	add	r0, r5, #0
 	mov	r1, sp
 	bl	sub_0802E7C4
 	cmp	r7, #0
 	ble	.L_2b62a
 	lsl	r6, r4, #24
-	.2byte	0x1C3C
+	add	r4, r7, #0
 .L_2b61a:
-	.2byte	0x1C28
+	add	r0, r5, #0
 	mov	r1, sp
 	lsr	r2, r6, #24
 	bl	sub_0802A920
@@ -33,5 +33,5 @@ sub_0802B5F8:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0802B5F8, .-sub_0802B5F8

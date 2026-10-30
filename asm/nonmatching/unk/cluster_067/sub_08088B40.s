@@ -12,8 +12,8 @@ sub_08088B40:
 	push	{r5, r6, r7}
 	sub	sp, #16
 	str	r0, [sp, #12]
-	.2byte	0x1C0E
-	ldr	r0, [sp, #48]	@ 0x30
+	add	r6, r1, #0
+	ldr	r0, [sp, #48]
 	lsl	r2, r2, #24
 	lsr	r5, r2, #24
 	mov	r9, r5
@@ -23,7 +23,7 @@ sub_08088B40:
 	lsr	r0, r0, #24
 	mov	r8, r0
 	ldr	r0, [sp, #12]
-	add	r0, #124	@ 0x7c
+	add	r0, #124
 	mov	ip, r0
 	ldr	r2, [r0, #16]
 	lsl	r4, r3, #1
@@ -102,27 +102,27 @@ sub_08088B40:
 	ldr	r2, [r0, #0]
 	mov	r1, r8
 	lsl	r3, r1, #1
-	.2byte	0x1C10
-	add	r0, #52	@ 0x34
+	add	r0, r2, #0
+	add	r0, #52
 	add	r0, r0, r3
 	ldrh	r0, [r0, #0]
 	mov	r4, ip
-	ldrh	r4, [r4, #56]	@ 0x38
+	ldrh	r4, [r4, #56]
 	add	r0, r0, r4
 	ldrh	r1, [r6, #20]
 	add	r4, r1, r0
 	strh	r4, [r6, #20]
-	add	r2, #56	@ 0x38
+	add	r2, #56
 	add	r2, r2, r3
 	ldrh	r0, [r2, #0]
 	mov	r1, ip
-	ldrh	r1, [r1, #58]	@ 0x3a
+	ldrh	r1, [r1, #58]
 	add	r0, r0, r1
 	ldrh	r1, [r6, #22]
 	add	r1, r1, r0
 	strh	r1, [r6, #22]
 	mov	r0, ip
-	add	r0, #79	@ 0x4f
+	add	r0, #79
 	ldrb	r0, [r0, #0]
 	cmp	r0, #0
 	beq	.L_88c56
@@ -159,5 +159,5 @@ sub_08088B40:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08088B40, .-sub_08088B40

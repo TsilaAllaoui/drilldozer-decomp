@@ -7,8 +7,8 @@
 sub_08068D4C:
 	push	{r4, r5, r6, lr}
 	sub	sp, #4
-	.2byte	0x1C06
-	.2byte	0x1C0D
+	add	r6, r0, #0
+	add	r5, r1, #0
 	ldr	r4, [r5, #8]
 	cmp	r4, #0
 	beq	.L_68d60
@@ -16,12 +16,12 @@ sub_08068D4C:
 	beq	.L_68d90
 	b	.L_68dbc
 .L_68d60:
-	mov	r0, #115	@ 0x73
+	mov	r0, #115
 	bl	sub_0802A0B0
 	bl	sub_080EDBA8
 	bl	sub_08067624
 	ldr	r0, [r5, #0]
-	mov	r1, #127	@ 0x7f
+	mov	r1, #127
 	bl	sub_0800B254
 	mov	r0, #1
 	neg	r0, r0
@@ -43,15 +43,15 @@ sub_08068D4C:
 	bne	.L_68dbc
 	bl	sub_0806405C
 	ldr	r0, [r5, #0]
-	mov	r1, #127	@ 0x7f
+	mov	r1, #127
 	bl	sub_0800B254
 	ldr	r0, [r5, #0]
 	str	r4, [sp, #0]
-	mov	r1, #74	@ 0x4a
-	mov	r2, #255	@ 0xff
+	mov	r1, #74
+	mov	r2, #255
 	mov	r3, #0
 	bl	sub_0800CCA4
-	.2byte	0x1C30
+	add	r0, r6, #0
 	bl	sub_080097A0
 .L_68dbc:
 	add	sp, #4

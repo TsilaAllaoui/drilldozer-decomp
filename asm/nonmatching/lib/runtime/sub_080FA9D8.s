@@ -15,7 +15,7 @@ sub_080FA9D8:
 	bl	sub_080FA0D0
 	add	sp, #16
 	pop	{pc}
-	lsl	r0, r0, #0
+	.align	2, 0
 	push	{r4, r5, r6, lr}
 	sub	sp, #24
 	str	r0, [sp, #20]
@@ -29,7 +29,7 @@ sub_080FA9D8:
 	mov	r4, #0
 	lsr	r6, r3, #2
 	lsl	r5, r4, #30
-	.2byte	0x1C34
+	add	r4, r6, #0
 	orr	r4, r5
 	lsl	r3, r3, #30
 	str	r4, [sp, #0]

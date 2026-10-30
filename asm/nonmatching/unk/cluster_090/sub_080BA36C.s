@@ -6,7 +6,7 @@
 .thumb_func
 sub_080BA36C:
 	push	{r4, lr}
-	.2byte	0x1C02
+	add	r2, r0, #0
 	ldrb	r0, [r2, #3]
 	cmp	r0, #1
 	beq	.L_ba382
@@ -26,7 +26,7 @@ sub_080BA36C:
 	add	r0, #1
 	mov	r4, #0
 	strb	r0, [r2, #1]
-	mov	r1, #255	@ 0xff
+	mov	r1, #255
 	lsl	r0, r0, #24
 	lsr	r0, r0, #24
 	cmp	r0, r3
@@ -45,7 +45,7 @@ sub_080BA36C:
 	lsl	r1, r1, #11
 	add	r1, #4
 	add	r1, r2, r1
-	mov	r2, #128	@ 0x80
+	mov	r2, #128
 	lsl	r2, r2, #4
 	mov	r3, #0
 	bl	sub_08001A00

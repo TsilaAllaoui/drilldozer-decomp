@@ -6,57 +6,55 @@
 .thumb_func
 sub_080D0B60:
 	push	{r4, r5, r6, r7, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0E
+	add	r4, r0, #0
+	add	r6, r1, #0
 	ldr	r0, [r4, #0]
 	mov	r1, #3
 	mov	r2, #2
 	bl	sub_0800D79C
-	.2byte	0x1C07
+	add	r7, r0, #0
 	ldr	r0, [r4, #0]
 	mov	r1, #3
 	mov	r2, #1
-.L_d0b78:
 	bl	sub_0800D79C
-	.2byte	0x1C01
+	add	r1, r0, #0
 	ldrb	r0, [r4, #21]
-	cmp	r0, #255	@ 0xff
+	cmp	r0, #255
 	bne	.L_d0ba0
-	ldr	r0, [pc, #20]	@ (0x80d0b9c)
+	ldr	r0, .L_d0b9c	@ =0x0000017F
 	lsl	r1, r1, #11
-	mov	r2, #192	@ 0xc0
+	mov	r2, #192
 	lsl	r2, r2, #19
 	add	r1, r1, r2
-	mov	r2, #128	@ 0x80
+	mov	r2, #128
 	lsl	r2, r2, #5
 	mov	r3, #0
 	bl	sub_08001408
 	b	.L_d0c0c
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_d0b9c:
-	.4byte	0x17F
+	.4byte	0x0000017F
 .L_d0ba0:
-	ldr	r0, [pc, #96]	@ (0x80d0c04)
+	ldr	r0, .L_d0c04	@ =0x084683A4
 	ldrb	r1, [r4, #21]
 	lsl	r1, r1, #2
 	add	r1, r1, r0
 	ldr	r0, [r1, #0]
-	.2byte	0x1C25
+	add	r5, r4, #0
 	add	r5, #24
-	.2byte	0x1C29
+	add	r1, r5, #0
 	bl	sub_080F8710
 	cmp	r6, #1
 	bne	.L_d0bc0
-	.2byte	0x1C20
+	add	r0, r4, #0
 	mov	r1, #1
 	bl	sub_080D0C18
 .L_d0bc0:
 	lsl	r0, r7, #24
 	lsr	r0, r0, #24
-	mov	r2, #128	@ 0x80
+	mov	r2, #128
 	lsl	r2, r2, #4
-	.2byte	0x1C29
+	add	r1, r5, #0
 	mov	r3, #0
 	bl	sub_08001A00
 	ldrb	r0, [r4, #21]
@@ -65,7 +63,7 @@ sub_080D0B60:
 	lsr	r0, r0, #24
 	cmp	r0, #8
 	bhi	.L_d0c0c
-	ldr	r1, [pc, #40]	@ (0x80d0c08)
+	ldr	r1, .L_d0c08	@ =0x084712E8
 	ldrb	r0, [r4, #21]
 	lsl	r0, r0, #2
 	add	r0, r0, r1
@@ -84,13 +82,11 @@ sub_080D0B60:
 	ldr	r0, [r4, #8]
 	strb	r2, [r0, #1]
 	b	.L_d0c12
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_d0c04:
-	.4byte	0x84683A4
-	.align	2, 0
+	.4byte	0x084683A4
 .L_d0c08:
-	.4byte	0x84712E8
+	.4byte	0x084712E8
 .L_d0c0c:
 	ldr	r1, [r4, #8]
 	mov	r0, #1

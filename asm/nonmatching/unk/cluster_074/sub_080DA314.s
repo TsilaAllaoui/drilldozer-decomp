@@ -7,24 +7,24 @@
 sub_080DA314:
 	push	{r4, r5, lr}
 	sub	sp, #4
-	.2byte	0x1C0D
-	.2byte	0x1C14
+	add	r5, r1, #0
+	add	r4, r2, #0
 	mov	r0, #0
 	str	r0, [sp, #0]
 .L_da320:
 	mov	r0, sp
-	.2byte	0x1C21
+	add	r1, r4, #0
 	bl	sub_0801BC98
-	.2byte	0x1C01
+	add	r1, r0, #0
 	cmp	r1, #0
 	beq	.L_da33e
 	ldrh	r0, [r1, #22]
-	cmp	r0, #245	@ 0xf5
+	cmp	r0, #245
 	bne	.L_da320
 	ldr	r0, [r5, #4]
 	cmp	r1, r0
 	beq	.L_da320
-	.2byte	0x1C08
+	add	r0, r1, #0
 	b	.L_da340
 .L_da33e:
 	mov	r0, #0

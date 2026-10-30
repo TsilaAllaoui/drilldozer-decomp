@@ -7,9 +7,9 @@
 sub_080AD21C:
 	push	{r4, r5, r6, lr}
 	sub	sp, #4
-	.2byte	0x1C04
-	.2byte	0x1C0D
-	.2byte	0x1C16
+	add	r4, r0, #0
+	add	r5, r1, #0
+	add	r6, r2, #0
 	lsl	r4, r4, #16
 	lsr	r4, r4, #16
 	lsl	r5, r5, #16
@@ -21,9 +21,9 @@ sub_080AD21C:
 	asr	r5, r5, #16
 	mov	r1, #0
 	str	r1, [sp, #0]
-	.2byte	0x1C21
-	.2byte	0x1C2A
-	.2byte	0x1C33
+	add	r1, r4, #0
+	add	r2, r5, #0
+	add	r3, r6, #0
 	bl	sub_0807E46C
 	add	sp, #4
 	pop	{r4, r5, r6}

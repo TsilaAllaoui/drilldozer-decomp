@@ -5,10 +5,25 @@
 .type sub_080C1738, %function
 .thumb_func
 sub_080C1738:
-	@ Exact original ROM bytes from 0x080C1738.
-	.byte	0x10, 0xB5, 0x03, 0x1C, 0x09, 0x06, 0x0C, 0x0E, 0x12, 0x06, 0x12, 0x0E, 0x98, 0x7B, 0x00, 0x28
-	.byte	0x06, 0xD0, 0x00, 0x21, 0x01, 0x20, 0xD8, 0x74, 0x19, 0x75, 0x99, 0x75, 0x5A, 0x75, 0xDC, 0x75
-	.byte	0x10, 0xBC, 0x01, 0xBC
+	push	{r4, lr}
+	add	r3, r0, #0
+	lsl	r1, r1, #24
+	lsr	r4, r1, #24
+	lsl	r2, r2, #24
+	lsr	r2, r2, #24
+	ldrb	r0, [r3, #14]
+	cmp	r0, #0
+	beq	.L_c1758
+	mov	r1, #0
+	mov	r0, #1
+	strb	r0, [r3, #19]
+	strb	r1, [r3, #20]
+	strb	r1, [r3, #22]
+	strb	r2, [r3, #21]
+	strb	r4, [r3, #23]
+.L_c1758:
+	pop	{r4}
+	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080C1738, .-sub_080C1738

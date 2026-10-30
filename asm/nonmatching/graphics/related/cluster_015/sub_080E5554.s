@@ -13,23 +13,23 @@ sub_080E5554:
 	mov	r8, r0
 	mov	r4, #1
 	mov	r0, #1
-	mov	r1, #102	@ 0x66
+	mov	r1, #102
 	bl	sub_08003E34
 	mov	r0, #1
 	mov	r9, r0
 	str	r4, [sp, #0]
 	mov	r4, #0
 	str	r4, [sp, #4]
-	ldr	r6, [pc, #112]	@ (0x80e55e8)
+	ldr	r6, .L_e55e8	@ =0x084C0BC4
 	str	r6, [sp, #8]
 	str	r4, [sp, #12]
-	ldr	r5, [pc, #112]	@ (0x80e55ec)
+	ldr	r5, .L_e55ec	@ =0x084C0C1C
 	mov	r0, r8
 	ldrb	r1, [r0, #6]
 	lsl	r0, r1, #1
 	add	r0, r0, r1
 	lsl	r0, r0, #2
-	.2byte	0x1D29
+	add	r1, r5, #4
 	add	r0, r0, r1
 	ldr	r0, [r0, #0]
 	str	r0, [sp, #16]
@@ -42,7 +42,7 @@ sub_080E5554:
 	mov	r1, #2
 	bl	sub_080038F8
 	mov	r0, #2
-	mov	r1, #102	@ 0x66
+	mov	r1, #102
 	bl	sub_08003E34
 	mov	r0, r9
 	str	r0, [sp, #0]
@@ -73,10 +73,8 @@ sub_080E5554:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	.align	2, 0
 .L_e55e8:
-	.4byte	0x84C0BC4
-	.align	2, 0
+	.4byte	0x084C0BC4
 .L_e55ec:
-	.4byte	0x84C0C1C
+	.4byte	0x084C0C1C
 .size sub_080E5554, .-sub_080E5554

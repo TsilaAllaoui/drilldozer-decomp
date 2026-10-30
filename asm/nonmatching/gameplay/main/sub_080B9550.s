@@ -6,14 +6,14 @@
 .thumb_func
 sub_080B9550:
 	push	{lr}
-	.2byte	0x1C02
-	add	r2, #93	@ 0x5d
+	add	r2, r0, #0
+	add	r2, #93
 	strb	r1, [r2, #0]
 	lsl	r1, r1, #24
 	cmp	r1, #0
 	beq	.L_b9568
-	.2byte	0x1C01
-	add	r1, #94	@ 0x5e
+	add	r1, r0, #0
+	add	r1, #94
 	mov	r0, #0
 	strb	r0, [r1, #0]
 	b	.L_b9570

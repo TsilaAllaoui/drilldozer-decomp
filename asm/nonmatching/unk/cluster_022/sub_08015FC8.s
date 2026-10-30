@@ -7,7 +7,7 @@
 sub_08015FC8:
 	push	{r4, r5, r6, lr}
 	sub	sp, #8
-	.2byte	0x1C04
+	add	r4, r0, #0
 	mov	r6, sp
 	lsl	r1, r1, #16
 	asr	r1, r1, #16
@@ -20,7 +20,7 @@ sub_08015FC8:
 	ldrsh	r1, [r4, r0]
 	mov	r0, #22
 	ldrsh	r2, [r4, r0]
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_0800F7AC
 	mov	r0, sp
 	mov	r2, #0
@@ -40,14 +40,14 @@ sub_08015FC8:
 	ldrsh	r1, [r0, r2]
 	mov	r2, #0
 	ldrsh	r0, [r5, r2]
-	add	r0, #240	@ 0xf0
+	add	r0, #240
 	cmp	r1, r0
 	bgt	.L_16026
 	mov	r0, #2
 	ldrsh	r1, [r6, r0]
 	mov	r2, #2
 	ldrsh	r0, [r5, r2]
-	add	r0, #176	@ 0xb0
+	add	r0, #176
 	cmp	r1, r0
 	ble	.L_1602a
 .L_16026:

@@ -7,7 +7,7 @@
 sub_080B1850:
 	push	{r4, r5, r6, lr}
 	sub	sp, #4
-	.2byte	0x1C14
+	add	r4, r2, #0
 	lsl	r0, r0, #16
 	lsr	r5, r0, #16
 	lsl	r1, r1, #16
@@ -27,7 +27,7 @@ sub_080B1850:
 	asr	r2, r2, #16
 	mov	r3, #0
 	str	r3, [sp, #0]
-	.2byte	0x1C23
+	add	r3, r4, #0
 	bl	sub_0807E46C
 	b	.L_b189a
 .L_b1884:
@@ -45,5 +45,5 @@ sub_080B1850:
 	pop	{r4, r5, r6}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080B1850, .-sub_080B1850

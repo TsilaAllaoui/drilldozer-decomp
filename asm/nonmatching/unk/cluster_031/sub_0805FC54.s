@@ -6,24 +6,24 @@
 .thumb_func
 sub_0805FC54:
 	push	{r4, r5, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0D
+	add	r4, r0, #0
+	add	r5, r1, #0
 	cmp	r3, #0
 	bne	.L_5fc64
-	.2byte	0x1C21
-	add	r1, #120	@ 0x78
+	add	r1, r4, #0
+	add	r1, #120
 	b	.L_5fc68
 .L_5fc64:
-	.2byte	0x1C29
-	add	r1, #42	@ 0x2a
+	add	r1, r5, #0
+	add	r1, #42
 .L_5fc68:
 	mov	r0, #8
 	strb	r0, [r1, #0]
-	.2byte	0x1C20
-	.2byte	0x1C29
+	add	r0, r4, #0
+	add	r1, r5, #0
 	bl	sub_0805FBA4
 	pop	{r4, r5}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0805FC54, .-sub_0805FC54

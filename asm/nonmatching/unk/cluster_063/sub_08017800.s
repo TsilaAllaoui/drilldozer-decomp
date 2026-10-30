@@ -6,46 +6,44 @@
 .thumb_func
 sub_08017800:
 	push	{lr}
-	.2byte	0x1C02
-	mov	r1, #254	@ 0xfe
+	add	r2, r0, #0
+	mov	r1, #254
 	lsl	r1, r1, #2
 	add	r0, r2, r1
 	ldr	r0, [r0, #0]
 	cmp	r0, #1
 	beq	.L_17878
-	mov	r3, #132	@ 0x84
+	mov	r3, #132
 	lsl	r3, r3, #3
 	add	r0, r2, r3
 	ldr	r1, [r0, #0]
 	cmp	r1, #2
 	bne	.L_17830
-	ldr	r1, [pc, #12]	@ (0x801782c)
+	ldr	r1, .L_1782c	@ =0x00000424
 	add	r0, r2, r1
 	ldr	r0, [r0, #0]
 	cmp	r0, #0
 	bne	.L_1787c
 	mov	r0, #4
 	b	.L_1787e
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_1782c:
-	.4byte	0x424
+	.4byte	0x00000424
 .L_17830:
 	cmp	r1, #3
 	bne	.L_17848
-	ldr	r3, [pc, #12]	@ (0x8017844)
+	ldr	r3, .L_17844	@ =0x00000424
 	add	r0, r2, r3
 	ldr	r0, [r0, #0]
 	cmp	r0, #0
 	bne	.L_1787c
 	mov	r0, #5
 	b	.L_1787e
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_17844:
-	.4byte	0x424
+	.4byte	0x00000424
 .L_17848:
-	mov	r3, #130	@ 0x82
+	mov	r3, #130
 	lsl	r3, r3, #3
 	add	r0, r2, r3
 	ldr	r0, [r0, #0]
@@ -53,17 +51,16 @@ sub_08017800:
 	beq	.L_17878
 	cmp	r1, #1
 	bne	.L_1787c
-	ldr	r1, [pc, #12]	@ (0x8017868)
+	ldr	r1, .L_17868	@ =0x00000424
 	add	r0, r2, r1
 	ldr	r0, [r0, #0]
 	cmp	r0, #0
 	bne	.L_1786c
 	mov	r0, #1
 	b	.L_1787e
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_17868:
-	.4byte	0x424
+	.4byte	0x00000424
 .L_1786c:
 	cmp	r0, #3
 	bne	.L_17874
@@ -80,5 +77,5 @@ sub_08017800:
 .L_1787e:
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_08017800, .-sub_08017800

@@ -13,9 +13,9 @@ sub_0800542C:
 	lsl	r2, r2, #24
 	lsr	r5, r2, #24
 	mov	r2, #0
-	mov	r4, #127	@ 0x7f
-	ldr	r3, [pc, #28]	@ (0x800545c)
-	ldr	r0, [pc, #28]	@ (0x8005460)
+	mov	r4, #127
+	ldr	r3, .L_545c	@ =0x02021848
+	ldr	r0, .L_5460	@ =0x000017D0
 	add	r1, r3, r0
 .L_5444:
 	ldrb	r0, [r3, #0]
@@ -27,21 +27,19 @@ sub_0800542C:
 	strb	r5, [r3, #3]
 	strh	r6, [r3, #20]
 	strh	r7, [r3, #22]
-	.2byte	0x1C18
+	add	r0, r3, #0
 	b	.L_5488
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_545c:
-	.4byte	0x2021848
-	.align	2, 0
+	.4byte	0x02021848
 .L_5460:
-	.4byte	0x17D0
+	.4byte	0x000017D0
 .L_5464:
 	ldrb	r0, [r1, #0]
 	cmp	r0, #0
 	beq	.L_547a
-	add	r3, #48	@ 0x30
-	sub	r1, #48	@ 0x30
+	add	r3, #48
+	sub	r1, #48
 	add	r2, #1
 	sub	r4, #1
 	cmp	r2, r4
@@ -55,10 +53,10 @@ sub_0800542C:
 	strb	r5, [r1, #3]
 	strh	r6, [r1, #20]
 	strh	r7, [r1, #22]
-	.2byte	0x1C08
+	add	r0, r1, #0
 .L_5488:
 	pop	{r4, r5, r6, r7}
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0800542C, .-sub_0800542C

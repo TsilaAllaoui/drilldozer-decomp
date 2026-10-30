@@ -11,13 +11,13 @@ sub_080BC730:
 	mov	r5, r8
 	push	{r5, r6, r7}
 	sub	sp, #8
-	.2byte	0x1C07
-	.2byte	0x1C0D
-	.2byte	0x1C14
-	.2byte	0x1C1E
-	ldr	r0, [sp, #40]	@ 0x28
+	add	r7, r0, #0
+	add	r5, r1, #0
+	add	r4, r2, #0
+	add	r6, r3, #0
+	ldr	r0, [sp, #40]
 	mov	r9, r0
-	ldr	r1, [sp, #48]	@ 0x30
+	ldr	r1, [sp, #48]
 	mov	r8, r1
 	lsl	r5, r5, #24
 	lsr	r5, r5, #24
@@ -36,14 +36,14 @@ sub_080BC730:
 	mov	r1, #0
 	mov	sl, r1
 	str	r1, [sp, #4]
-	ldr	r2, [pc, #152]	@ (0x80bc808)
+	ldr	r2, .L_bc808	@ =0x0500000F
 	add	r0, sp, #4
-	.2byte	0x1C39
+	add	r1, r7, #0
 	bl	sub_080F86FC
 	mov	r0, #0
-	.2byte	0x1C29
+	add	r1, r5, #0
 	mov	r2, #0
-	.2byte	0x1C3B
+	add	r3, r7, #0
 	bl	sub_080622EC
 	str	r4, [sp, #0]
 	mov	r0, #2
@@ -51,31 +51,31 @@ sub_080BC730:
 	mov	r2, #26
 	mov	r3, #6
 	bl	sub_080623A8
-	.2byte	0x1C61
+	add	r1, r4, #1
 	lsl	r1, r1, #24
 	lsr	r1, r1, #24
 	mov	r0, #0
 	bl	sub_08062408
 	mov	r0, #1
 	bl	sub_08062430
-	.2byte	0x1C28
+	add	r0, r5, #0
 	bl	sub_08002194
-	ldr	r2, [pc, #96]	@ (0x80bc80c)
+	ldr	r2, .L_bc80c	@ =0x0000084C
 	add	r1, r7, r2
 	str	r0, [r1, #0]
-	.2byte	0x1C39
-	add	r1, #76	@ 0x4c
-	.2byte	0x1C28
+	add	r1, r7, #0
+	add	r1, #76
+	add	r0, r5, #0
 	bl	sub_0800212C
-	.2byte	0x1C38
-	add	r0, #67	@ 0x43
+	add	r0, r7, #0
+	add	r0, #67
 	strb	r4, [r0, #0]
 	sub	r0, #1
 	strb	r6, [r0, #0]
-	ldr	r0, [sp, #44]	@ 0x2c
-	str	r0, [r7, #60]	@ 0x3c
-	.2byte	0x1C38
-	add	r0, #69	@ 0x45
+	ldr	r0, [sp, #44]
+	str	r0, [r7, #60]
+	add	r0, r7, #0
+	add	r0, #69
 	mov	r1, sl
 	strb	r1, [r0, #0]
 	sub	r0, #1
@@ -87,12 +87,12 @@ sub_080BC730:
 	mov	r1, #0
 	mov	r2, r9
 	strh	r2, [r0, #0]
-	.2byte	0x1C3A
-	add	r2, #71	@ 0x47
+	add	r2, r7, #0
+	add	r2, #71
 	mov	r0, #1
 	strb	r0, [r2, #0]
-	.2byte	0x1C38
-	add	r0, #75	@ 0x4b
+	add	r0, r7, #0
+	add	r0, #75
 	strb	r1, [r0, #0]
 	sub	r0, #11
 	mov	r1, sl
@@ -105,11 +105,9 @@ sub_080BC730:
 	pop	{r4, r5, r6, r7}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
 	.align	2, 0
 .L_bc808:
-	.4byte	0x500000F
-	.align	2, 0
+	.4byte	0x0500000F
 .L_bc80c:
-	.4byte	0x84C
+	.4byte	0x0000084C
 .size sub_080BC730, .-sub_080BC730

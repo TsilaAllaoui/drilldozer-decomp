@@ -6,7 +6,7 @@
 .thumb_func
 sub_080B9BDC:
 	push	{r4, lr}
-	.2byte	0x1C04
+	add	r4, r0, #0
 	lsl	r1, r1, #24
 	lsr	r3, r1, #24
 	strb	r2, [r4, #17]
@@ -17,11 +17,11 @@ sub_080B9BDC:
 	and	r3, r0
 	cmp	r3, #0
 	beq	.L_b9bf8
-	.2byte	0x1C48
+	add	r0, r1, #1
 	strb	r0, [r4, #18]
 .L_b9bf8:
 	pop	{r4}
 	pop	{r0}
 	bx	r0
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_080B9BDC, .-sub_080B9BDC

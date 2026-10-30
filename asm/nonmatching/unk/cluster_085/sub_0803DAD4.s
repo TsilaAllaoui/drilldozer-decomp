@@ -6,9 +6,9 @@
 .thumb_func
 sub_0803DAD4:
 	push	{lr}
-	.2byte	0x1C0A
+	add	r2, r1, #0
 	lsl	r1, r2, #2
-	add	r1, #204	@ 0xcc
+	add	r1, #204
 	add	r1, r1, r0
 .L_3dade:
 	sub	r1, #4
@@ -27,5 +27,5 @@ sub_0803DAD4:
 .L_3daf6:
 	pop	{r1}
 	bx	r1
-	lsl	r0, r0, #0
+	.align	2, 0
 .size sub_0803DAD4, .-sub_0803DAD4
