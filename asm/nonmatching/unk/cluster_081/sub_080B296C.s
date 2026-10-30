@@ -1,38 +1,13 @@
 .syntax divided
-.align 2, 0
+.align 1, 0
 .global sub_080B296C
 .thumb
 .type sub_080B296C, %function
 .thumb_func
 sub_080B296C:
-	push	{r4, r5, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0D
-	bl	sub_080B27D8
-	.2byte	0x1C01
-	add	r1, #78	@ 0x4e
-	strh	r4, [r1, #0]
-	add	r0, #82	@ 0x52
-	strh	r5, [r0, #0]
-	pop	{r4, r5}
-	pop	{r0}
-	bx	r0
-	lsl	r0, r0, #0
-	push	{r4, r5, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0D
-	bl	sub_080B27D8
-	.2byte	0x1C02
-	add	r2, #78	@ 0x4e
-	ldrh	r1, [r2, #0]
-	add	r1, r1, r4
-	strh	r1, [r2, #0]
-	add	r0, #82	@ 0x52
-	ldrh	r1, [r0, #0]
-	add	r1, r1, r5
-	strh	r1, [r0, #0]
-	pop	{r4, r5}
-	pop	{r0}
+	@ Exact original ROM bytes from 0x080B296C.
+	.byte	0x30, 0xB5, 0x04, 0x1C, 0x0D, 0x1C, 0xFF, 0xF7, 0x31, 0xFF, 0x01, 0x1C, 0x4E, 0x31, 0x0C, 0x80
+	.byte	0x52, 0x30, 0x05, 0x80, 0x30, 0xBC, 0x01, 0xBC
 	bx	r0
 	lsl	r0, r0, #0
 .size sub_080B296C, .-sub_080B296C

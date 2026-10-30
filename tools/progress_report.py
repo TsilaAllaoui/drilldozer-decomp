@@ -220,7 +220,8 @@ def compile_source(name, path, profile, as_, end_address):
     command([str(cc), str(pp), *split(profile['flags']), "-o", str(asm)])
     # The official objdiff base object needs the same ROM-accurate padding.
     original = next((p for folder in ('nonmatching', 'references')
-                     for p in (ROOT/'asm'/folder).rglob(name+'.s')), None)
+                     for p in (ROOT/'asm'/folder).rglob(name+'.s')
+                     if 'aggregates' not in p.relative_to(ROOT/'asm'/folder).parts), None)
     if original is None:
         die(f'Missing reference ASM for {name}')
     force_zero_thumb_padding(asm, original, end_address)
@@ -237,6 +238,8 @@ def prepare(args):
     # The current unmatched ASM takes precedence; they must match exactly.
     for folder in (ROOT / "asm/nonmatching", ROOT / "asm/references"):
         for f in folder.rglob("sub_*.s"):
+            if 'aggregates' in f.relative_to(folder).parts:
+                continue
             if f.stem in canonical:
                 if canonical[f.stem].read_bytes() != f.read_bytes():
                     die(f"Conflicting copies of canonical ASM for {f.stem}")

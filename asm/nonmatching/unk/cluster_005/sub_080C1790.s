@@ -1,88 +1,14 @@
 .syntax divided
-.align 2, 0
+.align 1, 0
 .global sub_080C1790
 .thumb
 .type sub_080C1790, %function
 .thumb_func
 sub_080C1790:
-	push	{r4, lr}
-	.2byte	0x1C04
-	ldrb	r0, [r4, #14]
-	cmp	r0, #0
-	beq	.L_c17d2
-	ldr	r0, [r4, #28]
-	bl	sub_08005560
-	ldr	r0, [r4, #32]
-	bl	sub_08005560
-	ldr	r0, [r4, #36]	@ 0x24
-	bl	sub_08005560
-	ldrh	r0, [r4, #56]	@ 0x38
-	mov	r1, #136	@ 0x88
-	lsl	r1, r1, #1
-	bl	sub_080066B8
-	.2byte	0x1C20
-	add	r0, #64	@ 0x40
-	ldrb	r0, [r0, #0]
-	cmp	r0, #0
-	beq	.L_c17ce
-	bl	sub_080C165C
-	ldrh	r0, [r4, #60]	@ 0x3c
-	mov	r1, #148	@ 0x94
-	lsl	r1, r1, #1
-	bl	sub_080066B8
-.L_c17ce:
-	mov	r0, #0
-	strb	r0, [r4, #14]
-.L_c17d2:
-	pop	{r4}
-	pop	{r0}
-	bx	r0
-	push	{r4, r5, lr}
-	.2byte	0x1C04
-	add	r0, #118	@ 0x76
-	mov	r5, #0
-	strb	r5, [r0, #0]
-	add	r0, #2
-	strb	r5, [r0, #0]
-	ldrh	r0, [r1, #0]
-	.2byte	0x1C21
-	add	r1, #174	@ 0xae
-	strb	r0, [r1, #0]
-	lsl	r0, r0, #24
-	lsr	r0, r0, #24
-	cmp	r0, #4
-	bls	.L_c17f8
-	strb	r5, [r1, #0]
-.L_c17f8:
-	.2byte	0x1C20
-	add	r0, #60	@ 0x3c
-	.2byte	0x1C21
-	add	r1, #36	@ 0x24
-	mov	r2, #15
-	mov	r3, #12
-	bl	sub_08012C08
-	ldr	r0, [r4, #60]	@ 0x3c
-	ldr	r1, [r4, #64]	@ 0x40
-	str	r0, [r4, #44]	@ 0x2c
-	str	r1, [r4, #48]	@ 0x30
-	str	r0, [r4, #52]	@ 0x34
-	str	r1, [r4, #56]	@ 0x38
-	.2byte	0x1C20
-	add	r0, #178	@ 0xb2
-	strb	r5, [r0, #0]
-	add	r0, #2
-	strb	r5, [r0, #0]
-	sub	r0, #1
-	strb	r5, [r0, #0]
-	.2byte	0x1C20
-	bl	sub_080C183C
-	mov	r0, #36	@ 0x24
-	ldrsh	r1, [r4, r0]
-	mov	r0, #38	@ 0x26
-	ldrsh	r2, [r4, r0]
-	.2byte	0x1C20
-	bl	sub_080C1CC0
-	pop	{r4, r5}
-	pop	{r0}
-	bx	r0
+	@ Exact original ROM bytes from 0x080C1790.
+	.byte	0x10, 0xB5, 0x04, 0x1C, 0xA0, 0x7B, 0x00, 0x28, 0x1B, 0xD0, 0xE0, 0x69, 0x43, 0xF7, 0xE0, 0xFE
+	.byte	0x20, 0x6A, 0x43, 0xF7, 0xDD, 0xFE, 0x60, 0x6A, 0x43, 0xF7, 0xDA, 0xFE, 0x20, 0x8F, 0x88, 0x21
+	.byte	0x49, 0x00, 0x44, 0xF7, 0x81, 0xFF, 0x20, 0x1C, 0x40, 0x30, 0x00, 0x78, 0x00, 0x28, 0x06, 0xD0
+	.byte	0xFF, 0xF7, 0x4C, 0xFF, 0xA0, 0x8F, 0x94, 0x21, 0x49, 0x00, 0x44, 0xF7, 0x75, 0xFF, 0x00, 0x20
+	.byte	0xA0, 0x73, 0x10, 0xBC, 0x01, 0xBC, 0x00, 0x47
 .size sub_080C1790, .-sub_080C1790

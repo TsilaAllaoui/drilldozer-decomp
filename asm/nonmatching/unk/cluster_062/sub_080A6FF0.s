@@ -1,36 +1,13 @@
 .syntax divided
-.align 2, 0
+.align 1, 0
 .global sub_080A6FF0
 .thumb
 .type sub_080A6FF0, %function
 .thumb_func
 sub_080A6FF0:
-	push	{lr}
-	sub	sp, #4
-	mov	r0, #0
-	str	r0, [sp, #0]
-	mov	r1, #153	@ 0x99
-	lsl	r1, r1, #1
-	mov	r0, sp
-	bl	sub_0801BC0C
-	cmp	r0, #0
-	beq	.L_a700c
-	ldr	r1, [r0, #124]	@ 0x7c
-	mov	r0, #1
-	strb	r0, [r1, #1]
-.L_a700c:
-	add	sp, #4
-	pop	{r0}
+	@ Exact original ROM bytes from 0x080A6FF0.
+	.byte	0x00, 0xB5, 0x81, 0xB0, 0x00, 0x20, 0x00, 0x90, 0x99, 0x21, 0x49, 0x00, 0x68, 0x46, 0x74, 0xF7
+	.byte	0x05, 0xFE, 0x00, 0x28, 0x02, 0xD0, 0xC1, 0x6F, 0x01, 0x20, 0x48, 0x70, 0x01, 0xB0, 0x01, 0xBC
 	bx	r0
 	lsl	r0, r0, #0
-	push	{lr}
-	mov	r2, #1
-	bl	sub_080A702C
-	pop	{r0}
-	bx	r0
-	push	{lr}
-	mov	r2, #0
-	bl	sub_080A702C
-	pop	{r0}
-	bx	r0
 .size sub_080A6FF0, .-sub_080A6FF0

@@ -34,6 +34,11 @@
     "reference": "asm/references/system/irq/sub_080004FC.s",
     "source": "src/system/irq/sub_080004FC.c"
   },
+  "sub_08000514": {
+    "profile": "baseline",
+    "reference": "asm/references/system/irq/sub_08000514.s",
+    "source": "src/system/irq/sub_08000514.c"
+  },
   "sub_08000528": {
     "profile": "baseline",
     "reference": "asm/references/system/core/cluster_000/sub_08000528.s",
@@ -99,10 +104,20 @@
     "reference": "asm/references/system/dma_queue/sub_080014AC.s",
     "source": "src/system/dma_queue/sub_080014AC.c"
   },
+  "sub_080014EC": {
+    "profile": "baseline",
+    "reference": "asm/references/system/heap/sub_080014EC.s",
+    "source": "src/system/heap/sub_080014EC.c"
+  },
   "sub_08001508": {
     "profile": "baseline",
     "reference": "asm/references/system/heap/sub_08001508.s",
     "source": "src/system/heap/sub_08001508.c"
+  },
+  "sub_080017A8": {
+    "profile": "baseline",
+    "reference": "asm/references/system/heap/sub_080017A8.s",
+    "source": "src/system/heap/sub_080017A8.c"
   },
   "sub_08001B34": {
     "profile": "baseline",
@@ -123,6 +138,31 @@
     "profile": "baseline",
     "reference": "asm/references/graphics/oam/sub_08002B08.s",
     "source": "src/graphics/oam/sub_08002B08.c"
+  },
+  "sub_08002D88": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_08002D88.s",
+    "source": "src/unk/cluster_020/sub_08002D88.c"
+  },
+  "sub_08002D94": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_08002D94.s",
+    "source": "src/unk/cluster_020/sub_08002D94.c"
+  },
+  "sub_08002DA0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_08002DA0.s",
+    "source": "src/unk/cluster_020/sub_08002DA0.c"
+  },
+  "sub_08002DB4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_08002DB4.s",
+    "source": "src/unk/cluster_020/sub_08002DB4.c"
+  },
+  "sub_08002DC4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_08002DC4.s",
+    "source": "src/unk/cluster_020/sub_08002DC4.c"
   },
   "sub_08002DD0": {
     "profile": "baseline",
@@ -164,6 +204,16 @@
     "reference": "asm/references/lib/rng/sub_080051A8.s",
     "source": "src/lib/rng/sub_080051A8.c"
   },
+  "sub_080051C4": {
+    "profile": "baseline",
+    "reference": "asm/references/lib/rng/sub_080051C4.s",
+    "source": "src/lib/rng/sub_080051C4.c"
+  },
+  "sub_080051D0": {
+    "profile": "baseline",
+    "reference": "asm/references/lib/rng/sub_080051D0.s",
+    "source": "src/lib/rng/sub_080051D0.c"
+  },
   "sub_080051DC": {
     "profile": "baseline",
     "reference": "asm/references/lib/rng/sub_080051DC.s",
@@ -204,6 +254,11 @@
     "reference": "asm/references/unk/cluster_028/sub_080059A0.s",
     "source": "src/unk/cluster_028/sub_080059A0.c"
   },
+  "sub_08005ADC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_027/sub_08005ADC.s",
+    "source": "src/unk/cluster_027/sub_08005ADC.c"
+  },
   "sub_08005D4C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_028/sub_08005D4C.s",
@@ -233,6 +288,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_035/sub_080061BC.s",
     "source": "src/unk/cluster_035/sub_080061BC.c"
+  },
+  "sub_080061D4": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_034/sub_080061D4.s",
+    "source": "src/graphics/related/cluster_034/sub_080061D4.c"
   },
   "sub_080062F4": {
     "profile": "baseline",
@@ -314,6 +374,16 @@
     "reference": "asm/references/graphics/related/cluster_038/sub_08006A7C.s",
     "source": "src/graphics/related/cluster_038/sub_08006A7C.c"
   },
+  "sub_08006BD0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_041/sub_08006BD0.s",
+    "source": "src/unk/cluster_041/sub_08006BD0.c"
+  },
+  "sub_08006BE8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_041/sub_08006BE8.s",
+    "source": "src/unk/cluster_041/sub_08006BE8.c"
+  },
   "sub_08006C48": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_006/sub_08006C48.s",
@@ -378,6 +448,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_004/sub_0800868C.s",
     "source": "src/unk/cluster_004/sub_0800868C.c"
+  },
+  "sub_080086D4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_010/sub_080086D4.s",
+    "source": "src/unk/cluster_010/sub_080086D4.c"
   },
   "sub_08008730": {
     "profile": "baseline",
@@ -449,6 +524,11 @@
     "reference": "asm/references/unk/cluster_054/sub_08009300.s",
     "source": "src/unk/cluster_054/sub_08009300.c"
   },
+  "sub_08009314": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_006/sub_08009314.s",
+    "source": "src/unk/cluster_006/sub_08009314.c"
+  },
   "sub_080096E8": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_011/sub_080096E8.s",
@@ -473,6 +553,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_056/sub_080097A0.s",
     "source": "src/unk/cluster_056/sub_080097A0.c"
+  },
+  "sub_080097D0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_024/sub_080097D0.s",
+    "source": "src/unk/cluster_024/sub_080097D0.c"
   },
   "sub_08009BC4": {
     "profile": "baseline",
@@ -524,6 +609,11 @@
     "reference": "asm/references/unk/cluster_002/sub_0800A888.s",
     "source": "src/unk/cluster_002/sub_0800A888.c"
   },
+  "sub_0800A8A0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_013/sub_0800A8A0.s",
+    "source": "src/unk/cluster_013/sub_0800A8A0.c"
+  },
   "sub_0800B1F8": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_002/sub_0800B1F8.s",
@@ -564,6 +654,16 @@
     "reference": "asm/references/gameplay/object_state/sub_0800B254.s",
     "source": "src/gameplay/object_state/sub_0800B254.c"
   },
+  "sub_0800B260": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B260.s",
+    "source": "src/gameplay/object_state/sub_0800B260.c"
+  },
+  "sub_0800B270": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B270.s",
+    "source": "src/gameplay/object_state/sub_0800B270.c"
+  },
   "sub_0800B27C": {
     "profile": "baseline",
     "reference": "asm/references/gameplay/object_state/sub_0800B27C.s",
@@ -573,6 +673,16 @@
     "profile": "baseline",
     "reference": "asm/references/gameplay/object_state/sub_0800B280.s",
     "source": "src/gameplay/object_state/sub_0800B280.c"
+  },
+  "sub_0800B28C": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B28C.s",
+    "source": "src/gameplay/object_state/sub_0800B28C.c"
+  },
+  "sub_0800B294": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B294.s",
+    "source": "src/gameplay/object_state/sub_0800B294.c"
   },
   "sub_0800B2A0": {
     "profile": "baseline",
@@ -674,6 +784,21 @@
     "reference": "asm/references/gameplay/object_state/sub_0800B414.s",
     "source": "src/gameplay/object_state/sub_0800B414.c"
   },
+  "sub_0800B41C": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B41C.s",
+    "source": "src/gameplay/object_state/sub_0800B41C.c"
+  },
+  "sub_0800B424": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B424.s",
+    "source": "src/gameplay/object_state/sub_0800B424.c"
+  },
+  "sub_0800B42C": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B42C.s",
+    "source": "src/gameplay/object_state/sub_0800B42C.c"
+  },
   "sub_0800B434": {
     "profile": "baseline",
     "reference": "asm/references/gameplay/object_state/sub_0800B434.s",
@@ -754,6 +879,16 @@
     "reference": "asm/references/gameplay/object_state/sub_0800B534.s",
     "source": "src/gameplay/object_state/sub_0800B534.c"
   },
+  "sub_0800B538": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B538.s",
+    "source": "src/gameplay/object_state/sub_0800B538.c"
+  },
+  "sub_0800B54C": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B54C.s",
+    "source": "src/gameplay/object_state/sub_0800B54C.c"
+  },
   "sub_0800B550": {
     "profile": "baseline",
     "reference": "asm/references/gameplay/object_state/sub_0800B550.s",
@@ -773,6 +908,16 @@
     "profile": "baseline",
     "reference": "asm/references/gameplay/object_state/sub_0800B55C.s",
     "source": "src/gameplay/object_state/sub_0800B55C.c"
+  },
+  "sub_0800B560": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B560.s",
+    "source": "src/gameplay/object_state/sub_0800B560.c"
+  },
+  "sub_0800B56C": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B56C.s",
+    "source": "src/gameplay/object_state/sub_0800B56C.c"
   },
   "sub_0800B578": {
     "profile": "baseline",
@@ -799,6 +944,16 @@
     "reference": "asm/references/gameplay/object_state/sub_0800B6A8.s",
     "source": "src/gameplay/object_state/sub_0800B6A8.c"
   },
+  "sub_0800B6B4": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B6B4.s",
+    "source": "src/gameplay/object_state/sub_0800B6B4.c"
+  },
+  "sub_0800B6C0": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/object_state/sub_0800B6C0.s",
+    "source": "src/gameplay/object_state/sub_0800B6C0.c"
+  },
   "sub_0800BE8C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_014/sub_0800BE8C.s",
@@ -809,10 +964,30 @@
     "reference": "asm/references/unk/cluster_016/sub_0800BE9C.s",
     "source": "src/unk/cluster_016/sub_0800BE9C.c"
   },
+  "sub_0800C00C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_066/sub_0800C00C.s",
+    "source": "src/unk/cluster_066/sub_0800C00C.c"
+  },
+  "sub_0800C018": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_066/sub_0800C018.s",
+    "source": "src/unk/cluster_066/sub_0800C018.c"
+  },
   "sub_0800C024": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_068/sub_0800C024.s",
     "source": "src/unk/cluster_068/sub_0800C024.c"
+  },
+  "sub_0800C054": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_043/sub_0800C054.s",
+    "source": "src/unk/cluster_043/sub_0800C054.c"
+  },
+  "sub_0800C06C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_043/sub_0800C06C.s",
+    "source": "src/unk/cluster_043/sub_0800C06C.c"
   },
   "sub_0800C078": {
     "profile": "baseline",
@@ -1044,6 +1219,21 @@
     "reference": "asm/references/system/core/cluster_000/sub_0800FD14.s",
     "source": "src/system/core/cluster_000/sub_0800FD14.c"
   },
+  "sub_0800FD20": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_046/sub_0800FD20.s",
+    "source": "src/unk/cluster_046/sub_0800FD20.c"
+  },
+  "sub_0800FDC0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_045/sub_0800FDC0.s",
+    "source": "src/unk/cluster_045/sub_0800FDC0.c"
+  },
+  "sub_0800FDCC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_045/sub_0800FDCC.s",
+    "source": "src/unk/cluster_045/sub_0800FDCC.c"
+  },
   "sub_0800FDD8": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_039/sub_0800FDD8.s",
@@ -1214,6 +1404,11 @@
     "reference": "asm/references/unk/cluster_067/sub_0801184C.s",
     "source": "src/unk/cluster_067/sub_0801184C.c"
   },
+  "sub_08011858": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_067/sub_08011858.s",
+    "source": "src/unk/cluster_067/sub_08011858.c"
+  },
   "sub_08011890": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_063/sub_08011890.s",
@@ -1233,6 +1428,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_042/sub_080118A8.s",
     "source": "src/unk/cluster_042/sub_080118A8.c"
+  },
+  "sub_08011934": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08011934.s",
+    "source": "src/unk/cluster_063/sub_08011934.c"
   },
   "sub_08011950": {
     "profile": "baseline",
@@ -1334,10 +1534,35 @@
     "reference": "asm/references/unk/cluster_067/sub_080119F8.s",
     "source": "src/unk/cluster_067/sub_080119F8.c"
   },
+  "sub_08011A04": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08011A04.s",
+    "source": "src/unk/cluster_063/sub_08011A04.c"
+  },
+  "sub_08011A0C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08011A0C.s",
+    "source": "src/unk/cluster_063/sub_08011A0C.c"
+  },
+  "sub_08011A18": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08011A18.s",
+    "source": "src/unk/cluster_063/sub_08011A18.c"
+  },
   "sub_08011A1C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_043/sub_08011A1C.s",
     "source": "src/unk/cluster_043/sub_08011A1C.c"
+  },
+  "sub_08011A20": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_060/sub_08011A20.s",
+    "source": "src/unk/cluster_060/sub_08011A20.c"
+  },
+  "sub_08011A34": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_060/sub_08011A34.s",
+    "source": "src/unk/cluster_060/sub_08011A34.c"
   },
   "sub_08011A38": {
     "profile": "baseline",
@@ -1384,6 +1609,11 @@
     "reference": "asm/references/unk/cluster_065/sub_08011A7C.s",
     "source": "src/unk/cluster_065/sub_08011A7C.c"
   },
+  "sub_08011A84": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_061/sub_08011A84.s",
+    "source": "src/unk/cluster_061/sub_08011A84.c"
+  },
   "sub_08011AA0": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_042/sub_08011AA0.s",
@@ -1428,6 +1658,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_080/sub_08011B74.s",
     "source": "src/unk/cluster_080/sub_08011B74.c"
+  },
+  "sub_08011B78": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_028/sub_08011B78.s",
+    "source": "src/unk/cluster_028/sub_08011B78.c"
   },
   "sub_08011B94": {
     "profile": "baseline",
@@ -1499,6 +1734,16 @@
     "reference": "asm/references/unk/cluster_078/sub_08012CF8.s",
     "source": "src/unk/cluster_078/sub_08012CF8.c"
   },
+  "sub_08013148": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_036/sub_08013148.s",
+    "source": "src/unk/cluster_036/sub_08013148.c"
+  },
+  "sub_08013158": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_036/sub_08013158.s",
+    "source": "src/unk/cluster_036/sub_08013158.c"
+  },
   "sub_08013168": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_036/sub_08013168.s",
@@ -1549,6 +1794,16 @@
     "reference": "asm/references/unk/cluster_051/sub_08015F70.s",
     "source": "src/unk/cluster_051/sub_08015F70.c"
   },
+  "sub_08015F84": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_051/sub_08015F84.s",
+    "source": "src/unk/cluster_051/sub_08015F84.c"
+  },
+  "sub_08015F8C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_051/sub_08015F8C.s",
+    "source": "src/unk/cluster_051/sub_08015F8C.c"
+  },
   "sub_080165A8": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_068/sub_080165A8.s",
@@ -1563,6 +1818,36 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_043/sub_080168B0.s",
     "source": "src/unk/cluster_043/sub_080168B0.c"
+  },
+  "sub_08016924": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_043/sub_08016924.s",
+    "source": "src/unk/cluster_043/sub_08016924.c"
+  },
+  "sub_08016AAC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_080/sub_08016AAC.s",
+    "source": "src/unk/cluster_080/sub_08016AAC.c"
+  },
+  "sub_08017234": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_080/sub_08017234.s",
+    "source": "src/unk/cluster_080/sub_08017234.c"
+  },
+  "sub_08017410": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_080/sub_08017410.s",
+    "source": "src/unk/cluster_080/sub_08017410.c"
+  },
+  "sub_08017414": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_080/sub_08017414.s",
+    "source": "src/unk/cluster_080/sub_08017414.c"
+  },
+  "sub_080174C0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_080/sub_080174C0.s",
+    "source": "src/unk/cluster_080/sub_080174C0.c"
   },
   "sub_0801755C": {
     "profile": "baseline",
@@ -1579,10 +1864,35 @@
     "reference": "asm/references/unk/cluster_080/sub_08017580.s",
     "source": "src/unk/cluster_080/sub_08017580.c"
   },
+  "sub_0801758C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_0801758C.s",
+    "source": "src/unk/cluster_063/sub_0801758C.c"
+  },
   "sub_080175A8": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_044/sub_080175A8.s",
     "source": "src/unk/cluster_044/sub_080175A8.c"
+  },
+  "sub_080176D8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_044/sub_080176D8.s",
+    "source": "src/unk/cluster_044/sub_080176D8.c"
+  },
+  "sub_080176FC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_051/sub_080176FC.s",
+    "source": "src/unk/cluster_051/sub_080176FC.c"
+  },
+  "sub_08017724": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_051/sub_08017724.s",
+    "source": "src/unk/cluster_051/sub_08017724.c"
+  },
+  "sub_08017728": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_051/sub_08017728.s",
+    "source": "src/unk/cluster_051/sub_08017728.c"
   },
   "sub_08017780": {
     "profile": "baseline",
@@ -1593,6 +1903,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_044/sub_08017790.s",
     "source": "src/unk/cluster_044/sub_08017790.c"
+  },
+  "sub_080177A0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_080/sub_080177A0.s",
+    "source": "src/unk/cluster_080/sub_080177A0.c"
   },
   "sub_080177F0": {
     "profile": "baseline",
@@ -1614,6 +1929,11 @@
     "reference": "asm/references/unk/cluster_080/sub_080178A0.s",
     "source": "src/unk/cluster_080/sub_080178A0.c"
   },
+  "sub_080178C8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_080/sub_080178C8.s",
+    "source": "src/unk/cluster_080/sub_080178C8.c"
+  },
   "sub_080178E8": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_080/sub_080178E8.s",
@@ -1624,10 +1944,25 @@
     "reference": "asm/references/unk/cluster_087/sub_08017928.s",
     "source": "src/unk/cluster_087/sub_08017928.c"
   },
+  "sub_08017BAC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_080/sub_08017BAC.s",
+    "source": "src/unk/cluster_080/sub_08017BAC.c"
+  },
   "sub_08017BB0": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_088/sub_08017BB0.s",
     "source": "src/unk/cluster_088/sub_08017BB0.c"
+  },
+  "sub_08017BF0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_028/sub_08017BF0.s",
+    "source": "src/unk/cluster_028/sub_08017BF0.c"
+  },
+  "sub_08017BFC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_028/sub_08017BFC.s",
+    "source": "src/unk/cluster_028/sub_08017BFC.c"
   },
   "sub_08017C0C": {
     "profile": "baseline",
@@ -1673,6 +2008,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_042/sub_08017E60.s",
     "source": "src/unk/cluster_042/sub_08017E60.c"
+  },
+  "sub_08017E94": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_080/sub_08017E94.s",
+    "source": "src/unk/cluster_080/sub_08017E94.c"
   },
   "sub_08017EA0": {
     "profile": "baseline",
@@ -1759,10 +2099,45 @@
     "reference": "asm/references/unk/cluster_059/sub_08019B88.s",
     "source": "src/unk/cluster_059/sub_08019B88.c"
   },
+  "sub_08019E00": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_043/sub_08019E00.s",
+    "source": "src/unk/cluster_043/sub_08019E00.c"
+  },
+  "sub_08019E34": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_043/sub_08019E34.s",
+    "source": "src/unk/cluster_043/sub_08019E34.c"
+  },
   "sub_08019FFC": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_004/sub_08019FFC.s",
     "source": "src/unk/cluster_004/sub_08019FFC.c"
+  },
+  "sub_0801A004": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_060/sub_0801A004.s",
+    "source": "src/unk/cluster_060/sub_0801A004.c"
+  },
+  "sub_0801A29C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_021/sub_0801A29C.s",
+    "source": "src/unk/cluster_021/sub_0801A29C.c"
+  },
+  "sub_0801ADC0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_021/sub_0801ADC0.s",
+    "source": "src/unk/cluster_021/sub_0801ADC0.c"
+  },
+  "sub_0801ADD0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_021/sub_0801ADD0.s",
+    "source": "src/unk/cluster_021/sub_0801ADD0.c"
+  },
+  "sub_0801ADE0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_021/sub_0801ADE0.s",
+    "source": "src/unk/cluster_021/sub_0801ADE0.c"
   },
   "sub_0801AE20": {
     "profile": "baseline",
@@ -1919,6 +2294,56 @@
     "reference": "asm/references/unk/cluster_093/sub_0801CEE4.s",
     "source": "src/unk/cluster_093/sub_0801CEE4.c"
   },
+  "sub_0801D11C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_066/sub_0801D11C.s",
+    "source": "src/unk/cluster_066/sub_0801D11C.c"
+  },
+  "sub_0801D13C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_066/sub_0801D13C.s",
+    "source": "src/unk/cluster_066/sub_0801D13C.c"
+  },
+  "sub_0801D154": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_066/sub_0801D154.s",
+    "source": "src/unk/cluster_066/sub_0801D154.c"
+  },
+  "sub_0801D158": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_066/sub_0801D158.s",
+    "source": "src/unk/cluster_066/sub_0801D158.c"
+  },
+  "sub_0801D15C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_066/sub_0801D15C.s",
+    "source": "src/unk/cluster_066/sub_0801D15C.c"
+  },
+  "sub_0801D160": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_066/sub_0801D160.s",
+    "source": "src/unk/cluster_066/sub_0801D160.c"
+  },
+  "sub_0801D164": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_066/sub_0801D164.s",
+    "source": "src/unk/cluster_066/sub_0801D164.c"
+  },
+  "sub_0801D168": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_066/sub_0801D168.s",
+    "source": "src/unk/cluster_066/sub_0801D168.c"
+  },
+  "sub_0801D16C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_066/sub_0801D16C.s",
+    "source": "src/unk/cluster_066/sub_0801D16C.c"
+  },
+  "sub_0801D170": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_066/sub_0801D170.s",
+    "source": "src/unk/cluster_066/sub_0801D170.c"
+  },
   "sub_0801D194": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_044/sub_0801D194.s",
@@ -1929,6 +2354,16 @@
     "reference": "asm/references/unk/cluster_051/sub_0801D2C0.s",
     "source": "src/unk/cluster_051/sub_0801D2C0.c"
   },
+  "sub_0801D460": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_0801D460.s",
+    "source": "src/unk/cluster_052/sub_0801D460.c"
+  },
+  "sub_0801D47C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_0801D47C.s",
+    "source": "src/unk/cluster_052/sub_0801D47C.c"
+  },
   "sub_0801D624": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_052/sub_0801D624.s",
@@ -1938,6 +2373,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_005/sub_0801D640.s",
     "source": "src/unk/cluster_005/sub_0801D640.c"
+  },
+  "sub_0801D7AC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_0801D7AC.s",
+    "source": "src/unk/cluster_052/sub_0801D7AC.c"
   },
   "sub_0801D940": {
     "profile": "baseline",
@@ -1959,6 +2399,11 @@
     "reference": "asm/references/unk/cluster_005/sub_0801DC78.s",
     "source": "src/unk/cluster_005/sub_0801DC78.c"
   },
+  "sub_0801DF80": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_023/sub_0801DF80.s",
+    "source": "src/unk/cluster_023/sub_0801DF80.c"
+  },
   "sub_0801DFE4": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_058/sub_0801DFE4.s",
@@ -1978,6 +2423,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_037/sub_0801ED30.s",
     "source": "src/unk/cluster_037/sub_0801ED30.c"
+  },
+  "sub_0801F0C8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_037/sub_0801F0C8.s",
+    "source": "src/unk/cluster_037/sub_0801F0C8.c"
   },
   "sub_0801FB84": {
     "profile": "baseline",
@@ -2034,6 +2484,16 @@
     "reference": "asm/references/unk/cluster_042/sub_08020D88.s",
     "source": "src/unk/cluster_042/sub_08020D88.c"
   },
+  "sub_08020D94": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_040/sub_08020D94.s",
+    "source": "src/unk/cluster_040/sub_08020D94.c"
+  },
+  "sub_08020DA0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_040/sub_08020DA0.s",
+    "source": "src/unk/cluster_040/sub_08020DA0.c"
+  },
   "sub_08020DB0": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_042/sub_08020DB0.s",
@@ -2088,6 +2548,31 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_063/sub_08020F6C.s",
     "source": "src/unk/cluster_063/sub_08020F6C.c"
+  },
+  "sub_08020F7C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08020F7C.s",
+    "source": "src/unk/cluster_063/sub_08020F7C.c"
+  },
+  "sub_08020F8C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08020F8C.s",
+    "source": "src/unk/cluster_063/sub_08020F8C.c"
+  },
+  "sub_08020F9C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08020F9C.s",
+    "source": "src/unk/cluster_063/sub_08020F9C.c"
+  },
+  "sub_08020FAC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08020FAC.s",
+    "source": "src/unk/cluster_063/sub_08020FAC.c"
+  },
+  "sub_08020FBC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08020FBC.s",
+    "source": "src/unk/cluster_063/sub_08020FBC.c"
   },
   "sub_08021030": {
     "profile": "baseline",
@@ -2154,6 +2639,11 @@
     "reference": "asm/references/unk/cluster_042/sub_08021420.s",
     "source": "src/unk/cluster_042/sub_08021420.c"
   },
+  "sub_08021430": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_043/sub_08021430.s",
+    "source": "src/unk/cluster_043/sub_08021430.c"
+  },
   "sub_0802144C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_062/sub_0802144C.s",
@@ -2193,6 +2683,41 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_040/sub_080214E4.s",
     "source": "src/unk/cluster_040/sub_080214E4.c"
+  },
+  "sub_080214F0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_040/sub_080214F0.s",
+    "source": "src/unk/cluster_040/sub_080214F0.c"
+  },
+  "sub_080214FC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_040/sub_080214FC.s",
+    "source": "src/unk/cluster_040/sub_080214FC.c"
+  },
+  "sub_08021518": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_040/sub_08021518.s",
+    "source": "src/unk/cluster_040/sub_08021518.c"
+  },
+  "sub_0802152C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_040/sub_0802152C.s",
+    "source": "src/unk/cluster_040/sub_0802152C.c"
+  },
+  "sub_08021580": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_040/sub_08021580.s",
+    "source": "src/unk/cluster_040/sub_08021580.c"
+  },
+  "sub_0802158C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_040/sub_0802158C.s",
+    "source": "src/unk/cluster_040/sub_0802158C.c"
+  },
+  "sub_08021598": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_040/sub_08021598.s",
+    "source": "src/unk/cluster_040/sub_08021598.c"
   },
   "sub_080215A4": {
     "profile": "baseline",
@@ -2329,10 +2854,80 @@
     "reference": "asm/references/unk/cluster_004/sub_08022730.s",
     "source": "src/unk/cluster_004/sub_08022730.c"
   },
+  "sub_08023914": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_08023914.s",
+    "source": "src/unk/cluster_022/sub_08023914.c"
+  },
+  "sub_08023924": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_08023924.s",
+    "source": "src/unk/cluster_022/sub_08023924.c"
+  },
+  "sub_08023A0C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_08023A0C.s",
+    "source": "src/unk/cluster_022/sub_08023A0C.c"
+  },
+  "sub_08023A1C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_08023A1C.s",
+    "source": "src/unk/cluster_022/sub_08023A1C.c"
+  },
+  "sub_08023A2C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_08023A2C.s",
+    "source": "src/unk/cluster_022/sub_08023A2C.c"
+  },
+  "sub_08023A3C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_08023A3C.s",
+    "source": "src/unk/cluster_022/sub_08023A3C.c"
+  },
+  "sub_08023A4C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_08023A4C.s",
+    "source": "src/unk/cluster_022/sub_08023A4C.c"
+  },
+  "sub_08023A5C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_08023A5C.s",
+    "source": "src/unk/cluster_022/sub_08023A5C.c"
+  },
+  "sub_08023A6C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_08023A6C.s",
+    "source": "src/unk/cluster_022/sub_08023A6C.c"
+  },
+  "sub_08023A7C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_08023A7C.s",
+    "source": "src/unk/cluster_022/sub_08023A7C.c"
+  },
+  "sub_08023A8C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_08023A8C.s",
+    "source": "src/unk/cluster_022/sub_08023A8C.c"
+  },
+  "sub_080240F4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_080240F4.s",
+    "source": "src/unk/cluster_022/sub_080240F4.c"
+  },
+  "sub_080242C4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_080242C4.s",
+    "source": "src/unk/cluster_022/sub_080242C4.c"
+  },
   "sub_08024570": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_022/sub_08024570.s",
     "source": "src/unk/cluster_022/sub_08024570.c"
+  },
+  "sub_080246BC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_080246BC.s",
+    "source": "src/unk/cluster_022/sub_080246BC.c"
   },
   "sub_08025E10": {
     "profile": "baseline",
@@ -2374,6 +2969,16 @@
     "reference": "asm/references/unk/cluster_073/sub_08027A84.s",
     "source": "src/unk/cluster_073/sub_08027A84.c"
   },
+  "sub_080280F4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_082/sub_080280F4.s",
+    "source": "src/unk/cluster_082/sub_080280F4.c"
+  },
+  "sub_080283FC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_082/sub_080283FC.s",
+    "source": "src/unk/cluster_082/sub_080283FC.c"
+  },
   "sub_08028A74": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_082/sub_08028A74.s",
@@ -2389,10 +2994,35 @@
     "reference": "asm/references/unk/cluster_078/sub_08029140.s",
     "source": "src/unk/cluster_078/sub_08029140.c"
   },
+  "sub_08029658": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_078/sub_08029658.s",
+    "source": "src/unk/cluster_078/sub_08029658.c"
+  },
   "sub_08029668": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_078/sub_08029668.s",
     "source": "src/unk/cluster_078/sub_08029668.c"
+  },
+  "sub_08029AF0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_078/sub_08029AF0.s",
+    "source": "src/unk/cluster_078/sub_08029AF0.c"
+  },
+  "sub_08029AFC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_078/sub_08029AFC.s",
+    "source": "src/unk/cluster_078/sub_08029AFC.c"
+  },
+  "sub_08029B08": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_078/sub_08029B08.s",
+    "source": "src/unk/cluster_078/sub_08029B08.c"
+  },
+  "sub_08029B14": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_078/sub_08029B14.s",
+    "source": "src/unk/cluster_078/sub_08029B14.c"
   },
   "sub_08029BA8": {
     "profile": "baseline",
@@ -2434,6 +3064,11 @@
     "reference": "asm/references/unk/cluster_059/sub_08029E18.s",
     "source": "src/unk/cluster_059/sub_08029E18.c"
   },
+  "sub_08029E34": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_08029E34.s",
+    "source": "src/unk/cluster_020/sub_08029E34.c"
+  },
   "sub_0802A090": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_016/sub_0802A090.s",
@@ -2454,15 +3089,50 @@
     "reference": "asm/references/unk/cluster_060/sub_0802A180.s",
     "source": "src/unk/cluster_060/sub_0802A180.c"
   },
+  "sub_0802A210": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_0802A210.s",
+    "source": "src/unk/cluster_020/sub_0802A210.c"
+  },
+  "sub_0802A564": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_0802A564.s",
+    "source": "src/unk/cluster_012/sub_0802A564.c"
+  },
+  "sub_0802A810": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0802A810.s",
+    "source": "src/unk/cluster_030/sub_0802A810.c"
+  },
   "sub_0802A920": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_068/sub_0802A920.s",
     "source": "src/unk/cluster_068/sub_0802A920.c"
   },
+  "sub_0802AA58": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_068/sub_0802AA58.s",
+    "source": "src/unk/cluster_068/sub_0802AA58.c"
+  },
   "sub_0802AF8C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_068/sub_0802AF8C.s",
     "source": "src/unk/cluster_068/sub_0802AF8C.c"
+  },
+  "sub_0802B170": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_014/sub_0802B170.s",
+    "source": "src/unk/cluster_014/sub_0802B170.c"
+  },
+  "sub_0802B180": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_014/sub_0802B180.s",
+    "source": "src/unk/cluster_014/sub_0802B180.c"
+  },
+  "sub_0802B490": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0802B490.s",
+    "source": "src/unk/cluster_030/sub_0802B490.c"
   },
   "sub_0802B660": {
     "profile": "baseline",
@@ -2474,10 +3144,35 @@
     "reference": "asm/references/graphics/related/cluster_034/sub_0802B6B4.s",
     "source": "src/graphics/related/cluster_034/sub_0802B6B4.c"
   },
+  "sub_0802B7C4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_073/sub_0802B7C4.s",
+    "source": "src/unk/cluster_073/sub_0802B7C4.c"
+  },
+  "sub_0802B7D4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_073/sub_0802B7D4.s",
+    "source": "src/unk/cluster_073/sub_0802B7D4.c"
+  },
   "sub_0802B7E4": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_012/sub_0802B7E4.s",
     "source": "src/unk/cluster_012/sub_0802B7E4.c"
+  },
+  "sub_0802B8C8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_004/sub_0802B8C8.s",
+    "source": "src/unk/cluster_004/sub_0802B8C8.c"
+  },
+  "sub_0802B8CC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_036/sub_0802B8CC.s",
+    "source": "src/unk/cluster_036/sub_0802B8CC.c"
+  },
+  "sub_0802B9DC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_004/sub_0802B9DC.s",
+    "source": "src/unk/cluster_004/sub_0802B9DC.c"
   },
   "sub_0802BAE0": {
     "profile": "baseline",
@@ -2499,6 +3194,11 @@
     "reference": "asm/references/unk/cluster_036/sub_0802BBE8.s",
     "source": "src/unk/cluster_036/sub_0802BBE8.c"
   },
+  "sub_0802BBF8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_016/sub_0802BBF8.s",
+    "source": "src/unk/cluster_016/sub_0802BBF8.c"
+  },
   "sub_0802BD14": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_020/sub_0802BD14.s",
@@ -2513,6 +3213,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_020/sub_0802BEA0.s",
     "source": "src/unk/cluster_020/sub_0802BEA0.c"
+  },
+  "sub_0802BEE8": {
+    "profile": "baseline",
+    "reference": "asm/references/system/core/cluster_000/sub_0802BEE8.s",
+    "source": "src/system/core/cluster_000/sub_0802BEE8.c"
   },
   "sub_0802C2D8": {
     "profile": "baseline",
@@ -2533,6 +3238,26 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_024/sub_0802C608.s",
     "source": "src/unk/cluster_024/sub_0802C608.c"
+  },
+  "sub_0802C624": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_024/sub_0802C624.s",
+    "source": "src/unk/cluster_024/sub_0802C624.c"
+  },
+  "sub_0802C630": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_024/sub_0802C630.s",
+    "source": "src/unk/cluster_024/sub_0802C630.c"
+  },
+  "sub_0802C648": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_024/sub_0802C648.s",
+    "source": "src/unk/cluster_024/sub_0802C648.c"
+  },
+  "sub_0802C660": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_024/sub_0802C660.s",
+    "source": "src/unk/cluster_024/sub_0802C660.c"
   },
   "sub_0802C678": {
     "profile": "baseline",
@@ -2579,6 +3304,11 @@
     "reference": "asm/references/unk/cluster_095/sub_0802E57C.s",
     "source": "src/unk/cluster_095/sub_0802E57C.c"
   },
+  "sub_0802E5D0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_042/sub_0802E5D0.s",
+    "source": "src/unk/cluster_042/sub_0802E5D0.c"
+  },
   "sub_0802E5F4": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_042/sub_0802E5F4.s",
@@ -2609,6 +3339,11 @@
     "reference": "asm/references/unk/cluster_042/sub_0802E7A4.s",
     "source": "src/unk/cluster_042/sub_0802E7A4.c"
   },
+  "sub_0802E8D0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_042/sub_0802E8D0.s",
+    "source": "src/unk/cluster_042/sub_0802E8D0.c"
+  },
   "sub_0802E900": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_063/sub_0802E900.s",
@@ -2624,10 +3359,20 @@
     "reference": "asm/references/unk/cluster_013/sub_0802F478.s",
     "source": "src/unk/cluster_013/sub_0802F478.c"
   },
+  "sub_0802F8A8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_0802F8A8.s",
+    "source": "src/unk/cluster_063/sub_0802F8A8.c"
+  },
   "sub_0802F8C4": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_063/sub_0802F8C4.s",
     "source": "src/unk/cluster_063/sub_0802F8C4.c"
+  },
+  "sub_0802F8E4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_042/sub_0802F8E4.s",
+    "source": "src/unk/cluster_042/sub_0802F8E4.c"
   },
   "sub_0802FBA0": {
     "profile": "baseline",
@@ -2643,6 +3388,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_013/sub_0802FBC8.s",
     "source": "src/unk/cluster_013/sub_0802FBC8.c"
+  },
+  "sub_0802FC5C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_085/sub_0802FC5C.s",
+    "source": "src/unk/cluster_085/sub_0802FC5C.c"
   },
   "sub_0802FD44": {
     "profile": "baseline",
@@ -2734,6 +3484,21 @@
     "reference": "asm/references/unk/cluster_030/sub_08030104.s",
     "source": "src/unk/cluster_030/sub_08030104.c"
   },
+  "sub_08030154": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08030154.s",
+    "source": "src/unk/cluster_063/sub_08030154.c"
+  },
+  "sub_0803016C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_0803016C.s",
+    "source": "src/unk/cluster_063/sub_0803016C.c"
+  },
+  "sub_08030370": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_080/sub_08030370.s",
+    "source": "src/unk/cluster_080/sub_08030370.c"
+  },
   "sub_08030388": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_080/sub_08030388.s",
@@ -2784,6 +3549,26 @@
     "reference": "asm/references/unk/cluster_065/sub_080305C0.s",
     "source": "src/unk/cluster_065/sub_080305C0.c"
   },
+  "sub_080305D0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_042/sub_080305D0.s",
+    "source": "src/unk/cluster_042/sub_080305D0.c"
+  },
+  "sub_080305F0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_042/sub_080305F0.s",
+    "source": "src/unk/cluster_042/sub_080305F0.c"
+  },
+  "sub_080305F8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_042/sub_080305F8.s",
+    "source": "src/unk/cluster_042/sub_080305F8.c"
+  },
+  "sub_08030604": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_042/sub_08030604.s",
+    "source": "src/unk/cluster_042/sub_08030604.c"
+  },
   "sub_08030610": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_063/sub_08030610.s",
@@ -2803,6 +3588,21 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_028/sub_080306F0.s",
     "source": "src/unk/cluster_028/sub_080306F0.c"
+  },
+  "sub_08030840": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_028/sub_08030840.s",
+    "source": "src/unk/cluster_028/sub_08030840.c"
+  },
+  "sub_08030AB0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_028/sub_08030AB0.s",
+    "source": "src/unk/cluster_028/sub_08030AB0.c"
+  },
+  "sub_08030C9C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_028/sub_08030C9C.s",
+    "source": "src/unk/cluster_028/sub_08030C9C.c"
   },
   "sub_08030ED0": {
     "profile": "baseline",
@@ -2828,6 +3628,41 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_040/sub_08031138.s",
     "source": "src/unk/cluster_040/sub_08031138.c"
+  },
+  "sub_08031168": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08031168.s",
+    "source": "src/unk/cluster_063/sub_08031168.c"
+  },
+  "sub_08031510": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08031510.s",
+    "source": "src/unk/cluster_063/sub_08031510.c"
+  },
+  "sub_08031968": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08031968.s",
+    "source": "src/unk/cluster_063/sub_08031968.c"
+  },
+  "sub_08031C68": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08031C68.s",
+    "source": "src/unk/cluster_063/sub_08031C68.c"
+  },
+  "sub_08031C78": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08031C78.s",
+    "source": "src/unk/cluster_063/sub_08031C78.c"
+  },
+  "sub_08031C8C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08031C8C.s",
+    "source": "src/unk/cluster_063/sub_08031C8C.c"
+  },
+  "sub_080320EC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_080320EC.s",
+    "source": "src/unk/cluster_063/sub_080320EC.c"
   },
   "sub_080320FC": {
     "profile": "baseline",
@@ -2884,6 +3719,21 @@
     "reference": "asm/references/graphics/related/cluster_007/sub_08033854.s",
     "source": "src/graphics/related/cluster_007/sub_08033854.c"
   },
+  "sub_08033970": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_007/sub_08033970.s",
+    "source": "src/graphics/related/cluster_007/sub_08033970.c"
+  },
+  "sub_08033D68": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_007/sub_08033D68.s",
+    "source": "src/graphics/related/cluster_007/sub_08033D68.c"
+  },
+  "sub_08033E78": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_080/sub_08033E78.s",
+    "source": "src/unk/cluster_080/sub_08033E78.c"
+  },
   "sub_08035EAC": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_080/sub_08035EAC.s",
@@ -2939,6 +3789,11 @@
     "reference": "asm/references/unk/cluster_080/sub_0803649C.s",
     "source": "src/unk/cluster_080/sub_0803649C.c"
   },
+  "sub_080364C0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_080/sub_080364C0.s",
+    "source": "src/unk/cluster_080/sub_080364C0.c"
+  },
   "sub_080364E0": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_080/sub_080364E0.s",
@@ -2964,6 +3819,56 @@
     "reference": "asm/references/unk/cluster_042/sub_08036788.s",
     "source": "src/unk/cluster_042/sub_08036788.c"
   },
+  "sub_08036894": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_043/sub_08036894.s",
+    "source": "src/unk/cluster_043/sub_08036894.c"
+  },
+  "sub_08036898": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_043/sub_08036898.s",
+    "source": "src/unk/cluster_043/sub_08036898.c"
+  },
+  "sub_0803693C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_0803693C.s",
+    "source": "src/unk/cluster_063/sub_0803693C.c"
+  },
+  "sub_08036940": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08036940.s",
+    "source": "src/unk/cluster_063/sub_08036940.c"
+  },
+  "sub_08036E0C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08036E0C.s",
+    "source": "src/unk/cluster_063/sub_08036E0C.c"
+  },
+  "sub_08037060": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08037060.s",
+    "source": "src/unk/cluster_063/sub_08037060.c"
+  },
+  "sub_08037318": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08037318.s",
+    "source": "src/unk/cluster_063/sub_08037318.c"
+  },
+  "sub_080375E0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_080375E0.s",
+    "source": "src/unk/cluster_063/sub_080375E0.c"
+  },
+  "sub_080377E4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_080377E4.s",
+    "source": "src/unk/cluster_063/sub_080377E4.c"
+  },
+  "sub_08038F1C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_056/sub_08038F1C.s",
+    "source": "src/unk/cluster_056/sub_08038F1C.c"
+  },
   "sub_0803D56C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_085/sub_0803D56C.s",
@@ -2983,6 +3888,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_072/sub_0803D594.s",
     "source": "src/unk/cluster_072/sub_0803D594.c"
+  },
+  "sub_0803D5AC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_085/sub_0803D5AC.s",
+    "source": "src/unk/cluster_085/sub_0803D5AC.c"
   },
   "sub_0803D79C": {
     "profile": "baseline",
@@ -3159,6 +4069,16 @@
     "reference": "asm/references/unk/cluster_085/sub_08040308.s",
     "source": "src/unk/cluster_085/sub_08040308.c"
   },
+  "sub_08040350": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_085/sub_08040350.s",
+    "source": "src/unk/cluster_085/sub_08040350.c"
+  },
+  "sub_0804035C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_085/sub_0804035C.s",
+    "source": "src/unk/cluster_085/sub_0804035C.c"
+  },
   "sub_08040420": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_012/sub_08040420.s",
@@ -3179,6 +4099,16 @@
     "reference": "asm/references/unk/cluster_085/sub_08040478.s",
     "source": "src/unk/cluster_085/sub_08040478.c"
   },
+  "sub_08040628": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_085/sub_08040628.s",
+    "source": "src/unk/cluster_085/sub_08040628.c"
+  },
+  "sub_08040764": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_085/sub_08040764.s",
+    "source": "src/unk/cluster_085/sub_08040764.c"
+  },
   "sub_080411BC": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_049/sub_080411BC.s",
@@ -3189,10 +4119,110 @@
     "reference": "asm/references/unk/cluster_049/sub_080412C8.s",
     "source": "src/unk/cluster_049/sub_080412C8.c"
   },
+  "sub_080418FC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_091/sub_080418FC.s",
+    "source": "src/unk/cluster_091/sub_080418FC.c"
+  },
+  "sub_08041908": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_091/sub_08041908.s",
+    "source": "src/unk/cluster_091/sub_08041908.c"
+  },
+  "sub_08041B50": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_078/sub_08041B50.s",
+    "source": "src/unk/cluster_078/sub_08041B50.c"
+  },
+  "sub_0804258C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_092/sub_0804258C.s",
+    "source": "src/unk/cluster_092/sub_0804258C.c"
+  },
+  "sub_0804259C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_092/sub_0804259C.s",
+    "source": "src/unk/cluster_092/sub_0804259C.c"
+  },
+  "sub_080425A8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_092/sub_080425A8.s",
+    "source": "src/unk/cluster_092/sub_080425A8.c"
+  },
+  "sub_08042C2C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_050/sub_08042C2C.s",
+    "source": "src/unk/cluster_050/sub_08042C2C.c"
+  },
+  "sub_08042C30": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_050/sub_08042C30.s",
+    "source": "src/unk/cluster_050/sub_08042C30.c"
+  },
+  "sub_080432EC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080432EC.s",
+    "source": "src/unk/cluster_012/sub_080432EC.c"
+  },
+  "sub_080432F8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080432F8.s",
+    "source": "src/unk/cluster_012/sub_080432F8.c"
+  },
+  "sub_08043304": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_08043304.s",
+    "source": "src/unk/cluster_012/sub_08043304.c"
+  },
+  "sub_080433A0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080433A0.s",
+    "source": "src/unk/cluster_012/sub_080433A0.c"
+  },
+  "sub_080433AC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080433AC.s",
+    "source": "src/unk/cluster_012/sub_080433AC.c"
+  },
+  "sub_080433B8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080433B8.s",
+    "source": "src/unk/cluster_012/sub_080433B8.c"
+  },
+  "sub_0804345C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_0804345C.s",
+    "source": "src/unk/cluster_012/sub_0804345C.c"
+  },
+  "sub_080436C0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080436C0.s",
+    "source": "src/unk/cluster_012/sub_080436C0.c"
+  },
+  "sub_08043970": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_082/sub_08043970.s",
+    "source": "src/unk/cluster_082/sub_08043970.c"
+  },
+  "sub_0804397C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_082/sub_0804397C.s",
+    "source": "src/unk/cluster_082/sub_0804397C.c"
+  },
+  "sub_08043FAC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_041/sub_08043FAC.s",
+    "source": "src/unk/cluster_041/sub_08043FAC.c"
+  },
   "sub_080448B0": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_039/sub_080448B0.s",
     "source": "src/unk/cluster_039/sub_080448B0.c"
+  },
+  "sub_080448D8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_041/sub_080448D8.s",
+    "source": "src/unk/cluster_041/sub_080448D8.c"
   },
   "sub_0804495C": {
     "profile": "baseline",
@@ -3218,6 +4248,36 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_082/sub_08044FD4.s",
     "source": "src/unk/cluster_082/sub_08044FD4.c"
+  },
+  "sub_0804503C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_082/sub_0804503C.s",
+    "source": "src/unk/cluster_082/sub_0804503C.c"
+  },
+  "sub_08046284": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_066/sub_08046284.s",
+    "source": "src/unk/cluster_066/sub_08046284.c"
+  },
+  "sub_08046368": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_068/sub_08046368.s",
+    "source": "src/unk/cluster_068/sub_08046368.c"
+  },
+  "sub_08046374": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_068/sub_08046374.s",
+    "source": "src/unk/cluster_068/sub_08046374.c"
+  },
+  "sub_08046434": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_068/sub_08046434.s",
+    "source": "src/unk/cluster_068/sub_08046434.c"
+  },
+  "sub_08046524": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_068/sub_08046524.s",
+    "source": "src/unk/cluster_068/sub_08046524.c"
   },
   "sub_08048390": {
     "profile": "baseline",
@@ -3279,6 +4339,11 @@
     "reference": "asm/references/unk/cluster_053/sub_0804955C.s",
     "source": "src/unk/cluster_053/sub_0804955C.c"
   },
+  "sub_0804AFE4": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_015/sub_0804AFE4.s",
+    "source": "src/graphics/related/cluster_015/sub_0804AFE4.c"
+  },
   "sub_0804B114": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_037/sub_0804B114.s",
@@ -3294,10 +4359,45 @@
     "reference": "asm/references/unk/cluster_058/sub_0804B25C.s",
     "source": "src/unk/cluster_058/sub_0804B25C.c"
   },
+  "sub_0804B664": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_086/sub_0804B664.s",
+    "source": "src/unk/cluster_086/sub_0804B664.c"
+  },
+  "sub_0804CA9C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_082/sub_0804CA9C.s",
+    "source": "src/unk/cluster_082/sub_0804CA9C.c"
+  },
+  "sub_0804CBBC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_082/sub_0804CBBC.s",
+    "source": "src/unk/cluster_082/sub_0804CBBC.c"
+  },
   "sub_0804CBEC": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_082/sub_0804CBEC.s",
     "source": "src/unk/cluster_082/sub_0804CBEC.c"
+  },
+  "sub_0804D014": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_014/sub_0804D014.s",
+    "source": "src/unk/cluster_014/sub_0804D014.c"
+  },
+  "sub_0804D114": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_014/sub_0804D114.s",
+    "source": "src/unk/cluster_014/sub_0804D114.c"
+  },
+  "sub_0804DF20": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_053/sub_0804DF20.s",
+    "source": "src/unk/cluster_053/sub_0804DF20.c"
+  },
+  "sub_0804E274": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_013/sub_0804E274.s",
+    "source": "src/unk/cluster_013/sub_0804E274.c"
   },
   "sub_0804E28C": {
     "profile": "baseline",
@@ -3324,10 +4424,20 @@
     "reference": "asm/references/unk/cluster_013/sub_0805007C.s",
     "source": "src/unk/cluster_013/sub_0805007C.c"
   },
+  "sub_0805009C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_013/sub_0805009C.s",
+    "source": "src/unk/cluster_013/sub_0805009C.c"
+  },
   "sub_08050110": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_002/sub_08050110.s",
     "source": "src/unk/cluster_002/sub_08050110.c"
+  },
+  "sub_0805040C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_092/sub_0805040C.s",
+    "source": "src/unk/cluster_092/sub_0805040C.c"
   },
   "sub_080504E4": {
     "profile": "baseline",
@@ -3348,6 +4458,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_032/sub_08053758.s",
     "source": "src/unk/cluster_032/sub_08053758.c"
+  },
+  "sub_08053798": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_032/sub_08053798.s",
+    "source": "src/unk/cluster_032/sub_08053798.c"
   },
   "sub_08054924": {
     "profile": "baseline",
@@ -3374,10 +4489,35 @@
     "reference": "asm/references/unk/cluster_032/sub_08054F54.s",
     "source": "src/unk/cluster_032/sub_08054F54.c"
   },
+  "sub_08055328": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_006/sub_08055328.s",
+    "source": "src/unk/cluster_006/sub_08055328.c"
+  },
+  "sub_0805533C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_006/sub_0805533C.s",
+    "source": "src/unk/cluster_006/sub_0805533C.c"
+  },
   "sub_080554DC": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_006/sub_080554DC.s",
     "source": "src/unk/cluster_006/sub_080554DC.c"
+  },
+  "sub_08055554": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_027/sub_08055554.s",
+    "source": "src/unk/cluster_027/sub_08055554.c"
+  },
+  "sub_08055560": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_027/sub_08055560.s",
+    "source": "src/unk/cluster_027/sub_08055560.c"
+  },
+  "sub_08055FB4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_088/sub_08055FB4.s",
+    "source": "src/unk/cluster_088/sub_08055FB4.c"
   },
   "sub_08056098": {
     "profile": "baseline",
@@ -3459,25 +4599,60 @@
     "reference": "asm/references/unk/cluster_043/sub_0805614C.s",
     "source": "src/unk/cluster_043/sub_0805614C.c"
   },
+  "sub_0805618C": {
+    "profile": "baseline",
+    "reference": "asm/references/sound/related/cluster_069/sub_0805618C.s",
+    "source": "src/sound/related/cluster_069/sub_0805618C.c"
+  },
+  "sub_08056190": {
+    "profile": "baseline",
+    "reference": "asm/references/sound/related/cluster_069/sub_08056190.s",
+    "source": "src/sound/related/cluster_069/sub_08056190.c"
+  },
   "sub_08056294": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_082/sub_08056294.s",
     "source": "src/unk/cluster_082/sub_08056294.c"
+  },
+  "sub_080562D8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_080562D8.s",
+    "source": "src/unk/cluster_063/sub_080562D8.c"
   },
   "sub_080566A4": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_063/sub_080566A4.s",
     "source": "src/unk/cluster_063/sub_080566A4.c"
   },
+  "sub_080569EC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_080569EC.s",
+    "source": "src/unk/cluster_063/sub_080569EC.c"
+  },
+  "sub_08056A00": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08056A00.s",
+    "source": "src/unk/cluster_063/sub_08056A00.c"
+  },
   "sub_08056E44": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_063/sub_08056E44.s",
     "source": "src/unk/cluster_063/sub_08056E44.c"
   },
+  "sub_08056EF4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08056EF4.s",
+    "source": "src/unk/cluster_063/sub_08056EF4.c"
+  },
   "sub_0805735C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_042/sub_0805735C.s",
     "source": "src/unk/cluster_042/sub_0805735C.c"
+  },
+  "sub_080577FC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_080577FC.s",
+    "source": "src/unk/cluster_063/sub_080577FC.c"
   },
   "sub_08058B34": {
     "profile": "baseline",
@@ -3503,6 +4678,21 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_063/sub_08058E30.s",
     "source": "src/unk/cluster_063/sub_08058E30.c"
+  },
+  "sub_080592A0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_051/sub_080592A0.s",
+    "source": "src/unk/cluster_051/sub_080592A0.c"
+  },
+  "sub_08059704": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_08059704.s",
+    "source": "src/unk/cluster_052/sub_08059704.c"
+  },
+  "sub_08059708": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_08059708.s",
+    "source": "src/unk/cluster_052/sub_08059708.c"
   },
   "sub_08059CF8": {
     "profile": "baseline",
@@ -3538,6 +4728,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_035/sub_0805B058.s",
     "source": "src/unk/cluster_035/sub_0805B058.c"
+  },
+  "sub_0805B438": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_054/sub_0805B438.s",
+    "source": "src/unk/cluster_054/sub_0805B438.c"
   },
   "sub_0805BC28": {
     "profile": "baseline",
@@ -3589,6 +4784,31 @@
     "reference": "asm/references/unk/cluster_014/sub_0805D130.s",
     "source": "src/unk/cluster_014/sub_0805D130.c"
   },
+  "sub_0805D8A8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_060/sub_0805D8A8.s",
+    "source": "src/unk/cluster_060/sub_0805D8A8.c"
+  },
+  "sub_0805DC68": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_009/sub_0805DC68.s",
+    "source": "src/graphics/related/cluster_009/sub_0805DC68.c"
+  },
+  "sub_0805DC74": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_009/sub_0805DC74.s",
+    "source": "src/graphics/related/cluster_009/sub_0805DC74.c"
+  },
+  "sub_0805DC80": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_009/sub_0805DC80.s",
+    "source": "src/graphics/related/cluster_009/sub_0805DC80.c"
+  },
+  "sub_0805E668": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_031/sub_0805E668.s",
+    "source": "src/unk/cluster_031/sub_0805E668.c"
+  },
   "sub_08060144": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_004/sub_08060144.s",
@@ -3609,20 +4829,70 @@
     "reference": "asm/references/unk/cluster_048/sub_0806021C.s",
     "source": "src/unk/cluster_048/sub_0806021C.c"
   },
+  "sub_080605F4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_080605F4.s",
+    "source": "src/unk/cluster_022/sub_080605F4.c"
+  },
   "sub_08060668": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_022/sub_08060668.s",
     "source": "src/unk/cluster_022/sub_08060668.c"
+  },
+  "sub_080608E8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_048/sub_080608E8.s",
+    "source": "src/unk/cluster_048/sub_080608E8.c"
+  },
+  "sub_0806173C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_048/sub_0806173C.s",
+    "source": "src/unk/cluster_048/sub_0806173C.c"
+  },
+  "sub_08061864": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_066/sub_08061864.s",
+    "source": "src/unk/cluster_066/sub_08061864.c"
+  },
+  "sub_08061CC4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_035/sub_08061CC4.s",
+    "source": "src/unk/cluster_035/sub_08061CC4.c"
+  },
+  "sub_08061EA8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_086/sub_08061EA8.s",
+    "source": "src/unk/cluster_086/sub_08061EA8.c"
+  },
+  "sub_08061EB4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_086/sub_08061EB4.s",
+    "source": "src/unk/cluster_086/sub_08061EB4.c"
+  },
+  "sub_08062010": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_027/sub_08062010.s",
+    "source": "src/unk/cluster_027/sub_08062010.c"
   },
   "sub_08062264": {
     "profile": "baseline",
     "reference": "asm/references/sound/related/cluster_069/sub_08062264.s",
     "source": "src/sound/related/cluster_069/sub_08062264.c"
   },
+  "sub_080622AC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_048/sub_080622AC.s",
+    "source": "src/unk/cluster_048/sub_080622AC.c"
+  },
   "sub_080623EC": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_055/sub_080623EC.s",
     "source": "src/unk/cluster_055/sub_080623EC.c"
+  },
+  "sub_08062430": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_088/sub_08062430.s",
+    "source": "src/unk/cluster_088/sub_08062430.c"
   },
   "sub_080627A0": {
     "profile": "baseline",
@@ -3689,6 +4959,11 @@
     "reference": "asm/references/unk/cluster_088/sub_0806403C.s",
     "source": "src/unk/cluster_088/sub_0806403C.c"
   },
+  "sub_08064118": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_088/sub_08064118.s",
+    "source": "src/unk/cluster_088/sub_08064118.c"
+  },
   "sub_08064B10": {
     "profile": "baseline",
     "reference": "asm/references/sound/related/cluster_069/sub_08064B10.s",
@@ -3709,6 +4984,11 @@
     "reference": "asm/references/unk/cluster_044/sub_08064F24.s",
     "source": "src/unk/cluster_044/sub_08064F24.c"
   },
+  "sub_08064F98": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_044/sub_08064F98.s",
+    "source": "src/unk/cluster_044/sub_08064F98.c"
+  },
   "sub_08064FDC": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_044/sub_08064FDC.s",
@@ -3723,6 +5003,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_044/sub_08065004.s",
     "source": "src/unk/cluster_044/sub_08065004.c"
+  },
+  "sub_08065494": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_044/sub_08065494.s",
+    "source": "src/unk/cluster_044/sub_08065494.c"
   },
   "sub_080662D8": {
     "profile": "baseline",
@@ -3804,6 +5089,11 @@
     "reference": "asm/references/unk/cluster_056/sub_08067218.s",
     "source": "src/unk/cluster_056/sub_08067218.c"
   },
+  "sub_08067234": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_007/sub_08067234.s",
+    "source": "src/graphics/related/cluster_007/sub_08067234.c"
+  },
   "sub_08067328": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_056/sub_08067328.s",
@@ -3838,6 +5128,16 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_060/sub_080677A8.s",
     "source": "src/unk/cluster_060/sub_080677A8.c"
+  },
+  "sub_080677AC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_060/sub_080677AC.s",
+    "source": "src/unk/cluster_060/sub_080677AC.c"
+  },
+  "sub_080677B8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_060/sub_080677B8.s",
+    "source": "src/unk/cluster_060/sub_080677B8.c"
   },
   "sub_080677C4": {
     "profile": "baseline",
@@ -3889,6 +5189,11 @@
     "reference": "asm/references/unk/cluster_052/sub_08067DE8.s",
     "source": "src/unk/cluster_052/sub_08067DE8.c"
   },
+  "sub_0806809C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_0806809C.s",
+    "source": "src/unk/cluster_052/sub_0806809C.c"
+  },
   "sub_080680EC": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_052/sub_080680EC.s",
@@ -3939,6 +5244,11 @@
     "reference": "asm/references/unk/cluster_016/sub_08069D10.s",
     "source": "src/unk/cluster_016/sub_08069D10.c"
   },
+  "sub_0806AB20": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_060/sub_0806AB20.s",
+    "source": "src/unk/cluster_060/sub_0806AB20.c"
+  },
   "sub_0806AB70": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_059/sub_0806AB70.s",
@@ -3953,6 +5263,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_002/sub_0806ABC0.s",
     "source": "src/unk/cluster_002/sub_0806ABC0.c"
+  },
+  "sub_0806B144": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_088/sub_0806B144.s",
+    "source": "src/unk/cluster_088/sub_0806B144.c"
   },
   "sub_0806B524": {
     "profile": "baseline",
@@ -4003,6 +5318,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_088/sub_0806B878.s",
     "source": "src/unk/cluster_088/sub_0806B878.c"
+  },
+  "sub_0806B884": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_013/sub_0806B884.s",
+    "source": "src/unk/cluster_013/sub_0806B884.c"
   },
   "sub_0806C454": {
     "profile": "baseline",
@@ -4074,10 +5394,25 @@
     "reference": "asm/references/unk/cluster_037/sub_0806DEAC.s",
     "source": "src/unk/cluster_037/sub_0806DEAC.c"
   },
+  "sub_0806DEB8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0806DEB8.s",
+    "source": "src/unk/cluster_030/sub_0806DEB8.c"
+  },
   "sub_0806E11C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_037/sub_0806E11C.s",
     "source": "src/unk/cluster_037/sub_0806E11C.c"
+  },
+  "sub_0806E178": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_026/sub_0806E178.s",
+    "source": "src/unk/cluster_026/sub_0806E178.c"
+  },
+  "sub_0806E4A4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_053/sub_0806E4A4.s",
+    "source": "src/unk/cluster_053/sub_0806E4A4.c"
   },
   "sub_0806E7F4": {
     "profile": "baseline",
@@ -4093,6 +5428,31 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_053/sub_0806E93C.s",
     "source": "src/unk/cluster_053/sub_0806E93C.c"
+  },
+  "sub_0806ED80": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_074/sub_0806ED80.s",
+    "source": "src/unk/cluster_074/sub_0806ED80.c"
+  },
+  "sub_0806EF98": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_009/sub_0806EF98.s",
+    "source": "src/graphics/related/cluster_009/sub_0806EF98.c"
+  },
+  "sub_0806F298": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_092/sub_0806F298.s",
+    "source": "src/unk/cluster_092/sub_0806F298.c"
+  },
+  "sub_0806F3A8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_092/sub_0806F3A8.s",
+    "source": "src/unk/cluster_092/sub_0806F3A8.c"
+  },
+  "sub_0806F3B8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_092/sub_0806F3B8.s",
+    "source": "src/unk/cluster_092/sub_0806F3B8.c"
   },
   "sub_0806F450": {
     "profile": "baseline",
@@ -4139,6 +5499,31 @@
     "reference": "asm/references/unk/cluster_002/sub_08071AC0.s",
     "source": "src/unk/cluster_002/sub_08071AC0.c"
   },
+  "sub_08071AF0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_002/sub_08071AF0.s",
+    "source": "src/unk/cluster_002/sub_08071AF0.c"
+  },
+  "sub_08071AFC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_002/sub_08071AFC.s",
+    "source": "src/unk/cluster_002/sub_08071AFC.c"
+  },
+  "sub_08071B0C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_050/sub_08071B0C.s",
+    "source": "src/unk/cluster_050/sub_08071B0C.c"
+  },
+  "sub_0807208C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_058/sub_0807208C.s",
+    "source": "src/unk/cluster_058/sub_0807208C.c"
+  },
+  "sub_08072100": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_060/sub_08072100.s",
+    "source": "src/unk/cluster_060/sub_08072100.c"
+  },
   "sub_0807278C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_056/sub_0807278C.s",
@@ -4153,6 +5538,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_004/sub_08073348.s",
     "source": "src/unk/cluster_004/sub_08073348.c"
+  },
+  "sub_08073740": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_066/sub_08073740.s",
+    "source": "src/unk/cluster_066/sub_08073740.c"
   },
   "sub_080737F8": {
     "profile": "baseline",
@@ -4178,6 +5568,51 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_020/sub_08073888.s",
     "source": "src/unk/cluster_020/sub_08073888.c"
+  },
+  "sub_080738AC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_080738AC.s",
+    "source": "src/unk/cluster_020/sub_080738AC.c"
+  },
+  "sub_080738D0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_080738D0.s",
+    "source": "src/unk/cluster_020/sub_080738D0.c"
+  },
+  "sub_080738D4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_080738D4.s",
+    "source": "src/unk/cluster_020/sub_080738D4.c"
+  },
+  "sub_080738D8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_080738D8.s",
+    "source": "src/unk/cluster_020/sub_080738D8.c"
+  },
+  "sub_080738DC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_080738DC.s",
+    "source": "src/unk/cluster_020/sub_080738DC.c"
+  },
+  "sub_080738E0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_080738E0.s",
+    "source": "src/unk/cluster_020/sub_080738E0.c"
+  },
+  "sub_080738E4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_080738E4.s",
+    "source": "src/unk/cluster_020/sub_080738E4.c"
+  },
+  "sub_080738E8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_080738E8.s",
+    "source": "src/unk/cluster_020/sub_080738E8.c"
+  },
+  "sub_08073A08": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_054/sub_08073A08.s",
+    "source": "src/unk/cluster_054/sub_08073A08.c"
   },
   "sub_08073ED8": {
     "profile": "baseline",
@@ -4264,6 +5699,16 @@
     "reference": "asm/references/unk/cluster_016/sub_08076400.s",
     "source": "src/unk/cluster_016/sub_08076400.c"
   },
+  "sub_080773E0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_068/sub_080773E0.s",
+    "source": "src/unk/cluster_068/sub_080773E0.c"
+  },
+  "sub_080773F0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_068/sub_080773F0.s",
+    "source": "src/unk/cluster_068/sub_080773F0.c"
+  },
   "sub_08077430": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_039/sub_08077430.s",
@@ -4278,6 +5723,16 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_091/sub_08077460.s",
     "source": "src/unk/cluster_091/sub_08077460.c"
+  },
+  "sub_080779F4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_082/sub_080779F4.s",
+    "source": "src/unk/cluster_082/sub_080779F4.c"
+  },
+  "sub_08077A04": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_082/sub_08077A04.s",
+    "source": "src/unk/cluster_082/sub_08077A04.c"
   },
   "sub_08077FB8": {
     "profile": "baseline",
@@ -4308,6 +5763,21 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_016/sub_08078AD4.s",
     "source": "src/unk/cluster_016/sub_08078AD4.c"
+  },
+  "sub_08078C38": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_014/sub_08078C38.s",
+    "source": "src/unk/cluster_014/sub_08078C38.c"
+  },
+  "sub_08078C50": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_014/sub_08078C50.s",
+    "source": "src/unk/cluster_014/sub_08078C50.c"
+  },
+  "sub_08078C68": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_014/sub_08078C68.s",
+    "source": "src/unk/cluster_014/sub_08078C68.c"
   },
   "sub_08078C80": {
     "profile": "baseline",
@@ -4424,10 +5894,20 @@
     "reference": "asm/references/unk/cluster_095/sub_0807CDAC.s",
     "source": "src/unk/cluster_095/sub_0807CDAC.c"
   },
+  "sub_0807D3A0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_045/sub_0807D3A0.s",
+    "source": "src/unk/cluster_045/sub_0807D3A0.c"
+  },
   "sub_0807D47C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_045/sub_0807D47C.s",
     "source": "src/unk/cluster_045/sub_0807D47C.c"
+  },
+  "sub_0807D878": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_045/sub_0807D878.s",
+    "source": "src/unk/cluster_045/sub_0807D878.c"
   },
   "sub_0807E004": {
     "profile": "baseline",
@@ -4443,6 +5923,41 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_030/sub_0807E5AC.s",
     "source": "src/unk/cluster_030/sub_0807E5AC.c"
+  },
+  "sub_0807E5CC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_089/sub_0807E5CC.s",
+    "source": "src/unk/cluster_089/sub_0807E5CC.c"
+  },
+  "sub_0807E5D4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_089/sub_0807E5D4.s",
+    "source": "src/unk/cluster_089/sub_0807E5D4.c"
+  },
+  "sub_0807E5DC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_089/sub_0807E5DC.s",
+    "source": "src/unk/cluster_089/sub_0807E5DC.c"
+  },
+  "sub_0807E5EC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_089/sub_0807E5EC.s",
+    "source": "src/unk/cluster_089/sub_0807E5EC.c"
+  },
+  "sub_0807E5F4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_089/sub_0807E5F4.s",
+    "source": "src/unk/cluster_089/sub_0807E5F4.c"
+  },
+  "sub_0807E5F8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_089/sub_0807E5F8.s",
+    "source": "src/unk/cluster_089/sub_0807E5F8.c"
+  },
+  "sub_0807E600": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_089/sub_0807E600.s",
+    "source": "src/unk/cluster_089/sub_0807E600.c"
   },
   "sub_0807E608": {
     "profile": "baseline",
@@ -4494,10 +6009,65 @@
     "reference": "asm/references/unk/cluster_030/sub_0807E634.s",
     "source": "src/unk/cluster_030/sub_0807E634.c"
   },
+  "sub_0807E638": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0807E638.s",
+    "source": "src/unk/cluster_030/sub_0807E638.c"
+  },
+  "sub_0807E640": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0807E640.s",
+    "source": "src/unk/cluster_030/sub_0807E640.c"
+  },
+  "sub_0807E648": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0807E648.s",
+    "source": "src/unk/cluster_030/sub_0807E648.c"
+  },
+  "sub_0807E650": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0807E650.s",
+    "source": "src/unk/cluster_030/sub_0807E650.c"
+  },
+  "sub_0807E674": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_0807E674.s",
+    "source": "src/unk/cluster_020/sub_0807E674.c"
+  },
+  "sub_0807E688": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_0807E688.s",
+    "source": "src/unk/cluster_020/sub_0807E688.c"
+  },
   "sub_0807E7E8": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_020/sub_0807E7E8.s",
     "source": "src/unk/cluster_020/sub_0807E7E8.c"
+  },
+  "sub_0807E8B8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_0807E8B8.s",
+    "source": "src/unk/cluster_020/sub_0807E8B8.c"
+  },
+  "sub_0807E8D4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_0807E8D4.s",
+    "source": "src/unk/cluster_020/sub_0807E8D4.c"
+  },
+  "sub_0807E8D8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_0807E8D8.s",
+    "source": "src/unk/cluster_020/sub_0807E8D8.c"
+  },
+  "sub_0807E8DC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_0807E8DC.s",
+    "source": "src/unk/cluster_020/sub_0807E8DC.c"
+  },
+  "sub_0807E8E0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_0807E8E0.s",
+    "source": "src/unk/cluster_020/sub_0807E8E0.c"
   },
   "sub_0807E98C": {
     "profile": "baseline",
@@ -4514,6 +6084,11 @@
     "reference": "asm/references/unk/cluster_030/sub_0807EA14.s",
     "source": "src/unk/cluster_030/sub_0807EA14.c"
   },
+  "sub_0807EAC0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0807EAC0.s",
+    "source": "src/unk/cluster_030/sub_0807EAC0.c"
+  },
   "sub_0807EADC": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_030/sub_0807EADC.s",
@@ -4529,20 +6104,100 @@
     "reference": "asm/references/unk/cluster_030/sub_0807EB04.s",
     "source": "src/unk/cluster_030/sub_0807EB04.c"
   },
+  "sub_0807EC44": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0807EC44.s",
+    "source": "src/unk/cluster_030/sub_0807EC44.c"
+  },
+  "sub_0807F1EC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0807F1EC.s",
+    "source": "src/unk/cluster_030/sub_0807F1EC.c"
+  },
+  "sub_0807F458": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0807F458.s",
+    "source": "src/unk/cluster_030/sub_0807F458.c"
+  },
+  "sub_0807F4A4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0807F4A4.s",
+    "source": "src/unk/cluster_030/sub_0807F4A4.c"
+  },
+  "sub_0807F674": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0807F674.s",
+    "source": "src/unk/cluster_030/sub_0807F674.c"
+  },
+  "sub_0807F854": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0807F854.s",
+    "source": "src/unk/cluster_030/sub_0807F854.c"
+  },
+  "sub_0807FCD0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0807FCD0.s",
+    "source": "src/unk/cluster_030/sub_0807FCD0.c"
+  },
+  "sub_0807FE6C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0807FE6C.s",
+    "source": "src/unk/cluster_030/sub_0807FE6C.c"
+  },
+  "sub_0807FFBC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0807FFBC.s",
+    "source": "src/unk/cluster_030/sub_0807FFBC.c"
+  },
+  "sub_080808B0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_080808B0.s",
+    "source": "src/unk/cluster_030/sub_080808B0.c"
+  },
   "sub_08080A40": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_030/sub_08080A40.s",
     "source": "src/unk/cluster_030/sub_08080A40.c"
+  },
+  "sub_08080A54": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_08080A54.s",
+    "source": "src/unk/cluster_030/sub_08080A54.c"
+  },
+  "sub_08080A68": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_08080A68.s",
+    "source": "src/unk/cluster_030/sub_08080A68.c"
   },
   "sub_08080F74": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_068/sub_08080F74.s",
     "source": "src/unk/cluster_068/sub_08080F74.c"
   },
+  "sub_08082354": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_041/sub_08082354.s",
+    "source": "src/unk/cluster_041/sub_08082354.c"
+  },
+  "sub_08082360": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_041/sub_08082360.s",
+    "source": "src/unk/cluster_041/sub_08082360.c"
+  },
   "sub_080824BC": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_041/sub_080824BC.s",
     "source": "src/unk/cluster_041/sub_080824BC.c"
+  },
+  "sub_080829EC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_086/sub_080829EC.s",
+    "source": "src/unk/cluster_086/sub_080829EC.c"
+  },
+  "sub_080829F0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_086/sub_080829F0.s",
+    "source": "src/unk/cluster_086/sub_080829F0.c"
   },
   "sub_080829F4": {
     "profile": "baseline",
@@ -4554,25 +6209,100 @@
     "reference": "asm/references/unk/cluster_041/sub_08082B80.s",
     "source": "src/unk/cluster_041/sub_08082B80.c"
   },
+  "sub_08083010": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08083010.s",
+    "source": "src/unk/cluster_063/sub_08083010.c"
+  },
+  "sub_08083024": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08083024.s",
+    "source": "src/unk/cluster_063/sub_08083024.c"
+  },
+  "sub_08083188": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08083188.s",
+    "source": "src/unk/cluster_063/sub_08083188.c"
+  },
+  "sub_0808319C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_0808319C.s",
+    "source": "src/unk/cluster_063/sub_0808319C.c"
+  },
   "sub_080832D0": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_086/sub_080832D0.s",
     "source": "src/unk/cluster_086/sub_080832D0.c"
+  },
+  "sub_08083364": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08083364.s",
+    "source": "src/unk/cluster_063/sub_08083364.c"
   },
   "sub_0808368C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_063/sub_0808368C.s",
     "source": "src/unk/cluster_063/sub_0808368C.c"
   },
+  "sub_0808369C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_0808369C.s",
+    "source": "src/unk/cluster_063/sub_0808369C.c"
+  },
+  "sub_080836AC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_080836AC.s",
+    "source": "src/unk/cluster_063/sub_080836AC.c"
+  },
+  "sub_08083B08": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08083B08.s",
+    "source": "src/unk/cluster_063/sub_08083B08.c"
+  },
+  "sub_08083B44": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_08083B44.s",
+    "source": "src/unk/cluster_063/sub_08083B44.c"
+  },
+  "sub_08084AE0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_065/sub_08084AE0.s",
+    "source": "src/unk/cluster_065/sub_08084AE0.c"
+  },
+  "sub_08084AF0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_065/sub_08084AF0.s",
+    "source": "src/unk/cluster_065/sub_08084AF0.c"
+  },
+  "sub_08084FF0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_065/sub_08084FF0.s",
+    "source": "src/unk/cluster_065/sub_08084FF0.c"
+  },
+  "sub_080854B0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_013/sub_080854B0.s",
+    "source": "src/unk/cluster_013/sub_080854B0.c"
+  },
   "sub_080854C4": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_013/sub_080854C4.s",
     "source": "src/unk/cluster_013/sub_080854C4.c"
   },
+  "sub_080855A4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_041/sub_080855A4.s",
+    "source": "src/unk/cluster_041/sub_080855A4.c"
+  },
   "sub_08085BA0": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_041/sub_08085BA0.s",
     "source": "src/unk/cluster_041/sub_08085BA0.c"
+  },
+  "sub_08085ED8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_041/sub_08085ED8.s",
+    "source": "src/unk/cluster_041/sub_08085ED8.c"
   },
   "sub_08086584": {
     "profile": "baseline",
@@ -4584,15 +6314,45 @@
     "reference": "asm/references/unk/cluster_086/sub_0808659C.s",
     "source": "src/unk/cluster_086/sub_0808659C.c"
   },
+  "sub_0808663C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0808663C.s",
+    "source": "src/unk/cluster_030/sub_0808663C.c"
+  },
+  "sub_080868BC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_080868BC.s",
+    "source": "src/unk/cluster_030/sub_080868BC.c"
+  },
   "sub_0808701C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_089/sub_0808701C.s",
     "source": "src/unk/cluster_089/sub_0808701C.c"
   },
+  "sub_08088574": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_067/sub_08088574.s",
+    "source": "src/unk/cluster_067/sub_08088574.c"
+  },
   "sub_0808BBD8": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_066/sub_0808BBD8.s",
     "source": "src/unk/cluster_066/sub_0808BBD8.c"
+  },
+  "sub_0808C718": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_038/sub_0808C718.s",
+    "source": "src/graphics/related/cluster_038/sub_0808C718.c"
+  },
+  "sub_0808D214": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0808D214.s",
+    "source": "src/unk/cluster_030/sub_0808D214.c"
+  },
+  "sub_0808D25C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0808D25C.s",
+    "source": "src/unk/cluster_030/sub_0808D25C.c"
   },
   "sub_0808D330": {
     "profile": "baseline",
@@ -4644,6 +6404,21 @@
     "reference": "asm/references/unk/cluster_079/sub_0808E1DC.s",
     "source": "src/unk/cluster_079/sub_0808E1DC.c"
   },
+  "sub_0808E24C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_079/sub_0808E24C.s",
+    "source": "src/unk/cluster_079/sub_0808E24C.c"
+  },
+  "sub_0808E268": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_079/sub_0808E268.s",
+    "source": "src/unk/cluster_079/sub_0808E268.c"
+  },
+  "sub_0808F110": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_079/sub_0808F110.s",
+    "source": "src/unk/cluster_079/sub_0808F110.c"
+  },
   "sub_0808FA7C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_060/sub_0808FA7C.s",
@@ -4653,6 +6428,16 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_079/sub_0808FA98.s",
     "source": "src/unk/cluster_079/sub_0808FA98.c"
+  },
+  "sub_0808FED0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_033/sub_0808FED0.s",
+    "source": "src/unk/cluster_033/sub_0808FED0.c"
+  },
+  "sub_0808FEDC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_033/sub_0808FEDC.s",
+    "source": "src/unk/cluster_033/sub_0808FEDC.c"
   },
   "sub_08090A0C": {
     "profile": "baseline",
@@ -4674,10 +6459,90 @@
     "reference": "asm/references/unk/cluster_079/sub_08091144.s",
     "source": "src/unk/cluster_079/sub_08091144.c"
   },
+  "sub_08091330": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_079/sub_08091330.s",
+    "source": "src/unk/cluster_079/sub_08091330.c"
+  },
+  "sub_08091494": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_08091494.s",
+    "source": "src/unk/cluster_052/sub_08091494.c"
+  },
+  "sub_08091530": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_08091530.s",
+    "source": "src/unk/cluster_052/sub_08091530.c"
+  },
+  "sub_0809153C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_0809153C.s",
+    "source": "src/unk/cluster_052/sub_0809153C.c"
+  },
+  "sub_08091548": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_08091548.s",
+    "source": "src/unk/cluster_052/sub_08091548.c"
+  },
+  "sub_080915F0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_080915F0.s",
+    "source": "src/unk/cluster_052/sub_080915F0.c"
+  },
+  "sub_0809168C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_0809168C.s",
+    "source": "src/unk/cluster_052/sub_0809168C.c"
+  },
+  "sub_080916B4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_080916B4.s",
+    "source": "src/unk/cluster_052/sub_080916B4.c"
+  },
+  "sub_08092040": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_077/sub_08092040.s",
+    "source": "src/unk/cluster_077/sub_08092040.c"
+  },
   "sub_08092044": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_064/sub_08092044.s",
     "source": "src/unk/cluster_064/sub_08092044.c"
+  },
+  "sub_0809221C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_064/sub_0809221C.s",
+    "source": "src/unk/cluster_064/sub_0809221C.c"
+  },
+  "sub_08092220": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_064/sub_08092220.s",
+    "source": "src/unk/cluster_064/sub_08092220.c"
+  },
+  "sub_08092224": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_064/sub_08092224.s",
+    "source": "src/unk/cluster_064/sub_08092224.c"
+  },
+  "sub_080926B4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_036/sub_080926B4.s",
+    "source": "src/unk/cluster_036/sub_080926B4.c"
+  },
+  "sub_08092B34": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_036/sub_08092B34.s",
+    "source": "src/unk/cluster_036/sub_08092B34.c"
+  },
+  "sub_08092BDC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_036/sub_08092BDC.s",
+    "source": "src/unk/cluster_036/sub_08092BDC.c"
+  },
+  "sub_08093550": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_072/sub_08093550.s",
+    "source": "src/unk/cluster_072/sub_08093550.c"
   },
   "sub_080937B0": {
     "profile": "baseline",
@@ -4709,6 +6574,31 @@
     "reference": "asm/references/unk/cluster_072/sub_08093950.s",
     "source": "src/unk/cluster_072/sub_08093950.c"
   },
+  "sub_08093960": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_072/sub_08093960.s",
+    "source": "src/unk/cluster_072/sub_08093960.c"
+  },
+  "sub_08093970": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_072/sub_08093970.s",
+    "source": "src/unk/cluster_072/sub_08093970.c"
+  },
+  "sub_0809397C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_072/sub_0809397C.s",
+    "source": "src/unk/cluster_072/sub_0809397C.c"
+  },
+  "sub_08093988": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_072/sub_08093988.s",
+    "source": "src/unk/cluster_072/sub_08093988.c"
+  },
+  "sub_08093994": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_072/sub_08093994.s",
+    "source": "src/unk/cluster_072/sub_08093994.c"
+  },
   "sub_08093998": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_072/sub_08093998.s",
@@ -4718,6 +6608,21 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_072/sub_08093A04.s",
     "source": "src/unk/cluster_072/sub_08093A04.c"
+  },
+  "sub_08093AD8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_08093AD8.s",
+    "source": "src/unk/cluster_030/sub_08093AD8.c"
+  },
+  "sub_08093DD0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_045/sub_08093DD0.s",
+    "source": "src/unk/cluster_045/sub_08093DD0.c"
+  },
+  "sub_080944B8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_080944B8.s",
+    "source": "src/unk/cluster_022/sub_080944B8.c"
   },
   "sub_080948A4": {
     "profile": "baseline",
@@ -4729,10 +6634,20 @@
     "reference": "asm/references/unk/cluster_022/sub_080948C0.s",
     "source": "src/unk/cluster_022/sub_080948C0.c"
   },
+  "sub_08094990": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_08094990.s",
+    "source": "src/unk/cluster_022/sub_08094990.c"
+  },
   "sub_08095A78": {
     "profile": "baseline",
     "reference": "asm/references/graphics/related/cluster_009/sub_08095A78.s",
     "source": "src/graphics/related/cluster_009/sub_08095A78.c"
+  },
+  "sub_08095A90": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_009/sub_08095A90.s",
+    "source": "src/graphics/related/cluster_009/sub_08095A90.c"
   },
   "sub_08095D34": {
     "profile": "baseline",
@@ -4769,6 +6684,11 @@
     "reference": "asm/references/unk/cluster_039/sub_08097AE4.s",
     "source": "src/unk/cluster_039/sub_08097AE4.c"
   },
+  "sub_08098158": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_095/sub_08098158.s",
+    "source": "src/unk/cluster_095/sub_08098158.c"
+  },
   "sub_08098408": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_095/sub_08098408.s",
@@ -4794,6 +6714,16 @@
     "reference": "asm/references/unk/cluster_014/sub_080991D8.s",
     "source": "src/unk/cluster_014/sub_080991D8.c"
   },
+  "sub_08099CBC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_095/sub_08099CBC.s",
+    "source": "src/unk/cluster_095/sub_08099CBC.c"
+  },
+  "sub_0809A31C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_057/sub_0809A31C.s",
+    "source": "src/unk/cluster_057/sub_0809A31C.c"
+  },
   "sub_0809A36C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_057/sub_0809A36C.s",
@@ -4804,10 +6734,60 @@
     "reference": "asm/references/unk/cluster_057/sub_0809A37C.s",
     "source": "src/unk/cluster_057/sub_0809A37C.c"
   },
+  "sub_0809A938": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_0809A938.s",
+    "source": "src/unk/cluster_063/sub_0809A938.c"
+  },
+  "sub_0809AE80": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0809AE80.s",
+    "source": "src/unk/cluster_030/sub_0809AE80.c"
+  },
+  "sub_0809AE8C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0809AE8C.s",
+    "source": "src/unk/cluster_030/sub_0809AE8C.c"
+  },
+  "sub_0809AFE4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0809AFE4.s",
+    "source": "src/unk/cluster_030/sub_0809AFE4.c"
+  },
+  "sub_0809B170": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0809B170.s",
+    "source": "src/unk/cluster_030/sub_0809B170.c"
+  },
+  "sub_0809B2E8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_0809B2E8.s",
+    "source": "src/unk/cluster_030/sub_0809B2E8.c"
+  },
+  "sub_0809B3EC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_0809B3EC.s",
+    "source": "src/unk/cluster_063/sub_0809B3EC.c"
+  },
+  "sub_0809B400": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_063/sub_0809B400.s",
+    "source": "src/unk/cluster_063/sub_0809B400.c"
+  },
   "sub_0809B648": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_063/sub_0809B648.s",
     "source": "src/unk/cluster_063/sub_0809B648.c"
+  },
+  "sub_0809BCAC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_078/sub_0809BCAC.s",
+    "source": "src/unk/cluster_078/sub_0809BCAC.c"
+  },
+  "sub_0809D230": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_033/sub_0809D230.s",
+    "source": "src/unk/cluster_033/sub_0809D230.c"
   },
   "sub_0809D788": {
     "profile": "baseline",
@@ -4818,6 +6798,21 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_033/sub_0809D808.s",
     "source": "src/unk/cluster_033/sub_0809D808.c"
+  },
+  "sub_0809DABC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_0809DABC.s",
+    "source": "src/unk/cluster_052/sub_0809DABC.c"
+  },
+  "sub_0809DAC8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_0809DAC8.s",
+    "source": "src/unk/cluster_052/sub_0809DAC8.c"
+  },
+  "sub_0809DAD4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_0809DAD4.s",
+    "source": "src/unk/cluster_052/sub_0809DAD4.c"
   },
   "sub_0809F130": {
     "profile": "baseline",
@@ -4879,6 +6874,16 @@
     "reference": "asm/references/unk/cluster_004/sub_080A00E8.s",
     "source": "src/unk/cluster_004/sub_080A00E8.c"
   },
+  "sub_080A06F4": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_008/sub_080A06F4.s",
+    "source": "src/graphics/related/cluster_008/sub_080A06F4.c"
+  },
+  "sub_080A0704": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_008/sub_080A0704.s",
+    "source": "src/graphics/related/cluster_008/sub_080A0704.c"
+  },
   "sub_080A1878": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_020/sub_080A1878.s",
@@ -4919,6 +6924,16 @@
     "reference": "asm/references/unk/cluster_024/sub_080A47FC.s",
     "source": "src/unk/cluster_024/sub_080A47FC.c"
   },
+  "sub_080A5B78": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_078/sub_080A5B78.s",
+    "source": "src/unk/cluster_078/sub_080A5B78.c"
+  },
+  "sub_080A6400": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_082/sub_080A6400.s",
+    "source": "src/unk/cluster_082/sub_080A6400.c"
+  },
   "sub_080A65B4": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_039/sub_080A65B4.s",
@@ -4929,10 +6944,25 @@
     "reference": "asm/references/unk/cluster_078/sub_080A6644.s",
     "source": "src/unk/cluster_078/sub_080A6644.c"
   },
+  "sub_080A6B2C": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_019/sub_080A6B2C.s",
+    "source": "src/graphics/related/cluster_019/sub_080A6B2C.c"
+  },
   "sub_080A6F4C": {
     "profile": "baseline",
     "reference": "asm/references/graphics/related/cluster_019/sub_080A6F4C.s",
     "source": "src/graphics/related/cluster_019/sub_080A6F4C.c"
+  },
+  "sub_080A7014": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_062/sub_080A7014.s",
+    "source": "src/unk/cluster_062/sub_080A7014.c"
+  },
+  "sub_080A7020": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_062/sub_080A7020.s",
+    "source": "src/unk/cluster_062/sub_080A7020.c"
   },
   "sub_080A7318": {
     "profile": "baseline",
@@ -4949,6 +6979,11 @@
     "reference": "asm/references/unk/cluster_080/sub_080A7324.s",
     "source": "src/unk/cluster_080/sub_080A7324.c"
   },
+  "sub_080A7448": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_039/sub_080A7448.s",
+    "source": "src/unk/cluster_039/sub_080A7448.c"
+  },
   "sub_080A7484": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_030/sub_080A7484.s",
@@ -4958,6 +6993,71 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_039/sub_080A7494.s",
     "source": "src/unk/cluster_039/sub_080A7494.c"
+  },
+  "sub_080A7518": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_039/sub_080A7518.s",
+    "source": "src/unk/cluster_039/sub_080A7518.c"
+  },
+  "sub_080A7524": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_039/sub_080A7524.s",
+    "source": "src/unk/cluster_039/sub_080A7524.c"
+  },
+  "sub_080A7530": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_039/sub_080A7530.s",
+    "source": "src/unk/cluster_039/sub_080A7530.c"
+  },
+  "sub_080A753C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_039/sub_080A753C.s",
+    "source": "src/unk/cluster_039/sub_080A753C.c"
+  },
+  "sub_080A7548": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_039/sub_080A7548.s",
+    "source": "src/unk/cluster_039/sub_080A7548.c"
+  },
+  "sub_080A7554": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_039/sub_080A7554.s",
+    "source": "src/unk/cluster_039/sub_080A7554.c"
+  },
+  "sub_080A7560": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_039/sub_080A7560.s",
+    "source": "src/unk/cluster_039/sub_080A7560.c"
+  },
+  "sub_080A756C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_039/sub_080A756C.s",
+    "source": "src/unk/cluster_039/sub_080A756C.c"
+  },
+  "sub_080A75E0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_072/sub_080A75E0.s",
+    "source": "src/unk/cluster_072/sub_080A75E0.c"
+  },
+  "sub_080A75F0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_072/sub_080A75F0.s",
+    "source": "src/unk/cluster_072/sub_080A75F0.c"
+  },
+  "sub_080A7610": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_072/sub_080A7610.s",
+    "source": "src/unk/cluster_072/sub_080A7610.c"
+  },
+  "sub_080A7630": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_072/sub_080A7630.s",
+    "source": "src/unk/cluster_072/sub_080A7630.c"
+  },
+  "sub_080A7634": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_072/sub_080A7634.s",
+    "source": "src/unk/cluster_072/sub_080A7634.c"
   },
   "sub_080A7800": {
     "profile": "baseline",
@@ -4984,6 +7084,56 @@
     "reference": "asm/references/unk/cluster_030/sub_080A7DCC.s",
     "source": "src/unk/cluster_030/sub_080A7DCC.c"
   },
+  "sub_080A8890": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_092/sub_080A8890.s",
+    "source": "src/unk/cluster_092/sub_080A8890.c"
+  },
+  "sub_080A903C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_098/sub_080A903C.s",
+    "source": "src/unk/cluster_098/sub_080A903C.c"
+  },
+  "sub_080A94A8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_098/sub_080A94A8.s",
+    "source": "src/unk/cluster_098/sub_080A94A8.c"
+  },
+  "sub_080A9990": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_082/sub_080A9990.s",
+    "source": "src/unk/cluster_082/sub_080A9990.c"
+  },
+  "sub_080A9C5C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_080A9C5C.s",
+    "source": "src/unk/cluster_030/sub_080A9C5C.c"
+  },
+  "sub_080AB414": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_047/sub_080AB414.s",
+    "source": "src/unk/cluster_047/sub_080AB414.c"
+  },
+  "sub_080AB418": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_047/sub_080AB418.s",
+    "source": "src/unk/cluster_047/sub_080AB418.c"
+  },
+  "sub_080AB424": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_047/sub_080AB424.s",
+    "source": "src/unk/cluster_047/sub_080AB424.c"
+  },
+  "sub_080AB428": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_047/sub_080AB428.s",
+    "source": "src/unk/cluster_047/sub_080AB428.c"
+  },
+  "sub_080AB42C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_047/sub_080AB42C.s",
+    "source": "src/unk/cluster_047/sub_080AB42C.c"
+  },
   "sub_080ABB88": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_067/sub_080ABB88.s",
@@ -4993,6 +7143,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_067/sub_080ABBA4.s",
     "source": "src/unk/cluster_067/sub_080ABBA4.c"
+  },
+  "sub_080ABD10": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_002/sub_080ABD10.s",
+    "source": "src/unk/cluster_002/sub_080ABD10.c"
   },
   "sub_080ABE54": {
     "profile": "baseline",
@@ -5019,25 +7174,65 @@
     "reference": "asm/references/unk/cluster_056/sub_080ABF0C.s",
     "source": "src/unk/cluster_056/sub_080ABF0C.c"
   },
+  "sub_080ABF18": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_059/sub_080ABF18.s",
+    "source": "src/unk/cluster_059/sub_080ABF18.c"
+  },
+  "sub_080ABFC0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_056/sub_080ABFC0.s",
+    "source": "src/unk/cluster_056/sub_080ABFC0.c"
+  },
   "sub_080ACB78": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_030/sub_080ACB78.s",
     "source": "src/unk/cluster_030/sub_080ACB78.c"
+  },
+  "sub_080AD250": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_080AD250.s",
+    "source": "src/unk/cluster_030/sub_080AD250.c"
   },
   "sub_080ADAE4": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_029/sub_080ADAE4.s",
     "source": "src/unk/cluster_029/sub_080ADAE4.c"
   },
+  "sub_080AE658": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_076/sub_080AE658.s",
+    "source": "src/unk/cluster_076/sub_080AE658.c"
+  },
   "sub_080AE8B8": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_076/sub_080AE8B8.s",
     "source": "src/unk/cluster_076/sub_080AE8B8.c"
   },
+  "sub_080AEFBC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_076/sub_080AEFBC.s",
+    "source": "src/unk/cluster_076/sub_080AEFBC.c"
+  },
+  "sub_080AF254": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_034/sub_080AF254.s",
+    "source": "src/graphics/related/cluster_034/sub_080AF254.c"
+  },
+  "sub_080AFA10": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_061/sub_080AFA10.s",
+    "source": "src/unk/cluster_061/sub_080AFA10.c"
+  },
   "sub_080AFE8C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_002/sub_080AFE8C.s",
     "source": "src/unk/cluster_002/sub_080AFE8C.c"
+  },
+  "sub_080AFF24": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_060/sub_080AFF24.s",
+    "source": "src/unk/cluster_060/sub_080AFF24.c"
   },
   "sub_080B021C": {
     "profile": "baseline",
@@ -5084,10 +7279,40 @@
     "reference": "asm/references/unk/cluster_056/sub_080B06C8.s",
     "source": "src/unk/cluster_056/sub_080B06C8.c"
   },
+  "sub_080B06EC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_088/sub_080B06EC.s",
+    "source": "src/unk/cluster_088/sub_080B06EC.c"
+  },
+  "sub_080B06FC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_088/sub_080B06FC.s",
+    "source": "src/unk/cluster_088/sub_080B06FC.c"
+  },
   "sub_080B18A4": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_094/sub_080B18A4.s",
     "source": "src/unk/cluster_094/sub_080B18A4.c"
+  },
+  "sub_080B18AC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_080B18AC.s",
+    "source": "src/unk/cluster_030/sub_080B18AC.c"
+  },
+  "sub_080B1E74": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_080B1E74.s",
+    "source": "src/unk/cluster_030/sub_080B1E74.c"
+  },
+  "sub_080B23A0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_006/sub_080B23A0.s",
+    "source": "src/unk/cluster_006/sub_080B23A0.c"
+  },
+  "sub_080B25EC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_006/sub_080B25EC.s",
+    "source": "src/unk/cluster_006/sub_080B25EC.c"
   },
   "sub_080B27C0": {
     "profile": "baseline",
@@ -5129,6 +7354,16 @@
     "reference": "asm/references/unk/cluster_081/sub_080B29D4.s",
     "source": "src/unk/cluster_081/sub_080B29D4.c"
   },
+  "sub_080B2A60": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_081/sub_080B2A60.s",
+    "source": "src/unk/cluster_081/sub_080B2A60.c"
+  },
+  "sub_080B2AD0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_081/sub_080B2AD0.s",
+    "source": "src/unk/cluster_081/sub_080B2AD0.c"
+  },
   "sub_080B2B0C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_081/sub_080B2B0C.s",
@@ -5149,10 +7384,20 @@
     "reference": "asm/references/unk/cluster_063/sub_080B34A0.s",
     "source": "src/unk/cluster_063/sub_080B34A0.c"
   },
+  "sub_080B3A38": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_043/sub_080B3A38.s",
+    "source": "src/unk/cluster_043/sub_080B3A38.c"
+  },
   "sub_080B3B7C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_043/sub_080B3B7C.s",
     "source": "src/unk/cluster_043/sub_080B3B7C.c"
+  },
+  "sub_080B3D50": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_095/sub_080B3D50.s",
+    "source": "src/unk/cluster_095/sub_080B3D50.c"
   },
   "sub_080B427C": {
     "profile": "baseline",
@@ -5183,6 +7428,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_010/sub_080B5DE4.s",
     "source": "src/unk/cluster_010/sub_080B5DE4.c"
+  },
+  "sub_080B5DFC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_016/sub_080B5DFC.s",
+    "source": "src/unk/cluster_016/sub_080B5DFC.c"
   },
   "sub_080B5E1C": {
     "profile": "baseline",
@@ -5254,6 +7504,11 @@
     "reference": "asm/references/unk/cluster_010/sub_080B6D10.s",
     "source": "src/unk/cluster_010/sub_080B6D10.c"
   },
+  "sub_080B6D28": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_016/sub_080B6D28.s",
+    "source": "src/unk/cluster_016/sub_080B6D28.c"
+  },
   "sub_080B6D44": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_010/sub_080B6D44.s",
@@ -5268,6 +7523,16 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_010/sub_080B6D9C.s",
     "source": "src/unk/cluster_010/sub_080B6D9C.c"
+  },
+  "sub_080B6DB4": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/main/sub_080B6DB4.s",
+    "source": "src/gameplay/main/sub_080B6DB4.c"
+  },
+  "sub_080B6DC4": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/main/sub_080B6DC4.s",
+    "source": "src/gameplay/main/sub_080B6DC4.c"
   },
   "sub_080B6DD0": {
     "profile": "baseline",
@@ -5343,6 +7608,11 @@
     "profile": "baseline",
     "reference": "asm/references/gameplay/main/sub_080B9B90.s",
     "source": "src/gameplay/main/sub_080B9B90.c"
+  },
+  "sub_080B9BB4": {
+    "profile": "baseline",
+    "reference": "asm/references/gameplay/main/sub_080B9BB4.s",
+    "source": "src/gameplay/main/sub_080B9BB4.c"
   },
   "sub_080B9BD4": {
     "profile": "baseline",
@@ -5423,6 +7693,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_090/sub_080BA364.s",
     "source": "src/unk/cluster_090/sub_080BA364.c"
+  },
+  "sub_080BA3C4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_018/sub_080BA3C4.s",
+    "source": "src/unk/cluster_018/sub_080BA3C4.c"
   },
   "sub_080BA3E4": {
     "profile": "baseline",
@@ -5539,15 +7814,55 @@
     "reference": "asm/references/unk/cluster_090/sub_080BA91C.s",
     "source": "src/unk/cluster_090/sub_080BA91C.c"
   },
+  "sub_080BA924": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_090/sub_080BA924.s",
+    "source": "src/unk/cluster_090/sub_080BA924.c"
+  },
+  "sub_080BA92C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_090/sub_080BA92C.s",
+    "source": "src/unk/cluster_090/sub_080BA92C.c"
+  },
+  "sub_080BA934": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_090/sub_080BA934.s",
+    "source": "src/unk/cluster_090/sub_080BA934.c"
+  },
   "sub_080BA93C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_090/sub_080BA93C.s",
     "source": "src/unk/cluster_090/sub_080BA93C.c"
   },
+  "sub_080BA944": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_090/sub_080BA944.s",
+    "source": "src/unk/cluster_090/sub_080BA944.c"
+  },
+  "sub_080BA948": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_090/sub_080BA948.s",
+    "source": "src/unk/cluster_090/sub_080BA948.c"
+  },
+  "sub_080BA950": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_090/sub_080BA950.s",
+    "source": "src/unk/cluster_090/sub_080BA950.c"
+  },
+  "sub_080BBC14": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_090/sub_080BBC14.s",
+    "source": "src/unk/cluster_090/sub_080BBC14.c"
+  },
   "sub_080BBC34": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_090/sub_080BBC34.s",
     "source": "src/unk/cluster_090/sub_080BBC34.c"
+  },
+  "sub_080BBEE0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_090/sub_080BBEE0.s",
+    "source": "src/unk/cluster_090/sub_080BBEE0.c"
   },
   "sub_080BBF28": {
     "profile": "baseline",
@@ -5684,6 +7999,11 @@
     "reference": "asm/references/unk/cluster_090/sub_080BE0F0.s",
     "source": "src/unk/cluster_090/sub_080BE0F0.c"
   },
+  "sub_080BE0F4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_090/sub_080BE0F4.s",
+    "source": "src/unk/cluster_090/sub_080BE0F4.c"
+  },
   "sub_080BE10C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_090/sub_080BE10C.s",
@@ -5749,6 +8069,11 @@
     "reference": "asm/references/unk/cluster_064/sub_080BEF0C.s",
     "source": "src/unk/cluster_064/sub_080BEF0C.c"
   },
+  "sub_080BEF4C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_056/sub_080BEF4C.s",
+    "source": "src/unk/cluster_056/sub_080BEF4C.c"
+  },
   "sub_080BEF6C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_016/sub_080BEF6C.s",
@@ -5799,6 +8124,11 @@
     "reference": "asm/references/unk/cluster_081/sub_080C07C4.s",
     "source": "src/unk/cluster_081/sub_080C07C4.c"
   },
+  "sub_080C0870": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_080C0870.s",
+    "source": "src/unk/cluster_030/sub_080C0870.c"
+  },
   "sub_080C0DE4": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_016/sub_080C0DE4.s",
@@ -5823,6 +8153,16 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_010/sub_080C1708.s",
     "source": "src/unk/cluster_010/sub_080C1708.c"
+  },
+  "sub_080C1774": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_090/sub_080C1774.s",
+    "source": "src/unk/cluster_090/sub_080C1774.c"
+  },
+  "sub_080C1A08": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_035/sub_080C1A08.s",
+    "source": "src/unk/cluster_035/sub_080C1A08.c"
   },
   "sub_080C1C14": {
     "profile": "baseline",
@@ -5919,10 +8259,60 @@
     "reference": "asm/references/unk/cluster_020/sub_080C371C.s",
     "source": "src/unk/cluster_020/sub_080C371C.c"
   },
+  "sub_080C372C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_050/sub_080C372C.s",
+    "source": "src/unk/cluster_050/sub_080C372C.c"
+  },
+  "sub_080C373C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_050/sub_080C373C.s",
+    "source": "src/unk/cluster_050/sub_080C373C.c"
+  },
+  "sub_080C374C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_050/sub_080C374C.s",
+    "source": "src/unk/cluster_050/sub_080C374C.c"
+  },
+  "sub_080C375C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_048/sub_080C375C.s",
+    "source": "src/unk/cluster_048/sub_080C375C.c"
+  },
+  "sub_080C376C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_048/sub_080C376C.s",
+    "source": "src/unk/cluster_048/sub_080C376C.c"
+  },
   "sub_080C38D4": {
     "profile": "baseline",
     "reference": "asm/references/graphics/related/cluster_015/sub_080C38D4.s",
     "source": "src/graphics/related/cluster_015/sub_080C38D4.c"
+  },
+  "sub_080C439C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_060/sub_080C439C.s",
+    "source": "src/unk/cluster_060/sub_080C439C.c"
+  },
+  "sub_080C5978": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_038/sub_080C5978.s",
+    "source": "src/graphics/related/cluster_038/sub_080C5978.c"
+  },
+  "sub_080C5D84": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_038/sub_080C5D84.s",
+    "source": "src/graphics/related/cluster_038/sub_080C5D84.c"
+  },
+  "sub_080C6D88": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_038/sub_080C6D88.s",
+    "source": "src/graphics/related/cluster_038/sub_080C6D88.c"
+  },
+  "sub_080C8148": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_066/sub_080C8148.s",
+    "source": "src/unk/cluster_066/sub_080C8148.c"
   },
   "sub_080C82D0": {
     "profile": "baseline",
@@ -5989,10 +8379,50 @@
     "reference": "asm/references/unk/cluster_063/sub_080C99D8.s",
     "source": "src/unk/cluster_063/sub_080C99D8.c"
   },
+  "sub_080C9D94": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_046/sub_080C9D94.s",
+    "source": "src/unk/cluster_046/sub_080C9D94.c"
+  },
+  "sub_080C9DA4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_046/sub_080C9DA4.s",
+    "source": "src/unk/cluster_046/sub_080C9DA4.c"
+  },
+  "sub_080C9DB8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_046/sub_080C9DB8.s",
+    "source": "src/unk/cluster_046/sub_080C9DB8.c"
+  },
+  "sub_080C9E1C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_046/sub_080C9E1C.s",
+    "source": "src/unk/cluster_046/sub_080C9E1C.c"
+  },
+  "sub_080CA0A8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_046/sub_080CA0A8.s",
+    "source": "src/unk/cluster_046/sub_080CA0A8.c"
+  },
+  "sub_080CA20C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_046/sub_080CA20C.s",
+    "source": "src/unk/cluster_046/sub_080CA20C.c"
+  },
+  "sub_080CA21C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_046/sub_080CA21C.s",
+    "source": "src/unk/cluster_046/sub_080CA21C.c"
+  },
   "sub_080CA350": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_092/sub_080CA350.s",
     "source": "src/unk/cluster_092/sub_080CA350.c"
+  },
+  "sub_080CA660": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_078/sub_080CA660.s",
+    "source": "src/unk/cluster_078/sub_080CA660.c"
   },
   "sub_080CAED0": {
     "profile": "baseline",
@@ -6009,6 +8439,16 @@
     "reference": "asm/references/unk/cluster_092/sub_080CED28.s",
     "source": "src/unk/cluster_092/sub_080CED28.c"
   },
+  "sub_080CF94C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_036/sub_080CF94C.s",
+    "source": "src/unk/cluster_036/sub_080CF94C.c"
+  },
+  "sub_080CFF00": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_068/sub_080CFF00.s",
+    "source": "src/unk/cluster_068/sub_080CFF00.c"
+  },
   "sub_080D0750": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_068/sub_080D0750.s",
@@ -6024,6 +8464,16 @@
     "reference": "asm/references/unk/cluster_039/sub_080D1F8C.s",
     "source": "src/unk/cluster_039/sub_080D1F8C.c"
   },
+  "sub_080D20C4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_027/sub_080D20C4.s",
+    "source": "src/unk/cluster_027/sub_080D20C4.c"
+  },
+  "sub_080D20D8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_027/sub_080D20D8.s",
+    "source": "src/unk/cluster_027/sub_080D20D8.c"
+  },
   "sub_080D2604": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_004/sub_080D2604.s",
@@ -6034,6 +8484,11 @@
     "reference": "asm/references/unk/cluster_078/sub_080D2A1C.s",
     "source": "src/unk/cluster_078/sub_080D2A1C.c"
   },
+  "sub_080D2A68": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_078/sub_080D2A68.s",
+    "source": "src/unk/cluster_078/sub_080D2A68.c"
+  },
   "sub_080D2A84": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_078/sub_080D2A84.s",
@@ -6043,6 +8498,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_078/sub_080D2AA0.s",
     "source": "src/unk/cluster_078/sub_080D2AA0.c"
+  },
+  "sub_080D308C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_078/sub_080D308C.s",
+    "source": "src/unk/cluster_078/sub_080D308C.c"
   },
   "sub_080D31DC": {
     "profile": "baseline",
@@ -6058,6 +8518,16 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_094/sub_080D41FC.s",
     "source": "src/unk/cluster_094/sub_080D41FC.c"
+  },
+  "sub_080D4388": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_094/sub_080D4388.s",
+    "source": "src/unk/cluster_094/sub_080D4388.c"
+  },
+  "sub_080D5FC8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_073/sub_080D5FC8.s",
+    "source": "src/unk/cluster_073/sub_080D5FC8.c"
   },
   "sub_080D5FCC": {
     "profile": "baseline",
@@ -6084,6 +8554,16 @@
     "reference": "asm/references/graphics/related/cluster_008/sub_080D5FE8.s",
     "source": "src/graphics/related/cluster_008/sub_080D5FE8.c"
   },
+  "sub_080D5FF0": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_008/sub_080D5FF0.s",
+    "source": "src/graphics/related/cluster_008/sub_080D5FF0.c"
+  },
+  "sub_080D5FF8": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_008/sub_080D5FF8.s",
+    "source": "src/graphics/related/cluster_008/sub_080D5FF8.c"
+  },
   "sub_080D6448": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_094/sub_080D6448.s",
@@ -6098,6 +8578,16 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_006/sub_080D6460.s",
     "source": "src/unk/cluster_006/sub_080D6460.c"
+  },
+  "sub_080D65D8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_080D65D8.s",
+    "source": "src/unk/cluster_022/sub_080D65D8.c"
+  },
+  "sub_080D666C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_080D666C.s",
+    "source": "src/unk/cluster_022/sub_080D666C.c"
   },
   "sub_080D66B0": {
     "profile": "baseline",
@@ -6114,10 +8604,50 @@
     "reference": "asm/references/unk/cluster_071/sub_080D72C0.s",
     "source": "src/unk/cluster_071/sub_080D72C0.c"
   },
+  "sub_080D77A4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_071/sub_080D77A4.s",
+    "source": "src/unk/cluster_071/sub_080D77A4.c"
+  },
+  "sub_080D77B4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_071/sub_080D77B4.s",
+    "source": "src/unk/cluster_071/sub_080D77B4.c"
+  },
   "sub_080D782C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_071/sub_080D782C.s",
     "source": "src/unk/cluster_071/sub_080D782C.c"
+  },
+  "sub_080D7900": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_027/sub_080D7900.s",
+    "source": "src/unk/cluster_027/sub_080D7900.c"
+  },
+  "sub_080D7C20": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_040/sub_080D7C20.s",
+    "source": "src/unk/cluster_040/sub_080D7C20.c"
+  },
+  "sub_080D9340": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_040/sub_080D9340.s",
+    "source": "src/unk/cluster_040/sub_080D9340.c"
+  },
+  "sub_080D94EC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_040/sub_080D94EC.s",
+    "source": "src/unk/cluster_040/sub_080D94EC.c"
+  },
+  "sub_080D971C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_040/sub_080D971C.s",
+    "source": "src/unk/cluster_040/sub_080D971C.c"
+  },
+  "sub_080D9828": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_040/sub_080D9828.s",
+    "source": "src/unk/cluster_040/sub_080D9828.c"
   },
   "sub_080DA25C": {
     "profile": "baseline",
@@ -6134,15 +8664,65 @@
     "reference": "asm/references/unk/cluster_074/sub_080DA274.s",
     "source": "src/unk/cluster_074/sub_080DA274.c"
   },
+  "sub_080DA28C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_074/sub_080DA28C.s",
+    "source": "src/unk/cluster_074/sub_080DA28C.c"
+  },
+  "sub_080DA848": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_074/sub_080DA848.s",
+    "source": "src/unk/cluster_074/sub_080DA848.c"
+  },
   "sub_080DAE10": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_014/sub_080DAE10.s",
     "source": "src/unk/cluster_014/sub_080DAE10.c"
   },
+  "sub_080DAF2C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_080DAF2C.s",
+    "source": "src/unk/cluster_052/sub_080DAF2C.c"
+  },
+  "sub_080DAF50": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_080DAF50.s",
+    "source": "src/unk/cluster_052/sub_080DAF50.c"
+  },
+  "sub_080DB004": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_080DB004.s",
+    "source": "src/unk/cluster_052/sub_080DB004.c"
+  },
+  "sub_080DB0B0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_080DB0B0.s",
+    "source": "src/unk/cluster_052/sub_080DB0B0.c"
+  },
+  "sub_080DB0BC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_080DB0BC.s",
+    "source": "src/unk/cluster_052/sub_080DB0BC.c"
+  },
+  "sub_080DB0C8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_052/sub_080DB0C8.s",
+    "source": "src/unk/cluster_052/sub_080DB0C8.c"
+  },
   "sub_080DB714": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_039/sub_080DB714.s",
     "source": "src/unk/cluster_039/sub_080DB714.c"
+  },
+  "sub_080DB87C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_074/sub_080DB87C.s",
+    "source": "src/unk/cluster_074/sub_080DB87C.c"
+  },
+  "sub_080DB8FC": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_066/sub_080DB8FC.s",
+    "source": "src/unk/cluster_066/sub_080DB8FC.c"
   },
   "sub_080DBAF0": {
     "profile": "baseline",
@@ -6164,10 +8744,25 @@
     "reference": "asm/references/unk/cluster_028/sub_080DBB78.s",
     "source": "src/unk/cluster_028/sub_080DBB78.c"
   },
+  "sub_080DBCA4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_058/sub_080DBCA4.s",
+    "source": "src/unk/cluster_058/sub_080DBCA4.c"
+  },
+  "sub_080DBE78": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_058/sub_080DBE78.s",
+    "source": "src/unk/cluster_058/sub_080DBE78.c"
+  },
   "sub_080DC2B4": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_012/sub_080DC2B4.s",
     "source": "src/unk/cluster_012/sub_080DC2B4.c"
+  },
+  "sub_080DC360": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_089/sub_080DC360.s",
+    "source": "src/unk/cluster_089/sub_080DC360.c"
   },
   "sub_080DC48C": {
     "profile": "baseline",
@@ -6184,15 +8779,70 @@
     "reference": "asm/references/unk/cluster_089/sub_080DC4D8.s",
     "source": "src/unk/cluster_089/sub_080DC4D8.c"
   },
+  "sub_080DC4F4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_089/sub_080DC4F4.s",
+    "source": "src/unk/cluster_089/sub_080DC4F4.c"
+  },
+  "sub_080DC500": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_089/sub_080DC500.s",
+    "source": "src/unk/cluster_089/sub_080DC500.c"
+  },
+  "sub_080DC530": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_020/sub_080DC530.s",
+    "source": "src/unk/cluster_020/sub_080DC530.c"
+  },
   "sub_080DC5CC": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_005/sub_080DC5CC.s",
     "source": "src/unk/cluster_005/sub_080DC5CC.c"
   },
+  "sub_080DC654": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_005/sub_080DC654.s",
+    "source": "src/unk/cluster_005/sub_080DC654.c"
+  },
   "sub_080DC9A0": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_072/sub_080DC9A0.s",
     "source": "src/unk/cluster_072/sub_080DC9A0.c"
+  },
+  "sub_080DCA6C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_089/sub_080DCA6C.s",
+    "source": "src/unk/cluster_089/sub_080DCA6C.c"
+  },
+  "sub_080DCA7C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_080DCA7C.s",
+    "source": "src/unk/cluster_030/sub_080DCA7C.c"
+  },
+  "sub_080DCA90": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_080DCA90.s",
+    "source": "src/unk/cluster_030/sub_080DCA90.c"
+  },
+  "sub_080DCA9C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_080DCA9C.s",
+    "source": "src/unk/cluster_030/sub_080DCA9C.c"
+  },
+  "sub_080DCB04": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_080DCB04.s",
+    "source": "src/unk/cluster_030/sub_080DCB04.c"
+  },
+  "sub_080DCD4C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_023/sub_080DCD4C.s",
+    "source": "src/unk/cluster_023/sub_080DCD4C.c"
+  },
+  "sub_080DCD5C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_023/sub_080DCD5C.s",
+    "source": "src/unk/cluster_023/sub_080DCD5C.c"
   },
   "sub_080DCD9C": {
     "profile": "baseline",
@@ -6214,6 +8864,16 @@
     "reference": "asm/references/unk/cluster_023/sub_080DD288.s",
     "source": "src/unk/cluster_023/sub_080DD288.c"
   },
+  "sub_080DD344": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_086/sub_080DD344.s",
+    "source": "src/unk/cluster_086/sub_080DD344.c"
+  },
+  "sub_080DD348": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_086/sub_080DD348.s",
+    "source": "src/unk/cluster_086/sub_080DD348.c"
+  },
   "sub_080DD34C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_084/sub_080DD34C.s",
@@ -6224,6 +8884,16 @@
     "reference": "asm/references/unk/cluster_053/sub_080DD4B8.s",
     "source": "src/unk/cluster_053/sub_080DD4B8.c"
   },
+  "sub_080DD644": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_084/sub_080DD644.s",
+    "source": "src/unk/cluster_084/sub_080DD644.c"
+  },
+  "sub_080DD654": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_084/sub_080DD654.s",
+    "source": "src/unk/cluster_084/sub_080DD654.c"
+  },
   "sub_080DDB50": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_084/sub_080DDB50.s",
@@ -6233,6 +8903,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_095/sub_080DDF38.s",
     "source": "src/unk/cluster_095/sub_080DDF38.c"
+  },
+  "sub_080DDF48": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_059/sub_080DDF48.s",
+    "source": "src/unk/cluster_059/sub_080DDF48.c"
   },
   "sub_080DE850": {
     "profile": "baseline",
@@ -6254,6 +8929,11 @@
     "reference": "asm/references/unk/cluster_073/sub_080DEF2C.s",
     "source": "src/unk/cluster_073/sub_080DEF2C.c"
   },
+  "sub_080DEF3C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_058/sub_080DEF3C.s",
+    "source": "src/unk/cluster_058/sub_080DEF3C.c"
+  },
   "sub_080DF078": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_016/sub_080DF078.s",
@@ -6269,10 +8949,20 @@
     "reference": "asm/references/unk/cluster_010/sub_080DF3F8.s",
     "source": "src/unk/cluster_010/sub_080DF3F8.c"
   },
+  "sub_080DF60C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_093/sub_080DF60C.s",
+    "source": "src/unk/cluster_093/sub_080DF60C.c"
+  },
   "sub_080E11E4": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_042/sub_080E11E4.s",
     "source": "src/unk/cluster_042/sub_080E11E4.c"
+  },
+  "sub_080E142C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_093/sub_080E142C.s",
+    "source": "src/unk/cluster_093/sub_080E142C.c"
   },
   "sub_080E1574": {
     "profile": "baseline",
@@ -6289,10 +8979,35 @@
     "reference": "asm/references/graphics/related/cluster_019/sub_080E1B04.s",
     "source": "src/graphics/related/cluster_019/sub_080E1B04.c"
   },
+  "sub_080E24C0": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_019/sub_080E24C0.s",
+    "source": "src/graphics/related/cluster_019/sub_080E24C0.c"
+  },
   "sub_080E27F8": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_058/sub_080E27F8.s",
     "source": "src/unk/cluster_058/sub_080E27F8.c"
+  },
+  "sub_080E2810": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_089/sub_080E2810.s",
+    "source": "src/unk/cluster_089/sub_080E2810.c"
+  },
+  "sub_080E2AF4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080E2AF4.s",
+    "source": "src/unk/cluster_012/sub_080E2AF4.c"
+  },
+  "sub_080E328C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_080E328C.s",
+    "source": "src/unk/cluster_030/sub_080E328C.c"
+  },
+  "sub_080E38A8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_056/sub_080E38A8.s",
+    "source": "src/unk/cluster_056/sub_080E38A8.c"
   },
   "sub_080E4178": {
     "profile": "baseline",
@@ -6339,10 +9054,105 @@
     "reference": "asm/references/unk/cluster_014/sub_080E5894.s",
     "source": "src/unk/cluster_014/sub_080E5894.c"
   },
+  "sub_080E5A44": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080E5A44.s",
+    "source": "src/unk/cluster_012/sub_080E5A44.c"
+  },
+  "sub_080E5A50": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080E5A50.s",
+    "source": "src/unk/cluster_012/sub_080E5A50.c"
+  },
+  "sub_080E5A5C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080E5A5C.s",
+    "source": "src/unk/cluster_012/sub_080E5A5C.c"
+  },
+  "sub_080E5A68": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080E5A68.s",
+    "source": "src/unk/cluster_012/sub_080E5A68.c"
+  },
+  "sub_080E5A74": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080E5A74.s",
+    "source": "src/unk/cluster_012/sub_080E5A74.c"
+  },
+  "sub_080E5A80": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080E5A80.s",
+    "source": "src/unk/cluster_012/sub_080E5A80.c"
+  },
+  "sub_080E5A8C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080E5A8C.s",
+    "source": "src/unk/cluster_012/sub_080E5A8C.c"
+  },
+  "sub_080E5A98": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080E5A98.s",
+    "source": "src/unk/cluster_012/sub_080E5A98.c"
+  },
+  "sub_080E5AA4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080E5AA4.s",
+    "source": "src/unk/cluster_012/sub_080E5AA4.c"
+  },
+  "sub_080E5AB0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080E5AB0.s",
+    "source": "src/unk/cluster_012/sub_080E5AB0.c"
+  },
+  "sub_080E5BC8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080E5BC8.s",
+    "source": "src/unk/cluster_012/sub_080E5BC8.c"
+  },
   "sub_080E633C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_012/sub_080E633C.s",
     "source": "src/unk/cluster_012/sub_080E633C.c"
+  },
+  "sub_080E666C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_080E666C.s",
+    "source": "src/unk/cluster_022/sub_080E666C.c"
+  },
+  "sub_080E667C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_022/sub_080E667C.s",
+    "source": "src/unk/cluster_022/sub_080E667C.c"
+  },
+  "sub_080E6984": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080E6984.s",
+    "source": "src/unk/cluster_012/sub_080E6984.c"
+  },
+  "sub_080E6990": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080E6990.s",
+    "source": "src/unk/cluster_012/sub_080E6990.c"
+  },
+  "sub_080E699C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080E699C.s",
+    "source": "src/unk/cluster_012/sub_080E699C.c"
+  },
+  "sub_080E6AD4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080E6AD4.s",
+    "source": "src/unk/cluster_012/sub_080E6AD4.c"
+  },
+  "sub_080E6D4C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_061/sub_080E6D4C.s",
+    "source": "src/unk/cluster_061/sub_080E6D4C.c"
+  },
+  "sub_080E6D50": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_061/sub_080E6D50.s",
+    "source": "src/unk/cluster_061/sub_080E6D50.c"
   },
   "sub_080E73C8": {
     "profile": "baseline",
@@ -6354,6 +9164,26 @@
     "reference": "asm/references/unk/cluster_061/sub_080E73E0.s",
     "source": "src/unk/cluster_061/sub_080E73E0.c"
   },
+  "sub_080E7458": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_080E7458.s",
+    "source": "src/unk/cluster_030/sub_080E7458.c"
+  },
+  "sub_080E753C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_080E753C.s",
+    "source": "src/unk/cluster_030/sub_080E753C.c"
+  },
+  "sub_080E765C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_080E765C.s",
+    "source": "src/unk/cluster_030/sub_080E765C.c"
+  },
+  "sub_080E770C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_089/sub_080E770C.s",
+    "source": "src/unk/cluster_089/sub_080E770C.c"
+  },
   "sub_080E7718": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_089/sub_080E7718.s",
@@ -6364,20 +9194,60 @@
     "reference": "asm/references/unk/cluster_012/sub_080E7720.s",
     "source": "src/unk/cluster_012/sub_080E7720.c"
   },
+  "sub_080E7ED4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_080E7ED4.s",
+    "source": "src/unk/cluster_030/sub_080E7ED4.c"
+  },
+  "sub_080E7F3C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_080E7F3C.s",
+    "source": "src/unk/cluster_030/sub_080E7F3C.c"
+  },
   "sub_080E8844": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_012/sub_080E8844.s",
     "source": "src/unk/cluster_012/sub_080E8844.c"
+  },
+  "sub_080E8918": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_055/sub_080E8918.s",
+    "source": "src/unk/cluster_055/sub_080E8918.c"
+  },
+  "sub_080E8A50": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080E8A50.s",
+    "source": "src/unk/cluster_012/sub_080E8A50.c"
   },
   "sub_080E8A80": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_012/sub_080E8A80.s",
     "source": "src/unk/cluster_012/sub_080E8A80.c"
   },
+  "sub_080E8C24": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_055/sub_080E8C24.s",
+    "source": "src/unk/cluster_055/sub_080E8C24.c"
+  },
+  "sub_080E8C3C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_055/sub_080E8C3C.s",
+    "source": "src/unk/cluster_055/sub_080E8C3C.c"
+  },
+  "sub_080E8CF4": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_012/sub_080E8CF4.s",
+    "source": "src/unk/cluster_012/sub_080E8CF4.c"
+  },
   "sub_080E94CC": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_012/sub_080E94CC.s",
     "source": "src/unk/cluster_012/sub_080E94CC.c"
+  },
+  "sub_080E969C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_077/sub_080E969C.s",
+    "source": "src/unk/cluster_077/sub_080E969C.c"
   },
   "sub_080E9BF0": {
     "profile": "baseline",
@@ -6394,10 +9264,25 @@
     "reference": "asm/references/unk/cluster_012/sub_080EAE18.s",
     "source": "src/unk/cluster_012/sub_080EAE18.c"
   },
+  "sub_080EB218": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_025/sub_080EB218.s",
+    "source": "src/unk/cluster_025/sub_080EB218.c"
+  },
   "sub_080EB430": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_095/sub_080EB430.s",
     "source": "src/unk/cluster_095/sub_080EB430.c"
+  },
+  "sub_080EB670": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_048/sub_080EB670.s",
+    "source": "src/unk/cluster_048/sub_080EB670.c"
+  },
+  "sub_080EB688": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_048/sub_080EB688.s",
+    "source": "src/unk/cluster_048/sub_080EB688.c"
   },
   "sub_080EB794": {
     "profile": "baseline",
@@ -6504,6 +9389,11 @@
     "reference": "asm/references/unk/cluster_089/sub_080EF3FC.s",
     "source": "src/unk/cluster_089/sub_080EF3FC.c"
   },
+  "sub_080EFB1C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_039/sub_080EFB1C.s",
+    "source": "src/unk/cluster_039/sub_080EFB1C.c"
+  },
   "sub_080EFB28": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_089/sub_080EFB28.s",
@@ -6523,6 +9413,16 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_089/sub_080EFB50.s",
     "source": "src/unk/cluster_089/sub_080EFB50.c"
+  },
+  "sub_080EFB68": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_089/sub_080EFB68.s",
+    "source": "src/unk/cluster_089/sub_080EFB68.c"
+  },
+  "sub_080EFF14": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_030/sub_080EFF14.s",
+    "source": "src/unk/cluster_030/sub_080EFF14.c"
   },
   "sub_080F02D8": {
     "profile": "baseline",
@@ -6604,6 +9504,11 @@
     "reference": "asm/references/unk/cluster_005/sub_080F11B4.s",
     "source": "src/unk/cluster_005/sub_080F11B4.c"
   },
+  "sub_080F134C": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_015/sub_080F134C.s",
+    "source": "src/graphics/related/cluster_015/sub_080F134C.c"
+  },
   "sub_080F1460": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_012/sub_080F1460.s",
@@ -6619,10 +9524,20 @@
     "reference": "asm/references/unk/cluster_012/sub_080F1CA0.s",
     "source": "src/unk/cluster_012/sub_080F1CA0.c"
   },
+  "sub_080F1CB0": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_062/sub_080F1CB0.s",
+    "source": "src/unk/cluster_062/sub_080F1CB0.c"
+  },
   "sub_080F1E1C": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_012/sub_080F1E1C.s",
     "source": "src/unk/cluster_012/sub_080F1E1C.c"
+  },
+  "sub_080F1E2C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_062/sub_080F1E2C.s",
+    "source": "src/unk/cluster_062/sub_080F1E2C.c"
   },
   "sub_080F1EAC": {
     "profile": "baseline",
@@ -6639,10 +9554,20 @@
     "reference": "asm/references/unk/cluster_012/sub_080F1EC8.s",
     "source": "src/unk/cluster_012/sub_080F1EC8.c"
   },
+  "sub_080F1ED8": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_062/sub_080F1ED8.s",
+    "source": "src/unk/cluster_062/sub_080F1ED8.c"
+  },
   "sub_080F1F00": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_012/sub_080F1F00.s",
     "source": "src/unk/cluster_012/sub_080F1F00.c"
+  },
+  "sub_080F1F88": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_008/sub_080F1F88.s",
+    "source": "src/graphics/related/cluster_008/sub_080F1F88.c"
   },
   "sub_080F208C": {
     "profile": "baseline",
@@ -6673,6 +9598,11 @@
     "profile": "baseline",
     "reference": "asm/references/graphics/related/cluster_008/sub_080F213C.s",
     "source": "src/graphics/related/cluster_008/sub_080F213C.c"
+  },
+  "sub_080F23E0": {
+    "profile": "baseline",
+    "reference": "asm/references/graphics/related/cluster_008/sub_080F23E0.s",
+    "source": "src/graphics/related/cluster_008/sub_080F23E0.c"
   },
   "sub_080F26BC": {
     "profile": "baseline",
@@ -6714,10 +9644,20 @@
     "reference": "asm/references/unk/cluster_084/sub_080F2AD4.s",
     "source": "src/unk/cluster_084/sub_080F2AD4.c"
   },
+  "sub_080F2C34": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_084/sub_080F2C34.s",
+    "source": "src/unk/cluster_084/sub_080F2C34.c"
+  },
   "sub_080F2F44": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_084/sub_080F2F44.s",
     "source": "src/unk/cluster_084/sub_080F2F44.c"
+  },
+  "sub_080F3300": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_066/sub_080F3300.s",
+    "source": "src/unk/cluster_066/sub_080F3300.c"
   },
   "sub_080F35C4": {
     "profile": "baseline",
@@ -6729,10 +9669,20 @@
     "reference": "asm/references/unk/cluster_066/sub_080F3628.s",
     "source": "src/unk/cluster_066/sub_080F3628.c"
   },
+  "sub_080F3660": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_066/sub_080F3660.s",
+    "source": "src/unk/cluster_066/sub_080F3660.c"
+  },
   "sub_080F38D8": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_066/sub_080F38D8.s",
     "source": "src/unk/cluster_066/sub_080F38D8.c"
+  },
+  "sub_080F3A3C": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_057/sub_080F3A3C.s",
+    "source": "src/unk/cluster_057/sub_080F3A3C.c"
   },
   "sub_080F3C10": {
     "profile": "baseline",
@@ -6769,6 +9719,11 @@
     "reference": "asm/references/unk/cluster_012/sub_080F4EE0.s",
     "source": "src/unk/cluster_012/sub_080F4EE0.c"
   },
+  "sub_080F5048": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_006/sub_080F5048.s",
+    "source": "src/unk/cluster_006/sub_080F5048.c"
+  },
   "sub_080F5248": {
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_006/sub_080F5248.s",
@@ -6788,6 +9743,11 @@
     "profile": "baseline",
     "reference": "asm/references/unk/cluster_012/sub_080F57E4.s",
     "source": "src/unk/cluster_012/sub_080F57E4.c"
+  },
+  "sub_080F5990": {
+    "profile": "baseline",
+    "reference": "asm/references/unk/cluster_088/sub_080F5990.s",
+    "source": "src/unk/cluster_088/sub_080F5990.c"
   },
   "sub_080F5C68": {
     "profile": "baseline",

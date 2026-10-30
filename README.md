@@ -5,11 +5,11 @@
 <!-- DECOMP_PROGRESS:START -->
 ## Decompilation Progress
 
-**2.54%** matched C · **1,367 / 5,392** candidate functions · **26,628 / 1,047,988** bytes.
+**3.41%** matched C · **1,959 / 8,160** candidate functions · **35,712 / 1,047,988** bytes.
 
-*Verified by a current byte-identical full-ROM rebuild. Main percentage uses matched tracked-range bytes for a ROM-verified checkpoint; without ROM evidence it uses independent objdiff code bytes where available. The 5,392 ranges are candidate boundaries, not all proven functions.*
+*Verified by a current byte-identical full-ROM rebuild. Main percentage uses matched tracked-range bytes for a ROM-verified checkpoint; without ROM evidence it uses independent objdiff code bytes where available. The 8,160 ranges are candidate boundaries, not all proven functions.*
 
-*Separate objdiff object comparison: 488 fully matched units, 0.67% of its measured code. This independent metric may differ due to target object construction, relocations or function boundaries, and does not override the byte-identical full-ROM checkpoint.*
+*Separate objdiff object comparison: 515 fully matched units, 0.71% of its measured code. This independent metric may differ due to target object construction, relocations or function boundaries, and does not override the byte-identical full-ROM checkpoint.*
 
 ![Decompilation progress](docs/progress-treemap.svg)
 

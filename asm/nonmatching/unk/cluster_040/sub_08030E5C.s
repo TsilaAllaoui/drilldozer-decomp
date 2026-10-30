@@ -1,72 +1,11 @@
 .syntax divided
-.align 2, 0
+.align 1, 0
 .global sub_08030E5C
 .thumb
 .type sub_08030E5C, %function
 .thumb_func
 sub_08030E5C:
-	push	{lr}
-	ldr	r2, [pc, #20]	@ (0x8030e74)
-	lsl	r1, r1, #2
-	add	r1, r1, r2
-	ldr	r1, [r1, #0]
-	bl	sub_080F8FB8
-	lsl	r0, r0, #24
-	lsr	r0, r0, #24
-	pop	{r1}
-	bx	r1
-	lsl	r0, r0, #0
-	.align	2, 0
-.L_30e74:
-	.4byte	0x827C7E8
-	mov	r0, #0
-	bx	lr
-	push	{lr}
-	mov	r1, #171	@ 0xab
-	lsl	r1, r1, #2
-	add	r0, r0, r1
-	ldr	r0, [r0, #0]
-	ldrb	r0, [r0, #14]
-	cmp	r0, #1
-	beq	.L_30e90
-	mov	r0, #0
-	b	.L_30e92
-.L_30e90:
-	mov	r0, #1
-.L_30e92:
-	pop	{r1}
-	bx	r1
-	lsl	r0, r0, #0
-	push	{lr}
-	mov	r1, #172	@ 0xac
-	lsl	r1, r1, #2
-	add	r0, r0, r1
-	ldr	r0, [r0, #0]
-	ldrb	r0, [r0, #14]
-	cmp	r0, #1
-	beq	.L_30eac
-	mov	r0, #0
-	b	.L_30eae
-.L_30eac:
-	mov	r0, #1
-.L_30eae:
-	pop	{r1}
-	bx	r1
-	lsl	r0, r0, #0
-	push	{lr}
-	mov	r1, #173	@ 0xad
-	lsl	r1, r1, #2
-	add	r0, r0, r1
-	ldr	r0, [r0, #0]
-	ldrb	r0, [r0, #14]
-	cmp	r0, #1
-	beq	.L_30ec8
-	mov	r0, #0
-	b	.L_30eca
-.L_30ec8:
-	mov	r0, #1
-.L_30eca:
-	pop	{r1}
-	bx	r1
-	lsl	r0, r0, #0
+	@ Exact original ROM bytes from 0x08030E5C.
+	.byte	0x00, 0xB5, 0x05, 0x4A, 0x89, 0x00, 0x89, 0x18, 0x09, 0x68, 0xC8, 0xF0, 0xA7, 0xF8, 0x00, 0x06
+	.byte	0x00, 0x0E, 0x02, 0xBC, 0x08, 0x47, 0x00, 0x00, 0xE8, 0xC7, 0x27, 0x08, 0x00, 0x20, 0x70, 0x47
 .size sub_08030E5C, .-sub_08030E5C

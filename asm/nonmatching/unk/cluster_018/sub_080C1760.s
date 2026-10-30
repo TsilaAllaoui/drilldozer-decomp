@@ -1,0 +1,12 @@
+.syntax divided
+.align 1, 0
+.global sub_080C1760
+.thumb
+.type sub_080C1760, %function
+.thumb_func
+sub_080C1760:
+	@ Exact original ROM bytes from 0x080C1760.
+	.byte	0x00, 0xB5, 0x01, 0x1C, 0x88, 0x7B, 0x00, 0x28, 0x01, 0xD0, 0x00, 0x20, 0xC8, 0x74, 0x01, 0xBC
+	bx	r0
+	lsl	r0, r0, #0
+.size sub_080C1760, .-sub_080C1760

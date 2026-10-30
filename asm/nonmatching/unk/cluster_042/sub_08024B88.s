@@ -1,86 +1,14 @@
 .syntax divided
-.align 2, 0
+.align 1, 0
 .global sub_08024B88
 .thumb
 .type sub_08024B88, %function
 .thumb_func
 sub_08024B88:
-	push	{r4, r5, r6, lr}
-	sub	sp, #8
-	.2byte	0x1C1C
-	ldr	r6, [sp, #24]
-	mov	r5, #0
-	str	r5, [r4, #0]
-	str	r5, [r4, #4]
-	ldr	r0, [r6, #0]
-	cmp	r0, #0
-	beq	.L_24bca
-	ldr	r0, [r0, #12]
-	mov	r1, sp
-	bl	sub_08017604
-	cmp	r0, #2
-	beq	.L_24bc8
-	ldr	r1, [r6, #0]
-	ldrh	r0, [r1, #36]	@ 0x24
-	ldrh	r1, [r1, #40]	@ 0x28
-	sub	r0, r0, r1
-	strh	r0, [r4, #2]
-	strh	r5, [r4, #0]
-	str	r5, [r4, #4]
-	ldr	r1, [r6, #0]
-	ldrh	r0, [r1, #38]	@ 0x26
-	ldrh	r1, [r1, #42]	@ 0x2a
-	sub	r0, r0, r1
-	ldrh	r1, [r4, #6]
-	add	r0, r0, r1
-	strh	r0, [r4, #6]
-	mov	r0, #1
-	b	.L_24bcc
-.L_24bc8:
-	str	r5, [r6, #0]
-.L_24bca:
-	mov	r0, #0
-.L_24bcc:
-	add	sp, #8
-	pop	{r4, r5, r6}
-	pop	{r1}
-	bx	r1
-	push	{r4, r5, r6, r7, lr}
-	mov	r7, r8
-	push	{r7}
-	sub	sp, #4
-	.2byte	0x1C05
-	.2byte	0x1C0E
-	.2byte	0x1C17
-	mov	r8, r3
-	ldr	r4, [sp, #28]
-	ldr	r0, [r4, #0]
-	cmp	r0, #0
-	beq	.L_24bf6
-	ldr	r0, [r0, #12]
-	bl	sub_080305D0
-	cmp	r0, #1
-	beq	.L_24c06
-.L_24bf6:
-	str	r4, [sp, #0]
-	.2byte	0x1C28
-	.2byte	0x1C31
-	.2byte	0x1C3A
-	mov	r3, r8
-	bl	sub_080249A4
-	b	.L_24c14
-.L_24c06:
-	str	r4, [sp, #0]
-	.2byte	0x1C28
-	.2byte	0x1C31
-	.2byte	0x1C3A
-	mov	r3, r8
-	bl	sub_08024B88
-.L_24c14:
-	add	sp, #4
-	pop	{r3}
-	mov	r8, r3
-	pop	{r4, r5, r6, r7}
-	pop	{r1}
-	bx	r1
+	@ Exact original ROM bytes from 0x08024B88.
+	.byte	0x70, 0xB5, 0x82, 0xB0, 0x1C, 0x1C, 0x06, 0x9E, 0x00, 0x25, 0x25, 0x60, 0x65, 0x60, 0x30, 0x68
+	.byte	0x00, 0x28, 0x16, 0xD0, 0xC0, 0x68, 0x69, 0x46, 0xF2, 0xF7, 0x30, 0xFD, 0x02, 0x28, 0x0F, 0xD0
+	.byte	0x31, 0x68, 0x88, 0x8C, 0x09, 0x8D, 0x40, 0x1A, 0x60, 0x80, 0x25, 0x80, 0x65, 0x60, 0x31, 0x68
+	.byte	0xC8, 0x8C, 0x49, 0x8D, 0x40, 0x1A, 0xE1, 0x88, 0x40, 0x18, 0xE0, 0x80, 0x01, 0x20, 0x01, 0xE0
+	.byte	0x35, 0x60, 0x00, 0x20, 0x02, 0xB0, 0x70, 0xBC, 0x02, 0xBC, 0x08, 0x47
 .size sub_08024B88, .-sub_08024B88

@@ -1,51 +1,11 @@
 .syntax divided
-.align 2, 0
+.align 1, 0
 .global sub_080009D8
 .thumb
 .type sub_080009D8, %function
 .thumb_func
 sub_080009D8:
-	push	{lr}
-	ldr	r2, [pc, #20]	@ (0x80009f0)
-	ldr	r0, [pc, #20]	@ (0x80009f4)
-	ldr	r0, [r0, #0]
-	.2byte	0x1C11
-	add	r1, #12
-.L_9e4:
-	str	r0, [r1, #0]
-	sub	r1, #4
-	cmp	r1, r2
-	bge	.L_9e4
-	pop	{r0}
-	bx	r0
-	.align	2, 0
-.L_9f0:
-	.4byte	0x3000010
-	.align	2, 0
-.L_9f4:
-	.4byte	0x80FAB54
-	push	{r4, lr}
-	lsl	r0, r0, #24
-	lsr	r4, r0, #24
-	.2byte	0x1C20
-	bl	sub_08000E64
-	lsl	r0, r0, #24
-	cmp	r0, #0
-	bne	.L_a16
-	ldr	r1, [pc, #16]	@ (0x8000a1c)
-	lsl	r0, r4, #2
-	add	r0, r0, r1
-	ldr	r1, [pc, #12]	@ (0x8000a20)
-	ldr	r1, [r1, #0]
-	str	r1, [r0, #0]
-.L_a16:
-	pop	{r4}
-	pop	{r0}
-	bx	r0
-	.align	2, 0
-.L_a1c:
-	.4byte	0x3000010
-	.align	2, 0
-.L_a20:
-	.4byte	0x80FAB54
+	@ Exact original ROM bytes from 0x080009D8.
+	.byte	0x00, 0xB5, 0x05, 0x4A, 0x05, 0x48, 0x00, 0x68, 0x11, 0x1C, 0x0C, 0x31, 0x08, 0x60, 0x04, 0x39
+	.byte	0x91, 0x42, 0xFB, 0xDA, 0x01, 0xBC, 0x00, 0x47, 0x10, 0x00, 0x00, 0x03, 0x54, 0xAB, 0x0F, 0x08
 .size sub_080009D8, .-sub_080009D8

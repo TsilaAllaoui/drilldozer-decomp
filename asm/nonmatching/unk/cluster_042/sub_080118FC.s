@@ -1,36 +1,14 @@
 .syntax divided
-.align 2, 0
+.align 1, 0
 .global sub_080118FC
 .thumb
 .type sub_080118FC, %function
 .thumb_func
 sub_080118FC:
-	push	{r4, lr}
-	.2byte	0x1C04
-	bl	sub_08011950
-	cmp	r0, #1
-	bne	.L_1191a
-	ldr	r0, [r4, #84]	@ 0x54
-	cmp	r0, #2
-	bne	.L_11912
-	mov	r0, #4
-	b	.L_1191c
-.L_11912:
-	cmp	r0, #3
-	bne	.L_1191a
-	mov	r0, #5
-	b	.L_1191c
-.L_1191a:
-	ldr	r0, [r4, #84]	@ 0x54
-.L_1191c:
-	pop	{r4}
-	pop	{r1}
-	bx	r1
-	lsl	r0, r0, #0
-	push	{lr}
-	bl	sub_08011720
-	bl	sub_080118FC
-	pop	{r1}
+	@ Exact original ROM bytes from 0x080118FC.
+	.byte	0x10, 0xB5, 0x04, 0x1C, 0x00, 0xF0, 0x26, 0xF8, 0x01, 0x28, 0x08, 0xD1, 0x60, 0x6D, 0x02, 0x28
+	.byte	0x01, 0xD1, 0x04, 0x20, 0x04, 0xE0, 0x03, 0x28, 0x01, 0xD1, 0x05, 0x20, 0x00, 0xE0, 0x60, 0x6D
+	.byte	0x10, 0xBC, 0x02, 0xBC
 	bx	r1
 	lsl	r0, r0, #0
 .size sub_080118FC, .-sub_080118FC

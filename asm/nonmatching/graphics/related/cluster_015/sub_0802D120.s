@@ -1,84 +1,14 @@
 .syntax divided
-.align 2, 0
+.align 1, 0
 .global sub_0802D120
 .thumb
 .type sub_0802D120, %function
 .thumb_func
 sub_0802D120:
-	push	{r4, r5, lr}
-	.2byte	0x1C0C
-	lsl	r0, r0, #24
-	lsr	r5, r0, #24
-	lsl	r4, r4, #24
-.L_2d12a:
-	lsr	r4, r4, #24
-	ldr	r0, [pc, #44]	@ (0x802d15c)
-	strh	r2, [r0, #0]
-	ldr	r0, [pc, #44]	@ (0x802d160)
-	strb	r3, [r0, #0]
-	ldr	r1, [pc, #44]	@ (0x802d164)
-	.2byte	0x1C28
-	bl	sub_08004028
-	.2byte	0x1C28
-	mov	r1, #255	@ 0xff
-	bl	sub_08003E34
-	.2byte	0x1C28
-	bl	sub_08003978
-	cmp	r4, #1
-	bne	.L_2d156
-	.2byte	0x1C28
-	mov	r1, #3
-	bl	sub_080038F8
-.L_2d156:
-	pop	{r4, r5}
-	pop	{r0}
-	bx	r0
-	.align	2, 0
-.L_2d15c:
-	.4byte	0x20359D0
-	.align	2, 0
-.L_2d160:
-	.4byte	0x20359D2
-	.align	2, 0
-.L_2d164:
-	.4byte	0x802D1B9
-	push	{r4, r5, r6, lr}
-	.2byte	0x1C0C
-	lsl	r0, r0, #24
-	lsr	r6, r0, #24
-	lsl	r4, r4, #24
-	lsr	r4, r4, #24
-	ldr	r0, [pc, #52]	@ (0x802d1ac)
-	strh	r2, [r0, #0]
-	ldr	r5, [pc, #52]	@ (0x802d1b0)
-	.2byte	0x1C30
-	mov	r1, #5
-	bl	sub_08004114
-	strb	r0, [r5, #0]
-	ldr	r1, [pc, #44]	@ (0x802d1b4)
-	.2byte	0x1C30
-	bl	sub_08004028
-	.2byte	0x1C30
-	mov	r1, #255	@ 0xff
-	bl	sub_08003E34
-	.2byte	0x1C30
-	bl	sub_08003978
-	cmp	r4, #1
-	bne	.L_2d1a6
-	.2byte	0x1C30
-	mov	r1, #3
-	bl	sub_080038F8
-.L_2d1a6:
-	pop	{r4, r5, r6}
-	pop	{r0}
-	bx	r0
-	.align	2, 0
-.L_2d1ac:
-	.4byte	0x20359D0
-	.align	2, 0
-.L_2d1b0:
-	.4byte	0x20359D2
-	.align	2, 0
-.L_2d1b4:
-	.4byte	0x802D1B9
+	@ Exact original ROM bytes from 0x0802D120.
+	.byte	0x30, 0xB5, 0x0C, 0x1C, 0x00, 0x06, 0x05, 0x0E, 0x24, 0x06, 0x24, 0x0E, 0x0B, 0x48, 0x02, 0x80
+	.byte	0x0B, 0x48, 0x03, 0x70, 0x0B, 0x49, 0x28, 0x1C, 0xD6, 0xF7, 0x76, 0xFF, 0x28, 0x1C, 0xFF, 0x21
+	.byte	0xD6, 0xF7, 0x78, 0xFE, 0x28, 0x1C, 0xD6, 0xF7, 0x17, 0xFC, 0x01, 0x2C, 0x03, 0xD1, 0x28, 0x1C
+	.byte	0x03, 0x21, 0xD6, 0xF7, 0xD1, 0xFB, 0x30, 0xBC, 0x01, 0xBC, 0x00, 0x47, 0xD0, 0x59, 0x03, 0x02
+	.byte	0xD2, 0x59, 0x03, 0x02, 0xB9, 0xD1, 0x02, 0x08
 .size sub_0802D120, .-sub_0802D120

@@ -1,0 +1,12 @@
+.syntax divided
+.align 1, 0
+.global sub_08064118
+.thumb
+.type sub_08064118, %function
+.thumb_func
+sub_08064118:
+	@ Exact original ROM bytes from 0x08064118.
+	.byte	0x09, 0x04, 0x09, 0x0C, 0x82, 0x8D, 0x0A, 0x40, 0x82, 0x85, 0xC2, 0x8D, 0x0A, 0x40, 0xC2, 0x85
+	bx	lr
+	lsl	r0, r0, #0
+.size sub_08064118, .-sub_08064118

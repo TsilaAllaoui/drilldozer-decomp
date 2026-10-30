@@ -1,111 +1,14 @@
 .syntax divided
-.align 2, 0
+.align 1, 0
 .global sub_0802D570
 .thumb
 .type sub_0802D570, %function
 .thumb_func
 sub_0802D570:
-	push	{r4, r5, lr}
-	ldr	r1, [pc, #28]	@ (0x802d590)
-	ldrb	r5, [r1, #2]
-	mov	r2, #2
-	ldrsb	r2, [r1, r2]
-	lsl	r0, r0, #24
-	asr	r3, r0, #24
-	add	r2, r2, r3
-	mov	r0, #3
-	ldrsb	r0, [r1, r0]
-	.2byte	0x1C0C
-	cmp	r2, r0
-	bge	.L_2d594
-	ldrb	r0, [r4, #3]
-	b	.L_2d5a2
-	lsl	r0, r0, #0
-	.align	2, 0
-.L_2d590:
-	.4byte	0x20359C4
-.L_2d594:
-	mov	r0, #4
-	ldrsb	r0, [r4, r0]
-	cmp	r2, r0
-	ble	.L_2d5a0
-	ldrb	r0, [r4, #4]
-	b	.L_2d5a2
-.L_2d5a0:
-	add	r0, r3, r5
-.L_2d5a2:
-	strb	r0, [r4, #2]
-	ldrb	r1, [r4, #2]
-	.2byte	0x1C28
-	bl	sub_0802D490
-	ldrb	r0, [r4, #2]
-	pop	{r4, r5}
-	pop	{r1}
-	bx	r1
-	ldr	r0, [pc, #4]	@ (0x802d5bc)
-	ldrb	r0, [r0, #2]
-	bx	lr
-	lsl	r0, r0, #0
-	.align	2, 0
-.L_2d5bc:
-	.4byte	0x20359C4
-	push	{r4, lr}
-	bl	sub_08002DD0
-	ldrh	r1, [r0, #6]
-	mov	r0, #1
-	and	r0, r1
-	cmp	r0, #0
-	beq	.L_2d5ec
-	ldr	r4, [pc, #20]	@ (0x802d5e8)
-	ldrb	r0, [r4, #11]
-	cmp	r0, #0
-	bne	.L_2d5e0
-	mov	r0, #148	@ 0x94
-	lsl	r0, r0, #1
-	bl	sub_08029E54
-.L_2d5e0:
-	mov	r0, #2
-	ldrsb	r0, [r4, r0]
-	b	.L_2d62a
-	lsl	r0, r0, #0
-	.align	2, 0
-.L_2d5e8:
-	.4byte	0x20359C4
-.L_2d5ec:
-	mov	r0, #2
-	and	r0, r1
-	cmp	r0, #0
-	beq	.L_2d5fa
-	mov	r0, #1
-	neg	r0, r0
-	b	.L_2d62a
-.L_2d5fa:
-	mov	r0, #64	@ 0x40
-	and	r0, r1
-	cmp	r0, #0
-	beq	.L_2d610
-	mov	r0, #148	@ 0x94
-	lsl	r0, r0, #1
-	bl	sub_08029E54
-	mov	r0, #1
-	neg	r0, r0
-	b	.L_2d622
-.L_2d610:
-	mov	r0, #128	@ 0x80
-	and	r0, r1
-	cmp	r0, #0
-	beq	.L_2d626
-	mov	r0, #148	@ 0x94
-	lsl	r0, r0, #1
-	bl	sub_08029E54
-	mov	r0, #1
-.L_2d622:
-	bl	sub_0802D52C
-.L_2d626:
-	mov	r0, #2
-	neg	r0, r0
-.L_2d62a:
-	pop	{r4}
-	pop	{r1}
-	bx	r1
+	@ Exact original ROM bytes from 0x0802D570.
+	.byte	0x30, 0xB5, 0x07, 0x49, 0x8D, 0x78, 0x02, 0x22, 0x8A, 0x56, 0x00, 0x06, 0x03, 0x16, 0xD2, 0x18
+	.byte	0x03, 0x20, 0x08, 0x56, 0x0C, 0x1C, 0x82, 0x42, 0x04, 0xDA, 0xE0, 0x78, 0x09, 0xE0, 0x00, 0x00
+	.byte	0xC4, 0x59, 0x03, 0x02, 0x04, 0x20, 0x20, 0x56, 0x82, 0x42, 0x01, 0xDD, 0x20, 0x79, 0x00, 0xE0
+	.byte	0x58, 0x19, 0xA0, 0x70, 0xA1, 0x78, 0x28, 0x1C, 0xFF, 0xF7, 0x72, 0xFF, 0xA0, 0x78, 0x30, 0xBC
+	.byte	0x02, 0xBC, 0x08, 0x47, 0x01, 0x48, 0x80, 0x78, 0x70, 0x47, 0x00, 0x00, 0xC4, 0x59, 0x03, 0x02
 .size sub_0802D570, .-sub_0802D570

@@ -1,0 +1,12 @@
+.syntax divided
+.align 2, 0
+.global sub_080AFA10
+.thumb
+.type sub_080AFA10, %function
+.thumb_func
+sub_080AFA10:
+	@ Exact original ROM bytes from 0x080AFA10.
+	.byte	0x09, 0x04, 0x09, 0x0C, 0x82, 0x8D, 0x0A, 0x40, 0x82, 0x85, 0xC2, 0x8D, 0x0A, 0x40, 0xC2, 0x85
+	bx	lr
+	lsl	r0, r0, #0
+.size sub_080AFA10, .-sub_080AFA10

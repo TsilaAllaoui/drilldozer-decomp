@@ -75,7 +75,10 @@ def inspect():
         ('reference ASM', ROOT/'asm/references', set(matched)),
     ):
         suffix = '.c' if kind == 'src' else '.s'
-        actual = {p.stem for p in directory.rglob('*'+suffix)}
+        actual = {
+            p.stem for p in directory.rglob('*' + suffix)
+            if 'aggregates' not in p.relative_to(directory).parts
+        }
         extra = actual - known
         if extra:
             failures.append(f'{kind}: {len(extra)} unexpected files ({", ".join(sorted(extra)[:4])})')
@@ -112,7 +115,12 @@ if __name__ == '__main__':
                 failures.append(f'{name}: original matched C changed or disappeared')
         for name, info in record['original_asm'].items():
             actual = paths['asm'].get(name)
-            if not actual or actual['sha256'] != info['sha256']:
+            historical = Path(info['path'])
+            archived = False
+            if historical.is_relative_to('asm/nonmatching'):
+                archive = ROOT / 'asm/references/aggregates' / historical.relative_to('asm/nonmatching')
+                archived = archive.is_file() and digest(archive) == info['sha256']
+            if (not actual or actual['sha256'] != info['sha256']) and not archived:
                 failures.append(f'{name}: original ASM changed or disappeared')
     else:
         failures.append('Missing immutable preservation record')

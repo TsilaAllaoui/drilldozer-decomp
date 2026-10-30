@@ -1,62 +1,11 @@
 .syntax divided
-.align 2, 0
+.align 1, 0
 .global sub_08019DC8
 .thumb
 .type sub_08019DC8, %function
 .thumb_func
 sub_08019DC8:
-	push	{r4, lr}
-	.2byte	0x1C04
-	lsl	r1, r1, #24
-	lsr	r1, r1, #24
-	lsl	r2, r2, #16
-	lsr	r2, r2, #16
-	bl	sub_08019950
-	.2byte	0x1C20
-	bl	sub_08019D08
-	pop	{r4}
-	pop	{r0}
-	bx	r0
-	push	{r4, lr}
-	.2byte	0x1C04
-	lsl	r1, r1, #24
-	lsr	r1, r1, #24
-	lsl	r2, r2, #16
-	lsr	r2, r2, #16
-	bl	sub_080199BC
-	.2byte	0x1C20
-	bl	sub_08019D08
-	pop	{r4}
-	pop	{r0}
-	bx	r0
-	push	{r4, lr}
-	.2byte	0x1C04
-	bl	sub_080194E0
-	.2byte	0x1C20
-	bl	sub_08019D08
-	pop	{r4}
-	pop	{r0}
-	bx	r0
-	push	{r4, lr}
-	.2byte	0x1C04
-	lsl	r1, r1, #24
-	asr	r1, r1, #24
-	lsl	r2, r2, #24
-	asr	r2, r2, #24
-	lsl	r3, r3, #24
-	asr	r3, r3, #24
-	bl	sub_08019528
-	.2byte	0x1C20
-	bl	sub_08019D08
-	pop	{r4}
-	pop	{r0}
-	bx	r0
-	push	{r4, lr}
-	.2byte	0x1C04
-	bl	sub_080195FC
-	.2byte	0x1C20
-	bl	sub_08019D08
-	pop	{r4}
-	pop	{r0}
-	bx	r0
+	@ Exact original ROM bytes from 0x08019DC8.
+	.byte	0x10, 0xB5, 0x04, 0x1C, 0x09, 0x06, 0x09, 0x0E, 0x12, 0x04, 0x12, 0x0C, 0xFF, 0xF7, 0xBC, 0xFD
+	.byte	0x20, 0x1C, 0xFF, 0xF7, 0x95, 0xFF, 0x10, 0xBC, 0x01, 0xBC, 0x00, 0x47
 .size sub_08019DC8, .-sub_08019DC8

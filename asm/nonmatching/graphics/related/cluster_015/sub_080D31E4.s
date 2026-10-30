@@ -1,40 +1,11 @@
 .syntax divided
-.align 2, 0
+.align 1, 0
 .global sub_080D31E4
 .thumb
 .type sub_080D31E4, %function
 .thumb_func
 sub_080D31E4:
-	push	{lr}
-	lsl	r0, r0, #24
-	lsr	r1, r0, #24
-	cmp	r1, #7
-	bls	.L_d31f0
-	mov	r1, #0
-.L_d31f0:
-	ldr	r0, [pc, #8]	@ (0x80d31fc)
-	lsl	r1, r1, #2
-	add	r1, r1, r0
-	ldr	r0, [r1, #0]
-	pop	{r1}
-	bx	r1
-	.align	2, 0
-.L_d31fc:
-	.4byte	0x847321C
-	push	{lr}
-	lsl	r0, r0, #24
-	lsr	r1, r0, #24
-	cmp	r1, #18
-	bls	.L_d320c
-	mov	r1, #0
-.L_d320c:
-	ldr	r0, [pc, #8]	@ (0x80d3218)
-	lsl	r1, r1, #2
-	add	r1, r1, r0
-	ldr	r0, [r1, #0]
-	pop	{r1}
-	bx	r1
-	.align	2, 0
-.L_d3218:
-	.4byte	0x847321C
+	@ Exact original ROM bytes from 0x080D31E4.
+	.byte	0x00, 0xB5, 0x00, 0x06, 0x01, 0x0E, 0x07, 0x29, 0x00, 0xD9, 0x00, 0x21, 0x02, 0x48, 0x89, 0x00
+	.byte	0x09, 0x18, 0x08, 0x68, 0x02, 0xBC, 0x08, 0x47, 0x1C, 0x32, 0x47, 0x08
 .size sub_080D31E4, .-sub_080D31E4

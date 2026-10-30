@@ -1,48 +1,13 @@
 .syntax divided
-.align 2, 0
+.align 1, 0
 .global sub_0800B0FC
 .thumb
 .type sub_0800B0FC, %function
 .thumb_func
 sub_0800B0FC:
-	push	{r4, lr}
-	.2byte	0x1C04
-	ldrb	r1, [r4, #18]
-	ldrb	r2, [r4, #19]
-	bl	sub_0800C284
-	.2byte	0x1C20
-	mov	r1, #2
-	bl	sub_0800A87C
-	pop	{r4}
-	pop	{r0}
+	@ Exact original ROM bytes from 0x0800B0FC.
+	.byte	0x10, 0xB5, 0x04, 0x1C, 0xA1, 0x7C, 0xE2, 0x7C, 0x01, 0xF0, 0xBE, 0xF8, 0x20, 0x1C, 0x02, 0x21
+	.byte	0xFF, 0xF7, 0xB6, 0xFB, 0x10, 0xBC, 0x01, 0xBC
 	bx	r0
 	lsl	r0, r0, #0
-	push	{r4, lr}
-	sub	sp, #4
-	.2byte	0x1C04
-	mov	r0, #156	@ 0x9c
-	lsl	r0, r0, #1
-	add	r1, r1, r0
-	ldr	r2, [r1, #0]
-	cmp	r2, #0
-	bne	.L_b144
-	mov	r0, #1
-	neg	r0, r0
-	mov	r1, #2
-	neg	r1, r1
-	str	r2, [sp, #0]
-	mov	r2, #0
-	mov	r3, #16
-	bl	sub_08019084
-	ldr	r1, [pc, #12]	@ (0x800b14c)
-	.2byte	0x1C20
-	bl	sub_08000988
-.L_b144:
-	add	sp, #4
-	pop	{r4}
-	pop	{r0}
-	bx	r0
-	.align	2, 0
-.L_b14c:
-	.4byte	0x800B151
 .size sub_0800B0FC, .-sub_0800B0FC

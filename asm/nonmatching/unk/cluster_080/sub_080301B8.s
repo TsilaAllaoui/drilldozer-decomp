@@ -1,60 +1,13 @@
 .syntax divided
-.align 2, 0
+.align 1, 0
 .global sub_080301B8
 .thumb
 .type sub_080301B8, %function
 .thumb_func
 sub_080301B8:
-	.2byte	0x1C03
-	mov	r0, #172	@ 0xac
-	lsl	r0, r0, #1
-	add	r2, r3, r0
-	ldr	r0, [r1, #0]
-	ldr	r1, [r1, #4]
-	str	r0, [r2, #0]
-	str	r1, [r2, #4]
-	mov	r2, #162	@ 0xa2
-	lsl	r2, r2, #1
-	add	r1, r3, r2
-	mov	r0, #160	@ 0xa0
-	lsl	r0, r0, #1
-	add	r2, r3, r0
-	ldr	r0, [r2, #0]
-	str	r0, [r1, #0]
-	mov	r1, #173	@ 0xad
-	lsl	r1, r1, #1
-	add	r0, r3, r1
-	ldrh	r0, [r0, #0]
-	strh	r0, [r2, #0]
-	mov	r2, #175	@ 0xaf
-	lsl	r2, r2, #1
-	add	r0, r3, r2
-	ldrh	r0, [r0, #0]
-	sub	r2, #28
-	add	r1, r3, r2
-	strh	r0, [r1, #0]
-	bx	lr
-	lsl	r0, r0, #0
-	.2byte	0x1C03
-	mov	r0, #162	@ 0xa2
-	lsl	r0, r0, #1
-	add	r1, r3, r0
-	sub	r0, #4
-	add	r2, r3, r0
-	ldr	r0, [r2, #0]
-	str	r0, [r1, #0]
-	mov	r1, #173	@ 0xad
-	lsl	r1, r1, #1
-	add	r0, r3, r1
-	ldrh	r0, [r0, #0]
-	strh	r0, [r2, #0]
-	mov	r2, #175	@ 0xaf
-	lsl	r2, r2, #1
-	add	r0, r3, r2
-	ldrh	r0, [r0, #0]
-	sub	r2, #28
-	add	r1, r3, r2
-	strh	r0, [r1, #0]
-	bx	lr
-	lsl	r0, r0, #0
+	@ Exact original ROM bytes from 0x080301B8.
+	.byte	0x03, 0x1C, 0xAC, 0x20, 0x40, 0x00, 0x1A, 0x18, 0x08, 0x68, 0x49, 0x68, 0x10, 0x60, 0x51, 0x60
+	.byte	0xA2, 0x22, 0x52, 0x00, 0x99, 0x18, 0xA0, 0x20, 0x40, 0x00, 0x1A, 0x18, 0x10, 0x68, 0x08, 0x60
+	.byte	0xAD, 0x21, 0x49, 0x00, 0x58, 0x18, 0x00, 0x88, 0x10, 0x80, 0xAF, 0x22, 0x52, 0x00, 0x98, 0x18
+	.byte	0x00, 0x88, 0x1C, 0x3A, 0x99, 0x18, 0x08, 0x80, 0x70, 0x47, 0x00, 0x00, 0x03, 0x1C
 .size sub_080301B8, .-sub_080301B8

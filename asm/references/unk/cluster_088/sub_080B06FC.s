@@ -1,0 +1,12 @@
+.syntax divided
+.align 2, 0
+.global sub_080B06FC
+.thumb
+.type sub_080B06FC, %function
+.thumb_func
+sub_080B06FC:
+	@ Exact original ROM bytes from 0x080B06FC.
+	.byte	0x00, 0xB5, 0xC1, 0x6A, 0x01, 0x31, 0xC1, 0x62, 0xFF, 0xF7, 0xF2, 0xFF, 0x00, 0x20, 0x02, 0xBC
+	bx	r1
+	lsl	r0, r0, #0
+.size sub_080B06FC, .-sub_080B06FC

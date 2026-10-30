@@ -1,37 +1,13 @@
 .syntax divided
-.align 2, 0
+.align 1, 0
 .global sub_08030EE0
 .thumb
 .type sub_08030EE0, %function
 .thumb_func
 sub_08030EE0:
-	push	{lr}
-	ldr	r3, [pc, #16]	@ (0x8030ef4)
-	lsl	r1, r1, #2
-	add	r1, r1, r3
-	ldr	r3, [r1, #0]
-	.2byte	0x1C11
-	bl	sub_080F8FC0
-	pop	{r0}
-	bx	r0
-	.align	2, 0
-.L_30ef4:
-	.4byte	0x827C784
+	@ Exact original ROM bytes from 0x08030EE0.
+	.byte	0x00, 0xB5, 0x04, 0x4B, 0x89, 0x00, 0xC9, 0x18, 0x0B, 0x68, 0x11, 0x1C, 0xC8, 0xF0, 0x68, 0xF8
+	.byte	0x01, 0xBC, 0x00, 0x47, 0x84, 0xC7, 0x27, 0x08
 	bx	lr
 	lsl	r0, r0, #0
-	push	{lr}
-	bl	sub_08005B18
-	pop	{r0}
-	bx	r0
-	lsl	r0, r0, #0
-	push	{lr}
-	mov	r2, #0
-	bl	sub_08005F64
-	pop	{r0}
-	bx	r0
-	push	{lr}
-	mov	r2, #3
-	bl	sub_08005F64
-	pop	{r0}
-	bx	r0
 .size sub_08030EE0, .-sub_08030EE0

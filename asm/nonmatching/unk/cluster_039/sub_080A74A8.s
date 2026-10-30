@@ -1,105 +1,18 @@
 .syntax divided
-.align 2, 0
+.align 1, 0
 .global sub_080A74A8
 .thumb
 .type sub_080A74A8, %function
 .thumb_func
 sub_080A74A8:
-	push	{r4, r5, lr}
-	sub	sp, #16
-	.2byte	0x1C0D
-	mov	r0, sp
-	ldr	r1, [pc, #36]	@ (0x80a74d8)
-	ldmia	r1!, {r2, r3, r4}
-	stmia	r0!, {r2, r3, r4}
-	ldr	r1, [r1, #0]
-	str	r1, [r0, #0]
-	ldr	r0, [r5, #12]
-	cmp	r0, #0
-	beq	.L_a74dc
-	sub	r0, #1
-	str	r0, [r5, #12]
-	cmp	r0, #0
-	bgt	.L_a74e0
-	mov	r0, #16
-	str	r0, [r5, #12]
-	ldr	r0, [r5, #8]
-	mov	r1, #1
-	eor	r0, r1
-	str	r0, [r5, #8]
-	b	.L_a74e0
-	lsl	r0, r0, #0
-	.align	2, 0
-.L_a74d8:
-	.4byte	0x8400EA8
-.L_a74dc:
-	mov	r0, #16
-	str	r0, [r5, #12]
-.L_a74e0:
-	ldr	r2, [r5, #8]
-	lsl	r2, r2, #3
-	mov	r1, sp
-	add	r0, r1, r2
-	ldr	r0, [r0, #0]
-	add	r1, sp, #4
-	add	r1, r1, r2
-	ldr	r4, [r1, #0]
-	lsl	r0, r0, #1
-	add	r0, #16
-	add	r0, r5, r0
-	mov	r1, #130	@ 0x82
-	mov	r2, #2
-	bl	sub_08019D3C
-	lsl	r4, r4, #1
-	add	r4, #16
-	add	r4, r5, r4
-	.2byte	0x1C20
-	mov	r1, #131	@ 0x83
-	mov	r2, #2
-	bl	sub_08019D3C
-	add	sp, #16
-	pop	{r4, r5}
-	pop	{r0}
+	@ Exact original ROM bytes from 0x080A74A8.
+	.byte	0x30, 0xB5, 0x84, 0xB0, 0x0D, 0x1C, 0x68, 0x46, 0x09, 0x49, 0x1C, 0xC9, 0x1C, 0xC0, 0x09, 0x68
+	.byte	0x01, 0x60, 0xE8, 0x68, 0x00, 0x28, 0x0D, 0xD0, 0x01, 0x38, 0xE8, 0x60, 0x00, 0x28, 0x0B, 0xDC
+	.byte	0x10, 0x20, 0xE8, 0x60, 0xA8, 0x68, 0x01, 0x21, 0x48, 0x40, 0xA8, 0x60, 0x04, 0xE0, 0x00, 0x00
+	.byte	0xA8, 0x0E, 0x40, 0x08, 0x10, 0x20, 0xE8, 0x60, 0xAA, 0x68, 0xD2, 0x00, 0x69, 0x46, 0x88, 0x18
+	.byte	0x00, 0x68, 0x01, 0xA9, 0x89, 0x18, 0x0C, 0x68, 0x40, 0x00, 0x10, 0x30, 0x28, 0x18, 0x82, 0x21
+	.byte	0x02, 0x22, 0x72, 0xF7, 0x1F, 0xFC, 0x64, 0x00, 0x10, 0x34, 0x2C, 0x19, 0x20, 0x1C, 0x83, 0x21
+	.byte	0x02, 0x22, 0x72, 0xF7, 0x17, 0xFC, 0x04, 0xB0, 0x30, 0xBC, 0x01, 0xBC
 	bx	r0
 	lsl	r0, r0, #0
-	push	{lr}
-	mov	r2, #0
-	bl	sub_080A7578
-	pop	{r0}
-	bx	r0
-	push	{lr}
-	mov	r2, #1
-	bl	sub_080A7578
-	pop	{r0}
-	bx	r0
-	push	{lr}
-	mov	r2, #2
-	bl	sub_080A7578
-	pop	{r0}
-	bx	r0
-	push	{lr}
-	mov	r2, #3
-	bl	sub_080A7578
-	pop	{r0}
-	bx	r0
-	push	{lr}
-	mov	r2, #4
-	bl	sub_080A7578
-	pop	{r0}
-	bx	r0
-	push	{lr}
-	mov	r2, #5
-	bl	sub_080A7578
-	pop	{r0}
-	bx	r0
-	push	{lr}
-	mov	r2, #6
-	bl	sub_080A7578
-	pop	{r0}
-	bx	r0
-	push	{lr}
-	mov	r2, #7
-	bl	sub_080A7578
-	pop	{r0}
-	bx	r0
 .size sub_080A74A8, .-sub_080A74A8

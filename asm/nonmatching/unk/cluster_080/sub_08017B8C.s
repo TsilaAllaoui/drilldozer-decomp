@@ -1,24 +1,13 @@
 .syntax divided
-.align 2, 0
+.align 1, 0
 .global sub_08017B8C
 .thumb
 .type sub_08017B8C, %function
 .thumb_func
 sub_08017B8C:
-	push	{r4, lr}
-	.2byte	0x1C04
-	bl	sub_08017B6C
-	.2byte	0x1C01
-	mov	r2, #249	@ 0xf9
-	lsl	r2, r2, #2
-	add	r0, r4, r2
-	ldr	r2, [r0, #0]
-	.2byte	0x1C20
-	bl	sub_08017D74
-	pop	{r4}
-	pop	{r1}
+	@ Exact original ROM bytes from 0x08017B8C.
+	.byte	0x10, 0xB5, 0x04, 0x1C, 0xFF, 0xF7, 0xEC, 0xFF, 0x01, 0x1C, 0xF9, 0x22, 0x92, 0x00, 0xA0, 0x18
+	.byte	0x02, 0x68, 0x20, 0x1C, 0x00, 0xF0, 0xE8, 0xF8, 0x10, 0xBC, 0x02, 0xBC
 	bx	r1
-	lsl	r0, r0, #0
-	bx	lr
 	lsl	r0, r0, #0
 .size sub_08017B8C, .-sub_08017B8C

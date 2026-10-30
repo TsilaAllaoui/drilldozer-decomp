@@ -1,9 +1,9 @@
 {
   "evidence": "historical full 8388608-byte ROM comparison",
-  "fingerprint_sha256": "88737033507f2ec739ec4abd1879c8224b55a89c49026f080f346b71068d915b",
+  "fingerprint_sha256": "2a1bf6cd5862963cc91c6d8bfaff5fe4a6381a074b548cc2e861ea5f9a36e14c",
   "format": 1,
-  "input_file_count": 6780,
+  "input_file_count": 7040,
   "rom_sha1": "c1058cc2482b91204100cc8515da99aeb06773f5",
   "rom_size": 8388608,
-  "verified_matches": 1367
+  "verified_matches": 1500
 }

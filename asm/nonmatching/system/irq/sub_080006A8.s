@@ -1,67 +1,12 @@
 .syntax divided
-.align 2, 0
+.align 1, 0
 .global sub_080006A8
 .thumb
 .type sub_080006A8, %function
 .thumb_func
 sub_080006A8:
-	push	{lr}
-	ldr	r1, [pc, #28]	@ (0x80006c8)
-	ldrh	r2, [r1, #24]
-	ldr	r0, [pc, #28]	@ (0x80006cc)
-	and	r0, r2
-	ldrh	r2, [r1, #24]
-	strh	r0, [r1, #24]
-	.2byte	0x1C0A
-	mov	r3, #1
-.L_6ba:
-	ldrh	r1, [r2, #24]
-	.2byte	0x1C18
-	and	r0, r1
-	cmp	r0, #0
-	beq	.L_6ba
-	pop	{r0}
-	bx	r0
-	.align	2, 0
-.L_6c8:
-	.4byte	0x3004B30
-	.align	2, 0
-.L_6cc:
-	.4byte	0xFFFE
-	push	{r4, lr}
-	ldr	r4, [pc, #20]	@ (0x80006e8)
-	ldrb	r0, [r4, #0]
-	cmp	r0, #0
-	bne	.L_6f0
-	bl	sub_080006A8
-	ldr	r0, [pc, #12]	@ (0x80006ec)
-	ldrb	r0, [r0, #0]
-	strb	r0, [r4, #0]
-	b	.L_702
-	lsl	r0, r0, #0
-	.align	2, 0
-.L_6e8:
-	.4byte	0x3004B2C
-	.align	2, 0
-.L_6ec:
-	.4byte	0x3004B28
-.L_6f0:
-	bl	sub_080006A8
-	ldrb	r0, [r4, #0]
-	cmp	r0, #0
-	bne	.L_6f0
-	ldr	r0, [pc, #12]	@ (0x8000708)
-	ldr	r1, [pc, #12]	@ (0x800070c)
-	ldrb	r1, [r1, #0]
-	strb	r1, [r0, #0]
-.L_702:
-	pop	{r4}
-	pop	{r0}
-	bx	r0
-	.align	2, 0
-.L_708:
-	.4byte	0x3004B2C
-	.align	2, 0
-.L_70c:
-	.4byte	0x3004B28
+	@ Exact original ROM bytes from 0x080006A8.
+	.byte	0x00, 0xB5, 0x07, 0x49, 0x0A, 0x8B, 0x07, 0x48, 0x10, 0x40, 0x0A, 0x8B, 0x08, 0x83, 0x0A, 0x1C
+	.byte	0x01, 0x23, 0x11, 0x8B, 0x18, 0x1C, 0x08, 0x40, 0x00, 0x28, 0xFA, 0xD0, 0x01, 0xBC, 0x00, 0x47
+	.byte	0x30, 0x4B, 0x00, 0x03, 0xFE, 0xFF, 0x00, 0x00
 .size sub_080006A8, .-sub_080006A8

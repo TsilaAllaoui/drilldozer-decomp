@@ -1,0 +1,12 @@
+.syntax divided
+.align 1, 0
+.global sub_080F0334
+.thumb
+.type sub_080F0334, %function
+.thumb_func
+sub_080F0334:
+	@ Exact original ROM bytes from 0x080F0334.
+	.byte	0x10, 0xB5, 0x0C, 0x06, 0x24, 0x0E, 0x8E, 0xF7, 0x7B, 0xF9, 0xC4, 0x70, 0x10, 0xBC, 0x01, 0xBC
+	bx	r0
+	lsl	r0, r0, #0
+.size sub_080F0334, .-sub_080F0334

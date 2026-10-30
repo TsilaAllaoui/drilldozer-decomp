@@ -60,7 +60,9 @@ def load_profiles() -> dict:
 
 def find_target_asm(name: str) -> Path | None:
     for folder in ("nonmatching", "references"):
-        hits = list((ROOT / "asm" / folder).rglob(f"{name}.s"))
+        base = ROOT / "asm" / folder
+        hits = [p for p in base.rglob(f"{name}.s")
+                if "aggregates" not in p.relative_to(base).parts]
         if hits:
             return hits[0]
     return None
@@ -224,7 +226,13 @@ def create_decompme_bundle(name: str, cfile: Path, row: dict[str, str], compiler
     zip_path.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_DEFLATED) as z:
         for fn in ["metadata.json", "target.s", "code.c", "ctx.c", "config.json"]:
-            z.write(out_dir / fn, arcname=fn)
+            # Some reproducible checkouts deliberately use a pre-1980 mtime,
+            # which the ZIP format cannot represent.  Bundle contents do not
+            # depend on host mtimes, so give every member a stable valid date.
+            info = zipfile.ZipInfo(fn, date_time=(1980, 1, 1, 0, 0, 0))
+            info.compress_type = zipfile.ZIP_DEFLATED
+            info.external_attr = 0o100644 << 16
+            z.writestr(info, (out_dir / fn).read_bytes())
     return zip_path
 
 

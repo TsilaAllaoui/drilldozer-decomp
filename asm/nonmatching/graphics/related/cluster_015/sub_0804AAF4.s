@@ -1,49 +1,14 @@
 .syntax divided
-.align 2, 0
+.align 1, 0
 .global sub_0804AAF4
 .thumb
 .type sub_0804AAF4, %function
 .thumb_func
 sub_0804AAF4:
-	push	{r4, r5, r6, lr}
-	.2byte	0x1C04
-	.2byte	0x1C0E
-	lsl	r2, r2, #24
-	lsr	r5, r2, #24
-	mov	r3, #0
-	.2byte	0x1C28
-	cmp	r3, r0
-	bcs	.L_4ab1a
-	.2byte	0x1C02
-.L_4ab08:
-	add	r1, r4, r3
-	add	r0, r6, r3
-	ldrb	r0, [r0, #0]
-	strb	r0, [r1, #0]
-	.2byte	0x1C58
-	lsl	r0, r0, #16
-	lsr	r3, r0, #16
-	cmp	r3, r2
-	bcc	.L_4ab08
-.L_4ab1a:
-	add	r0, r4, r5
-	pop	{r4, r5, r6}
-	pop	{r1}
+	@ Exact original ROM bytes from 0x0804AAF4.
+	.byte	0x70, 0xB5, 0x04, 0x1C, 0x0E, 0x1C, 0x12, 0x06, 0x15, 0x0E, 0x00, 0x23, 0x28, 0x1C, 0x83, 0x42
+	.byte	0x09, 0xD2, 0x02, 0x1C, 0xE1, 0x18, 0xF0, 0x18, 0x00, 0x78, 0x08, 0x70, 0x58, 0x1C, 0x00, 0x04
+	.byte	0x03, 0x0C, 0x93, 0x42, 0xF6, 0xD3, 0x60, 0x19, 0x70, 0xBC, 0x02, 0xBC
 	bx	r1
 	lsl	r0, r0, #0
-	push	{lr}
-	.2byte	0x1C03
-	lsl	r2, r2, #24
-	lsr	r2, r2, #24
-	b	.L_4ab30
-.L_4ab2e:
-	add	r3, #1
-.L_4ab30:
-	ldrb	r0, [r3, #0]
-	cmp	r0, #255	@ 0xff
-	bne	.L_4ab2e
-	.2byte	0x1C18
-	bl	sub_0804AAF4
-	pop	{r1}
-	bx	r1
 .size sub_0804AAF4, .-sub_0804AAF4

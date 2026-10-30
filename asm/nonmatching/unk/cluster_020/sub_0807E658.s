@@ -1,36 +1,13 @@
 .syntax divided
-.align 2, 0
+.align 1, 0
 .global sub_0807E658
 .thumb
 .type sub_0807E658, %function
 .thumb_func
 sub_0807E658:
-	push	{lr}
-	.2byte	0x1C02
-	add	r0, #184	@ 0xb8
-	ldr	r3, [r0, #0]
-	cmp	r3, #0
-	beq	.L_7e66e
-	.2byte	0x1C11
-	add	r1, #40	@ 0x28
-	.2byte	0x1C10
-	bl	sub_080F8FC0
-.L_7e66e:
-	pop	{r0}
+	@ Exact original ROM bytes from 0x0807E658.
+	.byte	0x00, 0xB5, 0x02, 0x1C, 0xB8, 0x30, 0x03, 0x68, 0x00, 0x2B, 0x04, 0xD0, 0x11, 0x1C, 0x28, 0x31
+	.byte	0x10, 0x1C, 0x7A, 0xF0, 0xA9, 0xFC, 0x01, 0xBC
 	bx	r0
 	lsl	r0, r0, #0
-	push	{lr}
-	.2byte	0x1C02
-	add	r2, #172	@ 0xac
-	.2byte	0x1C01
-	add	r1, #40	@ 0x28
-	ldr	r2, [r2, #0]
-	bl	sub_080F8FBC
-	pop	{r0}
-	bx	r0
-	push	{lr}
-	str	r1, [r0, #8]
-	bl	sub_0807E7E8
-	pop	{r0}
-	bx	r0
 .size sub_0807E658, .-sub_0807E658

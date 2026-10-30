@@ -145,6 +145,7 @@ def generate(*, snapshot=False):
                 line = f'{match.group(1)}{alias}{match.group(3)}'
         rewritten.append(line)
     lines = []
+    defined_branch_aliases = set()
     label_re = re.compile(r'^\.L_([0-9A-Fa-f]+):$')
     for line in rewritten:
         label_match = label_re.match(line)
@@ -159,7 +160,27 @@ def generate(*, snapshot=False):
                     '.thumb_func',
                     f'{alias}:',
                 ])
+                defined_branch_aliases.add(alias)
         lines.append(line)
+
+    # Corrected aggregate boundaries may use byte-exact archival ASM, which
+    # intentionally has no internal .L_* labels.  Other routines can still
+    # branch to a shared tail inside such a range (or inside a promoted C
+    # function).  Preserve those real entry points with Thumb aliases based on
+    # the canonical function table instead of requiring labels in the source.
+    starts = [int(row['start'], 0) for row in table]
+    import bisect
+    for alias in sorted(set(branch_aliases) - defined_branch_aliases):
+        address = int(alias.removeprefix('__branch_'), 16)
+        index = bisect.bisect_right(starts, address) - 1
+        if index < 0 or address >= int(table[index]['end'], 0):
+            continue
+        owner = table[index]['name']
+        offset = address - starts[index]
+        lines.extend([
+            f'.global {alias}',
+            f'.thumb_set {alias}, {owner} + {offset}',
+        ])
 
     asm = BUILD / ('code_snapshot.s' if snapshot else 'unmatched.s')
     asm.write_text('\n'.join(lines)+'\n')
